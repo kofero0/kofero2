@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'presenter'
     spec.version                  = '0.0.015'
-    spec.homepage                 = 'Link to a Kotlin/Native module homepage'
+    spec.homepage                 = 'http://kofe.ro'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
     spec.license                  = ''
-    spec.summary                  = 'Some description for a Kotlin/Native module'
+    spec.summary                  = 'Shared code artifact for kofero-ios'
     spec.vendored_frameworks      = 'build/cocoapods/framework/presenter.framework'
     spec.libraries                = 'c++'
                 
