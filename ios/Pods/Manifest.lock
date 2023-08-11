@@ -1,8 +1,14 @@
 PODS:
   - presenter (0.0.015)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - presenter (from `../presenter`)
+  - SwiftyJSON (~> 4.3.0)
+
+SPEC REPOS:
+  trunk:
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   presenter:
@@ -10,7 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   presenter: d6b85f2fd9013897049b9d610ef7659528ad081a
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 80f44cdad9193b03c478ad4bbd2f1c73dd128d39
+PODFILE CHECKSUM: 4443d7df3cf8cdb8a40b72acce5f623b28273a38
 
 COCOAPODS: 1.12.1

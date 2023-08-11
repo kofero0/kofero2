@@ -7,5 +7,8 @@ target 'kofero' do
 
   # Pods for kofero
   pod 'presenter', :path => '../presenter'
+  pod 'SwiftyJSON', '~> 4.3.0'
+  pod 'NeedleFoundation', '~> 0.23.1'
+  pod 'Google-Mobile-Ads-SDK'
 
 end
