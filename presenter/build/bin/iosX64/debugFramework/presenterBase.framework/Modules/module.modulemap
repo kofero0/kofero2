@@ -1,8 +1,0 @@
-framework module presenterBase {
-    umbrella header "presenterBase.h"
-
-    export *
-    module * { export * }
-
-    use Foundation
-}
