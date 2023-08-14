@@ -28,7 +28,7 @@ class GamePresenterImpl(
             }
             val game = games[0]
             view?.display(game)
-            imageProvider.get(game.iconUrl).map { img -> view?.display(game.iconUrl, img.image) }
+            imageProvider.get(game.iconUrl).map { img -> view?.display(game.iconUrl, img) }
             characterProvider.get(game.charIds).map { chars -> view?.display(chars) }
         }
     }

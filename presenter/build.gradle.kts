@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "ro.kofe"
-version = "0.0.015"
+version = "0.0.017"
 val frameworkName = "presenter"
 
 repositories {

@@ -2,13 +2,13 @@ package ro.kofe.presenter
 
 import arrow.core.Either
 import arrow.core.Ior
+import arrow.core.left
+import ro.kofe.model.ProviderError
 
-fun <Left, Right> buildEitherLeft(left: Left): Either<Left, Right> = Either.Left(left)
+object ArrowExtensions {
 
-fun <Left, Right> buildEitherRight(right: Right): Either<Left, Right> = Either.Right(right)
+    fun buildImageEitherLeft(left: ProviderError): Either<ProviderError,String> = Either.Left(left)
 
-fun <Left, Right> buildIorLeft(left: Left): Ior<Left, Right> = Ior.Left(left)
+    fun buildImageEitherRight(right: String): Either<ProviderError, String> = Either.Right(right)
 
-fun <Left, Right> buildIorRight(right: Right): Ior<Left, Right> = Ior.Right(right)
-
-fun <Left, Right> buildIorBoth(left: Left, right: Right): Ior<Left, Right> = Ior.Both(left, right)
+}

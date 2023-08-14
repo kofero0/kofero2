@@ -49,7 +49,7 @@ class HomePresenterImpl(
 
 
     private fun getImage(iconUrl: String) =
-        imageProvider.get(iconUrl).map { image -> view?.display(iconUrl, image.image) }
+        imageProvider.get(iconUrl).map { image -> view?.display(iconUrl, image) }
 
     override fun shutdown() {
         view = null

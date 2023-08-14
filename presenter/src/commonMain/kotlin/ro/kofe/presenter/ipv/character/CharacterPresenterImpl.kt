@@ -27,7 +27,7 @@ class CharacterPresenterImpl(
             ensure(chars.size == 1) { raise(IncorrectCount(ids)) }
             view?.display(chars[0])
             imageProvider.get(chars[0].iconUrl).map { image ->
-                view?.display(chars[0].iconUrl, image.image)
+                view?.display(chars[0].iconUrl, image)
             }
             moveProvider.get(chars[0].moveIds).map { moves ->
                 view?.display(moves)
