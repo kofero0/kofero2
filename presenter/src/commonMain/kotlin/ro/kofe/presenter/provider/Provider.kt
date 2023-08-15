@@ -5,5 +5,5 @@ import ro.kofe.model.Obj
 import ro.kofe.model.ProviderError
 
 interface Provider<T : Obj> {
-    fun get(ids: List<Int>): Ior<ProviderError, List<T>>
+    suspend fun get(ids: List<Int>): Ior<ProviderError, List<T>>
 }

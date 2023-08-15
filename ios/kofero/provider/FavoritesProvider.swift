@@ -9,6 +9,7 @@ import Foundation
 import presenter
 
 public class FavoritesProviderImpl: FavoritesProvider {
+    private let arrowExtensions = ArrowExtensions()
     private let defaults:IUserDefaults
     private let FAVS_KEY = "favs"
     
@@ -16,32 +17,30 @@ public class FavoritesProviderImpl: FavoritesProvider {
         self.defaults = defaults
     }
     
+    public func delete(item: ModelObj) -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
+            let favs = defaults.object(forKey: FAVS_KEY)
+            if var uFavs = favs as? [ModelObj] {
+                uFavs.removeAll{obj in return obj.uid == item.uid}
+                defaults.set(uFavs, forKey: FAVS_KEY)
+                return arrowExtensions.buildUnitEitherRight()
+            }
+        return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
+    }
     
-    public func get(ids: [KotlinInt]) {
+    public func save(item: ModelObj) -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
+            let favs = defaults.object(forKey: FAVS_KEY)
+            if var uFavs = favs as? [ModelObj] {
+                uFavs.append(item)
+                defaults.set(uFavs, forKey: FAVS_KEY)
+                return arrowExtensions.buildUnitEitherRight()
+            }
+        return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
+    }
+    
+    public func get(ids: [KotlinInt]) -> Arrow_coreIor<ModelProviderError, NSArray> {
         if let favs = defaults.object(forKey: FAVS_KEY) as? [ModelObj]{
-            informListeners(favs: favs)
+            return arrowExtensions.buildListIorRight(right: favs)
         }
-    }
-    
-    public func delete(item: ModelObj) {
-        let favs = defaults.object(forKey: FAVS_KEY)
-        if var uFavs = favs as? [ModelObj] {
-            uFavs.removeAll{obj in return obj.uid == item.uid}
-            defaults.set(uFavs, forKey: FAVS_KEY)
-        }
-    }
-    
-    public func save(item: ModelObj) {
-        let favs = defaults.object(forKey: FAVS_KEY)
-        if var uFavs = favs as? [ModelObj] {
-            uFavs.append(item)
-            defaults.set(uFavs, forKey: FAVS_KEY)
-        }
-    }
-    
-    private func informListeners(favs:[ModelObj]){
-        for listener in listeners {
-            listener.onReceive(ids: [], elements: favs)
-        }
+        return arrowExtensions.buildListIorLeft(left: ModelIncorrectCount(ids: []))
     }
 }

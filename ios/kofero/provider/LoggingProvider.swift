@@ -8,7 +8,7 @@
 import Foundation
 import presenter
 
-public class LoggingProvider: ILoggingProvider {
+public class LoggingProviderImpl: LoggingProvider {
     
     public init(){}
     

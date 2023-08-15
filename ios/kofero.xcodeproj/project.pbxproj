@@ -26,6 +26,11 @@
 		4BD71A762A85F59800EB8752 /* LoggingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A712A85F59800EB8752 /* LoggingProvider.swift */; };
 		4BD71A792A8978BE00EB8752 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A772A8978BD00EB8752 /* Typealias.swift */; };
 		4BD71A7A2A8978BE00EB8752 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A782A8978BE00EB8752 /* Extension.swift */; };
+		4BD71A8C2A8B0D7300EB8752 /* GameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A872A8B0D7300EB8752 /* GameComponent.swift */; };
+		4BD71A8D2A8B0D7300EB8752 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A882A8B0D7300EB8752 /* RootComponent.swift */; };
+		4BD71A8E2A8B0D7300EB8752 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A892A8B0D7300EB8752 /* MoveComponent.swift */; };
+		4BD71A8F2A8B0D7300EB8752 /* CharacterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A8A2A8B0D7300EB8752 /* CharacterComponent.swift */; };
+		4BD71A902A8B0D7300EB8752 /* HomeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A8B2A8B0D7300EB8752 /* HomeComponent.swift */; };
 		9E169777FF902B2091A95DCA /* Pods_kofero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976876D6C60861A8745D9EA3 /* Pods_kofero.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +55,11 @@
 		4BD71A712A85F59800EB8752 /* LoggingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingProvider.swift; sourceTree = "<group>"; };
 		4BD71A772A8978BD00EB8752 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Typealias.swift; path = "../../../../kofero/ios/kofero-provider/provider/Typealias.swift"; sourceTree = "<group>"; };
 		4BD71A782A8978BE00EB8752 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = "../../../../kofero/ios/kofero-provider/provider/Extension.swift"; sourceTree = "<group>"; };
+		4BD71A872A8B0D7300EB8752 /* GameComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameComponent.swift; sourceTree = "<group>"; };
+		4BD71A882A8B0D7300EB8752 /* RootComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
+		4BD71A892A8B0D7300EB8752 /* MoveComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
+		4BD71A8A2A8B0D7300EB8752 /* CharacterComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterComponent.swift; sourceTree = "<group>"; };
+		4BD71A8B2A8B0D7300EB8752 /* HomeComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeComponent.swift; sourceTree = "<group>"; };
 		5926CEBBF3AC4FF4D9BE7E25 /* Pods-kofero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kofero.release.xcconfig"; path = "Target Support Files/Pods-kofero/Pods-kofero.release.xcconfig"; sourceTree = "<group>"; };
 		976876D6C60861A8745D9EA3 /* Pods_kofero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kofero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC45A293C1DC511ECF799781 /* Pods-kofero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kofero.debug.xcconfig"; path = "Target Support Files/Pods-kofero/Pods-kofero.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +98,7 @@
 		4BD71A4B2A85EB9D00EB8752 /* kofero */ = {
 			isa = PBXGroup;
 			children = (
+				4BD71A862A8B0D7300EB8752 /* di */,
 				4BD71A6C2A85F59800EB8752 /* provider */,
 				4BD71A612A85F52000EB8752 /* mapper */,
 				4BD71A5A2A85F4DC00EB8752 /* encoder */,
@@ -141,6 +152,18 @@
 				4BD71A712A85F59800EB8752 /* LoggingProvider.swift */,
 			);
 			path = provider;
+			sourceTree = "<group>";
+		};
+		4BD71A862A8B0D7300EB8752 /* di */ = {
+			isa = PBXGroup;
+			children = (
+				4BD71A872A8B0D7300EB8752 /* GameComponent.swift */,
+				4BD71A882A8B0D7300EB8752 /* RootComponent.swift */,
+				4BD71A892A8B0D7300EB8752 /* MoveComponent.swift */,
+				4BD71A8A2A8B0D7300EB8752 /* CharacterComponent.swift */,
+				4BD71A8B2A8B0D7300EB8752 /* HomeComponent.swift */,
+			);
+			path = di;
 			sourceTree = "<group>";
 		};
 		7C2B9713EAB5AE47C504B2E4 /* Pods */ = {
@@ -281,13 +304,18 @@
 				4BD71A602A85F4DC00EB8752 /* JsonDataEncoder.swift in Sources */,
 				4BD71A6B2A85F52000EB8752 /* GameMapper.swift in Sources */,
 				4BD71A792A8978BE00EB8752 /* Typealias.swift in Sources */,
+				4BD71A8C2A8B0D7300EB8752 /* GameComponent.swift in Sources */,
 				4BD71A752A85F59800EB8752 /* ProviderCore.swift in Sources */,
+				4BD71A8F2A8B0D7300EB8752 /* CharacterComponent.swift in Sources */,
 				4BD71A732A85F59800EB8752 /* Provider.swift in Sources */,
 				4BD71A5F2A85F4DC00EB8752 /* DataEncoder.swift in Sources */,
 				4BD71A7A2A8978BE00EB8752 /* Extension.swift in Sources */,
 				4BD71A6A2A85F52000EB8752 /* CharacterMapper.swift in Sources */,
 				4BD71A682A85F52000EB8752 /* MoveMapper.swift in Sources */,
 				4BD71A692A85F52000EB8752 /* DataMapper.swift in Sources */,
+				4BD71A902A8B0D7300EB8752 /* HomeComponent.swift in Sources */,
+				4BD71A8D2A8B0D7300EB8752 /* RootComponent.swift in Sources */,
+				4BD71A8E2A8B0D7300EB8752 /* MoveComponent.swift in Sources */,
 				4BD71A4F2A85EB9D00EB8752 /* ContentView.swift in Sources */,
 				4BD71A4D2A85EB9D00EB8752 /* iosApp.swift in Sources */,
 				4BD71A5E2A85F4DC00EB8752 /* Encoder.swift in Sources */,

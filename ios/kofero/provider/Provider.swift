@@ -9,12 +9,7 @@ import Foundation
 import presenter
 
 open class ProviderImpl<O:ModelObj>: Provider {
-    
-    
-    public func get(ids: [KotlinInt]) -> Arrow_coreIor<ModelProviderError, NSArray> {
-        <#code#>
-    }
-    
+    private let arrowExtensions = ArrowExtensions()
     private let restManager: RestManager
     private let fileManager: IFileManager
     private let userDefaults: IUserDefaults
@@ -37,6 +32,55 @@ open class ProviderImpl<O:ModelObj>: Provider {
         self.jsonFilename = jsonFilename
     }
     
+    public func get(ids: [KotlinInt]) async throws -> Arrow_coreIor<ModelProviderError, NSArray> {
+        if(!isDiskPulled){
+            return try await pullFromDisk(ids: ids)
+        }
+        else{
+            if(isSatisfiable(request: ids)){
+                return arrowExtensions.buildListIorRight(right: retrieve(ids: ids))
+            }
+            else{
+                return try await send(ids: ids)
+            }
+        }
+    }
+    
+    private func send(ids: [KotlinInt]) async throws -> Arrow_coreIor<ModelProviderError, NSArray> {
+        let group = DispatchGroup()
+        var providerError:ModelProviderError? = nil
+        var result: [O]? = nil
+        group.enter()
+        let task = restManager.dataTask(with: try createRequest(ids: ids)){[self] data, response, error in
+            if(isResponseGood(data:data, response:response, error:error)){
+                do{ try add(new: try mapper.map(data: data!))
+                    result = elements
+                }
+                catch {
+                    providerError = ModelIncorrectCount(ids: [])
+                }
+            }
+            else{
+                providerError = ModelIncorrectCount(ids: [])
+            }
+            group.leave()
+        }
+        requests.updateValue(task, forKey: ids)
+        task.resume()
+        group.wait()
+        if let uPError = providerError {
+            if let uResult = result {
+                return arrowExtensions.buildListIorBoth(left: uPError, right: uResult)
+            }
+            return arrowExtensions.buildListIorLeft(left: uPError)
+        }
+        if let uResult = result {
+            return arrowExtensions.buildListIorRight(right: uResult)
+        }
+        return arrowExtensions.buildListIorLeft(left: ModelOther())
+    }
+    
+    
     private func isResponseGood(data:Data?, response:URLResponse?, error:Error?) -> Bool {
         return data != nil && (response as! HTTPURLResponse).statusCode == 200 && error == nil
     }
@@ -48,31 +92,14 @@ open class ProviderImpl<O:ModelObj>: Provider {
         return true
     }
     
-    public func get(ids: [KotlinInt]) {
-        if(!isDiskPulled){ pullFromDisk(ids: ids) }
-        else{
-            if(isSatisfiable(request: ids)){ informListeners(ids: ids, elements: retrieve(ids: ids)) }
-            else{
-                send(ids: ids)
-            }
-        }
-    }
-    
-    private func send(ids: [KotlinInt]){
-        let task = restManager.dataTask(with: createRequest(ids: ids), completionHandler: getRestClosure(ids: ids))
-        requests.updateValue(task, forKey: ids)
-        task.resume()
-    }
-    
-    private func add(new:[O]){
+    private func add(new:[O]) throws {
         for element in new {
             elements.removeAll(where: {existingElement in return element.uid == existingElement.uid})
             elements.append(element)
         }
-        saveToDisk()
+        try mapper.map(data: elements).write(to: makeUrl(string: jsonFilename), options: .atomic)
         for request in requests.keys {
             if(isSatisfiable(request: request)){
-                informListeners(ids: request, elements: retrieve(ids: request))
                 requests.removeValue(forKey: request)?.cancel()
             }
         }
@@ -82,39 +109,11 @@ open class ProviderImpl<O:ModelObj>: Provider {
         return fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("\(string)")
     }
     
-    
-    private func saveToDisk(){
-        do{
-            try mapper.map(data: elements).write(to: makeUrl(string: jsonFilename), options: .atomic)
-        }
-        catch {
-            informListenersError(ids: [], error: KotlinException(error: error))
-        }
-    }
-    
-    
-    private func getRestClosure(ids: [KotlinInt]) -> RestClosure {
-        return {[self] data, response, error in
-            if(isResponseGood(data:data, response:response, error:error)){
-                do{ add(new: try mapper.map(data: data!)) }
-                catch { informListenersError(ids: ids, error: KotlinException(message: error.localizedDescription)) }
-            }
-            else{
-                informListenersError(ids: ids, error: KotlinException(message: "error:\(error.debugDescription), response: \(response.debugDescription)"))
-            }
-        }
-    }
-    
-    private func createRequest(ids: [KotlinInt]) -> URLRequest {
+    private func createRequest(ids: [KotlinInt]) throws -> URLRequest {
         var ret = URLRequest(url: url)
         var ids32 = [Int32]()
         for id in ids{ ids32.append(id.int32Value) }
-        do{
-            try ret.httpBody = encoder.encode(ids32)
-        }
-        catch {
-            informListenersError(ids: ids, error: KotlinException(message: "request body encoding failed"))
-        }
+        try ret.httpBody = encoder.encode(ids32)
         return ret
     }
     
@@ -128,53 +127,30 @@ open class ProviderImpl<O:ModelObj>: Provider {
         return ret
     }
     
-    private func pullFromDisk(ids: [KotlinInt]) {
+    private func pullFromDisk(ids: [KotlinInt]) async throws -> Arrow_coreIor<ModelProviderError, NSArray> {
         isDiskPulled = true
         let url = makeUrl(string: jsonFilename)
-            do {
-                elements = try mapper.map(data: Data(contentsOf: url))
-            }
-            catch {
-                informListenersError(ids: ids, error: KotlinException(message: "couldnt pull from disk"))
-                pullFromBundledJson(ids:ids)
-            }
+        do {
+            elements = try mapper.map(data: Data(contentsOf: url))
+            return arrowExtensions.buildListIorRight(right: elements)
+        }
+        catch {
+            return try pullFromBundledJson(ids:ids)
+        }
         if(isSatisfiable(request: ids)){
-            informListeners(ids: ids, elements: retrieve(ids: ids))
+            return arrowExtensions.buildListIorRight(right: retrieve(ids: ids))
         }
         else{
-            send(ids: ids)
+            return try await send(ids: ids)
         }
     }
     
-    private func pullFromBundledJson(ids:[KotlinInt]) {
+    private func pullFromBundledJson(ids:[KotlinInt]) throws -> Arrow_coreIor<ModelProviderError, NSArray> {
         if let path = Bundle.main.path(forResource: jsonFilename, ofType: "json") {
-            do {
                 elements = try mapper.map(data: Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped))
-            }
-            catch let error { informListenersError(ids: ids, error: KotlinException(error: error)) }
+            return arrowExtensions.buildListIorRight(right: elements)
         } else {
-            informListenersError(ids: ids, error: KotlinException(message: "invalid json filename: \(jsonFilename)"))
-        }
-    }
-    
-    
-    public func addListener(listener__ listener: IProviderListener) {
-        listeners.append(listener)
-    }
-    
-    public func removeListener(listener__ listener: IProviderListener) {
-        listeners.removeAll{existingListener in return listener === existingListener}
-    }
-    
-    private func informListeners(ids: [KotlinInt], elements: [O]) {
-        for listener in listeners{
-            listener.onReceive(ids: ids, elements: elements)
-        }
-    }
-    
-    private func informListenersError(ids: [KotlinInt], error: KotlinException) {
-        for listener in self.listeners {
-            listener.onError(ids: ids, error: error)
+            return arrowExtensions.buildListIorLeft(left: ModelFileReadError(filePath: jsonFilename))
         }
     }
 }
