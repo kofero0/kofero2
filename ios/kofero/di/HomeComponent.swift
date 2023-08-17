@@ -11,31 +11,36 @@ import presenter
 
 protocol HomeDependency: Dependency {
     var bannerAdUnitId:String {get}
-    var gameProvider:Provider<ModelGame> {get}
+    var gameProvider:GameProvider {get}
     var gameViewBuilder:GameViewBuilder {get}
-    var imageProvider:IImageProvider {get}
-    var freezer:IFreezer {get}
-    var favoritesProvider:IFavoritesProvider {get}
-    var stateLogger:IStateLogger {get}
-    var stateReducer:IStateReducer {get}
-    var loggingProvider:ILoggingProvider {get}
+    var imageProvider:ImageProvider {get}
+    var favoritesProvider:FavoritesProvider {get}
+    var stateLogger:StateLogger {get}
+    var stateReducer:StateReducer {get}
+    var loggingProvider:LoggingProvider {get}
     var uiApplication:UIApplication {get}
+    var dispatcherProvider: DispatcherProvider {get}
 }
 
 class HomeComponent: Component<HomeDependency>, HomeViewBuilder {
-    var presenter: IHomePresenter {
-        return HomePresenter(freezer: dependency.freezer, gameProvider: dependency.gameProvider, imageProvider: dependency.imageProvider, favoritesProvider: dependency.favoritesProvider, loggingProvider: dependency.loggingProvider)
+    
+    var presenter: HomePresenter {
+        return HomePresenterImpl(gameProvider: dependency.gameProvider, imageProvider: dependency.imageProvider, favoritesProvider: dependency.favoritesProvider, loggingProvider: dependency.loggingProvider)
     }
     
-    var interactor: IHomeInteractor {
-        return HomeInteractor(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router)
+    var interactor: HomeInteractor {
+        return HomeInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router, context: dependency.dispatcherProvider.default_)
     }
     
-    var router: IRouter {
+    var router: Router {
         return HomeRouter(dependency.gameViewBuilder, dependency.uiApplication)
     }
     
-    func homeView() -> UIViewController {
+    func homeView() -> View {
         return HomeView(interactor: interactor, adUnitId: dependency.bannerAdUnitId)
     }
+}
+
+protocol HomeViewBuilder {
+    func homeView() -> View
 }

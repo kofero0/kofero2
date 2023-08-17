@@ -3,7 +3,7 @@ package ro.kofe.presenter.ipv
 import ro.kofe.model.logging.Level.DEBUG
 import ro.kofe.presenter.provider.LoggingProvider
 
-abstract class PresenterImpl<V : View>(
+abstract class PresenterImpl<V : KView>(
     internal var view: V?,
     loggingProvider: LoggingProvider?,
     logTag: String

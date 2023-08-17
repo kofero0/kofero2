@@ -1,5 +1,5 @@
 package ro.kofe.presenter.ipv.root
 
-import ro.kofe.presenter.ipv.View
+import ro.kofe.presenter.ipv.KView
 
-interface RootView : View {}
+interface RootView : KView {}

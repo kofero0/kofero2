@@ -11,19 +11,18 @@ import presenter
 import SwiftyJSON
 
 protocol CharacterDependency: Dependency {
-    var moveProvider:Provider<ModelMove> {get}
-    var imageProvider: IImageProvider {get}
+    var moveProvider: MoveProvider {get}
+    var imageProvider: ImageProvider {get}
     var providerCore:ProviderCore {get}
-    var jsonEncoder:IDataEncoder<[JSON]> {get}
+    var jsonEncoder:DataEncoder<[JSON]> {get}
     var moveViewBuilder:MoveViewBuilder {get}
-    var freezer: IFreezer {get}
     var bannerAdUnitId: String {get}
-    var loggingProvider: ILoggingProvider {get}
+    var loggingProvider: LoggingProvider {get}
 }
 
 class CharacterComponent: Component<CharacterDependency>, CharacterViewBuilder {
-    var provider: Provider<ModelCharacter> {
-        return Provider<ModelCharacter>(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider)
+    var provider: CharacterProvider {
+        return Provider(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! CharacterProvider
     }
     
     var jsonFilename:String {
@@ -34,12 +33,12 @@ class CharacterComponent: Component<CharacterDependency>, CharacterViewBuilder {
         return URL(string: "https://google.com")!
     }
     
-    var mapper: IDataMapper<[ModelCharacter]> {
+    var mapper: DataMapper<[ModelCharacter]> {
         return CharacterMapper(encoder: dependency.jsonEncoder)
     }
     
-    var presenter: ICharacterPresenter {
-        return CharacterPresenter(freezer:dependency.freezer, charProvider: provider, moveProvider: dependency.moveProvider, imageProvider: dependency.imageProvider)
+    var presenter: CharacterPresenter {
+        return CharacterPresenterImpl(charProvider: provider, moveProvider: dependency.moveProvider, imageProvider: dependency.imageProvider)
     }
     
     func characterView(id:Int32) -> UIViewController {

@@ -18,7 +18,7 @@ import ro.kofe.presenter.state.StateReducer
 import kotlin.coroutines.CoroutineContext
 
 class GameInteractorImpl(
-    presenter: GamePresenterImpl,
+    presenter: GamePresenter,
     stateLogger: StateLogger,
     stateReducer: StateReducer,
     loggingProvider: LoggingProvider,

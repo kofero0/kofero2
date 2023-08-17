@@ -1,5 +1,5 @@
 package ro.kofe.presenter.ipv
 
-interface View {
+interface KView {
     fun error(e: Exception)
 }

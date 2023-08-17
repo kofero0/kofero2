@@ -8,5 +8,5 @@ object ErrorLinker {
     val fileRead = FileReadError("")
     val noPerm = NoPermission
     val other = Other
-    
+
 }

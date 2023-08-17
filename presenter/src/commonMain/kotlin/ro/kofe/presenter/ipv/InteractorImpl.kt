@@ -1,7 +1,5 @@
 package ro.kofe.presenter.ipv
 
-import arrow.core.raise.either
-import ro.kofe.model.Error
 import ro.kofe.model.Event
 import ro.kofe.model.logging.Level.DEBUG
 import ro.kofe.presenter.Router
@@ -10,7 +8,7 @@ import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 
-abstract class InteractorImpl<V : View, P : Presenter<V>>(
+abstract class InteractorImpl<V : KView, P : Presenter<V>>(
     internal var presenter: P,
     internal var stateLogger: StateLogger,
     internal var stateReducer: StateReducer,

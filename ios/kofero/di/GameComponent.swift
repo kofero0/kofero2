@@ -9,6 +9,7 @@ import Foundation
 import NeedleFoundation
 import presenter
 import SwiftyJSON
+import SwiftUI
 
 protocol GameDependency: Dependency {
     var imageProvider:ImageProvider {get}
@@ -19,12 +20,15 @@ protocol GameDependency: Dependency {
     var bannerAdUnitId:String {get}
     var loggingProvider:LoggingProvider {get}
     var uiApplication:UIApplication {get}
+    var stateLogger: StateLogger {get}
+    var stateReducer: StateReducer {get}
+    var dispatcherProvider: DispatcherProvider {get}
 }
 
-class GameComponent: Component<GameDependency>, GameViewBuilder{
+class GameComponent: Component<GameDependency>{
     
-    var gameProvider: Provider {
-        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider)
+    var gameProvider: GameProvider {
+        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! GameProvider
     }
     
     var mapper: DataMapper<[ModelGame]> {
@@ -44,15 +48,17 @@ class GameComponent: Component<GameDependency>, GameViewBuilder{
     }
     
     var interactor: GameInteractor {
-        return GameInteractorImpl(presenter: presenter, stateLogger: <#T##StateLogger#>, stateReducer: <#T##StateReducer#>, loggingProvider: dependency.loggingProvider, router: <#T##Router#>, context: <#T##KotlinCoroutineContext#>)
+        return GameInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router, context: dependency.dispatcherProvider.default_)
     }
     
     var router: Router {
         return GameRouter(dependency.charViewBuilder, dependency.uiApplication, dependency.characterProvider)
     }
     
-    func gameView(id:Int32) -> UIViewController {
-        return GameView(interactor: interactor, gameId: id, adUnitId: dependency.bannerAdUnitId)
+    func gameView(id:Int32) -> ContentView {
+        
+        return ContentView()
+        //return GameView(interactor: interactor, gameId: id, adUnitId: dependency.bannerAdUnitId)
     }
     
 }

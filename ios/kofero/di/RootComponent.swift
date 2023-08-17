@@ -9,6 +9,7 @@ import Foundation
 import NeedleFoundation
 import presenter
 import SwiftyJSON
+import SwiftUI
 
 class RootComponent: BootstrapComponent {
     var homeComponent: HomeComponent {
@@ -27,15 +28,15 @@ class RootComponent: BootstrapComponent {
         return MoveComponent(parent: self)
     }
     
-    var moveProvider: Provider<ModelMove> {
+    var moveProvider: MoveProvider {
         return moveComponent.provider
     }
     
-    var characterProvider: Provider<ModelCharacter> {
+    var characterProvider: CharacterProvider {
         return characterComponent.provider
     }
     
-    var gameProvider: Provider<ModelGame> {
+    var gameProvider: GameProvider {
         return gameComponent.gameProvider
     }
     
@@ -44,7 +45,7 @@ class RootComponent: BootstrapComponent {
     }
     
     var imageProvider:ImageProvider {
-        return ImageProvider(core: providerCore, loggingProvider: loggingProvider)
+        return ImageProviderImpl(core: providerCore, loggingProvider: loggingProvider)
     }
     
     var providerCore:ProviderCore {
@@ -91,8 +92,8 @@ class RootComponent: BootstrapComponent {
         return "ca-app-pub-3940256099942544/2934735716"
     }
     
-    var rootView: UINavigationController {
-        return RootView(homeBuilder: homeComponent, presenter: rootPresenter)
+    var rootView: AnyView {
+        return AnyView(RootView())
     }
     
     var favoritesProvider:FavoritesProvider {
