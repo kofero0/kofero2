@@ -1,12 +1,10 @@
 package ro.kofe.presenter.ipv.character
 
-import arrow.core.Either
 import arrow.core.raise.either
 import arrow.core.raise.ensure
 import ro.kofe.model.Character
 import ro.kofe.model.IncorrectCount
 import ro.kofe.model.Move
-import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.Provider
 
@@ -15,9 +13,9 @@ class CharacterPresenterImpl(
     private val moveProvider: Provider<Move>,
     private val imageProvider: ImageProvider
 ) : CharacterPresenter {
-    private var view: CharacterView? = null
+    private var view: CharacterKView? = null
 
-    override fun setView(view: CharacterView) {
+    override fun setView(view: CharacterKView) {
         this.view = view
     }
 

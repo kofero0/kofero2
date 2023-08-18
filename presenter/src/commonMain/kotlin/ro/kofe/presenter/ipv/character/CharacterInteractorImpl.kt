@@ -1,6 +1,5 @@
 package ro.kofe.presenter.ipv.character
 
-import arrow.core.raise.either
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import ro.kofe.model.logging.LogTag.CHARACTER_INTERACTOR
@@ -18,7 +17,7 @@ class CharacterInteractorImpl(
     loggingProvider: LoggingProvider,
     router: Router,
     private val context: CoroutineContext
-) : InteractorImpl<CharacterView, CharacterPresenter>(
+) : InteractorImpl<CharacterKView, CharacterPresenter>(
     presenter,
     stateLogger,
     stateReducer,
@@ -33,7 +32,7 @@ class CharacterInteractorImpl(
         charUid = uid
     }
 
-    override fun setView(view: CharacterView) {
+    override fun setView(view: CharacterKView) {
         this.view = view
     }
 

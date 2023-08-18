@@ -8,6 +8,7 @@
 import Foundation
 import NeedleFoundation
 import presenter
+import SwiftUI
 import SwiftyJSON
 
 protocol CharacterDependency: Dependency {
@@ -15,14 +16,16 @@ protocol CharacterDependency: Dependency {
     var imageProvider: ImageProvider {get}
     var providerCore:ProviderCore {get}
     var jsonEncoder:DataEncoder<[JSON]> {get}
-    var moveViewBuilder:MoveViewBuilder {get}
     var bannerAdUnitId: String {get}
     var loggingProvider: LoggingProvider {get}
+    var stateLogger: StateLogger {get}
+    var stateReducer: StateReducer {get}
+    var dispatcherProvider: DispatcherProvider {get}
 }
 
 class CharacterComponent: Component<CharacterDependency>, CharacterViewBuilder {
     var provider: CharacterProvider {
-        return Provider(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! CharacterProvider
+        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! CharacterProvider
     }
     
     var jsonFilename:String {
@@ -41,11 +44,19 @@ class CharacterComponent: Component<CharacterDependency>, CharacterViewBuilder {
         return CharacterPresenterImpl(charProvider: provider, moveProvider: dependency.moveProvider, imageProvider: dependency.imageProvider)
     }
     
-    func characterView(id:Int32) -> UIViewController {
-        return CharacterView(presenter: presenter, charId: id, moveViewBuilder: dependency.moveViewBuilder, adUnitId: dependency.bannerAdUnitId)
+    var interactor: CharacterInteractor {
+        return CharacterInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router, context: dependency.dispatcherProvider.default_)
+    }
+    
+    var router: Router {
+        return CharRouter()
+    }
+    
+    func characterView(id:Int32) -> AnyView {
+        return AnyView(CharView(charId: id, interactor: interactor, adUnitId: dependency.bannerAdUnitId))
     }
 }
 
 protocol CharacterViewBuilder {
-    func characterView(id:Int32) -> UIViewController
+    func characterView(id:Int32) -> AnyView
 }

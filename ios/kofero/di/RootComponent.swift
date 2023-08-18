@@ -80,10 +80,6 @@ class RootComponent: BootstrapComponent {
         return characterComponent
     }
     
-    var moveViewBuilder:MoveViewBuilder{
-        return moveComponent
-    }
-    
     var homeViewBuilder: HomeViewBuilder {
         return homeComponent
     }
@@ -92,7 +88,7 @@ class RootComponent: BootstrapComponent {
         return "ca-app-pub-3940256099942544/2934735716"
     }
     
-    var rootView: UIViewController {
+    var navController: UIViewController {
         return UINavigationController(rootViewController: UIHostingController(rootView: RootView()))
     }
     
