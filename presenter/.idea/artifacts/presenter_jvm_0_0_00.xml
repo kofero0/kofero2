@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="presenter-jvm-0.0.00">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <root id="archive" name="presenter-jvm-0.0.00.jar">
+      <element id="module-output" name="presenter.jvmMain" />
+    </root>
+  </artifact>
+</component>

@@ -16,7 +16,8 @@ protocol GameDependency: Dependency {
     var providerCore:ProviderCore {get}
     var characterProvider:Provider {get}
     var jsonEncoder:DataEncoder<[JSON]> {get}
-    var charViewBuilder:CharacterViewBuilder {get}
+    var charViewBuilder:CharViewBuilder {get}
+    var navController:UINavigationController {get}
     var bannerAdUnitId:String {get}
     var loggingProvider:LoggingProvider {get}
     var stateLogger: StateLogger {get}
@@ -51,20 +52,13 @@ class GameComponent: Component<GameDependency>, GameViewBuilder {
     }
     
     var router: Router {
-        return GameRouter(dependency.charViewBuilder, dependency.uiApplication, dependency.characterProvider)
+        return GameRouter(dependency.charViewBuilder, navController: dependency.navController)
     }
     
     
-    override func gameView(id: Int32) -> AnyView {
-        return AnyView(GameView)
+    func gameView(id: Int32) -> AnyView {
+        return AnyView(GameView(gameId: id, interactor: interactor, adUnitId: dependency.bannerAdUnitId))
     }
-    
-//
-//    func gameView(id:Int32) -> ContentView {
-//
-//        return ContentView()
-//        //return GameView(interactor: interactor, gameId: id, adUnitId: dependency.bannerAdUnitId)
-//    }
     
 }
 

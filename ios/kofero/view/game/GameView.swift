@@ -9,13 +9,13 @@ import SwiftUI
 import presenter
 
 struct GameView: View {
-    let gameId:Int
+    let gameId:Int32
     let adUnitId:String
     let interactor: GameInteractor
     @StateObject var viewModel = GameViewModel()
     
     
-    init(gameId:Int, interactor:GameInteractor, adUnitId:String){
+    init(gameId:Int32, interactor:GameInteractor, adUnitId:String){
         self.gameId = gameId
         self.adUnitId = adUnitId
         self.interactor = interactor

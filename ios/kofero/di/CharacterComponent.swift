@@ -23,7 +23,7 @@ protocol CharacterDependency: Dependency {
     var dispatcherProvider: DispatcherProvider {get}
 }
 
-class CharacterComponent: Component<CharacterDependency>, CharacterViewBuilder {
+class CharacterComponent: Component<CharacterDependency>, CharViewBuilder {
     var provider: CharacterProvider {
         return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! CharacterProvider
     }
@@ -57,6 +57,6 @@ class CharacterComponent: Component<CharacterDependency>, CharacterViewBuilder {
     }
 }
 
-protocol CharacterViewBuilder {
+protocol CharViewBuilder {
     func characterView(id:Int32) -> AnyView
 }

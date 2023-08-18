@@ -76,7 +76,7 @@ class RootComponent: BootstrapComponent {
         return gameComponent
     }
     
-    var charViewBuilder:CharacterViewBuilder{
+    var charViewBuilder:CharViewBuilder{
         return characterComponent
     }
     
