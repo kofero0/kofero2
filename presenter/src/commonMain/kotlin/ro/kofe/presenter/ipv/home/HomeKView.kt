@@ -5,7 +5,7 @@ import ro.kofe.model.Game
 import ro.kofe.model.Obj
 import ro.kofe.presenter.ipv.KView
 
-interface HomeView : KView {
+interface HomeKView : KView {
     fun displayGames(games: List<Game>)
     fun displayFavs(favorites: List<Obj>)
     fun display(url: String, imgBase64: String)

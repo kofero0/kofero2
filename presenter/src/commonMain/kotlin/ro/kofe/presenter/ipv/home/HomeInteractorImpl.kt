@@ -1,6 +1,5 @@
 package ro.kofe.presenter.ipv.home
 
-import arrow.core.raise.either
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import ro.kofe.model.*
@@ -25,7 +24,7 @@ class HomeInteractorImpl(
     loggingProvider: LoggingProvider,
     router: Router,
     private val context: CoroutineContext
-) : HomeInteractor, InteractorImpl<HomeView, HomePresenter>(
+) : HomeInteractor, InteractorImpl<HomeKView, HomePresenter>(
     presenter,
     stateLogger,
     stateReducer,

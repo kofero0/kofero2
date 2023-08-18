@@ -9,6 +9,12 @@ import SwiftUI
 
 @main
 struct iosApp: App {
+    
+    //init() {
+     //   registerProviderFactories()
+   // }
+    
+    
     var body: some Scene {
         WindowGroup {
             RootView()

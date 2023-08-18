@@ -1,6 +1,5 @@
 package ro.kofe.presenter.ipv.game
 
-import arrow.core.raise.either
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import ro.kofe.model.Character
@@ -25,7 +24,7 @@ class GameInteractorImpl(
     router: Router,
     private val context: CoroutineContext
 ) : GameInteractor,
-    InteractorImpl<GameView, GamePresenter>(
+    InteractorImpl<GameKView, GamePresenter>(
         presenter,
         stateLogger,
         stateReducer,

@@ -15,11 +15,11 @@ class HomePresenterImpl(
     private var imageProvider: ImageProvider,
     private var favoritesProvider: FavoritesProvider,
     loggingProvider: LoggingProvider
-) : HomePresenter, PresenterImpl<HomeView>(
+) : HomePresenter, PresenterImpl<HomeKView>(
     null, loggingProvider, HOME_PRESENTER
 ) {
 
-    override fun setView(view: HomeView) {
+    override fun setView(view: HomeKView) {
         this.view = view
     }
 

@@ -14,9 +14,9 @@ class GamePresenterImpl(
     private var gameProvider: Provider<Game>,
     private var imageProvider: ImageProvider
 ) : GamePresenter {
-    private var view: GameView? = null
+    private var view: GameKView? = null
 
-    override fun setView(view: GameView) {
+    override fun setView(view: GameKView) {
         this.view = view
     }
 

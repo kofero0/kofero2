@@ -8,6 +8,3 @@
 import Foundation
 import SwiftUI
 
-protocol GameViewBuilder{
-    func gameView(id:Int32) -> AnyView
-}

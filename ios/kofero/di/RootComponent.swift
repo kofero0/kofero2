@@ -92,8 +92,8 @@ class RootComponent: BootstrapComponent {
         return "ca-app-pub-3940256099942544/2934735716"
     }
     
-    var rootView: AnyView {
-        return AnyView(RootView())
+    var rootView: UIViewController {
+        return UINavigationController(rootViewController: UIHostingController(rootView: RootView()))
     }
     
     var favoritesProvider:FavoritesProvider {

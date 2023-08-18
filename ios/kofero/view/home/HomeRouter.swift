@@ -9,19 +9,20 @@ import Foundation
 import presenter
 import SwiftUI
 
+
+
 class HomeRouter: Router {
     let gameViewBuilder: GameViewBuilder
-    let uiApplication: UIApplication
+    let navController: UINavigationController
     
-    public init(_ gameViewBuilder:GameViewBuilder, _ uiApplication:UIApplication){
-        self.uiApplication = uiApplication
+    public init(_ gameViewBuilder:GameViewBuilder, navController:UINavigationController){
+        self.navController = navController
         self.gameViewBuilder = gameViewBuilder
     }
     
     func routeTo(view: ModelEvent.ViewTag, uid: Int32) -> Bool {
         if(view != .gameView){ return false }
-        guard let root = uiApplication.windows.first(where: \.isKeyWindow)?.rootViewController else { fatalError("how did this happen?") }
-        root.show(gameViewBuilder.gameView(id: uid), sender: self)
+        navController.present(gameViewBuilder.gameView(id: uid))
         return view == .gameView
     }
 }

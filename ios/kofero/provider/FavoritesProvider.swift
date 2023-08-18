@@ -37,7 +37,7 @@ public class FavoritesProviderImpl: FavoritesProvider {
         return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
     }
     
-    public func get(ids: [KotlinInt]) -> Arrow_coreIor<ModelProviderError, NSArray> {
+    public func get(ids: [KotlinInt]) async throws -> Arrow_coreIor<ModelProviderError, NSArray> {
         if let favs = defaults.object(forKey: FAVS_KEY) as? [ModelObj]{
             return arrowExtensions.buildListIorRight(right: favs)
         }

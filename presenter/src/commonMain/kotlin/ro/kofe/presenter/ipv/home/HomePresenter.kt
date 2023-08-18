@@ -4,7 +4,7 @@ import arrow.core.Either
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.ipv.Presenter
 
-interface HomePresenter : Presenter<HomeView> {
+interface HomePresenter : Presenter<HomeKView> {
     suspend fun showGames(): Either<ProviderError, Unit>
     suspend fun showFavs(): Either<ProviderError, Unit>
 }

@@ -19,13 +19,12 @@ protocol GameDependency: Dependency {
     var charViewBuilder:CharacterViewBuilder {get}
     var bannerAdUnitId:String {get}
     var loggingProvider:LoggingProvider {get}
-    var uiApplication:UIApplication {get}
     var stateLogger: StateLogger {get}
     var stateReducer: StateReducer {get}
     var dispatcherProvider: DispatcherProvider {get}
 }
 
-class GameComponent: Component<GameDependency>{
+class GameComponent: Component<GameDependency>, GameViewBuilder {
     
     var gameProvider: GameProvider {
         return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! GameProvider
@@ -55,10 +54,21 @@ class GameComponent: Component<GameDependency>{
         return GameRouter(dependency.charViewBuilder, dependency.uiApplication, dependency.characterProvider)
     }
     
-    func gameView(id:Int32) -> ContentView {
-        
-        return ContentView()
-        //return GameView(interactor: interactor, gameId: id, adUnitId: dependency.bannerAdUnitId)
+    
+    override func gameView(id: Int32) -> AnyView {
+        return AnyView(GameView)
     }
     
+//
+//    func gameView(id:Int32) -> ContentView {
+//
+//        return ContentView()
+//        //return GameView(interactor: interactor, gameId: id, adUnitId: dependency.bannerAdUnitId)
+//    }
+    
+}
+
+
+protocol GameViewBuilder{
+    func gameView(id:Int32) -> AnyView
 }

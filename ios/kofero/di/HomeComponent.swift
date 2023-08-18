@@ -8,6 +8,7 @@
 import Foundation
 import NeedleFoundation
 import presenter
+import SwiftUI
 
 protocol HomeDependency: Dependency {
     var bannerAdUnitId:String {get}
@@ -18,7 +19,7 @@ protocol HomeDependency: Dependency {
     var stateLogger:StateLogger {get}
     var stateReducer:StateReducer {get}
     var loggingProvider:LoggingProvider {get}
-    var uiApplication:UIApplication {get}
+    var navController:UINavigationController {get}
     var dispatcherProvider: DispatcherProvider {get}
 }
 
@@ -33,14 +34,14 @@ class HomeComponent: Component<HomeDependency>, HomeViewBuilder {
     }
     
     var router: Router {
-        return HomeRouter(dependency.gameViewBuilder, dependency.uiApplication)
+        return HomeRouter(dependency.gameViewBuilder, navController: dependency.navController)
     }
     
-    func homeView() -> View {
-        return HomeView(interactor: interactor, adUnitId: dependency.bannerAdUnitId)
+    func homeView() -> AnyView {
+        return AnyView(HomeView(interactor: interactor, adUnitId: dependency.bannerAdUnitId))
     }
 }
 
 protocol HomeViewBuilder {
-    func homeView() -> View
+    func homeView() -> AnyView
 }
