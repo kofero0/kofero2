@@ -6,18 +6,21 @@
 //
 
 import SwiftUI
+import NeedleFoundation
+import GoogleMobileAds
 
 @main
 struct iosApp: App {
     
-    //init() {
-     //   registerProviderFactories()
-   // }
+    init() {
+        registerProviderFactories()
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+    }
     
     
     var body: some Scene {
         WindowGroup {
-            RootView()
+            AnyView(_fromValue: UINavigationController())
         }
     }
 }

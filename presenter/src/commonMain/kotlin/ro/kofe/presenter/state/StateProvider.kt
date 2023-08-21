@@ -5,6 +5,6 @@ import ro.kofe.model.Event
 import ro.kofe.model.ProviderError
 
 interface StateProvider {
-    fun get(): Either<ProviderError, Map<Long,Event>>
-    fun save(map: Map<Long, Event>): Either<ProviderError, Unit>
+   suspend fun get(): Either<ProviderError, Map<Long,Event>>
+   suspend fun save(map: Map<Long, Event>): Either<ProviderError, Unit>
 }

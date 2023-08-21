@@ -4,6 +4,7 @@ import arrow.core.Either
 import arrow.core.Ior
 import arrow.core.left
 import platform.Foundation.NSArray
+import platform.Foundation.NSDictionary
 import ro.kofe.model.ProviderError
 
 object ArrowExtensions {
@@ -22,4 +23,7 @@ object ArrowExtensions {
 
     fun buildUnitEitherRight(): Either<ProviderError,Unit> = Either.Right(Unit)
 
+    fun buildNSDictionaryEitherLeft(error:ProviderError): Either<ProviderError,NSDictionary> = Either.Left(error)
+
+    fun buildNSDictionaryEitherRight(dict:NSDictionary): Either<ProviderError, NSDictionary> = Either.Right(dict)
 }

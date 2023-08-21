@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0D01E82A93E00D005CF444 /* StateProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D01E72A93E00D005CF444 /* StateProviderImpl.swift */; };
+		4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */; };
 		4BD71A4D2A85EB9D00EB8752 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */; };
 		4BD71A512A85EB9E00EB8752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD71A502A85EB9E00EB8752 /* Assets.xcassets */; };
 		4BD71A542A85EB9E00EB8752 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD71A532A85EB9E00EB8752 /* Preview Assets.xcassets */; };
@@ -41,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B0D01E72A93E00D005CF444 /* StateProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProviderImpl.swift; sourceTree = "<group>"; };
+		4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		4B0D01ED2A94073A005CF444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4BD71A492A85EB9D00EB8752 /* kofero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kofero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		4BD71A502A85EB9E00EB8752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,12 +115,15 @@
 		4BD71A4B2A85EB9D00EB8752 /* kofero */ = {
 			isa = PBXGroup;
 			children = (
+				4B0D01ED2A94073A005CF444 /* Info.plist */,
 				4BD71A912A8D894F00EB8752 /* view */,
 				4BD71A862A8B0D7300EB8752 /* di */,
 				4BD71A6C2A85F59800EB8752 /* provider */,
 				4BD71A612A85F52000EB8752 /* mapper */,
 				4BD71A5A2A85F4DC00EB8752 /* encoder */,
+				4BD71AA02A8EAECF00EB8752 /* Extension.swift */,
 				4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */,
+				4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */,
 				4BD71A502A85EB9E00EB8752 /* Assets.xcassets */,
 				4BD71A522A85EB9E00EB8752 /* Preview Content */,
 			);
@@ -133,8 +141,8 @@
 		4BD71A5A2A85F4DC00EB8752 /* encoder */ = {
 			isa = PBXGroup;
 			children = (
-				4BD71A5B2A85F4DC00EB8752 /* Encoder.swift */,
 				4BD71A5C2A85F4DC00EB8752 /* DataEncoder.swift */,
+				4BD71A5B2A85F4DC00EB8752 /* Encoder.swift */,
 				4BD71A5D2A85F4DC00EB8752 /* JsonDataEncoder.swift */,
 			);
 			path = encoder;
@@ -143,11 +151,11 @@
 		4BD71A612A85F52000EB8752 /* mapper */ = {
 			isa = PBXGroup;
 			children = (
+				4BD71A652A85F52000EB8752 /* CharacterMapper.swift */,
+				4BD71A642A85F52000EB8752 /* DataMapper.swift */,
+				4BD71A662A85F52000EB8752 /* GameMapper.swift */,
 				4BD71A622A85F52000EB8752 /* Mapper.swift */,
 				4BD71A632A85F52000EB8752 /* MoveMapper.swift */,
-				4BD71A642A85F52000EB8752 /* DataMapper.swift */,
-				4BD71A652A85F52000EB8752 /* CharacterMapper.swift */,
-				4BD71A662A85F52000EB8752 /* GameMapper.swift */,
 			);
 			path = mapper;
 			sourceTree = "<group>";
@@ -156,10 +164,11 @@
 			isa = PBXGroup;
 			children = (
 				4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */,
-				4BD71A6E2A85F59800EB8752 /* Provider.swift */,
 				4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */,
-				4BD71A702A85F59800EB8752 /* ProviderCore.swift */,
 				4BD71A712A85F59800EB8752 /* LoggingProvider.swift */,
+				4BD71A6E2A85F59800EB8752 /* Provider.swift */,
+				4BD71A702A85F59800EB8752 /* ProviderCore.swift */,
+				4B0D01E72A93E00D005CF444 /* StateProviderImpl.swift */,
 				4BD71AA72A8F15BD00EB8752 /* Typealias.swift */,
 			);
 			path = provider;
@@ -181,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				4BD71AA92A8F165F00EB8752 /* RootView.swift */,
-				4BD71AA02A8EAECF00EB8752 /* Extension.swift */,
 				4BD71A952A8D897300EB8752 /* home */,
 				4BD71A942A8D896E00EB8752 /* game */,
 				4BD71A922A8D896000EB8752 /* char */,
@@ -192,8 +200,8 @@
 		4BD71A922A8D896000EB8752 /* char */ = {
 			isa = PBXGroup;
 			children = (
-				4BD71A9A2A8D8F9D00EB8752 /* CharView.swift */,
 				4BD71AA52A8F138800EB8752 /* CharRouter.swift */,
+				4BD71A9A2A8D8F9D00EB8752 /* CharView.swift */,
 			);
 			path = char;
 			sourceTree = "<group>";
@@ -201,8 +209,8 @@
 		4BD71A942A8D896E00EB8752 /* game */ = {
 			isa = PBXGroup;
 			children = (
-				4BD71A982A8D8F8300EB8752 /* GameView.swift */,
 				4BD71AA32A8F086000EB8752 /* GameRouter.swift */,
+				4BD71A982A8D8F8300EB8752 /* GameView.swift */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -210,8 +218,8 @@
 		4BD71A952A8D897300EB8752 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				4BD71A962A8D8C7900EB8752 /* HomeView.swift */,
 				4BD71A9C2A8D903A00EB8752 /* HomeRouter.swift */,
+				4BD71A962A8D8C7900EB8752 /* HomeView.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 			buildPhases = (
 				8901B00833273E65D205F8F2 /* [CP] Check Pods Manifest.lock */,
 				4BD71A452A85EB9D00EB8752 /* Sources */,
+				4B0D01E12A914D3E005CF444 /* ShellScript */,
 				4BD71A462A85EB9D00EB8752 /* Frameworks */,
 				4BD71A472A85EB9D00EB8752 /* Resources */,
 				B67F3E5AE99269719CBA3CA6 /* [CP] Embed Pods Frameworks */,
@@ -301,6 +310,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4B0D01E12A914D3E005CF444 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export SOURCEKIT_LOGGING=0 && needle generate kofero/NeedleGenerated.swift kofero/\n";
+		};
 		8901B00833273E65D205F8F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +377,7 @@
 				4BD71A742A85F59800EB8752 /* FavoritesProvider.swift in Sources */,
 				4BD71A762A85F59800EB8752 /* LoggingProvider.swift in Sources */,
 				4BD71A722A85F59800EB8752 /* ImageProvider.swift in Sources */,
+				4B0D01E82A93E00D005CF444 /* StateProviderImpl.swift in Sources */,
 				4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */,
 				4BD71A602A85F4DC00EB8752 /* JsonDataEncoder.swift in Sources */,
 				4BD71A6B2A85F52000EB8752 /* GameMapper.swift in Sources */,
@@ -360,6 +387,7 @@
 				4BD71A752A85F59800EB8752 /* ProviderCore.swift in Sources */,
 				4BD71A8F2A8B0D7300EB8752 /* CharacterComponent.swift in Sources */,
 				4BD71A732A85F59800EB8752 /* Provider.swift in Sources */,
+				4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */,
 				4BD71A5F2A85F4DC00EB8752 /* DataEncoder.swift in Sources */,
 				4BD71A6A2A85F52000EB8752 /* CharacterMapper.swift in Sources */,
 				4BD71A682A85F52000EB8752 /* MoveMapper.swift in Sources */,
@@ -507,6 +535,8 @@
 				DEVELOPMENT_TEAM = 3GDW646NZ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kofero/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -537,6 +567,8 @@
 				DEVELOPMENT_TEAM = 3GDW646NZ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kofero/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

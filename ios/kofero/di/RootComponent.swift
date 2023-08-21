@@ -32,7 +32,7 @@ class RootComponent: BootstrapComponent {
         return moveComponent.provider
     }
     
-    var characterProvider: CharacterProvider {
+    var charProvider: CharacterProvider {
         return characterComponent.provider
     }
     
@@ -85,10 +85,10 @@ class RootComponent: BootstrapComponent {
     }
     
     var bannerAdUnitId: String {
-        return "ca-app-pub-3940256099942544/2934735716"
+        return "ca-app-pub-8614671926563443/4610731994"
     }
     
-    var navController: UIViewController {
+    var navController: UINavigationController {
         return UINavigationController(rootViewController: UIHostingController(rootView: RootView()))
     }
     
@@ -100,8 +100,19 @@ class RootComponent: BootstrapComponent {
         return LoggingProviderImpl()
     }
     
-    var uiApplication: UIApplication {
-        return UIApplication.shared
+    var stateLogger: StateLogger {
+        return StateLoggerImpl(stateRepository: stateRepository, loggingProvider: loggingProvider)
     }
     
+    var stateRepository: StateProvider {
+        return StateProviderImpl()
+    }
+    
+    var stateReducer: StateReducer {
+        return StateReducerImpl()
+    }
+    
+    var dispatcherProvider: DispatcherProvider {
+        return DispatcherProvider()
+    }
 }

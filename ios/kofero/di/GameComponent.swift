@@ -14,7 +14,7 @@ import SwiftUI
 protocol GameDependency: Dependency {
     var imageProvider:ImageProvider {get}
     var providerCore:ProviderCore {get}
-    var characterProvider:Provider {get}
+    var charProvider:CharacterProvider {get}
     var jsonEncoder:DataEncoder<[JSON]> {get}
     var charViewBuilder:CharViewBuilder {get}
     var navController:UINavigationController {get}
@@ -44,7 +44,7 @@ class GameComponent: Component<GameDependency>, GameViewBuilder {
     }
     
     var presenter: GamePresenter {
-        return GamePresenterImpl(characterProvider: dependency.characterProvider, gameProvider: gameProvider, imageProvider: dependency.imageProvider)
+        return GamePresenterImpl(characterProvider: dependency.charProvider, gameProvider: gameProvider, imageProvider: dependency.imageProvider)
     }
     
     var interactor: GameInteractor {
