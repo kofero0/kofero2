@@ -7,36 +7,36 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
-import ro.kofe.model.Game
+import ro.kofe.model.Character
 import java.io.File
 
 
 @RestController
-class GameController {
+class CharController {
     private val mapper: ObjectMapper by lazy {
         jsonMapper {
             addModule(kotlinModule())
         }
     }
     private val file: File by lazy {
-        ClassPathResource("data/game.json").file
+        ClassPathResource("data/char.json").file
     }
-    private val list: List<Game> by lazy {
+    private val list: List<Character> by lazy {
         mapper.readValue(
             file.readText(), mapper.typeFactory
-                .constructCollectionType(MutableList::class.java, Game::class.java)
+                .constructCollectionType(MutableList::class.java, Character::class.java)
         )
     }
 
-    @GetMapping("/game")
+    @GetMapping("/char")
     fun get(@RequestBody uids: List<Int>): String {
-        val ret = ArrayList<Game>()
+        val ret = ArrayList<Character>()
         run breaking@{
-            list.forEach { game ->
-                if (uids.contains(game.uid)) {
-                    ret.add(game)
+            list.forEach { char ->
+                if (uids.contains(char.uid)) {
+                    ret.add(char)
                 }
-                if (uids.size == ret.size) return@breaking
+                if (ret.size == uids.size) return@breaking
             }
         }
         return mapper.writeValueAsString(ret)
