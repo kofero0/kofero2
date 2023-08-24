@@ -33,9 +33,7 @@ class GameController {
         val ret = ArrayList<Game>()
         run breaking@{
             list.forEach { game ->
-                if (uids.contains(game.uid)) {
-                    ret.add(game)
-                }
+                if (uids.contains(game.uid)) ret.add(game)
                 if (uids.size == ret.size) return@breaking
             }
         }

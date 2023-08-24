@@ -33,9 +33,7 @@ class CharController {
         val ret = ArrayList<Character>()
         run breaking@{
             list.forEach { char ->
-                if (uids.contains(char.uid)) {
-                    ret.add(char)
-                }
+                if (uids.contains(char.uid)) ret.add(char)
                 if (ret.size == uids.size) return@breaking
             }
         }

@@ -35,9 +35,7 @@ class MoveController {
         val ret = ArrayList<Move>()
         run breaking@{
             list.forEach { move ->
-                if (uids.contains(move.uid)) {
-                    ret.add(move)
-                }
+                if (uids.contains(move.uid)) ret.add(move)
                 if (uids.size == ret.size) return@breaking
             }
         }
