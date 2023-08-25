@@ -15,21 +15,23 @@ open class ProviderImpl<O:ModelObj>: Provider {
     private let userDefaults: IUserDefaults
     private let encoder:DataEncoder<[Int32]>
     private let mapper:DataMapper<[O]>
-    private let jsonFilename: String
     private let url:URL
+    private let internalFilename:String
+    private let loggingProvider: LoggingProvider
     
     private var isDiskPulled = false
     private var requests = [[KotlinInt]:RestTask]()
     private var elements = [O]()
     
-    public init(core:ProviderCore, url:URL, mapper:DataMapper<[O]>, jsonFilename:String, loggingProvider:LoggingProvider){
+    public init(core:ProviderCore, url:URL, mapper:DataMapper<[O]>, internalFilename:String, loggingProvider:LoggingProvider){
         self.fileManager = core.fileManager
         self.restManager = core.restManager
         self.userDefaults = core.userDefaults
         self.encoder = core.requestEncoder
         self.url = url
         self.mapper = mapper
-        self.jsonFilename = jsonFilename
+        self.internalFilename = internalFilename
+        self.loggingProvider = loggingProvider
     }
     
     public func get(ids: [KotlinInt]) async throws -> Arrow_coreIor<ModelProviderError, NSArray> {
@@ -57,11 +59,15 @@ open class ProviderImpl<O:ModelObj>: Provider {
                     result = elements
                 }
                 catch {
-                    providerError = ModelIncorrectCount(ids: [])
+                    providerError = ModelFileReadError(filePath: makeUrl(string: internalFilename).path)
                 }
             }
             else{
-                providerError = ModelIncorrectCount(ids: [])
+                if let uResponse = response as? HTTPURLResponse{
+                    if let responseData = String(data: data!, encoding: .utf8) {
+                        providerError = ModelHttpError(statusCode: Int32(uResponse.statusCode), response: responseData)
+                    }
+                }
             }
             group.leave()
         }
@@ -77,7 +83,7 @@ open class ProviderImpl<O:ModelObj>: Provider {
         if let uResult = result {
             return arrowExtensions.buildListIorRight(right: uResult)
         }
-        return arrowExtensions.buildListIorLeft(left: ModelOther())
+        return arrowExtensions.buildListIorLeft(left: ModelOtherError())
     }
     
     
@@ -97,7 +103,7 @@ open class ProviderImpl<O:ModelObj>: Provider {
             elements.removeAll(where: {existingElement in return element.uid == existingElement.uid})
             elements.append(element)
         }
-        try mapper.map(data: elements).write(to: makeUrl(string: jsonFilename), options: .atomic)
+        try mapper.map(data: elements).write(to: makeUrl(string: internalFilename), options: .atomic)
         for request in requests.keys {
             if(isSatisfiable(request: request)){
                 requests.removeValue(forKey: request)?.cancel()
@@ -129,28 +135,19 @@ open class ProviderImpl<O:ModelObj>: Provider {
     
     private func pullFromDisk(ids: [KotlinInt]) async throws -> Arrow_coreIor<ModelProviderError, NSArray> {
         isDiskPulled = true
-        let url = makeUrl(string: jsonFilename)
+        let url = makeUrl(string: internalFilename)
         do {
             elements = try mapper.map(data: Data(contentsOf: url))
             return arrowExtensions.buildListIorRight(right: elements)
         }
         catch {
-            return try pullFromBundledJson(ids:ids)
+            loggingProvider.log(level: .alert, logTag: "Provider: \(internalFilename)", message: "failed to map elements")
         }
         if(isSatisfiable(request: ids)){
             return arrowExtensions.buildListIorRight(right: retrieve(ids: ids))
         }
         else{
             return try await send(ids: ids)
-        }
-    }
-    
-    private func pullFromBundledJson(ids:[KotlinInt]) throws -> Arrow_coreIor<ModelProviderError, NSArray> {
-        if let path = Bundle.main.path(forResource: jsonFilename, ofType: "json") {
-                elements = try mapper.map(data: Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped))
-            return arrowExtensions.buildListIorRight(right: elements)
-        } else {
-            return arrowExtensions.buildListIorLeft(left: ModelFileReadError(filePath: jsonFilename))
         }
     }
 }

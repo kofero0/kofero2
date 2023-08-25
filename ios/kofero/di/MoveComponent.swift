@@ -18,7 +18,7 @@ protocol MoveDependency: Dependency {
 
 class MoveComponent: Component<MoveDependency> {
     var provider: MoveProvider {
-        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! MoveProvider
+        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, internalFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! MoveProvider
     }
     
     var jsonFilename:String {

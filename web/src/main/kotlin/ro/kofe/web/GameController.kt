@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jsonMapper
 import com.fasterxml.jackson.module.kotlin.kotlinModule
 import org.springframework.core.io.ClassPathResource
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
@@ -29,14 +31,16 @@ class GameController {
     }
 
     @GetMapping("/game")
-    fun get(@RequestBody uids: List<Int>): String {
+    fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
         val ret = ArrayList<Game>()
         run breaking@{
             list.forEach { game ->
                 if (uids.contains(game.uid)) ret.add(game)
                 if (uids.size == ret.size) return@breaking
             }
+
         }
-        return mapper.writeValueAsString(ret)
+        return if(ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
+        else ResponseEntity<Any>(HttpStatus.BAD_REQUEST)
     }
 }

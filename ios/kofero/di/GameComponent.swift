@@ -28,7 +28,7 @@ protocol GameDependency: Dependency {
 class GameComponent: Component<GameDependency>, GameViewBuilder {
     
     var gameProvider: GameProvider {
-        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! GameProvider
+        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, internalFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! GameProvider
     }
     
     var mapper: DataMapper<[ModelGame]> {

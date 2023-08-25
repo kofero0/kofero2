@@ -11,7 +11,7 @@ class InvalidObject(val id:Int): ProviderError()
 
 sealed class NetworkError: ProviderError()
 
-class Http(val statusCode: Int, val response: String): NetworkError()
-object NoPermission : NetworkError()
-object Hardware: NetworkError()
-object Other: NetworkError()
+class HttpError(val statusCode: Int, val response: String): NetworkError()
+object NoPermissionError : NetworkError()
+object HardwareError: NetworkError()
+object OtherError: NetworkError()

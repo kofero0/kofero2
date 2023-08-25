@@ -25,7 +25,7 @@ protocol CharacterDependency: Dependency {
 
 class CharacterComponent: Component<CharacterDependency>, CharViewBuilder {
     var provider: CharacterProvider {
-        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, jsonFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! CharacterProvider
+        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, internalFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! CharacterProvider
     }
     
     var jsonFilename:String {
