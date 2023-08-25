@@ -1,6 +1,5 @@
 package ro.kofe.presenter.state
 
-import kotlinx.coroutines.newSingleThreadContext
 import ro.kofe.model.Event
 import ro.kofe.presenter.provider.LoggingProvider
 
