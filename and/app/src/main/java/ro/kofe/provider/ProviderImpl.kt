@@ -1,29 +1,26 @@
-package ro.kofe
+package ro.kofe.provider
 
 import android.accounts.NetworkErrorException
 import android.content.Context
-import arrow.core.Ior
-import arrow.core.raise.either
 import arrow.core.raise.ior
 import com.google.gson.Gson
 import okhttp3.*
 import okhttp3.RequestBody.Companion.toRequestBody
+import ro.kofe.UrlPrefix
 import ro.kofe.model.Obj
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.map.Mapper
 import ro.kofe.model.CombinedError
-import ro.kofe.model.HttpError
-import ro.kofe.model.OtherError
 import java.io.File
-import java.io.IOException
 
 
-class Provider<O : Obj>(
+class ProviderImpl<O : Obj>(
     private val gson: Gson,
     private val okHttp: OkHttpClient,
     private val context: Context,
     private val jsonFilename: String,
+    private val urlPrefix: UrlPrefix,
     private val mapper: Mapper<List<O>, ByteArray>
 ) : Provider<O> {
     private var isDiskPulled = false
@@ -48,7 +45,7 @@ class Provider<O : Obj>(
 
     private fun send(ids: List<Int>): List<O> {
         val request =
-            Request.Builder().url(jsonFilename).put(gson.toJson(ids).toRequestBody()).build()
+            Request.Builder().url(urlPrefix.prefix + jsonFilename).put(gson.toJson(ids).toRequestBody()).build()
         val response = okHttp.newCall(request).execute()
         if (response.isSuccessful) {
             response.body?.let {

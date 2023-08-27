@@ -4,5 +4,5 @@ import arrow.core.Either
 import ro.kofe.model.ProviderError
 
 interface ImageProvider {
-    fun get(url: String) : Either<ProviderError, String>
+    suspend fun get(url: String) : Either<ProviderError, String>
 }
