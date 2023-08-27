@@ -1,5 +1,6 @@
 package ro.kofe
 
+import android.accounts.NetworkErrorException
 import android.content.Context
 import arrow.core.Ior
 import arrow.core.raise.either
@@ -11,6 +12,7 @@ import ro.kofe.model.Obj
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.map.Mapper
+import ro.kofe.model.CombinedError
 import ro.kofe.model.HttpError
 import ro.kofe.model.OtherError
 import java.io.File
@@ -26,47 +28,36 @@ class Provider<O : Obj>(
 ) : Provider<O> {
     private var isDiskPulled = false
     private var elements: MutableList<O> = ArrayList()
+    private val file: File by lazy { File(context.filesDir, jsonFilename) }
 
-    override suspend fun get(ids: List<Int>) = ior<ProviderError, List<O>>({e1, e2 -> OtherError }) {
-        raise(OtherError)
-    }
-
-    /*
-    override suspend fun get(ids: List<Int>): Ior<ProviderError, List<O>> {
-        if (!isDiskPulled) {
-            pullFromDisk(ids)
-        } else {
-            if (isSatisfiable(ids)) informListeners(ids, retrieve(ids))
-            else send(ids)
-        }
-    }
-     */
-
-    private fun send(ids: List<Int>) {
-        okHttp.newCall(makeRequest(ids)).enqueue(makeCallback(ids))
-    }
-
-    private fun makeRequest(ids: List<Int>): Request {
-        return Request.Builder().url(jsonFilename).put(gson.toJson(ids).toRequestBody()).build()
-    }
-
-    private fun makeCallback(ids: List<Int>): Callback {
-        return object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                informListenersError(ids, e)
-            }
-
-            override fun onResponse(call: Call, response: Response) {
-                if (response.isSuccessful) {
-                    try {
-                        response.body?.let { add(mapper.mapLeft(it.bytes())) }
-                    } catch (e: Exception) {
-                        informListenersError(ids, e)
-                    }
+    override suspend fun get(ids: List<Int>) =
+        ior<ProviderError, List<O>>({ e1, e2 -> CombinedError(e1, e2) }) {
+            if (!isDiskPulled) {
+                isDiskPulled = true
+                elements = mapper.mapLeft(file.readBytes()).toMutableList()
+                if (isSatisfiable(ids)) {
+                    retrieve(ids)
+                } else {
+                    send(ids)
                 }
-                response.body?.bytes()
+            } else {
+                if (isSatisfiable(ids)) retrieve(ids)
+                else send(ids)
             }
         }
+
+    private fun send(ids: List<Int>): List<O> {
+        val request =
+            Request.Builder().url(jsonFilename).put(gson.toJson(ids).toRequestBody()).build()
+        val response = okHttp.newCall(request).execute()
+        if (response.isSuccessful) {
+            response.body?.let {
+                val ret = mapper.mapLeft(it.bytes())
+                add(ret)
+                return ret
+            }
+        }
+        throw NetworkErrorException()
     }
 
     private fun add(new: List<O>) {
@@ -74,61 +65,11 @@ class Provider<O : Obj>(
             elements.removeAll { it.uid == element.uid }
             elements.add(element)
         }
-        saveToDisk()
-
+        if (!file.exists()) {
+            file.mkdir()
+        }
+        file.writeBytes(mapper.mapRight(elements))
     }
-
-
-    private fun saveToDisk() {
-        try {
-            val file = File(context.filesDir.absolutePath + "/$jsonFilename")
-            if (!file.exists()){
-
-            }
-        } catch (e: Exception) {
-
-        }
-    }
-
-    /*
-    private func saveToDisk(){
-        do{
-            try mapper.map(data: elements).write(to: makeUrl(string: jsonFilename), options: .atomic)
-        }
-        catch {
-            informListenersError(ids: [], error: KotlinException(error: error))
-        }
-    }
-     */
-    /*
-    private func add(new:[O]){
-        for element in new {
-            elements.removeAll(where: {existingElement in return element.uid == existingElement.uid})
-            elements.append(element)
-        }
-        saveToDisk()
-        for request in requests.keys {
-            if(isSatisfiable(request: request)){
-                informListeners(ids: request, elements: retrieve(ids: request))
-                requests.removeValue(forKey: request)?.cancel()
-            }
-        }
-    }
-     */
-
-    /*
-    private func getRestClosure(ids: [KotlinInt]) -> RestClosure {
-        return {[self] data, response, error in
-            if(isResponseGood(data:data, response:response, error:error)){
-                do{ add(new: try mapper.map(data: data!)) }
-                catch { informListenersError(ids: ids, error: KotlinException(message: error.localizedDescription)) }
-            }
-            else{
-                informListenersError(ids: ids, error: KotlinException(message: "error:\(error.debugDescription), response: \(response.debugDescription)"))
-            }
-        }
-    }
-     */
 
     private fun retrieve(ids: List<Int>): List<O> {
         if (ids.isEmpty()) {
@@ -148,20 +89,5 @@ class Provider<O : Obj>(
             }
         }
         return true
-    }
-
-    private fun pullFromDisk(ids: List<Int>) {
-        isDiskPulled = true
-        val file = File(context.filesDir, jsonFilename)
-        try {
-            elements = mapper.mapLeft(file.readBytes()).toMutableList()
-        } catch (e: Exception) {
-            informListenersError(ids, e)
-        }
-        if (isSatisfiable(ids)) {
-            informListeners(ids, retrieve(ids))
-        } else {
-            send(ids)
-        }
     }
 }
