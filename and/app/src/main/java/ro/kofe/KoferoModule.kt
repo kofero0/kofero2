@@ -9,12 +9,14 @@ import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.OkHttpClient
 import ro.kofe.map.CharacterMapper
+import ro.kofe.map.FavoritesMapper
 import ro.kofe.map.GameMapper
 import ro.kofe.map.Mapper
 import ro.kofe.map.MoveMapper
 import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.model.Move
+import ro.kofe.model.Obj
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.Router
 import ro.kofe.presenter.ipv.character.CharacterInteractor
@@ -201,5 +203,10 @@ object KoferoModule {
             router,
             DispatcherProvider.default
         )
+    }
+
+    @Provides
+    fun provideFavoritesMapper(gson: Gson): Mapper<List<Obj>, ByteArray> {
+        return FavoritesMapper(gson)
     }
 }

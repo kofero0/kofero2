@@ -25,6 +25,7 @@ class ImageProviderImpl(private val okHttp: OkHttpClient, context: Context) :
             val response = okHttp.newCall(Request.Builder().url(url).build()).execute()
             if (response.isSuccessful) {
                 response.body?.let {
+                    file.writeBytes(it.bytes())
                     it.string()
                 }
                 HttpError(response.code, response.body.toString())

@@ -1,6 +1,6 @@
 package ro.kofe.model
 
-data class Game(override val uid: Int, val name:String, val charIds:List<Int>, val iconUrl:String): Obj(uid) {
+class Game(uid: Int, val name:String, val charIds:List<Int>, val iconUrl:String): Obj(uid) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is Game) return false

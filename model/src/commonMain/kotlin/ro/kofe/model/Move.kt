@@ -1,6 +1,6 @@
 package ro.kofe.model
 
-data class Move(override val uid:Int, val name:String, val attributes:Map<String,String>): Obj(uid) {
+class Move(uid:Int, val name:String, val attributes:Map<String,String>): Obj(uid) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is Move) return false
