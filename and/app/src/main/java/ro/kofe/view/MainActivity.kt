@@ -1,4 +1,4 @@
-package ro.kofe
+package ro.kofe.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,15 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
-import ro.kofe.map.Mapper
-import ro.kofe.model.Character
-import ro.kofe.model.Game
-import ro.kofe.model.Obj
+import ro.kofe.presenter.ipv.root.RootView
 import ro.kofe.ui.theme.KoferoTheme
-import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
+class MainActivity : RootView, ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +31,10 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun error(e: Exception) {
+        TODO("Not yet implemented")
     }
 }
 
