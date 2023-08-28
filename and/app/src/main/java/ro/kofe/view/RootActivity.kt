@@ -1,6 +1,7 @@
 package ro.kofe.view
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,14 +12,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
-import ro.kofe.presenter.ipv.root.RootView
+import ro.kofe.presenter.ipv.root.RootInteractor
+import ro.kofe.presenter.ipv.root.RootKView
 import ro.kofe.ui.theme.KoferoTheme
+import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : RootView, ComponentActivity() {
+class RootActivity : RootKView, ComponentActivity() {
+    @Inject
+    lateinit var interactor: RootInteractor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        interactor.setView(this)
 
         setContent {
             KoferoTheme {
@@ -35,6 +41,21 @@ class MainActivity : RootView, ComponentActivity() {
 
     override fun error(e: Exception) {
         TODO("Not yet implemented")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        interactor.viewResumed()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        interactor.viewPaused()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        interactor.shutdown()
     }
 }
 

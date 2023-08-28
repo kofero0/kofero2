@@ -21,7 +21,7 @@ class GameInteractorImpl(
     stateLogger: StateLogger,
     stateReducer: StateReducer,
     loggingProvider: LoggingProvider,
-    router: Router,
+    router: GameRouter,
     private val context: CoroutineContext
 ) : GameInteractor,
     InteractorImpl<GameKView, GamePresenter>(

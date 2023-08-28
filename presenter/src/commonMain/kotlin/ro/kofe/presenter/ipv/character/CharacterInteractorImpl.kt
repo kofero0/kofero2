@@ -15,7 +15,7 @@ class CharacterInteractorImpl(
     stateLogger: StateLogger,
     stateReducer: StateReducer,
     loggingProvider: LoggingProvider,
-    router: Router,
+    router: CharacterRouter,
     private val context: CoroutineContext
 ) : InteractorImpl<CharacterKView, CharacterPresenter>(
     presenter,

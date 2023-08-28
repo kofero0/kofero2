@@ -22,7 +22,7 @@ class HomeInteractorImpl(
     stateLogger: StateLogger,
     stateReducer: StateReducer,
     loggingProvider: LoggingProvider,
-    router: Router,
+    router: HomeRouter,
     private val context: CoroutineContext
 ) : HomeInteractor, InteractorImpl<HomeKView, HomePresenter>(
     presenter,

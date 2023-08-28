@@ -15,7 +15,7 @@ class RootInteractorImpl(
     stateLogger: StateLogger,
     stateReducer: StateReducer,
     loggingProvider: LoggingProvider,
-    router: Router,
+    router: RootRouter,
     private val context: CoroutineContext
 ) : InteractorImpl<RootKView, RootPresenter>(
     presenter,
