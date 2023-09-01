@@ -9,7 +9,6 @@ import ro.kofe.model.Event.ViewTag.HOME_VIEW
 import ro.kofe.model.Event.ViewTag.CHAR_VIEW
 import ro.kofe.model.logging.Level
 import ro.kofe.model.logging.LogTag.HOME_INTERACTOR
-import ro.kofe.presenter.Router
 import ro.kofe.presenter.ipv.InteractorImpl
 import ro.kofe.presenter.millisNow
 import ro.kofe.presenter.provider.LoggingProvider

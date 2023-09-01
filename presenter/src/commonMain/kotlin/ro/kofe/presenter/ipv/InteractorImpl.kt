@@ -2,7 +2,6 @@ package ro.kofe.presenter.ipv
 
 import ro.kofe.model.Event
 import ro.kofe.model.logging.Level.DEBUG
-import ro.kofe.presenter.Router
 import ro.kofe.presenter.millisNow
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.state.StateLogger

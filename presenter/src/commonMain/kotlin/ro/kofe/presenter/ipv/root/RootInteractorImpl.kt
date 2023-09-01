@@ -1,10 +1,7 @@
 package ro.kofe.presenter.ipv.root
 
-import kotlinx.coroutines.CoroutineDispatcher
 import ro.kofe.model.logging.LogTag.ROOT_INTERACTOR
-import ro.kofe.presenter.Router
 import ro.kofe.presenter.ipv.InteractorImpl
-import ro.kofe.presenter.ipv.home.HomePresenter
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer

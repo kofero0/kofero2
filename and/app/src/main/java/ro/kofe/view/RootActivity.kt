@@ -11,9 +11,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHost
+import androidx.navigation.NavHostController
 import dagger.hilt.android.AndroidEntryPoint
+import ro.kofe.presenter.ipv.home.HomeKView
 import ro.kofe.presenter.ipv.root.RootInteractor
 import ro.kofe.presenter.ipv.root.RootKView
+import ro.kofe.provider.NavHostProvider
 import ro.kofe.ui.theme.KoferoTheme
 import javax.inject.Inject
 
@@ -21,6 +27,12 @@ import javax.inject.Inject
 class RootActivity : RootKView, ComponentActivity() {
     @Inject
     lateinit var interactor: RootInteractor
+
+    @Inject
+    lateinit var navHostProvider: NavHostProvider
+
+    @Inject
+    lateinit var homeViewBuilder: ViewBuilder<HomeKView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

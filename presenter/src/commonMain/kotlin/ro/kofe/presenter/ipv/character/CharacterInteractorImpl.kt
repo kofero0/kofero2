@@ -3,7 +3,6 @@ package ro.kofe.presenter.ipv.character
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import ro.kofe.model.logging.LogTag.CHARACTER_INTERACTOR
-import ro.kofe.presenter.Router
 import ro.kofe.presenter.ipv.InteractorImpl
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.state.StateLogger

@@ -1,4 +1,4 @@
-package ro.kofe.presenter
+package ro.kofe.presenter.ipv
 
 import ro.kofe.model.Event
 

@@ -8,7 +8,6 @@ import ro.kofe.model.Event.Value.BUTTON_PRESSED
 import ro.kofe.model.Event.ViewTag.CHAR_VIEW
 import ro.kofe.model.Event.ViewTag.GAME_VIEW
 import ro.kofe.model.logging.LogTag.GAME_INTERACTOR
-import ro.kofe.presenter.Router
 import ro.kofe.presenter.ipv.InteractorImpl
 import ro.kofe.presenter.millisNow
 import ro.kofe.presenter.provider.LoggingProvider
