@@ -8,7 +8,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.OkHttpClient
-import ro.kofe.UrlPrefix
 import ro.kofe.map.Mapper
 import ro.kofe.map.MoveMapper
 import ro.kofe.model.Move
@@ -28,7 +27,7 @@ object MoveModule {
         gson: Gson,
         okHttp: OkHttpClient,
         @ApplicationContext context: Context,
-        urlPrefix: UrlPrefix,
+        @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Move>, ByteArray>
     ): Provider<Move> {
         return ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)

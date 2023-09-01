@@ -9,8 +9,8 @@ import ro.kofe.presenter.ipv.root.RootRouter
 import ro.kofe.view.ViewBuilder
 
 class RootRouterImpl(
-    private val navController: NavController,
-    private val homeBuilder: ViewBuilder<HomeKView>): RootRouter  {
+) : RootRouter {
     override fun routeTo(view: Event.ViewTag, uid: Int): Boolean {
+        return true
     }
 }

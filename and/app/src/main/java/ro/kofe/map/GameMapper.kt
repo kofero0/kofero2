@@ -6,14 +6,12 @@ import ro.kofe.model.Game
 import java.nio.charset.Charset
 
 
-class GameMapper(private val gson: Gson): Mapper<List<Game>, ByteArray> {
+class GameMapper(private val gson: Gson) : Mapper<List<Game>, ByteArray> {
     private val typeToken = object : TypeToken<ArrayList<Game>>() {}.type
 
-    override fun mapRight(data: List<Game>): ByteArray {
-        return gson.toJson(data).toByteArray(Charset.defaultCharset())
-    }
+    override fun mapRight(data: List<Game>) =
+        gson.toJson(data).toByteArray(Charset.defaultCharset())
 
-    override fun mapLeft(data: ByteArray): List<Game> {
-        return gson.fromJson(String(data, Charset.defaultCharset()),typeToken)
-    }
+    override fun mapLeft(data: ByteArray): List<Game> =
+        gson.fromJson(String(data, Charset.defaultCharset()), typeToken)
 }

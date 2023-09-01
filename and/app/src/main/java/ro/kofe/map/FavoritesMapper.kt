@@ -12,9 +12,7 @@ import java.nio.charset.Charset
 class FavoritesMapper(private val gson: Gson) : Mapper<List<Obj>, ByteArray> {
     private val typeToken = object : TypeToken<ArrayList<JsonElement>>() {}.type
 
-    override fun mapRight(data: List<Obj>): ByteArray {
-        return gson.toJson(data).toByteArray(Charset.defaultCharset())
-    }
+    override fun mapRight(data: List<Obj>) = gson.toJson(data).toByteArray(Charset.defaultCharset())
 
     override fun mapLeft(data: ByteArray): List<Obj> {
         val elementList: List<JsonElement> =

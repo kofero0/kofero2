@@ -6,13 +6,11 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import okhttp3.OkHttpClient
-import ro.kofe.UrlPrefix
 import ro.kofe.map.FavoritesMapper
 import ro.kofe.map.Mapper
 import ro.kofe.model.Game
 import ro.kofe.model.Obj
 import ro.kofe.presenter.DispatcherProvider
-import ro.kofe.presenter.Router
 import ro.kofe.presenter.ipv.root.RootInteractor
 import ro.kofe.presenter.ipv.root.RootInteractorImpl
 import ro.kofe.presenter.ipv.root.RootPresenter
@@ -23,16 +21,20 @@ import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 import ro.kofe.provider.LoggingProviderImpl
-import ro.kofe.provider.NavHostProvider
-import ro.kofe.provider.NavHostProviderImpl
-import javax.inject.Singleton
+import ro.kofe.router.RootRouterImpl
+import javax.inject.Qualifier
 
 @Module
 @InstallIn(ActivityComponent::class)
 object RootModule {
+
+    @Qualifier
+    annotation class UrlPrefix
+
     @Provides
-    fun provideUrlPrefix(): UrlPrefix {
-        return UrlPrefix("http://google.com")
+    @UrlPrefix
+    fun provideUrlPrefix(): String {
+        return "https://google.com"
     }
 
     @Provides
@@ -79,8 +81,8 @@ object RootModule {
     }
 
     @Provides
-    @Singleton
-    fun provideNavHostProvider(): NavHostProvider {
-        return NavHostProviderImpl()
+    fun provideRootRouter()
+    : RootRouter {
+        return RootRouterImpl()
     }
 }

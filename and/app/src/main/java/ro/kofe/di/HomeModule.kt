@@ -6,7 +6,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import ro.kofe.model.Game
 import ro.kofe.presenter.DispatcherProvider
-import ro.kofe.presenter.Router
 import ro.kofe.presenter.ipv.home.HomeInteractor
 import ro.kofe.presenter.ipv.home.HomeInteractorImpl
 import ro.kofe.presenter.ipv.home.HomePresenter

@@ -8,13 +8,11 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.OkHttpClient
-import ro.kofe.UrlPrefix
 import ro.kofe.map.CharacterMapper
 import ro.kofe.map.Mapper
 import ro.kofe.model.Character
 import ro.kofe.model.Move
 import ro.kofe.presenter.DispatcherProvider
-import ro.kofe.presenter.Router
 import ro.kofe.presenter.ipv.character.CharacterInteractor
 import ro.kofe.presenter.ipv.character.CharacterInteractorImpl
 import ro.kofe.presenter.ipv.character.CharacterPresenter
@@ -67,7 +65,7 @@ object CharModule {
         gson: Gson,
         okHttp: OkHttpClient,
         @ApplicationContext context: Context,
-        urlPrefix: UrlPrefix,
+        @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Character>, ByteArray>
     ): Provider<Character> {
         return ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)

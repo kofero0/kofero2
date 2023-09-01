@@ -28,25 +28,13 @@ class RootActivity : RootKView, ComponentActivity() {
     @Inject
     lateinit var interactor: RootInteractor
 
-    @Inject
-    lateinit var navHostProvider: NavHostProvider
-
-    @Inject
-    lateinit var homeViewBuilder: ViewBuilder<HomeKView>
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         interactor.setView(this)
 
         setContent {
             KoferoTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android!")
-                }
+                Greeting("Android!")
             }
         }
     }

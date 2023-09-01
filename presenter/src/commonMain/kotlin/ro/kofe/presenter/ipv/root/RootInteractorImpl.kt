@@ -32,10 +32,8 @@ class RootInteractorImpl(
     }
 
     override fun viewPaused() {
-        TODO("Not yet implemented")
     }
 
     override fun viewResumed() {
-        TODO("Not yet implemented")
     }
 }
