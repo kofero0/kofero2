@@ -45,6 +45,7 @@ object GameModule {
             DispatcherProvider.default
         )
     }
+
     @Provides
     fun provideGamePresenter(
         charProvider: Provider<Character>,

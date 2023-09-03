@@ -1,76 +1,80 @@
 package ro.kofe.view
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import ro.kofe.presenter.ipv.home.HomeKView
-import ro.kofe.presenter.ipv.root.RootInteractor
-import ro.kofe.presenter.ipv.root.RootKView
-import ro.kofe.provider.NavHostProvider
+import ro.kofe.model.ViewTag
+import ro.kofe.ui.KoferoAppBar
 import ro.kofe.ui.theme.KoferoTheme
-import javax.inject.Inject
 
 @AndroidEntryPoint
-class RootActivity : RootKView, ComponentActivity() {
-    @Inject
-    lateinit var interactor: RootInteractor
-
+class RootActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        interactor.setView(this)
-
         setContent {
             KoferoTheme {
-                Greeting("Android!")
+                KoferoApp()
             }
         }
-    }
-
-    override fun error(e: Exception) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        interactor.viewResumed()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        interactor.viewPaused()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        interactor.shutdown()
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun KoferoApp(
+    viewModel: RootViewModel = viewModel(),
+    navController: NavHostController = rememberNavController()
+) {
+    DisposableEffect(key1 = viewModel) {
+        viewModel.onStart()
+        onDispose { viewModel.onStop() }
+    }
+
+    Scaffold(
+        topBar = {
+            KoferoAppBar(
+                canNavigateBack = false,
+                navigateUp = { /* TODO: implement back navigation */ }
+            )
+        }
+    ) { innerPadding ->
+        NavHost(
+            navController = navController,
+            startDestination = ViewTag.HOME_VIEW.name,
+            modifier = Modifier.padding(innerPadding)
+        ) {
+            composable(route = ViewTag.HOME_VIEW.name) {
+
+            }
+            composable(route = ViewTag.GAME_VIEW.name) {
+
+            }
+            composable(route = ViewTag.CHAR_VIEW.name) {
+
+            }
+            composable(route = ViewTag.SETTINGS_VIEW.name) {
+
+            }
+        }
+    }
+
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     KoferoTheme {
-        Greeting("Android")
+        KoferoApp()
     }
 }

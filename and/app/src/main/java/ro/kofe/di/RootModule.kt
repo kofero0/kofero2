@@ -76,13 +76,13 @@ object RootModule {
         router: RootRouter
     ): RootInteractor {
         return RootInteractorImpl(
-            presenter,stateLogger,stateReducer,logger,router,DispatcherProvider.default
+            presenter, stateLogger, stateReducer, logger, router, DispatcherProvider.default
         )
     }
 
     @Provides
     fun provideRootRouter()
-    : RootRouter {
+            : RootRouter {
         return RootRouterImpl()
     }
 }

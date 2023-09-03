@@ -27,8 +27,8 @@ object StateModule {
     fun provideStateLogger(
         @ApplicationContext context: Context,
         mapper: Mapper<Map<Long, Event>, ByteArray>
-        ): StateLogger {
-        return StateLoggerImpl(context,mapper)
+    ): StateLogger {
+        return StateLoggerImpl(context, mapper)
     }
 
     @Provides

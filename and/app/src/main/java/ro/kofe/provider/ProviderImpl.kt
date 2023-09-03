@@ -4,13 +4,14 @@ import android.accounts.NetworkErrorException
 import android.content.Context
 import arrow.core.raise.ior
 import com.google.gson.Gson
-import okhttp3.*
+import okhttp3.OkHttpClient
+import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
+import ro.kofe.map.Mapper
+import ro.kofe.model.CombinedError
 import ro.kofe.model.Obj
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.Provider
-import ro.kofe.map.Mapper
-import ro.kofe.model.CombinedError
 import java.io.File
 
 
@@ -44,7 +45,8 @@ class ProviderImpl<O : Obj>(
 
     private fun send(ids: List<Int>): List<O> {
         val request =
-            Request.Builder().url(urlPrefix + jsonFilename).put(gson.toJson(ids).toRequestBody()).build()
+            Request.Builder().url(urlPrefix + jsonFilename).put(gson.toJson(ids).toRequestBody())
+                .build()
         val response = okHttp.newCall(request).execute()
         if (response.isSuccessful) {
             response.body?.let {
