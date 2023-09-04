@@ -36,8 +36,7 @@ object GameModule {
         stateReducer: StateReducer,
         logger: LoggingProvider,
         router: GameRouter,
-    ): GameInteractor {
-        return GameInteractorImpl(
+    ): GameInteractor = GameInteractorImpl(
             presenter,
             stateLogger,
             stateReducer,
@@ -45,21 +44,16 @@ object GameModule {
             router,
             DispatcherProvider.default
         )
-    }
 
     @Provides
     fun provideGamePresenter(
         charProvider: Provider<Character>,
         gameProvider: Provider<Game>,
         imageProvider: ImageProvider
-    ): GamePresenter {
-        return GamePresenterImpl(charProvider, gameProvider, imageProvider)
-    }
+    ): GamePresenter = GamePresenterImpl(charProvider, gameProvider, imageProvider)
 
     @Provides
-    fun provideGameMapper(gson: Gson): Mapper<List<Game>, ByteArray> {
-        return GameMapper(gson)
-    }
+    fun provideGameMapper(gson: Gson): Mapper<List<Game>, ByteArray> = GameMapper(gson)
 
     @Provides
     fun provideGameProvider(
@@ -68,7 +62,5 @@ object GameModule {
         @ApplicationContext context: Context,
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Game>, ByteArray>
-    ): Provider<Game> {
-        return ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
-    }
+    ): Provider<Game> = ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
 }

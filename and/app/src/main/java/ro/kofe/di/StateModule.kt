@@ -20,21 +20,15 @@ import ro.kofe.state.StateLoggerImpl
 @InstallIn(SingletonComponent::class)
 object StateModule {
     @Provides
-    fun provideStateMapMapper(gson: Gson): Mapper<Map<Long, Event>, ByteArray> {
-        return StateMapMapper(gson)
-    }
+    fun provideStateMapMapper(gson: Gson): Mapper<Map<Long, Event>, ByteArray> = StateMapMapper(gson)
 
     @Provides
     fun provideStateLogger(
         @ApplicationContext context: Context,
         mapper: Mapper<Map<Long, Event>, ByteArray>
-    ): StateLogger {
-        return StateLoggerImpl(context, mapper)
-    }
+    ): StateLogger = StateLoggerImpl(context, mapper)
 
     @Provides
     fun provideStateReducer(
-    ): StateReducer {
-        return StateReducerImpl()
-    }
+    ): StateReducer = StateReducerImpl()
 }

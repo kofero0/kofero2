@@ -29,9 +29,7 @@ object HomeModule {
         imageProvider: ImageProvider,
         favoritesProvider: FavoritesProvider,
         logger: LoggingProvider
-    ): HomePresenter {
-        return HomePresenterImpl(gameProvider, imageProvider, favoritesProvider, logger)
-    }
+    ): HomePresenter = HomePresenterImpl(gameProvider, imageProvider, favoritesProvider, logger)
 
     @Provides
     fun provideHomeInteractor(
@@ -40,8 +38,7 @@ object HomeModule {
         stateReducer: StateReducer,
         logger: LoggingProvider,
         router: HomeRouter
-    ): HomeInteractor {
-        return HomeInteractorImpl(
+    ): HomeInteractor = HomeInteractorImpl(
             homePresenter,
             stateLogger,
             stateReducer,
@@ -49,9 +46,7 @@ object HomeModule {
             router,
             DispatcherProvider.default
         )
-    }
 
     @Provides
     fun provideHomeRouter(): HomeRouter = HomeRouterImpl()
-
 }

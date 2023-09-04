@@ -19,9 +19,7 @@ import ro.kofe.provider.ProviderImpl
 @InstallIn(SingletonComponent::class)
 object MoveModule {
     @Provides
-    fun provideMoveMapper(gson: Gson): Mapper<List<Move>, ByteArray> {
-        return MoveMapper(gson)
-    }
+    fun provideMoveMapper(gson: Gson): Mapper<List<Move>, ByteArray> = MoveMapper(gson)
 
     @Provides
     fun provideMoveProvider(
@@ -30,7 +28,5 @@ object MoveModule {
         @ApplicationContext context: Context,
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Move>, ByteArray>
-    ): Provider<Move> {
-        return ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
-    }
+    ): Provider<Move> = ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
 }
