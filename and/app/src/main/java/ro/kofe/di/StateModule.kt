@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import ro.kofe.map.Mapper
 import ro.kofe.map.StateMapMapper
 import ro.kofe.model.Event
@@ -16,7 +17,7 @@ import ro.kofe.presenter.state.StateReducerImpl
 import ro.kofe.state.StateLoggerImpl
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(SingletonComponent::class)
 object StateModule {
     @Provides
     fun provideStateMapMapper(gson: Gson): Mapper<Map<Long, Event>, ByteArray> {

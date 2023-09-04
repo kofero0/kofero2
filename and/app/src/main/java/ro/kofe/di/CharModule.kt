@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import ro.kofe.map.CharacterMapper
 import ro.kofe.map.Mapper
@@ -26,16 +27,14 @@ import ro.kofe.presenter.state.StateReducer
 import ro.kofe.provider.ProviderImpl
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(SingletonComponent::class)
 object CharModule {
     @Provides
     fun provideCharPresenter(
         charProvider: Provider<Character>,
         moveProvider: Provider<Move>,
         imageProvider: ImageProvider
-    ): CharacterPresenter {
-        return CharacterPresenterImpl(charProvider, moveProvider, imageProvider)
-    }
+    ): CharacterPresenter = CharacterPresenterImpl(charProvider, moveProvider, imageProvider)
 
     @Provides
     fun provideCharInteractor(
@@ -44,21 +43,12 @@ object CharModule {
         stateReducer: StateReducer,
         logger: LoggingProvider,
         router: CharacterRouter
-    ): CharacterInteractor {
-        return CharacterInteractorImpl(
-            presenter,
-            stateLogger,
-            stateReducer,
-            logger,
-            router,
-            DispatcherProvider.default
-        )
-    }
+    ): CharacterInteractor = CharacterInteractorImpl(
+        presenter, stateLogger, stateReducer, logger, router, DispatcherProvider.default
+    )
 
     @Provides
-    fun provideCharMapper(gson: Gson): Mapper<List<Character>, ByteArray> {
-        return CharacterMapper(gson)
-    }
+    fun provideCharMapper(gson: Gson): Mapper<List<Character>, ByteArray> = CharacterMapper(gson)
 
     @Provides
     fun provideCharProvider(
@@ -67,7 +57,5 @@ object CharModule {
         @ApplicationContext context: Context,
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Character>, ByteArray>
-    ): Provider<Character> {
-        return ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
-    }
+    ): Provider<Character> = ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
 }

@@ -34,12 +34,13 @@ class RootActivity : ComponentActivity() {
 
 @Composable
 fun KoferoApp(
-    viewModel: RootViewModel = viewModel(),
+    root: RootViewModel = viewModel(),
+    home: HomeViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
 ) {
-    DisposableEffect(key1 = viewModel) {
-        viewModel.onStart()
-        onDispose { viewModel.onStop() }
+    DisposableEffect(key1 = root) {
+        root.onStart()
+        onDispose { root.onStop() }
     }
 
     Scaffold(
@@ -57,6 +58,7 @@ fun KoferoApp(
         ) {
             composable(route = ViewTag.HOME_VIEW.name) {
                 HomeScreen(
+                    viewModel = home,
                     onNavigate = { viewTag -> navController.navigate(viewTag.name) }
                 )
             }

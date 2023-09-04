@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import ro.kofe.model.Error
 import ro.kofe.model.Game
 import ro.kofe.model.Obj
+import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.home.HomeInteractor
 import ro.kofe.presenter.ipv.home.HomeKView
 import javax.inject.Inject
@@ -18,7 +19,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val interactor: HomeInteractor,
-    private val dispatcher: CoroutineDispatcher
+    private val dispatchers: DispatcherProvider
 ) : HomeKView,
     ViewModel() {
     init {
@@ -50,12 +51,12 @@ class HomeViewModel @Inject constructor(
         interactor.viewPaused()
 
     fun favPressed(obj: Obj) =
-        CoroutineScope(dispatcher).launch {
+        CoroutineScope(dispatchers.default).launch {
             interactor.favPressed(obj)
         }
 
     fun gamePressed(game: Game) =
-        CoroutineScope(dispatcher).launch {
+        CoroutineScope(dispatchers.default).launch {
             interactor.gamePressed(game)
         }
 

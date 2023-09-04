@@ -25,7 +25,7 @@ fun HomeScreen(
     val images by viewModel.images.collectAsState()
 
     DisposableEffect(key1 = viewModel) {
-        viewModel.onStart()
+        //viewModel.onStart()
         onDispose { viewModel.onStop() }
     }
 

@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import ro.kofe.map.GameMapper
 import ro.kofe.map.Mapper
@@ -26,7 +27,7 @@ import ro.kofe.presenter.state.StateReducer
 import ro.kofe.provider.ProviderImpl
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(SingletonComponent::class)
 object GameModule {
     @Provides
     fun provideGameInteractor(

@@ -25,7 +25,7 @@ class ProviderImpl<O : Obj>(
 ) : Provider<O> {
     private var isDiskPulled = false
     private var elements: MutableList<O> = ArrayList()
-    private val file: File by lazy { File(context.filesDir, jsonFilename) }
+    private val file: File by lazy { File(context.filesDir, jsonFilename).apply { if(!exists()) mkdir() } }
 
     override suspend fun get(ids: List<Int>) =
         ior<ProviderError, List<O>>({ e1, e2 -> CombinedError(e1, e2) }) {

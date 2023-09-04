@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.components.SingletonComponent
 import ro.kofe.model.Game
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.home.HomeInteractor
@@ -17,9 +18,10 @@ import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
+import ro.kofe.router.HomeRouterImpl
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(SingletonComponent::class)
 object HomeModule {
     @Provides
     fun provideHomePresenter(
@@ -48,5 +50,8 @@ object HomeModule {
             DispatcherProvider.default
         )
     }
+
+    @Provides
+    fun provideHomeRouter(): HomeRouter = HomeRouterImpl()
 
 }

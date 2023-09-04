@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import ro.kofe.map.Mapper
 import ro.kofe.map.MoveMapper
@@ -15,7 +16,7 @@ import ro.kofe.presenter.provider.Provider
 import ro.kofe.provider.ProviderImpl
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(SingletonComponent::class)
 object MoveModule {
     @Provides
     fun provideMoveMapper(gson: Gson): Mapper<List<Move>, ByteArray> {
