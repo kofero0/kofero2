@@ -24,57 +24,49 @@ class HomeInteractorImpl(
     router: HomeRouter,
     private val context: CoroutineContext
 ) : HomeInteractor, InteractorImpl<HomeKView, HomePresenter>(
-    presenter,
-    stateLogger,
-    stateReducer,
-    router,
-    loggingProvider,
-    HOME_INTERACTOR
+    presenter, stateLogger, stateReducer, router, loggingProvider, HOME_INTERACTOR
 ) {
 
-    override suspend fun favPressed(obj: Obj) =
-        stateLogger.logState(
-            millisNow(),
-            Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = obj.uid })
-        ).also {
-            val tag = when (obj) {
-                is Game -> {
-                    GAME_VIEW
-                }
-
-                is Character -> {
-                    CHAR_VIEW
-                }
-
-                else -> {
-                    log(Level.ALERT, "object $obj is not a valid favorite")
-                    return
-                }
+    override suspend fun favPressed(obj: Obj) = stateLogger.logState(
+        millisNow(),
+        Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = obj.uid })
+    ).also {
+        val tag = when (obj) {
+            is Game -> {
+                GAME_VIEW
             }
-            router.routeTo(tag, obj.uid)
-        }
 
+            is Character -> {
+                CHAR_VIEW
+            }
 
-    override suspend fun gamePressed(game: Game) =
-        stateLogger.logState(
-            millisNow(),
-            Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = game.uid })
-        ).also {
-            router.routeTo(GAME_VIEW, game.uid)
-        }
-
-
-    override fun viewResumed() =
-        super.viewResumed().also {
-            CoroutineScope(context).launch {
-                presenter.showGames().onLeft {
-                    view?.displayGamesError(it)
-                    log(Level.ALERT, "provider error showing games! $it")
-                }
-                presenter.showFavs().onLeft {
-                    view?.displayFavsError(it)
-                    log(Level.ALERT, "provider error showing favs! $it")
-                }
+            else -> {
+                log(Level.ALERT, "object $obj is not a valid favorite")
+                return
             }
         }
+        router.routeTo(tag, obj.uid)
+    }
+
+
+    override suspend fun gamePressed(game: Game) = stateLogger.logState(
+        millisNow(),
+        Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = game.uid })
+    ).also {
+        router.routeTo(GAME_VIEW, game.uid)
+    }
+
+
+    override fun viewResumed() = super.viewResumed().also {
+        CoroutineScope(context).launch {
+            presenter.showGames().onLeft {
+                view?.displayGamesError(it)
+                log(Level.ALERT, "provider error showing games! $it")
+            }
+            presenter.showFavs().onLeft {
+                view?.displayFavsError(it)
+                log(Level.ALERT, "provider error showing favs! $it")
+            }
+        }
+    }
 }

@@ -22,6 +22,7 @@ fun HomeScreen(
 ) {
     val favs by viewModel.favs.collectAsState()
     val games by viewModel.games.collectAsState()
+    val images by viewModel.images.collectAsState()
 
     DisposableEffect(key1 = viewModel) {
         viewModel.onStart()
@@ -32,7 +33,7 @@ fun HomeScreen(
         LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)){
             items(favs.size){
                 favs.forEach { obj ->
-                    FavItem(obj){
+                    FavItem(obj, images){
                         viewModel.favPressed(obj)
                     }
                 }
@@ -42,7 +43,7 @@ fun HomeScreen(
         LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)){
             items(games.size){
                 games.forEach {game ->
-                    GameItem(game){
+                    GameItem(game, images){
                         viewModel.gamePressed(game)
                     }
                 }

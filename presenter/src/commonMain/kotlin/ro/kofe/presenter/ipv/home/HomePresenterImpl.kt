@@ -47,7 +47,6 @@ class HomePresenterImpl(
         }
     }
 
-
     private suspend fun getImage(iconUrl: String) =
         imageProvider.get(iconUrl).map { image -> view?.display(iconUrl, image) }
 
