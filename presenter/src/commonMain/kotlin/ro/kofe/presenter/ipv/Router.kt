@@ -1,7 +1,8 @@
 package ro.kofe.presenter.ipv
 
-import ro.kofe.model.Event
+import ro.kofe.model.ViewTag
+
 
 interface Router {
-    fun routeTo(view: Event.ViewTag, uid: Int): Boolean
+    fun routeTo(view: ViewTag, uid: Int): Boolean
 }

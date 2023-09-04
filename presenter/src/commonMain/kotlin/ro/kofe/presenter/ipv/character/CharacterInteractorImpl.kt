@@ -17,12 +17,7 @@ class CharacterInteractorImpl(
     router: CharacterRouter,
     private val context: CoroutineContext
 ) : InteractorImpl<CharacterKView, CharacterPresenter>(
-    presenter,
-    stateLogger,
-    stateReducer,
-    router,
-    loggingProvider,
-    CHARACTER_INTERACTOR
+    presenter, stateLogger, stateReducer, router, loggingProvider, CHARACTER_INTERACTOR
 ), CharacterInteractor {
 
     private var charUid: Int? = null
@@ -40,8 +35,7 @@ class CharacterInteractorImpl(
         view = null
     }
 
-    override fun viewResumed() {
-        super.viewResumed()
+    override fun viewResumed() = super.viewResumed().also {
         CoroutineScope(context).launch {
             charUid?.let { presenter.showChar(it) }
         }

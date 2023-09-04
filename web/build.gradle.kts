@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "ro.kofe"
-version = "0.0.017"
+version = "0.0.018"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 configurations {

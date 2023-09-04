@@ -16,6 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ro.kofe.model.ViewTag
+import ro.kofe.ui.HomeScreen
 import ro.kofe.ui.KoferoAppBar
 import ro.kofe.ui.theme.KoferoTheme
 
@@ -55,7 +56,9 @@ fun KoferoApp(
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(route = ViewTag.HOME_VIEW.name) {
-
+                HomeScreen(
+                    onNavigate = { viewTag -> navController.navigate(viewTag.name) }
+                )
             }
             composable(route = ViewTag.GAME_VIEW.name) {
 
