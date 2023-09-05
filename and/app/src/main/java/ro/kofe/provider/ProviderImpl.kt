@@ -25,7 +25,11 @@ class ProviderImpl<O : Obj>(
 ) : Provider<O> {
     private var isDiskPulled = false
     private var elements: MutableList<O> = ArrayList()
-    private val file: File by lazy { File(context.filesDir, jsonFilename).apply { if(!exists()) mkdir() } }
+    private val file: File by lazy {
+        File(
+            context.filesDir, "$jsonFilename.json"
+        ).apply { if (!exists()) mkdir() }
+    }
 
     override suspend fun get(ids: List<Int>) =
         ior<ProviderError, List<O>>({ e1, e2 -> CombinedError(e1, e2) }) {
@@ -69,15 +73,14 @@ class ProviderImpl<O : Obj>(
         file.writeBytes(mapper.mapRight(elements))
     }
 
-    private fun retrieve(ids: List<Int>): List<O> {
-        if (ids.isEmpty()) {
-            return elements
-        }
+    private fun retrieve(ids: List<Int>): List<O> = if (ids.isEmpty()) {
+        elements
+    } else {
         var ret = ArrayList<O>()
         for (id in ids) {
             ret.add(elements.first { it.uid == id })
         }
-        return ret
+        ret
     }
 
     private fun isSatisfiable(ids: List<Int>): Boolean {

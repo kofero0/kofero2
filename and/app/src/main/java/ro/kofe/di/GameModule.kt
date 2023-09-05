@@ -25,6 +25,7 @@ import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 import ro.kofe.provider.ProviderImpl
+import ro.kofe.router.GameRouterImpl
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -63,4 +64,7 @@ object GameModule {
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Game>, ByteArray>
     ): Provider<Game> = ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
+
+    @Provides
+    fun provideGameRouter(): GameRouter = GameRouterImpl()
 }
