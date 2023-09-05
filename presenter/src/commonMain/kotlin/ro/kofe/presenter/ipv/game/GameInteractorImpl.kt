@@ -33,7 +33,7 @@ class GameInteractorImpl(
         }
     }
 
-    override fun charPressed(char: Character) =
+    override suspend fun charPressed(char: Character) =
         stateLogger.logState(millisNow(), Event(GAME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply {
             this[BUTTON_PRESSED.name] = char.uid
         })).also {
@@ -41,7 +41,7 @@ class GameInteractorImpl(
         }
 
 
-    override fun setGameUid(uid: Int) {
+    override suspend fun setGameUid(uid: Int) {
         this.gameUid = uid
     }
 }

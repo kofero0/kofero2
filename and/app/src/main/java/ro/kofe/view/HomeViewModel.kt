@@ -18,16 +18,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val interactor: HomeInteractor,
-    private val dispatchers: DispatcherProvider
-) : HomeKView,
-    ViewModel() {
+    private val interactor: HomeInteractor
+) : HomeKView, ImageViewModel(interactor) {
     init {
         interactor.setView(this)
     }
-
-    private val _images = MutableStateFlow<MutableMap<String, String>>(HashMap())
-    val images = _images.asStateFlow()
 
     private val _favs = MutableStateFlow<List<Obj>>(ArrayList())
     val favs = _favs.asStateFlow()
@@ -41,43 +36,23 @@ class HomeViewModel @Inject constructor(
     private val _gameError = MutableStateFlow<Error?>(null)
     val gameError = _gameError.asStateFlow()
 
-    private val _exception = MutableStateFlow<Exception?>(null)
-    val exception = _exception.asStateFlow()
+    fun favPressed(obj: Obj) = CoroutineScope(DispatcherProvider.default).launch {
+        interactor.favPressed(obj)
+    }
 
-    fun onStart() =
-        interactor.viewResumed()
+    fun gamePressed(game: Game) = CoroutineScope(DispatcherProvider.default).launch {
+        interactor.gamePressed(game)
+    }
 
-    fun onStop() =
-        interactor.viewPaused()
-
-    fun favPressed(obj: Obj) =
-        CoroutineScope(dispatchers.default).launch {
-            interactor.favPressed(obj)
-        }
-
-    fun gamePressed(game: Game) =
-        CoroutineScope(dispatchers.default).launch {
-            interactor.gamePressed(game)
-        }
-
-    override fun display(url: String, imgBase64: String) =
-        _images.update {
-            _images.value.apply { put(url, imgBase64) }
-        }
-
-    override fun displayFavs(favorites: List<Obj>) =
-        _favs.update {
-            favorites
-        }
+    override fun displayFavs(favorites: List<Obj>) = _favs.update {
+        favorites
+    }
 
     override fun displayFavsError(error: Error) = _favError.update { error }
 
-    override fun displayGames(games: List<Game>) =
-        _games.update {
-            games
-        }
+    override fun displayGames(games: List<Game>) = _games.update {
+        games
+    }
 
     override fun displayGamesError(error: Error) = _gameError.update { error }
-
-    override fun error(e: Exception) = _exception.update { e }
 }

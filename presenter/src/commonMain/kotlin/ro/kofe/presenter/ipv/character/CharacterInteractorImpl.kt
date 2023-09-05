@@ -22,7 +22,7 @@ class CharacterInteractorImpl(
 
     private var charUid: Int? = null
 
-    override fun setCharUid(uid: Int) {
+    override suspend fun setCharUid(uid: Int) {
         charUid = uid
     }
 

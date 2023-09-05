@@ -3,20 +3,20 @@ package ro.kofe.ui
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import ro.kofe.model.ViewTag
 import ro.kofe.view.HomeViewModel
 
 
 @Composable
 fun HomeScreen(
-    viewModel: HomeViewModel = viewModel(),
+    viewModel: HomeViewModel,
     onNavigate: (ViewTag) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -25,11 +25,14 @@ fun HomeScreen(
     val images by viewModel.images.collectAsState()
 
     DisposableEffect(key1 = viewModel) {
-        //viewModel.onStart()
+        viewModel.onStart()
         onDispose { viewModel.onStop() }
     }
 
     Column {
+
+        Text("Favorites")
+
         LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)){
             items(favs.size){
                 favs.forEach { obj ->
@@ -39,6 +42,8 @@ fun HomeScreen(
                 }
             }
         }
+
+        Text("Games")
 
         LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)){
             items(games.size){

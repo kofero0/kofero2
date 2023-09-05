@@ -4,6 +4,6 @@ import ro.kofe.model.Character
 import ro.kofe.presenter.ipv.Interactor
 
 interface GameInteractor : Interactor<GameKView> {
-    fun charPressed(char: Character)
-    fun setGameUid(uid: Int)
+   suspend fun charPressed(char: Character)
+   suspend fun setGameUid(uid: Int)
 }

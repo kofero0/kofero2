@@ -16,6 +16,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ro.kofe.model.ViewTag
+import ro.kofe.ui.CharScreen
+import ro.kofe.ui.GameScreen
 import ro.kofe.ui.HomeScreen
 import ro.kofe.ui.KoferoAppBar
 import ro.kofe.ui.theme.KoferoTheme
@@ -36,6 +38,8 @@ class RootActivity : ComponentActivity() {
 fun KoferoApp(
     root: RootViewModel = viewModel(),
     home: HomeViewModel = viewModel(),
+    game: GameViewModel = viewModel(),
+    char: CharViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
 ) {
     DisposableEffect(key1 = root) {
@@ -63,10 +67,10 @@ fun KoferoApp(
                 )
             }
             composable(route = ViewTag.GAME_VIEW.name) {
-
+                GameScreen(viewModel = game, onNavigate = { viewTag -> navController.navigate(viewTag.name) })
             }
             composable(route = ViewTag.CHAR_VIEW.name) {
-
+                CharScreen(viewModel = char)
             }
             composable(route = ViewTag.SETTINGS_VIEW.name) {
 
