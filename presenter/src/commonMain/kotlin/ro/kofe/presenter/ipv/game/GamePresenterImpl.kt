@@ -21,10 +21,6 @@ class GamePresenterImpl(
 
     override suspend fun showGame(id: Int) = flow {
         val ids = ArrayList<Int>().apply { add(id) }
-        suspend fun error(e: ProviderError) {
-            emit(e)
-        }
-
         suspend fun process(games: List<Game>) {
             if (games.size != 1) {
                 emit(IncorrectCount(ids))
@@ -32,28 +28,22 @@ class GamePresenterImpl(
             }
             val game = games[0]
             view?.display(game)
-            imageProvider.get(game.iconUrl).fold({ error(it) }) { view?.display(game.iconUrl, it) }
-            characterProvider.get(game.charIds).collect { ior ->
-                ior.fold({
-                    error(it)
-                    view?.displayCharsError(it)
-                }, { view?.display(it) }) { e, chars ->
-                    error(e)
+            imageProvider.get(game.iconUrl).fold({ emit(it) }) { view?.display(game.iconUrl, it) }
+            characterProvider.get(game.charIds).collect { either ->
+                either.fold({ e ->
+                    emit(e)
                     view?.displayCharsError(e)
+                }) { chars ->
                     view?.display(chars)
                 }
             }
         }
 
-        gameProvider.get(ids).collect { ior ->
-            ior.fold({
-                error(it)
-                view?.displayGameError(it)
-            }, { process(it) }) { e, games ->
-                error(e)
+        gameProvider.get(ids).collect { either ->
+            either.fold({ e ->
+                emit(e)
                 view?.displayGameError(e)
-                process(games)
-            }
+            }) { process(it) }
         }
     }
 

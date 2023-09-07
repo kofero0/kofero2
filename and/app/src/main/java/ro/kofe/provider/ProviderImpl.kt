@@ -1,15 +1,14 @@
 package ro.kofe.provider
 
-import android.accounts.NetworkErrorException
 import android.content.Context
-import android.util.Log
-import arrow.core.raise.ior
+import arrow.core.raise.either
 import com.google.gson.Gson
+import kotlinx.coroutines.flow.flow
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import ro.kofe.map.Mapper
-import ro.kofe.model.CombinedError
+import ro.kofe.model.HttpError
 import ro.kofe.model.Obj
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.Provider
@@ -29,41 +28,33 @@ class ProviderImpl<O : Obj>(
     private val file: File by lazy {
         File(
             context.filesDir, "$jsonFilename.json"
-        ).apply { if (!exists()) createNewFile()
-        writeBytes("[]".toByteArray())}
+        ).apply {
+            if (!exists()) createNewFile()
+            writeBytes("[]".toByteArray())
+        }
     }
 
-    override suspend fun get(ids: List<Int>) =
-        ior<ProviderError, List<O>>({ e1, e2 -> CombinedError(e1, e2) }) {
-            if (!isDiskPulled) {
-                isDiskPulled = true
-                elements = mapper.mapLeft(file.readBytes()).toMutableList()
-                if (isSatisfiable(ids)) {
-                    retrieve(ids)
-                } else {
-                    send(ids)
-                }
+    override fun get(ids: List<Int>) = flow {
+        if(!isDiskPulled) {
+            isDiskPulled = true
+            elements = mapper.mapLeft(file.readBytes()).toMutableList()
+        }
+        if(isSatisfiable(ids)) emit(retrieve(ids))
+        emit(send(ids))
+    }
+
+    private fun send(ids: List<Int>) =
+        either{
+            val response = okHttp.newCall(
+                Request.Builder().url(urlPrefix + jsonFilename)
+                    .put(gson.toJson(ids).toRequestBody()).build()
+            ).execute()
+            if (response.isSuccessful && response.body != null) {
+                mapper.mapLeft(response.body!!.bytes()).also { add(it) }
             } else {
-                if (isSatisfiable(ids)) retrieve(ids)
-                else send(ids)
+                raise(HttpError(response.code, response.body.toString()))
             }
         }
-
-    private fun send(ids: List<Int>): List<O> {
-        val request =
-            Request.Builder().url(urlPrefix + jsonFilename).put(gson.toJson(ids).toRequestBody())
-                .build()
-        Log.v("rwr","sending: ${request.url}")
-        val response = okHttp.newCall(request).execute()
-        if (response.isSuccessful) {
-            response.body?.let {
-                val ret = mapper.mapLeft(it.bytes())
-                add(ret)
-                return ret
-            }
-        }
-        throw NetworkErrorException()
-    }
 
     private fun add(new: List<O>) {
         for (element in new) {
@@ -76,15 +67,18 @@ class ProviderImpl<O : Obj>(
         file.writeBytes(mapper.mapRight(elements))
     }
 
-    private fun retrieve(ids: List<Int>): List<O> = if (ids.isEmpty()) {
-        elements
-    } else {
-        var ret = ArrayList<O>()
-        for (id in ids) {
-            ret.add(elements.first { it.uid == id })
+    private fun retrieve(ids: List<Int>) =
+        either<ProviderError, List<O>> {
+            if (ids.isEmpty()) {
+                elements
+            } else {
+                ArrayList<O>().apply {
+                    for (id in ids) {
+                        add(elements.first { it.uid == id })
+                    }
+                }
+            }
         }
-        ret
-    }
 
     private fun isSatisfiable(ids: List<Int>): Boolean {
         for (id in ids) {

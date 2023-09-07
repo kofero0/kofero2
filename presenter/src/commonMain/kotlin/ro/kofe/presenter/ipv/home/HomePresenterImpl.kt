@@ -25,39 +25,25 @@ class HomePresenterImpl(
     }
 
     override suspend fun showGames() = flow {
-        suspend fun process(games: List<Game>) {
-            view?.displayGames(games)
-            displayImages(games).onLeft { emit(it) }
-        }
-
-        suspend fun error(e: ProviderError) {
-            view?.displayGamesError(e)
-            emit(e)
-        }
-
-        gameProvider.get(ArrayList()).collect { ior ->
-            ior.fold({ error(it) }, { process(it) }) { error, games ->
-                error(error)
-                process(games)
+        gameProvider.get(ArrayList()).collect { either ->
+            either.fold({ e ->
+                view?.displayGamesError(e)
+                emit(e)
+            }) { games ->
+                view?.displayGames(games)
+                displayImages(games).onLeft { emit(it) }
             }
         }
     }
 
     override suspend fun showFavs() = flow {
-        suspend fun process(favs: List<Obj>) {
-            view?.displayFavs(favs)
-            displayImages(favs).onLeft { emit(it) }
-        }
-
-        suspend fun error(e: ProviderError) {
-            view?.displayFavsError(e)
-            emit(e)
-        }
-
-        favoritesProvider.get(ArrayList()).collect { ior ->
-            ior.fold({ error(it) }, { process(it) }) { e, favs ->
-                error(e)
-                process(favs)
+        favoritesProvider.get(ArrayList()).collect { either ->
+            either.fold({ e ->
+                view?.displayFavsError(e)
+                emit(e)
+            }) { favs ->
+                view?.displayFavs(favs)
+                displayImages(favs).onLeft { emit(it) }
             }
         }
     }

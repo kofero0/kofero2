@@ -4,7 +4,6 @@ import kotlinx.coroutines.flow.flow
 import ro.kofe.model.Character
 import ro.kofe.model.IncorrectCount
 import ro.kofe.model.Move
-import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.Provider
 
@@ -21,38 +20,28 @@ class CharacterPresenterImpl(
 
     override suspend fun showChar(id: Int) = flow {
         val ids = ArrayList<Int>().apply { add(id) }
-        suspend fun error(e: ProviderError) {
-            emit(e)
-        }
-
         suspend fun process(chars: List<Character>) {
             if (chars.size != 1) {
-                error(IncorrectCount(ids))
+                emit(IncorrectCount(ids))
             }
             val char = chars[0]
             view?.display(char)
-            imageProvider.get(char.iconUrl).fold({ error(it) }) { view?.display(char.iconUrl, it) }
-            moveProvider.get(char.moveIds).collect { ior ->
-                ior.fold({
-                    error(it)
+            imageProvider.get(char.iconUrl).fold({ emit(it) }) { view?.display(char.iconUrl, it) }
+            moveProvider.get(char.moveIds).collect { either ->
+                either.fold({
+                    emit(it)
                     view?.displayMovesError(it)
-                }, { view?.display(it) }) { e, moves ->
-                    error(e)
-                    view?.displayMovesError(e)
+                }) {moves ->
                     view?.display(moves)
                 }
             }
         }
 
-        charProvider.get(ids).collect { ior ->
-            ior.fold({
-                error(it)
+        charProvider.get(ids).collect { either ->
+            either.fold({
+                emit(it)
                 view?.displayCharError(it)
-            }, { process(it) }) { e, chars ->
-                error(e)
-                view?.displayCharError(e)
-                process(chars)
-            }
+            }) { process(it) }
         }
     }
 

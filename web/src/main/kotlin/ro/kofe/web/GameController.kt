@@ -32,6 +32,7 @@ class GameController {
 
     @GetMapping("/game")
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
+        if(uids.isEmpty()) return ResponseEntity<Any>(mapper.writeValueAsString(list),HttpStatus.OK)
         val ret = ArrayList<Game>()
         run breaking@{
             list.forEach { game ->
