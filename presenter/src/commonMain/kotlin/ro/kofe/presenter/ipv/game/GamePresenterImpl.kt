@@ -1,11 +1,10 @@
 package ro.kofe.presenter.ipv.game
 
-import arrow.core.Either
-import arrow.core.raise.either
+import kotlinx.coroutines.flow.flow
 import ro.kofe.model.Character
-import ro.kofe.model.Error
 import ro.kofe.model.Game
 import ro.kofe.model.IncorrectCount
+import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.Provider
 
@@ -20,16 +19,41 @@ class GamePresenterImpl(
         this.view = view
     }
 
-    override suspend fun showGame(id: Int): Either<Error, Unit> = either {
+    override suspend fun showGame(id: Int) = flow {
         val ids = ArrayList<Int>().apply { add(id) }
-        gameProvider.get(ids).map { games ->
+        suspend fun error(e: ProviderError) {
+            emit(e)
+        }
+
+        suspend fun process(games: List<Game>) {
             if (games.size != 1) {
-                raise(IncorrectCount(ids))
+                emit(IncorrectCount(ids))
+                return
             }
             val game = games[0]
             view?.display(game)
-            imageProvider.get(game.iconUrl).map { img -> view?.display(game.iconUrl, img) }
-            characterProvider.get(game.charIds).map { chars -> view?.display(chars) }
+            imageProvider.get(game.iconUrl).fold({ error(it) }) { view?.display(game.iconUrl, it) }
+            characterProvider.get(game.charIds).collect { ior ->
+                ior.fold({
+                    error(it)
+                    view?.displayCharsError(it)
+                }, { view?.display(it) }) { e, chars ->
+                    error(e)
+                    view?.displayCharsError(e)
+                    view?.display(chars)
+                }
+            }
+        }
+
+        gameProvider.get(ids).collect { ior ->
+            ior.fold({
+                error(it)
+                view?.displayGameError(it)
+            }, { process(it) }) { e, games ->
+                error(e)
+                view?.displayGameError(e)
+                process(games)
+            }
         }
     }
 

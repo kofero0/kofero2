@@ -5,6 +5,6 @@ import ro.kofe.model.Game
 import ro.kofe.model.Move
 import ro.kofe.presenter.provider.Provider
 
-interface GameProvider: Provider<Game>
-interface CharacterProvider: Provider<Character>
-interface MoveProvider: Provider<Move>
+interface GameProvider : Provider<Game>
+interface CharacterProvider : Provider<Character>
+interface MoveProvider : Provider<Move>

@@ -2,11 +2,12 @@ package ro.kofe.presenter.ipv.home
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import ro.kofe.model.*
+import ro.kofe.model.Character
+import ro.kofe.model.Event
 import ro.kofe.model.Event.Value.BUTTON_PRESSED
-import ro.kofe.model.ViewTag.GAME_VIEW
-import ro.kofe.model.ViewTag.HOME_VIEW
-import ro.kofe.model.ViewTag.CHAR_VIEW
+import ro.kofe.model.Game
+import ro.kofe.model.Obj
+import ro.kofe.model.ViewTag.*
 import ro.kofe.model.logging.Level
 import ro.kofe.model.logging.LogTag.HOME_INTERACTOR
 import ro.kofe.presenter.ipv.InteractorImpl
@@ -59,12 +60,10 @@ class HomeInteractorImpl(
 
     override fun viewResumed() = super.viewResumed().also {
         CoroutineScope(context).launch {
-            presenter.showGames().onLeft {
-                view?.displayGamesError(it)
+            presenter.showGames().collect {
                 log(Level.ALERT, "provider error showing games! $it")
             }
-            presenter.showFavs().onLeft {
-                view?.displayFavsError(it)
+            presenter.showFavs().collect {
                 log(Level.ALERT, "provider error showing favs! $it")
             }
         }

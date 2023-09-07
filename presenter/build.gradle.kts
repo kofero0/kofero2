@@ -50,16 +50,16 @@ kotlin {
 
 
     targets {
-        iosArm64("iosArm64"){
+        iosArm64("iosArm64") {
             binaries.framework {
                 embedBitcode(BITCODE)
-                baseName = frameworkName+"Base"
+                baseName = frameworkName + "Base"
             }
         }
-        iosX64("iosX64"){
+        iosX64("iosX64") {
             binaries.framework {
                 embedBitcode(BITCODE)
-                baseName = frameworkName+"Base"
+                baseName = frameworkName + "Base"
             }
         }
     }

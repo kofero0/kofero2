@@ -1,9 +1,9 @@
 package ro.kofe.presenter.ipv.character
 
-import arrow.core.Either
+import kotlinx.coroutines.flow.Flow
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.ipv.Presenter
 
 interface CharacterPresenter : Presenter<CharacterKView> {
-    suspend fun showChar(id: Int): Either<ProviderError, Unit>
+    suspend fun showChar(id: Int): Flow<ProviderError>
 }

@@ -1,9 +1,9 @@
 package ro.kofe.presenter.ipv.game
 
-import arrow.core.Either
-import ro.kofe.model.Error
+import kotlinx.coroutines.flow.Flow
+import ro.kofe.model.ProviderError
 import ro.kofe.presenter.ipv.Presenter
 
 interface GamePresenter : Presenter<GameKView> {
-    suspend fun showGame(id: Int): Either<Error, Unit>
+    suspend fun showGame(id: Int): Flow<ProviderError>
 }

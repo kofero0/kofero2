@@ -10,5 +10,5 @@ object ErrorLinker {
     val fileRead = FileReadError("")
     val noPerm = NoPermissionError
     val other = OtherError
-    val http = HttpError(0,"")
+    val http = HttpError(0, "")
 }

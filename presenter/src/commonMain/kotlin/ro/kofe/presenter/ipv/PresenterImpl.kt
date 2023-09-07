@@ -1,6 +1,5 @@
 package ro.kofe.presenter.ipv
 
-import ro.kofe.model.logging.Level.DEBUG
 import ro.kofe.presenter.provider.LoggingProvider
 
 abstract class PresenterImpl<V : KView>(
@@ -15,7 +14,6 @@ abstract class PresenterImpl<V : KView>(
     }
 
     override fun setView(view: V) {
-        log(DEBUG, "setView")
         this.view = view
     }
 }

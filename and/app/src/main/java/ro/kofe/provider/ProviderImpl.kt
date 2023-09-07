@@ -2,6 +2,7 @@ package ro.kofe.provider
 
 import android.accounts.NetworkErrorException
 import android.content.Context
+import android.util.Log
 import arrow.core.raise.ior
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
@@ -28,7 +29,8 @@ class ProviderImpl<O : Obj>(
     private val file: File by lazy {
         File(
             context.filesDir, "$jsonFilename.json"
-        ).apply { if (!exists()) mkdir() }
+        ).apply { if (!exists()) createNewFile()
+        writeBytes("[]".toByteArray())}
     }
 
     override suspend fun get(ids: List<Int>) =
@@ -51,6 +53,7 @@ class ProviderImpl<O : Obj>(
         val request =
             Request.Builder().url(urlPrefix + jsonFilename).put(gson.toJson(ids).toRequestBody())
                 .build()
+        Log.v("rwr","sending: ${request.url}")
         val response = okHttp.newCall(request).execute()
         if (response.isSuccessful) {
             response.body?.let {

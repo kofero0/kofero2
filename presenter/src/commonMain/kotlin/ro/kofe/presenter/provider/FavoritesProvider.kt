@@ -5,6 +5,6 @@ import ro.kofe.model.Obj
 import ro.kofe.model.ProviderError
 
 interface FavoritesProvider : Provider<Obj> {
-    suspend fun save(item: Obj): Either<ProviderError, Unit>
-    suspend fun delete(item: Obj): Either<ProviderError, Unit>
+    suspend fun save(id: Int): Either<ProviderError, Unit>
+    suspend fun delete(id: Int): Either<ProviderError, Unit>
 }

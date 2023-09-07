@@ -15,13 +15,13 @@ abstract class InteractorImpl<V : KView, P : Presenter<V>>(
     loggingProvider: LoggingProvider,
     logTag: String
 ) : KoferoObj(loggingProvider, logTag), Interactor<V> {
-    internal var view:V? = null
+    internal var view: V? = null
 
-    override fun viewPaused()  {
+    override fun viewPaused() {
         log(DEBUG, "viewPaused")
     }
 
-    override fun viewResumed()  {
+    override fun viewResumed() {
         log(DEBUG, "viewResumed")
     }
 

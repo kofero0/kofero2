@@ -1,10 +1,10 @@
 package ro.kofe.presenter.ipv.character
 
-import arrow.core.raise.either
-import arrow.core.raise.ensure
+import kotlinx.coroutines.flow.flow
 import ro.kofe.model.Character
 import ro.kofe.model.IncorrectCount
 import ro.kofe.model.Move
+import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.Provider
 
@@ -19,19 +19,41 @@ class CharacterPresenterImpl(
         this.view = view
     }
 
-    override suspend fun showChar(id: Int) = either {
+    override suspend fun showChar(id: Int) = flow {
         val ids = ArrayList<Int>().apply { add(id) }
-        charProvider.get(ids).map { chars ->
-            ensure(chars.size == 1) { raise(IncorrectCount(ids)) }
-            view?.display(chars[0])
-            imageProvider.get(chars[0].iconUrl).map { image ->
-                view?.display(chars[0].iconUrl, image)
+        suspend fun error(e: ProviderError) {
+            emit(e)
+        }
+
+        suspend fun process(chars: List<Character>) {
+            if (chars.size != 1) {
+                error(IncorrectCount(ids))
             }
-            moveProvider.get(chars[0].moveIds).map { moves ->
-                view?.display(moves)
+            val char = chars[0]
+            view?.display(char)
+            imageProvider.get(char.iconUrl).fold({ error(it) }) { view?.display(char.iconUrl, it) }
+            moveProvider.get(char.moveIds).collect { ior ->
+                ior.fold({
+                    error(it)
+                    view?.displayMovesError(it)
+                }, { view?.display(it) }) { e, moves ->
+                    error(e)
+                    view?.displayMovesError(e)
+                    view?.display(moves)
+                }
             }
         }
-        Unit
+
+        charProvider.get(ids).collect { ior ->
+            ior.fold({
+                error(it)
+                view?.displayCharError(it)
+            }, { process(it) }) { e, chars ->
+                error(e)
+                view?.displayCharError(e)
+                process(chars)
+            }
+        }
     }
 
     override fun shutdown() {
