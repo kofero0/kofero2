@@ -1,14 +1,10 @@
 plugins {
-    kotlin("multiplatform") version "1.8.21"
+    kotlin("multiplatform") version "1.9.0"
     id("maven-publish")
 }
 
 group = "ro.kofe"
 version = "0.0.018"
-
-repositories {
-    mavenCentral()
-}
 
 kotlin {
     jvmToolchain {
