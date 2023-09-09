@@ -2,8 +2,8 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.Framework.BitcodeEmbeddingMode.BIT
 import org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType
 
 plugins {
-    kotlin("multiplatform") version "1.9.0"
-    kotlin("native.cocoapods") version "1.9.0"
+    kotlin("multiplatform")
+    kotlin("native.cocoapods")
     id("maven-publish")
 }
 

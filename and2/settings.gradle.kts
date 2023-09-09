@@ -5,15 +5,14 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
-        mavenLocal()
         mavenCentral()
     }
 }
 
-rootProject.name = "kofero"
-include (":model", ":presenter", ":web")
+rootProject.name = "and2"
+include(":app")
+ 
