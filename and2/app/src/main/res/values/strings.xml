@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">and2</string>
+    <string name="app_name">kofero</string>
+    <string name="back_button">Back\n</string>
 </resources>

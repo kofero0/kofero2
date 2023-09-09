@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "ro.kofe"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "ro.kofe"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -84,17 +84,14 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.47")
     kapt("com.google.dagger:hilt-compiler:2.47")
 
-
     val navVersion = "2.7.1"
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
     implementation("androidx.navigation:navigation-compose:$navVersion")
-
 
     implementation("androidx.compose.runtime:runtime")
     implementation("androidx.compose.runtime:runtime-livedata")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx")
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate")
-    implementation("androidx.navigation:navigation-compose:2.7.1")
 }
