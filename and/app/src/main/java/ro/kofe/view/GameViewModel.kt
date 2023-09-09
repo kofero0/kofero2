@@ -45,4 +45,6 @@ class GameViewModel @Inject constructor(private val interactor: GameInteractor) 
     override fun displayGameError(error: Error) = _gameError.update {
         error
     }
+
+    override fun error(e: Exception) = super.error(e)
 }

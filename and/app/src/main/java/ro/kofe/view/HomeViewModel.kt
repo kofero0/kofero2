@@ -55,4 +55,6 @@ class HomeViewModel @Inject constructor(
     }
 
     override fun displayGamesError(error: Error) = _gameError.update { error }
+
+    override fun error(e: Exception) = super.error(e)
 }

@@ -48,4 +48,6 @@ class CharViewModel @Inject constructor(
     override fun displayMovesError(error: Error) = _moveError.update {
         error
     }
+
+    override fun error(e: Exception) = super.error(e)
 }
