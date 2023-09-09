@@ -11,11 +11,6 @@ group = "ro.kofe"
 version = "0.0.018"
 val frameworkName = "presenter"
 
-repositories {
-    mavenCentral()
-    mavenLocal()
-}
-
 kotlin {
     cocoapods {
         summary = "Shared code artifact for kofero-ios"
@@ -68,7 +63,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation("ro.kofe:model:0.0.018")
+                implementation(project(":model"))
                 implementation("com.soywiz.korlibs.klock:klock:2.4.13")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
                 implementation("io.arrow-kt:arrow-core:1.2.0")
