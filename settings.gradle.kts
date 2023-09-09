@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "kofero"
-include (":model", ":presenter", ":web")
+include (":model", ":presenter", ":web", ":and:app")
