@@ -9,7 +9,7 @@ import Foundation
 import presenter
 import SwiftUI
 
-class HomeRouter: Router {
+class HomeRouterImpl: HomeRouter {
     let gameViewBuilder: GameViewBuilder
     let navController: UINavigationController
     
@@ -18,7 +18,8 @@ class HomeRouter: Router {
         self.gameViewBuilder = gameViewBuilder
     }
     
-    func routeTo(view: ModelEvent.ViewTag, uid: Int32) -> Bool {
+    
+    func routeTo(view: ModelViewTag, uid: Int32) -> Bool {
         if(view != .gameView){ return false }
         navController.present(gameViewBuilder.gameView(id: uid))
         return view == .gameView

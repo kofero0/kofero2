@@ -33,8 +33,8 @@ class HomeComponent: Component<HomeDependency>, HomeViewBuilder {
         return HomeInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router, context: dependency.dispatcherProvider.default_)
     }
     
-    var router: Router {
-        return HomeRouter(dependency.gameViewBuilder, navController: dependency.navController)
+    var router: HomeRouter {
+        return HomeRouterImpl(dependency.gameViewBuilder, navController: dependency.navController)
     }
     
     func homeView() -> AnyView {

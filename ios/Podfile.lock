@@ -39,7 +39,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - NeedleFoundation (0.17.2)
-  - presenter (0.0.017)
+  - presenter (0.0.018)
   - PromisesObjC (2.3.1)
   - SwiftyJSON (4.3.0)
 
@@ -71,7 +71,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 13e2c67ede716b8741c7989e26893d151b2b2084
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NeedleFoundation: 36cfaea9ae9eb527a796f5c1df19296c722666b8
-  presenter: f17138f629809d2cc8dd34df30c5ae778f65bbf8
+  presenter: ab1ec8cbf45d4eb1152dbd9b7c7e9ad3e8305af1
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
