@@ -6,6 +6,11 @@ plugins {
 group = "ro.kofe"
 version = "0.0.018"
 
+
+repositories {
+    mavenCentral()
+}
+
 kotlin {
     jvmToolchain {
         languageVersion.set(JavaLanguageVersion.of(JavaVersion.VERSION_11.toString()))
