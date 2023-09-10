@@ -36,7 +36,7 @@
 		4BD71A9D2A8D903A00EB8752 /* HomeRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A9C2A8D903A00EB8752 /* HomeRouterImpl.swift */; };
 		4BD71AA12A8EAECF00EB8752 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA02A8EAECF00EB8752 /* Extension.swift */; };
 		4BD71AA42A8F086000EB8752 /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA32A8F086000EB8752 /* GameRouter.swift */; };
-		4BD71AA62A8F138800EB8752 /* CharRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA52A8F138800EB8752 /* CharRouter.swift */; };
+		4BD71AA62A8F138800EB8752 /* CharRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */; };
 		4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA72A8F15BD00EB8752 /* Typealias.swift */; };
 		4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA92A8F165F00EB8752 /* RootView.swift */; };
 		9E169777FF902B2091A95DCA /* Pods_kofero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976876D6C60861A8745D9EA3 /* Pods_kofero.framework */; };
@@ -74,7 +74,7 @@
 		4BD71A9C2A8D903A00EB8752 /* HomeRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterImpl.swift; sourceTree = "<group>"; };
 		4BD71AA02A8EAECF00EB8752 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4BD71AA32A8F086000EB8752 /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
-		4BD71AA52A8F138800EB8752 /* CharRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharRouter.swift; sourceTree = "<group>"; };
+		4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharRouterImpl.swift; sourceTree = "<group>"; };
 		4BD71AA72A8F15BD00EB8752 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		4BD71AA92A8F165F00EB8752 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5926CEBBF3AC4FF4D9BE7E25 /* Pods-kofero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kofero.release.xcconfig"; path = "Target Support Files/Pods-kofero/Pods-kofero.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		4BD71A922A8D896000EB8752 /* char */ = {
 			isa = PBXGroup;
 			children = (
-				4BD71AA52A8F138800EB8752 /* CharRouter.swift */,
+				4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */,
 				4BD71A9A2A8D8F9D00EB8752 /* CharView.swift */,
 			);
 			path = char;
@@ -400,7 +400,7 @@
 				4BD71AA12A8EAECF00EB8752 /* Extension.swift in Sources */,
 				4BD71A4D2A85EB9D00EB8752 /* iosApp.swift in Sources */,
 				4BD71A972A8D8C7900EB8752 /* HomeView.swift in Sources */,
-				4BD71AA62A8F138800EB8752 /* CharRouter.swift in Sources */,
+				4BD71AA62A8F138800EB8752 /* CharRouterImpl.swift in Sources */,
 				4BD71A992A8D8F8300EB8752 /* GameView.swift in Sources */,
 				4BD71A5E2A85F4DC00EB8752 /* Encoder.swift in Sources */,
 			);

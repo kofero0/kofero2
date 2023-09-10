@@ -150,4 +150,12 @@ open class ProviderImpl<O:ModelObj>: Provider {
             return try await send(ids: ids)
         }
     }
+    
+    
+    public func get(ids: [KotlinInt], onEach: @escaping (Arrow_coreEither<ModelProviderError, NSArray>) -> Void, onCompletion: @escaping (KotlinThrowable?) -> Void) -> Cancellable {
+    }
+    
+    public func get(ids: [KotlinInt]) -> Kotlinx_coroutines_coreFlow {
+        fatalError()
+    }
 }

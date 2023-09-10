@@ -48,8 +48,8 @@ class CharacterComponent: Component<CharacterDependency>, CharViewBuilder {
         return CharacterInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router, context: dependency.dispatcherProvider.default_)
     }
     
-    var router: Router {
-        return CharRouter()
+    var router: CharacterRouter {
+        return CharRouterImpl()
     }
     
     func characterView(id:Int32) -> AnyView {
