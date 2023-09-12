@@ -40,7 +40,7 @@ object RootModule {
 
     @Provides
     @UrlPrefix
-    fun provideUrlPrefix(): String = "http://35.224.110.219:8080"
+    fun provideUrlPrefix(): String = "http://34.41.16.181:8080"
 
     @Provides
     fun provideGson(): Gson = Gson()

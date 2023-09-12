@@ -8,6 +8,7 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import ro.kofe.model.Character
@@ -32,7 +33,7 @@ class MoveController {
         )
     }
 
-    @GetMapping("/move")
+    @PutMapping("/move")
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
         val ret = ArrayList<Move>()
         run breaking@{

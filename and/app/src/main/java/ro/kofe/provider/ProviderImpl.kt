@@ -48,6 +48,8 @@ class ProviderImpl<O : Obj>(
         either{
             val response = okHttp.newCall(
                 Request.Builder().url("$urlPrefix/$jsonFilename")
+                    .get()
+                    .
                     .put(gson.toJson(ids).toRequestBody()).build()
             ).execute()
             if (response.isSuccessful && response.body != null) {

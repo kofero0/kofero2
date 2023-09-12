@@ -7,6 +7,7 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import ro.kofe.model.Game
@@ -30,7 +31,7 @@ class GameController {
         )
     }
 
-    @GetMapping("/game")
+    @PutMapping("/game")
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
         if(uids.isEmpty()) return ResponseEntity<Any>(mapper.writeValueAsString(list),HttpStatus.OK)
         val ret = ArrayList<Game>()
