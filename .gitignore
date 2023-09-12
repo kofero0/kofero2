@@ -27,4 +27,4 @@ replay_pid*
 presenter/build/*
 model/build/*
 local.properties
-.gradle
+.gradle/

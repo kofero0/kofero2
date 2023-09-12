@@ -86,3 +86,9 @@ kotlin {
         }
     }
 }
+
+configurations.forEach {config ->
+    config.attributes {
+        attribute(Attribute.of("myOwnAttribute", String::class.java), config.name)
+    }
+}
