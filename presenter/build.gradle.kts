@@ -87,6 +87,7 @@ kotlin {
     }
 }
 
+//https://youtrack.jetbrains.com/issue/KT-55751
 configurations.forEach {config ->
     config.attributes {
         attribute(Attribute.of("myOwnAttribute", String::class.java), config.name)

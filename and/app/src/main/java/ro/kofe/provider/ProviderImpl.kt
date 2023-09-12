@@ -1,6 +1,7 @@
 package ro.kofe.provider
 
 import android.content.Context
+import android.util.Log
 import arrow.core.raise.either
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.flow
@@ -46,7 +47,7 @@ class ProviderImpl<O : Obj>(
     private fun send(ids: List<Int>) =
         either{
             val response = okHttp.newCall(
-                Request.Builder().url(urlPrefix + jsonFilename)
+                Request.Builder().url("$urlPrefix/$jsonFilename")
                     .put(gson.toJson(ids).toRequestBody()).build()
             ).execute()
             if (response.isSuccessful && response.body != null) {

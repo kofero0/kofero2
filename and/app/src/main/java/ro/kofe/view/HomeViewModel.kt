@@ -1,5 +1,6 @@
 package ro.kofe.view
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
@@ -51,6 +52,7 @@ class HomeViewModel @Inject constructor(
     override fun displayFavsError(error: Error) = _favError.update { error }
 
     override fun displayGames(games: List<Game>) = _games.update {
+        Log.v("rwr","games: $games")
         games
     }
 

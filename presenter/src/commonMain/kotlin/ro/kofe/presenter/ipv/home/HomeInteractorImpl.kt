@@ -1,5 +1,6 @@
 package ro.kofe.presenter.ipv.home
 
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import ro.kofe.model.Character
@@ -59,7 +60,10 @@ class HomeInteractorImpl(
 
 
     override fun viewResumed() = super.viewResumed().also {
-        CoroutineScope(context).launch {
+        val coroutineExceptionHandler = CoroutineExceptionHandler{_, throwable ->
+            throwable.printStackTrace()
+        }
+        CoroutineScope(context + coroutineExceptionHandler).launch {
             presenter.showGames().collect {
                 log(Level.ALERT, "provider error showing games! $it")
             }
