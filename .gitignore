@@ -1,5 +1,6 @@
 # Compiled class file
 *.class
+*.hprof
 
 # Log file
 *.log
@@ -26,3 +27,4 @@ replay_pid*
 presenter/build/*
 model/build/*
 local.properties
+.gradle
