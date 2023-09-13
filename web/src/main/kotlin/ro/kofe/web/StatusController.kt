@@ -19,6 +19,6 @@ class StatusController {
 
     @GetMapping("/status")
     fun status(): ResponseEntity<Any>{
-        return ResponseEntity(mapper.writeValueAsString(Status(System.currentTimeMillis(),))  ,HttpStatus.OK)
+        return ResponseEntity(mapper.writeValueAsString(Status(System.currentTimeMillis(),"0.0.018"))  ,HttpStatus.OK)
     }
 }
