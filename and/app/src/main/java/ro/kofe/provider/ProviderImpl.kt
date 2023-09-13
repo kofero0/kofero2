@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.flow
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.internal.http2.Header
 import ro.kofe.map.Mapper
 import ro.kofe.model.HttpError
 import ro.kofe.model.Obj
@@ -48,8 +49,7 @@ class ProviderImpl<O : Obj>(
         either{
             val response = okHttp.newCall(
                 Request.Builder().url("$urlPrefix/$jsonFilename")
-                    .get()
-                    .
+                    .header("Content-Type","application/json")
                     .put(gson.toJson(ids).toRequestBody()).build()
             ).execute()
             if (response.isSuccessful && response.body != null) {

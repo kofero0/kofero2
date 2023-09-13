@@ -7,8 +7,6 @@ plugins {
 	kotlin("plugin.spring") version "1.8.22"
 }
 
-group = "ro.kofe"
-version = "0.0.018"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 configurations {
@@ -18,6 +16,7 @@ configurations {
 }
 
 dependencies {
+	implementation(project(":auth"))
 	implementation(project(":model"))
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
