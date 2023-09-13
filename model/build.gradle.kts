@@ -20,8 +20,7 @@ kotlin {
             useJUnitPlatform()
         }
     }
-    iosArm64("iosA64")
-    iosX64("iosX64")
+    ios("ios")
 
 
     sourceSets {
