@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import ro.kofe.model.Status
+import java.util.*
 
 @RestController
 class StatusController {
@@ -16,9 +17,24 @@ class StatusController {
             addModule(kotlinModule())
         }
     }
+    private val properties: Properties by lazy {
+        Properties().apply { load(this.javaClass.getResourceAsStream(RESOURCE)) }
+    }
 
     @GetMapping("/status")
-    fun status(): ResponseEntity<Any>{
-        return ResponseEntity(mapper.writeValueAsString(Status(System.currentTimeMillis(),"0.0.018"))  ,HttpStatus.OK)
+    fun status(): ResponseEntity<Any> {
+        return ResponseEntity(
+            mapper.writeValueAsString(
+                Status(
+                    time = System.currentTimeMillis(),
+                    version = properties.getProperty(VERSION)
+                )
+            ), HttpStatus.OK
+        )
+    }
+
+    companion object{
+        private const val VERSION = "version"
+        private const val RESOURCE = "$VERSION.properties"
     }
 }
