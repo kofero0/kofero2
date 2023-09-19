@@ -25,9 +25,23 @@ import javax.persistence.Table
 @AllArgsConstructor
 @Builder
 data class Account(
-    @Id private val id: Long? = null, private val name: String? = null, private val balance: BigDecimal? = null
-)
+    @Id private val id: Long,
+    private val salt: String,
+    private val hash: String,
+    private val privilege: Privilege,
+    private val expiration: Long,
+    private val status: Status
+){
+    enum class Status {
+        VALID,
+        REVOKED
+    }
 
+    enum class Privilege {
+        USER,
+        ADMIN
+    }
+}
 
 interface AccountRepository : JpaRepository<Account?, Long?>
 
@@ -47,7 +61,6 @@ class AccountQueryService(
         get() = accountRepository.findAll()
 }
 
-
 @Service
 class AccountIdGenerationService {
     fun newAccountId(): Long {
@@ -57,19 +70,28 @@ class AccountIdGenerationService {
 
 @Service
 class MockAccountGenerateService(
-
     @Autowired private val accountRepository: AccountRepository,
 
-    @Autowired private val accountIdGenerationService: AccountIdGenerationService
+    @Autowired private val service: AccountIdGenerationService
 
 ) {
     fun generateAccounts() {
         val account1 = Account(
-            id = accountIdGenerationService.newAccountId(), balance = BigDecimal(100), name = "Berkay account"
+            id = service.newAccountId(),
+            salt = "test",
+            hash = "tset",
+            privilege = Account.Privilege.ADMIN,
+            expiration = 345345,
+            status = Account.Status.VALID
         )
         accountRepository.save(account1)
         val account2 = Account(
-            id = accountIdGenerationService.newAccountId(), balance = BigDecimal(100), name = "Test account"
+            id = service.newAccountId(),
+            salt = "salt",
+            hash = "ppqpppqppq",
+            privilege = Account.Privilege.USER,
+            expiration = 111,
+            status = Account.Status.REVOKED
         )
         accountRepository.save(account2)
     }

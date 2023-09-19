@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController
 import ro.kofe.model.Status
 import java.util.*
 
+
+
 @RestController
 class StatusController {
     private val mapper: ObjectMapper by lazy {
@@ -17,9 +19,20 @@ class StatusController {
             addModule(kotlinModule())
         }
     }
-    private val properties: Properties by lazy {
-        Properties().apply { load(this.javaClass.getResourceAsStream(RESOURCE)) }
+    private val service: StatusService by lazy {
+        StatusService()
     }
+
+    class StatusService {
+        private val versionProperties = Properties()
+
+        init {
+            versionProperties.load(this.javaClass.getResourceAsStream(RESOURCE))
+        }
+
+        fun getVersion() : String = versionProperties.getProperty(VERSION) ?: "no version"
+    }
+
 
     @GetMapping("/status")
     fun status(): ResponseEntity<Any> {
@@ -27,7 +40,7 @@ class StatusController {
             mapper.writeValueAsString(
                 Status(
                     time = System.currentTimeMillis(),
-                    version = properties.getProperty(VERSION)
+                    version = service.getVersion()
                 )
             ), HttpStatus.OK
         )
@@ -35,6 +48,6 @@ class StatusController {
 
     companion object{
         private const val VERSION = "version"
-        private const val RESOURCE = "$VERSION.properties"
+        private const val RESOURCE = "/$VERSION.properties"
     }
 }

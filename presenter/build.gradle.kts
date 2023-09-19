@@ -61,7 +61,6 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(project(":auth"))
                 implementation(project(":model"))
                 implementation("com.soywiz.korlibs.klock:klock:2.4.13")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
