@@ -11,15 +11,18 @@ class RootPresenterImpl(private val statusProvider: StatusProvider, loggingProvi
     RootPresenter, PresenterImpl<RootKView>(null, loggingProvider, ROOT_PRESENTER) {
 
     override suspend fun checkVersion() = flow {
-        fun split(status: Status) = status.version.split(".")
         statusProvider.getBackendStatus().fold({ emit(it) }) { status ->
-            val local = split(statusProvider.getLocalStatus())
-            val backend = split(status)
-            if(backend[0] > local[0]) { view?.promptUpdate() }
-            else {
-                if(backend[1] > local[1]) { view?.promptUpdate() }
-                else {
-                    if(backend[2] > local[2]) { view?.promptUpdate() }
+            val local = statusProvider.getLocalStatus().version.split(".")
+            val backend = status.version.split(".")
+            if (backend[0] > local[0]) {
+                view?.promptUpdate()
+            } else {
+                if (backend[1] > local[1]) {
+                    view?.promptUpdate()
+                } else {
+                    if (backend[2] > local[2]) {
+                        view?.promptUpdate()
+                    }
                 }
             }
         }
