@@ -15,12 +15,11 @@ class RootPresenterImpl(private val statusProvider: StatusProvider, loggingProvi
         statusProvider.getBackendStatus().fold({ emit(it) }) { status ->
             val local = split(statusProvider.getLocalStatus())
             val backend = split(status)
-            run breaking@ {
-                for(loc in local){
-                    if(backend[local.indexOf(loc)].toInt() > loc.toInt()){
-                        view?.promptUpdate()
-                        return@breaking
-                    }
+            if(backend[0] > local[0]) { view?.promptUpdate() }
+            else {
+                if(backend[1] > local[1]) { view?.promptUpdate() }
+                else {
+                    if(backend[2] > local[2]) { view?.promptUpdate() }
                 }
             }
         }
