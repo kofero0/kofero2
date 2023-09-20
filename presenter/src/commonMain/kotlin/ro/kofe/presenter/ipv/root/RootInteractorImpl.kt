@@ -1,5 +1,8 @@
 package ro.kofe.presenter.ipv.root
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
+import ro.kofe.model.logging.Level
 import ro.kofe.model.logging.LogTag.ROOT_INTERACTOR
 import ro.kofe.presenter.ipv.InteractorImpl
 import ro.kofe.presenter.provider.LoggingProvider
@@ -34,6 +37,11 @@ class RootInteractorImpl(
     override fun viewPaused() {
     }
 
-    override fun viewResumed() {
+    override fun viewResumed() = super.viewResumed().also {
+        CoroutineScope(context).launch {
+            presenter.checkVersion().collect {
+                log(Level.ALERT, "provider error checking version! $it")
+            }
+        }
     }
 }
