@@ -7,15 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
+import org.springframework.stereotype.Repository
 import org.springframework.stereotype.Service
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import java.math.BigDecimal
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.Table
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
+import java.security.SecureRandom
+import javax.persistence.*
 
 
 @Entity
@@ -24,33 +25,54 @@ import javax.persistence.Table
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-data class Account(
-    @Id private val id: Long,
-    private val salt: String,
-    private val hash: String,
-    private val privilege: Privilege,
-    private val expiration: Long,
-    private val status: Status
-){
+class Account(
+    @Id var id: Long = 0L,
+    var deviceId: String = "",
+    var salt: ByteArray = ByteArray(0),
+    var hash: String = "",
+    var privilege: Privilege = Privilege.USER,
+    var expiration: Long = 0L,
+    var status: Status = Status.REVOKED
+) {
+
     enum class Status {
-        VALID,
-        REVOKED
+        VALID, REVOKED
     }
 
     enum class Privilege {
-        USER,
-        ADMIN
+        USER, ADMIN
     }
 }
 
-interface AccountRepository : JpaRepository<Account?, Long?>
+@Repository
+interface AccountRepository : JpaRepository<Account?, Long?> {
+    fun findByDeviceId(deviceId: String): List<Account>
+}
+
+
+@Entity
+@Table(name = "account")
+@lombok.Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+class BlacklistEntry(
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    var id:Long = 0L,
+    var deviceId: String = ""
+)
+
+@Repository
+interface BlacklistRepository: JpaRepository<BlacklistEntry?, Long?>
+
+
 
 
 @Service
 class AccountQueryService(
     @Autowired private val accountRepository: AccountRepository
 ) {
-
     fun getAccountById(accountId: Long) = if (accountRepository.findById(accountId).isEmpty) {
         null
     } else {
@@ -63,9 +85,8 @@ class AccountQueryService(
 
 @Service
 class AccountIdGenerationService {
-    fun newAccountId(): Long {
-        return System.nanoTime()
-    }
+    var nextId = 0L
+    fun newAccountId() = nextId++
 }
 
 @Service
@@ -78,7 +99,7 @@ class MockAccountGenerateService(
     fun generateAccounts() {
         val account1 = Account(
             id = service.newAccountId(),
-            salt = "test",
+            salt = "test".toByteArray(),
             hash = "tset",
             privilege = Account.Privilege.ADMIN,
             expiration = 345345,
@@ -87,7 +108,7 @@ class MockAccountGenerateService(
         accountRepository.save(account1)
         val account2 = Account(
             id = service.newAccountId(),
-            salt = "salt",
+            salt = "salt".toByteArray(),
             hash = "ppqpppqppq",
             privilege = Account.Privilege.USER,
             expiration = 111,
@@ -109,9 +130,6 @@ class AccountQueryController(private val service: AccountQueryService) {
             ResponseEntity<Account>(opt, HttpStatus.OK)
         }
     }
-
-    @GetMapping("/list")
-    fun getAccounts() = service.accounts
 }
 
 

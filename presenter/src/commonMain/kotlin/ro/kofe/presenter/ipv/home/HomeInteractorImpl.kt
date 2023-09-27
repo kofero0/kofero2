@@ -72,9 +72,6 @@ class HomeInteractorImpl(
                     log(Level.ALERT, "statusCode: ${it.statusCode}")
                 }
             }
-//            presenter.showFavs().collect {
-//                log(Level.ALERT, "provider error showing favs! $it")
-//            }
         }
     }
 }
