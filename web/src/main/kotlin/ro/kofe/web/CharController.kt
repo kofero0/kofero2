@@ -31,7 +31,7 @@ class CharController {
         )
     }
 
-    @PutMapping("/char")
+    @PutMapping(CHAR_PATH)
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
         val ret = ArrayList<Character>()
         run breaking@{

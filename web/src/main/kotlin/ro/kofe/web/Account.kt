@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import java.security.MessageDigest
-import java.security.NoSuchAlgorithmException
-import java.security.SecureRandom
+import java.util.*
 import javax.persistence.*
 
 
@@ -46,7 +44,7 @@ class Account(
 
 @Repository
 interface AccountRepository : JpaRepository<Account?, Long?> {
-    fun findByDeviceId(deviceId: String): List<Account>
+    fun findByDeviceId(deviceId: String): Optional<Account?>
 }
 
 
@@ -66,9 +64,6 @@ class BlacklistEntry(
 @Repository
 interface BlacklistRepository: JpaRepository<BlacklistEntry?, Long?>
 
-
-
-
 @Service
 class AccountQueryService(
     @Autowired private val accountRepository: AccountRepository
@@ -79,8 +74,11 @@ class AccountQueryService(
         accountRepository.findById(accountId).get()
     }
 
-    val accounts: List<Account?>
-        get() = accountRepository.findAll()
+    fun getAccountByDeviceId(deviceId: String) = if (accountRepository.findByDeviceId(deviceId).isEmpty) {
+        null
+    } else {
+        accountRepository.findByDeviceId(deviceId).get()
+    }
 }
 
 @Service

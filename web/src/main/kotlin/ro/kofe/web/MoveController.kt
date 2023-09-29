@@ -33,7 +33,7 @@ class MoveController {
         )
     }
 
-    @PutMapping("/move")
+    @PutMapping(MOVE_PATH)
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
         val ret = ArrayList<Move>()
         run breaking@{

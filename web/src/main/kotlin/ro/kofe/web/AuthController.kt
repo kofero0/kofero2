@@ -20,17 +20,19 @@ import java.security.SecureRandom
 class AuthController(
     @Autowired private val accountRepository: AccountRepository,
 
+    @Autowired private val accountQueryService: AccountQueryService,
+
     @Autowired private val service: AccountIdGenerationService
 ) {
     private fun isBlacklisted(uid: String) = false
 
     @PutMapping("/register")
     fun register(@RequestBody request: RegisterAuthRequest): ResponseEntity<Any> {
+        fun getSalt() = ByteArray(16).apply { SecureRandom().nextBytes(this) }
         val split = request.prefixedUid.split(authDelimiter)
         if(split.size != 2 || split[0] != authPrefix || isBlacklisted(split[1])){
             return ResponseEntity(HttpStatus.UNAUTHORIZED)
         }
-        accountRepository
         val salt = getSalt()
         val secret = getHash(split[1], getSalt())
         val hash = getHash(secret,salt)
@@ -48,15 +50,4 @@ class AuthController(
 
         return ResponseEntity(RegisterAuthResponse(System.currentTimeMillis(),"${account.id}$authDelimiter$secret") ,HttpStatus.OK)
     }
-
-    private fun getHash(password: String, salt: ByteArray?) = StringBuilder().apply {
-        val bytes: ByteArray = MessageDigest.getInstance("SHA-256").apply {
-            update(salt)
-        }.digest(password.toByteArray())
-        for (i in bytes.indices) {
-            append(((bytes[i].toInt() and 0xff) + 0x100).toString(16).substring(1))
-        }
-    }.toString()
-
-    private fun getSalt() = ByteArray(16).apply { SecureRandom().nextBytes(this) }
 }
