@@ -9,5 +9,4 @@ import javax.inject.Inject
 @HiltViewModel
 class RootViewModel @Inject constructor(interactor: RootInteractor) : KViewModel(interactor),
     RootKView {
-    override fun error(e: Exception) = super.error(e)
 }

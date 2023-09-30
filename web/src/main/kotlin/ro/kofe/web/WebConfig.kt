@@ -32,32 +32,6 @@ class WebConfig(
     }
 }
 
-fun getURL(req: HttpServletRequest): String {
-    val scheme = req.scheme // http
-    val serverName = req.serverName // hostname.com
-    val serverPort = req.serverPort // 80
-    val contextPath = req.contextPath // /mywebapp
-    val servletPath = req.servletPath // /servlet/MyServlet
-    val pathInfo = req.pathInfo // /a/b;c=123
-    val queryString = req.queryString // d=789
-
-    // Reconstruct original requesting URL
-    val url = StringBuilder()
-    url.append(scheme).append("://").append(serverName)
-    if (serverPort != 80 && serverPort != 443) {
-        url.append(":").append(serverPort)
-    }
-    url.append(contextPath).append(servletPath)
-    if (pathInfo != null) {
-        url.append(pathInfo)
-    }
-    if (queryString != null) {
-        url.append("?").append(queryString)
-    }
-    return url.toString()
-}
-
-
 @Component
 class RequestInterceptor(
     private val accountQueryService: AccountQueryService,
@@ -69,27 +43,11 @@ class RequestInterceptor(
             return false
         }
         val account = accountQueryService.getAccountById(authToken[0].toLong())
-        val newHash = getHash(authToken[1], account?.salt)
+        val newHash = authToken[1].getHash(account?.salt)
         println("ACCOUNT HASH: ${account?.hash}")
         println("NEW HASH: $newHash")
         return newHash == account?.hash
     }
 
-    override fun postHandle(
-        request: HttpServletRequest,
-        response: HttpServletResponse,
-        handler: Any,
-        modelAndView: ModelAndView?
-    ) =
-        super.postHandle(request, response, handler, modelAndView)
-
-
-    override fun afterCompletion(
-        request: HttpServletRequest,
-        response: HttpServletResponse,
-        handler: Any,
-        ex: Exception?
-    ) =
-        super.afterCompletion(request, response, handler, ex)
 
 }

@@ -34,8 +34,8 @@ class AuthController(
             return ResponseEntity(HttpStatus.UNAUTHORIZED)
         }
         val salt = getSalt()
-        val secret = getHash(split[1], getSalt())
-        val hash = getHash(secret,salt)
+        val secret = split[1].getHash(getSalt())
+        val hash = secret.getHash(salt)
 
         val account = Account(
             id = service.newAccountId(),
