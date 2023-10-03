@@ -31,23 +31,3 @@ class WebConfig(
             })
     }
 }
-
-@Component
-class RequestInterceptor(
-    private val accountQueryService: AccountQueryService,
-) : HandlerInterceptor {
-
-    override fun preHandle(request: HttpServletRequest, response: HttpServletResponse, handler: Any): Boolean {
-        val authToken = request.getHeader("Authorization").split(authDelimiter)
-        if (authToken.size != 2) {
-            return false
-        }
-        val account = accountQueryService.getAccountById(authToken[0].toLong())
-        val newHash = authToken[1].getHash(account?.salt)
-        println("ACCOUNT HASH: ${account?.hash}")
-        println("NEW HASH: $newHash")
-        return newHash == account?.hash
-    }
-
-
-}
