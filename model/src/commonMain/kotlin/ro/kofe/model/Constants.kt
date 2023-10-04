@@ -1,4 +1,4 @@
 package ro.kofe.model
 
-val authPrefix = "koferoAuth"
-val authDelimiter = "||"
+const val authPrefix = "koferoAuth"
+const val authDelimiter = "||"
