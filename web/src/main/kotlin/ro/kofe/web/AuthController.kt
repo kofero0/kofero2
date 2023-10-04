@@ -22,7 +22,7 @@ class AuthController(
 
     @Autowired private val accountQueryService: AccountQueryService,
 
-    @Autowired private val service: AccountIdGenerationService
+    @Autowired private val service: Account.AccountIdGenerationService
 ) {
     private fun isBlacklisted(uid: String) = false
 
