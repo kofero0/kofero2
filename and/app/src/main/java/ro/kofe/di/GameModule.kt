@@ -59,7 +59,7 @@ object GameModule {
     @Provides
     fun provideGameProvider(
         gson: Gson,
-        okHttp: OkHttpClient,
+        @RootModule.AuthClient okHttp: OkHttpClient,
         @ApplicationContext context: Context,
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Game>, ByteArray>

@@ -9,4 +9,12 @@ import javax.inject.Inject
 @HiltViewModel
 class RootViewModel @Inject constructor(interactor: RootInteractor) : KViewModel(interactor),
     RootKView {
+    init {
+        interactor.setView(this)
+    }
+
+    override fun error(e: Exception) {
+    }
+
+    override fun promptUpdate(){}
 }

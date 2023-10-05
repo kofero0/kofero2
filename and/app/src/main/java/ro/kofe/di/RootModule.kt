@@ -9,6 +9,8 @@ import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
+import ro.kofe.AuthInterceptor
+import ro.kofe.LoggingInterceptor
 import ro.kofe.map.FavoritesMapper
 import ro.kofe.map.Mapper
 import ro.kofe.model.Game
@@ -23,11 +25,17 @@ import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
+import ro.kofe.presenter.provider.StatusProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
+import ro.kofe.provider.AuthProvider
+import ro.kofe.provider.AuthProviderImpl
 import ro.kofe.provider.FavoritesProviderImpl
+import ro.kofe.provider.IdentityProvider
+import ro.kofe.provider.IdentityProviderImpl
 import ro.kofe.provider.ImageProviderImpl
 import ro.kofe.provider.LoggingProviderImpl
+import ro.kofe.provider.StatusProviderImpl
 import ro.kofe.router.RootRouterImpl
 import javax.inject.Qualifier
 
@@ -40,13 +48,40 @@ object RootModule {
 
     @Provides
     @UrlPrefix
-    fun provideUrlPrefix(): String = "http://34.41.16.181:8080"
+    fun provideUrlPrefix(): String = "http://10.0.2.2:8080"
 
     @Provides
     fun provideGson(): Gson = Gson()
 
+    annotation class NoAuthClient
+
     @Provides
-    fun provideOkHttpClient(): OkHttpClient = OkHttpClient()
+    @NoAuthClient
+    fun provideNoAuthClient(
+        loggingInterceptor: LoggingInterceptor
+    ): OkHttpClient = OkHttpClient.Builder().addInterceptor(loggingInterceptor).build()
+
+    annotation class AuthClient
+
+    @Provides
+    @AuthClient
+    fun provideAuthClient(
+        loggingInterceptor: LoggingInterceptor, authInterceptor: AuthInterceptor
+    ): OkHttpClient =
+        OkHttpClient.Builder().addInterceptor(loggingInterceptor).addInterceptor(authInterceptor)
+            .build()
+
+    @Provides
+    fun provideAuthProvider(
+        gson: Gson,
+        identityProvider: IdentityProvider,
+        @NoAuthClient client: OkHttpClient,
+        @UrlPrefix urlPrefix: String,
+        @ApplicationContext context: Context
+    ): AuthProvider = AuthProviderImpl(gson, identityProvider, client, urlPrefix, context)
+
+    @Provides
+    fun provideIdentityProvider(): IdentityProvider = IdentityProviderImpl()
 
     @Provides
     fun provideLoggingProvider(): LoggingProvider = LoggingProviderImpl()
@@ -56,7 +91,7 @@ object RootModule {
 
     @Provides
     fun provideRootPresenter(
-        provider: Provider<Game>, logger: LoggingProvider
+        logger: LoggingProvider, provider: StatusProvider
     ): RootPresenter = RootPresenterImpl(provider, logger)
 
     @Provides
@@ -85,4 +120,9 @@ object RootModule {
 
     @Provides
     fun provideDispatcherProvider() = DispatcherProvider
+
+    @Provides
+    fun provideStatusProvider(
+        okHttpClient: OkHttpClient, @UrlPrefix prefix: String, gson: Gson
+    ): StatusProvider = StatusProviderImpl(okHttpClient, prefix, gson)
 }

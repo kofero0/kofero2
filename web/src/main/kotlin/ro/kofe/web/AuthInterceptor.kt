@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse
 
 
 @Component
-class RequestInterceptor(
+class AuthInterceptor(
     private val accountQueryService: AccountQueryService,
 ) : HandlerInterceptor {
     private val mapper: ObjectMapper by lazy {
