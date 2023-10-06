@@ -1,5 +1,6 @@
 package ro.kofe
 
+import android.util.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.future.await
@@ -18,6 +19,7 @@ class AuthInterceptor(private val authProvider: AuthProvider, private val dispat
         val future = CompletableFuture<Request>()
         CoroutineScope(dispatcherProvider.default).launch {
             authProvider.get().map {
+                Log.v("rwr", "authToken: $it")
                 future.complete(
                     request.newBuilder().header(HeaderKeys.AUTHORIZATION, it).build()
                 )

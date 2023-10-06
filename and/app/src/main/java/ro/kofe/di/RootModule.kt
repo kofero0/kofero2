@@ -53,32 +53,37 @@ object RootModule {
     @Provides
     fun provideGson(): Gson = Gson()
 
-    annotation class NoAuthClient
-
     @Provides
-    @NoAuthClient
-    fun provideNoAuthClient(
-        loggingInterceptor: LoggingInterceptor
-    ): OkHttpClient = OkHttpClient.Builder().addInterceptor(loggingInterceptor).build()
-
-    annotation class AuthClient
-
-    @Provides
-    @AuthClient
-    fun provideAuthClient(
+    fun provideOkHttpClient(
         loggingInterceptor: LoggingInterceptor, authInterceptor: AuthInterceptor
-    ): OkHttpClient =
-        OkHttpClient.Builder().addInterceptor(loggingInterceptor).addInterceptor(authInterceptor)
-            .build()
+    ) = OkHttpClient.Builder().addInterceptor(loggingInterceptor).addInterceptor(authInterceptor)
+        .build()
 
     @Provides
     fun provideAuthProvider(
         gson: Gson,
         identityProvider: IdentityProvider,
-        @NoAuthClient client: OkHttpClient,
+        loggingInterceptor: LoggingInterceptor,
         @UrlPrefix urlPrefix: String,
         @ApplicationContext context: Context
-    ): AuthProvider = AuthProviderImpl(gson, identityProvider, client, urlPrefix, context)
+    ): AuthProvider = AuthProviderImpl(
+        gson,
+        identityProvider,
+        OkHttpClient.Builder().addInterceptor(loggingInterceptor).build(),
+        urlPrefix,
+        context
+    )
+
+    @Provides
+    fun provideLoggingInterceptor(
+        logger: LoggingProvider
+    ) = LoggingInterceptor(logger)
+
+    @Provides
+    fun provideAuthInterceptor(
+        authProvider: AuthProvider,
+        dispatcherProvider: DispatcherProvider
+    ) = AuthInterceptor(authProvider, dispatcherProvider)
 
     @Provides
     fun provideIdentityProvider(): IdentityProvider = IdentityProviderImpl()

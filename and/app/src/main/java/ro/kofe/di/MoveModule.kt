@@ -24,7 +24,7 @@ object MoveModule {
     @Provides
     fun provideMoveProvider(
         gson: Gson,
-        @RootModule.AuthClient okHttp: OkHttpClient,
+        okHttp: OkHttpClient,
         @ApplicationContext context: Context,
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Move>, ByteArray>

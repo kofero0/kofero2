@@ -2,6 +2,7 @@ package ro.kofe.presenter.ipv.root
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import ro.kofe.model.HttpError
 import ro.kofe.model.logging.Level
 import ro.kofe.model.logging.LogTag.ROOT_INTERACTOR
 import ro.kofe.presenter.ipv.InteractorImpl
@@ -41,6 +42,9 @@ class RootInteractorImpl(
         CoroutineScope(context).launch {
             presenter.checkVersion().collect {
                 log(Level.ALERT, "provider error checking version! $it")
+                if(it is HttpError){
+                    log(Level.ALERT, "code: ${it.statusCode} body: ${it.response}")
+                }
             }
         }
     }

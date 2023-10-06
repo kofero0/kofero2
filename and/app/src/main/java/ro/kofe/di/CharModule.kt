@@ -54,7 +54,7 @@ object CharModule {
     @Provides
     fun provideCharProvider(
         gson: Gson,
-        @RootModule.AuthClient okHttp: OkHttpClient,
+        okHttp: OkHttpClient,
         @ApplicationContext context: Context,
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Character>, ByteArray>

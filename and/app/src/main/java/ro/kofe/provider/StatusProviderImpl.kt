@@ -16,12 +16,12 @@ class StatusProviderImpl(
 ) : StatusProvider {
     override suspend fun getBackendStatus() = either<ProviderError, Status> {
         val response = client.newCall(
-            Request.Builder().url("$urlPrefix/$statusSuffix").put("".toRequestBody()).build()
+            Request.Builder().url("$urlPrefix/$statusSuffix").get().build()
         ).execute()
         if (response.isSuccessful && response.body != null) {
             gson.fromJson(response.body!!.string(), Status::class.java)
         } else {
-            raise(HttpError(response.code, response.body.toString()))
+            raise(HttpError(response.code, response.body?.string().toString()))
         }
     }
 
