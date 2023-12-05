@@ -7,7 +7,7 @@ buildscript {
     }
 }
 
-subprojects{
+subprojects {
     group = "ro.kofe"
     version = "0.0.018"
 }

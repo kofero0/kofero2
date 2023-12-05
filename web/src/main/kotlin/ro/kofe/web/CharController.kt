@@ -6,7 +6,6 @@ import com.fasterxml.jackson.module.kotlin.kotlinModule
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
@@ -40,7 +39,7 @@ class CharController {
                 if (ret.size == uids.size) return@breaking
             }
         }
-        return if(ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
+        return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
         else ResponseEntity<Any>(HttpStatus.BAD_REQUEST)
     }
 }

@@ -1,6 +1,5 @@
 package ro.kofe.view
 
-import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import ro.kofe.presenter.ipv.root.RootInteractor
 import ro.kofe.presenter.ipv.root.RootKView
@@ -16,5 +15,5 @@ class RootViewModel @Inject constructor(interactor: RootInteractor) : KViewModel
     override fun error(e: Exception) {
     }
 
-    override fun promptUpdate(){}
+    override fun promptUpdate() {}
 }

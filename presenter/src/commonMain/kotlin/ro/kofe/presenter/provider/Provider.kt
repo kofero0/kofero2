@@ -1,7 +1,6 @@
 package ro.kofe.presenter.provider
 
 import arrow.core.Either
-import arrow.core.Ior
 import kotlinx.coroutines.flow.Flow
 import ro.kofe.model.Obj
 import ro.kofe.model.ProviderError

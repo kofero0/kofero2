@@ -4,7 +4,6 @@ import kotlinx.coroutines.flow.flow
 import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.model.IncorrectCount
-import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.Provider
 

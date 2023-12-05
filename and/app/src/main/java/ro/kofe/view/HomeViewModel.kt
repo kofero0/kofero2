@@ -1,9 +1,7 @@
 package ro.kofe.view
 
 import android.util.Log
-import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -52,7 +50,7 @@ class HomeViewModel @Inject constructor(
     override fun displayFavsError(error: Error) = _favError.update { error }
 
     override fun displayGames(games: List<Game>) = _games.update {
-        Log.v("rwr","games: $games")
+        Log.v("rwr", "games: $games")
         games
     }
 

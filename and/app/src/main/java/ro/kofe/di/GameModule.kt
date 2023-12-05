@@ -5,7 +5,6 @@ import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
@@ -14,11 +13,7 @@ import ro.kofe.map.Mapper
 import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.presenter.DispatcherProvider
-import ro.kofe.presenter.ipv.game.GameInteractor
-import ro.kofe.presenter.ipv.game.GameInteractorImpl
-import ro.kofe.presenter.ipv.game.GamePresenter
-import ro.kofe.presenter.ipv.game.GamePresenterImpl
-import ro.kofe.presenter.ipv.game.GameRouter
+import ro.kofe.presenter.ipv.game.*
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
@@ -38,13 +33,13 @@ object GameModule {
         logger: LoggingProvider,
         router: GameRouter,
     ): GameInteractor = GameInteractorImpl(
-            presenter,
-            stateLogger,
-            stateReducer,
-            logger,
-            router,
-            DispatcherProvider.default
-        )
+        presenter,
+        stateLogger,
+        stateReducer,
+        logger,
+        router,
+        DispatcherProvider.default
+    )
 
     @Provides
     fun provideGamePresenter(

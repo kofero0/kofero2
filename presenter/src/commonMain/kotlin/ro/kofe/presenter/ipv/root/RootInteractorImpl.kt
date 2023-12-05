@@ -42,7 +42,7 @@ class RootInteractorImpl(
         CoroutineScope(context).launch {
             presenter.checkVersion().collect {
                 log(Level.ALERT, "provider error checking version! $it")
-                if(it is HttpError){
+                if (it is HttpError) {
                     log(Level.ALERT, "code: ${it.statusCode} body: ${it.response}")
                 }
             }

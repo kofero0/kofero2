@@ -1,6 +1,12 @@
 package ro.kofe.model
 
-class Character(uid:Int, val name:String, val attributes:Map<String,String>, val moveIds:List<Int>, val iconUrl:String): Obj(uid) {
+class Character(
+    uid: Int,
+    val name: String,
+    val attributes: Map<String, String>,
+    val moveIds: List<Int>,
+    val iconUrl: String
+) : Obj(uid) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is Character) return false

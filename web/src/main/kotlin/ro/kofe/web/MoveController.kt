@@ -1,17 +1,14 @@
 package ro.kofe.web
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.databind.type.CollectionType
 import com.fasterxml.jackson.module.kotlin.jsonMapper
 import com.fasterxml.jackson.module.kotlin.kotlinModule
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
-import ro.kofe.model.Character
 import ro.kofe.model.Move
 import java.io.File
 
@@ -42,7 +39,7 @@ class MoveController {
                 if (uids.size == ret.size) return@breaking
             }
         }
-        return if(ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
+        return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
         else ResponseEntity<Any>(HttpStatus.BAD_REQUEST)
     }
 }

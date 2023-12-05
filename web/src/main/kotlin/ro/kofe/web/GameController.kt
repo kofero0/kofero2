@@ -6,7 +6,6 @@ import com.fasterxml.jackson.module.kotlin.kotlinModule
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
@@ -33,7 +32,7 @@ class GameController {
 
     @PutMapping(GAME_PATH)
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
-        if(uids.isEmpty()) return ResponseEntity<Any>(mapper.writeValueAsString(list),HttpStatus.OK)
+        if (uids.isEmpty()) return ResponseEntity<Any>(mapper.writeValueAsString(list), HttpStatus.OK)
         val ret = ArrayList<Game>()
         run breaking@{
             list.forEach { game ->
@@ -42,7 +41,7 @@ class GameController {
             }
 
         }
-        return if(ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
+        return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
         else ResponseEntity<Any>(HttpStatus.BAD_REQUEST)
     }
 }

@@ -11,7 +11,6 @@ import ro.kofe.model.Status
 import java.util.*
 
 
-
 @RestController
 class StatusController {
     private val mapper: ObjectMapper by lazy {
@@ -30,7 +29,7 @@ class StatusController {
             versionProperties.load(this.javaClass.getResourceAsStream(RESOURCE))
         }
 
-        fun getVersion() : String = versionProperties.getProperty(VERSION) ?: "no version"
+        fun getVersion(): String = versionProperties.getProperty(VERSION) ?: "no version"
     }
 
 
@@ -46,7 +45,7 @@ class StatusController {
         )
     }
 
-    companion object{
+    companion object {
         private const val VERSION = "version"
         private const val RESOURCE = "/$VERSION.properties"
     }

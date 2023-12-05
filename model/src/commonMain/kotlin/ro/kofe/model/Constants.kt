@@ -3,6 +3,6 @@ package ro.kofe.model
 const val authPrefix = "koferoAuth"
 const val authDelimiter = "||"
 
-object HeaderKeys{
+object HeaderKeys {
     const val AUTHORIZATION = "Authorization"
 }

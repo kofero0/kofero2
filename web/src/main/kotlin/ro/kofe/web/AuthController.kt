@@ -11,7 +11,6 @@ import ro.kofe.model.authDelimiter
 import ro.kofe.model.authPrefix
 import ro.kofe.model.request.RegisterAuthRequest
 import ro.kofe.model.response.RegisterAuthResponse
-import java.security.MessageDigest
 import java.security.SecureRandom
 
 
@@ -30,7 +29,7 @@ class AuthController(
     fun register(@RequestBody request: RegisterAuthRequest): ResponseEntity<Any> {
         fun getSalt() = ByteArray(16).apply { SecureRandom().nextBytes(this) }
         val split = request.prefixedUid.split(authDelimiter)
-        if(split.size != 2 || split[0] != authPrefix || isBlacklisted(split[1])){
+        if (split.size != 2 || split[0] != authPrefix || isBlacklisted(split[1])) {
             return ResponseEntity(HttpStatus.UNAUTHORIZED)
         }
         val salt = getSalt()
@@ -48,6 +47,9 @@ class AuthController(
         )
         accountRepository.save(account)
 
-        return ResponseEntity(RegisterAuthResponse(System.currentTimeMillis(),"${account.id}$authDelimiter$secret") ,HttpStatus.OK)
+        return ResponseEntity(
+            RegisterAuthResponse(System.currentTimeMillis(), "${account.id}$authDelimiter$secret"),
+            HttpStatus.OK
+        )
     }
 }

@@ -9,7 +9,7 @@ import ro.kofe.toBase64ImageToImageBitmap
 
 
 @Composable
-fun GameItem(game: Game, images:Map<String,String>, onClick:() -> Unit){
+fun GameItem(game: Game, images: Map<String, String>, onClick: () -> Unit) {
     Column {
         Image(bitmap = images[game.iconUrl].toBase64ImageToImageBitmap(), contentDescription = game.name)
         Text(text = game.name)

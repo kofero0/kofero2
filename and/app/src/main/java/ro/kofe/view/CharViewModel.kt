@@ -1,13 +1,11 @@
 package ro.kofe.view
 
-import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import ro.kofe.model.Character
 import ro.kofe.model.Error
-import ro.kofe.model.Game
 import ro.kofe.model.Move
 import ro.kofe.presenter.ipv.character.CharacterInteractor
 import ro.kofe.presenter.ipv.character.CharacterKView
@@ -15,8 +13,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CharViewModel @Inject constructor(
-    private val interactor:CharacterInteractor
-): CharacterKView, ImageViewModel(interactor) {
+    private val interactor: CharacterInteractor
+) : CharacterKView, ImageViewModel(interactor) {
     init {
         interactor.setView(this)
     }

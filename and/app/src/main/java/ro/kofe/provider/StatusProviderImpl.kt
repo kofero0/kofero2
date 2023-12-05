@@ -4,7 +4,6 @@ import arrow.core.raise.either
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
 import ro.kofe.BuildConfig
 import ro.kofe.model.HttpError
 import ro.kofe.model.ProviderError
@@ -25,7 +24,7 @@ class StatusProviderImpl(
         }
     }
 
-    override suspend fun getLocalStatus() = Status(System.nanoTime(),BuildConfig.VERSION_NAME)
+    override suspend fun getLocalStatus() = Status(System.nanoTime(), BuildConfig.VERSION_NAME)
 
     companion object {
         private const val statusSuffix = "status"

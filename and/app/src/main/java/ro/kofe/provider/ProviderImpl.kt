@@ -1,14 +1,12 @@
 package ro.kofe.provider
 
 import android.content.Context
-import android.util.Log
 import arrow.core.raise.either
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.flow
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
-import okhttp3.internal.http2.Header
 import ro.kofe.map.Mapper
 import ro.kofe.model.HttpError
 import ro.kofe.model.Obj
@@ -37,19 +35,19 @@ class ProviderImpl<O : Obj>(
     }
 
     override fun get(ids: List<Int>) = flow {
-        if(!isDiskPulled) {
+        if (!isDiskPulled) {
             isDiskPulled = true
             elements = mapper.mapLeft(file.readBytes()).toMutableList()
         }
-        if(isSatisfiable(ids)) emit(retrieve(ids))
+        if (isSatisfiable(ids)) emit(retrieve(ids))
         emit(send(ids))
     }
 
     private fun send(ids: List<Int>) =
-        either{
+        either {
             val response = okHttp.newCall(
                 Request.Builder().url("$urlPrefix/$jsonFilename")
-                    .header("Content-Type","application/json")
+                    .header("Content-Type", "application/json")
                     .put(gson.toJson(ids).toRequestBody()).build()
             ).execute()
             if (response.isSuccessful && response.body != null) {

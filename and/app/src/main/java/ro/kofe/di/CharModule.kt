@@ -5,7 +5,6 @@ import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
@@ -14,11 +13,7 @@ import ro.kofe.map.Mapper
 import ro.kofe.model.Character
 import ro.kofe.model.Move
 import ro.kofe.presenter.DispatcherProvider
-import ro.kofe.presenter.ipv.character.CharacterInteractor
-import ro.kofe.presenter.ipv.character.CharacterInteractorImpl
-import ro.kofe.presenter.ipv.character.CharacterPresenter
-import ro.kofe.presenter.ipv.character.CharacterPresenterImpl
-import ro.kofe.presenter.ipv.character.CharacterRouter
+import ro.kofe.presenter.ipv.character.*
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider

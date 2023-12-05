@@ -14,7 +14,7 @@ import javax.persistence.*
 @Builder
 class BlacklistEntry(
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    var id:Long = 0L,
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long = 0L,
     var deviceId: String = ""
 )

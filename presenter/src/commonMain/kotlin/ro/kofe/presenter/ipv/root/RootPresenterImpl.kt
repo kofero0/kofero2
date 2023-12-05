@@ -1,7 +1,6 @@
 package ro.kofe.presenter.ipv.root
 
 import kotlinx.coroutines.flow.flow
-import ro.kofe.model.Status
 import ro.kofe.model.logging.LogTag.ROOT_PRESENTER
 import ro.kofe.presenter.ipv.PresenterImpl
 import ro.kofe.presenter.provider.LoggingProvider

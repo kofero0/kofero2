@@ -2,8 +2,6 @@ package ro.kofe
 
 import android.util.Log
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.future.await
 import kotlinx.coroutines.launch
 import okhttp3.Interceptor
 import okhttp3.Request
@@ -13,7 +11,8 @@ import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.provider.AuthProvider
 import java.util.concurrent.CompletableFuture
 
-class AuthInterceptor(private val authProvider: AuthProvider, private val dispatcherProvider: DispatcherProvider): Interceptor {
+class AuthInterceptor(private val authProvider: AuthProvider, private val dispatcherProvider: DispatcherProvider) :
+    Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
         val future = CompletableFuture<Request>()

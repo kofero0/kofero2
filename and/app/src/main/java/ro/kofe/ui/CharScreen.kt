@@ -9,7 +9,7 @@ import ro.kofe.view.CharViewModel
 fun CharScreen(
     viewModel: CharViewModel,
     modifier: Modifier = Modifier
-){
+) {
     DisposableEffect(key1 = viewModel) {
         viewModel.onStart()
         onDispose { viewModel.onStop() }

@@ -3,15 +3,10 @@ package ro.kofe.di
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.components.SingletonComponent
 import ro.kofe.model.Game
 import ro.kofe.presenter.DispatcherProvider
-import ro.kofe.presenter.ipv.home.HomeInteractor
-import ro.kofe.presenter.ipv.home.HomeInteractorImpl
-import ro.kofe.presenter.ipv.home.HomePresenter
-import ro.kofe.presenter.ipv.home.HomePresenterImpl
-import ro.kofe.presenter.ipv.home.HomeRouter
+import ro.kofe.presenter.ipv.home.*
 import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
@@ -39,13 +34,13 @@ object HomeModule {
         logger: LoggingProvider,
         router: HomeRouter
     ): HomeInteractor = HomeInteractorImpl(
-            homePresenter,
-            stateLogger,
-            stateReducer,
-            logger,
-            router,
-            DispatcherProvider.default
-        )
+        homePresenter,
+        stateLogger,
+        stateReducer,
+        logger,
+        router,
+        DispatcherProvider.default
+    )
 
     @Provides
     fun provideHomeRouter(): HomeRouter = HomeRouterImpl()

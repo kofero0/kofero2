@@ -5,4 +5,4 @@ import org.springframework.stereotype.Repository
 
 
 @Repository
-interface BlacklistRepository: JpaRepository<BlacklistEntry?, Long?>
+interface BlacklistRepository : JpaRepository<BlacklistEntry?, Long?>

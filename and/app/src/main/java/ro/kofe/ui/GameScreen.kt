@@ -11,7 +11,7 @@ fun GameScreen(
     viewModel: GameViewModel,
     onNavigate: (ViewTag) -> Unit,
     modifier: Modifier = Modifier
-){
+) {
     DisposableEffect(key1 = viewModel) {
         viewModel.onStart()
         onDispose { viewModel.onStop() }

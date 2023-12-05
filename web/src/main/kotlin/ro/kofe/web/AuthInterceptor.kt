@@ -43,7 +43,7 @@ class AuthInterceptor(
             return false
         }
         val account = accountQueryService.getAccountById(authToken[0].toLong())
-        if(account == null) {
+        if (account == null) {
             response.writer.write(mapper.writeValueAsString(AuthErrorResponses.AUTH_FAILED))
             response.status = HttpStatus.UNAUTHORIZED.value()
             return false

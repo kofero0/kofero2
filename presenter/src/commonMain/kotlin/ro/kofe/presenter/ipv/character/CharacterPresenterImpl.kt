@@ -31,7 +31,7 @@ class CharacterPresenterImpl(
                 either.fold({
                     emit(it)
                     view?.displayMovesError(it)
-                }) {moves ->
+                }) { moves ->
                     view?.display(moves)
                 }
             }
