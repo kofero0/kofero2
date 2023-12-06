@@ -5,6 +5,7 @@ import android.util.Log
 import arrow.core.Either
 import arrow.core.raise.either
 import com.google.gson.Gson
+import kotlinx.coroutines.future.await
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -15,6 +16,7 @@ import ro.kofe.model.authPrefix
 import ro.kofe.model.request.RegisterAuthRequest
 import ro.kofe.model.response.RegisterAuthResponse
 import java.io.File
+import java.util.concurrent.CompletableFuture
 
 interface AuthProvider {
     suspend fun get(): Either<ProviderError, String>
@@ -37,26 +39,38 @@ class AuthProviderImpl(
             }
         }
     }
+    private var isWaitingForAuth = false
+    private var future = CompletableFuture<String>()
 
     override suspend fun get() = either {
         file.readText().ifEmpty {
-            Log.v("rwr", "@#@#@# EMPTY AUTH")
-            val response = client.newCall(
-                Request.Builder().url("$urlPrefix/$AUTH/$REG").put(
-                    gson.toJson(
-                        RegisterAuthRequest("$authPrefix$authDelimiter${identityProvider.getDeviceId()}")
-                    ).toRequestBody()
-                ).header("Content-Type", "application/json").build()
-            ).execute()
+            if(!isWaitingForAuth) {
+                isWaitingForAuth = true
+                Log.v("rwr", "@#@#@# EMPTY AUTH")
+                val response = client.newCall(
+                    Request.Builder().url("$urlPrefix/$AUTH/$REG").put(
+                        gson.toJson(
+                            RegisterAuthRequest("$authPrefix$authDelimiter${identityProvider.getDeviceId()}")
+                        ).toRequestBody()
+                    ).header("Content-Type", "application/json").build()
+                ).execute()
 
-            if (response.isSuccessful && response.body != null) {
-                Log.v("rwr", "token response: ${response.body?.string()}")
-                val token =
-                    gson.fromJson(response.body!!.string(), RegisterAuthResponse::class.java).token
-                file.writeText(token)
-                token
-            } else {
-                raise(HttpError(response.code, response.body.toString()))
+                if (response.isSuccessful && response.body != null) {
+                    Log.v("rwr", "token response: ${response.body?.string()}")
+                    val token =
+                        gson.fromJson(
+                            response.body!!.string(),
+                            RegisterAuthResponse::class.java
+                        ).token
+                    file.writeText(token)
+                    future.complete(token)
+                    token
+                } else {
+                    raise(HttpError(response.code, response.body.toString()))
+                }
+            }
+            else{
+                future.await()
             }
         }
     }
