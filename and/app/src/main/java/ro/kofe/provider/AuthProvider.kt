@@ -34,7 +34,6 @@ class AuthProviderImpl(
             context.filesDir, AUTH
         ).apply {
             if (!exists()) {
-                Log.v("rwr", "@#@#@# NEW AUTH FILE")
                 createNewFile()
             }
         }
@@ -46,7 +45,6 @@ class AuthProviderImpl(
         file.readText().ifEmpty {
             if(!isWaitingForAuth) {
                 isWaitingForAuth = true
-                Log.v("rwr", "@#@#@# EMPTY AUTH")
                 val response = client.newCall(
                     Request.Builder().url("$urlPrefix/$AUTH/$REG").put(
                         gson.toJson(
@@ -56,14 +54,16 @@ class AuthProviderImpl(
                 ).execute()
 
                 if (response.isSuccessful && response.body != null) {
-                    Log.v("rwr", "token response: ${response.body?.string()}")
+                    val response = response.body?.string()
+                    Log.v("rwr", "token response: $response")
                     val token =
                         gson.fromJson(
-                            response.body!!.string(),
+                            response,
                             RegisterAuthResponse::class.java
                         ).token
                     file.writeText(token)
                     future.complete(token)
+                    isWaitingForAuth = false
                     token
                 } else {
                     raise(HttpError(response.code, response.body.toString()))

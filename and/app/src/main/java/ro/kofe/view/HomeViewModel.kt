@@ -40,6 +40,7 @@ class HomeViewModel @Inject constructor(
     }
 
     fun gamePressed(game: Game) = CoroutineScope(DispatcherProvider.default).launch {
+        Log.v("rwr", "GAME PRESSED: $game")
         interactor.gamePressed(game)
     }
 

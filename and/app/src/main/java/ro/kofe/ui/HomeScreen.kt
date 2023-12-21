@@ -17,7 +17,7 @@ import ro.kofe.view.HomeViewModel
 @Composable
 fun HomeScreen(
     viewModel: HomeViewModel,
-    onNavigate: (ViewTag) -> Unit,
+    onNavigate: (ViewTag, Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val favs by viewModel.favs.collectAsState()
@@ -35,10 +35,9 @@ fun HomeScreen(
 
         LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
             items(favs.size) {
-                favs.forEach { obj ->
-                    FavItem(obj, images) {
-                        viewModel.favPressed(obj)
-                    }
+                FavItem(favs[it], images) {
+                    viewModel.favPressed(favs[it])
+
                 }
             }
         }
@@ -47,10 +46,9 @@ fun HomeScreen(
 
         LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
             items(games.size) {
-                games.forEach { game ->
-                    GameItem(game, images) {
-                        viewModel.gamePressed(game)
-                    }
+                GameItem(games[it], images) {
+                    viewModel.gamePressed(games[it])
+                    onNavigate(ViewTag.GAME_VIEW, games[it].uid)
                 }
             }
         }

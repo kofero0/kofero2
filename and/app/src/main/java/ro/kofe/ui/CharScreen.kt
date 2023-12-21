@@ -8,11 +8,11 @@ import ro.kofe.view.CharViewModel
 @Composable
 fun CharScreen(
     viewModel: CharViewModel,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    uid: String?
 ) {
     DisposableEffect(key1 = viewModel) {
         viewModel.onStart()
         onDispose { viewModel.onStop() }
     }
-
 }

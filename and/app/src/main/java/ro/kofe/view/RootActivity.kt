@@ -63,14 +63,14 @@ fun KoferoApp(
             composable(route = ViewTag.HOME_VIEW.name) {
                 HomeScreen(
                     viewModel = home,
-                    onNavigate = { viewTag -> navController.navigate(viewTag.name) }
+                    onNavigate = { viewTag, uid -> navController.navigate("${viewTag.name}/$uid") }
                 )
             }
-            composable(route = ViewTag.GAME_VIEW.name) {
-                GameScreen(viewModel = game, onNavigate = { viewTag -> navController.navigate(viewTag.name) })
+            composable(route = "${ViewTag.GAME_VIEW.name}/{uid}") {
+                GameScreen(viewModel = game,  onNavigate = { viewTag, uid -> navController.navigate("${viewTag.name}/$uid") }, it.arguments?.getString("uid"))
             }
-            composable(route = ViewTag.CHAR_VIEW.name) {
-                CharScreen(viewModel = char)
+            composable(route = "${ViewTag.CHAR_VIEW.name}/{uid}") {
+                CharScreen(viewModel = char, uid = it.arguments?.getString("uid"))
             }
             composable(route = ViewTag.SETTINGS_VIEW.name) {
 

@@ -9,7 +9,9 @@ import java.io.File
 class StateLoggerImpl(context: Context, private val mapper: Mapper<Map<Long, Event>, ByteArray>) :
     StateLogger {
     private val file: File by lazy {
-        File(context.filesDir, "state").apply { if (!exists()) mkdir() }
+        File(context.filesDir, "state").apply {
+            if (!exists()) createNewFile()
+            writeBytes("[]".toByteArray()) }
     }
 
     override fun getStateMap() = mapper.mapLeft(file.readBytes())

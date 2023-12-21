@@ -1,6 +1,7 @@
 package ro.kofe.provider
 
 import android.content.Context
+import android.util.Log
 import arrow.core.raise.either
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -15,18 +16,21 @@ class ImageProviderImpl(private val okHttp: OkHttpClient, context: Context) :
         File(
             context.filesDir,
             "img"
-        ).apply { if (!exists()) mkdir() }
+        ).apply { if (!exists()) mkdirs() }
     }
 
 
     override suspend fun get(url: String) = either<ProviderError, String> {
-        val file = File(imgDir, url)
+        val file = File(imgDir, "${url.hashCode()}")
         if (!file.exists()) {
             val response = okHttp.newCall(Request.Builder().url(url).build()).execute()
             if (response.isSuccessful) {
                 response.body?.let {
-                    file.writeBytes(it.bytes())
-                    it.string()
+                    Log.v("rwr", "${file.absolutePath}")
+                    val bytes = it.bytes()
+                    file.createNewFile()
+                    file.writeBytes(bytes)
+                    bytes
                 }
                 HttpError(response.code, response.body.toString())
             } else {

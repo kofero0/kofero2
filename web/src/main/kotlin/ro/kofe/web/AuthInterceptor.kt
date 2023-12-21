@@ -49,8 +49,6 @@ class AuthInterceptor(
             return false
         }
         val newHash = authToken[1].getHash(account.salt)
-        println("ACCOUNT HASH: ${account.hash}")
-        println("NEW HASH: $newHash")
         if (newHash != account.hash) {
             response.writer.write(
                 mapper.writeValueAsString(
