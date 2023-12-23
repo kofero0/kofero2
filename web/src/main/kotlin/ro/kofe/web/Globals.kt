@@ -4,7 +4,7 @@ import java.security.MessageDigest
 import javax.servlet.http.HttpServletRequest
 
 const val GAME_PATH = "/game"
-const val CHAR_PATH = "/path"
+const val CHAR_PATH = "/char"
 const val MOVE_PATH = "/move"
 const val STATUS_PATH = "/status"
 

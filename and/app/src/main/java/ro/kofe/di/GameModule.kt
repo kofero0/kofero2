@@ -19,6 +19,7 @@ import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
+import ro.kofe.provider.LoggingProviderImpl
 import ro.kofe.provider.ProviderImpl
 import ro.kofe.router.GameRouterImpl
 
@@ -46,7 +47,7 @@ object GameModule {
         charProvider: Provider<Character>,
         gameProvider: Provider<Game>,
         imageProvider: ImageProvider
-    ): GamePresenter = GamePresenterImpl(charProvider, gameProvider, imageProvider)
+    ): GamePresenter = GamePresenterImpl(charProvider, gameProvider, imageProvider, LoggingProviderImpl())
 
     @Provides
     fun provideGameMapper(gson: Gson): Mapper<List<Game>, ByteArray> = GameMapper(gson)

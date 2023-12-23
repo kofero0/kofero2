@@ -9,6 +9,8 @@ import ro.kofe.model.HttpError
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.provider.ImageProvider
 import java.io.File
+import kotlin.io.encoding.Base64
+import kotlin.io.encoding.ExperimentalEncodingApi
 
 class ImageProviderImpl(private val okHttp: OkHttpClient, context: Context) :
     ImageProvider {
@@ -20,16 +22,16 @@ class ImageProviderImpl(private val okHttp: OkHttpClient, context: Context) :
     }
 
 
+    @OptIn(ExperimentalEncodingApi::class)
     override suspend fun get(url: String) = either<ProviderError, String> {
         val file = File(imgDir, "${url.hashCode()}")
         if (!file.exists()) {
             val response = okHttp.newCall(Request.Builder().url(url).build()).execute()
             if (response.isSuccessful) {
                 response.body?.let {
-                    Log.v("rwr", "${file.absolutePath}")
                     val bytes = it.bytes()
                     file.createNewFile()
-                    file.writeBytes(bytes)
+                    file.writeText(Base64.encode(bytes)) //experimental
                     bytes
                 }
                 HttpError(response.code, response.body.toString())

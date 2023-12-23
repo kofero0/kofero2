@@ -37,7 +37,6 @@ fun HomeScreen(
             items(favs.size) {
                 FavItem(favs[it], images) {
                     viewModel.favPressed(favs[it])
-
                 }
             }
         }

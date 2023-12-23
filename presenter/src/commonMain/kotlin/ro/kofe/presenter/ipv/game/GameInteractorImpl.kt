@@ -1,12 +1,16 @@
 package ro.kofe.presenter.ipv.game
 
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.launch
 import ro.kofe.model.Character
 import ro.kofe.model.Event
 import ro.kofe.model.Event.Value.BUTTON_PRESSED
+import ro.kofe.model.HttpError
+import ro.kofe.model.ProviderError
 import ro.kofe.model.ViewTag.CHAR_VIEW
 import ro.kofe.model.ViewTag.GAME_VIEW
+import ro.kofe.model.logging.Level
 import ro.kofe.model.logging.LogTag.GAME_INTERACTOR
 import ro.kofe.presenter.ipv.InteractorImpl
 import ro.kofe.presenter.millisNow
@@ -19,7 +23,7 @@ class GameInteractorImpl(
     presenter: GamePresenter,
     stateLogger: StateLogger,
     stateReducer: StateReducer,
-    loggingProvider: LoggingProvider,
+    private val loggingProvider: LoggingProvider,
     router: GameRouter,
     private val context: CoroutineContext
 ) : GameInteractor, InteractorImpl<GameKView, GamePresenter>(
@@ -29,19 +33,34 @@ class GameInteractorImpl(
 
     override fun viewResumed() = super.viewResumed().also {
         CoroutineScope(context).launch {
-            gameUid?.let { presenter.showGame(it) }
+            gameUid?.let { uid ->
+                loggingProvider.log(Level.DEBUG, GAME_INTERACTOR, "gameUid: $uid")
+                presenter.showGame(uid).collect { logProviderError(it) }
+            }
         }
     }
 
     override suspend fun charPressed(char: Character) =
-        stateLogger.logState(millisNow(), Event(GAME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply {
-            this[BUTTON_PRESSED.name] = char.uid
-        })).also {
+        stateLogger.logState(
+            millisNow(),
+            Event(GAME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply {
+                this[BUTTON_PRESSED.name] = char.uid
+            })
+        ).also {
             router.routeTo(CHAR_VIEW, char.uid)
         }
 
 
     override suspend fun setGameUid(uid: Int) {
         this.gameUid = uid
+        presenter.showGame(uid).collect { logProviderError(it) }
+    }
+
+    private fun logProviderError(error: ProviderError) {
+        loggingProvider.log(Level.ALERT, GAME_INTERACTOR, "provider error: $error")
+        if(error is HttpError){
+            loggingProvider.log(Level.ALERT, GAME_INTERACTOR, error.response)
+            loggingProvider.log(Level.ALERT, GAME_INTERACTOR, "${error.statusCode}")
+        }
     }
 }

@@ -4,13 +4,16 @@ import kotlinx.coroutines.flow.flow
 import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.model.IncorrectCount
+import ro.kofe.model.logging.Level
 import ro.kofe.presenter.provider.ImageProvider
+import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 
 class GamePresenterImpl(
-    private var characterProvider: Provider<Character>,
-    private var gameProvider: Provider<Game>,
-    private var imageProvider: ImageProvider
+    private val characterProvider: Provider<Character>,
+    private val gameProvider: Provider<Game>,
+    private val imageProvider: ImageProvider,
+    private val loggingProvider: LoggingProvider
 ) : GamePresenter {
     private var view: GameKView? = null
 
@@ -19,6 +22,7 @@ class GamePresenterImpl(
     }
 
     override suspend fun showGame(id: Int) = flow {
+        loggingProvider.log(Level.DEBUG, "GamePresenterImpl", "showGame: $id")
         val ids = ArrayList<Int>().apply { add(id) }
         suspend fun process(games: List<Game>) {
             if (games.size != 1) {
@@ -26,6 +30,7 @@ class GamePresenterImpl(
                 return
             }
             val game = games[0]
+            loggingProvider.log(Level.DEBUG, "GamePresenterImpl", "chars: ${game.charIds}")
             view?.display(game)
             imageProvider.get(game.iconUrl).fold({ emit(it) }) { view?.display(game.iconUrl, it) }
             characterProvider.get(game.charIds).collect { either ->
@@ -37,7 +42,6 @@ class GamePresenterImpl(
                 }
             }
         }
-
         gameProvider.get(ids).collect { either ->
             either.fold({ e ->
                 emit(e)

@@ -53,7 +53,7 @@ object CharModule {
         @ApplicationContext context: Context,
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Character>, ByteArray>
-    ): Provider<Character> = ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
+    ): Provider<Character> = ProviderImpl(gson, okHttp, context, "char", urlPrefix, mapper)
 
     @Provides
     fun provideCharacterRouter(): CharacterRouter = CharacterRouterImpl()

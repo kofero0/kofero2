@@ -1,6 +1,7 @@
 package ro.kofe.provider
 
 import android.content.Context
+import android.util.Log
 import arrow.core.raise.either
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.flow
@@ -21,7 +22,7 @@ class ProviderImpl<O : Obj>(
     private val context: Context,
     private val jsonFilename: String,
     private val urlPrefix: String,
-    private val mapper: Mapper<List<O>, ByteArray>
+    private val mapper: Mapper<List<O>, ByteArray>,
 ) : Provider<O> {
     private var isDiskPulled = false
     private var elements: MutableList<O> = ArrayList()
@@ -43,33 +44,35 @@ class ProviderImpl<O : Obj>(
         emit(send(ids))
     }
 
-    private fun send(ids: List<Int>) =
-        either {
-            val response = okHttp.newCall(
-                Request.Builder().url("$urlPrefix/$jsonFilename")
-                    .header("Content-Type", "application/json")
-                    .put(gson.toJson(ids).toRequestBody()).build()
-            ).execute()
-            if (response.isSuccessful && response.body != null) {
-                mapper.mapLeft(response.body!!.bytes()).also { add(it) }
-            } else {
-                raise(HttpError(response.code, response.body.toString()))
-            }
+    private fun send(ids: List<Int>) = either {
+        Log.v("rwr", "PROVIDER $jsonFilename SEND: $ids")
+        val response = okHttp.newCall(
+            Request.Builder().url("$urlPrefix/$jsonFilename")
+                .header("Content-Type", "application/json").put(gson.toJson(ids).toRequestBody())
+                .build()
+        ).execute()
+        if (response.isSuccessful && response.body != null) {
+            mapper.mapLeft(response.body!!.bytes()).also { add(it) }
+        } else {
+            raise(HttpError(response.code, response.body.toString()))
         }
-
-    private fun add(new: List<O>) {
-        for (element in new) {
-            elements.removeAll { it.uid == element.uid }
-            elements.add(element)
-        }
-        if (!file.exists()) {
-            file.mkdir()
-        }
-        file.writeBytes(mapper.mapRight(elements))
     }
 
-    private fun retrieve(ids: List<Int>) =
-        either<ProviderError, List<O>> {
+    private fun add(new: List<O>) {
+        synchronized(elements) {
+            for (element in new) {
+                elements.removeAll { it.uid == element.uid }
+                elements.add(element)
+            }
+            if (!file.exists()) {
+                file.mkdir()
+            }
+            file.writeBytes(mapper.mapRight(elements))
+        }
+    }
+
+    private fun retrieve(ids: List<Int>) = either<ProviderError, List<O>> {
+        synchronized(elements) {
             if (ids.isEmpty()) {
                 elements
             } else {
@@ -80,6 +83,7 @@ class ProviderImpl<O : Obj>(
                 }
             }
         }
+    }
 
     private fun isSatisfiable(ids: List<Int>): Boolean {
         for (id in ids) {
