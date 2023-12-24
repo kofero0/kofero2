@@ -40,7 +40,6 @@ class HomeViewModel @Inject constructor(
     }
 
     fun gamePressed(game: Game) = CoroutineScope(DispatcherProvider.default).launch {
-        Log.v("rwr", "GAME PRESSED: $game")
         interactor.gamePressed(game)
     }
 
@@ -51,7 +50,6 @@ class HomeViewModel @Inject constructor(
     override fun displayFavsError(error: Error) = _favError.update { error }
 
     override fun displayGames(games: List<Game>) = _games.update {
-        Log.v("rwr", "games: $games")
         games
     }
 

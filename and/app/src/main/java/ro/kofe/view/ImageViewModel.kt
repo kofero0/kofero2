@@ -1,5 +1,6 @@
 package ro.kofe.view
 
+import android.util.Log
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
@@ -12,6 +13,7 @@ abstract class ImageViewModel(interactor: Interactor<out ImageKView>) : KViewMod
     val images = _images.asStateFlow()
 
     override fun display(url: String, imgBase64: String) = _images.update {
+        Log.v("rwr", "display Images: $url")
         _images.value.apply { put(url, imgBase64) }
     }
 }

@@ -38,6 +38,10 @@ class GamePresenterImpl(
                     emit(e)
                     view?.displayCharsError(e)
                 }) { chars ->
+                    for (char in chars) {
+                        imageProvider.get(char.iconUrl)
+                            .fold({ emit(it) }) { view?.display(char.iconUrl, it) }
+                    }
                     view?.display(chars)
                 }
             }

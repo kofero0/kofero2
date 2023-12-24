@@ -53,7 +53,6 @@ class GameInteractorImpl(
 
     override suspend fun setGameUid(uid: Int) {
         this.gameUid = uid
-        presenter.showGame(uid).collect { logProviderError(it) }
     }
 
     private fun logProviderError(error: ProviderError) {

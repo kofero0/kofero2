@@ -21,15 +21,10 @@ fun GameScreen(
     uid: String?,
     modifier: Modifier = Modifier
 ) {
-    Log.v("rwr", "GAME UID: ${uid?.toInt()}")
     uid?.let{viewModel.setGameUid(it.toInt())}
     val game by viewModel.game.collectAsState()
     val chars by viewModel.chars.collectAsState()
     val images by viewModel.images.collectAsState()
-    Log.v("rwr", "GAME: $game")
-    Log.v("rwr", "CHAR: ${chars.size}")
-    Log.v("rwr", "IMG: $images")
-
 
     DisposableEffect(key1 = viewModel) {
         viewModel.onStart()
@@ -37,7 +32,6 @@ fun GameScreen(
     }
 
     Column {
-        Text("Hello")
         game?.let { Text(it.name) }
         LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
             items(chars.size){
