@@ -13,7 +13,10 @@ import ro.kofe.toBase64ImageToImageBitmap
 fun GameItem(game: Game, images: Map<String, String>, onClick: () -> Unit) {
     Button(onClick = onClick) {
         Column {
-            Image(bitmap = images[game.iconUrl].toBase64ImageToImageBitmap(), contentDescription = game.name)
+            Image(
+                bitmap = images[game.iconUrl].toBase64ImageToImageBitmap(),
+                contentDescription = game.name
+            )
             Text(text = game.name)
         }
     }

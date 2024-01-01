@@ -39,7 +39,7 @@ fun HomeScreen(
             items(favs.size) {
                 FavItem(favs[it], images) {
                     viewModel.favPressed(favs[it])
-                    when(val fav = favs[it]){
+                    when (val fav = favs[it]) {
                         is Character -> onNavigate(ViewTag.CHAR_VIEW, fav.uid)
                         is Game -> onNavigate(ViewTag.GAME_VIEW, fav.uid)
                     }

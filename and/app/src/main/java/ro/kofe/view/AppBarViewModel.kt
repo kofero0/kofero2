@@ -10,20 +10,18 @@ import kotlinx.coroutines.launch
 import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.model.ProviderError
-import ro.kofe.model.ViewTag
 import ro.kofe.presenter.DispatcherProvider
-import ro.kofe.presenter.collect
 import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.Provider
 import javax.inject.Inject
 
 @HiltViewModel
-class AppBarViewModel @Inject constructor (
+class AppBarViewModel @Inject constructor(
     private val favsProvider: FavoritesProvider,
     private val gameProvider: Provider<Game>,
     private val charProvider: Provider<Character>,
     private val dispatcherProvider: DispatcherProvider
-): ViewModel() {
+) : ViewModel() {
     private val _title = MutableStateFlow(DEFAULT_TITLE)
     val title = _title.asStateFlow()
 
@@ -45,21 +43,21 @@ class AppBarViewModel @Inject constructor (
     private val _error = MutableStateFlow<ProviderError?>(null)
     val error = _error.asStateFlow()
 
-    fun toHome(){
+    fun toHome() {
         _canFavorite.update { false }
         _title.update { DEFAULT_TITLE }
         _canNavigateBack.update { false }
     }
 
-    fun fromHome(uid:Int, navClicked: () -> Unit){
+    fun fromHome(uid: Int, navClicked: () -> Unit) {
         CoroutineScope(dispatcherProvider.default).launch {
-            favsProvider.get(ArrayList()).collect{
-                it.fold({error ->
+            favsProvider.get(ArrayList()).collect {
+                it.fold({ error ->
                     _error.update { error }
-                }){favs ->
+                }) { favs ->
                     _isFavorited.update { favs.any { obj -> obj.uid == uid } }
                     _canFavorite.update { true }
-                    when(val fav = favs.first { obj -> obj.uid == uid }){
+                    when (val fav = favs.first { obj -> obj.uid == uid }) {
                         is Character -> _title.update { fav.name }
                         is Game -> _title.update { fav.name }
                     }
@@ -70,41 +68,40 @@ class AppBarViewModel @Inject constructor (
         _navClicked.update { navClicked }
     }
 
-//    fun toGame(uid:Int, navClicked: () -> Unit){
-//        CoroutineScope(dispatcherProvider.default).launch {
-//            favsProvider.get(ArrayList()).collect{
-//                it.fold({error ->
-//                    _error.update { error }
-//                }){favs ->
-//                    _isFavorited.update { favs.any { obj -> obj.uid == uid } }
-//                    _canFavorite.update { true }
-//
-//                }
-//            }
-//            gameProvider.get(ArrayList<Int>().apply { add(uid) }).collect {
-//                it.fold({error ->
-//                    _error.update { error }
-//                }){
-//                    game ->
-//                    _title.update { game[0].name }
-//                }
-//            }
-//        }
-//        _canNavigateBack.update { true }
-//        _navClicked.update { navClicked }
-//        _canFavorite.update { true }
-//    }
-
-    fun toChar(uid:Int, navClicked: () -> Unit){
+    fun toGame(uid: Int, navClicked: () -> Unit) {
         CoroutineScope(dispatcherProvider.default).launch {
-            favsProvider.get(ArrayList()).collect{
-                it.fold({error -> _error.update { error } }){ favs ->
-                    _isFavorited.update {favs.any { obj -> obj.uid == uid }  }
+            favsProvider.get(ArrayList()).collect {
+                it.fold({ error ->
+                    _error.update { error }
+                }) { favs ->
+                    _isFavorited.update { favs.any { obj -> obj.uid == uid } }
+                    _canFavorite.update { true }
+
+                }
+            }
+            gameProvider.get(ArrayList<Int>().apply { add(uid) }).collect {
+                it.fold({ error ->
+                    _error.update { error }
+                }) { game ->
+                    _title.update { game[0].name }
+                }
+            }
+        }
+        _canNavigateBack.update { true }
+        _navClicked.update { navClicked }
+        _canFavorite.update { true }
+    }
+
+    fun toChar(uid: Int, navClicked: () -> Unit) {
+        CoroutineScope(dispatcherProvider.default).launch {
+            favsProvider.get(ArrayList()).collect {
+                it.fold({ error -> _error.update { error } }) { favs ->
+                    _isFavorited.update { favs.any { obj -> obj.uid == uid } }
                     _canFavorite.update { true }
                 }
             }
-            charProvider.get(ArrayList<Int>().apply { add(uid) }).collect{
-                it.fold({error -> _error.update { error } }){ chars ->
+            charProvider.get(ArrayList<Int>().apply { add(uid) }).collect {
+                it.fold({ error -> _error.update { error } }) { chars ->
                     _title.update { chars[0].name }
                 }
             }

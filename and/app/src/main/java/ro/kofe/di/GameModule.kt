@@ -47,7 +47,8 @@ object GameModule {
         charProvider: Provider<Character>,
         gameProvider: Provider<Game>,
         imageProvider: ImageProvider
-    ): GamePresenter = GamePresenterImpl(charProvider, gameProvider, imageProvider, LoggingProviderImpl())
+    ): GamePresenter =
+        GamePresenterImpl(charProvider, gameProvider, imageProvider, LoggingProviderImpl())
 
     @Provides
     fun provideGameMapper(gson: Gson): Mapper<List<Game>, ByteArray> = GameMapper(gson)

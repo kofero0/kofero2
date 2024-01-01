@@ -19,7 +19,8 @@ import ro.kofe.state.StateLoggerImpl
 @InstallIn(SingletonComponent::class)
 object StateModule {
     @Provides
-    fun provideStateMapMapper(gson: Gson): Mapper<Map<Long, Event>, ByteArray> = StateMapMapper(gson)
+    fun provideStateMapMapper(gson: Gson): Mapper<Map<Long, Event>, ByteArray> =
+        StateMapMapper(gson)
 
     @Provides
     fun provideStateLogger(

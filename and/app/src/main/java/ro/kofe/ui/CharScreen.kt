@@ -15,7 +15,6 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.runtime.toMutableStateMap
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -66,7 +65,7 @@ fun LazyListScope.Section(
         )
     }
 
-    if(isExpanded) {
+    if (isExpanded) {
         items(moveData.attributes) {
             MoveItem(text = it)
         }
@@ -96,7 +95,6 @@ fun ExpandableList(moves: List<MoveData>) {
 }
 
 
-
 @Composable
 fun CharScreen(
     viewModel: CharViewModel,
@@ -114,7 +112,13 @@ fun CharScreen(
 
     Column {
         Text("T E S T")
-        ExpandableList(moves = ArrayList<MoveData>().apply { add(MoveData("test test", ArrayList<String>().apply { add("tester") })) })
+        ExpandableList(moves = ArrayList<MoveData>().apply {
+            add(
+                MoveData(
+                    "test test",
+                    ArrayList<String>().apply { add("tester") })
+            )
+        })
         //Image()
     }
 }

@@ -61,7 +61,7 @@ class GameViewModel @Inject constructor(private val interactor: GameInteractor) 
         interactor.charPressed(char)
     }
 
-    fun setGameUid(uid:Int) = CoroutineScope(DispatcherProvider.default).launch{
+    fun setGameUid(uid: Int) = CoroutineScope(DispatcherProvider.default).launch {
         Log.v("rwr", "setGameUid: $uid")
         interactor.setGameUid(uid)
     }

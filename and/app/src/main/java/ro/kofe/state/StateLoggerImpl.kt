@@ -11,7 +11,8 @@ class StateLoggerImpl(context: Context, private val mapper: Mapper<Map<Long, Eve
     private val file: File by lazy {
         File(context.filesDir, "state").apply {
             if (!exists()) createNewFile()
-            writeBytes("[]".toByteArray()) }
+            writeBytes("[]".toByteArray())
+        }
     }
 
     override fun getStateMap() = mapper.mapLeft(file.readBytes())

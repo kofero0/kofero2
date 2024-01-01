@@ -1,7 +1,6 @@
 package ro.kofe.provider
 
 import android.content.Context
-import android.util.Log
 import arrow.core.raise.either
 import okhttp3.OkHttpClient
 import okhttp3.Request

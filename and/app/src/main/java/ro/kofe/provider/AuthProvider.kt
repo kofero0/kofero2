@@ -43,7 +43,7 @@ class AuthProviderImpl(
 
     override suspend fun get() = either {
         file.readText().ifEmpty {
-            if(!isWaitingForAuth) {
+            if (!isWaitingForAuth) {
                 isWaitingForAuth = true
                 val response = client.newCall(
                     Request.Builder().url("$urlPrefix/$AUTH/$REG").put(
@@ -68,8 +68,7 @@ class AuthProviderImpl(
                 } else {
                     raise(HttpError(response.code, response.body.toString()))
                 }
-            }
-            else{
+            } else {
                 future.await()
             }
         }

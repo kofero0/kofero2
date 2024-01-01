@@ -1,6 +1,5 @@
 package ro.kofe.ui
 
-import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -17,11 +16,11 @@ import ro.kofe.view.GameViewModel
 @Composable
 fun GameScreen(
     viewModel: GameViewModel,
-    onNavigate: (ViewTag, Int) -> Unit,
+    onNavigate: (ViewTag, Int, Int) -> Unit,
     uid: String?,
     modifier: Modifier = Modifier
 ) {
-    uid?.let{viewModel.setGameUid(it.toInt())}
+    uid?.let { viewModel.setGameUid(it.toInt()) }
     val game by viewModel.game.collectAsState()
     val chars by viewModel.chars.collectAsState()
     val images by viewModel.images.collectAsState()
@@ -32,12 +31,14 @@ fun GameScreen(
     }
 
     Column {
-        game?.let { Text(it.name) }
-        LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
-            items(chars.size){
-                CharItem(char = chars[it], images = images) {
-                    viewModel.charPressed(chars[it])
-                    onNavigate(ViewTag.CHAR_VIEW, chars[it].uid)
+        game?.let { uGame ->
+            Text(uGame.name)
+            LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
+                items(chars.size) {
+                    CharItem(char = chars[it], images = images) {
+                        viewModel.charPressed(chars[it])
+                        onNavigate(ViewTag.CHAR_VIEW, chars[it].uid, uGame.uid)
+                    }
                 }
             }
         }
