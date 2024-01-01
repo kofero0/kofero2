@@ -10,6 +10,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import ro.kofe.model.Character
+import ro.kofe.model.Game
 import ro.kofe.model.ViewTag
 import ro.kofe.view.HomeViewModel
 
@@ -37,6 +39,10 @@ fun HomeScreen(
             items(favs.size) {
                 FavItem(favs[it], images) {
                     viewModel.favPressed(favs[it])
+                    when(val fav = favs[it]){
+                        is Character -> onNavigate(ViewTag.CHAR_VIEW, fav.uid)
+                        is Game -> onNavigate(ViewTag.GAME_VIEW, fav.uid)
+                    }
                 }
             }
         }

@@ -68,8 +68,9 @@ object RootModule {
     @Provides
     fun provideAuthInterceptor(
         authProvider: AuthProvider,
-        dispatcherProvider: DispatcherProvider
-    ) = AuthInterceptor(authProvider, dispatcherProvider)
+        dispatcherProvider: DispatcherProvider,
+        logger: LoggingProvider
+    ) = AuthInterceptor(authProvider, dispatcherProvider, logger)
 
     @Provides
     fun provideIdentityProvider(): IdentityProvider = IdentityProviderImpl()

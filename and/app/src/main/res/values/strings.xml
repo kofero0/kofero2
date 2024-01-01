@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">kofero</string>
-    <string name="back_button">Back\n</string>
+    <string name="back_button">Back</string>
+    <string name="favorite">Favorite</string>
+    <string name="refresh">Refresh</string>
 </resources>

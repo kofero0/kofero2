@@ -1,0 +1,124 @@
+package ro.kofe.view
+
+import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import ro.kofe.model.Character
+import ro.kofe.model.Game
+import ro.kofe.model.ProviderError
+import ro.kofe.model.ViewTag
+import ro.kofe.presenter.DispatcherProvider
+import ro.kofe.presenter.collect
+import ro.kofe.presenter.provider.FavoritesProvider
+import ro.kofe.presenter.provider.Provider
+import javax.inject.Inject
+
+@HiltViewModel
+class AppBarViewModel @Inject constructor (
+    private val favsProvider: FavoritesProvider,
+    private val gameProvider: Provider<Game>,
+    private val charProvider: Provider<Character>,
+    private val dispatcherProvider: DispatcherProvider
+): ViewModel() {
+    private val _title = MutableStateFlow(DEFAULT_TITLE)
+    val title = _title.asStateFlow()
+
+    private val _canNavigateBack = MutableStateFlow(false)
+    val canNavigateBack = _canNavigateBack.asStateFlow()
+
+    private val _favoriteClicked = MutableStateFlow {}
+    val favoriteClicked = _favoriteClicked.asStateFlow()
+
+    private val _navClicked = MutableStateFlow {}
+    val navClicked = _navClicked.asStateFlow()
+
+    private val _canFavorite = MutableStateFlow(false)
+    val canFavorite = _canFavorite.asStateFlow()
+
+    private val _isFavorited = MutableStateFlow(false)
+    val isFavorited = _isFavorited.asStateFlow()
+
+    private val _error = MutableStateFlow<ProviderError?>(null)
+    val error = _error.asStateFlow()
+
+    fun toHome(){
+        _canFavorite.update { false }
+        _title.update { DEFAULT_TITLE }
+        _canNavigateBack.update { false }
+    }
+
+    fun fromHome(uid:Int, navClicked: () -> Unit){
+        CoroutineScope(dispatcherProvider.default).launch {
+            favsProvider.get(ArrayList()).collect{
+                it.fold({error ->
+                    _error.update { error }
+                }){favs ->
+                    _isFavorited.update { favs.any { obj -> obj.uid == uid } }
+                    _canFavorite.update { true }
+                    when(val fav = favs.first { obj -> obj.uid == uid }){
+                        is Character -> _title.update { fav.name }
+                        is Game -> _title.update { fav.name }
+                    }
+                }
+            }
+        }
+        _canNavigateBack.update { true }
+        _navClicked.update { navClicked }
+    }
+
+//    fun toGame(uid:Int, navClicked: () -> Unit){
+//        CoroutineScope(dispatcherProvider.default).launch {
+//            favsProvider.get(ArrayList()).collect{
+//                it.fold({error ->
+//                    _error.update { error }
+//                }){favs ->
+//                    _isFavorited.update { favs.any { obj -> obj.uid == uid } }
+//                    _canFavorite.update { true }
+//
+//                }
+//            }
+//            gameProvider.get(ArrayList<Int>().apply { add(uid) }).collect {
+//                it.fold({error ->
+//                    _error.update { error }
+//                }){
+//                    game ->
+//                    _title.update { game[0].name }
+//                }
+//            }
+//        }
+//        _canNavigateBack.update { true }
+//        _navClicked.update { navClicked }
+//        _canFavorite.update { true }
+//    }
+
+    fun toChar(uid:Int, navClicked: () -> Unit){
+        CoroutineScope(dispatcherProvider.default).launch {
+            favsProvider.get(ArrayList()).collect{
+                it.fold({error -> _error.update { error } }){ favs ->
+                    _isFavorited.update {favs.any { obj -> obj.uid == uid }  }
+                    _canFavorite.update { true }
+                }
+            }
+            charProvider.get(ArrayList<Int>().apply { add(uid) }).collect{
+                it.fold({error -> _error.update { error } }){ chars ->
+                    _title.update { chars[0].name }
+                }
+            }
+        }
+        _navClicked.update { navClicked }
+        _canNavigateBack.update { true }
+        _canFavorite.update { true }
+    }
+
+    companion object {
+        private const val DEFAULT_TITLE = "KOFERO"
+    }
+
+    private fun favoriteChar(): () -> Unit = {
+
+    }
+}

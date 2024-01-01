@@ -40,11 +40,16 @@ class RootInteractorImpl(
 
     override fun viewResumed() = super.viewResumed().also {
         CoroutineScope(context).launch {
-            presenter.checkVersion().collect {
-                log(Level.ALERT, "provider error checking version! $it")
-                if (it is HttpError) {
-                    log(Level.ALERT, "code: ${it.statusCode} body: ${it.response}")
+            try{
+                presenter.checkVersion().collect {
+                    log(Level.ALERT, "provider error checking version! $it")
+                    if (it is HttpError) {
+                        log(Level.ALERT, "code: ${it.statusCode} body: ${it.response}")
+                    }
                 }
+            } catch (e: Exception) {
+                view?.error(e)
+                log(Level.ALERT, "connectException?: ${e.printStackTrace()}")
             }
         }
     }

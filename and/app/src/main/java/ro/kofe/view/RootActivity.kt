@@ -40,6 +40,7 @@ fun KoferoApp(
     home: HomeViewModel = viewModel(),
     game: GameViewModel = viewModel(),
     char: CharViewModel = viewModel(),
+    appBar: AppBarViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
 ) {
     DisposableEffect(key1 = root) {
@@ -47,27 +48,30 @@ fun KoferoApp(
         onDispose { root.onStop() }
     }
 
-    Scaffold(
-        topBar = {
-            KoferoAppBar(
-                canNavigateBack = false,
-                navigateUp = { /* TODO: implement back navigation */ }
-            )
-        }
-    ) { innerPadding ->
+    Scaffold(topBar = {
+        KoferoAppBar(appBar)
+    }) { innerPadding ->
         NavHost(
             navController = navController,
             startDestination = ViewTag.HOME_VIEW.name,
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(route = ViewTag.HOME_VIEW.name) {
-                HomeScreen(
-                    viewModel = home,
-                    onNavigate = { viewTag, uid -> navController.navigate("${viewTag.name}/$uid") }
-                )
+                HomeScreen(viewModel = home, onNavigate = { viewTag, uid ->
+                    navController.navigate("${viewTag.name}/$uid")
+                    appBar.fromHome(uid) {
+                        navController.popBackStack()
+                        appBar.toHome(uid)
+                    }
+                })
             }
             composable(route = "${ViewTag.GAME_VIEW.name}/{uid}") {
-                GameScreen(viewModel = game,  onNavigate = { viewTag, uid -> navController.navigate("${viewTag.name}/$uid") }, it.arguments?.getString("uid"))
+                GameScreen(viewModel = game, onNavigate = { viewTag, uid ->
+                    navController.navigate("${viewTag.name}/$uid")
+                    appBar.toChar(uid) {
+                        navController.popBackStack()
+                    }
+                }, it.arguments?.getString("uid"))
             }
             composable(route = "${ViewTag.CHAR_VIEW.name}/{uid}") {
                 CharScreen(viewModel = char, uid = it.arguments?.getString("uid"))
