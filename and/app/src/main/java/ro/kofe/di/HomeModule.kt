@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.home.*
@@ -21,10 +22,11 @@ object HomeModule {
     @Provides
     fun provideHomePresenter(
         gameProvider: Provider<Game>,
+        charProvider: Provider<Character>,
         imageProvider: ImageProvider,
         favoritesProvider: FavoritesProvider,
         logger: LoggingProvider
-    ): HomePresenter = HomePresenterImpl(gameProvider, imageProvider, favoritesProvider, logger)
+    ): HomePresenter = HomePresenterImpl(gameProvider, charProvider, imageProvider, favoritesProvider, logger)
 
     @Provides
     fun provideHomeInteractor(

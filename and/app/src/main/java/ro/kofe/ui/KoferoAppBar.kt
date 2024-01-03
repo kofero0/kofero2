@@ -2,7 +2,10 @@ package ro.kofe.ui
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -48,12 +51,13 @@ fun KoferoAppBar(
         if (canFavorite) {
             IconButton(onClick = { favClicked() }) {
                 val icon = if (isFavorited) {
-                    Icons.Filled.Star
+                    Icons.Filled.Favorite
                 } else {
-                    Icons.Outlined.Star
+                    Icons.Outlined.FavoriteBorder
                 }
                 Icon(
-                    imageVector = icon, contentDescription = stringResource(R.string.favorite)
+                    imageVector = icon,
+                    contentDescription = stringResource(R.string.favorite)
                 )
             }
         }

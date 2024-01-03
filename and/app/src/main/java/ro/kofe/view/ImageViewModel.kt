@@ -12,7 +12,7 @@ abstract class ImageViewModel(interactor: Interactor<out ImageKView>) : KViewMod
     private val _images = MutableStateFlow<MutableMap<String, String>>(HashMap())
     val images = _images.asStateFlow()
 
-    override fun display(url: String, imgBase64: String) = _images.update {
+    override suspend fun display(url: String, imgBase64: String) = _images.update {
         Log.v("rwr", "display Images: $url")
         _images.value.apply { put(url, imgBase64) }
     }

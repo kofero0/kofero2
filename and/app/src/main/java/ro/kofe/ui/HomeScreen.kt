@@ -51,7 +51,7 @@ fun HomeScreen(
 
         LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
             items(games.size) {
-                GameItem(games[it], images) {
+                RowItem(games[it].name, images[games[it].iconUrl]) {
                     viewModel.gamePressed(games[it])
                     onNavigate(ViewTag.GAME_VIEW, games[it].uid)
                 }

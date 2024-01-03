@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import ro.kofe.model.Character
 import ro.kofe.toBase64ImageToImageBitmap
 

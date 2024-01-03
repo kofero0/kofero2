@@ -26,10 +26,6 @@ class CharacterInteractorImpl(
         charUid = uid
     }
 
-    override fun setView(view: CharacterKView) {
-        this.view = view
-    }
-
     override fun shutdown() {
         charUid = null
         view = null
@@ -37,7 +33,7 @@ class CharacterInteractorImpl(
 
     override fun viewResumed() = super.viewResumed().also {
         CoroutineScope(context).launch {
-            charUid?.let { presenter.showChar(it) }
+            charUid?.let { presenter.showChar(it).collect{ error -> view?.displayCharError(error) } }
         }
     }
 }

@@ -19,6 +19,7 @@ import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
+import ro.kofe.provider.LoggingProviderImpl
 import ro.kofe.provider.ProviderImpl
 import ro.kofe.router.CharacterRouterImpl
 

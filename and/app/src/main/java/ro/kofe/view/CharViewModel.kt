@@ -1,12 +1,16 @@
 package ro.kofe.view
 
+import android.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import ro.kofe.model.Character
 import ro.kofe.model.Error
 import ro.kofe.model.Move
+import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.character.CharacterInteractor
 import ro.kofe.presenter.ipv.character.CharacterKView
 import javax.inject.Inject
@@ -32,20 +36,29 @@ class CharViewModel @Inject constructor(
     val gameError = _moveError.asStateFlow()
 
     override fun display(moves: List<Move>) = _moves.update {
+        Log.v("rwr","display moves: $moves")
         moves
     }
 
     override fun display(character: Character) = _char.update {
+        Log.v("rwr","display char: $character")
         character
     }
 
     override fun displayCharError(error: Error) = _charError.update {
+        Log.v("rwr", "display Char Error: $error")
         error
     }
 
     override fun displayMovesError(error: Error) = _moveError.update {
+        Log.v("rwr", "display Moves Error: $error")
         error
     }
 
     override fun error(e: Exception) = super.error(e)
+
+    fun setCharUid(uid: Int) = CoroutineScope(DispatcherProvider.default).launch {
+        Log.v("rwr", "setCharUid: $uid")
+        interactor.setCharUid(uid)
+    }
 }

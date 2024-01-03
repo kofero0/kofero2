@@ -55,7 +55,6 @@ class AuthProviderImpl(
 
                 if (response.isSuccessful && response.body != null) {
                     val response = response.body?.string()
-                    Log.v("rwr", "token response: $response")
                     val token =
                         gson.fromJson(
                             response,

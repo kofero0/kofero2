@@ -82,7 +82,6 @@ fun KoferoApp(
             }
         }
     }
-
 }
 
 @Preview(showBackground = true)

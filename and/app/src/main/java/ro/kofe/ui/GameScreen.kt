@@ -32,10 +32,9 @@ fun GameScreen(
 
     Column {
         game?.let { uGame ->
-            Text(uGame.name)
             LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
                 items(chars.size) {
-                    CharItem(char = chars[it], images = images) {
+                    RowItem(chars[it].name,images[chars[it].iconUrl]) {
                         viewModel.charPressed(chars[it])
                         onNavigate(ViewTag.CHAR_VIEW, chars[it].uid, uGame.uid)
                     }

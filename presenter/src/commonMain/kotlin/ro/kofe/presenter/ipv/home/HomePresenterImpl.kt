@@ -1,8 +1,10 @@
 package ro.kofe.presenter.ipv.home
 
 import arrow.core.raise.either
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import ro.kofe.model.Character
+import ro.kofe.model.Favorite
 import ro.kofe.model.Game
 import ro.kofe.model.InvalidObject
 import ro.kofe.model.Obj
@@ -16,6 +18,7 @@ import ro.kofe.presenter.provider.Provider
 
 class HomePresenterImpl(
     private var gameProvider: Provider<Game>,
+    private var charProvider: Provider<Character>,
     private var imageProvider: ImageProvider,
     private var favoritesProvider: FavoritesProvider,
     loggingProvider: LoggingProvider
@@ -40,13 +43,36 @@ class HomePresenterImpl(
     }
 
     override suspend fun showFavs() = flow {
-        favoritesProvider.get(ArrayList()).collect { either ->
-            either.fold({ e ->
-                view?.displayFavsError(e)
-                emit(e)
-            }) { favs ->
-                view?.displayFavs(favs)
-                displayImages(favs).onLeft { emit(it) }
+        favoritesProvider.get().fold({ e ->
+            view?.displayFavsError(e)
+            emit(e)
+        }) { favs ->
+            val gameUids = ArrayList<Int>()
+            val charUids = ArrayList<Int>()
+            for (fav in favs) {
+                if (fav.type == Favorite.Type.GAME) {
+                    gameUids.add(fav.uid)
+                }
+                if (fav.type == Favorite.Type.CHAR) {
+                    charUids.add(fav.uid)
+                }
+            }
+            gameProvider.get(gameUids).collect { gameEither ->
+                gameEither.fold({
+                    view?.displayFavsError(it)
+                }) { games ->
+                    val objs = ArrayList<Obj>()
+                    objs.addAll(games)
+                    charProvider.get(charUids).collect { charEither ->
+                        charEither.fold({
+                            view?.displayFavsError(it)
+                        }) { chars ->
+                            objs.addAll(chars)
+                            view?.displayFavs(objs)
+                            displayImages(objs).onLeft { emit(it) }
+                        }
+                    }
+                }
             }
         }
     }

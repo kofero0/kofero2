@@ -8,20 +8,18 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.toMutableStateMap
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import ro.kofe.view.CharViewModel
 
-data class MoveData(val moveName: String, val attributes: List<String>)
+data class MoveData(val moveName: String, val attributes: Map<String,String>)
 
 @Composable
 fun MoveItem(text: String) {
@@ -51,7 +49,7 @@ fun MoveHeader(text: String, isExpanded: Boolean, onClick: () -> Unit) {
     }
 }
 
-fun LazyListScope.Section(
+fun LazyListScope.MoveSection(
     moveData: MoveData,
     isExpanded: Boolean,
     onClick: () -> Unit
@@ -66,25 +64,25 @@ fun LazyListScope.Section(
     }
 
     if (isExpanded) {
-        items(moveData.attributes) {
-            MoveItem(text = it)
+        items(moveData.attributes.size) {
+            val entry = moveData.attributes.entries.toList()[it]
+            MoveItem(text = "${entry.key}: ${entry.value}")
         }
     }
 }
 
 @Composable
 fun ExpandableList(moves: List<MoveData>) {
-    val isExpandedMap = rememberSaveable {
-        List(moves.size) { index: Int -> index to true }
+    val isExpandedMap =
+        List(moves.size) { index: Int -> index to false }
             .toMutableStateMap()
-    }
 
     LazyColumn(
         content = {
             moves.onEachIndexed { index, moveData ->
-                Section(
+                MoveSection(
                     moveData = moveData,
-                    isExpanded = isExpandedMap[index] ?: true,
+                    isExpanded = isExpandedMap[index] ?: false,
                     onClick = {
                         isExpandedMap[index] = !(isExpandedMap[index] ?: true)
                     }
@@ -101,6 +99,7 @@ fun CharScreen(
     modifier: Modifier = Modifier,
     uid: String?
 ) {
+    uid?.let { viewModel.setCharUid(it.toInt()) }
     val char by viewModel.char.collectAsState()
     val moves by viewModel.moves.collectAsState()
     val images by viewModel.images.collectAsState()
@@ -111,13 +110,15 @@ fun CharScreen(
     }
 
     Column {
-        Text("T E S T")
+        char?.let {
+            for(attribute in it.attributes){
+                Text("${attribute.key}: ${attribute.value}")
+            }
+        }
         ExpandableList(moves = ArrayList<MoveData>().apply {
-            add(
-                MoveData(
-                    "test test",
-                    ArrayList<String>().apply { add("tester") })
-            )
+            for(move in moves){
+                add(MoveData(move.name,move.attributes))
+            }
         })
         //Image()
     }

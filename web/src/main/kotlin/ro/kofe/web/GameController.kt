@@ -39,7 +39,6 @@ class GameController {
                 if (uids.contains(game.uid)) ret.add(game)
                 if (uids.size == ret.size) return@breaking
             }
-
         }
         return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
         else ResponseEntity<Any>(HttpStatus.BAD_REQUEST)

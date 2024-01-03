@@ -27,5 +27,5 @@ object MoveModule {
         @ApplicationContext context: Context,
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Move>, ByteArray>
-    ): Provider<Move> = ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
+    ): Provider<Move> = ProviderImpl(gson, okHttp, context, "move", urlPrefix, mapper)
 }

@@ -107,8 +107,9 @@ object RootModule {
 
     @Provides
     fun provideFavoritesProvider(
-        @ApplicationContext context: Context
-    ): FavoritesProvider = FavoritesProviderImpl(context)
+        @ApplicationContext context: Context,
+        gson: Gson
+    ): FavoritesProvider = FavoritesProviderImpl(context,gson)
 
     @Provides
     fun provideDispatcherProvider() = DispatcherProvider
