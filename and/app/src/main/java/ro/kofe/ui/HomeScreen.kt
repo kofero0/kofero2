@@ -49,7 +49,7 @@ fun HomeScreen(
 
         Text("Games")
 
-        LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
+        LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 200.dp)) {
             items(games.size) {
                 RowItem(games[it].name, images[games[it].iconUrl]) {
                     viewModel.gamePressed(games[it])

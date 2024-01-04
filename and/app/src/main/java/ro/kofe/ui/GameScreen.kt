@@ -1,5 +1,6 @@
 package ro.kofe.ui
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -17,6 +18,7 @@ import ro.kofe.view.GameViewModel
 fun GameScreen(
     viewModel: GameViewModel,
     onNavigate: (ViewTag, Int, Int) -> Unit,
+    onBackPressed: () -> Unit,
     uid: String?,
     modifier: Modifier = Modifier
 ) {
@@ -25,6 +27,10 @@ fun GameScreen(
     val chars by viewModel.chars.collectAsState()
     val images by viewModel.images.collectAsState()
 
+    BackHandler {
+        onBackPressed()
+    }
+
     DisposableEffect(key1 = viewModel) {
         viewModel.onStart()
         onDispose { viewModel.onStop() }
@@ -32,7 +38,7 @@ fun GameScreen(
 
     Column {
         game?.let { uGame ->
-            LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
+            LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 200.dp)) {
                 items(chars.size) {
                     RowItem(chars[it].name,images[chars[it].iconUrl]) {
                         viewModel.charPressed(chars[it])

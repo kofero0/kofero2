@@ -17,9 +17,10 @@ class FavoritesProviderImpl(private val context: Context, private val gson: Gson
             context.filesDir,
             "favs.json"
         ).apply {
-            if (!exists())
+            if (!exists()){
                 createNewFile()
-            writeBytes("[]".toByteArray())
+                writeBytes("[]".toByteArray())
+            }
         }
     }
 

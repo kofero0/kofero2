@@ -2,6 +2,7 @@ package ro.kofe.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -43,9 +44,10 @@ fun KoferoApp(
     appBar: AppBarViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
 ) {
+
     DisposableEffect(key1 = root) {
         root.onStart()
-        appBar.setBackStackClosure{navController.popBackStack()}
+        appBar.setBackStackClosure { navController.popBackStack() }
         onDispose { root.onStop() }
     }
 
@@ -64,13 +66,18 @@ fun KoferoApp(
                 })
             }
             composable(route = "${ViewTag.GAME_VIEW.name}/{uid}") {
-                GameScreen(viewModel = game, onNavigate = { viewTag, charUid, gameUid ->
-                    navController.navigate("${viewTag.name}/$charUid")
-                    appBar.toChar(charUid, gameUid)
-                }, it.arguments?.getString("uid"))
+                GameScreen(viewModel = game,
+                    uid = it.arguments?.getString("uid"),
+                    onNavigate = { viewTag, charUid, gameUid ->
+                        navController.navigate("${viewTag.name}/$charUid")
+                        appBar.toChar(charUid, gameUid)
+                    },
+                    onBackPressed = { appBar.navClicked.value.invoke() })
             }
             composable(route = "${ViewTag.CHAR_VIEW.name}/{uid}") {
-                CharScreen(viewModel = char, uid = it.arguments?.getString("uid"))
+                CharScreen(viewModel = char,
+                    uid = it.arguments?.getString("uid"),
+                    onBackPressed = { appBar.navClicked.value.invoke() })
             }
             composable(route = ViewTag.SETTINGS_VIEW.name) {
 

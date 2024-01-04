@@ -1,5 +1,6 @@
 package ro.kofe.ui
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -96,6 +97,7 @@ fun ExpandableList(moves: List<MoveData>) {
 @Composable
 fun CharScreen(
     viewModel: CharViewModel,
+    onBackPressed: () -> Unit,
     modifier: Modifier = Modifier,
     uid: String?
 ) {
@@ -103,6 +105,10 @@ fun CharScreen(
     val char by viewModel.char.collectAsState()
     val moves by viewModel.moves.collectAsState()
     val images by viewModel.images.collectAsState()
+
+    BackHandler {
+        onBackPressed()
+    }
 
     DisposableEffect(key1 = viewModel) {
         viewModel.onStart()
