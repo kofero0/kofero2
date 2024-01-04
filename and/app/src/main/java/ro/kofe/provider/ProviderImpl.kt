@@ -30,23 +30,20 @@ class ProviderImpl<O : Obj>(
         File(
             context.filesDir, "$jsonFilename.json"
         ).apply {
-            if (!exists()) createNewFile()
-            writeBytes("[]".toByteArray())
+            if (!exists()){
+                createNewFile()
+                writeBytes("[]".toByteArray())
+            }
         }
     }
 
     override fun get(ids: List<Int>) = flow {
-        Log.v("rwr", "isDiskPulled: $isDiskPulled")
         if (!isDiskPulled) {
             isDiskPulled = true
             elements = mapper.mapLeft(file.readBytes()).toMutableList()
-            Log.v("rwr", "elements: ${elements.size}")
         }
-        Log.v("rwr", "isSatisfiable: ${isSatisfiable(ids)}")
         if (isSatisfiable(ids)) {
-            Log.v("rwr", "elements size: ${elements.size}")
             emit(retrieve(ids))
-
         }
         else {
             emit(send(ids))
@@ -54,7 +51,6 @@ class ProviderImpl<O : Obj>(
     }
 
     private fun send(ids: List<Int>) = either {
-        Log.v("rwr", "PROVIDER $jsonFilename SEND: $ids")
         val response = okHttp.newCall(
             Request.Builder().url("$urlPrefix/$jsonFilename")
                 .header("Content-Type", "application/json").put(gson.toJson(ids).toRequestBody())
@@ -68,9 +64,7 @@ class ProviderImpl<O : Obj>(
     }
 
     private fun add(new: List<O>) {
-        Log.v("rwr", "new elements: $new")
         synchronized(elements) {
-            Log.v("rwr", "old elements: $elements")
             for (element in new) {
                 elements.removeAll { it.uid == element.uid }
                 elements.add(element)
@@ -78,7 +72,6 @@ class ProviderImpl<O : Obj>(
             if (!file.exists()) {
                 file.mkdir()
             }
-            Log.v("rwr", "final elements: $")
             file.writeBytes(mapper.mapRight(elements))
         }
     }

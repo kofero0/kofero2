@@ -1,6 +1,5 @@
 package ro.kofe.view
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -12,7 +11,6 @@ import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.DispatcherProvider
-import ro.kofe.presenter.collect
 import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.Provider
 import javax.inject.Inject
@@ -45,13 +43,20 @@ class AppBarViewModel @Inject constructor(
     private val _error = MutableStateFlow<ProviderError?>(null)
     val error = _error.asStateFlow()
 
-    fun toHome() {
+    private var backStackClosure: (() -> Unit)? = null
+
+    fun setBackStackClosure(closure: () -> Unit) {
+        backStackClosure = closure
+        _navClicked.update { { backStackClosure?.invoke() } }
+    }
+
+    private fun toHome() {
         _canFavorite.update { false }
         _title.update { DEFAULT_TITLE }
         _canNavigateBack.update { false }
     }
 
-    fun fromHome(uid: Int, navClicked: () -> Unit) {
+    fun fromHome(uid: Int) {
         CoroutineScope(dispatcherProvider.default).launch {
             favsProvider.get().fold({ error ->
                 _error.update { error }
@@ -75,10 +80,15 @@ class AppBarViewModel @Inject constructor(
             }
         }
         _canNavigateBack.update { true }
-        _navClicked.update { navClicked }
+        _navClicked.update {
+            {
+                toHome()
+                backStackClosure?.invoke()
+            }
+        }
     }
 
-    fun toGame(uid: Int, navClicked: () -> Unit) {
+    private fun toGame(uid: Int) {
         CoroutineScope(dispatcherProvider.default).launch {
             favsProvider.get().fold({ error ->
                 _error.update { error }
@@ -95,25 +105,35 @@ class AppBarViewModel @Inject constructor(
             }
         }
         _canNavigateBack.update { true }
-        _navClicked.update { navClicked }
         _canFavorite.update { true }
+        _navClicked.update {
+            {
+                toHome()
+                backStackClosure?.invoke()
+            }
+        }
     }
 
-    fun toChar(uid: Int, navClicked: () -> Unit) {
+    fun toChar(charUid: Int, gameUid: Int) {
         CoroutineScope(dispatcherProvider.default).launch {
             favsProvider.get().fold({ error -> _error.update { error } }) { favs ->
-                _isFavorited.update { favs.any{ it.uid == uid } }
+                _isFavorited.update { favs.any { it.uid == charUid } }
                 _canFavorite.update { true }
             }
-            charProvider.get(ArrayList<Int>().apply { add(uid) }).collect {
+            charProvider.get(ArrayList<Int>().apply { add(charUid) }).collect {
                 it.fold({ error -> _error.update { error } }) { chars ->
                     _title.update { chars[0].name }
                 }
             }
         }
-        _navClicked.update { navClicked }
         _canNavigateBack.update { true }
         _canFavorite.update { true }
+        _navClicked.update {
+            {
+                toGame(gameUid)
+                backStackClosure?.invoke()
+            }
+        }
     }
 
     companion object {

@@ -45,6 +45,7 @@ fun KoferoApp(
 ) {
     DisposableEffect(key1 = root) {
         root.onStart()
+        appBar.setBackStackClosure{navController.popBackStack()}
         onDispose { root.onStop() }
     }
 
@@ -59,19 +60,13 @@ fun KoferoApp(
             composable(route = ViewTag.HOME_VIEW.name) {
                 HomeScreen(viewModel = home, onNavigate = { viewTag, uid ->
                     navController.navigate("${viewTag.name}/$uid")
-                    appBar.fromHome(uid) {
-                        navController.popBackStack()
-                        appBar.toHome()
-                    }
+                    appBar.fromHome(uid)
                 })
             }
             composable(route = "${ViewTag.GAME_VIEW.name}/{uid}") {
                 GameScreen(viewModel = game, onNavigate = { viewTag, charUid, gameUid ->
                     navController.navigate("${viewTag.name}/$charUid")
-                    appBar.toChar(charUid) {
-                        navController.popBackStack()
-                        appBar.toGame(gameUid) { navController.popBackStack() }
-                    }
+                    appBar.toChar(charUid, gameUid)
                 }, it.arguments?.getString("uid"))
             }
             composable(route = "${ViewTag.CHAR_VIEW.name}/{uid}") {
