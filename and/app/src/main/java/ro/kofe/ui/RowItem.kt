@@ -17,13 +17,13 @@ fun RowItem(title: String, image: String?, onClick: () -> Unit) {
     Button(onClick = onClick) {
         Column {
             image?.let{
-                Image(
-                    bitmap = it.toBase64ImageToImageBitmap(),
-                    contentDescription = title,
-                    //modifier = Modifier.fillMaxSize(),
-                    modifier = Modifier.size(100.dp),
-                    colorFilter = null
-                )
+//                Image(
+//                    bitmap = it.toBase64ImageToImageBitmap(),
+//                    contentDescription = title,
+//                    //modifier = Modifier.fillMaxSize(),
+//                    modifier = Modifier.size(100.dp),
+//                    colorFilter = null
+//                )
             }
             Text(text = title)
         }

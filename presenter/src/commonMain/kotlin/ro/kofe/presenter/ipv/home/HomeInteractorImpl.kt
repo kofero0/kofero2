@@ -64,7 +64,14 @@ class HomeInteractorImpl(
             presenter.showGames().collect {
                 log(Level.ALERT, "provider error showing games! $it")
                 if (it is HttpError) {
-                    log(Level.ALERT, "reponse: ${it.response}")
+                    log(Level.ALERT, "response: ${it.response}")
+                    log(Level.ALERT, "statusCode: ${it.statusCode}")
+                }
+            }
+            presenter.showFavs().collect {
+                log(Level.ALERT, "provider error showing favs! $it")
+                if (it is HttpError) {
+                    log(Level.ALERT, "response: ${it.response}")
                     log(Level.ALERT, "statusCode: ${it.statusCode}")
                 }
             }

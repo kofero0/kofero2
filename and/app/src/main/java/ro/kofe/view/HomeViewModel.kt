@@ -1,5 +1,6 @@
 package ro.kofe.view
 
+import android.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -43,6 +44,7 @@ class HomeViewModel @Inject constructor(
     }
 
     override fun displayFavs(favorites: List<Obj>) = _favs.update {
+        Log.v("rwr", "displayFavs: ${favorites.size}")
         favorites
     }
 

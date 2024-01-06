@@ -1,6 +1,7 @@
 package ro.kofe.provider
 
 import android.content.Context
+import android.util.Log
 import arrow.core.raise.either
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -25,9 +26,9 @@ class FavoritesProviderImpl(private val context: Context, private val gson: Gson
     }
 
     override suspend fun delete(id: Int) = either {
-        val favs = gson.fromJson<ArrayList<Int>>(file.readText(),object : TypeToken<ArrayList<Int>>() {}.type)
-        if(favs.contains(id)){
-            file.writeText(gson.toJson(favs.apply { remove(id) }))
+        val favs = gson.fromJson<ArrayList<Favorite>>(file.readText(),object : TypeToken<ArrayList<Favorite>>() {}.type)
+        if(favs.any{it.uid == id}){
+            file.writeText(gson.toJson(favs.apply { favs.removeIf { it.uid == id } }))
         }
         else{
             raise(IdsNotFound(ArrayList<Int>().apply { add(id) }))
@@ -35,7 +36,8 @@ class FavoritesProviderImpl(private val context: Context, private val gson: Gson
     }
 
     override suspend fun get() = either<ProviderError,List<Favorite>> {
-        gson.fromJson<ArrayList<Favorite>>(file.readText(), object: TypeToken<ArrayList<Favorite>>() {}.type)
+        val favs = gson.fromJson<ArrayList<Favorite>>(file.readText(), object: TypeToken<ArrayList<Favorite>>() {}.type)
+        favs
     }
 
     override suspend fun save(fav: Favorite) = either<ProviderError, Unit> {

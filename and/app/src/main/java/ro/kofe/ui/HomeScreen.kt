@@ -1,5 +1,6 @@
 package ro.kofe.ui
 
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -35,13 +36,22 @@ fun HomeScreen(
 
         Text("Favorites")
 
-        LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 128.dp)) {
+        LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 200.dp)) {
+            Log.v("rwr", "favs size: ${favs.size}")
             items(favs.size) {
-                FavItem(favs[it], images) {
-                    viewModel.favPressed(favs[it])
-                    when (val fav = favs[it]) {
-                        is Character -> onNavigate(ViewTag.CHAR_VIEW, fav.uid)
-                        is Game -> onNavigate(ViewTag.GAME_VIEW, fav.uid)
+                when (val fav = favs[it]) {
+                    is Character -> {
+                        RowItem(title = fav.name, image = fav.iconUrl) {
+                            viewModel.favPressed(fav)
+                            onNavigate(ViewTag.CHAR_VIEW, games[it].uid)
+                        }
+                    }
+
+                    is Game -> {
+                        RowItem(title = fav.name, image = fav.iconUrl) {
+                            viewModel.favPressed(fav)
+                            onNavigate(ViewTag.GAME_VIEW, games[it].uid)
+                        }
                     }
                 }
             }

@@ -62,15 +62,24 @@ class HomePresenterImpl(
                     view?.displayFavsError(it)
                 }) { games ->
                     val objs = ArrayList<Obj>()
-                    objs.addAll(games)
-                    charProvider.get(charUids).collect { charEither ->
-                        charEither.fold({
-                            view?.displayFavsError(it)
-                        }) { chars ->
-                            objs.addAll(chars)
-                            view?.displayFavs(objs)
-                            displayImages(objs).onLeft { emit(it) }
+                    for(game in games){
+                        if(gameUids.contains(game.uid)){
+                            objs.add(game)
                         }
+                    }
+                    if(charUids.size > 0){
+                        charProvider.get(charUids).collect { charEither ->
+                            charEither.fold({
+                                view?.displayFavsError(it)
+                            }) { chars ->
+                                objs.addAll(chars)
+                                view?.displayFavs(objs)
+                                displayImages(objs).onLeft { emit(it) }
+                            }
+                        }
+                    }
+                    else{
+                        view?.displayFavs(objs)
                     }
                 }
             }

@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import ro.kofe.model.Character
+import ro.kofe.model.Favorite
 import ro.kofe.model.Game
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.DispatcherProvider
@@ -65,6 +66,20 @@ class AppBarViewModel @Inject constructor(
                 _canFavorite.update { true }
                 gameProvider.get(ArrayList<Int>().apply { add(uid) }).collect { gameEither ->
                     gameEither.fold({
+                        _error.update { it }
+                    }) { games ->
+                        _title.update { games.first { game -> game.uid == uid }.name }
+                        _favoriteClicked.update {
+                            {
+                                favClicked(
+                                    uid, if (games.any { game -> game.uid == uid }) {
+                                        Favorite.Type.GAME
+                                    } else {
+                                        Favorite.Type.CHAR
+                                    }
+                                )
+                            }
+                        }
                         charProvider.get(ArrayList<Int>().apply { add(uid) })
                             .collect { charEither ->
                                 charEither.fold({
@@ -73,8 +88,6 @@ class AppBarViewModel @Inject constructor(
                                     _title.update { chars.first { char -> char.uid == uid }.name }
                                 }
                             }
-                    }) { games ->
-                        _title.update { games.first { game -> game.uid == uid }.name }
                     }
                 }
             }
@@ -112,6 +125,11 @@ class AppBarViewModel @Inject constructor(
                 backStackClosure?.invoke()
             }
         }
+        _favoriteClicked.update {
+            {
+                favClicked(uid, Favorite.Type.GAME)
+            }
+        }
     }
 
     fun toChar(charUid: Int, gameUid: Int) {
@@ -133,6 +151,20 @@ class AppBarViewModel @Inject constructor(
                 toGame(gameUid)
                 backStackClosure?.invoke()
             }
+        }
+        _favoriteClicked.update {
+            { favClicked(charUid, Favorite.Type.CHAR) }
+        }
+    }
+
+    private fun favClicked(uid: Int, type: Favorite.Type) {
+        CoroutineScope(dispatcherProvider.default).launch {
+            if (isFavorited.value) {
+                favsProvider.delete(uid)
+            } else {
+                favsProvider.save(Favorite(uid, type))
+            }
+            _isFavorited.update { !isFavorited.value }
         }
     }
 

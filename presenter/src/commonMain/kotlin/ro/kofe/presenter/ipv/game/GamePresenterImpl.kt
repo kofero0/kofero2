@@ -22,7 +22,6 @@ class GamePresenterImpl(
     }
 
     override suspend fun showGame(id: Int) = flow {
-        loggingProvider.log(Level.DEBUG, "GamePresenterImpl", "showGame: $id")
         val ids = ArrayList<Int>().apply { add(id) }
         suspend fun process(games: List<Game>) {
             if (games.size != 1) {
@@ -32,7 +31,7 @@ class GamePresenterImpl(
             val game = games[0]
             loggingProvider.log(Level.DEBUG, "GamePresenterImpl", "chars: ${game.charIds}")
             view?.display(game)
-            imageProvider.get(game.iconUrl).fold({ emit(it) }) { view?.display(game.iconUrl, it) }
+            imageProvider.get(game.iconUrl).map { view?.display(game.iconUrl, it) }
             characterProvider.get(game.charIds).collect { either ->
                 either.fold({ e ->
                     emit(e)
@@ -40,7 +39,7 @@ class GamePresenterImpl(
                 }) { chars ->
                     for (char in chars) {
                         imageProvider.get(char.iconUrl)
-                            .fold({ emit(it) }) { view?.display(char.iconUrl, it) }
+                            .map{ view?.display(char.iconUrl, it) }
                     }
                     view?.display(chars)
                 }
