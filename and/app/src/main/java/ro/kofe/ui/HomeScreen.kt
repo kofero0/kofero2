@@ -41,16 +41,16 @@ fun HomeScreen(
             items(favs.size) {
                 when (val fav = favs[it]) {
                     is Character -> {
-                        RowItem(title = fav.name, image = fav.iconUrl) {
+                        RowItem(title = fav.name, image = images[fav.iconUrl]) {
                             viewModel.favPressed(fav)
-                            onNavigate(ViewTag.CHAR_VIEW, games[it].uid)
+                            onNavigate(ViewTag.CHAR_VIEW, favs[it].uid)
                         }
                     }
 
                     is Game -> {
-                        RowItem(title = fav.name, image = fav.iconUrl) {
+                        RowItem(title = fav.name, image = images[fav.iconUrl]) {
                             viewModel.favPressed(fav)
-                            onNavigate(ViewTag.GAME_VIEW, games[it].uid)
+                            onNavigate(ViewTag.GAME_VIEW, favs[it].uid)
                         }
                     }
                 }

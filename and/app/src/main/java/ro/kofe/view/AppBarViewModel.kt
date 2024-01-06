@@ -80,16 +80,27 @@ class AppBarViewModel @Inject constructor(
                                 )
                             }
                         }
-                        charProvider.get(ArrayList<Int>().apply { add(uid) })
-                            .collect { charEither ->
-                                charEither.fold({
-                                    _error.update { it }
-                                }) { chars ->
-                                    _title.update { chars.first { char -> char.uid == uid }.name }
-                                }
-                            }
                     }
                 }
+                charProvider.get(ArrayList<Int>().apply { add(uid) })
+                    .collect { charEither ->
+                        charEither.fold({
+                            _error.update { it }
+                        }) { chars ->
+                            _title.update { chars.first { char -> char.uid == uid }.name }
+                            _favoriteClicked.update {
+                                {
+                                    favClicked(
+                                        uid, if (chars.any { char -> char.uid == uid }) {
+                                            Favorite.Type.GAME
+                                        } else {
+                                            Favorite.Type.CHAR
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    }
             }
         }
         _canNavigateBack.update { true }
