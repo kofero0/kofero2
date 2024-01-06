@@ -36,29 +36,24 @@ class CharViewModel @Inject constructor(
     val gameError = _moveError.asStateFlow()
 
     override fun display(moves: List<Move>) = _moves.update {
-        Log.v("rwr","display moves: $moves")
         moves
     }
 
     override fun display(character: Character) = _char.update {
-        Log.v("rwr","display char: $character")
         character
     }
 
     override fun displayCharError(error: Error) = _charError.update {
-        Log.v("rwr", "display Char Error: $error")
         error
     }
 
     override fun displayMovesError(error: Error) = _moveError.update {
-        Log.v("rwr", "display Moves Error: $error")
         error
     }
 
     override fun error(e: Exception) = super.error(e)
 
     fun setCharUid(uid: Int) = CoroutineScope(DispatcherProvider.default).launch {
-        Log.v("rwr", "setCharUid: $uid")
         interactor.setCharUid(uid)
     }
 }
