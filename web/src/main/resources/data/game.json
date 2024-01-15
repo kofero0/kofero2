@@ -74,7 +74,12 @@
     "name": "Street Fighter 6",
     "charIds": [
       1893,
-      1958
+      1958,
+      2031,
+      2104,
+      2178,
+      2179,
+      2242
     ],
     "iconUrl": "https://img.fae.ro/762785.png"
   }
