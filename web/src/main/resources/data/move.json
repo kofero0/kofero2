@@ -639,7 +639,7 @@
   },
   {
     "uid": 63,
-    "name": "\\u003e ↓↘→A/C",
+    "name": "> ↓↘→A/C",
     "attributes": {
       "Startup": "10",
       "Active": "8",
@@ -651,7 +651,7 @@
   },
   {
     "uid": 64,
-    "name": "\\u003e\\u003e A/C",
+    "name": ">> A/C",
     "attributes": {
       "Startup": "10",
       "Active": "4",
@@ -663,7 +663,7 @@
   },
   {
     "uid": 65,
-    "name": "\\u003e\\u003e B/D",
+    "name": ">> B/D",
     "attributes": {
       "Startup": "13",
       "Active": "6",
@@ -675,7 +675,7 @@
   },
   {
     "uid": 66,
-    "name": "\\u003e  →↘↓↙←A/C",
+    "name": ">  →↘↓↙←A/C",
     "attributes": {
       "Startup": "14",
       "Active": "4",
@@ -687,7 +687,7 @@
   },
   {
     "uid": 67,
-    "name": "\\u003e\\u003e  A/C",
+    "name": ">>  A/C",
     "attributes": {
       "Startup": "20",
       "Active": "10",
@@ -711,7 +711,7 @@
   },
   {
     "uid": 70,
-    "name": "\\u003e  →↘↓↙←A/C",
+    "name": ">  →↘↓↙←A/C",
     "attributes": {
       "Startup": "11",
       "Active": "3",
@@ -723,7 +723,7 @@
   },
   {
     "uid": 71,
-    "name": "\\u003e\\u003e  →A/C",
+    "name": ">>  →A/C",
     "attributes": {
       "Startup": "15",
       "Active": "4",
@@ -735,7 +735,7 @@
   },
   {
     "uid": 72,
-    "name": "\\u003e\\u003e\\u003e  →↓↘A/C",
+    "name": ">>>  →↓↘A/C",
     "attributes": {
       "Startup": "1",
       "Active": "5",
@@ -759,7 +759,7 @@
   },
   {
     "uid": 74,
-    "name": "\\u003e  ↓↘→A",
+    "name": ">  ↓↘→A",
     "attributes": {
       "Startup": "10",
       "Active": "5",
@@ -771,7 +771,7 @@
   },
   {
     "uid": 75,
-    "name": "\\u003e\\u003e  ↓↘→A/C",
+    "name": ">>  ↓↘→A/C",
     "attributes": {
       "Startup": "10",
       "Active": "5",
@@ -783,7 +783,7 @@
   },
   {
     "uid": 76,
-    "name": "\\u003e\\u003e\\u003e  A/C",
+    "name": ">>>  A/C",
     "attributes": {
       "Startup": "7",
       "Active": "4",
@@ -795,7 +795,7 @@
   },
   {
     "uid": 77,
-    "name": "\\u003e\\u003e\\u003e  B/D",
+    "name": ">>>  B/D",
     "attributes": {
       "Startup": "13",
       "Active": "6",
@@ -807,7 +807,7 @@
   },
   {
     "uid": 78,
-    "name": "\\u003e\\u003e  →↘↓↙←A/C",
+    "name": ">>  →↘↓↙←A/C",
     "attributes": {
       "Startup": "13",
       "Active": "4",
@@ -819,7 +819,7 @@
   },
   {
     "uid": 79,
-    "name": "\\u003e\\u003e\\u003e  A/C",
+    "name": ">>>  A/C",
     "attributes": {
       "Startup": "19",
       "Active": "10",
@@ -831,7 +831,7 @@
   },
   {
     "uid": 81,
-    "name": "\\u003e  →↘↓↙←A/C",
+    "name": ">  →↘↓↙←A/C",
     "attributes": {
       "Startup": "9",
       "Active": "3",
@@ -843,7 +843,7 @@
   },
   {
     "uid": 82,
-    "name": "\\u003e\\u003e  →A/C",
+    "name": ">>  →A/C",
     "attributes": {
       "Startup": "10",
       "Active": "1,(3),4",
@@ -855,7 +855,7 @@
   },
   {
     "uid": 83,
-    "name": "\\u003e\\u003e\\u003e  →↓↘A/C",
+    "name": ">>>  →↓↘A/C",
     "attributes": {
       "Startup": "1",
       "Active": "9,(1),3,(1),13",
@@ -951,7 +951,7 @@
   },
   {
     "uid": 91,
-    "name": "\\u003e  B",
+    "name": ">  B",
     "attributes": {
       "Startup": "7",
       "Active": "9",
@@ -975,7 +975,7 @@
   },
   {
     "uid": 93,
-    "name": "\\u003e  D",
+    "name": ">  D",
     "attributes": {
       "Startup": "7",
       "Active": "9",
@@ -1325,7 +1325,7 @@
   },
   {
     "uid": 136,
-    "name": "\\u003e  ↓,↑B/D",
+    "name": ">  ↓,↑B/D",
     "attributes": {
       "Startup": "6",
       "Active": "2,(5),5",
@@ -1361,7 +1361,7 @@
   },
   {
     "uid": 140,
-    "name": "\\u003e  ↓,↑B/D",
+    "name": ">  ↓,↑B/D",
     "attributes": {
       "Startup": "5",
       "Active": "2,(5),12",
@@ -2880,7 +2880,7 @@
   },
   {
     "uid": 273,
-    "name": "\\u003e BD(Brake)",
+    "name": "> BD(Brake)",
     "attributes": {
       "Startup": "15",
       "Active": "2",
@@ -2904,7 +2904,7 @@
   },
   {
     "uid": 275,
-    "name": "\\u003e BD(Brake)",
+    "name": "> BD(Brake)",
     "attributes": {
       "Startup": "17",
       "Active": "2",
@@ -3503,7 +3503,7 @@
   },
   {
     "uid": 325,
-    "name": "\\u003e  ↓↙←A/C",
+    "name": ">  ↓↙←A/C",
     "attributes": {
       "Startup": "5",
       "Active": "2,(6),2",
@@ -3946,7 +3946,7 @@
   },
   {
     "uid": 363,
-    "name": "\\u003e  ↓↘→A/C",
+    "name": ">  ↓↘→A/C",
     "attributes": {
       "Startup": "5",
       "Active": "4",
@@ -3970,7 +3970,7 @@
   },
   {
     "uid": 365,
-    "name": "\\u003e  ↓↘→A/C",
+    "name": ">  ↓↘→A/C",
     "attributes": {
       "Startup": "4",
       "Active": "7",
@@ -4637,7 +4637,7 @@
   },
   {
     "uid": 424,
-    "name": "\\u003e  ↓↙←,←↙↓↘→AC",
+    "name": ">  ↓↙←,←↙↓↘→AC",
     "attributes": {
       "Startup": "0",
       "Active": "19",
@@ -6962,7 +6962,7 @@
   },
   {
     "uid": 647,
-    "name": "\\u003e  AB",
+    "name": ">  AB",
     "attributes": {
       "Startup": "6",
       "Active": "4",
@@ -7058,7 +7058,7 @@
   },
   {
     "uid": 655,
-    "name": "\\u003e  ↓↙←AC: Close",
+    "name": ">  ↓↙←AC: Close",
     "attributes": {
       "Startup": "0",
       "Active": "6",
@@ -7070,7 +7070,7 @@
   },
   {
     "uid": 656,
-    "name": "\\u003e  ↓↙←AC: Far",
+    "name": ">  ↓↙←AC: Far",
     "attributes": {
       "Startup": "16",
       "Active": "2",
@@ -7462,7 +7462,7 @@
   },
   {
     "uid": 698,
-    "name": "\\u003e  A",
+    "name": ">  A",
     "attributes": {
       "Startup": "13",
       "Active": "7",
@@ -8100,7 +8100,7 @@
   },
   {
     "uid": 763,
-    "name": "\\u003e  ↓↙←A",
+    "name": ">  ↓↙←A",
     "attributes": {
       "Startup": "9",
       "Active": "3",
@@ -8112,7 +8112,7 @@
   },
   {
     "uid": 764,
-    "name": "\\u003e\\u003e  ↓↙←A",
+    "name": ">>  ↓↙←A",
     "attributes": {
       "Startup": "18",
       "Active": "2",
@@ -8136,7 +8136,7 @@
   },
   {
     "uid": 766,
-    "name": "\\u003e  ↓↙←C",
+    "name": ">  ↓↙←C",
     "attributes": {
       "Startup": "12",
       "Active": "3",
@@ -8148,7 +8148,7 @@
   },
   {
     "uid": 767,
-    "name": "\\u003e\\u003e  ↓↙←C",
+    "name": ">>  ↓↙←C",
     "attributes": {
       "Startup": "18",
       "Active": "9",
@@ -8172,7 +8172,7 @@
   },
   {
     "uid": 769,
-    "name": "\\u003e  ↓↙←AC",
+    "name": ">  ↓↙←AC",
     "attributes": {
       "Startup": "11",
       "Active": "3",
@@ -8184,7 +8184,7 @@
   },
   {
     "uid": 770,
-    "name": "\\u003e\\u003e  ↓↙←AC",
+    "name": ">>  ↓↙←AC",
     "attributes": {
       "Startup": "12",
       "Active": "15",
@@ -8208,7 +8208,7 @@
   },
   {
     "uid": 772,
-    "name": "\\u003e  ↓↘→↓↘→↓↘→↓↘→A/C",
+    "name": ">  ↓↘→↓↘→↓↘→↓↘→A/C",
     "attributes": {
       "Startup": "6",
       "Active": "1,(45),21,(52),12",
@@ -8476,7 +8476,7 @@
   },
   {
     "uid": 804,
-    "name": "\\u003e  ↓↙←A",
+    "name": ">  ↓↙←A",
     "attributes": {
       "Startup": "12",
       "Active": "9",
@@ -8488,7 +8488,7 @@
   },
   {
     "uid": 805,
-    "name": "\\u003e\\u003e  ↓↙←A",
+    "name": ">>  ↓↙←A",
     "attributes": {
       "Startup": "12",
       "Active": "10",
@@ -8512,7 +8512,7 @@
   },
   {
     "uid": 807,
-    "name": "\\u003e  ↓↙←C",
+    "name": ">  ↓↙←C",
     "attributes": {
       "Startup": "11",
       "Active": "9",
@@ -8524,7 +8524,7 @@
   },
   {
     "uid": 808,
-    "name": "\\u003e\\u003e  ↓↙←C",
+    "name": ">>  ↓↙←C",
     "attributes": {
       "Startup": "12",
       "Active": "10",
@@ -8548,7 +8548,7 @@
   },
   {
     "uid": 810,
-    "name": "\\u003e  ↓↙←AC",
+    "name": ">  ↓↙←AC",
     "attributes": {
       "Startup": "8",
       "Active": "8",
@@ -8560,7 +8560,7 @@
   },
   {
     "uid": 811,
-    "name": "\\u003e\\u003e  ↓↙←AC",
+    "name": ">>  ↓↙←AC",
     "attributes": {
       "Startup": "9",
       "Active": "11",
@@ -8572,7 +8572,7 @@
   },
   {
     "uid": 812,
-    "name": "\\u003e\\u003e\\u003e  ↓↙←AC",
+    "name": ">>>  ↓↙←AC",
     "attributes": {
       "Startup": "8",
       "Active": "8",
@@ -8584,7 +8584,7 @@
   },
   {
     "uid": 813,
-    "name": "\\u003e\\u003e\\u003e\\u003e  ↓↙←AC",
+    "name": ">>>>  ↓↙←AC",
     "attributes": {
       "Startup": "11",
       "Active": "13",
@@ -8680,7 +8680,7 @@
   },
   {
     "uid": 821,
-    "name": "\\u003e  A/C",
+    "name": ">  A/C",
     "attributes": {
       "Startup": "15",
       "Active": "6",
@@ -8704,7 +8704,7 @@
   },
   {
     "uid": 823,
-    "name": "\\u003e  A/C",
+    "name": ">  A/C",
     "attributes": {
       "Startup": "21",
       "Active": "6",
@@ -8977,7 +8977,7 @@
   },
   {
     "uid": 849,
-    "name": "\\u003e D",
+    "name": "> D",
     "attributes": {
       "Startup": "6",
       "Active": "5",
@@ -9049,7 +9049,7 @@
   },
   {
     "uid": 856,
-    "name": "\\u003e  ↓↘→A/C",
+    "name": ">  ↓↘→A/C",
     "attributes": {
       "Startup": "16",
       "Active": "1",
@@ -9085,7 +9085,7 @@
   },
   {
     "uid": 860,
-    "name": "\\u003e  ↓↘→A/C",
+    "name": ">  ↓↘→A/C",
     "attributes": {
       "Startup": "20",
       "Active": "1",
@@ -10089,7 +10089,7 @@
   },
   {
     "uid": 950,
-    "name": "\\u003e  ↓↘→A",
+    "name": ">  ↓↘→A",
     "attributes": {
       "Startup": "7",
       "Active": "7",
@@ -10101,7 +10101,7 @@
   },
   {
     "uid": 951,
-    "name": "\\u003e\\u003e  ↓↘→A",
+    "name": ">>  ↓↘→A",
     "attributes": {
       "Startup": "7",
       "Active": "4",
@@ -10125,7 +10125,7 @@
   },
   {
     "uid": 953,
-    "name": "\\u003e  ↓↘→C",
+    "name": ">  ↓↘→C",
     "attributes": {
       "Startup": "7",
       "Active": "7",
@@ -10137,7 +10137,7 @@
   },
   {
     "uid": 954,
-    "name": "\\u003e\\u003e  ↓↘→C",
+    "name": ">>  ↓↘→C",
     "attributes": {
       "Startup": "7",
       "Active": "4",
@@ -10161,7 +10161,7 @@
   },
   {
     "uid": 956,
-    "name": "\\u003e  ↓↘→AC",
+    "name": ">  ↓↘→AC",
     "attributes": {
       "Startup": "5",
       "Active": "5",
@@ -10173,7 +10173,7 @@
   },
   {
     "uid": 957,
-    "name": "\\u003e\\u003e  ↓↘→AC",
+    "name": ">>  ↓↘→AC",
     "attributes": {
       "Startup": "6",
       "Active": "3",
@@ -10740,7 +10740,7 @@
   },
   {
     "uid": 1009,
-    "name": "\\u003e  ↓↘→A",
+    "name": ">  ↓↘→A",
     "attributes": {
       "Startup": "16",
       "Active": "3",
@@ -10776,7 +10776,7 @@
   },
   {
     "uid": 1012,
-    "name": "\\u003e  ↓↘→AC",
+    "name": ">  ↓↘→AC",
     "attributes": {
       "Startup": "13",
       "Active": "2",
@@ -11657,7 +11657,7 @@
   },
   {
     "uid": 1095,
-    "name": "\\u003e  ↓↘→A/C",
+    "name": ">  ↓↘→A/C",
     "attributes": {
       "Startup": "1",
       "Active": "1,(9),3",
@@ -11753,7 +11753,7 @@
   },
   {
     "uid": 1104,
-    "name": "\\u003e  →B/D",
+    "name": ">  →B/D",
     "attributes": {
       "Startup": "13",
       "Active": "16",
@@ -11765,7 +11765,7 @@
   },
   {
     "uid": 1105,
-    "name": "\\u003e  ↘B/D",
+    "name": ">  ↘B/D",
     "attributes": {
       "Startup": "15",
       "Active": "Until Landing",
@@ -11777,7 +11777,7 @@
   },
   {
     "uid": 1106,
-    "name": "\\u003e  ↗B/D",
+    "name": ">  ↗B/D",
     "attributes": {
       "Startup": "13",
       "Active": "10",
@@ -11789,7 +11789,7 @@
   },
   {
     "uid": 1107,
-    "name": "\\u003e  ←B/D",
+    "name": ">  ←B/D",
     "attributes": {
       "Startup": "13",
       "Active": "16",
@@ -11801,7 +11801,7 @@
   },
   {
     "uid": 1108,
-    "name": "\\u003e  ↙B/D",
+    "name": ">  ↙B/D",
     "attributes": {
       "Startup": "15",
       "Active": "Until Landing",
@@ -11813,7 +11813,7 @@
   },
   {
     "uid": 1109,
-    "name": "\\u003e  ↖B/D",
+    "name": ">  ↖B/D",
     "attributes": {
       "Startup": "13",
       "Active": "10",
@@ -12399,7 +12399,7 @@
   },
   {
     "uid": 1154,
-    "name": "\\u003e  AB",
+    "name": ">  AB",
     "attributes": {
       "Startup": "13",
       "Active": "-",
@@ -13903,7 +13903,7 @@
   },
   {
     "uid": 1291,
-    "name": "\\u003e  A/C",
+    "name": ">  A/C",
     "attributes": {
       "Startup": "10",
       "Active": "6",
@@ -13915,7 +13915,7 @@
   },
   {
     "uid": 1292,
-    "name": "\\u003e  B/D",
+    "name": ">  B/D",
     "attributes": {
       "Startup": "10",
       "Active": "Until Landing",
@@ -13927,7 +13927,7 @@
   },
   {
     "uid": 1293,
-    "name": "\\u003e  AC",
+    "name": ">  AC",
     "attributes": {
       "Startup": "1",
       "Active": "1",
@@ -13939,7 +13939,7 @@
   },
   {
     "uid": 1294,
-    "name": "\\u003e  ↓↘→B/D",
+    "name": ">  ↓↘→B/D",
     "attributes": {
       "Startup": "10",
       "Active": "-",
@@ -13963,7 +13963,7 @@
   },
   {
     "uid": 1297,
-    "name": "\\u003e  B/D",
+    "name": ">  B/D",
     "attributes": {
       "Startup": "10",
       "Active": "Until Landing",
@@ -13987,7 +13987,7 @@
   },
   {
     "uid": 1301,
-    "name": "\\u003e  A/C",
+    "name": ">  A/C",
     "attributes": {
       "Startup": "10",
       "Active": "6",
@@ -13999,7 +13999,7 @@
   },
   {
     "uid": 1304,
-    "name": "\\u003e  ↓↘→B/D",
+    "name": ">  ↓↘→B/D",
     "attributes": {
       "Startup": "10",
       "Active": "-",
@@ -14357,7 +14357,7 @@
   },
   {
     "uid": 1346,
-    "name": "\\u003e  →B",
+    "name": ">  →B",
     "attributes": {
       "Startup": "8",
       "Active": "-",
@@ -14369,7 +14369,7 @@
   },
   {
     "uid": 1347,
-    "name": "\\u003e  →D",
+    "name": ">  →D",
     "attributes": {
       "Startup": "7",
       "Active": "12",
@@ -14381,7 +14381,7 @@
   },
   {
     "uid": 1348,
-    "name": "\\u003e  ←B",
+    "name": ">  ←B",
     "attributes": {
       "Startup": "-",
       "Active": "-",
@@ -14393,7 +14393,7 @@
   },
   {
     "uid": 1349,
-    "name": "\\u003e  ←D",
+    "name": ">  ←D",
     "attributes": {
       "Startup": "-",
       "Active": "-",
@@ -14417,7 +14417,7 @@
   },
   {
     "uid": 1351,
-    "name": "\\u003e  →B",
+    "name": ">  →B",
     "attributes": {
       "Startup": "8",
       "Active": "-",
@@ -14429,7 +14429,7 @@
   },
   {
     "uid": 1354,
-    "name": "\\u003e  ←D",
+    "name": ">  ←D",
     "attributes": {
       "Startup": "-",
       "Active": "-",
@@ -14453,7 +14453,7 @@
   },
   {
     "uid": 1356,
-    "name": "\\u003e  →B",
+    "name": ">  →B",
     "attributes": {
       "Startup": "7",
       "Active": "-",
@@ -14465,7 +14465,7 @@
   },
   {
     "uid": 1357,
-    "name": "\\u003e  →D",
+    "name": ">  →D",
     "attributes": {
       "Startup": "6",
       "Active": "12",
@@ -14477,7 +14477,7 @@
   },
   {
     "uid": 1359,
-    "name": "\\u003e  ←B",
+    "name": ">  ←B",
     "attributes": {
       "Startup": "-",
       "Active": "-",
@@ -14489,7 +14489,7 @@
   },
   {
     "uid": 1360,
-    "name": "\\u003e  ←D",
+    "name": ">  ←D",
     "attributes": {
       "Startup": "-",
       "Active": "-",
@@ -14525,7 +14525,7 @@
   },
   {
     "uid": 1363,
-    "name": "\\u003e  →B/D",
+    "name": ">  →B/D",
     "attributes": {
       "Startup": "11",
       "Active": "8",
@@ -14561,7 +14561,7 @@
   },
   {
     "uid": 1366,
-    "name": "\\u003e  ↓↙←B/D",
+    "name": ">  ↓↙←B/D",
     "attributes": {
       "Startup": "11",
       "Active": "8",
@@ -14597,7 +14597,7 @@
   },
   {
     "uid": 1370,
-    "name": "\\u003e  ↓↙←B/D",
+    "name": ">  ↓↙←B/D",
     "attributes": {
       "Startup": "9",
       "Active": "10",
@@ -15086,7 +15086,7 @@
   },
   {
     "uid": 1415,
-    "name": "\\u003e  →B",
+    "name": ">  →B",
     "attributes": {
       "Startup": "10",
       "Active": "2",
@@ -15098,7 +15098,7 @@
   },
   {
     "uid": 1416,
-    "name": "\\u003e  →D",
+    "name": ">  →D",
     "attributes": {
       "Startup": "7",
       "Active": "10",
@@ -15122,7 +15122,7 @@
   },
   {
     "uid": 1418,
-    "name": "\\u003e  →B",
+    "name": ">  →B",
     "attributes": {
       "Startup": "9",
       "Active": "2",
@@ -15134,7 +15134,7 @@
   },
   {
     "uid": 1419,
-    "name": "\\u003e  →D",
+    "name": ">  →D",
     "attributes": {
       "Startup": "6",
       "Active": "8",
@@ -15600,7 +15600,7 @@
   },
   {
     "uid": 1460,
-    "name": "\\u003e  ↓↙←A/C",
+    "name": ">  ↓↙←A/C",
     "attributes": {
       "Startup": "10",
       "Active": "6",
@@ -15636,7 +15636,7 @@
   },
   {
     "uid": 1464,
-    "name": "\\u003e  ↓↙←A/C",
+    "name": ">  ↓↙←A/C",
     "attributes": {
       "Startup": "10",
       "Active": "6",
@@ -16415,7 +16415,7 @@
   },
   {
     "uid": 1534,
-    "name": "\\u003e C",
+    "name": "> C",
     "attributes": {
       "Startup": "10",
       "Active": "1",
@@ -16523,7 +16523,7 @@
   },
   {
     "uid": 1544,
-    "name": "\\u003e  ↓↘→A",
+    "name": ">  ↓↘→A",
     "attributes": {
       "Startup": "9",
       "Active": "4",
@@ -16535,7 +16535,7 @@
   },
   {
     "uid": 1545,
-    "name": "\\u003e\\u003e  ↓↘→B/D",
+    "name": ">>  ↓↘→B/D",
     "attributes": {
       "Startup": "14",
       "Active": "4",
@@ -16559,7 +16559,7 @@
   },
   {
     "uid": 1547,
-    "name": "\\u003e  ↓↘→C",
+    "name": ">  ↓↘→C",
     "attributes": {
       "Startup": "9",
       "Active": "4",
@@ -16583,7 +16583,7 @@
   },
   {
     "uid": 1550,
-    "name": "\\u003e  ↓↘→A/C",
+    "name": ">  ↓↘→A/C",
     "attributes": {
       "Startup": "9",
       "Active": "4",
@@ -16595,7 +16595,7 @@
   },
   {
     "uid": 1551,
-    "name": "\\u003e\\u003e  ↓↘→A/C",
+    "name": ">>  ↓↘→A/C",
     "attributes": {
       "Startup": "8",
       "Active": "3",
@@ -16607,7 +16607,7 @@
   },
   {
     "uid": 1552,
-    "name": "\\u003e\\u003e\\u003e  ↓↘→A/C",
+    "name": ">>>  ↓↘→A/C",
     "attributes": {
       "Startup": "9",
       "Active": "4",
@@ -16619,7 +16619,7 @@
   },
   {
     "uid": 1553,
-    "name": "\\u003e\\u003e\\u003e\\u003e  ↓↘→B/D",
+    "name": ">>>>  ↓↘→B/D",
     "attributes": {
       "Startup": "14",
       "Active": "4",
@@ -17193,7 +17193,7 @@
   },
   {
     "uid": 1607,
-    "name": "\\u003e  ↘B",
+    "name": ">  ↘B",
     "attributes": {
       "Startup": "7",
       "Active": "6",
@@ -17217,7 +17217,7 @@
   },
   {
     "uid": 1609,
-    "name": "\\u003e A/C",
+    "name": "> A/C",
     "attributes": {
       "Startup": "4",
       "Active": "3,(5),3",
@@ -17229,7 +17229,7 @@
   },
   {
     "uid": 1610,
-    "name": "\\u003e  AC",
+    "name": ">  AC",
     "attributes": {
       "Startup": "4",
       "Active": "3,(5),7",
@@ -17349,7 +17349,7 @@
   },
   {
     "uid": 1620,
-    "name": "\\u003e  A/C",
+    "name": ">  A/C",
     "attributes": {
       "Startup": "4",
       "Active": "3,(5),3",
@@ -17361,7 +17361,7 @@
   },
   {
     "uid": 1622,
-    "name": "\\u003e  →A/C",
+    "name": ">  →A/C",
     "attributes": {
       "Startup": "1",
       "Active": "1",
@@ -17373,7 +17373,7 @@
   },
   {
     "uid": 1623,
-    "name": "\\u003e  ←A/C",
+    "name": ">  ←A/C",
     "attributes": {
       "Startup": "1",
       "Active": "1",
@@ -17397,7 +17397,7 @@
   },
   {
     "uid": 1625,
-    "name": "\\u003e  →",
+    "name": ">  →",
     "attributes": {
       "Startup": "3(same position)",
       "Active": "9(moving)",
@@ -17409,7 +17409,7 @@
   },
   {
     "uid": 1626,
-    "name": "\\u003e  ←",
+    "name": ">  ←",
     "attributes": {
       "Startup": "3(same position)",
       "Active": "9(moving)",
@@ -17421,7 +17421,7 @@
   },
   {
     "uid": 1627,
-    "name": "\\u003e  A",
+    "name": ">  A",
     "attributes": {
       "Startup": "4",
       "Active": "4",
@@ -17433,7 +17433,7 @@
   },
   {
     "uid": 1628,
-    "name": "\\u003e  B",
+    "name": ">  B",
     "attributes": {
       "Startup": "9",
       "Active": "7",
@@ -17445,7 +17445,7 @@
   },
   {
     "uid": 1629,
-    "name": "\\u003e\\u003e  B",
+    "name": ">>  B",
     "attributes": {
       "Startup": "7",
       "Active": "6",
@@ -17457,7 +17457,7 @@
   },
   {
     "uid": 1630,
-    "name": "\\u003e  C",
+    "name": ">  C",
     "attributes": {
       "Startup": "4",
       "Active": "4",
@@ -17469,7 +17469,7 @@
   },
   {
     "uid": 1631,
-    "name": "\\u003e  D",
+    "name": ">  D",
     "attributes": {
       "Startup": "10",
       "Active": "3",
@@ -19609,7 +19609,7 @@
     "uid": 1854,
     "name": "Hun Dun",
     "attributes": {
-      "Command": "LP \\u003e LP",
+      "Command": "LP > LP",
       "Startup": "5+8",
       "Active": "2",
       "Recovery": "14(16)",
@@ -19632,7 +19632,7 @@
     "uid": 1855,
     "name": "Qiong Qi",
     "attributes": {
-      "Command": "HP \\u003e HP",
+      "Command": "HP > HP",
       "Startup": "12+14",
       "Active": "3",
       "Recovery": "24(29)",
@@ -19837,9 +19837,9 @@
   },
   {
     "uid": 1864,
-    "name": "Sinister Slide \\u003e Heel Strike",
+    "name": "Sinister Slide > Heel Strike",
     "attributes": {
-      "Command": "d+PP \\u003e K",
+      "Command": "d+PP > K",
       "Startup": "11+11",
       "Active": "3(9)3",
       "Recovery": "17(20)",
@@ -19860,9 +19860,9 @@
   },
   {
     "uid": 1865,
-    "name": "Sinister Slide \\u003e Venomous Fang",
+    "name": "Sinister Slide > Venomous Fang",
     "attributes": {
-      "Command": "d+PP \\u003e P",
+      "Command": "d+PP > P",
       "Startup": "11+19",
       "Active": "15",
       "Recovery": "30",
@@ -19883,9 +19883,9 @@
   },
   {
     "uid": 1866,
-    "name": "Sinister Slide \\u003e Entrapment",
+    "name": "Sinister Slide > Entrapment",
     "attributes": {
-      "Command": "d+PP \\u003e LP+LK",
+      "Command": "d+PP > LP+LK",
       "Startup": "11+23",
       "Active": "3",
       "Recovery": "55",
@@ -19906,9 +19906,9 @@
   },
   {
     "uid": 1867,
-    "name": "Sinister Slide \\u003e Exit",
+    "name": "Sinister Slide > Exit",
     "attributes": {
-      "Command": "d+PP \\u003e u",
+      "Command": "d+PP > u",
       "Startup": "~",
       "Active": "~",
       "Recovery": "21",
@@ -19954,7 +19954,7 @@
     "uid": 1869,
     "name": "Nightshade Chaser",
     "attributes": {
-      "Command": "qcb+LP \\u003e f+P",
+      "Command": "qcb+LP > f+P",
       "Startup": "13",
       "Active": "2",
       "Recovery": "34",
@@ -19977,7 +19977,7 @@
     "uid": 1870,
     "name": "Nightshade Chase (Bubble Burst)",
     "attributes": {
-      "Command": "qcb+LP \\u003e f+P (burst)",
+      "Command": "qcb+LP > f+P (burst)",
       "Startup": "14",
       "Active": "6",
       "Recovery": "29",
@@ -20023,7 +20023,7 @@
     "uid": 1872,
     "name": "OD Nightshade Chaser",
     "attributes": {
-      "Command": "qcb+PP \\u003e f+P",
+      "Command": "qcb+PP > f+P",
       "Startup": "13",
       "Active": "5",
       "Recovery": "28",
@@ -20046,7 +20046,7 @@
     "uid": 1873,
     "name": "OD Nightshade Chaser (Bubble Burst)",
     "attributes": {
-      "Command": "qcb+PP \\u003e f+P (burst)",
+      "Command": "qcb+PP > f+P (burst)",
       "Startup": "14",
       "Active": "12",
       "Recovery": "20",
@@ -21134,7 +21134,7 @@
     "uid": 1919,
     "name": "Wild Lift",
     "attributes": {
-      "Command": "d+PP \\u003e P",
+      "Command": "d+PP > P",
       "Startup": "18+8",
       "Active": "7",
       "Recovery": "31",
@@ -21160,7 +21160,7 @@
     "uid": 1920,
     "name": "Raid Jump",
     "attributes": {
-      "Command": "d+PP \\u003e K",
+      "Command": "d+PP > K",
       "Startup": "18",
       "Active": "~",
       "Recovery": "12",
@@ -22610,7 +22610,7 @@
     "uid": 1980,
     "name": "Lift Combination",
     "attributes": {
-      "Command": "b+MP \\u003e HK",
+      "Command": "b+MP > HK",
       "Startup": "5+9",
       "Active": "5*3",
       "Recovery": "23",
@@ -22632,7 +22632,7 @@
     "uid": 1981,
     "name": "Swing Combination",
     "attributes": {
-      "Command": "HP \\u003e HK",
+      "Command": "HP > HK",
       "Startup": "8+13",
       "Active": "3*4(12)3",
       "Recovery": "29",
@@ -23290,9 +23290,9 @@
   },
   {
     "uid": 2011,
-    "name": "Hooligan Combination \\u003e Razor Edge Slicer",
+    "name": "Hooligan Combination > Razor Edge Slicer",
     "attributes": {
-      "Command": "qcf+P \\u003e no input",
+      "Command": "qcf+P > no input",
       "Startup": "50",
       "Active": "9",
       "Recovery": "13",
@@ -23312,9 +23312,9 @@
   },
   {
     "uid": 2012,
-    "name": "HP Hooligan Combination (hold) \\u003e Razor Edge Slicer",
+    "name": "HP Hooligan Combination (hold) > Razor Edge Slicer",
     "attributes": {
-      "Command": "qcf+HP (hold) \\u003e no input",
+      "Command": "qcf+HP (hold) > no input",
       "Startup": "68(70)",
       "Active": "9(10)5",
       "Recovery": "17",
@@ -23334,9 +23334,9 @@
   },
   {
     "uid": 2013,
-    "name": "OD Hooligan Combination \\u003e Razor Edge Slicer",
+    "name": "OD Hooligan Combination > Razor Edge Slicer",
     "attributes": {
-      "Command": "qcf+PP \\u003e no input",
+      "Command": "qcf+PP > no input",
       "Startup": "50",
       "Active": "9(10)5",
       "Recovery": "17",
@@ -23356,9 +23356,9 @@
   },
   {
     "uid": 2014,
-    "name": "Hooligan Combination \\u003e Cannon Strike",
+    "name": "Hooligan Combination > Cannon Strike",
     "attributes": {
-      "Command": "qcf+P \\u003e K",
+      "Command": "qcf+P > K",
       "Startup": "20+13",
       "Active": "until land",
       "Recovery": "12",
@@ -23378,9 +23378,9 @@
   },
   {
     "uid": 2015,
-    "name": "HP Hooligan Combination (hold) \\u003e Cannon Strike",
+    "name": "HP Hooligan Combination (hold) > Cannon Strike",
     "attributes": {
-      "Command": "qcf+HP (hold) \\u003e K",
+      "Command": "qcf+HP (hold) > K",
       "Startup": "38(40)+13",
       "Active": "until land",
       "Recovery": "12",
@@ -23400,9 +23400,9 @@
   },
   {
     "uid": 2016,
-    "name": "OD Hooligan Combination \\u003e Cannon Strike",
+    "name": "OD Hooligan Combination > Cannon Strike",
     "attributes": {
-      "Command": "qcf+PP \\u003e K",
+      "Command": "qcf+PP > K",
       "Startup": "20+13",
       "Active": "until land",
       "Recovery": "12",
@@ -23422,9 +23422,9 @@
   },
   {
     "uid": 2017,
-    "name": "Hooligan Combination \\u003e Reverse Edge",
+    "name": "Hooligan Combination > Reverse Edge",
     "attributes": {
-      "Command": "qcf+P \\u003e d+K",
+      "Command": "qcf+P > d+K",
       "Startup": "20+18",
       "Active": "4",
       "Recovery": "13",
@@ -23444,9 +23444,9 @@
   },
   {
     "uid": 2018,
-    "name": "HP Hooligan Combination (hold) \\u003e Reverse Edge",
+    "name": "HP Hooligan Combination (hold) > Reverse Edge",
     "attributes": {
-      "Command": "qcf+HP (hold) \\u003e d+K",
+      "Command": "qcf+HP (hold) > d+K",
       "Startup": "38(40)+18",
       "Active": "4(14)4",
       "Recovery": "13",
@@ -23466,9 +23466,9 @@
   },
   {
     "uid": 2019,
-    "name": "OD Hooligan Combination \\u003e Reverse Edge",
+    "name": "OD Hooligan Combination > Reverse Edge",
     "attributes": {
-      "Command": "qcf+PP \\u003e d+K",
+      "Command": "qcf+PP > d+K",
       "Startup": "20+18",
       "Active": "4(14)4",
       "Recovery": "13",
@@ -23488,9 +23488,9 @@
   },
   {
     "uid": 2020,
-    "name": "Hooligan Combination \\u003e Fatal Leg Twister",
+    "name": "Hooligan Combination > Fatal Leg Twister",
     "attributes": {
-      "Command": "qcf+P \\u003e LP+LK",
+      "Command": "qcf+P > LP+LK",
       "Startup": "20+10",
       "Active": "3",
       "Recovery": "30(38)",
@@ -23510,9 +23510,9 @@
   },
   {
     "uid": 2021,
-    "name": "HP Hooligan Combination (hold) \\u003e Fatal Leg Twister",
+    "name": "HP Hooligan Combination (hold) > Fatal Leg Twister",
     "attributes": {
-      "Command": "qcf+HP (hold) \\u003e LP+LK",
+      "Command": "qcf+HP (hold) > LP+LK",
       "Startup": "38(40)+10",
       "Active": "3",
       "Recovery": "30(32)",
@@ -23532,9 +23532,9 @@
   },
   {
     "uid": 2022,
-    "name": "OD Hooligan Combination \\u003e Fatal Leg Twister",
+    "name": "OD Hooligan Combination > Fatal Leg Twister",
     "attributes": {
-      "Command": "qcf+PP \\u003e LP+LK",
+      "Command": "qcf+PP > LP+LK",
       "Startup": "20+10",
       "Active": "3",
       "Recovery": "30(38)",
@@ -23554,9 +23554,9 @@
   },
   {
     "uid": 2023,
-    "name": "Hooligan Combination \\u003e Silent Step",
+    "name": "Hooligan Combination > Silent Step",
     "attributes": {
-      "Command": "qcf+P \\u003e P",
+      "Command": "qcf+P > P",
       "Startup": "20",
       "Active": "~",
       "Recovery": "14(22)",
@@ -23576,9 +23576,9 @@
   },
   {
     "uid": 2024,
-    "name": "HP Hooligan Combination (hold) \\u003e Silent Step",
+    "name": "HP Hooligan Combination (hold) > Silent Step",
     "attributes": {
-      "Command": "qcf+HP (hold) \\u003e P",
+      "Command": "qcf+HP (hold) > P",
       "Startup": "38(40)",
       "Active": "~",
       "Recovery": "14(17)",
@@ -23598,9 +23598,9 @@
   },
   {
     "uid": 2025,
-    "name": "OD Hooligan Combination \\u003e Silent Step",
+    "name": "OD Hooligan Combination > Silent Step",
     "attributes": {
-      "Command": "qcf+PP \\u003e P",
+      "Command": "qcf+PP > P",
       "Startup": "20",
       "Active": "~",
       "Recovery": "14(19)",
@@ -24257,7 +24257,7 @@
     "uid": 2053,
     "name": "Soaring Eagle Punches",
     "attributes": {
-      "Command": "j+HP \\u003e j+HP",
+      "Command": "j+HP > j+HP",
       "Startup": "9+16",
       "Active": "4",
       "Recovery": "~",
@@ -24432,7 +24432,7 @@
     "uid": 2060,
     "name": "Orchid Palm",
     "attributes": {
-      "Command": "qcb+P \\u003e LP",
+      "Command": "qcb+P > LP",
       "Startup": "5",
       "Active": "5",
       "Recovery": "16(36)",
@@ -24457,7 +24457,7 @@
     "uid": 2061,
     "name": "Snake Strike",
     "attributes": {
-      "Command": "qcb+P \\u003e MP",
+      "Command": "qcb+P > MP",
       "Startup": "11",
       "Active": "7",
       "Recovery": "19(32)",
@@ -24482,7 +24482,7 @@
     "uid": 2062,
     "name": "Lotus Fist",
     "attributes": {
-      "Command": "qcb+P \\u003e HP",
+      "Command": "qcb+P > HP",
       "Startup": "23",
       "Active": "2(6)2",
       "Recovery": "19",
@@ -24507,7 +24507,7 @@
     "uid": 2063,
     "name": "Forward Strike",
     "attributes": {
-      "Command": "qcb+P \\u003e LK",
+      "Command": "qcb+P > LK",
       "Startup": "8",
       "Active": "5",
       "Recovery": "13(36)",
@@ -24532,7 +24532,7 @@
     "uid": 2064,
     "name": "Senpu Kick",
     "attributes": {
-      "Command": "qcb+P \\u003e MK",
+      "Command": "qcb+P > MK",
       "Startup": "10",
       "Active": "5",
       "Recovery": "22(46)",
@@ -24557,7 +24557,7 @@
     "uid": 2065,
     "name": "Tenku Kick",
     "attributes": {
-      "Command": "qcb+P \\u003e HK",
+      "Command": "qcb+P > HK",
       "Startup": "8",
       "Active": "5",
       "Recovery": "24",
@@ -24982,7 +24982,7 @@
     "uid": 2082,
     "name": "Lightning Kick Barrage",
     "attributes": {
-      "Command": "qcf+KK \\u003e KK",
+      "Command": "qcf+KK > KK",
       "Startup": "10",
       "Active": "2(5)2(4)2(5)2(13)3",
       "Recovery": "25",
@@ -26026,7 +26026,7 @@
     "uid": 2124,
     "name": "Party in the Air",
     "attributes": {
-      "Command": "j+MP \\u003e j+HP",
+      "Command": "j+MP > j+HP",
       "Startup": "6+8",
       "Active": "4*7",
       "Recovery": "~",
@@ -26104,7 +26104,7 @@
     "uid": 2127,
     "name": "Threebeat Combo 1",
     "attributes": {
-      "Command": "LP \\u003e MK",
+      "Command": "LP > MK",
       "Startup": "4+9",
       "Active": "3*3",
       "Recovery": "18",
@@ -26130,7 +26130,7 @@
     "uid": 2128,
     "name": "Threebeat Combo 2",
     "attributes": {
-      "Command": "LP \\u003e MK \\u003e MK",
+      "Command": "LP > MK > MK",
       "Startup": "4+9+14",
       "Active": "3*3*3",
       "Recovery": "21",
@@ -26156,7 +26156,7 @@
     "uid": 2129,
     "name": "Funky Dance 1",
     "attributes": {
-      "Command": "MP \\u003e MP",
+      "Command": "MP > MP",
       "Startup": "7+12",
       "Active": "3*2",
       "Recovery": "17(19)",
@@ -26182,7 +26182,7 @@
     "uid": 2130,
     "name": "Funky Dance 2",
     "attributes": {
-      "Command": "MP \\u003e MP \\u003e HP",
+      "Command": "MP > MP > HP",
       "Startup": "7+12+20",
       "Active": "3*2*2",
       "Recovery": "24",
@@ -26208,7 +26208,7 @@
     "uid": 2131,
     "name": "Funky Dance Feint",
     "attributes": {
-      "Command": "MP \\u003e MP \\u003e b+HP",
+      "Command": "MP > MP > b+HP",
       "Startup": "~",
       "Active": "~",
       "Recovery": "23",
@@ -26234,7 +26234,7 @@
     "uid": 2132,
     "name": "Dee Jay Special 1",
     "attributes": {
-      "Command": "MP \\u003e HP",
+      "Command": "MP > HP",
       "Startup": "7+11",
       "Active": "3*7",
       "Recovery": "24",
@@ -26260,7 +26260,7 @@
     "uid": 2133,
     "name": "Dee Jay Special 2",
     "attributes": {
-      "Command": "MP \\u003e HP \\u003e HK",
+      "Command": "MP > HP > HK",
       "Startup": "7+11+13",
       "Active": "3*7*3",
       "Recovery": "30",
@@ -26934,9 +26934,9 @@
   },
   {
     "uid": 2159,
-    "name": "Jus Cool \\u003e Funky Slicer",
+    "name": "Jus Cool > Funky Slicer",
     "attributes": {
-      "Command": "qcb+K \\u003e LK",
+      "Command": "qcb+K > LK",
       "Startup": "13+12",
       "Active": "3",
       "Recovery": "22(20)",
@@ -26960,9 +26960,9 @@
   },
   {
     "uid": 2160,
-    "name": "Jus Cool \\u003e Waning Moon",
+    "name": "Jus Cool > Waning Moon",
     "attributes": {
-      "Command": "qcb+K \\u003e MK",
+      "Command": "qcb+K > MK",
       "Startup": "13+25",
       "Active": "3",
       "Recovery": "16",
@@ -26986,9 +26986,9 @@
   },
   {
     "uid": 2161,
-    "name": "Jus Cool \\u003e Maximum Strike",
+    "name": "Jus Cool > Maximum Strike",
     "attributes": {
-      "Command": "qcb+K \\u003e HK",
+      "Command": "qcb+K > HK",
       "Startup": "13+15",
       "Active": "5",
       "Recovery": "25",
@@ -27012,9 +27012,9 @@
   },
   {
     "uid": 2162,
-    "name": "Jus Cool \\u003e Juggling Dash",
+    "name": "Jus Cool > Juggling Dash",
     "attributes": {
-      "Command": "qcb+K \\u003e f+P",
+      "Command": "qcb+K > f+P",
       "Startup": "13",
       "Active": "~",
       "Recovery": "27",
@@ -27038,9 +27038,9 @@
   },
   {
     "uid": 2163,
-    "name": "Jus Cool \\u003e Juggling Dash \\u003e Juggling Sway",
+    "name": "Jus Cool > Juggling Dash > Juggling Sway",
     "attributes": {
-      "Command": "qcb+K \\u003e f+P \\u003e b+P",
+      "Command": "qcb+K > f+P > b+P",
       "Startup": "13+17",
       "Active": "~",
       "Recovery": "29",
@@ -27090,9 +27090,9 @@
   },
   {
     "uid": 2165,
-    "name": "OD Jus Cool \\u003e Funky Slicer",
+    "name": "OD Jus Cool > Funky Slicer",
     "attributes": {
-      "Command": "qcb+KK \\u003e LK",
+      "Command": "qcb+KK > LK",
       "Startup": "25+9",
       "Active": "3",
       "Recovery": "19(24)",
@@ -27116,9 +27116,9 @@
   },
   {
     "uid": 2166,
-    "name": "OD Jus Cool \\u003e Waning Moon",
+    "name": "OD Jus Cool > Waning Moon",
     "attributes": {
-      "Command": "qcb+KK \\u003e MK",
+      "Command": "qcb+KK > MK",
       "Startup": "25+19",
       "Active": "5",
       "Recovery": "17",
@@ -27142,9 +27142,9 @@
   },
   {
     "uid": 2167,
-    "name": "OD Jus Cool \\u003e Maximum Strike",
+    "name": "OD Jus Cool > Maximum Strike",
     "attributes": {
-      "Command": "qcb+KK \\u003e HK",
+      "Command": "qcb+KK > HK",
       "Startup": "25+11",
       "Active": "5",
       "Recovery": "21",
@@ -27168,9 +27168,9 @@
   },
   {
     "uid": 2168,
-    "name": "OD Jus Cool \\u003e Juggling Dash",
+    "name": "OD Jus Cool > Juggling Dash",
     "attributes": {
-      "Command": "qcb+KK \\u003e f+P",
+      "Command": "qcb+KK > f+P",
       "Startup": "19",
       "Active": "~",
       "Recovery": "22",
@@ -27194,9 +27194,9 @@
   },
   {
     "uid": 2169,
-    "name": "OD Jus Cool \\u003e Juggling Dash \\u003e Juggling Sway",
+    "name": "OD Jus Cool > Juggling Dash > Juggling Sway",
     "attributes": {
-      "Command": "qcb+KK \\u003e f+P \\u003e b+P",
+      "Command": "qcb+KK > f+P > b+P",
       "Startup": "19+16",
       "Active": "~",
       "Recovery": "22",
@@ -27248,7 +27248,7 @@
     "uid": 2171,
     "name": "Lowkey Sunrise Festival",
     "attributes": {
-      "Command": "qcf,qcf+LP \\u003e LP \\u003e MP \\u003e HP \\u003e LK \\u003e MK \\u003e HK (bad)",
+      "Command": "qcf,qcf+LP > LP > MP > HP > LK > MK > HK (bad)",
       "Startup": "12",
       "Active": "5",
       "Recovery": "46",
@@ -27274,7 +27274,7 @@
     "uid": 2172,
     "name": "Marvelous Sunrise Festival",
     "attributes": {
-      "Command": "qcf,qcf+MP \\u003e LP \\u003e MP \\u003e HP \\u003e LK \\u003e MK \\u003e HK (good)",
+      "Command": "qcf,qcf+MP > LP > MP > HP > LK > MK > HK (good)",
       "Startup": "12",
       "Active": "5",
       "Recovery": "46",
@@ -27300,7 +27300,7 @@
     "uid": 2173,
     "name": "Headliner Sunrise Festival",
     "attributes": {
-      "Command": "qcf,qcf+HP \\u003e LP \\u003e MP \\u003e HP \\u003e LK \\u003e MK \\u003e HK (great)",
+      "Command": "qcf,qcf+HP > LP > MP > HP > LK > MK > HK (great)",
       "Startup": "12",
       "Active": "5",
       "Recovery": "46",
@@ -29212,7 +29212,7 @@
     "uid": 2262,
     "name": "Flying Sumo Press",
     "attributes": {
-      "Command": "Forward Jump \\u003e d+MK",
+      "Command": "Forward Jump > d+MK",
       "Startup": "11",
       "Active": "9",
       "Recovery": "~",
@@ -29278,7 +29278,7 @@
     "uid": 2265,
     "name": "Double Slaps",
     "attributes": {
-      "Command": "LP \\u003e MP",
+      "Command": "LP > MP",
       "Startup": "5+4",
       "Active": "3*4",
       "Recovery": "20",
@@ -29300,7 +29300,7 @@
     "uid": 2266,
     "name": "Tokoshizume",
     "attributes": {
-      "Command": "MP \\u003e df+HK",
+      "Command": "MP > df+HK",
       "Startup": "8+22",
       "Active": "4*6",
       "Recovery": "18",
@@ -29894,7 +29894,7 @@
     "uid": 2293,
     "name": "Teppo Double Slap",
     "attributes": {
-      "Command": "qcf+K \\u003e P",
+      "Command": "qcf+K > P",
       "Startup": "14+9",
       "Active": "3(13)3",
       "Recovery": "22",
@@ -29916,7 +29916,7 @@
     "uid": 2294,
     "name": "Teppo Triple Slap",
     "attributes": {
-      "Command": "qcf+K \\u003e P \\u003e P",
+      "Command": "qcf+K > P > P",
       "Startup": "14+9+14",
       "Active": "3(13)3(20)3",
       "Recovery": "38",
@@ -29938,7 +29938,7 @@
     "uid": 2295,
     "name": "Taiho Cannon Lift",
     "attributes": {
-      "Command": "qcf+K \\u003e d+P",
+      "Command": "qcf+K > d+P",
       "Startup": "14+12",
       "Active": "2(17)3",
       "Recovery": "32(15)",
@@ -29982,7 +29982,7 @@
     "uid": 2297,
     "name": "OD Teppo Double Slap",
     "attributes": {
-      "Command": "qcf+KK \\u003e P",
+      "Command": "qcf+KK > P",
       "Startup": "13+9",
       "Active": "3(13)3",
       "Recovery": "17",
@@ -30004,7 +30004,7 @@
     "uid": 2298,
     "name": "OD Teppo Triple Slap",
     "attributes": {
-      "Command": "qcf+KK \\u003e P \\u003e P",
+      "Command": "qcf+KK > P > P",
       "Startup": "13+9+14",
       "Active": "3(13)3(20)3",
       "Recovery": "38",
@@ -30026,7 +30026,7 @@
     "uid": 2299,
     "name": "OD Taiho Cannon Lift",
     "attributes": {
-      "Command": "qcf+KK \\u003e d+P",
+      "Command": "qcf+KK > d+P",
       "Startup": "11+12",
       "Active": "2(17)3",
       "Recovery": "32(15)",
@@ -30736,7 +30736,7 @@
     "uid": 2268,
     "name": "Recoil Cannon",
     "attributes": {
-      "Command": "MP \\u003e b+HP",
+      "Command": "MP > b+HP",
       "Startup": "7+16",
       "Active": "3*3",
       "Recovery": "26",
@@ -30760,7 +30760,7 @@
     "uid": 2269,
     "name": "Double Shot",
     "attributes": {
-      "Command": "d+MP \\u003e d+MP",
+      "Command": "d+MP > d+MP",
       "Startup": "6+12",
       "Active": "3*3",
       "Recovery": "16",
@@ -30784,7 +30784,7 @@
     "uid": 2270,
     "name": "Drake Fang",
     "attributes": {
-      "Command": "d+MK \\u003e f+MP",
+      "Command": "d+MK > f+MP",
       "Startup": "8+20",
       "Active": "3*3",
       "Recovery": "21",
@@ -30808,7 +30808,7 @@
     "uid": 2271,
     "name": "Phantom Cutter",
     "attributes": {
-      "Command": "d+HK \\u003e df+HK",
+      "Command": "d+HK > df+HK",
       "Startup": "9+10",
       "Active": "2*3",
       "Recovery": "25",
@@ -31310,9 +31310,9 @@
   },
   {
     "uid": 2292,
-    "name": "Sonic Blade \\u003e Sonic Cross",
+    "name": "Sonic Blade > Sonic Cross",
     "attributes": {
-      "Command": "qcb+P \\u003e f+P",
+      "Command": "qcb+P > f+P",
       "Startup": "Blade*10",
       "Active": "~",
       "Recovery": "28",
@@ -31334,9 +31334,9 @@
   },
   {
     "uid": 2293,
-    "name": "Sonic Blade \\u003e OD Sonic Cross",
+    "name": "Sonic Blade > OD Sonic Cross",
     "attributes": {
-      "Command": "qcb+P \\u003e f+PP",
+      "Command": "qcb+P > f+PP",
       "Startup": "Blade*10",
       "Active": "~",
       "Recovery": "28",
@@ -31382,9 +31382,9 @@
   },
   {
     "uid": 2295,
-    "name": "OD Sonic Blade \\u003e Sonic Cross",
+    "name": "OD Sonic Blade > Sonic Cross",
     "attributes": {
-      "Command": "qcb+PP \\u003e f+P",
+      "Command": "qcb+PP > f+P",
       "Startup": "15*10",
       "Active": "~",
       "Recovery": "28",
@@ -31406,9 +31406,9 @@
   },
   {
     "uid": 2296,
-    "name": "OD Sonic Blade \\u003e OD Sonic Cross",
+    "name": "OD Sonic Blade > OD Sonic Cross",
     "attributes": {
-      "Command": "qcb+PP \\u003e f+PP",
+      "Command": "qcb+PP > f+PP",
       "Startup": "15*10",
       "Active": "~",
       "Recovery": "28",
@@ -32048,7 +32048,7 @@
     "uid": 2263,
     "name": "Phantom Sway",
     "attributes": {
-      "Command": "d+HK \\u003e HK",
+      "Command": "d+HK > HK",
       "Startup": "9+12",
       "Active": "2(3)2(17)3",
       "Recovery": "43",
@@ -32074,7 +32074,7 @@
     "uid": 2264,
     "name": "Phantom Sway + Drink",
     "attributes": {
-      "Command": "d+HK \\u003e HK \\u003e P",
+      "Command": "d+HK > HK > P",
       "Startup": "9+12+Drink",
       "Active": "2(3)2(17)3",
       "Recovery": "61",
@@ -32516,7 +32516,7 @@
     "uid": 2281,
     "name": "LP Freeflow Strikes 2",
     "attributes": {
-      "Command": "qcf+LP \\u003e f+P",
+      "Command": "qcf+LP > f+P",
       "Startup": "13+13",
       "Active": "2(14)2",
       "Recovery": "28",
@@ -32542,7 +32542,7 @@
     "uid": 2282,
     "name": "LP Freeflow Strikes 3",
     "attributes": {
-      "Command": "qcf+LP \\u003e f+P  \\u003e f+P",
+      "Command": "qcf+LP > f+P  > f+P",
       "Startup": "13+13+13",
       "Active": "2(14)2(15)2",
       "Recovery": "30",
@@ -32568,7 +32568,7 @@
     "uid": 2283,
     "name": "LP Freeflow Kicks 2",
     "attributes": {
-      "Command": "qcf+LP \\u003e f+K",
+      "Command": "qcf+LP > f+K",
       "Startup": "13+14",
       "Active": "2(15)2",
       "Recovery": "32",
@@ -32594,7 +32594,7 @@
     "uid": 2284,
     "name": "LP Freeflow Kicks 3",
     "attributes": {
-      "Command": "qcf+LP \\u003e f+K \\u003e f+K",
+      "Command": "qcf+LP > f+K > f+K",
       "Startup": "13+14+18",
       "Active": "2(15)2(18)2",
       "Recovery": "64",
@@ -32646,7 +32646,7 @@
     "uid": 2286,
     "name": "MP Freeflow Strikes 2",
     "attributes": {
-      "Command": "qcf+MP \\u003e f+P",
+      "Command": "qcf+MP > f+P",
       "Startup": "16+16+16",
       "Active": "2(17)2",
       "Recovery": "28",
@@ -32672,7 +32672,7 @@
     "uid": 2287,
     "name": "MP Freeflow Strikes 3",
     "attributes": {
-      "Command": "qcf+MP \\u003e f+P  \\u003e f+P",
+      "Command": "qcf+MP > f+P  > f+P",
       "Startup": "16+16+16",
       "Active": "2(17)2(18)2",
       "Recovery": "30",
@@ -32698,7 +32698,7 @@
     "uid": 2288,
     "name": "MP Freeflow Kicks 2",
     "attributes": {
-      "Command": "qcf+MP \\u003e f+K",
+      "Command": "qcf+MP > f+K",
       "Startup": "16+17",
       "Active": "2(18)2",
       "Recovery": "32",
@@ -32724,7 +32724,7 @@
     "uid": 2289,
     "name": "MP Freeflow Kicks 3",
     "attributes": {
-      "Command": "qcf+MP \\u003e f+K \\u003e f+K",
+      "Command": "qcf+MP > f+K > f+K",
       "Startup": "16+17+21",
       "Active": "2(18)2(21)2",
       "Recovery": "64",
@@ -32776,7 +32776,7 @@
     "uid": 2291,
     "name": "HP Freeflow Strikes 2",
     "attributes": {
-      "Command": "qcf+HP \\u003e f+P",
+      "Command": "qcf+HP > f+P",
       "Startup": "19+19",
       "Active": "2(20)2",
       "Recovery": "28",
@@ -32802,7 +32802,7 @@
     "uid": 2292,
     "name": "HP Freeflow Strikes 3",
     "attributes": {
-      "Command": "qcf+HP \\u003e f+P  \\u003e f+P",
+      "Command": "qcf+HP > f+P  > f+P",
       "Startup": "19+19+19",
       "Active": "2(20)2(21)2",
       "Recovery": "30",
@@ -32828,7 +32828,7 @@
     "uid": 2293,
     "name": "HP Freeflow Kicks 2",
     "attributes": {
-      "Command": "qcf+HP \\u003e f+K",
+      "Command": "qcf+HP > f+K",
       "Startup": "19+20",
       "Active": "2(21)2",
       "Recovery": "32",
@@ -32854,7 +32854,7 @@
     "uid": 2294,
     "name": "HP Freeflow Kicks 3",
     "attributes": {
-      "Command": "qcf+HP \\u003e f+K \\u003e f+K",
+      "Command": "qcf+HP > f+K > f+K",
       "Startup": "19+20+24",
       "Active": "2(21)2(24)2",
       "Recovery": "64",
@@ -32906,7 +32906,7 @@
     "uid": 2296,
     "name": "OD Freeflow Strikes 2",
     "attributes": {
-      "Command": "qcf+PP \\u003e f+P",
+      "Command": "qcf+PP > f+P",
       "Startup": "13+13",
       "Active": "2(14)2",
       "Recovery": "28",
@@ -32932,7 +32932,7 @@
     "uid": 2297,
     "name": "OD Freeflow Strikes 3",
     "attributes": {
-      "Command": "qcf+PP \\u003e f+P \\u003e f+P",
+      "Command": "qcf+PP > f+P > f+P",
       "Startup": "13+13+13",
       "Active": "2(14)2(15)2",
       "Recovery": "30",
@@ -32958,7 +32958,7 @@
     "uid": 2298,
     "name": "OD Freeflow Kicks 2",
     "attributes": {
-      "Command": "qcf+PP \\u003e f+K",
+      "Command": "qcf+PP > f+K",
       "Startup": "13+16",
       "Active": "2(15)2",
       "Recovery": "32",
@@ -32984,7 +32984,7 @@
     "uid": 2299,
     "name": "OD Freeflow Kicks 3",
     "attributes": {
-      "Command": "qcf+PP \\u003e f+K \\u003e f+K",
+      "Command": "qcf+PP > f+K > f+K",
       "Startup": "13+16+19",
       "Active": "2(15)2(18)2",
       "Recovery": "64",
@@ -33807,7 +33807,7 @@
     "uid": 2334,
     "name": "Grom Strelka",
     "attributes": {
-      "Command": "b+MP \\u003e MP",
+      "Command": "b+MP > MP",
       "Startup": "8+10",
       "Active": "3",
       "Recovery": "20",
@@ -33829,7 +33829,7 @@
     "uid": 2335,
     "name": "Zilant",
     "attributes": {
-      "Command": "HK \\u003e HP",
+      "Command": "HK > HP",
       "Startup": "12+20",
       "Active": "4*3",
       "Recovery": "20",
@@ -33851,7 +33851,7 @@
     "uid": 2336,
     "name": "Zilant Mid",
     "attributes": {
-      "Command": "HK \\u003e HP \\u003e HP",
+      "Command": "HK > HP > HP",
       "Startup": "12+20+21",
       "Active": "4*3*3",
       "Recovery": "22",
@@ -33873,7 +33873,7 @@
     "uid": 2337,
     "name": "Zilant Low",
     "attributes": {
-      "Command": "HK \\u003e HP \\u003e HK",
+      "Command": "HK > HP > HK",
       "Startup": "12+20+21",
       "Active": "4*3*3",
       "Recovery": "22",
@@ -35217,7 +35217,7 @@
     "uid": 2398,
     "name": "Death Crest 1",
     "attributes": {
-      "Command": "MP \\u003e b+HP",
+      "Command": "MP > b+HP",
       "Startup": "6+12",
       "Active": "4*3",
       "Recovery": "19",
@@ -35241,7 +35241,7 @@
     "uid": 2399,
     "name": "Death Crest 2",
     "attributes": {
-      "Command": "MP \\u003e b+HP \\u003e HP",
+      "Command": "MP > b+HP > HP",
       "Startup": "6+12+17",
       "Active": "4*3*3",
       "Recovery": "27",
@@ -35911,9 +35911,9 @@
   },
   {
     "uid": 2427,
-    "name": "\\u003e Shiren-sen",
+    "name": "> Shiren-sen",
     "attributes": {
-      "Command": "qcb+K \\u003e K (air)",
+      "Command": "qcb+K > K (air)",
       "Startup": "6",
       "Active": "4(4)4(17)4",
       "Recovery": "12",
@@ -35935,9 +35935,9 @@
   },
   {
     "uid": 2428,
-    "name": "\\u003e OD Shiren-sen",
+    "name": "> OD Shiren-sen",
     "attributes": {
-      "Command": "qcb+KK \\u003e K (air)",
+      "Command": "qcb+KK > K (air)",
       "Startup": "6",
       "Active": "4(4)4(17)4",
       "Recovery": "7",
@@ -36561,7 +36561,7 @@
     "uid": 2454,
     "name": "Chin Buster 2nd",
     "attributes": {
-      "Command": "MP \\u003e HP",
+      "Command": "MP > HP",
       "Startup": "5+11",
       "Active": "4*3",
       "Recovery": "27",
@@ -36585,7 +36585,7 @@
     "uid": 2455,
     "name": "Triple Flash Kicks 1",
     "attributes": {
-      "Command": "MK \\u003e MK",
+      "Command": "MK > MK",
       "Startup": "8+11",
       "Active": "3*2",
       "Recovery": "27",
@@ -36609,7 +36609,7 @@
     "uid": 2456,
     "name": "Triple Flash Kicks 2",
     "attributes": {
-      "Command": "MK \\u003e MK \\u003e HK",
+      "Command": "MK > MK > HK",
       "Startup": "8+11+13",
       "Active": "3*2*3",
       "Recovery": "28",
@@ -37305,7 +37305,7 @@
     "uid": 2485,
     "name": "Kazekama Shin Kick",
     "attributes": {
-      "Command": "qcf+K \\u003e f+LK",
+      "Command": "qcf+K > f+LK",
       "Startup": "6",
       "Active": "4",
       "Recovery": "19",
@@ -37329,7 +37329,7 @@
     "uid": 2486,
     "name": "Gorai Axe Kick",
     "attributes": {
-      "Command": "qcf+K \\u003e f+MK",
+      "Command": "qcf+K > f+MK",
       "Startup": "18",
       "Active": "3",
       "Recovery": "20",
@@ -37353,7 +37353,7 @@
     "uid": 2487,
     "name": "Senka Snap Kick",
     "attributes": {
-      "Command": "qcf+K \\u003e f+HK",
+      "Command": "qcf+K > f+HK",
       "Startup": "10",
       "Active": "3",
       "Recovery": "25",
@@ -37401,7 +37401,7 @@
     "uid": 2489,
     "name": "OD Kazekama Shin Kick",
     "attributes": {
-      "Command": "qcf+KK \\u003e f+LK",
+      "Command": "qcf+KK > f+LK",
       "Startup": "13+6",
       "Active": "3",
       "Recovery": "20",
@@ -37425,7 +37425,7 @@
     "uid": 2490,
     "name": "OD Gorai Axe Kick",
     "attributes": {
-      "Command": "qcf+KK \\u003e f+MK",
+      "Command": "qcf+KK > f+MK",
       "Startup": "13+17",
       "Active": "3",
       "Recovery": "24",
@@ -37449,7 +37449,7 @@
     "uid": 2491,
     "name": "OD Senka Snap Kick",
     "attributes": {
-      "Command": "qcf+KK \\u003e f+HK",
+      "Command": "qcf+KK > f+HK",
       "Startup": "13+10",
       "Active": "4",
       "Recovery": "20",
@@ -37473,7 +37473,7 @@
     "uid": 2492,
     "name": "OD Kasai Thrust Kick (LK)",
     "attributes": {
-      "Command": "qcf+KK \\u003e f+LK \\u003e f+K",
+      "Command": "qcf+KK > f+LK > f+K",
       "Startup": "13+6+15",
       "Active": "3",
       "Recovery": "29",
@@ -37497,7 +37497,7 @@
     "uid": 2493,
     "name": "OD Kasai Thrust Kick (MK)",
     "attributes": {
-      "Command": "qcf+KK \\u003e f+MK \\u003e f+K",
+      "Command": "qcf+KK > f+MK > f+K",
       "Startup": "13+17+11",
       "Active": "3",
       "Recovery": "29",
@@ -37521,7 +37521,7 @@
     "uid": 2494,
     "name": "OD Kasai Thrust Kick (HK)",
     "attributes": {
-      "Command": "qcf+KK \\u003e f+HK \\u003e f+K",
+      "Command": "qcf+KK > f+HK > f+K",
       "Startup": "13+10+15",
       "Active": "3",
       "Recovery": "37",
@@ -37569,7 +37569,7 @@
     "uid": 2496,
     "name": "Emergency Stop",
     "attributes": {
-      "Command": "KK \\u003e LK",
+      "Command": "KK > LK",
       "Startup": "11",
       "Active": "~",
       "Recovery": "16",
@@ -37593,7 +37593,7 @@
     "uid": 2497,
     "name": "Thunder Kick",
     "attributes": {
-      "Command": "KK \\u003e MK",
+      "Command": "KK > MK",
       "Startup": "11+18",
       "Active": "3",
       "Recovery": "20",
@@ -37617,7 +37617,7 @@
     "uid": 2498,
     "name": "Forward Step Kick",
     "attributes": {
-      "Command": "KK \\u003e HK",
+      "Command": "KK > HK",
       "Startup": "11+10",
       "Active": "4",
       "Recovery": "20",
@@ -37639,9 +37639,9 @@
   },
   {
     "uid": 2499,
-    "name": "Run \\u003e Shoryuken",
+    "name": "Run > Shoryuken",
     "attributes": {
-      "Command": "KK \\u003e f,d,df+P",
+      "Command": "KK > f,d,df+P",
       "Startup": "11+9",
       "Active": "11",
       "Recovery": "33+15",
@@ -37663,9 +37663,9 @@
   },
   {
     "uid": 2500,
-    "name": "Run \\u003e Tatsumaki Senpukyaku",
+    "name": "Run > Tatsumaki Senpukyaku",
     "attributes": {
-      "Command": "KK \\u003e qcb+K",
+      "Command": "KK > qcb+K",
       "Startup": "11+13",
       "Active": "2(2)3(2)2(2)3(2)2(2)3(2)2(2)3(2)2(5)3",
       "Recovery": "3+17",
@@ -37687,9 +37687,9 @@
   },
   {
     "uid": 2501,
-    "name": "Run \\u003e Dragonlash",
+    "name": "Run > Dragonlash",
     "attributes": {
-      "Command": "KK \\u003e f,d,df+K",
+      "Command": "KK > f,d,df+K",
       "Startup": "11+9",
       "Active": "4(5)6",
       "Recovery": "9+15",
@@ -38337,7 +38337,7 @@
     "uid": 2529,
     "name": "Step Up (neutral hop)",
     "attributes": {
-      "Command": "f+HK \\u003e u",
+      "Command": "f+HK > u",
       "Startup": "20",
       "Active": "~",
       "Recovery": "30+3",
@@ -38361,7 +38361,7 @@
     "uid": 2530,
     "name": "Step Up (forward hop)",
     "attributes": {
-      "Command": "f+HK \\u003e uf",
+      "Command": "f+HK > uf",
       "Startup": "20",
       "Active": "~",
       "Recovery": "30+3",
@@ -38385,7 +38385,7 @@
     "uid": 2531,
     "name": "Step Up (backward hop)",
     "attributes": {
-      "Command": "f+HK \\u003e ub",
+      "Command": "f+HK > ub",
       "Startup": "16",
       "Active": "~",
       "Recovery": "30+3",
@@ -38409,7 +38409,7 @@
     "uid": 2532,
     "name": "Bushin Prism Strikes 1",
     "attributes": {
-      "Command": "LP \\u003e MP",
+      "Command": "LP > MP",
       "Startup": "5+6",
       "Active": "2*3",
       "Recovery": "18",
@@ -38433,7 +38433,7 @@
     "uid": 2533,
     "name": "Bushin Prism Strikes 2",
     "attributes": {
-      "Command": "LP \\u003e MP \\u003e HP",
+      "Command": "LP > MP > HP",
       "Startup": "5+6+12",
       "Active": "2*3*2",
       "Recovery": "25",
@@ -38457,7 +38457,7 @@
     "uid": 2534,
     "name": "Bushin Prism Strikes 3",
     "attributes": {
-      "Command": "LP \\u003e MP \\u003e HP \\u003e HK",
+      "Command": "LP > MP > HP > HK",
       "Startup": "5+6+10+26",
       "Active": "2*3*2*3",
       "Recovery": "24",
@@ -38481,7 +38481,7 @@
     "uid": 2535,
     "name": "Bushin Hellchain 1",
     "attributes": {
-      "Command": "LP \\u003e MP \\u003e d+HP",
+      "Command": "LP > MP > d+HP",
       "Startup": "5+6+10",
       "Active": "2*3*2",
       "Recovery": "25",
@@ -38505,7 +38505,7 @@
     "uid": 2536,
     "name": "Bushin Hellchain 2",
     "attributes": {
-      "Command": "LP \\u003e MP \\u003e d+HP \\u003e HK",
+      "Command": "LP > MP > d+HP > HK",
       "Startup": "5+6+10+15",
       "Active": "2*3*3*3",
       "Recovery": "24",
@@ -38529,7 +38529,7 @@
     "uid": 2537,
     "name": "Bushin Hellchain Throw",
     "attributes": {
-      "Command": "LP \\u003e MP \\u003e d+HP \\u003e d+HK",
+      "Command": "LP > MP > d+HP > d+HK",
       "Startup": "5+6+10+15",
       "Active": "2*3*3*3*3",
       "Recovery": "23",
@@ -38553,7 +38553,7 @@
     "uid": 2538,
     "name": "Bushin Tiger Fangs",
     "attributes": {
-      "Command": "MP \\u003e HP",
+      "Command": "MP > HP",
       "Startup": "6+10",
       "Active": "3*3",
       "Recovery": "26",
@@ -39031,9 +39031,9 @@
   },
   {
     "uid": 2558,
-    "name": "Sprint \\u003e Torso Cleaver",
+    "name": "Sprint > Torso Cleaver",
     "attributes": {
-      "Command": "qcf+K \\u003e LK",
+      "Command": "qcf+K > LK",
       "Startup": "8+21",
       "Active": "7",
       "Recovery": "16",
@@ -39055,9 +39055,9 @@
   },
   {
     "uid": 2559,
-    "name": "Sprint \\u003e Shadow Slide",
+    "name": "Sprint > Shadow Slide",
     "attributes": {
-      "Command": "qcf+K \\u003e MK",
+      "Command": "qcf+K > MK",
       "Startup": "8+10",
       "Active": "12",
       "Recovery": "19",
@@ -39079,9 +39079,9 @@
   },
   {
     "uid": 2560,
-    "name": "Sprint \\u003e Neck Hunter",
+    "name": "Sprint > Neck Hunter",
     "attributes": {
-      "Command": "qcf+K \\u003e HK",
+      "Command": "qcf+K > HK",
       "Startup": "8+19",
       "Active": "5",
       "Recovery": "19",
@@ -39103,9 +39103,9 @@
   },
   {
     "uid": 2561,
-    "name": "Sprint \\u003e Emergency Stop",
+    "name": "Sprint > Emergency Stop",
     "attributes": {
-      "Command": "qcf+K \\u003e P",
+      "Command": "qcf+K > P",
       "Startup": "8+14",
       "Active": "~",
       "Recovery": "22 total",
@@ -39127,7 +39127,7 @@
   },
   {
     "uid": 2562,
-    "name": "Sprint \\u003e Arc Step",
+    "name": "Sprint > Arc Step",
     "attributes": {
       "Command": "qcf+K (proximity)",
       "Startup": "8+15",
@@ -39151,9 +39151,9 @@
   },
   {
     "uid": 2563,
-    "name": "Arc Step \\u003e Bushin Hojin Kick",
+    "name": "Arc Step > Bushin Hojin Kick",
     "attributes": {
-      "Command": "qcf+K (proximity) \\u003e K",
+      "Command": "qcf+K (proximity) > K",
       "Startup": "8+15+13",
       "Active": "6",
       "Recovery": "20",
@@ -39175,9 +39175,9 @@
   },
   {
     "uid": 2564,
-    "name": "Arc Step \\u003e Bushin Izuna Otoshi",
+    "name": "Arc Step > Bushin Izuna Otoshi",
     "attributes": {
-      "Command": "qcf+K (proximity) \\u003e P",
+      "Command": "qcf+K (proximity) > P",
       "Startup": "8+15+13",
       "Active": "6",
       "Recovery": "40",
@@ -39199,9 +39199,9 @@
   },
   {
     "uid": 2565,
-    "name": "OD Sprint \\u003e Torso Cleaver",
+    "name": "OD Sprint > Torso Cleaver",
     "attributes": {
-      "Command": "qcf+KK \\u003e LK",
+      "Command": "qcf+KK > LK",
       "Startup": "8+17",
       "Active": "7",
       "Recovery": "16",
@@ -39223,9 +39223,9 @@
   },
   {
     "uid": 2566,
-    "name": "OD Sprint \\u003e Shadow Slide",
+    "name": "OD Sprint > Shadow Slide",
     "attributes": {
-      "Command": "qcf+KK \\u003e MK",
+      "Command": "qcf+KK > MK",
       "Startup": "8+8",
       "Active": "8*4",
       "Recovery": "19",
@@ -39247,9 +39247,9 @@
   },
   {
     "uid": 2567,
-    "name": "OD Sprint \\u003e Neck Hunter",
+    "name": "OD Sprint > Neck Hunter",
     "attributes": {
-      "Command": "qcf+KK \\u003e HK",
+      "Command": "qcf+KK > HK",
       "Startup": "8+15",
       "Active": "2*3",
       "Recovery": "19",
@@ -39271,9 +39271,9 @@
   },
   {
     "uid": 2568,
-    "name": "OD Sprint \\u003e Emergency Stop",
+    "name": "OD Sprint > Emergency Stop",
     "attributes": {
-      "Command": "qcf+KK \\u003e P",
+      "Command": "qcf+KK > P",
       "Startup": "6+13",
       "Active": "~",
       "Recovery": "19 total",
@@ -39295,7 +39295,7 @@
   },
   {
     "uid": 2569,
-    "name": "OD Sprint \\u003e Arc Step",
+    "name": "OD Sprint > Arc Step",
     "attributes": {
       "Command": "qcf+KK (proximity)",
       "Startup": "8+13",
@@ -39319,9 +39319,9 @@
   },
   {
     "uid": 2570,
-    "name": "OD Arc Step \\u003e Bushin Hojin Kick",
+    "name": "OD Arc Step > Bushin Hojin Kick",
     "attributes": {
-      "Command": "qcf+KK (proximity) \\u003e K",
+      "Command": "qcf+KK (proximity) > K",
       "Startup": "8+13+13",
       "Active": "6",
       "Recovery": "20",
@@ -39343,9 +39343,9 @@
   },
   {
     "uid": 2571,
-    "name": "OD Arc Step \\u003e Bushin Izuna Otoshi",
+    "name": "OD Arc Step > Bushin Izuna Otoshi",
     "attributes": {
-      "Command": "qcf+KK (proximity) \\u003e P",
+      "Command": "qcf+KK (proximity) > P",
       "Startup": "8+13+13",
       "Active": "6",
       "Recovery": "40",
@@ -40101,7 +40101,7 @@
     "uid": 2605,
     "name": "Great Spin",
     "attributes": {
-      "Command": "j \\u003e d+HP",
+      "Command": "j > d+HP",
       "Startup": "9",
       "Active": "11",
       "Recovery": "~",
@@ -40123,7 +40123,7 @@
     "uid": 2606,
     "name": "Double Arrow",
     "attributes": {
-      "Command": "j+MP \\u003e j+MP",
+      "Command": "j+MP > j+MP",
       "Startup": "9+10",
       "Active": "4*3",
       "Recovery": "~",
@@ -40211,7 +40211,7 @@
     "uid": 2610,
     "name": "Desert Storm 2",
     "attributes": {
-      "Command": "f+HP \\u003e HP",
+      "Command": "f+HP > HP",
       "Startup": "18+20",
       "Active": "2*2",
       "Recovery": "27",
@@ -40233,7 +40233,7 @@
     "uid": 2611,
     "name": "Desert Storm Final",
     "attributes": {
-      "Command": "f+HP \\u003e HP \\u003e HP",
+      "Command": "f+HP > HP > HP",
       "Startup": "18+20+20",
       "Active": "2*2*5",
       "Recovery": "42",
@@ -41729,7 +41729,7 @@
     "uid": 2681,
     "name": "Double Impact",
     "attributes": {
-      "Command": "f+HP \\u003e f+HP",
+      "Command": "f+HP > f+HP",
       "Startup": "16+11",
       "Active": "3*2",
       "Recovery": "34",
@@ -41751,7 +41751,7 @@
     "uid": 2682,
     "name": "Nose Breaker",
     "attributes": {
-      "Command": "d+MK \\u003e d+HP",
+      "Command": "d+MK > d+HP",
       "Startup": "8+9",
       "Active": "3*3",
       "Recovery": "25",
@@ -41773,7 +41773,7 @@
     "uid": 2683,
     "name": "Triple Impact",
     "attributes": {
-      "Command": "LP \\u003e MP",
+      "Command": "LP > MP",
       "Startup": "6+8",
       "Active": "2*4",
       "Recovery": "20",
@@ -41795,7 +41795,7 @@
     "uid": 2684,
     "name": "Triple Impact 2",
     "attributes": {
-      "Command": "LP \\u003e MP \\u003e HP",
+      "Command": "LP > MP > HP",
       "Startup": "6+8+10",
       "Active": "2*4*3",
       "Recovery": "27",
@@ -41817,7 +41817,7 @@
     "uid": 2685,
     "name": "Snapback Combo",
     "attributes": {
-      "Command": "MP \\u003e MP",
+      "Command": "MP > MP",
       "Startup": "9+12",
       "Active": "4*2",
       "Recovery": "23",
@@ -41839,7 +41839,7 @@
     "uid": 2686,
     "name": "Snapback Combo 2",
     "attributes": {
-      "Command": "MP \\u003e MP \\u003e MP",
+      "Command": "MP > MP > MP",
       "Startup": "9+12+11",
       "Active": "4*2*2",
       "Recovery": "29",
@@ -41861,7 +41861,7 @@
     "uid": 2687,
     "name": "Snapback Combo 3",
     "attributes": {
-      "Command": "MP \\u003e MP \\u003e MP \\u003e MP",
+      "Command": "MP > MP > MP > MP",
       "Startup": "9+12+11+11",
       "Active": "4*2*2*2",
       "Recovery": "27",
@@ -42125,7 +42125,7 @@
     "uid": 2699,
     "name": "Fatal Shot",
     "attributes": {
-      "Command": "qcf+PP \\u003e PP",
+      "Command": "qcf+PP > PP",
       "Startup": "12",
       "Active": "~",
       "Recovery": "42",
@@ -42235,7 +42235,7 @@
     "uid": 2704,
     "name": "Slam Dunk",
     "attributes": {
-      "Command": "f,d,df+PP \\u003e PP",
+      "Command": "f,d,df+PP > PP",
       "Startup": "16",
       "Active": "3",
       "Recovery": "14+16",
@@ -42411,7 +42411,7 @@
     "uid": 2712,
     "name": "DDT",
     "attributes": {
-      "Command": "qcb+PP \\u003e PP",
+      "Command": "qcb+PP > PP",
       "Startup": "1",
       "Active": "~",
       "Recovery": "~",
@@ -42519,9 +42519,9 @@
   },
   {
     "uid": 2717,
-    "name": "Avenger \\u003e No Chaser",
+    "name": "Avenger > No Chaser",
     "attributes": {
-      "Command": "qcf+K \\u003e P",
+      "Command": "qcf+K > P",
       "Startup": "12+12",
       "Active": "7",
       "Recovery": "19",
@@ -42541,9 +42541,9 @@
   },
   {
     "uid": 2718,
-    "name": "Avenger \\u003e Impaler",
+    "name": "Avenger > Impaler",
     "attributes": {
-      "Command": "qcf+K \\u003e K",
+      "Command": "qcf+K > K",
       "Startup": "12+13",
       "Active": "8",
       "Recovery": "22(27)",
@@ -42585,9 +42585,9 @@
   },
   {
     "uid": 2720,
-    "name": "OD Avenger \\u003e No Chaser",
+    "name": "OD Avenger > No Chaser",
     "attributes": {
-      "Command": "qcf+KK \\u003e P",
+      "Command": "qcf+KK > P",
       "Startup": "11+12",
       "Active": "7",
       "Recovery": "19",
@@ -42607,9 +42607,9 @@
   },
   {
     "uid": 2721,
-    "name": "OD Avenger \\u003e Impaler",
+    "name": "OD Avenger > Impaler",
     "attributes": {
-      "Command": "qcf+KK \\u003e K",
+      "Command": "qcf+KK > K",
       "Startup": "11+13",
       "Active": "8",
       "Recovery": "19",
@@ -43181,7 +43181,7 @@
     "uid": 2748,
     "name": "En Haut",
     "attributes": {
-      "Command": "b+MK \\u003e MK",
+      "Command": "b+MK > MK",
       "Startup": "10+14",
       "Active": "4*5",
       "Recovery": "21",
@@ -43203,7 +43203,7 @@
     "uid": 2749,
     "name": "À Terre",
     "attributes": {
-      "Command": "MP \\u003e MK",
+      "Command": "MP > MK",
       "Startup": "7+10",
       "Active": "4*2",
       "Recovery": "17",
@@ -43225,7 +43225,7 @@
     "uid": 2750,
     "name": "Temps Lié",
     "attributes": {
-      "Command": "HP \\u003e HP",
+      "Command": "HP > HP",
       "Startup": "10+5",
       "Active": "4*2",
       "Recovery": "20(22)",
@@ -43247,7 +43247,7 @@
     "uid": 2751,
     "name": "Allongé",
     "attributes": {
-      "Command": "d+HP \\u003e HP",
+      "Command": "d+HP > HP",
       "Startup": "10*4",
       "Active": "5*4",
       "Recovery": "26",
@@ -43775,7 +43775,7 @@
     "uid": 2775,
     "name": "Grand Fouetté",
     "attributes": {
-      "Command": "qcf+P \\u003e K",
+      "Command": "qcf+P > K",
       "Startup": "16(18)+11",
       "Active": "6",
       "Recovery": "22",
@@ -43819,7 +43819,7 @@
     "uid": 2777,
     "name": "OD Grand Fouetté",
     "attributes": {
-      "Command": "qcf+PP \\u003e K",
+      "Command": "qcf+PP > K",
       "Startup": "15+11",
       "Active": "6",
       "Recovery": "22",
@@ -44479,7 +44479,7 @@
     "uid": 2808,
     "name": "Volare Combo",
     "attributes": {
-      "Command": "j+MP \\u003e j+MP",
+      "Command": "j+MP > j+MP",
       "Startup": "7+10",
       "Active": "4*3",
       "Recovery": "~",
@@ -44501,7 +44501,7 @@
     "uid": 2809,
     "name": "Caelum Arc",
     "attributes": {
-      "Command": "Neutral Jump \\u003e d+HP",
+      "Command": "Neutral Jump > d+HP",
       "Startup": "9",
       "Active": "9",
       "Recovery": "~",
@@ -44523,7 +44523,7 @@
     "uid": 2810,
     "name": "Caelum Arc (hold)",
     "attributes": {
-      "Command": "Neutral Jump \\u003e d+HP (hold)",
+      "Command": "Neutral Jump > d+HP (hold)",
       "Startup": "28(4)",
       "Active": "9",
       "Recovery": "~",
@@ -44567,7 +44567,7 @@
     "uid": 2812,
     "name": "Novacula Swipe",
     "attributes": {
-      "Command": "f+MP \\u003e HP",
+      "Command": "f+MP > HP",
       "Startup": "10+11",
       "Active": "2*2",
       "Recovery": "26",
@@ -44589,7 +44589,7 @@
     "uid": 2813,
     "name": "Novacula Thrust",
     "attributes": {
-      "Command": "f+MP \\u003e HK",
+      "Command": "f+MP > HK",
       "Startup": "10+11",
       "Active": "2*4",
       "Recovery": "23",
@@ -44655,7 +44655,7 @@
     "uid": 2816,
     "name": "Malleus Breaker",
     "attributes": {
-      "Command": "df+HP \\u003e df+HP",
+      "Command": "df+HP > df+HP",
       "Startup": "21(31)+18",
       "Active": "2*2",
       "Recovery": "24",
@@ -44765,7 +44765,7 @@
     "uid": 2821,
     "name": "Falx Crusher",
     "attributes": {
-      "Command": "f+HK \\u003e f+HK",
+      "Command": "f+HK > f+HK",
       "Startup": "14(27)+16",
       "Active": "4*5",
       "Recovery": "25",
@@ -44787,7 +44787,7 @@
     "uid": 2822,
     "name": "Light Two Hitter",
     "attributes": {
-      "Command": "LP \\u003e LP",
+      "Command": "LP > LP",
       "Startup": "6+14",
       "Active": "3*3",
       "Recovery": "22",
@@ -44809,7 +44809,7 @@
     "uid": 2823,
     "name": "Medium Two Hitter",
     "attributes": {
-      "Command": "MP \\u003e MP",
+      "Command": "MP > MP",
       "Startup": "7+14",
       "Active": "3*2",
       "Recovery": "23",
@@ -44831,7 +44831,7 @@
     "uid": 2824,
     "name": "Heavy Two Hitter",
     "attributes": {
-      "Command": "HP \\u003e HP",
+      "Command": "HP > HP",
       "Startup": "12(26)+24",
       "Active": "2*3",
       "Recovery": "19",
@@ -45271,7 +45271,7 @@
     "uid": 2844,
     "name": "LP Dimachaerus Follow-up",
     "attributes": {
-      "Command": "qcb+LP \\u003e f+P",
+      "Command": "qcb+LP > f+P",
       "Startup": "13",
       "Active": "5",
       "Recovery": "23",
@@ -45293,7 +45293,7 @@
     "uid": 2845,
     "name": "MP Dimachaerus Follow-up",
     "attributes": {
-      "Command": "qcb+MP \\u003e f+P",
+      "Command": "qcb+MP > f+P",
       "Startup": "13",
       "Active": "5",
       "Recovery": "24",
@@ -45315,7 +45315,7 @@
     "uid": 2846,
     "name": "HP Dimachaerus Follow-up",
     "attributes": {
-      "Command": "qcb+HP \\u003e f+P",
+      "Command": "qcb+HP > f+P",
       "Startup": "18",
       "Active": "5",
       "Recovery": "23",
@@ -45337,7 +45337,7 @@
     "uid": 2847,
     "name": "OD Dimachaerus Follow-up",
     "attributes": {
-      "Command": "qcb+PP \\u003e f+P",
+      "Command": "qcb+PP > f+P",
       "Startup": "13",
       "Active": "5",
       "Recovery": "23",
@@ -45623,7 +45623,7 @@
     "uid": 2860,
     "name": "Tonitrus 1",
     "attributes": {
-      "Command": "qcb+K \\u003e P",
+      "Command": "qcb+K > P",
       "Startup": "8+15",
       "Active": "3(2)",
       "Recovery": "23(25)",
@@ -45645,7 +45645,7 @@
     "uid": 2861,
     "name": "Tonitrus 2",
     "attributes": {
-      "Command": "qcb+K \\u003e P \\u003e P",
+      "Command": "qcb+K > P > P",
       "Startup": "8+15+20",
       "Active": "3(19)3",
       "Recovery": "36",
@@ -45667,7 +45667,7 @@
     "uid": 2862,
     "name": "Procella",
     "attributes": {
-      "Command": "qcb+K \\u003e K",
+      "Command": "qcb+K > K",
       "Startup": "8+16",
       "Active": "3",
       "Recovery": "37",
@@ -45689,7 +45689,7 @@
     "uid": 2863,
     "name": "Enfold",
     "attributes": {
-      "Command": "qcb+K \\u003e LP+LK",
+      "Command": "qcb+K > LP+LK",
       "Startup": "8+5",
       "Active": "3",
       "Recovery": "54",
@@ -46305,7 +46305,7 @@
     "uid": 2892,
     "name": "Backup",
     "attributes": {
-      "Command": "f+f \\u003e f+P",
+      "Command": "f+f > f+P",
       "Startup": "20+8",
       "Active": "10",
       "Recovery": "17",
@@ -46327,7 +46327,7 @@
     "uid": 2893,
     "name": "Tempest Moon",
     "attributes": {
-      "Command": "f+f \\u003e f+K",
+      "Command": "f+f > f+K",
       "Startup": "20+16",
       "Active": "2(4)3",
       "Recovery": "21",
@@ -46349,7 +46349,7 @@
     "uid": 2894,
     "name": "Tempest Moon (wind)",
     "attributes": {
-      "Command": "f+f \\u003e f+K (wind)",
+      "Command": "f+f > f+K (wind)",
       "Startup": "20+9",
       "Active": "3(21)2(3)3",
       "Recovery": "22",
@@ -46437,7 +46437,7 @@
     "uid": 2898,
     "name": "Rising Kick",
     "attributes": {
-      "Command": "MP \\u003e HK",
+      "Command": "MP > HK",
       "Startup": "6+13",
       "Active": "3*4",
       "Recovery": "36",
@@ -46481,7 +46481,7 @@
     "uid": 2900,
     "name": "Front Flip",
     "attributes": {
-      "Command": "b+KK \\u003e b,n,or f+KK",
+      "Command": "b+KK > b,n,or f+KK",
       "Startup": "~",
       "Active": "~",
       "Recovery": "51",
@@ -47251,7 +47251,7 @@
     "uid": 2935,
     "name": "Wing Stroke",
     "attributes": {
-      "Command": "qcb+P \\u003e b+K",
+      "Command": "qcb+P > b+K",
       "Startup": "32",
       "Active": "~",
       "Recovery": "6",
@@ -47273,7 +47273,7 @@
     "uid": 2936,
     "name": "Rolling Assault",
     "attributes": {
-      "Command": "qcb+P \\u003e f+K",
+      "Command": "qcb+P > f+K",
       "Startup": "~",
       "Active": "~",
       "Recovery": "33",
@@ -47295,7 +47295,7 @@
     "uid": 2937,
     "name": "Nail Assault",
     "attributes": {
-      "Command": "qcb+P \\u003e f+K \\u003e K",
+      "Command": "qcb+P > f+K > K",
       "Startup": "17",
       "Active": "3",
       "Recovery": "26",
@@ -47999,7 +47999,7 @@
     "uid": 2970,
     "name": "Fuwa Triple Strike 1",
     "attributes": {
-      "Command": "MP \\u003e LK",
+      "Command": "MP > LK",
       "Startup": "6+5",
       "Active": "4*3",
       "Recovery": "16",
@@ -48021,7 +48021,7 @@
     "uid": 2971,
     "name": "Fuwa Triple Strike 2",
     "attributes": {
-      "Command": "MP \\u003e LK \\u003e HK",
+      "Command": "MP > LK > HK",
       "Startup": "6+5+17",
       "Active": "4*3*4",
       "Recovery": "20",
@@ -48043,7 +48043,7 @@
     "uid": 2972,
     "name": "High Double Strike",
     "attributes": {
-      "Command": "HP \\u003e HK",
+      "Command": "HP > HK",
       "Startup": "10+9",
       "Active": "5*4",
       "Recovery": "20",
@@ -49407,7 +49407,7 @@
     "uid": 3035,
     "name": "Flying Headbutt",
     "attributes": {
-      "Command": "Neutral Jump \\u003e u+HP",
+      "Command": "Neutral Jump > u+HP",
       "Startup": "8",
       "Active": "4",
       "Recovery": "~",
@@ -49539,7 +49539,7 @@
     "uid": 3041,
     "name": "Machine Gun Chops 1",
     "attributes": {
-      "Command": "MP \\u003e MP",
+      "Command": "MP > MP",
       "Startup": "9+9",
       "Active": "4*4",
       "Recovery": "20",
@@ -49561,7 +49561,7 @@
     "uid": 3042,
     "name": "Machine Gun Chops 2",
     "attributes": {
-      "Command": "MP \\u003e MP \\u003e MP",
+      "Command": "MP > MP > MP",
       "Startup": "9+9+15",
       "Active": "4*4*3",
       "Recovery": "32",
@@ -49605,7 +49605,7 @@
     "uid": 3044,
     "name": "Power Stomps 1",
     "attributes": {
-      "Command": "d,d+MK \\u003e MK",
+      "Command": "d,d+MK > MK",
       "Startup": "9+9",
       "Active": "3*3",
       "Recovery": "19",
@@ -49627,7 +49627,7 @@
     "uid": 3045,
     "name": "Power Stomps 2",
     "attributes": {
-      "Command": "d,d+MK \\u003e MK \\u003e MK",
+      "Command": "d,d+MK > MK > MK",
       "Startup": "9+9+10",
       "Active": "3*3*3",
       "Recovery": "24",
