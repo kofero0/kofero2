@@ -56,7 +56,7 @@ open class ImageProviderImpl: ImageProvider {
         }
     }
     
-    public func get(url: String) -> Arrow_coreEither<ModelProviderError, NSString> {
+    public func get(url: String) async throws -> Arrow_coreEither<ModelProviderError, NSString> {
         do{
             return arrowExtensions.buildImageEitherRight(right: String(data: try Data(contentsOf: makeUrl(string: url)), encoding: .utf8)!)
         }
@@ -65,13 +65,11 @@ open class ImageProviderImpl: ImageProvider {
                 let group = DispatchGroup()
                 var data: Data? = nil
                 group.enter()
-                DispatchQueue.global(qos: .default).async { [self] in
-                    loggingProvider.log(level: .debug, logTag: "ImageProvider", message: "\(url) not on disk")
-                    restManager.dataTask(with: URLRequest(url: uRL), completionHandler: getRestClosure(url:url){ndata in
-                        data = ndata
-                        group.leave()
-                    }).resume()
-                }
+                loggingProvider.log(level: .debug, logTag: "ImageProvider", message: "\(url) not on disk")
+                restManager.dataTask(with: URLRequest(url: uRL), completionHandler: getRestClosure(url:url){ndata in
+                    data = ndata
+                    group.leave()
+                }).resume()
                 group.wait()
                 if let uData = data {
                     return arrowExtensions.buildImageEitherRight(right: String(data: uData, encoding: .utf8)!)

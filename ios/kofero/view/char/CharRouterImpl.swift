@@ -9,7 +9,7 @@ import Foundation
 import presenter
 
 class CharRouterImpl: CharacterRouter {
-    func routeTo(view: ModelEvent.ViewTag, uid: Int32) -> Bool {
+    func routeTo(view: ModelViewTag, uid: Int32) -> Bool {
         return false
     }
 }

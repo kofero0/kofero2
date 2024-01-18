@@ -44,15 +44,15 @@ class GameComponent: Component<GameDependency>, GameViewBuilder {
     }
     
     var presenter: GamePresenter {
-        return GamePresenterImpl(characterProvider: dependency.charProvider, gameProvider: gameProvider, imageProvider: dependency.imageProvider)
+        return GamePresenterImpl(characterProvider: dependency.charProvider, gameProvider: gameProvider, imageProvider: dependency.imageProvider, loggingProvider: dependency.loggingProvider)
     }
     
     var interactor: GameInteractor {
         return GameInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router, context: dependency.dispatcherProvider.default_)
     }
     
-    var router: Router {
-        return GameRouter(dependency.charViewBuilder, navController: dependency.navController)
+    var router: GameRouter {
+        return GameRouterImpl(dependency.charViewBuilder, navController: dependency.navController)
     }
     
     

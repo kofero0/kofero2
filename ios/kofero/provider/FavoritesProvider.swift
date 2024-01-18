@@ -17,30 +17,30 @@ public class FavoritesProviderImpl: FavoritesProvider {
         self.defaults = defaults
     }
     
-    public func delete(item: ModelObj) -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
-            let favs = defaults.object(forKey: FAVS_KEY)
-            if var uFavs = favs as? [ModelObj] {
-                uFavs.removeAll{obj in return obj.uid == item.uid}
-                defaults.set(uFavs, forKey: FAVS_KEY)
-                return arrowExtensions.buildUnitEitherRight()
-            }
-        return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
+    public func delete(id: Int32) async throws -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
+                    let favs = defaults.object(forKey: FAVS_KEY)
+                    if var uFavs = favs as? [ModelObj] {
+                        uFavs.removeAll{obj in return obj.uid == id}
+                        defaults.set(uFavs, forKey: FAVS_KEY)
+                        return arrowExtensions.buildUnitEitherRight()
+                    }
+                return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
     }
     
-    public func save(item: ModelObj) -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
-            let favs = defaults.object(forKey: FAVS_KEY)
-            if var uFavs = favs as? [ModelObj] {
-                uFavs.append(item)
-                defaults.set(uFavs, forKey: FAVS_KEY)
-                return arrowExtensions.buildUnitEitherRight()
-            }
-        return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
+    public func save(fav: ModelFavorite) async throws -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
+                    let favs = defaults.object(forKey: FAVS_KEY)
+                    if var uFavs = favs as? [ModelFavorite] {
+                        uFavs.append(fav)
+                        defaults.set(uFavs, forKey: FAVS_KEY)
+                        return arrowExtensions.buildUnitEitherRight()
+                    }
+                return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
     }
     
-    public func get(ids: [KotlinInt]) async throws -> Arrow_coreIor<ModelProviderError, NSArray> {
-        if let favs = defaults.object(forKey: FAVS_KEY) as? [ModelObj]{
-            return arrowExtensions.buildListIorRight(right: favs)
+    public func get() async throws -> Arrow_coreEither<ModelProviderError, NSArray> {
+        if let favs = defaults.object(forKey: FAVS_KEY) as? [ModelFavorite]{
+            return arrowExtensions.buildListEitherRight(right: favs)
         }
-        return arrowExtensions.buildListIorLeft(left: ModelIncorrectCount(ids: []))
+        return arrowExtensions.buildListEitherLeft(left: ModelIncorrectCount(ids: []))
     }
 }

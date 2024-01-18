@@ -13,6 +13,7 @@ import SwiftUI
 protocol HomeDependency: Dependency {
     var bannerAdUnitId:String {get}
     var gameProvider:GameProvider {get}
+    var charProvider:CharacterProvider {get}
     var gameViewBuilder:GameViewBuilder {get}
     var imageProvider:ImageProvider {get}
     var favoritesProvider:FavoritesProvider {get}
@@ -26,7 +27,7 @@ protocol HomeDependency: Dependency {
 class HomeComponent: Component<HomeDependency>, HomeViewBuilder {
     
     var presenter: HomePresenter {
-        return HomePresenterImpl(gameProvider: dependency.gameProvider, imageProvider: dependency.imageProvider, favoritesProvider: dependency.favoritesProvider, loggingProvider: dependency.loggingProvider)
+        return HomePresenterImpl(gameProvider: dependency.gameProvider, charProvider: dependency.charProvider, imageProvider: dependency.imageProvider, favoritesProvider: dependency.favoritesProvider, loggingProvider: dependency.loggingProvider)
     }
     
     var interactor: HomeInteractor {

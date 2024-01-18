@@ -28,10 +28,6 @@ struct GameView: View {
     }
     
     class GameViewModel: ObservableObject, GameKView {
-        func displayGameError(error: ModelError) {
-            <#code#>
-        }
-        
         @Published var game: ModelGame? = nil
         @Published var chars: [ModelCharacter] = []
         @Published var urlsToImages: [String:String] = [:]
@@ -59,7 +55,12 @@ struct GameView: View {
             lastException = e
         }
         
-        
+        func display(url: String, imgBase64: String) async throws {
+            urlsToImages[url] = imgBase64
+        }
+            
+        func displayGameError(error: ModelError) {
+        }
     }
 }
 
@@ -70,8 +71,10 @@ struct GameView_Previews: PreviewProvider {
 }
 
 class MockGameInteractor: GameInteractor {
+    func charPressed(char char_: ModelCharacter) async throws {
+    }
+    
     func setGameUid(uid: Int32) async throws {
-        <#code#>
     }
     
     func charPressed(char char_: ModelCharacter) {

@@ -18,6 +18,10 @@ object ArrowExtensions {
 
     fun buildListIorBoth(left: ProviderError, right: NSArray): Ior<ProviderError, NSArray> = Ior.Both(left, right)
 
+    fun buildListEitherLeft(left: ProviderError): Either<ProviderError, NSArray> = Either.Left(left)
+
+    fun buildListEitherRight(right: NSArray): Either<ProviderError, NSArray> = Either.Right(right)
+
     fun buildUnitEitherLeft(left: ProviderError): Either<ProviderError, Unit> = Either.Left(left)
 
     fun buildUnitEitherRight(): Either<ProviderError, Unit> = Either.Right(Unit)

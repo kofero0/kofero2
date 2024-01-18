@@ -32,7 +32,7 @@ struct CharView: View {
         @Published var lastError: ModelError? = nil
         @Published var lastException: KotlinException? = nil
         
-        func display(url: String, imgBase64: String) {
+        func display(url: String, imgBase64: String) async throws {
             urlsToImages[url] = imgBase64
         }
         
@@ -51,6 +51,10 @@ struct CharView: View {
         func error(e: KotlinException) {
             lastException = e
         }
+        
+        func displayCharError(error: ModelError) {
+            lastError = error
+        }
     }
 }
 
@@ -61,7 +65,7 @@ struct CharView_Previews: PreviewProvider {
 }
 
 class MockCharInteractor: CharacterInteractor {
-    func setCharUid(uid: Int32) {}
+    func setCharUid(uid: Int32) async throws {}
     func setView(view: KView) {}
     func shutdown() {}
     func viewPaused() {}

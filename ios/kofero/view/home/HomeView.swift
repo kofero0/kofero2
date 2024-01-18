@@ -56,6 +56,10 @@ struct HomeView: View {
         func displayGamesError(error: ModelError) {
             lastError = error
         }
+        
+        func display(url: String, imgBase64: String) async throws {
+            urlsToImages[url] = imgBase64
+        }
     }
 }
 

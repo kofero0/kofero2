@@ -40,8 +40,12 @@ class RootComponent: BootstrapComponent {
         return gameComponent.gameProvider
     }
     
+    var statusProvider: StatusProvider {
+        return StatusProviderImpl()
+    }
+    
     var rootPresenter: RootPresenter {
-        return RootPresenterImpl(gameProvider: gameProvider, loggingProvider: loggingProvider)
+        return RootPresenterImpl(statusProvider: statusProvider, loggingProvider: loggingProvider)
     }
     
     var imageProvider:ImageProvider {
@@ -98,14 +102,6 @@ class RootComponent: BootstrapComponent {
     
     var loggingProvider: LoggingProvider {
         return LoggingProviderImpl()
-    }
-    
-    var stateLogger: StateLogger {
-        return StateLoggerImpl(stateRepository: stateRepository, loggingProvider: loggingProvider)
-    }
-    
-    var stateRepository: StateProvider {
-        return StateProviderImpl()
     }
     
     var stateReducer: StateReducer {
