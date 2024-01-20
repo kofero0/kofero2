@@ -8,8 +8,8 @@ import okhttp3.Response
 import ro.kofe.model.HeaderKeys
 import ro.kofe.model.logging.Level
 import ro.kofe.presenter.DispatcherProvider
+import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.LoggingProvider
-import ro.kofe.provider.AuthProvider
 import java.net.ConnectException
 import java.util.concurrent.CompletableFuture
 

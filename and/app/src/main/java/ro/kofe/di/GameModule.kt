@@ -9,19 +9,21 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import ro.kofe.map.GameMapper
-import ro.kofe.map.Mapper
 import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.presenter.DispatcherProvider
+import ro.kofe.presenter.HttpClientProvider
 import ro.kofe.presenter.ipv.game.*
+import ro.kofe.presenter.map.Mapper
+import ro.kofe.presenter.provider.DiskAccessor
+import ro.kofe.presenter.provider.GameProvider
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 import ro.kofe.provider.LoggingProviderImpl
-import ro.kofe.provider.ProviderImpl
-import ro.kofe.router.GameRouterImpl
+import ro.kofe.router.RouterImpl
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -51,17 +53,17 @@ object GameModule {
         GamePresenterImpl(charProvider, gameProvider, imageProvider, LoggingProviderImpl())
 
     @Provides
-    fun provideGameMapper(gson: Gson): Mapper<List<Game>, ByteArray> = GameMapper(gson)
+    fun provideGameMapper(gson: Gson): Mapper<List<Game>, String> = GameMapper(gson)
 
     @Provides
     fun provideGameProvider(
-        gson: Gson,
-        okHttp: OkHttpClient,
-        @ApplicationContext context: Context,
         @RootModule.UrlPrefix urlPrefix: String,
-        mapper: Mapper<List<Game>, ByteArray>
-    ): Provider<Game> = ProviderImpl(gson, okHttp, context, "game", urlPrefix, mapper)
+        accessor: DiskAccessor,
+        mapper: Mapper<List<Game>, String>,
+        requestMapper: Mapper<List<Int>, String>,
+    ): Provider<Game> = GameProvider(HttpClientProvider.provide(),"game",urlPrefix,mapper,requestMapper,accessor)
+
 
     @Provides
-    fun provideGameRouter(): GameRouter = GameRouterImpl()
+    fun provideGameRouter(): GameRouter = RouterImpl()
 }

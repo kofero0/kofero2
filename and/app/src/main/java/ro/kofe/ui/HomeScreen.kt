@@ -43,14 +43,14 @@ fun HomeScreen(
                     is Character -> {
                         RowItem(title = fav.name, image = images[fav.iconUrl]) {
                             viewModel.favPressed(fav)
-                            onNavigate(ViewTag.CHAR_VIEW, favs[it].uid)
+                            onNavigate(ViewTag.CHAR_VIEW, fav.uid)
                         }
                     }
 
                     is Game -> {
                         RowItem(title = fav.name, image = images[fav.iconUrl]) {
                             viewModel.favPressed(fav)
-                            onNavigate(ViewTag.GAME_VIEW, favs[it].uid)
+                            onNavigate(ViewTag.GAME_VIEW, fav.uid)
                         }
                     }
                 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.commonMain.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.commonMain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.commonTest.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.commonTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.iosArm64Main.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.iosArm64Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.iosArm64Test.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.iosArm64Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.iosMain.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.iosMain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.iosTest.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.iosTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.iosX64Main.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.iosX64Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.iosX64Test.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.iosX64Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.jvmMain.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.jvmMain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/kofero.model.jvmTest.iml" filepath="$PROJECT_DIR$/.idea/modules/model/kofero.model.jvmTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.commonMain.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.commonMain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.commonTest.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.commonTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosArm64Main.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosArm64Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosArm64Test.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosArm64Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosMain.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosMain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosTest.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosX64Main.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosX64Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosX64Test.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.iosX64Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.jvmMain.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.jvmMain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.jvmTest.iml" filepath="$PROJECT_DIR$/.idea/modules/presenter/kofero.presenter.jvmTest.iml" />
+    </modules>
+  </component>
+</project>

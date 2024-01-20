@@ -7,9 +7,9 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import ro.kofe.map.Mapper
 import ro.kofe.map.StateMapMapper
 import ro.kofe.model.Event
+import ro.kofe.presenter.map.Mapper
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 import ro.kofe.presenter.state.StateReducerImpl

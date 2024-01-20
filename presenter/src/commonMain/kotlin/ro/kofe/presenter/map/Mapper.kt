@@ -1,5 +1,4 @@
-package ro.kofe.map
-
+package ro.kofe.presenter.map
 
 interface Mapper<Left, Right> {
     fun mapRight(data: Left): Right

@@ -5,6 +5,7 @@ import platform.darwin.dispatch_async
 import platform.darwin.dispatch_get_main_queue
 import kotlin.coroutines.CoroutineContext
 
+@Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 @DelicateCoroutinesApi
 @OptIn(ExperimentalCoroutinesApi::class)
 actual object DispatcherProvider {

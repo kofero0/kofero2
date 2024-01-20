@@ -41,7 +41,7 @@ class RootComponent: BootstrapComponent {
     }
     
     var statusProvider: StatusProvider {
-        return StatusProviderImpl()
+        return StatusProviderImpl(core: providerCore, loggingProvider: loggingProvider, url: URL(string: "https://google.com")!, statusMapper: StatusMapper(encoder: jsonEncoder))
     }
     
     var rootPresenter: RootPresenter {

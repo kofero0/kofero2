@@ -20,7 +20,7 @@
 		4BD71A6A2A85F52000EB8752 /* CharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A652A85F52000EB8752 /* CharacterMapper.swift */; };
 		4BD71A6B2A85F52000EB8752 /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A662A85F52000EB8752 /* GameMapper.swift */; };
 		4BD71A722A85F59800EB8752 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */; };
-		4BD71A732A85F59800EB8752 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6E2A85F59800EB8752 /* Provider.swift */; };
+		4BD71A732A85F59800EB8752 /* ProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6E2A85F59800EB8752 /* ProviderImpl.swift */; };
 		4BD71A742A85F59800EB8752 /* FavoritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */; };
 		4BD71A752A85F59800EB8752 /* ProviderCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A702A85F59800EB8752 /* ProviderCore.swift */; };
 		4BD71A762A85F59800EB8752 /* LoggingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A712A85F59800EB8752 /* LoggingProvider.swift */; };
@@ -39,6 +39,8 @@
 		4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA72A8F15BD00EB8752 /* Typealias.swift */; };
 		4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA92A8F165F00EB8752 /* RootView.swift */; };
 		4BF5B6752B588D28003D600E /* StatusProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6742B588D28003D600E /* StatusProvider.swift */; };
+		4BF5B6772B5A1A57003D600E /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6762B5A1A57003D600E /* Publisher.swift */; };
+		4BF5B6792B5A202E003D600E /* StatusMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6782B5A202E003D600E /* StatusMapper.swift */; };
 		9E169777FF902B2091A95DCA /* Pods_kofero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976876D6C60861A8745D9EA3 /* Pods_kofero.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +60,7 @@
 		4BD71A652A85F52000EB8752 /* CharacterMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMapper.swift; sourceTree = "<group>"; };
 		4BD71A662A85F52000EB8752 /* GameMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
 		4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
-		4BD71A6E2A85F59800EB8752 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		4BD71A6E2A85F59800EB8752 /* ProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderImpl.swift; sourceTree = "<group>"; };
 		4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesProvider.swift; sourceTree = "<group>"; };
 		4BD71A702A85F59800EB8752 /* ProviderCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderCore.swift; sourceTree = "<group>"; };
 		4BD71A712A85F59800EB8752 /* LoggingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingProvider.swift; sourceTree = "<group>"; };
@@ -77,6 +79,8 @@
 		4BD71AA72A8F15BD00EB8752 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		4BD71AA92A8F165F00EB8752 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		4BF5B6742B588D28003D600E /* StatusProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusProvider.swift; sourceTree = "<group>"; };
+		4BF5B6762B5A1A57003D600E /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
+		4BF5B6782B5A202E003D600E /* StatusMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMapper.swift; sourceTree = "<group>"; };
 		5926CEBBF3AC4FF4D9BE7E25 /* Pods-kofero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kofero.release.xcconfig"; path = "Target Support Files/Pods-kofero/Pods-kofero.release.xcconfig"; sourceTree = "<group>"; };
 		976876D6C60861A8745D9EA3 /* Pods_kofero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kofero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC45A293C1DC511ECF799781 /* Pods-kofero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kofero.debug.xcconfig"; path = "Target Support Files/Pods-kofero/Pods-kofero.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */,
 				4BD71A502A85EB9E00EB8752 /* Assets.xcassets */,
 				4BD71A522A85EB9E00EB8752 /* Preview Content */,
+				4BF5B6762B5A1A57003D600E /* Publisher.swift */,
 			);
 			path = kofero;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				4BD71A662A85F52000EB8752 /* GameMapper.swift */,
 				4BD71A622A85F52000EB8752 /* Mapper.swift */,
 				4BD71A632A85F52000EB8752 /* MoveMapper.swift */,
+				4BF5B6782B5A202E003D600E /* StatusMapper.swift */,
 			);
 			path = mapper;
 			sourceTree = "<group>";
@@ -166,7 +172,7 @@
 				4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */,
 				4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */,
 				4BD71A712A85F59800EB8752 /* LoggingProvider.swift */,
-				4BD71A6E2A85F59800EB8752 /* Provider.swift */,
+				4BD71A6E2A85F59800EB8752 /* ProviderImpl.swift */,
 				4BD71A702A85F59800EB8752 /* ProviderCore.swift */,
 				4BD71AA72A8F15BD00EB8752 /* Typealias.swift */,
 				4BF5B6742B588D28003D600E /* StatusProvider.swift */,
@@ -385,15 +391,17 @@
 				4BD71A9B2A8D8F9D00EB8752 /* CharView.swift in Sources */,
 				4BD71A752A85F59800EB8752 /* ProviderCore.swift in Sources */,
 				4BD71A8F2A8B0D7300EB8752 /* CharacterComponent.swift in Sources */,
-				4BD71A732A85F59800EB8752 /* Provider.swift in Sources */,
+				4BD71A732A85F59800EB8752 /* ProviderImpl.swift in Sources */,
 				4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */,
 				4BD71A5F2A85F4DC00EB8752 /* DataEncoder.swift in Sources */,
 				4BD71A6A2A85F52000EB8752 /* CharacterMapper.swift in Sources */,
 				4BD71A682A85F52000EB8752 /* MoveMapper.swift in Sources */,
 				4BD71A692A85F52000EB8752 /* DataMapper.swift in Sources */,
 				4BD71A902A8B0D7300EB8752 /* HomeComponent.swift in Sources */,
+				4BF5B6772B5A1A57003D600E /* Publisher.swift in Sources */,
 				4BD71A8D2A8B0D7300EB8752 /* RootComponent.swift in Sources */,
 				4BD71A9D2A8D903A00EB8752 /* HomeRouterImpl.swift in Sources */,
+				4BF5B6792B5A202E003D600E /* StatusMapper.swift in Sources */,
 				4BD71AA42A8F086000EB8752 /* GameRouter.swift in Sources */,
 				4BD71A8E2A8B0D7300EB8752 /* MoveComponent.swift in Sources */,
 				4BD71AA12A8EAECF00EB8752 /* Extension.swift in Sources */,

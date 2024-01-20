@@ -1,8 +1,8 @@
 package ro.kofe.state
 
 import android.content.Context
-import ro.kofe.map.Mapper
 import ro.kofe.model.Event
+import ro.kofe.presenter.map.Mapper
 import ro.kofe.presenter.state.StateLogger
 import java.io.File
 

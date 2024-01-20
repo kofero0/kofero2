@@ -1,6 +1,5 @@
 package ro.kofe.view
 
-import android.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -9,7 +8,6 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import ro.kofe.model.Error
 import ro.kofe.model.Game
-import ro.kofe.model.Obj
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.home.HomeInteractor
 import ro.kofe.presenter.ipv.home.HomeKView
@@ -23,7 +21,7 @@ class HomeViewModel @Inject constructor(
         interactor.setView(this)
     }
 
-    private val _favs = MutableStateFlow<List<Obj>>(ArrayList())
+    private val _favs = MutableStateFlow<List<Any>>(ArrayList())
     val favs = _favs.asStateFlow()
 
     private val _games = MutableStateFlow<List<Game>>(ArrayList())
@@ -35,7 +33,7 @@ class HomeViewModel @Inject constructor(
     private val _gameError = MutableStateFlow<Error?>(null)
     val gameError = _gameError.asStateFlow()
 
-    fun favPressed(obj: Obj) = CoroutineScope(DispatcherProvider.default).launch {
+    fun favPressed(obj: Any) = CoroutineScope(DispatcherProvider.default).launch {
         interactor.favPressed(obj)
     }
 
@@ -43,7 +41,7 @@ class HomeViewModel @Inject constructor(
         interactor.gamePressed(game)
     }
 
-    override fun displayFavs(favorites: List<Obj>) = _favs.update {
+    override fun displayFavs(favorites: List<Any>) = _favs.update {
         favorites
     }
 

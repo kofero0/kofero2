@@ -1,13 +1,11 @@
 package ro.kofe.presenter.ipv.home
 
 import arrow.core.raise.either
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import ro.kofe.model.Character
 import ro.kofe.model.Favorite
 import ro.kofe.model.Game
 import ro.kofe.model.InvalidObject
-import ro.kofe.model.Obj
 import ro.kofe.model.logging.LogTag.HOME_PRESENTER
 import ro.kofe.presenter.ipv.PresenterImpl
 import ro.kofe.presenter.provider.FavoritesProvider
@@ -61,7 +59,7 @@ class HomePresenterImpl(
                 gameEither.fold({
                     view?.displayFavsError(it)
                 }) { games ->
-                    val objs = ArrayList<Obj>()
+                    val objs = ArrayList<Any>()
                     for(game in games){
                         if(gameUids.contains(game.uid)){
                             objs.add(game)
@@ -86,12 +84,12 @@ class HomePresenterImpl(
         }
     }
 
-    private suspend fun displayImages(objs: List<Obj>) = either {
+    private suspend fun displayImages(objs: List<Any>) = either {
         for (obj in objs) {
             when (obj) {
                 is Character -> getImage(obj.iconUrl)
                 is Game -> getImage(obj.iconUrl)
-                else -> raise(InvalidObject(obj.uid))
+                else -> raise(InvalidObject(999))
             }
         }
     }

@@ -2,13 +2,12 @@ package ro.kofe.presenter.provider
 
 import arrow.core.Either
 import kotlinx.coroutines.flow.Flow
-import ro.kofe.model.Obj
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.Cancellable
 import ro.kofe.presenter.collect
 
 
-interface Provider<T : Obj> {
+interface Provider<T> {
     fun get(ids: List<Int>): Flow<Either<ProviderError, List<T>>>
 
     fun get(

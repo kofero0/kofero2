@@ -10,11 +10,11 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import ro.kofe.AuthInterceptor
 import ro.kofe.LoggingInterceptor
-import ro.kofe.map.FavoritesMapper
-import ro.kofe.map.Mapper
-import ro.kofe.model.Obj
+import ro.kofe.map.RequestMapper
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.root.*
+import ro.kofe.presenter.map.Mapper
+import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
@@ -22,7 +22,7 @@ import ro.kofe.presenter.provider.StatusProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 import ro.kofe.provider.*
-import ro.kofe.router.RootRouterImpl
+import ro.kofe.router.RouterImpl
 import javax.inject.Qualifier
 
 @Module
@@ -31,6 +31,9 @@ object RootModule {
 
     @Qualifier
     annotation class UrlPrefix
+
+    @Provides
+    fun provideRequestMapper(gson: Gson): Mapper<List<Int>, String> = RequestMapper(gson)
 
     @Provides
     @UrlPrefix
@@ -79,9 +82,6 @@ object RootModule {
     fun provideLoggingProvider(): LoggingProvider = LoggingProviderImpl()
 
     @Provides
-    fun provideFavoritesMapper(gson: Gson): Mapper<List<Obj>, ByteArray> = FavoritesMapper(gson)
-
-    @Provides
     fun provideRootPresenter(
         logger: LoggingProvider, provider: StatusProvider
     ): RootPresenter = RootPresenterImpl(provider, logger)
@@ -98,7 +98,7 @@ object RootModule {
     )
 
     @Provides
-    fun provideRootRouter(): RootRouter = RootRouterImpl()
+    fun provideRootRouter(): RootRouter = RouterImpl()
 
     @Provides
     fun provideImageProvider(

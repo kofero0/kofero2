@@ -3,15 +3,16 @@ package ro.kofe.map
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import ro.kofe.model.Game
+import ro.kofe.presenter.map.Mapper
 import java.nio.charset.Charset
 
 
-class GameMapper(private val gson: Gson) : Mapper<List<Game>, ByteArray> {
+class GameMapper(private val gson: Gson) : Mapper<List<Game>, String> {
     private val typeToken = object : TypeToken<ArrayList<Game>>() {}.type
 
-    override fun mapRight(data: List<Game>) =
-        gson.toJson(data).toByteArray(Charset.defaultCharset())
+    override fun mapRight(data: List<Game>): String =
+        gson.toJson(data)
 
-    override fun mapLeft(data: ByteArray): List<Game> =
-        gson.fromJson(String(data, Charset.defaultCharset()), typeToken)
+    override fun mapLeft(data: String): List<Game> =
+        gson.fromJson(data, typeToken)
 }

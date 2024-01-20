@@ -15,12 +15,9 @@ import ro.kofe.model.authDelimiter
 import ro.kofe.model.authPrefix
 import ro.kofe.model.request.RegisterAuthRequest
 import ro.kofe.model.response.RegisterAuthResponse
+import ro.kofe.presenter.provider.AuthProvider
 import java.io.File
 import java.util.concurrent.CompletableFuture
-
-interface AuthProvider {
-    suspend fun get(): Either<ProviderError, String>
-}
 
 class AuthProviderImpl(
     private val gson: Gson,

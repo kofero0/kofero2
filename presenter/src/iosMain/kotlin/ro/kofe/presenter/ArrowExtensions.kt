@@ -5,8 +5,13 @@ import arrow.core.Ior
 import platform.Foundation.NSArray
 import platform.Foundation.NSDictionary
 import ro.kofe.model.ProviderError
+import ro.kofe.model.Status
 
 object ArrowExtensions {
+
+    fun buildStatusEitherLeft(left: ProviderError): Either<ProviderError,Status> = Either.Left(left)
+
+    fun buildStatusEitherRight(right: Status): Either<ProviderError,Status> = Either.Right(right)
 
     fun buildImageEitherLeft(left: ProviderError): Either<ProviderError, String> = Either.Left(left)
 

@@ -2,7 +2,6 @@ package ro.kofe.presenter.provider
 
 import arrow.core.Either
 import ro.kofe.model.Favorite
-import ro.kofe.model.Obj
 import ro.kofe.model.ProviderError
 
 interface FavoritesProvider {

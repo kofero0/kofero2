@@ -1,3 +1,8 @@
+@file:OptIn(ExperimentalKotlinGradlePluginApi::class)
+
+import org.jetbrains.kotlin.gradle.DeprecatedTargetPresetApi
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.InternalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.plugin.mpp.Framework.BitcodeEmbeddingMode.BITCODE
 import org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType
 
@@ -5,6 +10,7 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("maven-publish")
+    kotlin("plugin.serialization") version "1.9.20"
 }
 
 val frameworkName = "presenter"
@@ -42,6 +48,7 @@ kotlin {
     ios("ios")
 
 
+    @OptIn(DeprecatedTargetPresetApi::class, InternalKotlinGradlePluginApi::class)
     targets {
         iosArm64("iosArm64") {
             binaries.framework {
@@ -62,6 +69,7 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(project(":model"))
+                implementation("io.ktor:ktor-client-core:2.3.7")
                 implementation("com.soywiz.korlibs.klock:klock:2.4.13")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
                 implementation("io.arrow-kt:arrow-core:1.2.0")
@@ -75,11 +83,13 @@ kotlin {
         val iosMain by getting {
             dependencies {
                 commonMain
+                implementation("io.ktor:ktor-client-darwin:2.3.7")
             }
         }
         val jvmMain by getting {
             dependencies {
                 commonMain
+                implementation("io.ktor:ktor-client-okhttp:2.3.7")
             }
         }
     }
