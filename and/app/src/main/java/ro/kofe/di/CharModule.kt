@@ -12,6 +12,7 @@ import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.HttpClientProvider
 import ro.kofe.presenter.ipv.character.*
 import ro.kofe.presenter.map.Mapper
+import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.CharProvider
 import ro.kofe.presenter.provider.DiskAccessor
 import ro.kofe.presenter.provider.ImageProvider
@@ -47,12 +48,13 @@ object CharModule {
 
     @Provides
     fun provideCharProvider(
+        authProvider: AuthProvider,
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Character>, String>,
         requestMapper: Mapper<List<Int>, String>,
         diskAccessor: DiskAccessor
     ): Provider<Character> = CharProvider(
-        HttpClientProvider.provide(),"char",urlPrefix,mapper,requestMapper,diskAccessor
+        HttpClientProvider.provideAuth(authProvider),"char",urlPrefix,mapper,requestMapper,diskAccessor
     )
 
     @Provides

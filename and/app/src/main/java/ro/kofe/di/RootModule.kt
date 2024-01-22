@@ -12,9 +12,11 @@ import ro.kofe.AuthInterceptor
 import ro.kofe.LoggingInterceptor
 import ro.kofe.map.RequestMapper
 import ro.kofe.presenter.DispatcherProvider
+import ro.kofe.presenter.HttpClientProvider
 import ro.kofe.presenter.ipv.root.*
 import ro.kofe.presenter.map.Mapper
 import ro.kofe.presenter.provider.AuthProvider
+import ro.kofe.presenter.provider.DiskAccessor
 import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
@@ -32,8 +34,25 @@ object RootModule {
     @Qualifier
     annotation class UrlPrefix
 
+    @Qualifier
+    annotation class AuthClient
+
+    @Qualifier
+    annotation class NoAuthClient
+
+    @Provides
+    @AuthClient
+    fun provideAuthClient(authProvider: AuthProvider) = HttpClientProvider.provideAuth(authProvider)
+
+    @Provides
+    @NoAuthClient
+    fun provideNoAuthClient() = HttpClientProvider.provideNoAuth()
+
     @Provides
     fun provideRequestMapper(gson: Gson): Mapper<List<Int>, String> = RequestMapper(gson)
+
+    @Provides
+    fun provideDiskAccessor(@ApplicationContext context: Context): DiskAccessor = DiskAccessorImpl(context)
 
     @Provides
     @UrlPrefix

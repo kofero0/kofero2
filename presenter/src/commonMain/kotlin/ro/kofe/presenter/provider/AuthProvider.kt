@@ -5,5 +5,5 @@ import ro.kofe.model.ProviderError
 
 
 interface AuthProvider {
-    suspend fun get(): Either<ProviderError, String>
+    fun get(): Either<ProviderError, String>
 }

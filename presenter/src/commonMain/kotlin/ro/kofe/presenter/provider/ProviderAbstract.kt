@@ -4,6 +4,7 @@ import arrow.core.raise.either
 import io.ktor.client.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
+import io.ktor.http.*
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.internal.SynchronizedObject
@@ -40,6 +41,7 @@ abstract class ProviderAbstract<T>(
 
     private suspend fun send(ids: List<Int>) = either {
         val response = client.put("$urlPrefix/$jsonFilename"){
+            contentType(ContentType.Application.Json)
             setBody(requestMapper.mapRight(ids))
         }
         if(response.status.value in 200..299){
@@ -55,7 +57,7 @@ abstract class ProviderAbstract<T>(
                 elements.removeAll { isEqual(it,element) }
                 elements.add(element)
             }
-            diskAccessor.write(mapper.mapRight(elements))
+            diskAccessor.write(jsonFilename, mapper.mapRight(elements))
         }
     }
 
