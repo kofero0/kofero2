@@ -28,20 +28,20 @@ class RootComponent: BootstrapComponent {
         return MoveComponent(parent: self)
     }
     
-    var moveProvider: MoveProviderImpl {
+    var moveProvider: ProviderAbstract<ModelMove> {
         return moveComponent.provider
     }
     
-    var charProvider: CharProviderImpl {
+    var charProvider: ProviderAbstract<ModelCharacter> {
         return characterComponent.provider
     }
     
-    var gameProvider: GameProviderImpl {
+    var gameProvider: ProviderAbstract<ModelGame> {
         return gameComponent.gameProvider
     }
     
     var statusProvider: StatusProvider {
-        return StatusProviderImpl(core: providerCore, loggingProvider: loggingProvider, url: URL(string: "https://google.com")!, statusMapper: StatusMapper(encoder: jsonEncoder))
+        return StatusProviderImpl(loggingProvider: loggingProvider, url: URL(string: "https://google.com")!, statusMapper: StatusMapper(encoder: jsonEncoder))
     }
     
     var rootPresenter: RootPresenter {
@@ -49,11 +49,7 @@ class RootComponent: BootstrapComponent {
     }
     
     var imageProvider:ImageProvider {
-        return ImageProviderImpl(core: providerCore, loggingProvider: loggingProvider)
-    }
-    
-    var providerCore:ProviderCore {
-        return ProviderCore(restManager: restManager, fileManager: fileManager, userDefaults: userDefaults, requestEncoder: requestEncoder)
+        return ImageProviderImpl(loggingProvider: loggingProvider)
     }
     
     var restManager:RestManager {
@@ -110,5 +106,9 @@ class RootComponent: BootstrapComponent {
     
     var dispatcherProvider: DispatcherProvider {
         return DispatcherProvider()
+    }
+    
+    var authProvider: AuthProvider {
+        return AuthProviderImpl()
     }
 }

@@ -12,9 +12,8 @@ import SwiftUI
 import SwiftyJSON
 
 protocol CharacterDependency: Dependency {
-    var moveProvider: MoveProviderImpl {get}
+    var moveProvider: ProviderAbstract<ModelMove> {get}
     var imageProvider: ImageProvider {get}
-    var providerCore:ProviderCore {get}
     var jsonEncoder:StringEncoder<[JSON]> {get}
     var bannerAdUnitId: String {get}
     var loggingProvider: LoggingProvider {get}
@@ -28,7 +27,7 @@ protocol CharacterDependency: Dependency {
 }
 
 class CharacterComponent: Component<CharacterDependency>, CharViewBuilder {
-    var provider: CharProviderImpl {
+    var provider: ProviderAbstract<ModelCharacter> {
         return CharProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "char", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     

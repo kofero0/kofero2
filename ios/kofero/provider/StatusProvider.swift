@@ -8,6 +8,8 @@
 import Foundation
 import presenter
 
+
+//TODO: DEPRECATED, REPLACE
 class StatusProviderImpl: StatusProvider {
     public let restManager:RestManager
     private let loggingProvider:LoggingProvider
@@ -15,9 +17,9 @@ class StatusProviderImpl: StatusProvider {
     private let mapper:StatusMapper
     private let arrowExtensions = ArrowExtensions()
     
-    public init(core:ProviderCore, loggingProvider: LoggingProvider, url:URL, statusMapper:StatusMapper){
+    public init(loggingProvider: LoggingProvider, url:URL, statusMapper:StatusMapper){
         self.mapper = statusMapper
-        self.restManager = core.restManager
+        self.restManager = URLSession.shared
         self.loggingProvider = loggingProvider
         self.url = url
     }

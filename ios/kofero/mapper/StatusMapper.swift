@@ -10,9 +10,9 @@ import presenter
 import SwiftyJSON
 
 public class StatusMapper:DataMapper<ModelStatus>{
-    private let encoder:DataEncoder<[JSON]>
+    private let encoder:StringEncoder<[JSON]>
     
-    public init(encoder:DataEncoder<[JSON]>){
+    public init(encoder:StringEncoder<[JSON]>){
         self.encoder = encoder
     }
     

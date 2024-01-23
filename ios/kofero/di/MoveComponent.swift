@@ -11,7 +11,6 @@ import SwiftyJSON
 import NeedleFoundation
 
 protocol MoveDependency: Dependency {
-    var providerCore:ProviderCore {get}
     var jsonEncoder:StringEncoder<[JSON]> {get}
     var loggingProvider:LoggingProvider {get}
     var authProvider: AuthProvider {get}
@@ -21,7 +20,7 @@ protocol MoveDependency: Dependency {
 }
 
 class MoveComponent: Component<MoveDependency> {
-    var provider: MoveProviderImpl {
+    var provider: ProviderAbstract<ModelMove> {
         return MoveProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "move", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     

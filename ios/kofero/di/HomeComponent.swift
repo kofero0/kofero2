@@ -12,8 +12,8 @@ import SwiftUI
 
 protocol HomeDependency: Dependency {
     var bannerAdUnitId:String {get}
-    var gameProvider:GameProvider {get}
-    var charProvider:CharacterProvider {get}
+    var gameProvider:ProviderAbstract<ModelGame> {get}
+    var charProvider:ProviderAbstract<ModelCharacter> {get}
     var gameViewBuilder:GameViewBuilder {get}
     var imageProvider:ImageProvider {get}
     var favoritesProvider:FavoritesProvider {get}

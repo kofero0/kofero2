@@ -27,7 +27,7 @@ struct HomeView: View {
     
     class HomeViewModel: HomeKView, ObservableObject {
         @Published var games: [ModelGame] = []
-        @Published var favs: [ModelObj] = []
+        @Published var favs: [Any] = []
         @Published var urlsToImages: [String:String] = [:]
         @Published var lastError: ModelError? = nil
         @Published var lastException: KotlinException? = nil
@@ -41,7 +41,7 @@ struct HomeView: View {
             urlsToImages[url] = imgBase64
         }
         
-        func displayFavs(favorites: [ModelObj]) {
+        func displayFavs(favorites: [Any]) {
             favs = favorites
         }
         
@@ -75,7 +75,7 @@ struct HomeView_Previews: PreviewProvider {
 
 class MockHomeInteractor: HomeInteractor {
     
-    func favPressed(obj: ModelObj) async throws {
+    func favPressed(obj: Any) async throws {
     }
     
     func gamePressed(game: ModelGame) async throws {

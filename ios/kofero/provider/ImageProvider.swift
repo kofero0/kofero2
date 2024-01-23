@@ -8,15 +8,14 @@
 import Foundation
 import presenter
 
+
 open class ImageProviderImpl: ImageProvider {
     public let restManager:RestManager
-    public let fileManager:IFileManager
     private let loggingProvider:LoggingProvider
     private let arrowExtensions = ArrowExtensions()
     
-    public init(core:ProviderCore, loggingProvider: LoggingProvider){
-        self.restManager = core.restManager
-        self.fileManager = core.fileManager
+    public init(loggingProvider: LoggingProvider){
+        self.restManager = URLSession.shared
         self.loggingProvider = loggingProvider
     }
     

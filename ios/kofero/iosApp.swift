@@ -13,7 +13,7 @@ import GoogleMobileAds
 struct iosApp: App {
     
     init() {
-        registerProviderFactories()
+        //registerProviderFactories()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
     

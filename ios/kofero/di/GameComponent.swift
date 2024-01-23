@@ -13,8 +13,7 @@ import SwiftUI
 
 protocol GameDependency: Dependency {
     var imageProvider:ImageProvider {get}
-    var providerCore:ProviderCore {get}
-    var charProvider:CharProviderImpl {get}
+    var charProvider:ProviderAbstract<ModelCharacter> {get}
     var jsonEncoder:StringEncoder<[JSON]> {get}
     var charViewBuilder:CharViewBuilder {get}
     var navController:UINavigationController {get}
@@ -31,7 +30,7 @@ protocol GameDependency: Dependency {
 
 class GameComponent: Component<GameDependency>, GameViewBuilder {
     
-    var gameProvider: GameProviderImpl {
+    var gameProvider: ProviderAbstract<ModelGame> {
         return GameProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "game", urlPrefix: dependency.urlPrefix, mapper: gameMapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     

@@ -19,7 +19,7 @@ public class FavoritesProviderImpl: FavoritesProvider {
     
     public func delete(id: Int32) async throws -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
                     let favs = defaults.object(forKey: FAVS_KEY)
-                    if var uFavs = favs as? [ModelObj] {
+                    if var uFavs = favs as? [ModelFavorite] {
                         uFavs.removeAll{obj in return obj.uid == id}
                         defaults.set(uFavs, forKey: FAVS_KEY)
                         return arrowExtensions.buildUnitEitherRight()
