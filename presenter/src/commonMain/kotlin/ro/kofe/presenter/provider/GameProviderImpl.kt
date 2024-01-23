@@ -1,11 +1,10 @@
 package ro.kofe.presenter.provider
 
 import io.ktor.client.*
-import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.presenter.map.Mapper
 
-class GameProvider(
+class GameProviderImpl(
     client: HttpClient,
     jsonFilename: String,
     urlPrefix: String,

@@ -28,15 +28,15 @@ class RootComponent: BootstrapComponent {
         return MoveComponent(parent: self)
     }
     
-    var moveProvider: MoveProvider {
+    var moveProvider: MoveProviderImpl {
         return moveComponent.provider
     }
     
-    var charProvider: CharacterProvider {
+    var charProvider: CharProviderImpl {
         return characterComponent.provider
     }
     
-    var gameProvider: GameProvider {
+    var gameProvider: GameProviderImpl {
         return gameComponent.gameProvider
     }
     
@@ -68,12 +68,12 @@ class RootComponent: BootstrapComponent {
         return UserDefaults.standard
     }
     
-    var jsonEncoder:DataEncoder<[JSON]> {
-        return JsonDataEncoder<[JSON]>()
+    var jsonEncoder:StringEncoder<[JSON]> {
+        return JsonStringEncoder<[JSON]>()
     }
     
-    var requestEncoder:DataEncoder<[Int32]> {
-        return JsonDataEncoder<[Int32]>()
+    var requestEncoder:RequestMapper {
+        return RequestMapperImpl()
     }
     
     var gameViewBuilder:GameViewBuilder{

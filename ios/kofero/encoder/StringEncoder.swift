@@ -8,10 +8,10 @@
 import Foundation
 
 
-open class DataEncoder<I:Encodable>: Encoder {
-    public typealias O = Data
+open class StringEncoder<I:Encodable>: Encoder {
+    public typealias O = String
     
-    public func encode(_ value: I) throws -> Data {
+    public func encode(_ value: I) throws -> String {
         fatalError("override me!")
     }
 }

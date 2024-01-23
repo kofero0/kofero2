@@ -1,11 +1,10 @@
 package ro.kofe.presenter.provider
 
 import io.ktor.client.*
-import ro.kofe.model.Character
 import ro.kofe.model.Move
 import ro.kofe.presenter.map.Mapper
 
-class MoveProvider(
+class MoveProviderImpl(
     client: HttpClient,
     jsonFilename: String,
     urlPrefix: String,

@@ -12,24 +12,20 @@ import NeedleFoundation
 
 protocol MoveDependency: Dependency {
     var providerCore:ProviderCore {get}
-    var jsonEncoder:DataEncoder<[JSON]> {get}
+    var jsonEncoder:StringEncoder<[JSON]> {get}
     var loggingProvider:LoggingProvider {get}
+    var authProvider: AuthProvider {get}
+    var urlPrefix: String {get}
+    var requestMapper: RequestMapper {get}
+    var diskAccessor: DiskAccessor {get}
 }
 
 class MoveComponent: Component<MoveDependency> {
-    var provider: MoveProvider {
-        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, internalFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! MoveProvider
+    var provider: MoveProviderImpl {
+        return MoveProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "move", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     
-    var jsonFilename:String {
-        return "move"
-    }
-    
-    var mapper:DataMapper<[ModelMove]>{
-        return MoveMapper(encoder: dependency.jsonEncoder)
-    }
-    
-    var url:URL {
-        return URL(string: "https://google.com")!
+    var mapper:MoveMapper{
+        return MoveMapperImpl(encoder: dependency.jsonEncoder)
     }
 }

@@ -14,8 +14,8 @@ import SwiftUI
 protocol GameDependency: Dependency {
     var imageProvider:ImageProvider {get}
     var providerCore:ProviderCore {get}
-    var charProvider:CharacterProvider {get}
-    var jsonEncoder:DataEncoder<[JSON]> {get}
+    var charProvider:CharProviderImpl {get}
+    var jsonEncoder:StringEncoder<[JSON]> {get}
     var charViewBuilder:CharViewBuilder {get}
     var navController:UINavigationController {get}
     var bannerAdUnitId:String {get}
@@ -23,24 +23,20 @@ protocol GameDependency: Dependency {
     var stateLogger: StateLogger {get}
     var stateReducer: StateReducer {get}
     var dispatcherProvider: DispatcherProvider {get}
+    var authProvider: AuthProvider {get}
+    var urlPrefix: String {get}
+    var requestMapper: RequestMapper {get}
+    var diskAccessor: DiskAccessor {get}
 }
 
 class GameComponent: Component<GameDependency>, GameViewBuilder {
     
-    var gameProvider: GameProvider {
-        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, internalFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! GameProvider
+    var gameProvider: GameProviderImpl {
+        return GameProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "game", urlPrefix: dependency.urlPrefix, mapper: gameMapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     
-    var mapper: DataMapper<[ModelGame]> {
-        return GameMapper(encoder: dependency.jsonEncoder)
-    }
-    
-    var jsonFilename:String {
-        return "game"
-    }
-    
-    var url:URL {
-        return URL(string: "https://google.com")!
+    var gameMapper: GameMapper {
+        return GameMapperImpl(encoder: dependency.jsonEncoder)
     }
     
     var presenter: GamePresenter {

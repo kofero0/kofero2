@@ -12,32 +12,28 @@ import SwiftUI
 import SwiftyJSON
 
 protocol CharacterDependency: Dependency {
-    var moveProvider: MoveProvider {get}
+    var moveProvider: MoveProviderImpl {get}
     var imageProvider: ImageProvider {get}
     var providerCore:ProviderCore {get}
-    var jsonEncoder:DataEncoder<[JSON]> {get}
+    var jsonEncoder:StringEncoder<[JSON]> {get}
     var bannerAdUnitId: String {get}
     var loggingProvider: LoggingProvider {get}
     var stateLogger: StateLogger {get}
     var stateReducer: StateReducer {get}
     var dispatcherProvider: DispatcherProvider {get}
+    var authProvider: AuthProvider {get}
+    var urlPrefix: String {get}
+    var requestMapper: RequestMapper {get}
+    var diskAccessor: DiskAccessor {get}
 }
 
 class CharacterComponent: Component<CharacterDependency>, CharViewBuilder {
-    var provider: CharacterProvider {
-        return ProviderImpl(core: dependency.providerCore, url: url, mapper: mapper, internalFilename: jsonFilename, loggingProvider: dependency.loggingProvider) as! CharacterProvider
+    var provider: CharProviderImpl {
+        return CharProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "char", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     
-    var jsonFilename:String {
-        return "char"
-    }
-    
-    var url: URL {
-        return URL(string: "https://google.com")!
-    }
-    
-    var mapper: DataMapper<[ModelCharacter]> {
-        return CharacterMapper(encoder: dependency.jsonEncoder)
+    var mapper: CharMapper {
+        return CharacterMapperImpl(encoder: dependency.jsonEncoder)
     }
     
     var presenter: CharacterPresenter {

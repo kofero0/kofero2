@@ -9,16 +9,16 @@ import Foundation
 import presenter
 import SwiftyJSON
 
-public class GameMapper: DataMapper<[ModelGame]> {
-    private let encoder:DataEncoder<[JSON]>
+public class GameMapperImpl: GameMapper {
+    private let encoder:StringEncoder<[JSON]>
     
-    public init(encoder:DataEncoder<[JSON]>) {
+    public init(encoder:StringEncoder<[JSON]>) {
         self.encoder = encoder
         super.init()
     }
     
-    public override func map(data: Data) throws -> [ModelGame] {
-        let json = try JSON(data: data)
+    public override func mapLeft(data: String) -> [ModelGame] {
+        let json = JSON(stringLiteral: data)
         var ret = [ModelGame]()
         for element in json.arrayValue {
             ret.append(serialize(json: element))
@@ -26,7 +26,7 @@ public class GameMapper: DataMapper<[ModelGame]> {
         return ret
     }
     
-    public override func map(data: [ModelGame]) throws -> Data {
+    public override func mapRight(data: [ModelGame]) -> String {
         var json = [JSON]()
         for game in data {
             var gameJson = JSON()
@@ -36,7 +36,12 @@ public class GameMapper: DataMapper<[ModelGame]> {
             gameJson["iconUrl"].string = game.iconUrl
             json.append(gameJson)
         }
-        return try encoder.encode(json)
+        do{
+            return try encoder.encode(json)
+        }
+        catch{
+            fatalError("how did we get here? \(error)")
+        }
     }
     
     private func serialize(json:JSON) -> ModelGame{

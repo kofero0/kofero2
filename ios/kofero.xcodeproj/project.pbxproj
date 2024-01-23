@@ -8,19 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */; };
+		4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */; };
 		4BD71A4D2A85EB9D00EB8752 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */; };
 		4BD71A512A85EB9E00EB8752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD71A502A85EB9E00EB8752 /* Assets.xcassets */; };
 		4BD71A542A85EB9E00EB8752 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD71A532A85EB9E00EB8752 /* Preview Assets.xcassets */; };
 		4BD71A5E2A85F4DC00EB8752 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A5B2A85F4DC00EB8752 /* Encoder.swift */; };
-		4BD71A5F2A85F4DC00EB8752 /* DataEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A5C2A85F4DC00EB8752 /* DataEncoder.swift */; };
-		4BD71A602A85F4DC00EB8752 /* JsonDataEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A5D2A85F4DC00EB8752 /* JsonDataEncoder.swift */; };
-		4BD71A672A85F52000EB8752 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A622A85F52000EB8752 /* Mapper.swift */; };
-		4BD71A682A85F52000EB8752 /* MoveMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A632A85F52000EB8752 /* MoveMapper.swift */; };
-		4BD71A692A85F52000EB8752 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A642A85F52000EB8752 /* DataMapper.swift */; };
-		4BD71A6A2A85F52000EB8752 /* CharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A652A85F52000EB8752 /* CharacterMapper.swift */; };
-		4BD71A6B2A85F52000EB8752 /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A662A85F52000EB8752 /* GameMapper.swift */; };
+		4BD71A5F2A85F4DC00EB8752 /* StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A5C2A85F4DC00EB8752 /* StringEncoder.swift */; };
+		4BD71A602A85F4DC00EB8752 /* JsonStringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A5D2A85F4DC00EB8752 /* JsonStringEncoder.swift */; };
+		4BD71A682A85F52000EB8752 /* MoveMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A632A85F52000EB8752 /* MoveMapperImpl.swift */; };
+		4BD71A6A2A85F52000EB8752 /* CharacterMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A652A85F52000EB8752 /* CharacterMapperImpl.swift */; };
+		4BD71A6B2A85F52000EB8752 /* GameMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A662A85F52000EB8752 /* GameMapperImpl.swift */; };
 		4BD71A722A85F59800EB8752 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */; };
-		4BD71A732A85F59800EB8752 /* ProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6E2A85F59800EB8752 /* ProviderImpl.swift */; };
 		4BD71A742A85F59800EB8752 /* FavoritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */; };
 		4BD71A752A85F59800EB8752 /* ProviderCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A702A85F59800EB8752 /* ProviderCore.swift */; };
 		4BD71A762A85F59800EB8752 /* LoggingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A712A85F59800EB8752 /* LoggingProvider.swift */; };
@@ -47,20 +45,18 @@
 /* Begin PBXFileReference section */
 		4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		4B0D01ED2A94073A005CF444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMapperImpl.swift; sourceTree = "<group>"; };
 		4BD71A492A85EB9D00EB8752 /* kofero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kofero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		4BD71A502A85EB9E00EB8752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BD71A532A85EB9E00EB8752 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4BD71A5B2A85F4DC00EB8752 /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
-		4BD71A5C2A85F4DC00EB8752 /* DataEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEncoder.swift; sourceTree = "<group>"; };
-		4BD71A5D2A85F4DC00EB8752 /* JsonDataEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDataEncoder.swift; sourceTree = "<group>"; };
-		4BD71A622A85F52000EB8752 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
-		4BD71A632A85F52000EB8752 /* MoveMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveMapper.swift; sourceTree = "<group>"; };
-		4BD71A642A85F52000EB8752 /* DataMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
-		4BD71A652A85F52000EB8752 /* CharacterMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMapper.swift; sourceTree = "<group>"; };
-		4BD71A662A85F52000EB8752 /* GameMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
+		4BD71A5C2A85F4DC00EB8752 /* StringEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEncoder.swift; sourceTree = "<group>"; };
+		4BD71A5D2A85F4DC00EB8752 /* JsonStringEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonStringEncoder.swift; sourceTree = "<group>"; };
+		4BD71A632A85F52000EB8752 /* MoveMapperImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveMapperImpl.swift; sourceTree = "<group>"; };
+		4BD71A652A85F52000EB8752 /* CharacterMapperImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMapperImpl.swift; sourceTree = "<group>"; };
+		4BD71A662A85F52000EB8752 /* GameMapperImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMapperImpl.swift; sourceTree = "<group>"; };
 		4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
-		4BD71A6E2A85F59800EB8752 /* ProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderImpl.swift; sourceTree = "<group>"; };
 		4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesProvider.swift; sourceTree = "<group>"; };
 		4BD71A702A85F59800EB8752 /* ProviderCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderCore.swift; sourceTree = "<group>"; };
 		4BD71A712A85F59800EB8752 /* LoggingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingProvider.swift; sourceTree = "<group>"; };
@@ -146,9 +142,9 @@
 		4BD71A5A2A85F4DC00EB8752 /* encoder */ = {
 			isa = PBXGroup;
 			children = (
-				4BD71A5C2A85F4DC00EB8752 /* DataEncoder.swift */,
+				4BD71A5C2A85F4DC00EB8752 /* StringEncoder.swift */,
 				4BD71A5B2A85F4DC00EB8752 /* Encoder.swift */,
-				4BD71A5D2A85F4DC00EB8752 /* JsonDataEncoder.swift */,
+				4BD71A5D2A85F4DC00EB8752 /* JsonStringEncoder.swift */,
 			);
 			path = encoder;
 			sourceTree = "<group>";
@@ -156,12 +152,11 @@
 		4BD71A612A85F52000EB8752 /* mapper */ = {
 			isa = PBXGroup;
 			children = (
-				4BD71A652A85F52000EB8752 /* CharacterMapper.swift */,
-				4BD71A642A85F52000EB8752 /* DataMapper.swift */,
-				4BD71A662A85F52000EB8752 /* GameMapper.swift */,
-				4BD71A622A85F52000EB8752 /* Mapper.swift */,
-				4BD71A632A85F52000EB8752 /* MoveMapper.swift */,
+				4BD71A652A85F52000EB8752 /* CharacterMapperImpl.swift */,
+				4BD71A662A85F52000EB8752 /* GameMapperImpl.swift */,
+				4BD71A632A85F52000EB8752 /* MoveMapperImpl.swift */,
 				4BF5B6782B5A202E003D600E /* StatusMapper.swift */,
+				4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */,
 			);
 			path = mapper;
 			sourceTree = "<group>";
@@ -172,7 +167,6 @@
 				4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */,
 				4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */,
 				4BD71A712A85F59800EB8752 /* LoggingProvider.swift */,
-				4BD71A6E2A85F59800EB8752 /* ProviderImpl.swift */,
 				4BD71A702A85F59800EB8752 /* ProviderCore.swift */,
 				4BD71AA72A8F15BD00EB8752 /* Typealias.swift */,
 				4BF5B6742B588D28003D600E /* StatusProvider.swift */,
@@ -379,24 +373,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BD71A672A85F52000EB8752 /* Mapper.swift in Sources */,
 				4BD71A742A85F59800EB8752 /* FavoritesProvider.swift in Sources */,
 				4BD71A762A85F59800EB8752 /* LoggingProvider.swift in Sources */,
 				4BD71A722A85F59800EB8752 /* ImageProvider.swift in Sources */,
 				4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */,
-				4BD71A602A85F4DC00EB8752 /* JsonDataEncoder.swift in Sources */,
-				4BD71A6B2A85F52000EB8752 /* GameMapper.swift in Sources */,
+				4BD71A602A85F4DC00EB8752 /* JsonStringEncoder.swift in Sources */,
+				4BD71A6B2A85F52000EB8752 /* GameMapperImpl.swift in Sources */,
 				4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */,
 				4BD71A8C2A8B0D7300EB8752 /* GameComponent.swift in Sources */,
 				4BD71A9B2A8D8F9D00EB8752 /* CharView.swift in Sources */,
 				4BD71A752A85F59800EB8752 /* ProviderCore.swift in Sources */,
 				4BD71A8F2A8B0D7300EB8752 /* CharacterComponent.swift in Sources */,
-				4BD71A732A85F59800EB8752 /* ProviderImpl.swift in Sources */,
 				4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */,
-				4BD71A5F2A85F4DC00EB8752 /* DataEncoder.swift in Sources */,
-				4BD71A6A2A85F52000EB8752 /* CharacterMapper.swift in Sources */,
-				4BD71A682A85F52000EB8752 /* MoveMapper.swift in Sources */,
-				4BD71A692A85F52000EB8752 /* DataMapper.swift in Sources */,
+				4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */,
+				4BD71A5F2A85F4DC00EB8752 /* StringEncoder.swift in Sources */,
+				4BD71A6A2A85F52000EB8752 /* CharacterMapperImpl.swift in Sources */,
+				4BD71A682A85F52000EB8752 /* MoveMapperImpl.swift in Sources */,
 				4BD71A902A8B0D7300EB8752 /* HomeComponent.swift in Sources */,
 				4BF5B6772B5A1A57003D600E /* Publisher.swift in Sources */,
 				4BD71A8D2A8B0D7300EB8752 /* RootComponent.swift in Sources */,

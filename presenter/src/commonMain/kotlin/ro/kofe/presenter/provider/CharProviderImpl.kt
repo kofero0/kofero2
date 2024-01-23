@@ -4,7 +4,7 @@ import io.ktor.client.*
 import ro.kofe.model.Character
 import ro.kofe.presenter.map.Mapper
 
-class CharProvider(
+class CharProviderImpl(
     client: HttpClient,
     jsonFilename: String,
     urlPrefix: String,
