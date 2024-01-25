@@ -12,6 +12,10 @@ import SwiftyJSON
 import SwiftUI
 
 class RootComponent: BootstrapComponent {
+    var urlPrefix: String {
+        return "http://localhost:8080"
+    }
+    
     var homeComponent: HomeComponent {
         return HomeComponent(parent: self)
     }
@@ -38,10 +42,6 @@ class RootComponent: BootstrapComponent {
     
     var gameProvider: ProviderAbstract<ModelGame> {
         return gameComponent.gameProvider
-    }
-    
-    var statusProvider: StatusProvider {
-        return StatusProviderImpl(loggingProvider: loggingProvider, url: URL(string: "https://google.com")!, statusMapper: StatusMapper(encoder: jsonEncoder))
     }
     
     var rootPresenter: RootPresenter {
@@ -109,6 +109,38 @@ class RootComponent: BootstrapComponent {
     }
     
     var authProvider: AuthProvider {
-        return AuthProviderImpl()
+        return AuthProviderImpl(restManager: restManager, fileManager: fileManager, loggingProvider: loggingProvider, urlPrefix: urlPrefix)
+    }
+    
+    var stateMapper: StringMapper<[KotlinLong:ModelEvent]> {
+        return StateMapperImpl()
+    }
+    
+    var stateLogger: StateLogger {
+        return StateLoggerImpl()
+    }
+    
+    var requestMapper: RequestMapper {
+        return RequestMapperImpl()
+    }
+    
+    var diskAccessor: DiskAccessor {
+        return DiskAccessorImpl()
+    }
+    
+    var statusProvider: StatusProvider {
+        return StatusProviderImpl(loggingProvider: loggingProvider, urlPrefix: urlPrefix, statusMapper: StatusMapper())
+    }
+    
+    var rootInteractor: RootInteractor{
+        return RootInteractorImpl(presenter: rootPresenter, stateLogger: stateLogger, stateReducer: StateReducerImpl(), loggingProvider: loggingProvider, router: rootRouter, dispatcherProvider: dispatcherProvider)
+    }
+    
+    var rootRouter: RootRouter {
+        return RootRouterImpl()
+    }
+    
+    var rootView: RootView {
+        return RootView()
     }
 }

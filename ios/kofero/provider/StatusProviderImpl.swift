@@ -13,15 +13,15 @@ import presenter
 class StatusProviderImpl: StatusProvider {
     public let restManager:RestManager
     private let loggingProvider:LoggingProvider
-    private let url:URL
+    private let urlPrefix:String
     private let mapper:StatusMapper
     private let arrowExtensions = ArrowExtensions()
     
-    public init(loggingProvider: LoggingProvider, url:URL, statusMapper:StatusMapper){
+    public init(loggingProvider: LoggingProvider, urlPrefix:String, statusMapper:StatusMapper){
         self.mapper = statusMapper
         self.restManager = URLSession.shared
         self.loggingProvider = loggingProvider
-        self.url = url
+        self.urlPrefix = urlPrefix
     }
     
     
@@ -30,14 +30,11 @@ class StatusProviderImpl: StatusProvider {
     }
     
     func getBackendStatus() async throws -> Arrow_coreEither<ModelProviderError, ModelStatus> {
-        
-            let group = DispatchGroup()
+        let group = DispatchGroup()
         var providerError: ModelProviderError? = nil
         var status: ModelStatus? = nil
         group.enter()
-        
-        
-        let task = restManager.dataTask(with: URLRequest(url: url)){[self] data, response, error in
+        let task = restManager.dataTask(with: URLRequest(url: URL(string: urlPrefix + "/status")!)){[self] data, response, error in
             if(isResponseGood(data:data, response:response, error:error)){
                 do{
                     status = try mapper.map(data: data!)
@@ -57,7 +54,6 @@ class StatusProviderImpl: StatusProvider {
         }
         task.resume()
         group.wait()
-        
         if let uPError = providerError {
             return arrowExtensions.buildStatusEitherLeft(left: uPError)
         }

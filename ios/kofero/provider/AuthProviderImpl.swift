@@ -7,6 +7,7 @@
 
 import Foundation
 import presenter
+import UIKit
 
 class AuthProviderImpl: AuthProvider {
     private let restManager: RestManager
@@ -14,21 +15,24 @@ class AuthProviderImpl: AuthProvider {
     private let loggingProvider: LoggingProvider
     private let arrowExtensions = ArrowExtensions()
     private let path:String = "auth"
+    private let urlPrefix: String
     
-    init(restManager: RestManager, fileManager:IFileManager, loggingProvider:LoggingProvider){
+    
+    init(restManager: RestManager, fileManager:IFileManager, loggingProvider:LoggingProvider, urlPrefix:String){
         self.restManager = restManager
         self.fileManager = fileManager
         self.loggingProvider = loggingProvider
+        self.urlPrefix = urlPrefix
     }
     
     
     
-    private func getRestClosure(url:String, dataClosure: @escaping (Data) -> Void) -> RestClosure {
+    private func getRestClosure(dataClosure: @escaping (Data) -> Void) -> RestClosure {
         return {[self] data,response,error in
             if let uResponse = response as? HTTPURLResponse {
                 if let uData = data {
                     if(uResponse.statusCode == 200) {
-                        saveToDisk(data: uData, url: url)
+                        saveToDisk(data: uData)
                         dataClosure(uData)
                     }
                 }
@@ -45,8 +49,11 @@ class AuthProviderImpl: AuthProvider {
                 let group = DispatchGroup()
                 var data: Data? = nil
                 group.enter()
-                //loggingProvider.log(level: .debug, logTag: "ImageProvider", message: "\(url) not on disk")
-                restManager.dataTask(with: URLRequest(url: uRL), completionHandler: getRestClosure(url:url){ndata in
+            var request = URLRequest(url: URL(string: urlPrefix + "/\(path)/register")!)
+            request.httpMethod = "PUT"
+            request.httpBody = ("{\"prefixedAuth\": \"koferoAuth||" + UIDevice.current.identifierForVendor!.uuidString + "}").data(using: .utf8)
+            restManager.dataTask(with: request, completionHandler: getRestClosure{ [self] ndata in
+                self.loggingProvider.log(level: .debug, logTag: "AuthProvider", message: "\(String(describing: String(data: ndata, encoding: .utf8)))")
                     data = ndata
                     group.leave()
                 }).resume()
@@ -57,15 +64,14 @@ class AuthProviderImpl: AuthProvider {
                     return arrowExtensions.buildImageEitherLeft(left: ModelIncorrectCount(ids: []))
                 }
         }
-        return arrowExtensions.buildImageEitherLeft(left: ModelIncorrectCount(ids: []))
     }
     
-    private func saveToDisk(data: Data, url: String){
-        let path = makeUrl(string: url)
+    private func saveToDisk(data: Data){
+        let path = makeUrl()
         do {
             try data.write(to: path, options: .atomic)
         } catch {
-            loggingProvider.log(level: .debug, logTag: "ImageProvider", message: error.localizedDescription)
+            loggingProvider.log(level: .debug, logTag: "AuthProvider", message: error.localizedDescription)
             print(error.localizedDescription)
         }
     }

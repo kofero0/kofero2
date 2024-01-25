@@ -11,16 +11,19 @@ import GoogleMobileAds
 
 @main
 struct iosApp: App {
+    private let rootComponent: RootComponent
     
     init() {
-        //registerProviderFactories()
+        registerProviderFactories()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        self.rootComponent = RootComponent()
     }
     
     
     var body: some Scene {
         WindowGroup {
-            AnyView(_fromValue: UINavigationController())
+            rootComponent.rootView
+           // AnyView(_fromValue: UINavigationController())
         }
     }
 }

@@ -12,6 +12,11 @@
 		4BBAE1D42B6050DC00C50536 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D32B6050DC00C50536 /* DataMapper.swift */; };
 		4BBAE1D62B60513500C50536 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D52B60513500C50536 /* Mapper.swift */; };
 		4BBAE1D82B60561900C50536 /* AuthProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D72B60561900C50536 /* AuthProviderImpl.swift */; };
+		4BBAE1DA2B61D71C00C50536 /* DiskAccessorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D92B61D71C00C50536 /* DiskAccessorImpl.swift */; };
+		4BBAE1DC2B61DE5200C50536 /* StateLoggerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */; };
+		4BBAE1DE2B61E00C00C50536 /* StringMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1DD2B61E00C00C50536 /* StringMapper.swift */; };
+		4BBAE1E02B61E11100C50536 /* StateMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1DF2B61E11100C50536 /* StateMapperImpl.swift */; };
+		4BBAE1E22B6220D100C50536 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1E12B6220D100C50536 /* RootRouter.swift */; };
 		4BD71A4D2A85EB9D00EB8752 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */; };
 		4BD71A512A85EB9E00EB8752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD71A502A85EB9E00EB8752 /* Assets.xcassets */; };
 		4BD71A542A85EB9E00EB8752 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD71A532A85EB9E00EB8752 /* Preview Assets.xcassets */; };
@@ -38,7 +43,7 @@
 		4BD71AA62A8F138800EB8752 /* CharRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */; };
 		4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA72A8F15BD00EB8752 /* Typealias.swift */; };
 		4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA92A8F165F00EB8752 /* RootView.swift */; };
-		4BF5B6752B588D28003D600E /* StatusProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6742B588D28003D600E /* StatusProvider.swift */; };
+		4BF5B6752B588D28003D600E /* StatusProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */; };
 		4BF5B6772B5A1A57003D600E /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6762B5A1A57003D600E /* Publisher.swift */; };
 		4BF5B6792B5A202E003D600E /* StatusMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6782B5A202E003D600E /* StatusMapper.swift */; };
 		9E169777FF902B2091A95DCA /* Pods_kofero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976876D6C60861A8745D9EA3 /* Pods_kofero.framework */; };
@@ -51,6 +56,11 @@
 		4BBAE1D32B6050DC00C50536 /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		4BBAE1D52B60513500C50536 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		4BBAE1D72B60561900C50536 /* AuthProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProviderImpl.swift; sourceTree = "<group>"; };
+		4BBAE1D92B61D71C00C50536 /* DiskAccessorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskAccessorImpl.swift; sourceTree = "<group>"; };
+		4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateLoggerImpl.swift; sourceTree = "<group>"; };
+		4BBAE1DD2B61E00C00C50536 /* StringMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMapper.swift; sourceTree = "<group>"; };
+		4BBAE1DF2B61E11100C50536 /* StateMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMapperImpl.swift; sourceTree = "<group>"; };
+		4BBAE1E12B6220D100C50536 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		4BD71A492A85EB9D00EB8752 /* kofero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kofero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		4BD71A502A85EB9E00EB8752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +88,7 @@
 		4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharRouterImpl.swift; sourceTree = "<group>"; };
 		4BD71AA72A8F15BD00EB8752 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		4BD71AA92A8F165F00EB8752 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		4BF5B6742B588D28003D600E /* StatusProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusProvider.swift; sourceTree = "<group>"; };
+		4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusProviderImpl.swift; sourceTree = "<group>"; };
 		4BF5B6762B5A1A57003D600E /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		4BF5B6782B5A202E003D600E /* StatusMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMapper.swift; sourceTree = "<group>"; };
 		5926CEBBF3AC4FF4D9BE7E25 /* Pods-kofero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kofero.release.xcconfig"; path = "Target Support Files/Pods-kofero/Pods-kofero.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BBAE1E32B6220DB00C50536 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAE1E12B6220D100C50536 /* RootRouter.swift */,
+				4BD71AA92A8F165F00EB8752 /* RootView.swift */,
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
 		4BD71A402A85EB9D00EB8752 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +182,8 @@
 				4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */,
 				4BBAE1D32B6050DC00C50536 /* DataMapper.swift */,
 				4BBAE1D52B60513500C50536 /* Mapper.swift */,
+				4BBAE1DD2B61E00C00C50536 /* StringMapper.swift */,
+				4BBAE1DF2B61E11100C50536 /* StateMapperImpl.swift */,
 			);
 			path = mapper;
 			sourceTree = "<group>";
@@ -174,8 +195,10 @@
 				4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */,
 				4BD71A712A85F59800EB8752 /* LoggingProvider.swift */,
 				4BD71AA72A8F15BD00EB8752 /* Typealias.swift */,
-				4BF5B6742B588D28003D600E /* StatusProvider.swift */,
+				4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */,
 				4BBAE1D72B60561900C50536 /* AuthProviderImpl.swift */,
+				4BBAE1D92B61D71C00C50536 /* DiskAccessorImpl.swift */,
+				4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */,
 			);
 			path = provider;
 			sourceTree = "<group>";
@@ -195,7 +218,7 @@
 		4BD71A912A8D894F00EB8752 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				4BD71AA92A8F165F00EB8752 /* RootView.swift */,
+				4BBAE1E32B6220DB00C50536 /* root */,
 				4BD71A952A8D897300EB8752 /* home */,
 				4BD71A942A8D896E00EB8752 /* game */,
 				4BD71A922A8D896000EB8752 /* char */,
@@ -388,16 +411,21 @@
 				4BD71A6B2A85F52000EB8752 /* GameMapperImpl.swift in Sources */,
 				4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */,
 				4BD71A8C2A8B0D7300EB8752 /* GameComponent.swift in Sources */,
+				4BBAE1DA2B61D71C00C50536 /* DiskAccessorImpl.swift in Sources */,
 				4BBAE1D62B60513500C50536 /* Mapper.swift in Sources */,
 				4BD71A9B2A8D8F9D00EB8752 /* CharView.swift in Sources */,
+				4BBAE1E02B61E11100C50536 /* StateMapperImpl.swift in Sources */,
 				4BD71A8F2A8B0D7300EB8752 /* CharacterComponent.swift in Sources */,
+				4BBAE1DC2B61DE5200C50536 /* StateLoggerImpl.swift in Sources */,
 				4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */,
+				4BBAE1E22B6220D100C50536 /* RootRouter.swift in Sources */,
 				4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */,
 				4BD71A5F2A85F4DC00EB8752 /* StringEncoder.swift in Sources */,
 				4BD71A6A2A85F52000EB8752 /* CharacterMapperImpl.swift in Sources */,
 				4BD71A682A85F52000EB8752 /* MoveMapperImpl.swift in Sources */,
 				4BD71A902A8B0D7300EB8752 /* HomeComponent.swift in Sources */,
 				4BBAE1D42B6050DC00C50536 /* DataMapper.swift in Sources */,
+				4BBAE1DE2B61E00C00C50536 /* StringMapper.swift in Sources */,
 				4BF5B6772B5A1A57003D600E /* Publisher.swift in Sources */,
 				4BD71A8D2A8B0D7300EB8752 /* RootComponent.swift in Sources */,
 				4BD71A9D2A8D903A00EB8752 /* HomeRouterImpl.swift in Sources */,
@@ -406,7 +434,7 @@
 				4BD71A8E2A8B0D7300EB8752 /* MoveComponent.swift in Sources */,
 				4BD71AA12A8EAECF00EB8752 /* Extension.swift in Sources */,
 				4BD71A4D2A85EB9D00EB8752 /* iosApp.swift in Sources */,
-				4BF5B6752B588D28003D600E /* StatusProvider.swift in Sources */,
+				4BF5B6752B588D28003D600E /* StatusProviderImpl.swift in Sources */,
 				4BD71A972A8D8C7900EB8752 /* HomeView.swift in Sources */,
 				4BD71AA62A8F138800EB8752 /* CharRouterImpl.swift in Sources */,
 				4BD71A992A8D8F8300EB8752 /* GameView.swift in Sources */,

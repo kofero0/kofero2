@@ -10,15 +10,8 @@ import presenter
 import SwiftyJSON
 
 public class StatusMapper:DataMapper<ModelStatus>{
-    private let encoder:StringEncoder<[JSON]>
-    
-    public init(encoder:StringEncoder<[JSON]>){
-        self.encoder = encoder
-    }
-    
     public override func map(data: Data) throws -> ModelStatus {
         let json = try JSON(data: data)
         return ModelStatus(time: json["time"].int64Value, version: json["version"].stringValue)
     }
-
 }

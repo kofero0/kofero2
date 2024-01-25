@@ -1,23 +1,26 @@
 package ro.kofe.presenter.ipv.root
 
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.launch
 import ro.kofe.model.HttpError
 import ro.kofe.model.logging.Level
 import ro.kofe.model.logging.LogTag.ROOT_INTERACTOR
+import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.InteractorImpl
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 import kotlin.coroutines.CoroutineContext
 
+@OptIn(DelicateCoroutinesApi::class)
 class RootInteractorImpl(
     presenter: RootPresenter,
     stateLogger: StateLogger,
     stateReducer: StateReducer,
     loggingProvider: LoggingProvider,
     router: RootRouter,
-    private val context: CoroutineContext
+    private val dispatcherProvider: DispatcherProvider
 ) : InteractorImpl<RootKView, RootPresenter>(
     presenter,
     stateLogger,
@@ -39,7 +42,7 @@ class RootInteractorImpl(
     }
 
     override fun viewResumed() = super.viewResumed().also {
-        CoroutineScope(context).launch {
+        CoroutineScope(dispatcherProvider.default).launch {
             try{
                 presenter.checkVersion().collect {
                     log(Level.ALERT, "provider error checking version! $it")
