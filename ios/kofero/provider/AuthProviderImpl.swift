@@ -8,6 +8,7 @@
 import Foundation
 import presenter
 import UIKit
+import SwiftyJSON
 
 class AuthProviderImpl: AuthProvider {
     private let restManager: RestManager
@@ -29,9 +30,14 @@ class AuthProviderImpl: AuthProvider {
     
     private func getRestClosure(dataClosure: @escaping (Data) -> Void) -> RestClosure {
         return {[self] data,response,error in
+            print("HI")
             if let uResponse = response as? HTTPURLResponse {
+                print("HII")
                 if let uData = data {
+                    print("YO")
+                    print(uResponse.statusCode)
                     if(uResponse.statusCode == 200) {
+                        print("NOPE")
                         saveToDisk(data: uData)
                         dataClosure(uData)
                     }
@@ -55,9 +61,11 @@ class AuthProviderImpl: AuthProvider {
             group.enter()
             
             print("IN GROUP")
-            var request = URLRequest(url: URL(string: urlPrefix + "/\(path)/register")!)
+            var request = URLRequest(url: URL(string: urlPrefix + "/auth/register")!)
             request.httpMethod = "PUT"
-            request.httpBody = ("{\"prefixedAuth\": \"koferoAuth||" + UIDevice.current.identifierForVendor!.uuidString + "}").data(using: .utf8)
+            request.allHTTPHeaderFields?["Content-Type"] = "application/json"
+            request.httpBody = ("{\"prefixedUid\":\"koferoAuth||" + UIDevice.current.identifierForVendor!.uuidString + "\"}").data(using: .utf8)
+            print(String(data: request.httpBody!, encoding: .utf8))
             restManager.dataTask(with: request, completionHandler: getRestClosure{ [self] ndata in
                 print("HELLO")
                 self.loggingProvider.log(level: .debug, logTag: "AuthProvider", message: "\(String(describing: String(data: ndata, encoding: .utf8)))")
