@@ -128,8 +128,12 @@ class RootComponent: BootstrapComponent {
         return DiskAccessorImpl()
     }
     
+    var statusMapper: StatusMapper{
+        return StatusMapperImpl()
+    }
+    
     var statusProvider: StatusProvider {
-        return StatusProviderImpl(loggingProvider: loggingProvider, urlPrefix: urlPrefix, statusMapper: StatusMapper())
+        return StatusProviderImpl(client: HttpClientProvider().provideAuth(authProvider: authProvider), urlPrefix: urlPrefix, mapper: statusMapper)
     }
     
     var rootInteractor: RootInteractor{

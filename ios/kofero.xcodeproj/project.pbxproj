@@ -45,7 +45,7 @@
 		4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA92A8F165F00EB8752 /* RootView.swift */; };
 		4BF5B6752B588D28003D600E /* StatusProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */; };
 		4BF5B6772B5A1A57003D600E /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6762B5A1A57003D600E /* Publisher.swift */; };
-		4BF5B6792B5A202E003D600E /* StatusMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6782B5A202E003D600E /* StatusMapper.swift */; };
+		4BF5B6792B5A202E003D600E /* StatusMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6782B5A202E003D600E /* StatusMapperImpl.swift */; };
 		9E169777FF902B2091A95DCA /* Pods_kofero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976876D6C60861A8745D9EA3 /* Pods_kofero.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +90,7 @@
 		4BD71AA92A8F165F00EB8752 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusProviderImpl.swift; sourceTree = "<group>"; };
 		4BF5B6762B5A1A57003D600E /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
-		4BF5B6782B5A202E003D600E /* StatusMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMapper.swift; sourceTree = "<group>"; };
+		4BF5B6782B5A202E003D600E /* StatusMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMapperImpl.swift; sourceTree = "<group>"; };
 		5926CEBBF3AC4FF4D9BE7E25 /* Pods-kofero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kofero.release.xcconfig"; path = "Target Support Files/Pods-kofero/Pods-kofero.release.xcconfig"; sourceTree = "<group>"; };
 		976876D6C60861A8745D9EA3 /* Pods_kofero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kofero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC45A293C1DC511ECF799781 /* Pods-kofero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kofero.debug.xcconfig"; path = "Target Support Files/Pods-kofero/Pods-kofero.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 				4BD71A652A85F52000EB8752 /* CharacterMapperImpl.swift */,
 				4BD71A662A85F52000EB8752 /* GameMapperImpl.swift */,
 				4BD71A632A85F52000EB8752 /* MoveMapperImpl.swift */,
-				4BF5B6782B5A202E003D600E /* StatusMapper.swift */,
+				4BF5B6782B5A202E003D600E /* StatusMapperImpl.swift */,
 				4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */,
 				4BBAE1D32B6050DC00C50536 /* DataMapper.swift */,
 				4BBAE1D52B60513500C50536 /* Mapper.swift */,
@@ -429,7 +429,7 @@
 				4BF5B6772B5A1A57003D600E /* Publisher.swift in Sources */,
 				4BD71A8D2A8B0D7300EB8752 /* RootComponent.swift in Sources */,
 				4BD71A9D2A8D903A00EB8752 /* HomeRouterImpl.swift in Sources */,
-				4BF5B6792B5A202E003D600E /* StatusMapper.swift in Sources */,
+				4BF5B6792B5A202E003D600E /* StatusMapperImpl.swift in Sources */,
 				4BD71AA42A8F086000EB8752 /* GameRouter.swift in Sources */,
 				4BD71A8E2A8B0D7300EB8752 /* MoveComponent.swift in Sources */,
 				4BD71AA12A8EAECF00EB8752 /* Extension.swift in Sources */,

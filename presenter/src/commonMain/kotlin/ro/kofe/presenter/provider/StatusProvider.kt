@@ -6,5 +6,5 @@ import ro.kofe.model.Status
 
 interface StatusProvider {
     suspend fun getBackendStatus(): Either<ProviderError, Status>
-    suspend fun getLocalStatus(): Status
+    fun getLocalStatus(): Status
 }

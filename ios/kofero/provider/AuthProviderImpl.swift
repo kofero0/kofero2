@@ -42,27 +42,34 @@ class AuthProviderImpl: AuthProvider {
     
     
     func get() -> Arrow_coreEither<ModelProviderError, NSString> {
+        print("GETTING AUTH")
         do{
+            print("FINDING AUTH ON DISK")
+            //return arrowExtensions.buildImageEitherRight(right: "0||0858cfa32b700b179f75168c19af0160f57aa7de501275fd845d19bae23e7dbe")
             return arrowExtensions.buildImageEitherRight(right: String(data: try Data(contentsOf: makeUrl()), encoding: .utf8)!)
         }
         catch{
-                let group = DispatchGroup()
-                var data: Data? = nil
-                group.enter()
+            print("COULDNT FIND IT")
+            let group = DispatchGroup()
+            var data: Data? = nil
+            group.enter()
+            
+            print("IN GROUP")
             var request = URLRequest(url: URL(string: urlPrefix + "/\(path)/register")!)
             request.httpMethod = "PUT"
             request.httpBody = ("{\"prefixedAuth\": \"koferoAuth||" + UIDevice.current.identifierForVendor!.uuidString + "}").data(using: .utf8)
             restManager.dataTask(with: request, completionHandler: getRestClosure{ [self] ndata in
+                print("HELLO")
                 self.loggingProvider.log(level: .debug, logTag: "AuthProvider", message: "\(String(describing: String(data: ndata, encoding: .utf8)))")
-                    data = ndata
-                    group.leave()
-                }).resume()
-                group.wait()
-                if let uData = data {
-                    return arrowExtensions.buildImageEitherRight(right: String(data: uData, encoding: .utf8)!)
-                } else{
-                    return arrowExtensions.buildImageEitherLeft(left: ModelIncorrectCount(ids: []))
-                }
+                data = ndata
+                group.leave()
+            }).resume()
+            group.wait()
+            if let uData = data {
+                return arrowExtensions.buildImageEitherRight(right: String(data: uData, encoding: .utf8)!)
+            } else{
+                return arrowExtensions.buildImageEitherLeft(left: ModelIncorrectCount(ids: []))
+            }
         }
     }
     
