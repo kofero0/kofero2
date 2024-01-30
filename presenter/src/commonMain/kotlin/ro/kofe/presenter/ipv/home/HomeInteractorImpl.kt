@@ -20,10 +20,9 @@ class HomeInteractorImpl(
     stateLogger: StateLogger,
     stateReducer: StateReducer,
     loggingProvider: LoggingProvider,
-    router: HomeRouter,
     private val context: CoroutineContext
 ) : HomeInteractor, InteractorImpl<HomeKView, HomePresenter>(
-    presenter, stateLogger, stateReducer, router, loggingProvider, HOME_INTERACTOR
+    presenter, stateLogger, stateReducer, loggingProvider, HOME_INTERACTOR
 ) {
 
     override suspend fun favPressed(obj: Any) {
@@ -47,16 +46,13 @@ class HomeInteractorImpl(
             millisNow(),
             Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = uid })
         )
-            router.routeTo(tag, uid)
     }
 
 
     override suspend fun gamePressed(game: Game) = stateLogger.logState(
         millisNow(),
         Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = game.uid })
-    ).also {
-        router.routeTo(GAME_VIEW, game.uid)
-    }
+    )
 
 
     override fun viewResumed() = super.viewResumed().also {

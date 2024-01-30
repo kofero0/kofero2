@@ -11,7 +11,6 @@ abstract class InteractorImpl<V : KView, P : Presenter<V>>(
     internal var presenter: P,
     internal var stateLogger: StateLogger,
     internal var stateReducer: StateReducer,
-    open var router: Router,
     loggingProvider: LoggingProvider,
     logTag: String
 ) : KoferoObj(loggingProvider, logTag), Interactor<V> {

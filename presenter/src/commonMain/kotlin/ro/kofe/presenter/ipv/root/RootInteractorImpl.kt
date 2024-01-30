@@ -19,13 +19,11 @@ class RootInteractorImpl(
     stateLogger: StateLogger,
     stateReducer: StateReducer,
     loggingProvider: LoggingProvider,
-    router: RootRouter,
     private val dispatcherProvider: DispatcherProvider
 ) : InteractorImpl<RootKView, RootPresenter>(
     presenter,
     stateLogger,
     stateReducer,
-    router,
     loggingProvider,
     ROOT_INTERACTOR
 ), RootInteractor {

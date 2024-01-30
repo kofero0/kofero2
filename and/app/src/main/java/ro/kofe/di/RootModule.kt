@@ -117,9 +117,6 @@ object RootModule {
     )
 
     @Provides
-    fun provideRootRouter(): RootRouter = RouterImpl()
-
-    @Provides
     fun provideImageProvider(
         okHttpClient: OkHttpClient, @ApplicationContext context: Context
     ): ImageProvider = ImageProviderImpl(okHttpClient, context)

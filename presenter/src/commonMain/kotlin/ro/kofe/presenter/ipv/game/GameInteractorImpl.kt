@@ -24,10 +24,9 @@ class GameInteractorImpl(
     stateLogger: StateLogger,
     stateReducer: StateReducer,
     private val loggingProvider: LoggingProvider,
-    router: GameRouter,
     private val context: CoroutineContext
 ) : GameInteractor, InteractorImpl<GameKView, GamePresenter>(
-    presenter, stateLogger, stateReducer, router, loggingProvider, GAME_INTERACTOR
+    presenter, stateLogger, stateReducer, loggingProvider, GAME_INTERACTOR
 ) {
     private var gameUid: Int? = null
 
@@ -46,9 +45,7 @@ class GameInteractorImpl(
             Event(GAME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply {
                 this[BUTTON_PRESSED.name] = char.uid
             })
-        ).also {
-            router.routeTo(CHAR_VIEW, char.uid)
-        }
+        )
 
 
     override suspend fun setGameUid(uid: Int) {
