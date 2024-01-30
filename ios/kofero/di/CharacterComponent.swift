@@ -26,7 +26,7 @@ protocol CharacterDependency: Dependency {
     var diskAccessor: DiskAccessor {get}
 }
 
-class CharacterComponent: Component<CharacterDependency>, CharViewBuilder {
+class CharacterComponent: Component<CharacterDependency> {
     var provider: ProviderAbstract<ModelCharacter> {
         return CharProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "char", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
@@ -47,11 +47,7 @@ class CharacterComponent: Component<CharacterDependency>, CharViewBuilder {
         return CharRouterImpl()
     }
     
-    func characterView(id:Int32) -> AnyView {
-        return AnyView(CharView(charId: id, interactor: interactor, adUnitId: dependency.bannerAdUnitId))
+    var charView: CharView {
+        return CharView(interactor: interactor, adUnitId: dependency.bannerAdUnitId)
     }
-}
-
-protocol CharViewBuilder {
-    func characterView(id:Int32) -> AnyView
 }

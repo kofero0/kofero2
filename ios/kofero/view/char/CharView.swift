@@ -9,20 +9,20 @@ import SwiftUI
 import presenter
 
 struct CharView: View {
-    let charId:Int32
     let adUnitId:String
     let interactor:CharacterInteractor
     @StateObject var viewModel = CharViewModel()
     
-    init(charId:Int32, interactor:CharacterInteractor, adUnitId:String){
-        self.charId = charId
+    init(interactor:CharacterInteractor, adUnitId:String){
         self.interactor = interactor
         self.adUnitId = adUnitId
         interactor.setView(view: viewModel)
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            
+        }
     }
     
     class CharViewModel: ObservableObject, CharacterKView {
@@ -56,18 +56,4 @@ struct CharView: View {
             lastError = error
         }
     }
-}
-
-struct CharView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharView(charId: 0, interactor: MockCharInteractor(), adUnitId: "mock")
-    }
-}
-
-class MockCharInteractor: CharacterInteractor {
-    func setCharUid(uid: Int32) async throws {}
-    func setView(view: KView) {}
-    func shutdown() {}
-    func viewPaused() {}
-    func viewResumed() {}
 }

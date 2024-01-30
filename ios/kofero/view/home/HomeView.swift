@@ -8,12 +8,25 @@
 import SwiftUI
 import presenter
 
+
+enum HomeRoute: Equatable {
+    case Home
+    case Game
+    case Char
+}
+
 struct HomeView: View {
     let interactor: HomeInteractor
+    let gameView: GameView
+    let charView: CharView
+    
     let adUnitId: String
+    @StateObject var router: Router<HomeRoute> = Router(initial: .Home)
     @StateObject var viewModel = HomeViewModel()
     
-    init(interactor: HomeInteractor, adUnitId: String){
+    init(interactor: HomeInteractor, adUnitId: String, gameView: GameView, charView:CharView){
+        self.gameView = gameView
+        self.charView = charView
         self.interactor = interactor
         self.adUnitId = adUnitId
         interactor.setView(view: viewModel)
@@ -21,7 +34,27 @@ struct HomeView: View {
     
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RouterHost(router: router) { route in
+            switch route {
+            case .Home: homeView
+            case .Game: gameView
+            case .Char: charView
+            }
+        }.onAppear{ interactor.viewResumed() }
+            .onDisappear{ interactor.viewPaused() }
+    }
+    
+    var homeView: some View {
+        VStack{
+            Text("Favorites")
+//            LazyVGrid{
+//
+//            }
+            Text("Games")
+//            LazyVGrid(columns: <#[GridItem]#>){
+//
+//            }
+        }
     }
     
     
@@ -60,36 +93,5 @@ struct HomeView: View {
         func display(url: String, imgBase64: String) async throws {
             urlsToImages[url] = imgBase64
         }
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView(
-            interactor: MockHomeInteractor(), adUnitId: "mock"
-        )
-    }
-}
-
-
-
-class MockHomeInteractor: HomeInteractor {
-    
-    func favPressed(obj: Any) async throws {
-    }
-    
-    func gamePressed(game: ModelGame) async throws {
-    }
-    
-    func setView(view: KView) {
-    }
-    
-    func shutdown() {
-    }
-    
-    func viewPaused() {
-    }
-    
-    func viewResumed() {
     }
 }

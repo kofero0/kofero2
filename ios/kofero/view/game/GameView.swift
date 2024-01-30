@@ -8,15 +8,21 @@
 import SwiftUI
 import presenter
 
+enum GameRoute:Equatable {
+    case Game
+    case Char
+}
+
 struct GameView: View {
-    let gameId:Int32
     let adUnitId:String
     let interactor: GameInteractor
+    let charView: CharView
     @StateObject var viewModel = GameViewModel()
+    @StateObject var router: Router<GameRoute> = Router(initial: .Game)
     
     
-    init(gameId:Int32, interactor:GameInteractor, adUnitId:String){
-        self.gameId = gameId
+    init(charView:CharView, interactor:GameInteractor, adUnitId:String){
+        self.charView = charView
         self.adUnitId = adUnitId
         self.interactor = interactor
         interactor.setView(view: viewModel)
@@ -24,7 +30,18 @@ struct GameView: View {
     
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RouterHost(router: router) { route in
+            switch route {
+            case .Game: gameView
+            case .Char: charView
+            }
+        }
+    }
+    
+    var gameView: some View {
+        VStack{
+            
+        }
     }
     
     class GameViewModel: ObservableObject, GameKView {
@@ -58,40 +75,8 @@ struct GameView: View {
         func display(url: String, imgBase64: String) async throws {
             urlsToImages[url] = imgBase64
         }
-            
+        
         func displayGameError(error: ModelError) {
         }
-    }
-}
-
-struct GameView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView(gameId: 0, interactor: MockGameInteractor(), adUnitId: "mock")
-    }
-}
-
-class MockGameInteractor: GameInteractor {
-    func charPressed(char char_: ModelCharacter) async throws {
-    }
-    
-    func setGameUid(uid: Int32) async throws {
-    }
-    
-    func charPressed(char char_: ModelCharacter) {
-    }
-    
-    func setGameUid(uid: Int32) {
-    }
-    
-    func setView(view: KView) {
-    }
-    
-    func shutdown() {
-    }
-    
-    func viewPaused() {
-    }
-    
-    func viewResumed() {
     }
 }

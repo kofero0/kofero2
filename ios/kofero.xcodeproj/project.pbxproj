@@ -43,6 +43,8 @@
 		4BD71AA62A8F138800EB8752 /* CharRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */; };
 		4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA72A8F15BD00EB8752 /* Typealias.swift */; };
 		4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA92A8F165F00EB8752 /* RootView.swift */; };
+		4BE92F8B2B66F598000C52A4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE92F8A2B66F598000C52A4 /* Router.swift */; };
+		4BE92F8D2B66F5C8000C52A4 /* RouterHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE92F8C2B66F5C8000C52A4 /* RouterHost.swift */; };
 		4BF5B6752B588D28003D600E /* StatusProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */; };
 		4BF5B6772B5A1A57003D600E /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6762B5A1A57003D600E /* Publisher.swift */; };
 		4BF5B6792B5A202E003D600E /* StatusMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6782B5A202E003D600E /* StatusMapperImpl.swift */; };
@@ -88,6 +90,8 @@
 		4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharRouterImpl.swift; sourceTree = "<group>"; };
 		4BD71AA72A8F15BD00EB8752 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		4BD71AA92A8F165F00EB8752 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4BE92F8A2B66F598000C52A4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4BE92F8C2B66F5C8000C52A4 /* RouterHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterHost.swift; sourceTree = "<group>"; };
 		4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusProviderImpl.swift; sourceTree = "<group>"; };
 		4BF5B6762B5A1A57003D600E /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
 		4BF5B6782B5A202E003D600E /* StatusMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMapperImpl.swift; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				4BD71A952A8D897300EB8752 /* home */,
 				4BD71A942A8D896E00EB8752 /* game */,
 				4BD71A922A8D896000EB8752 /* char */,
+				4BE92F8A2B66F598000C52A4 /* Router.swift */,
+				4BE92F8C2B66F5C8000C52A4 /* RouterHost.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -408,6 +414,7 @@
 				4BD71A722A85F59800EB8752 /* ImageProvider.swift in Sources */,
 				4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */,
 				4BD71A602A85F4DC00EB8752 /* JsonStringEncoder.swift in Sources */,
+				4BE92F8B2B66F598000C52A4 /* Router.swift in Sources */,
 				4BD71A6B2A85F52000EB8752 /* GameMapperImpl.swift in Sources */,
 				4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */,
 				4BD71A8C2A8B0D7300EB8752 /* GameComponent.swift in Sources */,
@@ -418,6 +425,7 @@
 				4BD71A8F2A8B0D7300EB8752 /* CharacterComponent.swift in Sources */,
 				4BBAE1DC2B61DE5200C50536 /* StateLoggerImpl.swift in Sources */,
 				4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */,
+				4BE92F8D2B66F5C8000C52A4 /* RouterHost.swift in Sources */,
 				4BBAE1E22B6220D100C50536 /* RootRouter.swift in Sources */,
 				4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */,
 				4BD71A5F2A85F4DC00EB8752 /* StringEncoder.swift in Sources */,

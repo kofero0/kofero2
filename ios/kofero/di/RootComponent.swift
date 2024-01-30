@@ -72,24 +72,8 @@ class RootComponent: BootstrapComponent {
         return RequestMapperImpl()
     }
     
-    var gameViewBuilder:GameViewBuilder{
-        return gameComponent
-    }
-    
-    var charViewBuilder:CharViewBuilder{
-        return characterComponent
-    }
-    
-    var homeViewBuilder: HomeViewBuilder {
-        return homeComponent
-    }
-    
     var bannerAdUnitId: String {
         return "ca-app-pub-8614671926563443/4610731994"
-    }
-    
-    var navController: UINavigationController {
-        return UINavigationController(rootViewController: UIHostingController(rootView: RootView()))
     }
     
     var favoritesProvider:FavoritesProvider {
@@ -145,6 +129,14 @@ class RootComponent: BootstrapComponent {
     }
     
     var rootView: RootView {
-        return RootView()
+        return RootView(interactor: rootInteractor, homeView: homeComponent.homeView)
+    }
+    
+    var charView: CharView {
+        return characterComponent.charView
+    }
+    
+    var gameView: GameView {
+        return gameComponent.gameView
     }
 }

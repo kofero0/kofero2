@@ -42,12 +42,6 @@ private class GameDependency6174651c56123eef7457BaseProvider: GameDependency {
     var jsonEncoder: StringEncoder<[JSON]> {
         return rootComponent.jsonEncoder
     }
-    var charViewBuilder: CharViewBuilder {
-        return rootComponent.charViewBuilder
-    }
-    var navController: UINavigationController {
-        return rootComponent.navController
-    }
     var bannerAdUnitId: String {
         return rootComponent.bannerAdUnitId
     }
@@ -74,6 +68,9 @@ private class GameDependency6174651c56123eef7457BaseProvider: GameDependency {
     }
     var diskAccessor: DiskAccessor {
         return rootComponent.diskAccessor
+    }
+    var charView: CharView {
+        return rootComponent.charView
     }
     private let rootComponent: RootComponent
     init(rootComponent: RootComponent) {
@@ -174,9 +171,6 @@ private class HomeDependencycad225e9266b3c9a56ddBaseProvider: HomeDependency {
     var charProvider: ProviderAbstract<ModelCharacter> {
         return rootComponent.charProvider
     }
-    var gameViewBuilder: GameViewBuilder {
-        return rootComponent.gameViewBuilder
-    }
     var imageProvider: ImageProvider {
         return rootComponent.imageProvider
     }
@@ -192,11 +186,14 @@ private class HomeDependencycad225e9266b3c9a56ddBaseProvider: HomeDependency {
     var loggingProvider: LoggingProvider {
         return rootComponent.loggingProvider
     }
-    var navController: UINavigationController {
-        return rootComponent.navController
-    }
     var dispatcherProvider: DispatcherProvider {
         return rootComponent.dispatcherProvider
+    }
+    var gameView: GameView {
+        return rootComponent.gameView
+    }
+    var charView: CharView {
+        return rootComponent.charView
     }
     private let rootComponent: RootComponent
     init(rootComponent: RootComponent) {

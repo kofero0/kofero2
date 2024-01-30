@@ -14,17 +14,17 @@ protocol HomeDependency: Dependency {
     var bannerAdUnitId:String {get}
     var gameProvider:ProviderAbstract<ModelGame> {get}
     var charProvider:ProviderAbstract<ModelCharacter> {get}
-    var gameViewBuilder:GameViewBuilder {get}
     var imageProvider:ImageProvider {get}
     var favoritesProvider:FavoritesProvider {get}
     var stateLogger:StateLogger {get}
     var stateReducer:StateReducer {get}
     var loggingProvider:LoggingProvider {get}
-    var navController:UINavigationController {get}
     var dispatcherProvider: DispatcherProvider {get}
+    var gameView: GameView {get}
+    var charView: CharView {get}
 }
 
-class HomeComponent: Component<HomeDependency>, HomeViewBuilder {
+class HomeComponent: Component<HomeDependency> {
     
     var presenter: HomePresenter {
         return HomePresenterImpl(gameProvider: dependency.gameProvider, charProvider: dependency.charProvider, imageProvider: dependency.imageProvider, favoritesProvider: dependency.favoritesProvider, loggingProvider: dependency.loggingProvider)
@@ -35,14 +35,10 @@ class HomeComponent: Component<HomeDependency>, HomeViewBuilder {
     }
     
     var router: HomeRouter {
-        return HomeRouterImpl(dependency.gameViewBuilder, navController: dependency.navController)
+        return HomeRouterImpl()
     }
     
-    func homeView() -> AnyView {
-        return AnyView(HomeView(interactor: interactor, adUnitId: dependency.bannerAdUnitId))
+    var homeView: HomeView{
+        return HomeView(interactor: interactor, adUnitId: dependency.bannerAdUnitId, gameView: dependency.gameView, charView: dependency.charView)
     }
-}
-
-protocol HomeViewBuilder {
-    func homeView() -> AnyView
 }
