@@ -17,7 +17,7 @@ public class MoveMapperImpl: MoveMapper{
     }
     
     public override func mapLeft(data: String) -> [ModelMove] {
-            let json = try JSON(stringLiteral: data)
+            let json = try JSON(parseJSON: data)
             var ret = [ModelMove]()
             for element in json.arrayValue {
                 ret.append(serialize(json: element))

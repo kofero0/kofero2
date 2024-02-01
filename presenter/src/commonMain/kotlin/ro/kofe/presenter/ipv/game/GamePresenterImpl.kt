@@ -28,7 +28,7 @@ class GamePresenterImpl(
                 emit(IncorrectCount(ids))
                 return
             }
-            val game = games[0]
+            val game = games.first()
             loggingProvider.log(Level.DEBUG, "GamePresenterImpl", "chars: ${game.charIds}")
             view?.display(game)
             imageProvider.get(game.iconUrl).map { view?.display(game.iconUrl, it) }

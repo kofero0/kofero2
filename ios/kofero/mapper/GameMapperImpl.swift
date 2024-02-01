@@ -18,7 +18,7 @@ public class GameMapperImpl: GameMapper {
     }
     
     public override func mapLeft(data: String) -> [ModelGame] {
-        let json = JSON(stringLiteral: data)
+        let json = JSON(parseJSON: data)
         var ret = [ModelGame]()
         for element in json.arrayValue {
             ret.append(serialize(json: element))

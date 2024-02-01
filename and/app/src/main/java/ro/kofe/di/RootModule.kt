@@ -24,7 +24,6 @@ import ro.kofe.presenter.provider.StatusProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 import ro.kofe.provider.*
-import ro.kofe.router.RouterImpl
 import javax.inject.Qualifier
 
 @Module
@@ -110,10 +109,9 @@ object RootModule {
         presenter: RootPresenter,
         stateLogger: StateLogger,
         stateReducer: StateReducer,
-        logger: LoggingProvider,
-        router: RootRouter
+        logger: LoggingProvider
     ): RootInteractor = RootInteractorImpl(
-        presenter, stateLogger, stateReducer, logger, router, DispatcherProvider.default
+        presenter, stateLogger, stateReducer, logger, DispatcherProvider
     )
 
     @Provides

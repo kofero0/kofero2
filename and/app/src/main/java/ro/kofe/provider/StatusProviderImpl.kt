@@ -24,7 +24,7 @@ class StatusProviderImpl(
         }
     }
 
-    override suspend fun getLocalStatus() = Status(System.nanoTime(), BuildConfig.VERSION_NAME)
+    override fun getLocalStatus() = Status(System.nanoTime(), BuildConfig.VERSION_NAME)
 
     companion object {
         private const val statusSuffix = "status"

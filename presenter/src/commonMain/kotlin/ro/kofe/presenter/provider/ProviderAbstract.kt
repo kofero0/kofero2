@@ -21,7 +21,7 @@ abstract class ProviderAbstract<T>(
     private val mapper: Mapper<List<T>, String>,
     private val requestMapper: Mapper<List<Int>, String>,
     private val diskAccessor: DiskAccessor
-): Provider<T> {
+) : Provider<T> {
     private var isDiskPulled = false
     private var elements: MutableList<T> = ArrayList()
     private val syncObject = SynchronizedObject()
@@ -33,28 +33,27 @@ abstract class ProviderAbstract<T>(
         }
         if (isSatisfiable(ids)) {
             emit(retrieve(ids))
-        }
-        else {
+        } else {
             emit(send(ids))
         }
     }
 
     private suspend fun send(ids: List<Int>) = either {
-        val response = client.put("$urlPrefix/$jsonFilename"){
+        val response = client.put("$urlPrefix/$jsonFilename") {
             contentType(ContentType.Application.Json)
             setBody(requestMapper.mapRight(ids))
         }
-        if(response.status.value in 200..299){
+        if (response.status.value in 200..299) {
             mapper.mapLeft(response.bodyAsText()).also { add(it) }
         } else {
-            raise(HttpError(response.status.value,response.bodyAsText()))
+            raise(HttpError(response.status.value, response.bodyAsText()))
         }
     }
 
     private fun add(new: List<T>) {
         synchronized(syncObject) {
             for (element in new) {
-                elements.removeAll { isEqual(it,element) }
+                elements.removeAll { isEqual(it, element) }
                 elements.add(element)
             }
             diskAccessor.write(jsonFilename, mapper.mapRight(elements))
@@ -68,7 +67,7 @@ abstract class ProviderAbstract<T>(
             } else {
                 ArrayList<T>().apply {
                     for (id in ids) {
-                        add(elements.first { isEqual(it,id) })
+                        add(elements.first { isEqual(it, id) })
                     }
                 }
             }
@@ -76,16 +75,16 @@ abstract class ProviderAbstract<T>(
     }
 
     private fun isSatisfiable(ids: List<Int>): Boolean {
-        if(elements.size == 0) return false
+        if (elements.size == 0) return false
         for (id in ids) {
-            if (elements.none { isEqual(it,id) }) {
+            if (elements.none { isEqual(it, id) }) {
                 return false
             }
         }
         return true
     }
 
-    abstract fun isEqual(element:T, id:Int): Boolean
+    abstract fun isEqual(element: T, id: Int): Boolean
 
-    abstract fun isEqual(one:T, two:T): Boolean
+    abstract fun isEqual(one: T, two: T): Boolean
 }

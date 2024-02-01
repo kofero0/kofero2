@@ -31,11 +31,7 @@ class HomeComponent: Component<HomeDependency> {
     }
     
     var interactor: HomeInteractor {
-        return HomeInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router, context: dependency.dispatcherProvider.default_)
-    }
-    
-    var router: HomeRouter {
-        return HomeRouterImpl()
+        return HomeInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, context: dependency.dispatcherProvider.default_)
     }
     
     var homeView: HomeView{

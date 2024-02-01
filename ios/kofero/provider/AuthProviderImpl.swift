@@ -17,6 +17,7 @@ class AuthProviderImpl: AuthProvider {
     private let arrowExtensions = ArrowExtensions()
     private let path:String = "auth"
     private let urlPrefix: String
+    private let syncObject = NSObject()
     
     
     init(restManager: RestManager, fileManager:IFileManager, loggingProvider:LoggingProvider, urlPrefix:String){
@@ -43,33 +44,35 @@ class AuthProviderImpl: AuthProvider {
     
     
     func get() -> Arrow_coreEither<ModelProviderError, NSString> {
-        do{
-            //return arrowExtensions.buildImageEitherRight(right: "0||0858cfa32b700b179f75168c19af0160f57aa7de501275fd845d19bae23e7dbe")
-            return arrowExtensions.buildImageEitherRight(right: String(data: try Data(contentsOf: makeUrl()), encoding: .utf8)!)
-        }
-        catch{
-            let group = DispatchGroup()
-            var data: Data? = nil
-            group.enter()
-            var request = URLRequest(url: URL(string: urlPrefix + "/auth/register")!)
-            request.httpMethod = "PUT"
-            request.allHTTPHeaderFields?["Content-Type"] = "application/json"
-            request.httpBody = ("{\"prefixedUid\":\"koferoAuth||" + UIDevice.current.identifierForVendor!.uuidString + "\"}").data(using: .utf8)
-            restManager.dataTask(with: request, completionHandler: getRestClosure{ [self] ndata in
-                self.loggingProvider.log(level: .debug, logTag: "AuthProvider", message: "\(String(describing: String(data: ndata, encoding: .utf8)))")
-                data = ndata
-                group.leave()
-            }).resume()
-            group.wait()
-            if let uData = data {
-                do{
-                    let json = try JSON(data: uData)
-                    return arrowExtensions.buildImageEitherRight(right: json["token"].stringValue)
-                }catch{
+        print("@#@# GET AUTH")
+        return synchronized(syncObject){ () -> Arrow_coreEither<ModelProviderError, NSString> in
+            do{
+                return arrowExtensions.buildImageEitherRight(right: String(data: try Data(contentsOf: makeUrl()), encoding: .utf8)!)
+            }
+            catch{
+                let group = DispatchGroup()
+                var data: Data? = nil
+                group.enter()
+                var request = URLRequest(url: URL(string: urlPrefix + "/auth/register")!)
+                request.httpMethod = "PUT"
+                request.allHTTPHeaderFields?["Content-Type"] = "application/json"
+                request.httpBody = ("{\"prefixedUid\":\"koferoAuth||" + UIDevice.current.identifierForVendor!.uuidString + "\"}").data(using: .utf8)
+                restManager.dataTask(with: request, completionHandler: getRestClosure{ [self] ndata in
+                    self.loggingProvider.log(level: .debug, logTag: "AuthProvider", message: "\(String(describing: String(data: ndata, encoding: .utf8)))")
+                    data = ndata
+                    group.leave()
+                }).resume()
+                group.wait()
+                if let uData = data {
+                    do{
+                        let json = try JSON(data: uData)
+                        return arrowExtensions.buildImageEitherRight(right: json["token"].stringValue)
+                    }catch{
+                        return arrowExtensions.buildImageEitherLeft(left: ModelIncorrectCount(ids: []))
+                    }
+                } else{
                     return arrowExtensions.buildImageEitherLeft(left: ModelIncorrectCount(ids: []))
                 }
-            } else{
-                return arrowExtensions.buildImageEitherLeft(left: ModelIncorrectCount(ids: []))
             }
         }
     }

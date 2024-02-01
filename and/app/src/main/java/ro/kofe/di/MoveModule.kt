@@ -14,7 +14,7 @@ import ro.kofe.presenter.HttpClientProvider
 import ro.kofe.presenter.map.Mapper
 import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.DiskAccessor
-import ro.kofe.presenter.provider.MoveProvider
+import ro.kofe.presenter.provider.MoveProviderImpl
 import ro.kofe.presenter.provider.Provider
 
 @Module
@@ -30,5 +30,5 @@ object MoveModule {
         mapper: Mapper<List<Move>, String>,
         requestMapper: Mapper<List<Int>, String>,
         diskAccessor: DiskAccessor
-    ): Provider<Move> = MoveProvider(HttpClientProvider.provideAuth(authProvider),"move",urlPrefix,mapper,requestMapper,diskAccessor)
+    ): Provider<Move> = MoveProviderImpl(HttpClientProvider.provideAuth(authProvider),"move",urlPrefix,mapper,requestMapper,diskAccessor)
 }

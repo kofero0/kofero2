@@ -55,9 +55,10 @@ open class ImageProviderImpl: ImageProvider {
         }
     }
     
+    
     public func get(url: String) async throws -> Arrow_coreEither<ModelProviderError, NSString> {
         do{
-            return arrowExtensions.buildImageEitherRight(right: String(data: try Data(contentsOf: makeUrl(string: url)), encoding: .utf8)!)
+            return arrowExtensions.buildImageEitherRight(right: try Data(contentsOf: makeUrl(string: url)).base64EncodedString())
         }
         catch{
             if let uRL = URL(string: url) {
@@ -71,7 +72,7 @@ open class ImageProviderImpl: ImageProvider {
                 }).resume()
                 group.wait()
                 if let uData = data {
-                    return arrowExtensions.buildImageEitherRight(right: String(data: uData, encoding: .utf8)!)
+                    return arrowExtensions.buildImageEitherRight(right: uData.base64EncodedString())
                 } else{
                     return arrowExtensions.buildImageEitherLeft(left: ModelIncorrectCount(ids: []))
                 }

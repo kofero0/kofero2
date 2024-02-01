@@ -117,15 +117,11 @@ class RootComponent: BootstrapComponent {
     }
     
     var statusProvider: StatusProvider {
-        return StatusProviderImpl(client: HttpClientProvider().provideAuth(authProvider: authProvider), urlPrefix: urlPrefix, mapper: statusMapper)
+        return StatusProviderImpl(client: authHttpClient, urlPrefix: urlPrefix, mapper: statusMapper)
     }
     
     var rootInteractor: RootInteractor{
-        return RootInteractorImpl(presenter: rootPresenter, stateLogger: stateLogger, stateReducer: StateReducerImpl(), loggingProvider: loggingProvider, router: rootRouter, dispatcherProvider: dispatcherProvider)
-    }
-    
-    var rootRouter: RootRouter {
-        return RootRouterImpl()
+        return RootInteractorImpl(presenter: rootPresenter, stateLogger: stateLogger, stateReducer: StateReducerImpl(), loggingProvider: loggingProvider, dispatcherProvider: dispatcherProvider)
     }
     
     var rootView: RootView {
@@ -138,5 +134,9 @@ class RootComponent: BootstrapComponent {
     
     var gameView: GameView {
         return gameComponent.gameView
+    }
+    
+    var authHttpClient: Ktor_client_coreHttpClient {
+        return HttpClientProvider().provideAuth(authProvider: authProvider)
     }
 }

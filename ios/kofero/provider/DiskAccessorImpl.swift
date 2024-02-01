@@ -17,7 +17,7 @@ class DiskAccessorImpl: DiskAccessor {
             return try String(contentsOf: fileUrl, encoding: .utf8)
         }
         catch{
-            fatalError("how did we get here?")
+            return String("[]")
         }
     }
     

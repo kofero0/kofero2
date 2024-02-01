@@ -24,11 +24,12 @@ protocol CharacterDependency: Dependency {
     var urlPrefix: String {get}
     var requestMapper: RequestMapper {get}
     var diskAccessor: DiskAccessor {get}
+    var authHttpClient: Ktor_client_coreHttpClient {get}
 }
 
 class CharacterComponent: Component<CharacterDependency> {
     var provider: ProviderAbstract<ModelCharacter> {
-        return CharProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "char", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
+        return CharProviderImpl(client: dependency.authHttpClient, jsonFilename: "char", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     
     var mapper: CharMapper {
@@ -40,11 +41,7 @@ class CharacterComponent: Component<CharacterDependency> {
     }
     
     var interactor: CharacterInteractor {
-        return CharacterInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router, context: dependency.dispatcherProvider.default_)
-    }
-    
-    var router: CharacterRouter {
-        return CharRouterImpl()
+        return CharacterInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, context: dependency.dispatcherProvider.default_)
     }
     
     var charView: CharView {

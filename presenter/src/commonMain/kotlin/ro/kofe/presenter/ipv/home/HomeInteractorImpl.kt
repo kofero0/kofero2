@@ -26,17 +26,9 @@ class HomeInteractorImpl(
 ) {
 
     override suspend fun favPressed(obj: Any) {
-        val tag: ViewTag?
-        val uid: Int?
-        when(obj){
-            is Game -> {
-                tag = GAME_VIEW
-                uid = obj.uid
-            }
-            is Character -> {
-                tag = CHAR_VIEW
-                uid = obj.uid
-            }
+        val uid = when(obj){
+            is Game -> obj.uid
+            is Character -> obj.uid
             else -> {
                 log(Level.ALERT, "object $obj is not a valid favorite")
                 return

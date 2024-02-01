@@ -20,7 +20,7 @@ class StateMapperImpl: StringMapper<[KotlinLong:ModelEvent]> {
     }
     
     public override func map(data: String) throws -> [KotlinLong : ModelEvent] {
-        var jsonDict = JSON(stringLiteral: data).dictionaryValue
+        var jsonDict = JSON(parseJSON: data).dictionaryValue
         var ret = [KotlinLong:ModelEvent]()
         return ret
     }

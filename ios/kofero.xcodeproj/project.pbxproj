@@ -16,7 +16,6 @@
 		4BBAE1DC2B61DE5200C50536 /* StateLoggerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */; };
 		4BBAE1DE2B61E00C00C50536 /* StringMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1DD2B61E00C00C50536 /* StringMapper.swift */; };
 		4BBAE1E02B61E11100C50536 /* StateMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1DF2B61E11100C50536 /* StateMapperImpl.swift */; };
-		4BBAE1E22B6220D100C50536 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1E12B6220D100C50536 /* RootRouter.swift */; };
 		4BD71A4D2A85EB9D00EB8752 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */; };
 		4BD71A512A85EB9E00EB8752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD71A502A85EB9E00EB8752 /* Assets.xcassets */; };
 		4BD71A542A85EB9E00EB8752 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD71A532A85EB9E00EB8752 /* Preview Assets.xcassets */; };
@@ -37,10 +36,7 @@
 		4BD71A972A8D8C7900EB8752 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A962A8D8C7900EB8752 /* HomeView.swift */; };
 		4BD71A992A8D8F8300EB8752 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A982A8D8F8300EB8752 /* GameView.swift */; };
 		4BD71A9B2A8D8F9D00EB8752 /* CharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A9A2A8D8F9D00EB8752 /* CharView.swift */; };
-		4BD71A9D2A8D903A00EB8752 /* HomeRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A9C2A8D903A00EB8752 /* HomeRouterImpl.swift */; };
 		4BD71AA12A8EAECF00EB8752 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA02A8EAECF00EB8752 /* Extension.swift */; };
-		4BD71AA42A8F086000EB8752 /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA32A8F086000EB8752 /* GameRouter.swift */; };
-		4BD71AA62A8F138800EB8752 /* CharRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */; };
 		4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA72A8F15BD00EB8752 /* Typealias.swift */; };
 		4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA92A8F165F00EB8752 /* RootView.swift */; };
 		4BE92F8B2B66F598000C52A4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE92F8A2B66F598000C52A4 /* Router.swift */; };
@@ -62,7 +58,6 @@
 		4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateLoggerImpl.swift; sourceTree = "<group>"; };
 		4BBAE1DD2B61E00C00C50536 /* StringMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMapper.swift; sourceTree = "<group>"; };
 		4BBAE1DF2B61E11100C50536 /* StateMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMapperImpl.swift; sourceTree = "<group>"; };
-		4BBAE1E12B6220D100C50536 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		4BD71A492A85EB9D00EB8752 /* kofero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kofero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		4BD71A502A85EB9E00EB8752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,10 +79,7 @@
 		4BD71A962A8D8C7900EB8752 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4BD71A982A8D8F8300EB8752 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		4BD71A9A2A8D8F9D00EB8752 /* CharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharView.swift; sourceTree = "<group>"; };
-		4BD71A9C2A8D903A00EB8752 /* HomeRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterImpl.swift; sourceTree = "<group>"; };
 		4BD71AA02A8EAECF00EB8752 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		4BD71AA32A8F086000EB8752 /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
-		4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharRouterImpl.swift; sourceTree = "<group>"; };
 		4BD71AA72A8F15BD00EB8752 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		4BD71AA92A8F165F00EB8752 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		4BE92F8A2B66F598000C52A4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -112,15 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4BBAE1E32B6220DB00C50536 /* root */ = {
-			isa = PBXGroup;
-			children = (
-				4BBAE1E12B6220D100C50536 /* RootRouter.swift */,
-				4BD71AA92A8F165F00EB8752 /* RootView.swift */,
-			);
-			path = root;
-			sourceTree = "<group>";
-		};
 		4BD71A402A85EB9D00EB8752 = {
 			isa = PBXGroup;
 			children = (
@@ -222,41 +205,14 @@
 		4BD71A912A8D894F00EB8752 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				4BBAE1E32B6220DB00C50536 /* root */,
-				4BD71A952A8D897300EB8752 /* home */,
-				4BD71A942A8D896E00EB8752 /* game */,
-				4BD71A922A8D896000EB8752 /* char */,
+				4BD71A9A2A8D8F9D00EB8752 /* CharView.swift */,
+				4BD71A982A8D8F8300EB8752 /* GameView.swift */,
+				4BD71A962A8D8C7900EB8752 /* HomeView.swift */,
+				4BD71AA92A8F165F00EB8752 /* RootView.swift */,
 				4BE92F8A2B66F598000C52A4 /* Router.swift */,
 				4BE92F8C2B66F5C8000C52A4 /* RouterHost.swift */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		4BD71A922A8D896000EB8752 /* char */ = {
-			isa = PBXGroup;
-			children = (
-				4BD71AA52A8F138800EB8752 /* CharRouterImpl.swift */,
-				4BD71A9A2A8D8F9D00EB8752 /* CharView.swift */,
-			);
-			path = char;
-			sourceTree = "<group>";
-		};
-		4BD71A942A8D896E00EB8752 /* game */ = {
-			isa = PBXGroup;
-			children = (
-				4BD71AA32A8F086000EB8752 /* GameRouter.swift */,
-				4BD71A982A8D8F8300EB8752 /* GameView.swift */,
-			);
-			path = game;
-			sourceTree = "<group>";
-		};
-		4BD71A952A8D897300EB8752 /* home */ = {
-			isa = PBXGroup;
-			children = (
-				4BD71A9C2A8D903A00EB8752 /* HomeRouterImpl.swift */,
-				4BD71A962A8D8C7900EB8752 /* HomeView.swift */,
-			);
-			path = home;
 			sourceTree = "<group>";
 		};
 		7C2B9713EAB5AE47C504B2E4 /* Pods */ = {
@@ -426,7 +382,6 @@
 				4BBAE1DC2B61DE5200C50536 /* StateLoggerImpl.swift in Sources */,
 				4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */,
 				4BE92F8D2B66F5C8000C52A4 /* RouterHost.swift in Sources */,
-				4BBAE1E22B6220D100C50536 /* RootRouter.swift in Sources */,
 				4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */,
 				4BD71A5F2A85F4DC00EB8752 /* StringEncoder.swift in Sources */,
 				4BD71A6A2A85F52000EB8752 /* CharacterMapperImpl.swift in Sources */,
@@ -436,15 +391,12 @@
 				4BBAE1DE2B61E00C00C50536 /* StringMapper.swift in Sources */,
 				4BF5B6772B5A1A57003D600E /* Publisher.swift in Sources */,
 				4BD71A8D2A8B0D7300EB8752 /* RootComponent.swift in Sources */,
-				4BD71A9D2A8D903A00EB8752 /* HomeRouterImpl.swift in Sources */,
 				4BF5B6792B5A202E003D600E /* StatusMapperImpl.swift in Sources */,
-				4BD71AA42A8F086000EB8752 /* GameRouter.swift in Sources */,
 				4BD71A8E2A8B0D7300EB8752 /* MoveComponent.swift in Sources */,
 				4BD71AA12A8EAECF00EB8752 /* Extension.swift in Sources */,
 				4BD71A4D2A85EB9D00EB8752 /* iosApp.swift in Sources */,
 				4BF5B6752B588D28003D600E /* StatusProviderImpl.swift in Sources */,
 				4BD71A972A8D8C7900EB8752 /* HomeView.swift in Sources */,
-				4BD71AA62A8F138800EB8752 /* CharRouterImpl.swift in Sources */,
 				4BD71A992A8D8F8300EB8752 /* GameView.swift in Sources */,
 				4BD71A5E2A85F4DC00EB8752 /* Encoder.swift in Sources */,
 			);

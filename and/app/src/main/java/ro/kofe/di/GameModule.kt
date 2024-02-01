@@ -17,14 +17,13 @@ import ro.kofe.presenter.ipv.game.*
 import ro.kofe.presenter.map.Mapper
 import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.DiskAccessor
-import ro.kofe.presenter.provider.GameProvider
+import ro.kofe.presenter.provider.GameProviderImpl
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 import ro.kofe.provider.LoggingProviderImpl
-import ro.kofe.router.RouterImpl
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -34,14 +33,12 @@ object GameModule {
         presenter: GamePresenter,
         stateLogger: StateLogger,
         stateReducer: StateReducer,
-        logger: LoggingProvider,
-        router: GameRouter,
+        logger: LoggingProvider
     ): GameInteractor = GameInteractorImpl(
         presenter,
         stateLogger,
         stateReducer,
         logger,
-        router,
         DispatcherProvider.default
     )
 
@@ -63,9 +60,6 @@ object GameModule {
         accessor: DiskAccessor,
         mapper: Mapper<List<Game>, String>,
         requestMapper: Mapper<List<Int>, String>,
-    ): Provider<Game> = GameProvider(HttpClientProvider.provideAuth(authProvider),"game",urlPrefix,mapper,requestMapper,accessor)
+    ): Provider<Game> = GameProviderImpl(HttpClientProvider.provideAuth(authProvider),"game",urlPrefix,mapper,requestMapper,accessor)
 
-
-    @Provides
-    fun provideGameRouter(): GameRouter = RouterImpl()
 }

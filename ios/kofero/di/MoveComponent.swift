@@ -17,11 +17,12 @@ protocol MoveDependency: Dependency {
     var urlPrefix: String {get}
     var requestMapper: RequestMapper {get}
     var diskAccessor: DiskAccessor {get}
+    var authHttpClient: Ktor_client_coreHttpClient {get}
 }
 
 class MoveComponent: Component<MoveDependency> {
     var provider: ProviderAbstract<ModelMove> {
-        return MoveProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "move", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
+        return MoveProviderImpl(client: dependency.authHttpClient, jsonFilename: "move", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     
     var mapper:MoveMapper{

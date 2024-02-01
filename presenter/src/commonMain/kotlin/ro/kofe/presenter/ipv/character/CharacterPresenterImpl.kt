@@ -26,7 +26,7 @@ class CharacterPresenterImpl(
             if (chars.size != 1) {
                 emit(IncorrectCount(ids))
             }
-            val char = chars[0]
+            val char = chars.first()
             view?.display(char)
             imageProvider.get(char.iconUrl).fold({ emit(it) }) { view?.display(char.iconUrl, it) }
             moveProvider.get(char.moveIds).collect { either ->

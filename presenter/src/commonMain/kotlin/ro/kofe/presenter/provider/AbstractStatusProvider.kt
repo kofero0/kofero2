@@ -14,8 +14,6 @@ abstract class AbstractStatusProvider(
     private val urlPrefix: String,
     private val mapper:Mapper<Status, String>
 ): StatusProvider {
-
-
     override suspend fun getBackendStatus() = either {
         val response = client.get("$urlPrefix/status"){
             contentType(ContentType.Application.Json)

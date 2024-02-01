@@ -19,7 +19,7 @@ public class CharacterMapperImpl: CharMapper {
     
     public override func mapLeft(data: String) -> [ModelCharacter] {
         
-        let json = JSON(stringLiteral: data)
+        let json = JSON(parseJSON: data)
             var ret = [ModelCharacter]()
             for element in json.arrayValue {
                 ret.append(serialize(json: element))

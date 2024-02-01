@@ -72,6 +72,9 @@ private class GameDependency6174651c56123eef7457BaseProvider: GameDependency {
     var charView: CharView {
         return rootComponent.charView
     }
+    var authHttpClient: Ktor_client_coreHttpClient {
+        return rootComponent.authHttpClient
+    }
     private let rootComponent: RootComponent
     init(rootComponent: RootComponent) {
         self.rootComponent = rootComponent
@@ -101,6 +104,9 @@ private class MoveDependency60ec017cefc7ff9083ceBaseProvider: MoveDependency {
     }
     var diskAccessor: DiskAccessor {
         return rootComponent.diskAccessor
+    }
+    var authHttpClient: Ktor_client_coreHttpClient {
+        return rootComponent.authHttpClient
     }
     private let rootComponent: RootComponent
     init(rootComponent: RootComponent) {
@@ -149,6 +155,9 @@ private class CharacterDependency42b99561bd73739b9ec3BaseProvider: CharacterDepe
     }
     var diskAccessor: DiskAccessor {
         return rootComponent.diskAccessor
+    }
+    var authHttpClient: Ktor_client_coreHttpClient {
+        return rootComponent.authHttpClient
     }
     private let rootComponent: RootComponent
     init(rootComponent: RootComponent) {

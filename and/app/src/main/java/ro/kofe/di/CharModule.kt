@@ -13,14 +13,13 @@ import ro.kofe.presenter.HttpClientProvider
 import ro.kofe.presenter.ipv.character.*
 import ro.kofe.presenter.map.Mapper
 import ro.kofe.presenter.provider.AuthProvider
-import ro.kofe.presenter.provider.CharProvider
+import ro.kofe.presenter.provider.CharProviderImpl
 import ro.kofe.presenter.provider.DiskAccessor
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
-import ro.kofe.router.RouterImpl
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -37,10 +36,9 @@ object CharModule {
         presenter: CharacterPresenter,
         stateLogger: StateLogger,
         stateReducer: StateReducer,
-        logger: LoggingProvider,
-        router: CharacterRouter
+        logger: LoggingProvider
     ): CharacterInteractor = CharacterInteractorImpl(
-        presenter, stateLogger, stateReducer, logger, router, DispatcherProvider.default
+        presenter, stateLogger, stateReducer, logger, DispatcherProvider.default
     )
 
     @Provides
@@ -53,10 +51,7 @@ object CharModule {
         mapper: Mapper<List<Character>, String>,
         requestMapper: Mapper<List<Int>, String>,
         diskAccessor: DiskAccessor
-    ): Provider<Character> = CharProvider(
+    ): Provider<Character> = CharProviderImpl(
         HttpClientProvider.provideAuth(authProvider),"char",urlPrefix,mapper,requestMapper,diskAccessor
     )
-
-    @Provides
-    fun provideCharacterRouter(): CharacterRouter = RouterImpl()
 }

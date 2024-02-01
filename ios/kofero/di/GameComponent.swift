@@ -25,11 +25,12 @@ protocol GameDependency: Dependency {
     var requestMapper: RequestMapper {get}
     var diskAccessor: DiskAccessor {get}
     var charView: CharView {get}
+    var authHttpClient: Ktor_client_coreHttpClient {get}
 }
 
 class GameComponent: Component<GameDependency> {
     var gameProvider: ProviderAbstract<ModelGame> {
-        return GameProviderImpl(client: HttpClientProvider().provideAuth(authProvider: dependency.authProvider), jsonFilename: "game", urlPrefix: dependency.urlPrefix, mapper: gameMapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
+        return GameProviderImpl(client: dependency.authHttpClient, jsonFilename: "game", urlPrefix: dependency.urlPrefix, mapper: gameMapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     
     var gameMapper: GameMapper {
@@ -41,11 +42,7 @@ class GameComponent: Component<GameDependency> {
     }
     
     var interactor: GameInteractor {
-        return GameInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, router: router, context: dependency.dispatcherProvider.default_)
-    }
-    
-    var router: GameRouter {
-        return GameRouterImpl()
+        return GameInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, context: dependency.dispatcherProvider.default_)
     }
     
     var gameView: GameView {

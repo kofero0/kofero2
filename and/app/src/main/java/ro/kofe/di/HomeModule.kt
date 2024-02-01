@@ -17,7 +17,6 @@ import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
-import ro.kofe.router.RouterImpl
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -36,18 +35,13 @@ object HomeModule {
         homePresenter: HomePresenter,
         stateLogger: StateLogger,
         stateReducer: StateReducer,
-        logger: LoggingProvider,
-        router: HomeRouter
+        logger: LoggingProvider
     ): HomeInteractor = HomeInteractorImpl(
         homePresenter,
         stateLogger,
         stateReducer,
         logger,
-        router,
         DispatcherProvider.default
     )
-
-    @Provides
-    fun provideHomeRouter(): HomeRouter = RouterImpl()
 
 }
