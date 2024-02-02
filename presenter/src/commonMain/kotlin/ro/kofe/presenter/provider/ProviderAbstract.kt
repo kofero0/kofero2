@@ -75,7 +75,7 @@ abstract class ProviderAbstract<T>(
     }
 
     private fun isSatisfiable(ids: List<Int>): Boolean {
-        if (elements.size == 0) return false
+        if (elements.isEmpty()) return false
         for (id in ids) {
             if (elements.none { isEqual(it, id) }) {
                 return false

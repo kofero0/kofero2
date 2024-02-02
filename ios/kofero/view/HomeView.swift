@@ -47,13 +47,13 @@ struct HomeView: View {
     var homeView: some View {
         VStack{
             Text("Favorites")
-//            LazyVGrid{
-//
-//            }
+            //            LazyVGrid{
+            //
+            //            }
             Text("Games")
-//            LazyVGrid(columns: <#[GridItem]#>){
-//
-//            }
+            //            LazyVGrid(columns: <#[GridItem]#>){
+            //
+            //            }
         }
     }
     
@@ -68,10 +68,6 @@ struct HomeView: View {
         
         func error(e: KotlinException) {
             lastException = e
-        }
-        
-        func display(url: String, imgBase64: String) {
-            urlsToImages[url] = imgBase64
         }
         
         func displayFavs(favorites: [Any]) {

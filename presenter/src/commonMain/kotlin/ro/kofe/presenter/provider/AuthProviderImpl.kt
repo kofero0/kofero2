@@ -11,14 +11,6 @@ import kotlinx.coroutines.internal.synchronized
 import kotlinx.coroutines.runBlocking
 import ro.kofe.model.HttpError
 
-interface AuthMapper {
-    fun getAuthToken(jsonString: String): String
-}
-
-interface AuthDiskAccessor {
-    fun read():String
-    fun save(token:String)
-}
 
 @OptIn(InternalCoroutinesApi::class)
 class AuthProviderImpl(
@@ -31,8 +23,8 @@ class AuthProviderImpl(
     private val syncObject = SynchronizedObject()
 
     override fun get() = either {
-        diskAccessor.read().ifEmpty {
-            synchronized(syncObject) {
+        synchronized(syncObject) {
+            diskAccessor.read().ifEmpty {
                 runBlocking {
                     val response = client.put("$urlPrefix/auth/register") {
                         contentType(ContentType.Application.Json)
@@ -40,6 +32,8 @@ class AuthProviderImpl(
                     }
                     if (response.status.value in 200..299) {
                         val token = authMapper.getAuthToken(response.bodyAsText())
+                        println("^^AUTH TOKEN^^")
+                        println(token)
                         diskAccessor.save(token)
                         token
                     } else {

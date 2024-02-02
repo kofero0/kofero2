@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */; };
+		4B74094A2B6C5F1C00AB723A /* AuthDiskAccessorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7409492B6C5F1C00AB723A /* AuthDiskAccessorImpl.swift */; };
+		4B74094C2B6C5FB300AB723A /* AuthMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74094B2B6C5FB300AB723A /* AuthMapperImpl.swift */; };
+		4B74094E2B6C608800AB723A /* IdentityProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74094D2B6C608800AB723A /* IdentityProviderImpl.swift */; };
 		4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */; };
 		4BBAE1D42B6050DC00C50536 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D32B6050DC00C50536 /* DataMapper.swift */; };
 		4BBAE1D62B60513500C50536 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D52B60513500C50536 /* Mapper.swift */; };
-		4BBAE1D82B60561900C50536 /* AuthProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D72B60561900C50536 /* AuthProviderImpl.swift */; };
 		4BBAE1DA2B61D71C00C50536 /* DiskAccessorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D92B61D71C00C50536 /* DiskAccessorImpl.swift */; };
 		4BBAE1DC2B61DE5200C50536 /* StateLoggerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */; };
 		4BBAE1DE2B61E00C00C50536 /* StringMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1DD2B61E00C00C50536 /* StringMapper.swift */; };
@@ -25,9 +27,9 @@
 		4BD71A682A85F52000EB8752 /* MoveMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A632A85F52000EB8752 /* MoveMapperImpl.swift */; };
 		4BD71A6A2A85F52000EB8752 /* CharacterMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A652A85F52000EB8752 /* CharacterMapperImpl.swift */; };
 		4BD71A6B2A85F52000EB8752 /* GameMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A662A85F52000EB8752 /* GameMapperImpl.swift */; };
-		4BD71A722A85F59800EB8752 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */; };
-		4BD71A742A85F59800EB8752 /* FavoritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */; };
-		4BD71A762A85F59800EB8752 /* LoggingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A712A85F59800EB8752 /* LoggingProvider.swift */; };
+		4BD71A722A85F59800EB8752 /* ImageProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6D2A85F59800EB8752 /* ImageProviderImpl.swift */; };
+		4BD71A742A85F59800EB8752 /* FavoritesProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6F2A85F59800EB8752 /* FavoritesProviderImpl.swift */; };
+		4BD71A762A85F59800EB8752 /* LoggingProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A712A85F59800EB8752 /* LoggingProviderImpl.swift */; };
 		4BD71A8C2A8B0D7300EB8752 /* GameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A872A8B0D7300EB8752 /* GameComponent.swift */; };
 		4BD71A8D2A8B0D7300EB8752 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A882A8B0D7300EB8752 /* RootComponent.swift */; };
 		4BD71A8E2A8B0D7300EB8752 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A892A8B0D7300EB8752 /* MoveComponent.swift */; };
@@ -50,10 +52,12 @@
 /* Begin PBXFileReference section */
 		4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		4B0D01ED2A94073A005CF444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4B7409492B6C5F1C00AB723A /* AuthDiskAccessorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDiskAccessorImpl.swift; sourceTree = "<group>"; };
+		4B74094B2B6C5FB300AB723A /* AuthMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMapperImpl.swift; sourceTree = "<group>"; };
+		4B74094D2B6C608800AB723A /* IdentityProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityProviderImpl.swift; sourceTree = "<group>"; };
 		4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMapperImpl.swift; sourceTree = "<group>"; };
 		4BBAE1D32B6050DC00C50536 /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		4BBAE1D52B60513500C50536 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
-		4BBAE1D72B60561900C50536 /* AuthProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProviderImpl.swift; sourceTree = "<group>"; };
 		4BBAE1D92B61D71C00C50536 /* DiskAccessorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskAccessorImpl.swift; sourceTree = "<group>"; };
 		4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateLoggerImpl.swift; sourceTree = "<group>"; };
 		4BBAE1DD2B61E00C00C50536 /* StringMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMapper.swift; sourceTree = "<group>"; };
@@ -68,9 +72,9 @@
 		4BD71A632A85F52000EB8752 /* MoveMapperImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveMapperImpl.swift; sourceTree = "<group>"; };
 		4BD71A652A85F52000EB8752 /* CharacterMapperImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMapperImpl.swift; sourceTree = "<group>"; };
 		4BD71A662A85F52000EB8752 /* GameMapperImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMapperImpl.swift; sourceTree = "<group>"; };
-		4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
-		4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesProvider.swift; sourceTree = "<group>"; };
-		4BD71A712A85F59800EB8752 /* LoggingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingProvider.swift; sourceTree = "<group>"; };
+		4BD71A6D2A85F59800EB8752 /* ImageProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProviderImpl.swift; sourceTree = "<group>"; };
+		4BD71A6F2A85F59800EB8752 /* FavoritesProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesProviderImpl.swift; sourceTree = "<group>"; };
+		4BD71A712A85F59800EB8752 /* LoggingProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingProviderImpl.swift; sourceTree = "<group>"; };
 		4BD71A872A8B0D7300EB8752 /* GameComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameComponent.swift; sourceTree = "<group>"; };
 		4BD71A882A8B0D7300EB8752 /* RootComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
 		4BD71A892A8B0D7300EB8752 /* MoveComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				4BBAE1D52B60513500C50536 /* Mapper.swift */,
 				4BBAE1DD2B61E00C00C50536 /* StringMapper.swift */,
 				4BBAE1DF2B61E11100C50536 /* StateMapperImpl.swift */,
+				4B74094B2B6C5FB300AB723A /* AuthMapperImpl.swift */,
 			);
 			path = mapper;
 			sourceTree = "<group>";
@@ -178,14 +183,15 @@
 		4BD71A6C2A85F59800EB8752 /* provider */ = {
 			isa = PBXGroup;
 			children = (
-				4BD71A6D2A85F59800EB8752 /* ImageProvider.swift */,
-				4BD71A6F2A85F59800EB8752 /* FavoritesProvider.swift */,
-				4BD71A712A85F59800EB8752 /* LoggingProvider.swift */,
+				4BD71A6D2A85F59800EB8752 /* ImageProviderImpl.swift */,
+				4BD71A6F2A85F59800EB8752 /* FavoritesProviderImpl.swift */,
+				4BD71A712A85F59800EB8752 /* LoggingProviderImpl.swift */,
 				4BD71AA72A8F15BD00EB8752 /* Typealias.swift */,
 				4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */,
-				4BBAE1D72B60561900C50536 /* AuthProviderImpl.swift */,
 				4BBAE1D92B61D71C00C50536 /* DiskAccessorImpl.swift */,
 				4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */,
+				4B7409492B6C5F1C00AB723A /* AuthDiskAccessorImpl.swift */,
+				4B74094D2B6C608800AB723A /* IdentityProviderImpl.swift */,
 			);
 			path = provider;
 			sourceTree = "<group>";
@@ -364,22 +370,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BBAE1D82B60561900C50536 /* AuthProviderImpl.swift in Sources */,
-				4BD71A742A85F59800EB8752 /* FavoritesProvider.swift in Sources */,
-				4BD71A762A85F59800EB8752 /* LoggingProvider.swift in Sources */,
-				4BD71A722A85F59800EB8752 /* ImageProvider.swift in Sources */,
+				4BD71A742A85F59800EB8752 /* FavoritesProviderImpl.swift in Sources */,
+				4BD71A762A85F59800EB8752 /* LoggingProviderImpl.swift in Sources */,
+				4BD71A722A85F59800EB8752 /* ImageProviderImpl.swift in Sources */,
 				4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */,
 				4BD71A602A85F4DC00EB8752 /* JsonStringEncoder.swift in Sources */,
 				4BE92F8B2B66F598000C52A4 /* Router.swift in Sources */,
 				4BD71A6B2A85F52000EB8752 /* GameMapperImpl.swift in Sources */,
 				4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */,
+				4B74094E2B6C608800AB723A /* IdentityProviderImpl.swift in Sources */,
 				4BD71A8C2A8B0D7300EB8752 /* GameComponent.swift in Sources */,
+				4B74094A2B6C5F1C00AB723A /* AuthDiskAccessorImpl.swift in Sources */,
 				4BBAE1DA2B61D71C00C50536 /* DiskAccessorImpl.swift in Sources */,
 				4BBAE1D62B60513500C50536 /* Mapper.swift in Sources */,
 				4BD71A9B2A8D8F9D00EB8752 /* CharView.swift in Sources */,
 				4BBAE1E02B61E11100C50536 /* StateMapperImpl.swift in Sources */,
 				4BD71A8F2A8B0D7300EB8752 /* CharacterComponent.swift in Sources */,
 				4BBAE1DC2B61DE5200C50536 /* StateLoggerImpl.swift in Sources */,
+				4B74094C2B6C5FB300AB723A /* AuthMapperImpl.swift in Sources */,
 				4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */,
 				4BE92F8D2B66F5C8000C52A4 /* RouterHost.swift in Sources */,
 				4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */,

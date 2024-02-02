@@ -41,6 +41,6 @@ public class FavoritesProviderImpl: FavoritesProvider {
         if let favs = defaults.object(forKey: FAVS_KEY) as? [ModelFavorite]{
             return arrowExtensions.buildListEitherRight(right: favs)
         }
-        return arrowExtensions.buildListEitherLeft(left: ModelIncorrectCount(ids: []))
+        return arrowExtensions.buildListEitherRight(right: [])
     }
 }

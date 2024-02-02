@@ -92,8 +92,12 @@ class RootComponent: BootstrapComponent {
         return DispatcherProvider()
     }
     
+    var identityProvider: IdentityProvider{
+        return IdentityProviderImpl()
+    }
+    
     var authProvider: AuthProvider {
-        return AuthProviderImpl(restManager: restManager, fileManager: fileManager, loggingProvider: loggingProvider, urlPrefix: urlPrefix)
+        return AuthProviderImpl(client: noAuthHttpClient, urlPrefix: urlPrefix, diskAccessor: AuthDiskAccessorImpl(), authMapper: AuthMapperImpl(), identityProvider: identityProvider)
     }
     
     var stateMapper: StringMapper<[KotlinLong:ModelEvent]> {
@@ -134,6 +138,10 @@ class RootComponent: BootstrapComponent {
     
     var gameView: GameView {
         return gameComponent.gameView
+    }
+    
+    var noAuthHttpClient: Ktor_client_coreHttpClient{
+        return HttpClientProvider().provideNoAuth()
     }
     
     var authHttpClient: Ktor_client_coreHttpClient {

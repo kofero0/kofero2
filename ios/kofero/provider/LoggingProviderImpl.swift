@@ -9,9 +9,6 @@ import Foundation
 import presenter
 
 public class LoggingProviderImpl: LoggingProvider {
-    
-    public init(){}
-    
     public func log(level: ModelLevel, logTag: String, message: String) {
         print("\(level)::\(logTag):\(message)")
     }

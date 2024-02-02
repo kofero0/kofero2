@@ -13,10 +13,14 @@ class RootPresenterImpl(private val statusProvider: StatusProvider, loggingProvi
         statusProvider.getBackendStatus().fold({ emit(it) }) { status ->
             val local = statusProvider.getLocalStatus().version.split(".")
             val backend = status.version.split(".")
-            for(element in backend){
-                if(element > local[backend.indexOf(element)]){
-                    view?.promptUpdate()
+            if(local.size == backend.size) {
+                for (element in backend) {
+                    if (element > local[backend.indexOf(element)]) {
+                        view?.promptUpdate()
+                    }
                 }
+            } else{
+                view?.error(Exception("Unequal version strings"))
             }
         }
     }
