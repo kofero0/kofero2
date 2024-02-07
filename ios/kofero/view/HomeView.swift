@@ -51,7 +51,7 @@ struct HomeView: View {
                 ], spacing: 20) {
                     ForEach(viewModel.games, id: \.self) { game in
                         VStack{
-                            Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[game.iconUrl] ?? nil))
+                            //Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[game.iconUrl] ?? nil))
                             Text(game.name)
                         }.onTapGesture {
                             gameClosure(game)

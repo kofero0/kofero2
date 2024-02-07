@@ -31,6 +31,8 @@ class GameInteractorImpl(
     private var gameUid: Int? = null
 
     override fun viewResumed() = super.viewResumed().also {
+        println("gameUid: $gameUid")
+        println(this.toString())
         CoroutineScope(context).launch {
             gameUid?.let { uid ->
                 loggingProvider.log(Level.DEBUG, GAME_INTERACTOR, "gameUid: $uid")
@@ -49,6 +51,8 @@ class GameInteractorImpl(
 
 
     override suspend fun setGameUid(uid: Int) {
+        println("gameUid set: $uid")
+        println(this.toString())
         this.gameUid = uid
     }
 

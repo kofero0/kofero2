@@ -149,11 +149,12 @@ class RootComponent: BootstrapComponent {
     }
     
     var gameInteractor: GameInteractor {
-        return gameComponent.interactor
+        return shared { GameInteractorImpl(presenter: gameComponent.presenter, stateLogger: stateLogger, stateReducer: stateReducer, loggingProvider: loggingProvider, context: dispatcherProvider.default_)
+        }
     }
     
     var gameView: GameView {
-        return gameComponent.gameView
+        return shared { GameView(charInteractor: charInteractor, gameInteractor: gameInteractor, adUnitId: bannerAdUnitId) }
     }
     
     var noAuthHttpClient: Ktor_client_coreHttpClient{

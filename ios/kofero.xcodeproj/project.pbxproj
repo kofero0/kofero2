@@ -12,6 +12,16 @@
 		4B74094C2B6C5FB300AB723A /* AuthMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74094B2B6C5FB300AB723A /* AuthMapperImpl.swift */; };
 		4B74094E2B6C608800AB723A /* IdentityProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74094D2B6C608800AB723A /* IdentityProviderImpl.swift */; };
 		4B7409502B7307C000AB723A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74094F2B7307C000AB723A /* Route.swift */; };
+		4B7409562B731D4900AB723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B7409552B731D4900AB723A /* Assets.xcassets */; };
+		4B74095C2B731D4A00AB723A /* koferoWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B74095B2B731D4A00AB723A /* koferoWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4B7409612B731D4A00AB723A /* koferoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7409602B731D4A00AB723A /* koferoApp.swift */; };
+		4B7409632B731D4A00AB723A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7409622B731D4A00AB723A /* ContentView.swift */; };
+		4B7409652B731D4A00AB723A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7409642B731D4A00AB723A /* NotificationController.swift */; };
+		4B7409672B731D4A00AB723A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7409662B731D4A00AB723A /* NotificationView.swift */; };
+		4B7409692B731D4A00AB723A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7409682B731D4A00AB723A /* ComplicationController.swift */; };
+		4B74096B2B731D4B00AB723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B74096A2B731D4B00AB723A /* Assets.xcassets */; };
+		4B74096E2B731D4B00AB723A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B74096D2B731D4B00AB723A /* Preview Assets.xcassets */; };
+		4B7409732B731D4B00AB723A /* koferoWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4B7409532B731D4700AB723A /* koferoWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */; };
 		4BBAE1D42B6050DC00C50536 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D32B6050DC00C50536 /* DataMapper.swift */; };
 		4BBAE1D62B60513500C50536 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D52B60513500C50536 /* Mapper.swift */; };
@@ -50,6 +60,48 @@
 		9E169777FF902B2091A95DCA /* Pods_kofero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976876D6C60861A8745D9EA3 /* Pods_kofero.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4B74095D2B731D4A00AB723A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BD71A412A85EB9D00EB8752 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B74095A2B731D4A00AB723A;
+			remoteInfo = "koferoWatch WatchKit Extension";
+		};
+		4B7409712B731D4B00AB723A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BD71A412A85EB9D00EB8752 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B7409522B731D4700AB723A;
+			remoteInfo = koferoWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B7409772B731D4B00AB723A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4B74095C2B731D4A00AB723A /* koferoWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B74097B2B731D4B00AB723A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4B7409732B731D4B00AB723A /* koferoWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		4B0D01ED2A94073A005CF444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +109,18 @@
 		4B74094B2B6C5FB300AB723A /* AuthMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMapperImpl.swift; sourceTree = "<group>"; };
 		4B74094D2B6C608800AB723A /* IdentityProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityProviderImpl.swift; sourceTree = "<group>"; };
 		4B74094F2B7307C000AB723A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4B7409532B731D4700AB723A /* koferoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = koferoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B7409552B731D4900AB723A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B74095B2B731D4A00AB723A /* koferoWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "koferoWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B7409602B731D4A00AB723A /* koferoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koferoApp.swift; sourceTree = "<group>"; };
+		4B7409622B731D4A00AB723A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B7409642B731D4A00AB723A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		4B7409662B731D4A00AB723A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		4B7409682B731D4A00AB723A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		4B74096A2B731D4B00AB723A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B74096D2B731D4B00AB723A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4B74096F2B731D4B00AB723A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B7409702B731D4B00AB723A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMapperImpl.swift; sourceTree = "<group>"; };
 		4BBAE1D32B6050DC00C50536 /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		4BBAE1D52B60513500C50536 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -99,6 +163,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4B7409582B731D4A00AB723A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BD71A462A85EB9D00EB8752 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,10 +181,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B7409542B731D4700AB723A /* koferoWatch */ = {
+			isa = PBXGroup;
+			children = (
+				4B7409552B731D4900AB723A /* Assets.xcassets */,
+			);
+			path = koferoWatch;
+			sourceTree = "<group>";
+		};
+		4B74095F2B731D4A00AB723A /* koferoWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4B7409602B731D4A00AB723A /* koferoApp.swift */,
+				4B7409622B731D4A00AB723A /* ContentView.swift */,
+				4B7409642B731D4A00AB723A /* NotificationController.swift */,
+				4B7409662B731D4A00AB723A /* NotificationView.swift */,
+				4B7409682B731D4A00AB723A /* ComplicationController.swift */,
+				4B74096A2B731D4B00AB723A /* Assets.xcassets */,
+				4B74096F2B731D4B00AB723A /* Info.plist */,
+				4B7409702B731D4B00AB723A /* PushNotificationPayload.apns */,
+				4B74096C2B731D4B00AB723A /* Preview Content */,
+			);
+			path = "koferoWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		4B74096C2B731D4B00AB723A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4B74096D2B731D4B00AB723A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		4BD71A402A85EB9D00EB8752 = {
 			isa = PBXGroup;
 			children = (
 				4BD71A4B2A85EB9D00EB8752 /* kofero */,
+				4B7409542B731D4700AB723A /* koferoWatch */,
+				4B74095F2B731D4A00AB723A /* koferoWatch WatchKit Extension */,
 				4BD71A4A2A85EB9D00EB8752 /* Products */,
 				7C2B9713EAB5AE47C504B2E4 /* Pods */,
 				F3E36217C2A5B92CFF164699 /* Frameworks */,
@@ -124,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				4BD71A492A85EB9D00EB8752 /* kofero.app */,
+				4B7409532B731D4700AB723A /* koferoWatch.app */,
+				4B74095B2B731D4A00AB723A /* koferoWatch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +351,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4B7409522B731D4700AB723A /* koferoWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B7409782B731D4B00AB723A /* Build configuration list for PBXNativeTarget "koferoWatch" */;
+			buildPhases = (
+				4B7409512B731D4700AB723A /* Resources */,
+				4B7409772B731D4B00AB723A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B74095E2B731D4A00AB723A /* PBXTargetDependency */,
+			);
+			name = koferoWatch;
+			productName = koferoWatch;
+			productReference = 4B7409532B731D4700AB723A /* koferoWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4B74095A2B731D4A00AB723A /* koferoWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B7409742B731D4B00AB723A /* Build configuration list for PBXNativeTarget "koferoWatch WatchKit Extension" */;
+			buildPhases = (
+				4B7409572B731D4A00AB723A /* Sources */,
+				4B7409582B731D4A00AB723A /* Frameworks */,
+				4B7409592B731D4A00AB723A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "koferoWatch WatchKit Extension";
+			productName = "koferoWatch WatchKit Extension";
+			productReference = 4B74095B2B731D4A00AB723A /* koferoWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		4BD71A482A85EB9D00EB8752 /* kofero */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BD71A572A85EB9E00EB8752 /* Build configuration list for PBXNativeTarget "kofero" */;
@@ -254,10 +395,12 @@
 				4BD71A462A85EB9D00EB8752 /* Frameworks */,
 				4BD71A472A85EB9D00EB8752 /* Resources */,
 				B67F3E5AE99269719CBA3CA6 /* [CP] Embed Pods Frameworks */,
+				4B74097B2B731D4B00AB723A /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4B7409722B731D4B00AB723A /* PBXTargetDependency */,
 			);
 			name = kofero;
 			productName = ios;
@@ -274,6 +417,12 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					4B7409522B731D4700AB723A = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					4B74095A2B731D4A00AB723A = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					4BD71A482A85EB9D00EB8752 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -293,11 +442,30 @@
 			projectRoot = "";
 			targets = (
 				4BD71A482A85EB9D00EB8752 /* kofero */,
+				4B7409522B731D4700AB723A /* koferoWatch */,
+				4B74095A2B731D4A00AB723A /* koferoWatch WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4B7409512B731D4700AB723A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B7409562B731D4900AB723A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B7409592B731D4A00AB723A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B74096E2B731D4B00AB723A /* Preview Assets.xcassets in Resources */,
+				4B74096B2B731D4B00AB723A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BD71A472A85EB9D00EB8752 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +537,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4B7409572B731D4A00AB723A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B7409652B731D4A00AB723A /* NotificationController.swift in Sources */,
+				4B7409632B731D4A00AB723A /* ContentView.swift in Sources */,
+				4B7409692B731D4A00AB723A /* ComplicationController.swift in Sources */,
+				4B7409612B731D4A00AB723A /* koferoApp.swift in Sources */,
+				4B7409672B731D4A00AB723A /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BD71A452A85EB9D00EB8752 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,7 +596,134 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4B74095E2B731D4A00AB723A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B74095A2B731D4A00AB723A /* koferoWatch WatchKit Extension */;
+			targetProxy = 4B74095D2B731D4A00AB723A /* PBXContainerItemProxy */;
+		};
+		4B7409722B731D4B00AB723A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B7409522B731D4700AB723A /* koferoWatch */;
+			targetProxy = 4B7409712B731D4B00AB723A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4B7409752B731D4B00AB723A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"koferoWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 3GDW646NZ5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "koferoWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "koferoWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ro.kofe.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		4B7409762B731D4B00AB723A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"koferoWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 3GDW646NZ5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "koferoWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "koferoWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ro.kofe.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		4B7409792B731D4B00AB723A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3GDW646NZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = koferoWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = koferoWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ro.kofe;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ro.kofe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		4B74097A2B731D4B00AB723A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3GDW646NZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = koferoWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = koferoWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ro.kofe;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ro.kofe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
 		4BD71A552A85EB9E00EB8752 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -598,6 +905,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4B7409742B731D4B00AB723A /* Build configuration list for PBXNativeTarget "koferoWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B7409752B731D4B00AB723A /* Debug */,
+				4B7409762B731D4B00AB723A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B7409782B731D4B00AB723A /* Build configuration list for PBXNativeTarget "koferoWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B7409792B731D4B00AB723A /* Debug */,
+				4B74097A2B731D4B00AB723A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4BD71A442A85EB9D00EB8752 /* Build configuration list for PBXProject "kofero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

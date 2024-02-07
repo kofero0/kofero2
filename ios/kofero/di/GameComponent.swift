@@ -30,23 +30,23 @@ protocol GameDependency: Dependency {
 
 class GameComponent: Component<GameDependency> {
     var gameProvider: ProviderAbstract<ModelGame> {
-        return GameProviderImpl(client: dependency.authHttpClient, jsonFilename: "game", urlPrefix: dependency.urlPrefix, mapper: gameMapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
+        return shared { GameProviderImpl(client: dependency.authHttpClient, jsonFilename: "game", urlPrefix: dependency.urlPrefix, mapper: gameMapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor) }
     }
     
     var gameMapper: GameMapper {
-        return GameMapperImpl(encoder: dependency.jsonEncoder)
+        return shared { GameMapperImpl(encoder: dependency.jsonEncoder) }
     }
     
     var presenter: GamePresenter {
-        return GamePresenterImpl(characterProvider: dependency.charProvider, gameProvider: gameProvider, imageProvider: dependency.imageProvider, loggingProvider: dependency.loggingProvider)
+        return shared { GamePresenterImpl(characterProvider: dependency.charProvider, gameProvider: gameProvider, imageProvider: dependency.imageProvider, loggingProvider: dependency.loggingProvider) }
     }
-    
+     
     var interactor: GameInteractor {
-        return GameInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, context: dependency.dispatcherProvider.default_)
+        return shared { GameInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, context: dependency.dispatcherProvider.default_) }
     }
     
     var gameView: GameView {
-        return GameView(charInteractor: dependency.charInteractor, gameInteractor: interactor, adUnitId: dependency.bannerAdUnitId)
+        return shared { GameView(charInteractor: dependency.charInteractor, gameInteractor: interactor, adUnitId: dependency.bannerAdUnitId) }
     }
     
 }

@@ -12,6 +12,21 @@
 		<key>kofero.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>koferoWatch (Complication).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
+		<key>koferoWatch (Notification).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>koferoWatch.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
 	</dict>
