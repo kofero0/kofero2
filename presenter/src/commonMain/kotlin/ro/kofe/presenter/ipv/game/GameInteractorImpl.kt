@@ -35,6 +35,7 @@ class GameInteractorImpl(
         println(this.toString())
         CoroutineScope(context).launch {
             gameUid?.let { uid ->
+                println("showGame")
                 loggingProvider.log(Level.DEBUG, GAME_INTERACTOR, "gameUid: $uid")
                 presenter.showGame(uid).collect { logProviderError(it) }
             }

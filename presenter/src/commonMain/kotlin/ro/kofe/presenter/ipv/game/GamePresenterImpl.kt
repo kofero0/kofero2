@@ -18,11 +18,13 @@ class GamePresenterImpl(
     private var view: GameKView? = null
 
     override fun setView(view: GameKView) {
+        println("gameview set")
         this.view = view
     }
 
     override suspend fun showGame(id: Int) = flow {
         val ids = ArrayList<Int>().apply { add(id) }
+        println("gameView null? ${view == null}")
         suspend fun process(games: List<Game>) {
             if (games.size != 1) {
                 emit(IncorrectCount(ids))
@@ -31,17 +33,19 @@ class GamePresenterImpl(
             val game = games.first()
             loggingProvider.log(Level.DEBUG, "GamePresenterImpl", "chars: ${game.charIds}")
             view?.display(game)
+            //TODO: IF THIS ERRORS, REST OF METHOD DOES NOT FIRE
             imageProvider.get(game.iconUrl).map { view?.display(game.iconUrl, it) }
             characterProvider.get(game.charIds).collect { either ->
                 either.fold({ e ->
+                    println("error")
                     emit(e)
                     view?.displayCharsError(e)
                 }) { chars ->
+                    view?.display(chars)
                     for (char in chars) {
                         imageProvider.get(char.iconUrl)
                             .map{ view?.display(char.iconUrl, it) }
                     }
-                    view?.display(chars)
                 }
             }
         }

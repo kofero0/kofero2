@@ -34,7 +34,6 @@ struct GameView: View {
     
     var body: some View {
         VStack{
-            Text("Game")
         ScrollView {
             LazyVGrid(columns: [
                 GridItem(.flexible()),
@@ -43,7 +42,7 @@ struct GameView: View {
             ], spacing: 20) {
                 ForEach(viewModel.chars, id: \.self) { char in
                     VStack{
-                        //Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[char.iconUrl] ?? nil))
+                        Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[char.iconUrl] ?? nil))
                         Text(char.name)
                     }.onTapGesture {
                         charClosure(char)
@@ -58,6 +57,7 @@ struct GameView: View {
         .onDisappear{
             gameInteractor.viewPaused()
         }
+        .navigationTitle(viewModel.game?.name ?? "")
     }
     
     class GameViewModel: ObservableObject, GameKView {
@@ -69,6 +69,7 @@ struct GameView: View {
         
         func display(characters: [ModelCharacter]) {
             DispatchQueue.main.sync {
+                print("chars")
                 print(characters)
                 chars = characters
             }
@@ -76,6 +77,7 @@ struct GameView: View {
         
         func display(game: ModelGame) {
             DispatchQueue.main.sync {
+                print("game")
                 print(game)
                 self.game = game
             }

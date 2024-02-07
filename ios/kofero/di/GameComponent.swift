@@ -40,13 +40,4 @@ class GameComponent: Component<GameDependency> {
     var presenter: GamePresenter {
         return shared { GamePresenterImpl(characterProvider: dependency.charProvider, gameProvider: gameProvider, imageProvider: dependency.imageProvider, loggingProvider: dependency.loggingProvider) }
     }
-     
-    var interactor: GameInteractor {
-        return shared { GameInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, context: dependency.dispatcherProvider.default_) }
-    }
-    
-    var gameView: GameView {
-        return shared { GameView(charInteractor: dependency.charInteractor, gameInteractor: interactor, adUnitId: dependency.bannerAdUnitId) }
-    }
-    
 }

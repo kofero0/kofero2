@@ -8,7 +8,7 @@
 import Foundation
 import presenter
 
-
+//TODO: SWALLOWS ERRORS
 open class ImageProviderImpl: ImageProvider {
     public let restManager:RestManager
     private let loggingProvider:LoggingProvider
@@ -42,16 +42,17 @@ open class ImageProviderImpl: ImageProvider {
         }
     }
     
-    private func getRestClosure(url:String, dataClosure: @escaping (Data) -> Void) -> RestClosure {
+    private func getRestClosure(url:String, dataClosure: @escaping (Data?) -> Void) -> RestClosure {
         return {[self] data,response,error in
             if let uResponse = response as? HTTPURLResponse {
+                print("IMAGE STATUS: \(uResponse.statusCode)")
                 if let uData = data {
                     if(uResponse.statusCode == 200) {
                         saveToDisk(data: uData, url: url)
-                        dataClosure(uData)
                     }
                 }
             }
+            dataClosure(data)
         }
     }
     

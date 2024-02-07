@@ -32,9 +32,7 @@ class GameController {
 
     @PutMapping(GAME_PATH)
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
-        println("@#@#@#")
         if (uids.isEmpty()){
-            println("returning ${list.size} number of items!")
             return ResponseEntity<Any>(mapper.writeValueAsString(list), HttpStatus.OK)
         }
         val ret = ArrayList<Game>()

@@ -64,6 +64,7 @@ struct HomeView: View {
             homeInteractor.viewResumed()
         }
         .onDisappear{ homeInteractor.viewPaused() }
+        .navigationTitle("Home")
     }
     
     class HomeViewModel: HomeKView, ObservableObject {

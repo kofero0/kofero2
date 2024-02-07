@@ -18,6 +18,7 @@ class RequestMapperImpl: RequestMapper {
         }
         ret.removeLast()
         ret += "]"
+        print("REQUEST")
         print(ret)
         return ret
     }
