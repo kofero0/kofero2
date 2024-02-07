@@ -69,8 +69,8 @@ private class GameDependency6174651c56123eef7457BaseProvider: GameDependency {
     var diskAccessor: DiskAccessor {
         return rootComponent.diskAccessor
     }
-    var charView: CharView {
-        return rootComponent.charView
+    var charInteractor: CharacterInteractor {
+        return rootComponent.charInteractor
     }
     var authHttpClient: Ktor_client_coreHttpClient {
         return rootComponent.authHttpClient
@@ -198,11 +198,11 @@ private class HomeDependencycad225e9266b3c9a56ddBaseProvider: HomeDependency {
     var dispatcherProvider: DispatcherProvider {
         return rootComponent.dispatcherProvider
     }
-    var gameView: GameView {
-        return rootComponent.gameView
+    var gameInteractor: GameInteractor {
+        return rootComponent.gameInteractor
     }
-    var charView: CharView {
-        return rootComponent.charView
+    var charInteractor: CharacterInteractor {
+        return rootComponent.charInteractor
     }
     private let rootComponent: RootComponent
     init(rootComponent: RootComponent) {

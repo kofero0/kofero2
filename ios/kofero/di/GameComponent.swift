@@ -24,7 +24,7 @@ protocol GameDependency: Dependency {
     var urlPrefix: String {get}
     var requestMapper: RequestMapper {get}
     var diskAccessor: DiskAccessor {get}
-    var charView: CharView {get}
+    var charInteractor: CharacterInteractor {get}
     var authHttpClient: Ktor_client_coreHttpClient {get}
 }
 
@@ -46,7 +46,7 @@ class GameComponent: Component<GameDependency> {
     }
     
     var gameView: GameView {
-        return GameView(charView: dependency.charView, interactor: interactor, adUnitId: dependency.bannerAdUnitId)
+        return GameView(charInteractor: dependency.charInteractor, gameInteractor: interactor, adUnitId: dependency.bannerAdUnitId)
     }
     
 }

@@ -16,13 +16,15 @@ struct CharView: View {
     init(interactor:CharacterInteractor, adUnitId:String){
         self.interactor = interactor
         self.adUnitId = adUnitId
-        interactor.setView(view: viewModel)
     }
     
     var body: some View {
         VStack{
             
-        }
+        }.onAppear{
+            interactor.setView(view: viewModel)
+            interactor.viewResumed() }
+        .onDisappear{ interactor.viewPaused() }
     }
     
     class CharViewModel: ObservableObject, CharacterKView {

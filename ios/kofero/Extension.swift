@@ -104,4 +104,12 @@ public func synchronized<T>(_ lock: AnyObject, closure:() -> T) -> T {
     return closure()
 }
 
+func convertBase64StringToImage (imageBase64String:String?) -> UIImage {
+    if(imageBase64String == nil){
+        return UIImage()
+    }
+    let imageData = Data(base64Encoded: imageBase64String!)
+    let image = UIImage(data: imageData!)
+    return image!
+}
 

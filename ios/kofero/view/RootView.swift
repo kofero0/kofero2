@@ -9,30 +9,34 @@ import SwiftUI
 import presenter
 
 
-enum RootRoute: Equatable {
-    case Home
-}
 
 struct RootView: View {
     let interactor: RootInteractor
     let homeView: HomeView
-    @StateObject var router: Router<RootRoute> = Router(initial: .Home)
+    let gameView: GameView
+    let charView: CharView
+    @StateObject var router: Router<Route> = Router(initial: .Home)
     @StateObject var viewModel = RootViewModel()
     
     
-    init(interactor: RootInteractor, homeView: HomeView){
+    init(interactor: RootInteractor, homeView: HomeView, gameView: GameView, charView:CharView){
         self.homeView = homeView
+        self.gameView = gameView
+        self.charView = charView
         self.interactor = interactor
-        interactor.setView(view: viewModel)
     }
     
     var body: some View {
         RouterHost(router: router) { route in
             switch route {
             case .Home: homeView
+            case .Game: gameView
+            case .Char: charView
             }
-        }.onAppear{ interactor.viewResumed() }
-            .onDisappear{ interactor.viewPaused() }
+        }
+        .onAppear{ interactor.viewResumed() }
+        .onDisappear{ interactor.viewPaused() }
+        .environmentObject(router)
     }
     
     class RootViewModel: RootKView, ObservableObject {

@@ -32,8 +32,6 @@ class AuthProviderImpl(
                     }
                     if (response.status.value in 200..299) {
                         val token = authMapper.getAuthToken(response.bodyAsText())
-                        println("^^AUTH TOKEN^^")
-                        println(token)
                         diskAccessor.save(token)
                         token
                     } else {

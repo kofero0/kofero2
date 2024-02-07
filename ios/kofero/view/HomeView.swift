@@ -7,56 +7,64 @@
 
 import SwiftUI
 import presenter
+import Combine
 
-
-enum HomeRoute: Equatable {
-    case Home
-    case Game
-    case Char
-}
 
 struct HomeView: View {
-    let interactor: HomeInteractor
-    let gameView: GameView
-    let charView: CharView
+    private let homeInteractor: HomeInteractor
+    private let gameInteractor: GameInteractor
+    private let charInteractor: CharacterInteractor
     
     let adUnitId: String
-    @StateObject var router: Router<HomeRoute> = Router(initial: .Home)
+    @EnvironmentObject var router: Router<Route>
     @StateObject var viewModel = HomeViewModel()
     
-    init(interactor: HomeInteractor, adUnitId: String, gameView: GameView, charView:CharView){
-        self.gameView = gameView
-        self.charView = charView
-        self.interactor = interactor
+    init(homeInteractor: HomeInteractor, gameInteractor: GameInteractor, charInteractor:CharacterInteractor, adUnitId: String){
+        self.homeInteractor = homeInteractor
+        self.gameInteractor = gameInteractor
+        self.charInteractor = charInteractor
         self.adUnitId = adUnitId
-        interactor.setView(view: viewModel)
     }
     
-    
-    var body: some View {
-        RouterHost(router: router) { route in
-            switch route {
-            case .Home: homeView
-            case .Game: gameView
-            case .Char: charView
-            }
-        }.onAppear{ interactor.viewResumed() }
-            .onDisappear{ interactor.viewPaused() }
-    }
-    
-    var homeView: some View {
-        VStack{
-            Text("Favorites")
-            //            LazyVGrid{
-            //
-            //            }
-            Text("Games")
-            //            LazyVGrid(columns: <#[GridItem]#>){
-            //
-            //            }
+    var gameClosure: ((ModelGame) -> Void) {
+        return { game in
+            homeInteractor.gamePressed(game: game){_ in}
+            gameInteractor.setGameUid(uid: game.uid){_ in}
+            router.push(.Game)
         }
     }
     
+    var charClosure: ((ModelCharacter) -> Void) {
+        return { char in
+            homeInteractor.favPressed(obj: char){_ in}
+            charInteractor.setCharUid(uid: char.uid){_ in}
+            router.push(.Char)
+        }
+    }
+    
+    var body: some View {
+        ScrollView {
+                LazyVGrid(columns: [
+                    GridItem(.flexible()),
+                    GridItem(.flexible()),
+                    GridItem(.flexible())
+                ], spacing: 20) {
+                    ForEach(viewModel.games, id: \.self) { game in
+                        VStack{
+                            Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[game.iconUrl] ?? nil))
+                            Text(game.name)
+                        }.onTapGesture {
+                            gameClosure(game)
+                        }
+                    }
+                }
+            }
+        .onAppear{
+            homeInteractor.setView(view: viewModel)
+            homeInteractor.viewResumed()
+        }
+        .onDisappear{ homeInteractor.viewPaused() }
+    }
     
     class HomeViewModel: HomeKView, ObservableObject {
         @Published var games: [ModelGame] = []
@@ -71,7 +79,9 @@ struct HomeView: View {
         }
         
         func displayFavs(favorites: [Any]) {
-            favs = favorites
+            DispatchQueue.main.sync {
+                favs = favorites
+            }
         }
         
         func displayFavsError(error: ModelError) {
@@ -79,15 +89,21 @@ struct HomeView: View {
         }
         
         func displayGames(games: [ModelGame]) {
-            self.games = games
+            DispatchQueue.main.sync {
+                self.games = games
+            }
         }
         
         func displayGamesError(error: ModelError) {
             lastError = error
         }
         
-        func display(url: String, imgBase64: String) async throws {
-            urlsToImages[url] = imgBase64
+        @MainActor func display(url: String, imgBase64: String) async throws {
+            print("#@#@")
+            print(url)
+                urlsToImages[url] = imgBase64
         }
     }
 }
+
+

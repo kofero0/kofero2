@@ -11,6 +11,7 @@
 		4B74094A2B6C5F1C00AB723A /* AuthDiskAccessorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7409492B6C5F1C00AB723A /* AuthDiskAccessorImpl.swift */; };
 		4B74094C2B6C5FB300AB723A /* AuthMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74094B2B6C5FB300AB723A /* AuthMapperImpl.swift */; };
 		4B74094E2B6C608800AB723A /* IdentityProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74094D2B6C608800AB723A /* IdentityProviderImpl.swift */; };
+		4B7409502B7307C000AB723A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74094F2B7307C000AB723A /* Route.swift */; };
 		4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */; };
 		4BBAE1D42B6050DC00C50536 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D32B6050DC00C50536 /* DataMapper.swift */; };
 		4BBAE1D62B60513500C50536 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D52B60513500C50536 /* Mapper.swift */; };
@@ -55,6 +56,7 @@
 		4B7409492B6C5F1C00AB723A /* AuthDiskAccessorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDiskAccessorImpl.swift; sourceTree = "<group>"; };
 		4B74094B2B6C5FB300AB723A /* AuthMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMapperImpl.swift; sourceTree = "<group>"; };
 		4B74094D2B6C608800AB723A /* IdentityProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityProviderImpl.swift; sourceTree = "<group>"; };
+		4B74094F2B7307C000AB723A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMapperImpl.swift; sourceTree = "<group>"; };
 		4BBAE1D32B6050DC00C50536 /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		4BBAE1D52B60513500C50536 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				4BD71A612A85F52000EB8752 /* mapper */,
 				4BD71A5A2A85F4DC00EB8752 /* encoder */,
 				4BD71AA02A8EAECF00EB8752 /* Extension.swift */,
+				4BD71AA72A8F15BD00EB8752 /* Typealias.swift */,
 				4BD71A4C2A85EB9D00EB8752 /* iosApp.swift */,
 				4B0D01E92A93F2E0005CF444 /* NeedleGenerated.swift */,
 				4BD71A502A85EB9E00EB8752 /* Assets.xcassets */,
@@ -186,7 +189,6 @@
 				4BD71A6D2A85F59800EB8752 /* ImageProviderImpl.swift */,
 				4BD71A6F2A85F59800EB8752 /* FavoritesProviderImpl.swift */,
 				4BD71A712A85F59800EB8752 /* LoggingProviderImpl.swift */,
-				4BD71AA72A8F15BD00EB8752 /* Typealias.swift */,
 				4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */,
 				4BBAE1D92B61D71C00C50536 /* DiskAccessorImpl.swift */,
 				4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */,
@@ -217,6 +219,7 @@
 				4BD71AA92A8F165F00EB8752 /* RootView.swift */,
 				4BE92F8A2B66F598000C52A4 /* Router.swift */,
 				4BE92F8C2B66F5C8000C52A4 /* RouterHost.swift */,
+				4B74094F2B7307C000AB723A /* Route.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				4BD71A972A8D8C7900EB8752 /* HomeView.swift in Sources */,
 				4BD71A992A8D8F8300EB8752 /* GameView.swift in Sources */,
 				4BD71A5E2A85F4DC00EB8752 /* Encoder.swift in Sources */,
+				4B7409502B7307C000AB723A /* Route.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

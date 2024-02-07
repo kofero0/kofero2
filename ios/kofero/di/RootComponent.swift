@@ -129,11 +129,27 @@ class RootComponent: BootstrapComponent {
     }
     
     var rootView: RootView {
-        return RootView(interactor: rootInteractor, homeView: homeComponent.homeView)
+        return RootView(interactor: rootInteractor, homeView: homeView, gameView: gameView, charView: charView)
+    }
+    
+    var homeView: HomeView {
+        return homeComponent.homeView
     }
     
     var charView: CharView {
         return characterComponent.charView
+    }
+    
+    var charInteractor: CharacterInteractor {
+        return characterComponent.interactor
+    }
+    
+    var homeInteractor: HomeInteractor {
+        return homeComponent.interactor
+    }
+    
+    var gameInteractor: GameInteractor {
+        return gameComponent.interactor
     }
     
     var gameView: GameView {

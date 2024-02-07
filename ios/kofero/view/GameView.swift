@@ -8,39 +8,52 @@
 import SwiftUI
 import presenter
 
-enum GameRoute:Equatable {
-    case Game
-    case Char
-}
-
 struct GameView: View {
     let adUnitId:String
-    let interactor: GameInteractor
-    let charView: CharView
+    let gameInteractor: GameInteractor
+    let charInteractor: CharacterInteractor
     @StateObject var viewModel = GameViewModel()
-    @StateObject var router: Router<GameRoute> = Router(initial: .Game)
+    @EnvironmentObject var router: Router<Route>
     
     
-    init(charView:CharView, interactor:GameInteractor, adUnitId:String){
-        self.charView = charView
+    init(charInteractor:CharacterInteractor, gameInteractor:GameInteractor, adUnitId:String){
+        self.charInteractor = charInteractor
+        self.gameInteractor = gameInteractor
         self.adUnitId = adUnitId
-        self.interactor = interactor
-        interactor.setView(view: viewModel)
+    }
+    
+    
+    var charClosure: ((ModelCharacter) -> Void) {
+        return { char in
+            gameInteractor.charPressed(char: char){_ in}
+            charInteractor.setCharUid(uid: char.uid){_ in}
+            router.push(.Char)
+        }
     }
     
     
     var body: some View {
-        RouterHost(router: router) { route in
-            switch route {
-            case .Game: gameView
-            case .Char: charView
+        ScrollView {
+            LazyVGrid(columns: [
+                GridItem(.flexible()),
+                GridItem(.flexible()),
+                GridItem(.flexible())
+            ], spacing: 20) {
+                ForEach(viewModel.chars, id: \.self) { char in
+                    VStack{
+                        Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[char.iconUrl] ?? nil))
+                        Text(char.name)
+                    }.onTapGesture {
+                        charClosure(char)
+                    }
+                }
             }
+        }.onAppear{
+            gameInteractor.setView(view: viewModel)
+            gameInteractor.viewResumed()
         }
-    }
-    
-    var gameView: some View {
-        VStack{
-            
+        .onDisappear{
+            gameInteractor.viewPaused()
         }
     }
     
@@ -51,17 +64,16 @@ struct GameView: View {
         @Published var lastError: ModelError? = nil
         @Published var lastException: KotlinException? = nil
         
-        
-        func display(url: String, imgBase64: String) {
-            urlsToImages[url]=imgBase64
-        }
-        
         func display(characters: [ModelCharacter]) {
-            chars = characters
+            DispatchQueue.main.sync {
+                chars = characters
+            }
         }
         
         func display(game: ModelGame) {
-            self.game = game
+            DispatchQueue.main.sync {
+                self.game = game
+            }
         }
         
         func displayCharsError(error: ModelError) {
@@ -72,7 +84,7 @@ struct GameView: View {
             lastException = e
         }
         
-        func display(url: String, imgBase64: String) async throws {
+        @MainActor func display(url: String, imgBase64: String) async throws {
             urlsToImages[url] = imgBase64
         }
         

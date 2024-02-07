@@ -20,8 +20,8 @@ protocol HomeDependency: Dependency {
     var stateReducer:StateReducer {get}
     var loggingProvider:LoggingProvider {get}
     var dispatcherProvider: DispatcherProvider {get}
-    var gameView: GameView {get}
-    var charView: CharView {get}
+    var gameInteractor: GameInteractor {get}
+    var charInteractor: CharacterInteractor {get}
 }
 
 class HomeComponent: Component<HomeDependency> {
@@ -35,6 +35,6 @@ class HomeComponent: Component<HomeDependency> {
     }
     
     var homeView: HomeView{
-        return HomeView(interactor: interactor, adUnitId: dependency.bannerAdUnitId, gameView: dependency.gameView, charView: dependency.charView)
+        return HomeView(homeInteractor: interactor, gameInteractor: dependency.gameInteractor, charInteractor: dependency.charInteractor, adUnitId: dependency.bannerAdUnitId)
     }
 }
