@@ -39,12 +39,4 @@ class CharacterComponent: Component<CharacterDependency> {
     var presenter: CharacterPresenter {
         return CharacterPresenterImpl(charProvider: provider, moveProvider: dependency.moveProvider, imageProvider: dependency.imageProvider)
     }
-    
-    var interactor: CharacterInteractor {
-        return CharacterInteractorImpl(presenter: presenter, stateLogger: dependency.stateLogger, stateReducer: dependency.stateReducer, loggingProvider: dependency.loggingProvider, context: dependency.dispatcherProvider.default_)
-    }
-    
-    var charView: CharView {
-        return CharView(interactor: interactor, adUnitId: dependency.bannerAdUnitId)
-    }
 }

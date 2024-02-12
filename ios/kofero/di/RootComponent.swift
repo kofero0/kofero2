@@ -136,12 +136,8 @@ class RootComponent: BootstrapComponent {
         return homeComponent.homeView
     }
     
-    var charView: CharView {
-        return characterComponent.charView
-    }
-    
     var charInteractor: CharacterInteractor {
-        return characterComponent.interactor
+        return shared { CharacterInteractorImpl(presenter: characterComponent.presenter, stateLogger: stateLogger, stateReducer: stateReducer, loggingProvider: loggingProvider, context: dispatcherProvider.default_) }
     }
     
     var homeInteractor: HomeInteractor {
@@ -155,6 +151,10 @@ class RootComponent: BootstrapComponent {
     
     var gameView: GameView {
         return shared { GameView(charInteractor: charInteractor, gameInteractor: gameInteractor, adUnitId: bannerAdUnitId) }
+    }
+    
+    var charView: CharView {
+        return CharView(interactor: charInteractor, adUnitId: bannerAdUnitId)
     }
     
     var noAuthHttpClient: Ktor_client_coreHttpClient{

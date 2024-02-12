@@ -22,6 +22,7 @@
 		4B74096B2B731D4B00AB723A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B74096A2B731D4B00AB723A /* Assets.xcassets */; };
 		4B74096E2B731D4B00AB723A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B74096D2B731D4B00AB723A /* Preview Assets.xcassets */; };
 		4B7409732B731D4B00AB723A /* koferoWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4B7409532B731D4700AB723A /* koferoWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4B74097D2B746ED400AB723A /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B74097C2B746ED400AB723A /* SectionHeader.swift */; };
 		4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */; };
 		4BBAE1D42B6050DC00C50536 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D32B6050DC00C50536 /* DataMapper.swift */; };
 		4BBAE1D62B60513500C50536 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAE1D52B60513500C50536 /* Mapper.swift */; };
@@ -121,6 +122,7 @@
 		4B74096D2B731D4B00AB723A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B74096F2B731D4B00AB723A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B7409702B731D4B00AB723A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4B74097C2B746ED400AB723A /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		4BBAE1D12B5F9FED00C50536 /* RequestMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMapperImpl.swift; sourceTree = "<group>"; };
 		4BBAE1D32B6050DC00C50536 /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		4BBAE1D52B60513500C50536 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				4BE92F8A2B66F598000C52A4 /* Router.swift */,
 				4BE92F8C2B66F5C8000C52A4 /* RouterHost.swift */,
 				4B74094F2B7307C000AB723A /* Route.swift */,
+				4B74097C2B746ED400AB723A /* SectionHeader.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				4BD71A992A8D8F8300EB8752 /* GameView.swift in Sources */,
 				4BD71A5E2A85F4DC00EB8752 /* Encoder.swift in Sources */,
 				4B7409502B7307C000AB723A /* Route.swift in Sources */,
+				4B74097D2B746ED400AB723A /* SectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
