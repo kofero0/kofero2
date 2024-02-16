@@ -5,5 +5,5 @@ import ro.kofe.model.ProviderError
 import ro.kofe.presenter.ipv.Presenter
 
 interface CharacterPresenter : Presenter<CharacterKView> {
-    suspend fun showChar(id: Int): Flow<ProviderError>
+    suspend fun showChar(charUid: Int, gameUid:Int): Flow<ProviderError>
 }

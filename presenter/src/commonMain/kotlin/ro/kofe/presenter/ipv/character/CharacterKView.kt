@@ -7,7 +7,7 @@ import ro.kofe.presenter.ipv.ImageKView
 
 interface CharacterKView : ImageKView {
     fun display(character: Character)
-    fun display(moves: List<Move>)
+    fun display(moves: List<Move>, gameUid:Int)
     fun displayMovesError(error: Error)
     fun displayCharError(error: Error)
 }

@@ -25,18 +25,10 @@ class HomeInteractorImpl(
     presenter, stateLogger, stateReducer, loggingProvider, HOME_INTERACTOR
 ) {
 
-    override suspend fun favPressed(obj: Any) {
-        val uid = when(obj){
-            is Game -> obj.uid
-            is Character -> obj.uid
-            else -> {
-                log(Level.ALERT, "object $obj is not a valid favorite")
-                return
-            }
-        }
+    override suspend fun favPressed(fav: Favorite) {
         stateLogger.logState(
             millisNow(),
-            Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = uid })
+            Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = fav.game.uid })
         )
     }
 

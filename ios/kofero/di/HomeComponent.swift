@@ -27,7 +27,7 @@ protocol HomeDependency: Dependency {
 class HomeComponent: Component<HomeDependency> {
     
     var presenter: HomePresenter {
-        return HomePresenterImpl(gameProvider: dependency.gameProvider, charProvider: dependency.charProvider, imageProvider: dependency.imageProvider, favoritesProvider: dependency.favoritesProvider, loggingProvider: dependency.loggingProvider)
+        return HomePresenterImpl(gameProvider: dependency.gameProvider, imageProvider: dependency.imageProvider, favoritesProvider: dependency.favoritesProvider, loggingProvider: dependency.loggingProvider)
     }
     
     var interactor: HomeInteractor {

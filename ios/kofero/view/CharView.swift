@@ -97,19 +97,72 @@ struct CharView: View {
         @Published var lastError: ModelError? = nil
         @Published var lastException: KotlinException? = nil
         
-        func display(url: String, imgBase64: String) async throws {
-            DispatchQueue.main.sync {
+        @MainActor func display(url: String, imgBase64: String) async throws {
                 urlsToImages[url] = imgBase64
+        }
+        
+        private typealias Sorter = ((String, String) -> Bool)
+        
+        private var sf6Sorter: Sorter = {
+            key1, key2 in
+            func keyToInt(_ key:String) -> Int {
+                switch key {
+                case "Command": return 0
+                case "Startup": return 1
+                case "Active": return 2
+                case "Recovery": return 3
+                case "Duration": return 4
+                case "On Hit": return 5
+                case "On Punish Counter": return 6
+                case "On Block": return 7
+                case "Drive Rush On Hit": return 8
+                case "Drive Rush On Block": return 9
+                case "On Perfect Parry": return 10
+                case "Damage": return 11
+                case "Hitstun": return 12
+                case "Blockstun": return 13
+                case "Hitstop": return 14
+                case "Attack Type": return 15
+                case "Notes": return 999
+                default: return 998
+                }
+            }
+            return keyToInt(key1) < keyToInt(key2)
+        }
+        
+        private var defaultSorter: Sorter = {
+            key1, key2 in
+            func keyToInt(_ key:String) -> Int {
+                switch key{
+                case "Startup": return 0
+                case "Active": return 1
+                case "Recovery": return 2
+                case "Duration": return 3
+                case "On Hit", "Hitstun": return 4
+                case "On Block", "Blockstun": return 5
+                case "Notes": return 999
+                default: return 998
+                }
+            }
+            return keyToInt(key1) < keyToInt(key2)
+        }
+        
+        
+        private func getSorter(gameUid:Int32) -> Sorter {
+            switch gameUid{
+            case 1892: return sf6Sorter
+            default: return defaultSorter
             }
         }
         
-        func display(moves: [ModelMove]) {
+        
+        func display(moves: [ModelMove], gameUid: Int32) {
             DispatchQueue.main.sync {
                 self.moves = moves
                 displayMoves = []
                 for move in moves {
                     var attributes = [DisplayMove]()
-                    for attributeKey in move.attributes.keys {
+                    for attributeKey in move.attributes.keys.sorted(by: getSorter(gameUid: gameUid)) {
                         attributes.append(DisplayMove(name: attributeKey + ": " + (move.attributes[attributeKey] ?? "")))
                     }
                     displayMoves.append(DisplayMove(name: move.name, attributes: attributes))
@@ -124,7 +177,11 @@ struct CharView: View {
         }
         
         func displayMovesError(error: ModelError) {
-            lastError = error
+            DispatchQueue.main.sync {
+                print("$$$")
+                print(error)
+                lastError = error
+            }
         }
         
         func error(e: KotlinException) {

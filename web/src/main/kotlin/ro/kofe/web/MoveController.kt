@@ -32,11 +32,9 @@ class MoveController {
 
     @PutMapping(MOVE_PATH)
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
-        val ret = ArrayList<Move>()
-        run breaking@{
-            list.forEach { move ->
-                if (uids.contains(move.uid)) ret.add(move)
-                if (uids.size == ret.size) return@breaking
+        val ret = ArrayList<Move>().apply {
+            uids.forEach { uid ->
+                this.add(list.first { uid == it.uid })
             }
         }
         return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)

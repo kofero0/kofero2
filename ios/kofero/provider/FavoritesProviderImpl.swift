@@ -10,37 +10,45 @@ import presenter
 
 public class FavoritesProviderImpl: FavoritesProvider {
     private let arrowExtensions = ArrowExtensions()
-    private let defaults:IUserDefaults
-    private let FAVS_KEY = "favs"
+    private let loggingProvider: LoggingProvider
+    private let diskAccessor: DiskAccessor
+    private let mapper: FavoritesMapper
+    private let fileName = "favs"
     
-    public init(defaults:IUserDefaults){
-        self.defaults = defaults
+    init(loggingProvider: LoggingProvider, diskAccessor: DiskAccessor, mapper: FavoritesMapper){
+        self.loggingProvider = loggingProvider
+        self.diskAccessor = diskAccessor
+        self.mapper = mapper
     }
     
-    public func delete(id: Int32) async throws -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
-                    let favs = defaults.object(forKey: FAVS_KEY)
-                    if var uFavs = favs as? [ModelFavorite] {
-                        uFavs.removeAll{obj in return obj.uid == id}
-                        defaults.set(uFavs, forKey: FAVS_KEY)
-                        return arrowExtensions.buildUnitEitherRight()
-                    }
-                return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
+    public func delete(fav: ModelFavorite) async throws -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
+        do{
+            var favs = try mapper.map(data: diskAccessor.read(fileName: fileName))
+            favs.removeAll{savedFav in return fav.character?.uid == savedFav.character?.uid && fav.game.uid == savedFav.game.uid}
+            diskAccessor.write(fileName: fileName, json: try mapper.map(data: favs))
+            return arrowExtensions.buildUnitEitherRight()
+        } catch {
+            return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
+        }
     }
     
     public func save(fav: ModelFavorite) async throws -> Arrow_coreEither<ModelProviderError, KotlinUnit> {
-                    let favs = defaults.object(forKey: FAVS_KEY)
-                    if var uFavs = favs as? [ModelFavorite] {
-                        uFavs.append(fav)
-                        defaults.set(uFavs, forKey: FAVS_KEY)
-                        return arrowExtensions.buildUnitEitherRight()
-                    }
-                return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
+        do{
+            var favs = try mapper.map(data: diskAccessor.read(fileName: fileName))
+            favs.append(fav)
+            diskAccessor.write(fileName: fileName, json: try mapper.map(data: favs))
+            return arrowExtensions.buildUnitEitherRight()
+        } catch {
+            return arrowExtensions.buildUnitEitherLeft(left: ModelIncorrectCount(ids: []))
+        }
     }
     
     public func get() async throws -> Arrow_coreEither<ModelProviderError, NSArray> {
-        if let favs = defaults.object(forKey: FAVS_KEY) as? [ModelFavorite]{
-            return arrowExtensions.buildListEitherRight(right: favs)
+        do{
+            return try arrowExtensions.buildListEitherRight(right: mapper.map(data: diskAccessor.read(fileName: fileName)))
+        } catch {
+            return arrowExtensions.buildListEitherRight(right: [])
         }
-        return arrowExtensions.buildListEitherRight(right: [])
+        
     }
 }

@@ -45,7 +45,7 @@ public class CharacterMapperImpl: CharMapper {
         }
     }
     
-    private func serialize(json: JSON) -> ModelCharacter {
+    public func serialize(json: JSON) -> ModelCharacter {
         var moveIds = [KotlinInt]()
         
         for element in json["moveIds"].arrayValue {

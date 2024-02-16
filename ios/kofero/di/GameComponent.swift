@@ -33,7 +33,7 @@ class GameComponent: Component<GameDependency> {
         return shared { GameProviderImpl(client: dependency.authHttpClient, jsonFilename: "game", urlPrefix: dependency.urlPrefix, mapper: gameMapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor) }
     }
     
-    var gameMapper: GameMapper {
+    var gameMapper: GameMapperImpl {
         return shared { GameMapperImpl(encoder: dependency.jsonEncoder) }
     }
     

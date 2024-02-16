@@ -9,25 +9,38 @@ import SwiftUI
 import presenter
 
 struct GameView: View {
-    let adUnitId:String
-    let gameInteractor: GameInteractor
-    let charInteractor: CharacterInteractor
-    @StateObject var viewModel = GameViewModel()
+    private let adUnitId:String
+    private let gameInteractor: GameInteractor
+    private let charInteractor: CharacterInteractor
+    private let favProvider: FavoritesProvider
+    @StateObject private var viewModel = GameViewModel()
     @EnvironmentObject var router: Router<Route>
     
     
-    init(charInteractor:CharacterInteractor, gameInteractor:GameInteractor, adUnitId:String){
+    init(charInteractor:CharacterInteractor, gameInteractor:GameInteractor, favProvider: FavoritesProvider, adUnitId:String){
         self.charInteractor = charInteractor
         self.gameInteractor = gameInteractor
+        self.favProvider = favProvider
         self.adUnitId = adUnitId
     }
     
     
-    var charClosure: ((ModelCharacter) -> Void) {
-        return { char in
+    private var charClosure: ((ModelCharacter, ModelGame) -> Void) {
+        return { char, game in
             gameInteractor.charPressed(char: char){_ in}
-            charInteractor.setCharUid(uid: char.uid){_ in}
+            charInteractor.setUids(charUid: char.uid, gameUid: game.uid){_ in}
             router.push(.Char)
+        }
+    }
+    
+    private var favClosure: ((ModelGame) -> Void) {
+        return { game in
+            if(viewModel.isFavorited){
+                viewModel.favProvider?.delete(fav: ModelFavorite(game: game, character: nil)){_,_ in }
+            } else{
+                viewModel.favProvider?.save(fav: ModelFavorite(game: game, character: nil)){_,_ in }
+            }
+            viewModel.isFavorited = !(viewModel.isFavorited)
         }
     }
     
@@ -45,41 +58,73 @@ struct GameView: View {
                         Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[char.iconUrl] ?? nil))
                         Text(char.name)
                     }.onTapGesture {
-                        charClosure(char)
+                        charClosure(char, viewModel.game!)
                     }
                 }
             }
         }
         }.onAppear{
             gameInteractor.setView(view: viewModel)
+            viewModel.favProvider = favProvider
             gameInteractor.viewResumed()
         }
         .onDisappear{
             gameInteractor.viewPaused()
         }
         .navigationTitle(viewModel.game?.name ?? "")
+        .toolbar{
+            Button(action: {
+                if let uGame = viewModel.game {
+                    favClosure(uGame)
+                }
+            }, label: {
+                if(viewModel.isFavorited){
+                    Image(systemName: "heart.fill")
+                }
+                else{
+                    Image(systemName: "heart")
+                }
+            })
+        }
     }
     
-    class GameViewModel: ObservableObject, GameKView {
+    private class GameViewModel: ObservableObject, GameKView {
         @Published var game: ModelGame? = nil
         @Published var chars: [ModelCharacter] = []
         @Published var urlsToImages: [String:String] = [:]
         @Published var lastError: ModelError? = nil
         @Published var lastException: KotlinException? = nil
+        @Published var isFavorited: Bool = false
+        var favProvider: FavoritesProvider? = nil
+        
         
         func display(characters: [ModelCharacter]) {
             DispatchQueue.main.sync {
-                print("chars")
-                print(characters)
                 chars = characters
             }
         }
         
         func display(game: ModelGame) {
             DispatchQueue.main.sync {
-                print("game")
-                print(game)
                 self.game = game
+                print("^^^")
+                print("\(favProvider == nil)")
+                favProvider?.get { either,error in
+                    either?.map{ array in
+                        if let uArray = array {
+                            for ele in uArray{
+                                if let fav = ele as? ModelFavorite{
+                                    if(fav.game.uid == game.uid){
+                                        DispatchQueue.main.sync {
+                                            self.isFavorited = true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        return NSObject()
+                    }
+                }
             }
         }
         

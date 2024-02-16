@@ -77,7 +77,7 @@ class RootComponent: BootstrapComponent {
     }
     
     var favoritesProvider:FavoritesProvider {
-        return FavoritesProviderImpl(defaults: userDefaults)
+        return FavoritesProviderImpl(loggingProvider: loggingProvider, diskAccessor: diskAccessor, mapper: FavoritesMapper(encoder: jsonEncoder, gameMapper: gameComponent.gameMapper, charMapper: characterComponent.mapper))
     }
     
     var loggingProvider: LoggingProvider {
@@ -150,7 +150,7 @@ class RootComponent: BootstrapComponent {
     }
     
     var gameView: GameView {
-        return shared { GameView(charInteractor: charInteractor, gameInteractor: gameInteractor, adUnitId: bannerAdUnitId) }
+        return shared { GameView(charInteractor: charInteractor, gameInteractor: gameInteractor, favProvider: favoritesProvider, adUnitId: bannerAdUnitId) }
     }
     
     var charView: CharView {

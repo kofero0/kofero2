@@ -20,9 +20,11 @@ class CharacterInteractorImpl(
 ), CharacterInteractor {
 
     private var charUid: Int? = null
+    private var gameUid: Int? = null
 
-    override suspend fun setCharUid(uid: Int) {
-        charUid = uid
+    override suspend fun setUids(charUid: Int, gameUid: Int) {
+        this.charUid = charUid
+        this.gameUid = gameUid
     }
 
     override fun shutdown() {
@@ -32,7 +34,9 @@ class CharacterInteractorImpl(
 
     override fun viewResumed() = super.viewResumed().also {
         CoroutineScope(context).launch {
-            charUid?.let { presenter.showChar(it).collect{ error -> view?.displayCharError(error) } }
+            gameUid?.let { gUid ->
+                charUid?.let { presenter.showChar(it, gUid).collect { error -> view?.displayCharError(error) } }
+            }
         }
     }
 }

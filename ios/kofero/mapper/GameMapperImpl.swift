@@ -44,7 +44,7 @@ public class GameMapperImpl: GameMapper {
         }
     }
     
-    private func serialize(json:JSON) -> ModelGame{
+    func serialize(json:JSON) -> ModelGame{
         var characterIds = [KotlinInt]()
         for charIdElement in json["charIds"].arrayValue {
             characterIds.append(KotlinInt(int: charIdElement.int32Value))

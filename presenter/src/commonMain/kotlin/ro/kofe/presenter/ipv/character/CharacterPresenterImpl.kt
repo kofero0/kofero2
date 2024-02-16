@@ -2,6 +2,7 @@ package ro.kofe.presenter.ipv.character
 
 import kotlinx.coroutines.flow.flow
 import ro.kofe.model.Character
+import ro.kofe.model.HttpError
 import ro.kofe.model.IncorrectCount
 import ro.kofe.model.Move
 import ro.kofe.model.logging.Level
@@ -20,8 +21,8 @@ class CharacterPresenterImpl(
         this.view = view
     }
 
-    override suspend fun showChar(id: Int) = flow {
-        val ids = ArrayList<Int>().apply { add(id) }
+    override suspend fun showChar(charUid: Int, gameUid:Int) = flow {
+        val ids = ArrayList<Int>().apply { add(charUid) }
         suspend fun process(chars: List<Character>) {
             if (chars.size != 1) {
                 emit(IncorrectCount(ids))
@@ -34,7 +35,7 @@ class CharacterPresenterImpl(
                     emit(it)
                     view?.displayMovesError(it)
                 }) { moves ->
-                    view?.display(moves)
+                    view?.display(moves, gameUid)
                 }
             }
         }

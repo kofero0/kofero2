@@ -32,7 +32,7 @@ class CharacterComponent: Component<CharacterDependency> {
         return CharProviderImpl(client: dependency.authHttpClient, jsonFilename: "char", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     
-    var mapper: CharMapper {
+    var mapper: CharacterMapperImpl {
         return CharacterMapperImpl(encoder: dependency.jsonEncoder)
     }
     

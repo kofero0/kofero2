@@ -34,11 +34,16 @@ struct HomeView: View {
         }
     }
     
-    var charClosure: ((ModelCharacter) -> Void) {
-        return { char in
-            homeInteractor.favPressed(obj: char){_ in}
-            charInteractor.setCharUid(uid: char.uid){_ in}
-            router.push(.Char)
+    var favClosure: ((ModelFavorite) -> Void) {
+        return { fav in
+            homeInteractor.favPressed(fav: fav){_ in}
+            if(fav.character == nil){
+                gameInteractor.setGameUid(uid: fav.game.uid){_ in}
+                router.push(.Game)
+            } else {
+                charInteractor.setUids(charUid: fav.character!.uid, gameUid: fav.game.uid){_ in}
+                router.push(.Char)
+            }
         }
     }
     
@@ -69,7 +74,7 @@ struct HomeView: View {
     
     class HomeViewModel: HomeKView, ObservableObject {
         @Published var games: [ModelGame] = []
-        @Published var favs: [Any] = []
+        @Published var favs: [ModelFavorite] = []
         @Published var urlsToImages: [String:String] = [:]
         @Published var lastError: ModelError? = nil
         @Published var lastException: KotlinException? = nil
@@ -79,7 +84,7 @@ struct HomeView: View {
             lastException = e
         }
         
-        func displayFavs(favorites: [Any]) {
+        func displayFavs(favorites: [ModelFavorite]) {
             DispatchQueue.main.sync {
                 favs = favorites
             }
