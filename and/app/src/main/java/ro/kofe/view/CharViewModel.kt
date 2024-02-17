@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import ro.kofe.model.Character
 import ro.kofe.model.Error
+import ro.kofe.model.Game
 import ro.kofe.model.Move
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.character.CharacterInteractor
@@ -26,6 +27,10 @@ class CharViewModel @Inject constructor(
     private val _moves = MutableStateFlow<List<Move>>(ArrayList())
     val moves = _moves.asStateFlow()
 
+
+    private val _game = MutableStateFlow<Game?>(null)
+    val game = _game.asStateFlow()
+
     private val _char = MutableStateFlow<Character?>(null)
     val char = _char.asStateFlow()
 
@@ -35,12 +40,14 @@ class CharViewModel @Inject constructor(
     private val _moveError = MutableStateFlow<Error?>(null)
     val gameError = _moveError.asStateFlow()
 
-    override fun display(moves: List<Move>) = _moves.update {
-        moves
-    }
 
     override fun display(character: Character) = _char.update {
         character
+    }
+
+    override fun display(moves: List<Move>, gameUid: Int) {
+        _moves.update { moves }
+        //TODO: use gameuid for default move comparator
     }
 
     override fun displayCharError(error: Error) = _charError.update {
@@ -53,7 +60,7 @@ class CharViewModel @Inject constructor(
 
     override fun error(e: Exception) = super.error(e)
 
-    fun setCharUid(uid: Int) = CoroutineScope(DispatcherProvider.default).launch {
-        interactor.setCharUid(uid)
+    fun setCharUid(charUid: Int, gameUid:Int) = CoroutineScope(DispatcherProvider.default).launch {
+        interactor.setUids(charUid,gameUid)
     }
 }

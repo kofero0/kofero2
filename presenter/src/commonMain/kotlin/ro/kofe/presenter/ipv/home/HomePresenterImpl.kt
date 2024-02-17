@@ -43,13 +43,19 @@ class HomePresenterImpl(
         favoritesProvider.get().fold({ e ->
             view?.displayFavsError(e)
             emit(e)
-        }) { view?.displayFavs(it) }
+        }) { favs ->
+            view?.displayFavs(favs)
+            displayImages(favs).onLeft { emit(it) }
+        }
     }
 
     private suspend fun displayImages(objs: List<Any>) = either {
         for (obj in objs) {
             when (obj) {
-                is Character -> getImage(obj.iconUrl)
+                is Favorite -> obj.character?.also { getImage(it.iconUrl) } ?: run {
+                    getImage(obj.game.iconUrl)
+                }
+
                 is Game -> getImage(obj.iconUrl)
                 else -> raise(InvalidObject(999))
             }

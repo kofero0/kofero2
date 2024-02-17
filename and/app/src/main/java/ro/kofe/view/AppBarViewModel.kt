@@ -12,6 +12,7 @@ import ro.kofe.model.Favorite
 import ro.kofe.model.Game
 import ro.kofe.model.ProviderError
 import ro.kofe.presenter.DispatcherProvider
+import ro.kofe.presenter.collect
 import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.Provider
 import javax.inject.Inject
@@ -58,49 +59,48 @@ class AppBarViewModel @Inject constructor(
     }
 
     fun fromHome(uid: Int) {
+        suspend fun getGame(uid: Int) {
+            gameProvider.get(ArrayList<Int>().apply { add(uid) }).collect { gameEither ->
+                gameEither.fold({
+                    _error.update { it }
+                }) { games ->
+                    _title.update { games[0].name }
+                    _favoriteClicked.update {
+                        {
+                            favClicked(Favorite(games[0], null))
+                        }
+                    }
+                }
+            }
+        }
+
         CoroutineScope(dispatcherProvider.default).launch {
             favsProvider.get().fold({ error ->
                 _error.update { error }
             }) { favs ->
-                _isFavorited.update { favs.any { it.uid == uid } }
+                _isFavorited.update { favs.any { it.character?.uid == uid || it.game.uid == uid } }
                 _canFavorite.update { true }
-                gameProvider.get(ArrayList<Int>().apply { add(uid) }).collect { gameEither ->
-                    gameEither.fold({
-                        _error.update { it }
-                    }) { games ->
-                        _title.update { games.first { game -> game.uid == uid }.name }
-                        _favoriteClicked.update {
-                            {
-                                favClicked(
-                                    uid, if (games.any { game -> game.uid == uid }) {
-                                        Favorite.Type.GAME
-                                    } else {
-                                        Favorite.Type.CHAR
-                                    }
-                                )
-                            }
-                        }
-                    }
-                }
-                charProvider.get(ArrayList<Int>().apply { add(uid) })
-                    .collect { charEither ->
-                        charEither.fold({
-                            _error.update { it }
-                        }) { chars ->
-                            _title.update { chars.first { char -> char.uid == uid }.name }
-                            _favoriteClicked.update {
-                                {
-                                    favClicked(
-                                        uid, if (chars.any { char -> char.uid == uid }) {
-                                            Favorite.Type.GAME
-                                        } else {
-                                            Favorite.Type.CHAR
+                favs.find { it.game.uid == uid || it.character?.uid == uid }?.also { fav ->
+                    if (fav.character == null) {
+                        getGame(uid)
+                    } else {
+                        charProvider.get(ArrayList<Int>().apply { add(uid) })
+                            .collect { charEither ->
+                                charEither.fold({
+                                    _error.update { it }
+                                }) { chars ->
+                                    _title.update { chars.first { char -> char.uid == uid }.name }
+                                    _favoriteClicked.update {
+                                        {
+                                            favClicked(fav)
                                         }
-                                    )
+                                    }
                                 }
                             }
-                        }
                     }
+                } ?: run {
+                    getGame(uid)
+                }
             }
         }
         _canNavigateBack.update { true }
@@ -117,13 +117,19 @@ class AppBarViewModel @Inject constructor(
             favsProvider.get().fold({ error ->
                 _error.update { error }
             }) { favs ->
-                _isFavorited.update { favs.any { it.uid == uid } }
+                _isFavorited.update { favs.any { it.game.uid == uid } }
                 _canFavorite.update { true }
                 gameProvider.get(ArrayList<Int>().apply { add(uid) }).collect {
                     it.fold({ error ->
                         _error.update { error }
                     }) { game ->
                         _title.update { game[0].name }
+
+                        _favoriteClicked.update {
+                            {
+                                favClicked(Favorite(game[0], null))
+                            }
+                        }
                     }
                 }
             }
@@ -136,22 +142,25 @@ class AppBarViewModel @Inject constructor(
                 backStackClosure?.invoke()
             }
         }
-        _favoriteClicked.update {
-            {
-                favClicked(uid, Favorite.Type.GAME)
-            }
-        }
     }
 
     fun toChar(charUid: Int, gameUid: Int) {
         CoroutineScope(dispatcherProvider.default).launch {
             favsProvider.get().fold({ error -> _error.update { error } }) { favs ->
-                _isFavorited.update { favs.any { it.uid == charUid } }
+                _isFavorited.update { favs.any { it.character?.uid == charUid } }
                 _canFavorite.update { true }
             }
             charProvider.get(ArrayList<Int>().apply { add(charUid) }).collect {
                 it.fold({ error -> _error.update { error } }) { chars ->
                     _title.update { chars[0].name }
+                    gameProvider.get(ArrayList<Int>().apply { add(gameUid) })
+                        .collect { gameEither ->
+                            gameEither.map { games ->
+                                _favoriteClicked.update {
+                                    { favClicked(Favorite(games[0], chars[0])) }
+                                }
+                            }
+                        }
                 }
             }
         }
@@ -163,17 +172,14 @@ class AppBarViewModel @Inject constructor(
                 backStackClosure?.invoke()
             }
         }
-        _favoriteClicked.update {
-            { favClicked(charUid, Favorite.Type.CHAR) }
-        }
     }
 
-    private fun favClicked(uid: Int, type: Favorite.Type) {
+    private fun favClicked(fav: Favorite) {
         CoroutineScope(dispatcherProvider.default).launch {
             if (isFavorited.value) {
-                favsProvider.delete(uid)
+                favsProvider.delete(fav)
             } else {
-                favsProvider.save(Favorite(uid, type))
+                favsProvider.save(fav)
             }
             _isFavorited.update { !isFavorited.value }
         }

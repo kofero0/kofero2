@@ -24,11 +24,10 @@ object HomeModule {
     @Provides
     fun provideHomePresenter(
         gameProvider: Provider<Game>,
-        charProvider: Provider<Character>,
         imageProvider: ImageProvider,
         favoritesProvider: FavoritesProvider,
         logger: LoggingProvider
-    ): HomePresenter = HomePresenterImpl(gameProvider, charProvider, imageProvider, favoritesProvider, logger)
+    ): HomePresenter = HomePresenterImpl(gameProvider, imageProvider, favoritesProvider, logger)
 
     @Provides
     fun provideHomeInteractor(

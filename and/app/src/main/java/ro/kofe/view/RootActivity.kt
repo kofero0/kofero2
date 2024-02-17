@@ -60,23 +60,30 @@ fun KoferoApp(
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(route = ViewTag.HOME_VIEW.name) {
-                HomeScreen(viewModel = home, onNavigate = { viewTag, uid ->
-                    navController.navigate("${viewTag.name}/$uid")
-                    appBar.fromHome(uid)
+                HomeScreen(viewModel = home, onNavigate = { viewTag,gameUid, charUid ->
+                    var route = "${viewTag.name}/$gameUid"
+                    charUid?.let { route += "/$charUid" }
+                    navController.navigate(route)
+                    if(charUid == null){
+                        appBar.fromHome(gameUid)
+                    } else {
+                        appBar.fromHome(charUid)
+                    }
                 })
             }
             composable(route = "${ViewTag.GAME_VIEW.name}/{uid}") {
                 GameScreen(viewModel = game,
                     uid = it.arguments?.getString("uid"),
                     onNavigate = { viewTag, charUid, gameUid ->
-                        navController.navigate("${viewTag.name}/$charUid")
+                        navController.navigate("${viewTag.name}/$gameUid/$charUid")
                         appBar.toChar(charUid, gameUid)
                     },
                     onBackPressed = { appBar.navClicked.value.invoke() })
             }
-            composable(route = "${ViewTag.CHAR_VIEW.name}/{uid}") {
+            composable(route = "${ViewTag.CHAR_VIEW.name}/{gameUid}/{charUid}") {
                 CharScreen(viewModel = char,
-                    uid = it.arguments?.getString("uid"),
+                    gameUid = it.arguments?.getString("gameUid"),
+                    charUid = it.arguments?.getString("charUid"),
                     onBackPressed = { appBar.navClicked.value.invoke() })
             }
             composable(route = ViewTag.SETTINGS_VIEW.name) {

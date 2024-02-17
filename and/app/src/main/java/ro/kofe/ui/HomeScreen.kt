@@ -20,7 +20,7 @@ import ro.kofe.view.HomeViewModel
 @Composable
 fun HomeScreen(
     viewModel: HomeViewModel,
-    onNavigate: (ViewTag, Int) -> Unit,
+    onNavigate: (ViewTag, Int, Int?) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val favs by viewModel.favs.collectAsState()
@@ -39,19 +39,16 @@ fun HomeScreen(
         LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 200.dp)) {
             Log.v("rwr", "favs size: ${favs.size}")
             items(favs.size) {
-                when (val fav = favs[it]) {
-                    is Character -> {
-                        RowItem(title = fav.name, image = images[fav.iconUrl]) {
-                            viewModel.favPressed(fav)
-                            onNavigate(ViewTag.CHAR_VIEW, fav.uid)
-                        }
+                val fav = favs[it]
+                fav.character?.also { char ->
+                    RowItem(title = char.name, image = images[char.iconUrl]) {
+                        viewModel.favPressed(fav)
+                        onNavigate(ViewTag.CHAR_VIEW, fav.game.uid, char.uid)
                     }
-
-                    is Game -> {
-                        RowItem(title = fav.name, image = images[fav.iconUrl]) {
-                            viewModel.favPressed(fav)
-                            onNavigate(ViewTag.GAME_VIEW, fav.uid)
-                        }
+                } ?: run {
+                    RowItem(title = fav.game.name, image = images[fav.game.iconUrl]) {
+                        viewModel.favPressed(fav)
+                        onNavigate(ViewTag.GAME_VIEW, fav.game.uid, null)
                     }
                 }
             }
@@ -63,7 +60,7 @@ fun HomeScreen(
             items(games.size) {
                 RowItem(games[it].name, images[games[it].iconUrl]) {
                     viewModel.gamePressed(games[it])
-                    onNavigate(ViewTag.GAME_VIEW, games[it].uid)
+                    onNavigate(ViewTag.GAME_VIEW, games[it].uid, null)
                 }
             }
         }

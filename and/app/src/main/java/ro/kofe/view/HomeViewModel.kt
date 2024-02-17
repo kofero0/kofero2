@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import ro.kofe.model.Error
+import ro.kofe.model.Favorite
 import ro.kofe.model.Game
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.home.HomeInteractor
@@ -21,7 +22,7 @@ class HomeViewModel @Inject constructor(
         interactor.setView(this)
     }
 
-    private val _favs = MutableStateFlow<List<Any>>(ArrayList())
+    private val _favs = MutableStateFlow<List<Favorite>>(ArrayList())
     val favs = _favs.asStateFlow()
 
     private val _games = MutableStateFlow<List<Game>>(ArrayList())
@@ -33,22 +34,22 @@ class HomeViewModel @Inject constructor(
     private val _gameError = MutableStateFlow<Error?>(null)
     val gameError = _gameError.asStateFlow()
 
-    fun favPressed(obj: Any) = CoroutineScope(DispatcherProvider.default).launch {
-        interactor.favPressed(obj)
+    fun favPressed(fav: Favorite) = CoroutineScope(DispatcherProvider.default).launch {
+        interactor.favPressed(fav)
     }
 
     fun gamePressed(game: Game) = CoroutineScope(DispatcherProvider.default).launch {
         interactor.gamePressed(game)
     }
 
-    override fun displayFavs(favorites: List<Any>) = _favs.update {
-        favorites
-    }
-
     override fun displayFavsError(error: Error) = _favError.update { error }
 
     override fun displayGames(games: List<Game>) = _games.update {
         games
+    }
+
+    override fun displayFavs(favorites: List<Favorite>)  = _favs.update {
+        favorites
     }
 
     override fun displayGamesError(error: Error) = _gameError.update { error }

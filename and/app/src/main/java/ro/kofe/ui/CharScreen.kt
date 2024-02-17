@@ -99,9 +99,14 @@ fun CharScreen(
     viewModel: CharViewModel,
     onBackPressed: () -> Unit,
     modifier: Modifier = Modifier,
-    uid: String?
+    gameUid: String?,
+    charUid: String?
 ) {
-    uid?.let { viewModel.setCharUid(it.toInt()) }
+    charUid?.let { cUid ->
+        gameUid?.let { gUid ->
+            viewModel.setCharUid(cUid.toInt(),gUid.toInt())
+        }
+    }
     val char by viewModel.char.collectAsState()
     val moves by viewModel.moves.collectAsState()
     val images by viewModel.images.collectAsState()
