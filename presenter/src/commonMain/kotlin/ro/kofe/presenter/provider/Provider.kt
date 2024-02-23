@@ -16,4 +16,6 @@ interface Provider<T> {
         onCompletion: (Throwable?) -> Unit
     ): Cancellable =
         get(ids).collect(onEach, onCompletion)
+
+    fun delete(): Either<ProviderError,Unit>
 }

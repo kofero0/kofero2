@@ -1,5 +1,6 @@
 package ro.kofe.presenter.provider
 
+import arrow.core.Either
 import arrow.core.raise.either
 import io.ktor.client.*
 import io.ktor.client.request.*
@@ -10,6 +11,7 @@ import kotlinx.coroutines.internal.SynchronizedObject
 import kotlinx.coroutines.internal.synchronized
 import kotlinx.coroutines.runBlocking
 import ro.kofe.model.HttpError
+import ro.kofe.model.ProviderError
 
 
 @OptIn(InternalCoroutinesApi::class)
@@ -39,6 +41,12 @@ class AuthProviderImpl(
                     }
                 }
             }
+        }
+    }
+
+    override fun delete() = either<ProviderError,Unit> {
+        synchronized(syncObject){
+            diskAccessor.save("")
         }
     }
 }

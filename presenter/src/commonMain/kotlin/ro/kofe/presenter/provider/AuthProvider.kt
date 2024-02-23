@@ -6,4 +6,5 @@ import ro.kofe.model.ProviderError
 
 interface AuthProvider {
     fun get(): Either<ProviderError, String>
+    fun delete(): Either<ProviderError, Unit>
 }

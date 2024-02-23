@@ -50326,5 +50326,6294 @@
       "Hitstop": "",
       "Attack Type": "T"
     }
+  },
+  {
+    "uid": 3077,
+    "name": "close A",
+    "attributes": {
+      "Startup": 4,
+      "On Block": "+1",
+      "On Hit": "+3",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3078,
+    "name": "close AA",
+    "attributes": {
+      "Startup": "4,6",
+      "On Block": -6,
+      "On Hit": -4,
+      "Notes": "",
+      "Damage": "25,23",
+      "Stun": "30,0",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3079,
+    "name": "close AAA",
+    "attributes": {
+      "Startup": "4,6,6",
+      "On Block": -8,
+      "On Hit": -6,
+      "Notes": "",
+      "Damage": "25,23,22",
+      "Stun": "30,0,0",
+      "Guard": "60,60,60"
+    }
+  },
+  {
+    "uid": 3080,
+    "name": "close B",
+    "attributes": {
+      "Startup": 5,
+      "On Block": "+2",
+      "On Hit": "+4",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3081,
+    "name": "close C",
+    "attributes": {
+      "Startup": 4,
+      "On Block": 0,
+      "On Hit": "+2",
+      "Notes": "",
+      "Damage": "35,35",
+      "Stun": "35,35",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3082,
+    "name": "close D",
+    "attributes": {
+      "Startup": 6,
+      "On Block": -1,
+      "On Hit": "+1",
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3083,
+    "name": "far A",
+    "attributes": {
+      "Startup": 5,
+      "On Block": -1,
+      "On Hit": "+1",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3084,
+    "name": "far B",
+    "attributes": {
+      "Startup": 8,
+      "On Block": "+1",
+      "On Hit": "+3",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3085,
+    "name": "far C",
+    "attributes": {
+      "Startup": 7,
+      "On Block": -4,
+      "On Hit": -2,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3086,
+    "name": "far D",
+    "attributes": {
+      "Startup": 10,
+      "On Block": -4,
+      "On Hit": -2,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3087,
+    "name": "2A",
+    "attributes": {
+      "Startup": 4,
+      "On Block": "+1",
+      "On Hit": "+3",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3088,
+    "name": "2B",
+    "attributes": {
+      "Startup": 4,
+      "On Block": -1,
+      "On Hit": "+1",
+      "Notes": "",
+      "Damage": 15,
+      "Stun": 15,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3089,
+    "name": "2C",
+    "attributes": {
+      "Startup": 6,
+      "On Block": 0,
+      "On Hit": "+2",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3090,
+    "name": "2D",
+    "attributes": {
+      "Startup": 9,
+      "On Block": -5,
+      "On Hit": "+25",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3091,
+    "name": "CD",
+    "attributes": {
+      "Startup": 15,
+      "On Block": -4,
+      "On Hit": "+73~+89",
+      "Notes": "Splat",
+      "Damage": 75,
+      "Stun": 100,
+      "Guard": 160
+    }
+  },
+  {
+    "uid": 3092,
+    "name": "236CD",
+    "attributes": {
+      "Startup": 15,
+      "On Block": -10,
+      "On Hit": 93,
+      "Notes": "Crumple",
+      "Damage": 75,
+      "Stun": 0,
+      "Guard": 200
+    }
+  },
+  {
+    "uid": 3093,
+    "name": "jump A",
+    "attributes": {
+      "Startup": 5,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3094,
+    "name": "jump B",
+    "attributes": {
+      "Startup": 4,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3095,
+    "name": "jump C",
+    "attributes": {
+      "Startup": 5,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3096,
+    "name": "jump D",
+    "attributes": {
+      "Startup": 6,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3097,
+    "name": "jump CD",
+    "attributes": {
+      "Startup": 12,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "80/90",
+      "Stun": 80,
+      "Guard": "120/140"
+    }
+  },
+  {
+    "uid": 3098,
+    "name": "C THROW",
+    "attributes": {
+      "Startup": 1,
+      "On Block": "-",
+      "On Hit": 50,
+      "Notes": "Forward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3099,
+    "name": "D THROW",
+    "attributes": {
+      "Startup": 1,
+      "On Block": "-",
+      "On Hit": 47,
+      "Notes": "Backward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3100,
+    "name": "6A",
+    "attributes": {
+      "Startup": 19,
+      "On Block": 0,
+      "On Hit": "+2",
+      "Notes": "",
+      "Damage": 55,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3101,
+    "name": "6A cancel",
+    "attributes": {
+      "Startup": 11,
+      "On Block": -2,
+      "On Hit": 0,
+      "Notes": "",
+      "Damage": 55,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3102,
+    "name": "air 2D",
+    "attributes": {
+      "Startup": "",
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3103,
+    "name": "B\u003eD",
+    "attributes": {
+      "Startup": 5,
+      "On Block": -9,
+      "On Hit": "+35",
+      "Notes": "",
+      "Damage": "30,76",
+      "Stun": "30,70",
+      "Guard": "60,120"
+    }
+  },
+  {
+    "uid": 3104,
+    "name": "236A",
+    "attributes": {
+      "Startup": 10,
+      "On Block": -5,
+      "On Hit": "+30",
+      "Notes": "KND",
+      "Damage": 60,
+      "Stun": 80,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3105,
+    "name": "236C",
+    "attributes": {
+      "Startup": "16?",
+      "On Block": -10,
+      "On Hit": "+25",
+      "Notes": "KND",
+      "Damage": 100,
+      "Stun": 80,
+      "Guard": 100
+    }
+  },
+  {
+    "uid": 3106,
+    "name": "236AC",
+    "attributes": {
+      "Startup": 15,
+      "On Block": -7,
+      "On Hit": "+76~+92",
+      "Notes": "KND",
+      "Damage": 140,
+      "Stun": 0,
+      "Guard": 160
+    }
+  },
+  {
+    "uid": 3107,
+    "name": "426B",
+    "attributes": {
+      "Startup": 14,
+      "On Block": -22,
+      "On Hit": "+24",
+      "Notes": "KND",
+      "Damage": "35,35,35",
+      "Stun": "30,30,30",
+      "Guard": "30,30,30"
+    }
+  },
+  {
+    "uid": 3108,
+    "name": "426D",
+    "attributes": {
+      "Startup": 20,
+      "On Block": -5,
+      "On Hit": "+34",
+      "Notes": "KND",
+      "Damage": "35,35,35,35",
+      "Stun": "30,30,30,30",
+      "Guard": "30,30,30,30"
+    }
+  },
+  {
+    "uid": 3109,
+    "name": "426BD",
+    "attributes": {
+      "Startup": 10,
+      "On Block": -2,
+      "On Hit": "+42",
+      "Notes": "KND",
+      "Damage": "35,35,35,35,35",
+      "Stun": 0,
+      "Guard": "30,30,30,30,30"
+    }
+  },
+  {
+    "uid": 3110,
+    "name": "426B~BD",
+    "attributes": {
+      "Startup": 14,
+      "On Block": -13,
+      "On Hit": "+36",
+      "Notes": "Juggle",
+      "Damage": 35,
+      "Stun": 30,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3111,
+    "name": "426D~BD",
+    "attributes": {
+      "Startup": 20,
+      "On Block": -13,
+      "On Hit": "+36",
+      "Notes": "Juggle",
+      "Damage": 35,
+      "Stun": 30,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3112,
+    "name": "426BD~BD",
+    "attributes": {
+      "Startup": 10,
+      "On Block": -13,
+      "On Hit": "+36",
+      "Notes": "Juggle",
+      "Damage": 35,
+      "Stun": 0,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3113,
+    "name": "214A",
+    "attributes": {
+      "Startup": 13,
+      "On Block": "-6~+26",
+      "On Hit": "-6~+26",
+      "Notes": "",
+      "Damage": 65,
+      "Stun": 60,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3114,
+    "name": "214C",
+    "attributes": {
+      "Startup": 16,
+      "On Block": "-7~+25",
+      "On Hit": "-7~+25",
+      "Notes": "",
+      "Damage": 65,
+      "Stun": 60,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3115,
+    "name": "214AC",
+    "attributes": {
+      "Startup": 10,
+      "On Block": "-13~+26",
+      "On Hit": "-13~+26",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 0,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3116,
+    "name": "623A",
+    "attributes": {
+      "Startup": 6,
+      "On Block": -27,
+      "On Hit": "+22",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 40,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3117,
+    "name": "623C",
+    "attributes": {
+      "Startup": 8,
+      "On Block": -29,
+      "On Hit": "+20",
+      "Notes": "KND",
+      "Damage": "70,30,30",
+      "Stun": "60,20,20",
+      "Guard": "80,30,30"
+    }
+  },
+  {
+    "uid": 3118,
+    "name": "623AC",
+    "attributes": {
+      "Startup": 6,
+      "On Block": -34,
+      "On Hit": "+32",
+      "Notes": "KND",
+      "Damage": "50,30,50,30,30",
+      "Stun": 0,
+      "Guard": "60,30,60,30,30"
+    }
+  },
+  {
+    "uid": 3120,
+    "name": "214236K",
+    "attributes": {
+      "Startup": 8,
+      "On Block": -17,
+      "On Hit": "+70",
+      "Notes": "KND",
+      "Damage": 195,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3121,
+    "name": "214236BD",
+    "attributes": {
+      "Startup": 8,
+      "On Block": -14,
+      "On Hit": "+83",
+      "Notes": "KND",
+      "Damage": 340,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3122,
+    "name": "236214P",
+    "attributes": {
+      "Startup": 13,
+      "On Block": -32,
+      "On Hit": "+57",
+      "Notes": "KND",
+      "Damage": 192,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3123,
+    "name": "236214AC",
+    "attributes": {
+      "Startup": 11,
+      "On Block": -38,
+      "On Hit": "+53",
+      "Notes": "KND",
+      "Damage": 344,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3124,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": 3,
+      "On Block": -12,
+      "On Hit": "+24",
+      "Notes": "KND",
+      "Damage": 450,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3125,
+    "name": "air 214236CD",
+    "attributes": {
+      "Startup": 2,
+      "On Block": "-12~0",
+      "On Hit": "+24",
+      "Notes": "KND",
+      "Damage": 450,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3120,
+    "name": "214236K",
+    "attributes": {
+      "Startup": 8,
+      "On Block": -17,
+      "On Hit": "+70",
+      "Notes": "KND",
+      "Damage": 195,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3121,
+    "name": "214236BD",
+    "attributes": {
+      "Startup": 8,
+      "On Block": -14,
+      "On Hit": "+83",
+      "Notes": "KND",
+      "Damage": 340,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3122,
+    "name": "236214P",
+    "attributes": {
+      "Startup": 13,
+      "On Block": -32,
+      "On Hit": "+57",
+      "Notes": "KND",
+      "Damage": 192,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3123,
+    "name": "236214AC",
+    "attributes": {
+      "Startup": 11,
+      "On Block": -38,
+      "On Hit": "+53",
+      "Notes": "KND",
+      "Damage": 344,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3124,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": 3,
+      "On Block": -12,
+      "On Hit": "+24",
+      "Notes": "KND",
+      "Damage": 450,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3125,
+    "name": "air 214236CD",
+    "attributes": {
+      "Startup": 2,
+      "On Block": "-12~0",
+      "On Hit": "+24",
+      "Notes": "KND",
+      "Damage": 450,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+
+  {
+    "uid": 3127,
+    "name": "close A",
+    "attributes": {
+      "Startup": 4,
+      "On Block": -1,
+      "On Hit": "+1",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3128,
+    "name": "close AA",
+    "attributes": {
+      "Startup": "4,6",
+      "On Block": -6,
+      "On Hit": -4,
+      "Notes": "",
+      "Damage": "25,23",
+      "Stun": "30,0",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3129,
+    "name": "close AAA",
+    "attributes": {
+      "Startup": "4,6,12",
+      "On Block": -11,
+      "On Hit": -9,
+      "Notes": "",
+      "Damage": "25,23,22",
+      "Stun": "30,0,0",
+      "Guard": "60,60,60"
+    }
+  },
+  {
+    "uid": 3130,
+    "name": "close B",
+    "attributes": {
+      "Startup": 5,
+      "On Block": "+2",
+      "On Hit": "+6",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3131,
+    "name": "close C",
+    "attributes": {
+      "Startup": 7,
+      "On Block": -5,
+      "On Hit": -3,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3132,
+    "name": "close D",
+    "attributes": {
+      "Startup": 6,
+      "On Block": -7,
+      "On Hit": -5,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3133,
+    "name": "far A",
+    "attributes": {
+      "Startup": 5,
+      "On Block": "+2",
+      "On Hit": "+4",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3134,
+    "name": "far B",
+    "attributes": {
+      "Startup": 6,
+      "On Block": -4,
+      "On Hit": "+0",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3135,
+    "name": "far C",
+    "attributes": {
+      "Startup": 7,
+      "On Block": -4,
+      "On Hit": -2,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3136,
+    "name": "far D",
+    "attributes": {
+      "Startup": 8,
+      "On Block": -4,
+      "On Hit": -2,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3137,
+    "name": "2A",
+    "attributes": {
+      "Startup": 5,
+      "On Block": "+2",
+      "On Hit": "+4",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3138,
+    "name": "2B",
+    "attributes": {
+      "Startup": 4,
+      "On Block": -1,
+      "On Hit": "+1",
+      "Notes": "",
+      "Damage": 15,
+      "Stun": 15,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3139,
+    "name": "2C",
+    "attributes": {
+      "Startup": 11,
+      "On Block": -15,
+      "On Hit": "+33",
+      "Notes": "Juggle",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3140,
+    "name": "2D",
+    "attributes": {
+      "Startup": 10,
+      "On Block": -2,
+      "On Hit": "+28",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3141,
+    "name": "CD",
+    "attributes": {
+      "Startup": 15,
+      "On Block": -5,
+      "On Hit": "+72~+88",
+      "Notes": "Splat",
+      "Damage": 75,
+      "Stun": 100,
+      "Guard": 160
+    }
+  },
+  {
+    "uid": 3142,
+    "name": "236CD",
+    "attributes": {
+      "Startup": 15,
+      "On Block": -10,
+      "On Hit": "+93",
+      "Notes": "Crumple",
+      "Damage": 75,
+      "Stun": 0,
+      "Guard": 200
+    }
+  },
+  {
+    "uid": 3143,
+    "name": "jump A",
+    "attributes": {
+      "Startup": 6,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3144,
+    "name": "jump B",
+    "attributes": {
+      "Startup": 6,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3145,
+    "name": "jump C",
+    "attributes": {
+      "Startup": 12,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3146,
+    "name": "jump D",
+    "attributes": {
+      "Startup": 10,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3147,
+    "name": "jump CD",
+    "attributes": {
+      "Startup": 15,
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "80/90",
+      "Stun": 80,
+      "Guard": "120/140"
+    }
+  },
+  {
+    "uid": 3148,
+    "name": "C THROW",
+    "attributes": {
+      "Startup": 1,
+      "On Block": "-",
+      "On Hit": "+50",
+      "Notes": "Forward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3149,
+    "name": "D THROW",
+    "attributes": {
+      "Startup": 1,
+      "On Block": "-",
+      "On Hit": "+53",
+      "Notes": "Backward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3150,
+    "name": "6B",
+    "attributes": {
+      "Startup": 17,
+      "On Block": "+0",
+      "On Hit": "+2",
+      "Notes": "",
+      "Damage": "30,30",
+      "Stun": "30,30",
+      "Guard": "30,30"
+    }
+  },
+  {
+    "uid": 3151,
+    "name": "air 2D",
+    "attributes": {
+      "Startup": 4,
+      "On Block": "+8~+14",
+      "On Hit": "+5~+11",
+      "Notes": "",
+      "Damage": 55,
+      "Stun": 40,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3152,
+    "name": "624B",
+    "attributes": {
+      "Startup": 15,
+      "On Block": -2,
+      "On Hit": "+25",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 0,
+      "Guard": 0
+    }
+  },
+  {
+    "uid": 3153,
+    "name": "624D",
+    "attributes": {
+      "Startup": 25,
+      "On Block": "+2",
+      "On Hit": "+25",
+      "Notes": "KND",
+      "Damage": 100,
+      "Stun": 0,
+      "Guard": 0
+    }
+  },
+  {
+    "uid": 3154,
+    "name": "624BD",
+    "attributes": {
+      "Startup": 11,
+      "On Block": -2,
+      "On Hit": "+30",
+      "Notes": "KND",
+      "Damage": 120,
+      "Stun": 0,
+      "Guard": 0
+    }
+  },
+  {
+    "uid": 3155,
+    "name": "426A",
+    "attributes": {
+      "Startup": 14,
+      "On Block": "-",
+      "On Hit": "+87",
+      "Notes": "",
+      "Damage": 60,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3156,
+    "name": "426C",
+    "attributes": {
+      "Startup": 14,
+      "On Block": "-",
+      "On Hit": "+87",
+      "Notes": "",
+      "Damage": 60,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3157,
+    "name": "426AC",
+    "attributes": {
+      "Startup": 10,
+      "On Block": "-",
+      "On Hit": "+94",
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3158,
+    "name": "Unchain Start 3B",
+    "attributes": {
+      "Startup": 18,
+      "On Block": -8,
+      "On Hit": -6,
+      "Notes": "",
+      "Damage": 50,
+      "Stun": 20,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3159,
+    "name": "Unchain Start 3D",
+    "attributes": {
+      "Startup": 20,
+      "On Block": -8,
+      "On Hit": -6,
+      "Notes": "",
+      "Damage": 50,
+      "Stun": 20,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3160,
+    "name": "Unchain Start 46B",
+    "attributes": {
+      "Startup": 13,
+      "On Block": -5,
+      "On Hit": -3,
+      "Notes": "",
+      "Damage": "25,25",
+      "Stun": "20,20",
+      "Guard": "30,30"
+    }
+  },
+  {
+    "uid": 3161,
+    "name": "Unchain Start 46D",
+    "attributes": {
+      "Startup": 15,
+      "On Block": -5,
+      "On Hit": -3,
+      "Notes": "",
+      "Damage": "25,25",
+      "Stun": "20,20",
+      "Guard": "30,30"
+    }
+  },
+  {
+    "uid": 3162,
+    "name": "Unchain Start 46BD",
+    "attributes": {
+      "Startup": 11,
+      "On Block": -5,
+      "On Hit": -3,
+      "Notes": "",
+      "Damage": "25,25",
+      "Stun": 0,
+      "Guard": "30,30"
+    }
+  },
+  {
+    "uid": 3163,
+    "name": "Unchain Start 214A",
+    "attributes": {
+      "Startup": 15,
+      "On Block": "+2",
+      "On Hit": "+37",
+      "Notes": "KND",
+      "Damage": 50,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3164,
+    "name": "Unchain Start 214C",
+    "attributes": {
+      "Startup": 18,
+      "On Block": -2,
+      "On Hit": "+33",
+      "Notes": "KND",
+      "Damage": 50,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3165,
+    "name": "Unchain Start 214AC",
+    "attributes": {
+      "Startup": 27,
+      "On Block": "*+13",
+      "On Hit": "**+90",
+      "Notes": "*Guard Crush || **Crumple",
+      "Damage": 70,
+      "Stun": 0,
+      "Guard": 1000
+    }
+  },
+  {
+    "uid": 3166,
+    "name": "Unchain Start 426K",
+    "attributes": {
+      "Startup": "",
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3167,
+    "name": "Unchain Start \u003e AB",
+    "attributes": {
+      "Startup": "",
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "Stop",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3168,
+    "name": "426BD",
+    "attributes": {
+      "Startup": 6,
+      "On Block": -28,
+      "On Hit": -11,
+      "Notes": "",
+      "Damage": 40,
+      "Stun": 0,
+      "Guard": 70
+    }
+  },
+  {
+    "uid": 3169,
+    "name": "Unchain Circle 8P",
+    "attributes": {
+      "Startup": 11,
+      "On Block": -3,
+      "On Hit": -1,
+      "Notes": "",
+      "Damage": 35,
+      "Stun": 30,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3170,
+    "name": "Unchain Circle 6K",
+    "attributes": {
+      "Startup": 10,
+      "On Block": -16,
+      "On Hit": -14,
+      "Notes": "",
+      "Damage": 35,
+      "Stun": 30,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3171,
+    "name": "Unchain Circle 2P",
+    "attributes": {
+      "Startup": 10,
+      "On Block": -7,
+      "On Hit": -5,
+      "Notes": "",
+      "Damage": 40,
+      "Stun": 30,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3172,
+    "name": "Unchain Circle 8K",
+    "attributes": {
+      "Startup": 8,
+      "On Block": -4,
+      "On Hit": -4,
+      "Notes": "",
+      "Damage": 40,
+      "Stun": 30,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3173,
+    "name": "Unchain Circle 6P",
+    "attributes": {
+      "Startup": 20,
+      "On Block": -10,
+      "On Hit": -8,
+      "Notes": "",
+      "Damage": "20,20",
+      "Stun": "20,20",
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3174,
+    "name": "Unchain Circle 2K",
+    "attributes": {
+      "Startup": 24,
+      "On Block": -7,
+      "On Hit": -5,
+      "Notes": "",
+      "Damage": 40,
+      "Stun": 30,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3175,
+    "name": "Special Unchain Circle AB",
+    "attributes": {
+      "Startup": "",
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3176,
+    "name": "Special Unchain Circle 6AB",
+    "attributes": {
+      "Startup": "",
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3177,
+    "name": "Special Unchain Circle 4AB",
+    "attributes": {
+      "Startup": "",
+      "On Block": "",
+      "On Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3178,
+    "name": "Unchain Finish 66A",
+    "attributes": {
+      "Startup": 9,
+      "On Block": -12,
+      "On Hit": "+70",
+      "Notes": "",
+      "Damage": 50,
+      "Stun": 40,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3179,
+    "name": "Unchain Finish 66C",
+    "attributes": {
+      "Startup": 27,
+      "On Block": "-",
+      "On Hit": "+73~+87",
+      "Notes": "Unblockable",
+      "Damage": 65,
+      "Stun": 40,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3180,
+    "name": "Unchain Finish 66K",
+    "attributes": {
+      "Startup": 21,
+      "On Block": -2,
+      "On Hit": "+44",
+      "Notes": "",
+      "Damage": "40,40,20",
+      "Stun": "20,20,20",
+      "Guard": "20,20,20"
+    }
+  },
+  {
+    "uid": 3181,
+    "name": "Unchain Finish 236A",
+    "attributes": {
+      "Startup": 29,
+      "On Block": "-",
+      "On Hit": "+39",
+      "Notes": "",
+      "Damage": 100,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3182,
+    "name": "Unchain Finish 236C",
+    "attributes": {
+      "Startup": 1,
+      "On Block": "-",
+      "On Hit": "+16",
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3183,
+    "name": "4623P",
+    "attributes": {
+      "Startup": 7,
+      "On Block": -21,
+      "On Hit": "+75",
+      "Notes": "KND",
+      "Damage": 160,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3184,
+    "name": "4623AC",
+    "attributes": {
+      "Startup": 6,
+      "On Block": -24,
+      "On Hit": "+24",
+      "Notes": "KND",
+      "Damage": 310,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3185,
+    "name": "4623K",
+    "attributes": {
+      "Startup": "1-23",
+      "On Block": "",
+      "On Hit": "+13",
+      "Notes": "KND",
+      "Damage": 200,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3186,
+    "name": "4623BD",
+    "attributes": {
+      "Startup": "1-20",
+      "On Block": "",
+      "On Hit": "+29",
+      "Notes": "KND",
+      "Damage": 350,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3187,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": 10,
+      "On Block": -20,
+      "On Hit": "+11",
+      "Notes": "KND",
+      "Damage": 430,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+
+  {
+    "uid": 3189,
+    "name": "close A",
+    "attributes": {
+      "Startup": 5,
+      "Block": "+3",
+      "Hit": "+5",
+      "": "",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3190,
+    "name": "close AA",
+    "attributes": {
+      "Startup": "5,9",
+      "Block": -11,
+      "Hit": -9,
+      "": "",
+      "Notes": "",
+      "Damage": "25,23",
+      "Stun": "30,0",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3191,
+    "name": "close AAA",
+    "attributes": {
+      "Startup": "5,9,11",
+      "Block": -6,
+      "Hit": -4,
+      "": "",
+      "Notes": "",
+      "Damage": "25,23,22",
+      "Stun": "30,0,0",
+      "Guard": "60,60,60"
+    }
+  },
+  {
+    "uid": 3192,
+    "name": "close B",
+    "attributes": {
+      "Startup": 6,
+      "Block": 0,
+      "Hit": "+2",
+      "": "",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3193,
+    "name": "close C",
+    "attributes": {
+      "Startup": 5,
+      "Block": -5,
+      "Hit": -3,
+      "": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3194,
+    "name": "close D",
+    "attributes": {
+      "Startup": 10,
+      "Block": -5,
+      "Hit": -3,
+      "": "",
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3195,
+    "name": "far A",
+    "attributes": {
+      "Startup": 6,
+      "Block": -1,
+      "Hit": "+1",
+      "": "",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3196,
+    "name": "far B",
+    "attributes": {
+      "Startup": 7,
+      "Block": -2,
+      "Hit": 0,
+      "": "",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3197,
+    "name": "far C",
+    "attributes": {
+      "Startup": 15,
+      "Block": -4,
+      "Hit": "+31",
+      "": "",
+      "Notes": "KND",
+      "Damage": 100,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3198,
+    "name": "far D",
+    "attributes": {
+      "Startup": 17,
+      "Block": -6,
+      "Hit": "+38",
+      "": "",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3199,
+    "name": "2A",
+    "attributes": {
+      "Startup": 4,
+      "Block": -1,
+      "Hit": "+1",
+      "": "",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3200,
+    "name": "2B",
+    "attributes": {
+      "Startup": 5,
+      "Block": 0,
+      "Hit": "+2",
+      "": "",
+      "Notes": "",
+      "Damage": 15,
+      "Stun": 15,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3201,
+    "name": "2C",
+    "attributes": {
+      "Startup": 9,
+      "Block": -2,
+      "Hit": "+0",
+      "": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3202,
+    "name": "2D",
+    "attributes": {
+      "Startup": 24,
+      "Block": -10,
+      "Hit": "+33",
+      "": "",
+      "Notes": "KND",
+      "Damage": "40,28",
+      "Stun": "40,40",
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3203,
+    "name": "CD",
+    "attributes": {
+      "Startup": 19,
+      "Block": -5,
+      "Hit": "+72~+88",
+      "": "",
+      "Notes": "Splat",
+      "Damage": 75,
+      "Stun": 100,
+      "Guard": 160
+    }
+  },
+  {
+    "uid": 3204,
+    "name": "236CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": -10,
+      "Hit": "+93",
+      "": "",
+      "Notes": "Crumple",
+      "Damage": 75,
+      "Stun": 0,
+      "Guard": 200
+    }
+  },
+  {
+    "uid": 3205,
+    "name": "jump A",
+    "attributes": {
+      "Startup": 5,
+      "Block": "",
+      "Hit": "",
+      "": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3206,
+    "name": "jump B",
+    "attributes": {
+      "Startup": 6,
+      "Block": "",
+      "Hit": "",
+      "": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3207,
+    "name": "jump C",
+    "attributes": {
+      "Startup": 9,
+      "Block": "",
+      "Hit": "",
+      "": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3208,
+    "name": "jump D",
+    "attributes": {
+      "Startup": 8,
+      "Block": "",
+      "Hit": "",
+      "": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3209,
+    "name": "jump CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": "",
+      "Hit": "",
+      "": "",
+      "Notes": "",
+      "Damage": "80/90",
+      "Stun": 80,
+      "Guard": "120/140"
+    }
+  },
+  {
+    "uid": 3210,
+    "name": "C THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+31",
+      "": "",
+      "Notes": "Forward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3211,
+    "name": "D THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+47",
+      "": "",
+      "Notes": "Backward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3212,
+    "name": "6A",
+    "attributes": {
+      "Startup": 15,
+      "Block": -8,
+      "Hit": -6,
+      "": "",
+      "Notes": "",
+      "Damage": 60,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3213,
+    "name": "6A cancel",
+    "attributes": {
+      "Startup": 15,
+      "Block": -8,
+      "Hit": -6,
+      "": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3214,
+    "name": "D\u003eC",
+    "attributes": {
+      "Startup": 10,
+      "Block": -4,
+      "Hit": "+31",
+      "": "",
+      "Notes": "KND",
+      "Damage": "80,76",
+      "Stun": "70,70",
+      "Guard": 240
+    }
+  },
+  {
+    "uid": 3215,
+    "name": "D\u003eD",
+    "attributes": {
+      "Startup": 10,
+      "Block": -10,
+      "Hit": "+34",
+      "": "",
+      "Notes": "KND",
+      "Damage": "80,95",
+      "Stun": "70,70",
+      "Guard": 240
+    }
+  },
+  {
+    "uid": 3216,
+    "name": "214A",
+    "attributes": {
+      "Startup": 19,
+      "Block": "-5~-2",
+      "Hit": "+32~+35",
+      "": "",
+      "Notes": "KND",
+      "Damage": 90,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3217,
+    "name": "214C",
+    "attributes": {
+      "Startup": 28,
+      "Block": "-3~+0",
+      "Hit": "+64~+67",
+      "": "",
+      "Notes": "KND",
+      "Damage": 120,
+      "Stun": 80,
+      "Guard": 100
+    }
+  },
+  {
+    "uid": 3218,
+    "name": "214AC",
+    "attributes": {
+      "Startup": 14,
+      "Block": "-8~-7",
+      "Hit": "+69~+71",
+      "": "",
+      "Notes": "KND",
+      "Damage": 151,
+      "Stun": 0,
+      "Guard": 130
+    }
+  },
+  {
+    "uid": 3219,
+    "name": "623A",
+    "attributes": {
+      "Startup": 6,
+      "Block": -31,
+      "Hit": "+69",
+      "": "",
+      "Notes": "KND",
+      "Damage": 97,
+      "Stun": 80,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3220,
+    "name": "623C",
+    "attributes": {
+      "Startup": 8,
+      "Block": -36,
+      "Hit": "+61",
+      "": "",
+      "Notes": "KND",
+      "Damage": 145,
+      "Stun": 120,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3221,
+    "name": "623AC",
+    "attributes": {
+      "Startup": 9,
+      "Block": -40,
+      "Hit": "+36",
+      "": "",
+      "Notes": "Juggle",
+      "Damage": 145,
+      "Stun": 0,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3222,
+    "name": "624B",
+    "attributes": {
+      "Startup": 19,
+      "Block": -8,
+      "Hit": "+34~+42",
+      "": "",
+      "Notes": "KND",
+      "Damage": 90,
+      "Stun": 80,
+      "Guard": 100
+    }
+  },
+  {
+    "uid": 3223,
+    "name": "624D",
+    "attributes": {
+      "Startup": 19,
+      "Block": "-",
+      "Hit": "+20",
+      "": "",
+      "Notes": "",
+      "Damage": 140,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3224,
+    "name": "624BD",
+    "attributes": {
+      "Startup": 19,
+      "Block": "-14~-6",
+      "Hit": "+85~+93",
+      "": "",
+      "Notes": "Crumple",
+      "Damage": 110,
+      "Stun": 0,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3225,
+    "name": "air 236A",
+    "attributes": {
+      "Startup": "21~27",
+      "Block": "-9~+11",
+      "Hit": "+19~+39",
+      "": "",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3226,
+    "name": "air 236C",
+    "attributes": {
+      "Startup": "",
+      "Block": "",
+      "Hit": "",
+      "": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3227,
+    "name": "air 236AC",
+    "attributes": {
+      "Startup": "16~21",
+      "Block": "-6~+14",
+      "Hit": "+30~+50",
+      "": "",
+      "Notes": "KND",
+      "Damage": 110,
+      "Stun": 0,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3228,
+    "name": "236236P",
+    "attributes": {
+      "Startup": "(11,)15",
+      "Block": -25,
+      "Hit": "+31",
+      "": "",
+      "Notes": "KND",
+      "Damage": 200,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3229,
+    "name": "236236AC",
+    "attributes": {
+      "Startup": 8,
+      "Block": -26,
+      "Hit": "+36",
+      "": "",
+      "Notes": "KND",
+      "Damage": 350,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3230,
+    "name": "236236K",
+    "attributes": {
+      "Startup": 11,
+      "Block": -22,
+      "Hit": "+79",
+      "": "",
+      "Notes": "Juggle",
+      "Damage": 120,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3231,
+    "name": "236236BD",
+    "attributes": {
+      "Startup": 9,
+      "Block": -19,
+      "Hit": "+82",
+      "": "",
+      "Notes": "Juggle",
+      "Damage": 300,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3232,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": 10,
+      "Block": -43,
+      "Hit": "+29",
+      "": "",
+      "Notes": "KND",
+      "Damage": 460,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3234,
+    "name": "close A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+3",
+      "Hit": "+5",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3235,
+    "name": "close AA",
+    "attributes": {
+      "Startup": "4,6",
+      "Block": -7,
+      "Hit": -5,
+      "Notes": "",
+      "Damage": "25,23",
+      "Stun": "30,0",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3236,
+    "name": "close AAA",
+    "attributes": {
+      "Startup": "4,6,6",
+      "Block": -10,
+      "Hit": -8,
+      "Notes": "",
+      "Damage": "25,23,22",
+      "Stun": "30,0,0",
+      "Guard": "60,60,60"
+    }
+  },
+  {
+    "uid": 3237,
+    "name": "close B",
+    "attributes": {
+      "Startup": 5,
+      "Block": "+1",
+      "Hit": "+3",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3238,
+    "name": "close C",
+    "attributes": {
+      "Startup": 5,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3239,
+    "name": "close D",
+    "attributes": {
+      "Startup": 4,
+      "Block": -5,
+      "Hit": -3,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3240,
+    "name": "far A",
+    "attributes": {
+      "Startup": 6,
+      "Block": "+1",
+      "Hit": "+3",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3241,
+    "name": "far B",
+    "attributes": {
+      "Startup": 6,
+      "Block": -3,
+      "Hit": -1,
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3242,
+    "name": "far C",
+    "attributes": {
+      "Startup": 11,
+      "Block": -2,
+      "Hit": -2,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3243,
+    "name": "far D",
+    "attributes": {
+      "Startup": 8,
+      "Block": -6,
+      "Hit": -4,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3244,
+    "name": "2A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+2",
+      "Hit": "+4",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3245,
+    "name": "2B",
+    "attributes": {
+      "Startup": 5,
+      "Block": 0,
+      "Hit": "+2",
+      "Notes": "",
+      "Damage": 15,
+      "Stun": 15,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3246,
+    "name": "2C",
+    "attributes": {
+      "Startup": 7,
+      "Block": -12,
+      "Hit": -10,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3247,
+    "name": "2D",
+    "attributes": {
+      "Startup": 9,
+      "Block": -4,
+      "Hit": "+26",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3248,
+    "name": "CD",
+    "attributes": {
+      "Startup": 14,
+      "Block": -8,
+      "Hit": "+69~+85",
+      "Notes": "Splat",
+      "Damage": 75,
+      "Stun": 100,
+      "Guard": 160
+    }
+  },
+  {
+    "uid": 3249,
+    "name": "236CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": -10,
+      "Hit": "+93",
+      "Notes": "Crumple",
+      "Damage": 75,
+      "Stun": 0,
+      "Guard": 200
+    }
+  },
+  {
+    "uid": 3250,
+    "name": "jump A",
+    "attributes": {
+      "Startup": 5,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3251,
+    "name": "jump B",
+    "attributes": {
+      "Startup": 6,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3252,
+    "name": "jump C",
+    "attributes": {
+      "Startup": 6,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3253,
+    "name": "jump D",
+    "attributes": {
+      "Startup": 9,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3254,
+    "name": "jump CD",
+    "attributes": {
+      "Startup": 13,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "80/90",
+      "Stun": 80,
+      "Guard": "120/140"
+    }
+  },
+  {
+    "uid": 3255,
+    "name": "C THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+73",
+      "Notes": "Forward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3256,
+    "name": "D THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+42",
+      "Notes": "Backward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3257,
+    "name": "4B",
+    "attributes": {
+      "Startup": 10,
+      "Block": -2,
+      "Hit": "+4",
+      "Notes": "",
+      "Damage": 50,
+      "Stun": 40,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3258,
+    "name": "4D",
+    "attributes": {
+      "Startup": 7,
+      "Block": "+1",
+      "Hit": "+3",
+      "Notes": "",
+      "Damage": 50,
+      "Stun": 30,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3259,
+    "name": "6D",
+    "attributes": {
+      "Startup": 7,
+      "Block": "+1",
+      "Hit": "+3",
+      "Notes": "",
+      "Damage": 50,
+      "Stun": 30,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3260,
+    "name": "[4]6A",
+    "attributes": {
+      "Startup": 17,
+      "Block": "-1~+26",
+      "Hit": "+1~+28",
+      "Notes": "",
+      "Damage": 65,
+      "Stun": 20,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3261,
+    "name": "[4]6C",
+    "attributes": {
+      "Startup": 15,
+      "Block": "+0~+26",
+      "Hit": "+2~+28",
+      "Notes": "",
+      "Damage": "20,20,80",
+      "Stun": "10,10,40",
+      "Guard": "20,20,80"
+    }
+  },
+  {
+    "uid": 3262,
+    "name": "[4]6AC",
+    "attributes": {
+      "Startup": 15,
+      "Block": "+2~23",
+      "Hit": "+26~+37",
+      "Notes": "KND",
+      "Damage": "20,60,20,60",
+      "Stun": 0,
+      "Guard": "20,60,20,60"
+    }
+  },
+  {
+    "uid": 3263,
+    "name": "[2]8B",
+    "attributes": {
+      "Startup": 4,
+      "Block": -16,
+      "Hit": "+37",
+      "Notes": "KND",
+      "Damage": "30,50",
+      "Stun": "30,50",
+      "Guard": "30,50"
+    }
+  },
+  {
+    "uid": 3264,
+    "name": "[2]8D",
+    "attributes": {
+      "Startup": 7,
+      "Block": -47,
+      "Hit": "+33",
+      "Notes": "KND",
+      "Damage": "50,20,50",
+      "Stun": "50,20,50",
+      "Guard": "50,20"
+    }
+  },
+  {
+    "uid": 3265,
+    "name": "[2]8BD",
+    "attributes": {
+      "Startup": 4,
+      "Block": -44,
+      "Hit": "+32",
+      "Notes": "KND",
+      "Damage": "70,20,20,70",
+      "Stun": 0,
+      "Guard": "50,40,20"
+    }
+  },
+  {
+    "uid": 3266,
+    "name": "214A",
+    "attributes": {
+      "Startup": 41,
+      "Block": "+12",
+      "Hit": "+9",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 40,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3267,
+    "name": "214B",
+    "attributes": {
+      "Startup": 41,
+      "Block": "+12",
+      "Hit": "+9",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 40,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3268,
+    "name": "214C",
+    "attributes": {
+      "Startup": 41,
+      "Block": "+12",
+      "Hit": "+9",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 40,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3269,
+    "name": "214D",
+    "attributes": {
+      "Startup": 41,
+      "Block": "+12",
+      "Hit": "+9",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 40,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3270,
+    "name": "214AC",
+    "attributes": {
+      "Startup": 20,
+      "Block": "+17",
+      "Hit": "+61",
+      "Notes": "Juggle",
+      "Damage": 90,
+      "Stun": 0,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3271,
+    "name": "214BD",
+    "attributes": {
+      "Startup": 30,
+      "Block": "+18",
+      "Hit": "+62",
+      "Notes": "Juggle",
+      "Damage": 90,
+      "Stun": 0,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3272,
+    "name": "[4]6B",
+    "attributes": {
+      "Startup": 13,
+      "Block": -13,
+      "Hit": "+22",
+      "Notes": "KND",
+      "Damage": 60,
+      "Stun": 80,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3273,
+    "name": "[4]6D",
+    "attributes": {
+      "Startup": 19,
+      "Block": -14,
+      "Hit": "+35",
+      "Notes": "Juggle",
+      "Damage": 80,
+      "Stun": 80,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3274,
+    "name": "[4]6BD",
+    "attributes": {
+      "Startup": 8,
+      "Block": -9,
+      "Hit": "+40",
+      "Notes": "Juggle",
+      "Damage": "40,80",
+      "Stun": 0,
+      "Guard": "40,80"
+    }
+  },
+  {
+    "uid": 3275,
+    "name": "sans 46A",
+    "attributes": {
+      "Startup": 17,
+      "Block": "-1~+26",
+      "Hit": "+1~+28",
+      "Notes": "",
+      "Damage": 32,
+      "Stun": 0,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3276,
+    "name": "sans 46C",
+    "attributes": {
+      "Startup": 15,
+      "Block": "+0~+26",
+      "Hit": "+2~+28",
+      "Notes": "",
+      "Damage": "10,10,40",
+      "Stun": 0,
+      "Guard": "20,20,40"
+    }
+  },
+  {
+    "uid": 3277,
+    "name": "sans 46AC",
+    "attributes": {
+      "Startup": 15,
+      "Block": "+2~23",
+      "Hit": "+26~+37",
+      "Notes": "",
+      "Damage": "10,30,10,30",
+      "Stun": 0,
+      "Guard": "20,40,20,40"
+    }
+  },
+  {
+    "uid": 3278,
+    "name": "sans 28B",
+    "attributes": {
+      "Startup": 4,
+      "Block": -16,
+      "Hit": "+37",
+      "Notes": "",
+      "Damage": "15,25",
+      "Stun": 0,
+      "Guard": "30,50"
+    }
+  },
+  {
+    "uid": 3279,
+    "name": "sans 28D",
+    "attributes": {
+      "Startup": 7,
+      "Block": -29,
+      "Hit": "+33",
+      "Notes": "",
+      "Damage": "25,10,25",
+      "Stun": 0,
+      "Guard": "50,20"
+    }
+  },
+  {
+    "uid": 3280,
+    "name": "sans 28BD",
+    "attributes": {
+      "Startup": 4,
+      "Block": -26,
+      "Hit": "+32",
+      "Notes": "",
+      "Damage": "25,20,10,30",
+      "Stun": 0,
+      "Guard": "50,40,20"
+    }
+  },
+  {
+    "uid": 3281,
+    "name": "sans 46B",
+    "attributes": {
+      "Startup": 13,
+      "Block": -13,
+      "Hit": "+22",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 0,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3282,
+    "name": "sans 46D",
+    "attributes": {
+      "Startup": 19,
+      "Block": -14,
+      "Hit": "+35",
+      "Notes": "",
+      "Damage": 40,
+      "Stun": 0,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3283,
+    "name": "sans 46BD",
+    "attributes": {
+      "Startup": 8,
+      "Block": -9,
+      "Hit": "+40",
+      "Notes": "",
+      "Damage": "20,40",
+      "Stun": 0,
+      "Guard": "40,80"
+    }
+  },
+  {
+    "uid": 3284,
+    "name": "236236P",
+    "attributes": {
+      "Startup": 17,
+      "Block": "-3~+22",
+      "Hit": "+63~+88",
+      "Notes": "Juggle",
+      "Damage": 146,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3285,
+    "name": "236236AC",
+    "attributes": {
+      "Startup": 18,
+      "Block": "+22",
+      "Hit": "+88",
+      "Notes": "Juggle",
+      "Damage": 235,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3286,
+    "name": "236236K",
+    "attributes": {
+      "Startup": 7,
+      "Block": -37,
+      "Hit": "+49",
+      "Notes": "KND",
+      "Damage": 200,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3287,
+    "name": "236236BD",
+    "attributes": {
+      "Startup": 7,
+      "Block": -60,
+      "Hit": "+48",
+      "Notes": "KND",
+      "Damage": 350,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3288,
+    "name": "A\u003eB\u003eC\u003eD",
+    "attributes": {
+      "Startup": 8,
+      "Block": -22,
+      "Hit": "+63",
+      "Notes": "Juggle",
+      "Damage": 150,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3289,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": 13,
+      "Block": "-30~-1",
+      "Hit": "+19",
+      "Notes": "KND",
+      "Damage": 453,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+
+  {
+    "uid": 3291,
+    "name": "close A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+3",
+      "Hit": "+5",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3292,
+    "name": "close AA",
+    "attributes": {
+      "Startup": "4,5",
+      "Block": -7,
+      "Hit": -5,
+      "Notes": "",
+      "Damage": "25,23",
+      "Stun": "30,0",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3293,
+    "name": "close AAA",
+    "attributes": {
+      "Startup": "4,5,6",
+      "Block": -7,
+      "Hit": -5,
+      "Notes": "",
+      "Damage": "25,23,22",
+      "Stun": "30,0,0",
+      "Guard": "60,60,60"
+    }
+  },
+  {
+    "uid": 3294,
+    "name": "close B",
+    "attributes": {
+      "Startup": 5,
+      "Block": "+1",
+      "Hit": "+3",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3295,
+    "name": "close C",
+    "attributes": {
+      "Startup": 4,
+      "Block": -1,
+      "Hit": 1,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3296,
+    "name": "close D",
+    "attributes": {
+      "Startup": 5,
+      "Block": -5,
+      "Hit": -3,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3297,
+    "name": "far A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+1",
+      "Hit": "+3",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3298,
+    "name": "far B",
+    "attributes": {
+      "Startup": 5,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3299,
+    "name": "far C",
+    "attributes": {
+      "Startup": 5,
+      "Block": -6,
+      "Hit": -4,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3300,
+    "name": "far D",
+    "attributes": {
+      "Startup": 10,
+      "Block": -5,
+      "Hit": -3,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3301,
+    "name": "2A",
+    "attributes": {
+      "Startup": 5,
+      "Block": "+3",
+      "Hit": "+5",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3302,
+    "name": "2B",
+    "attributes": {
+      "Startup": 4,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 15,
+      "Stun": 15,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3303,
+    "name": "2C",
+    "attributes": {
+      "Startup": 6,
+      "Block": -4,
+      "Hit": -2,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3304,
+    "name": "2D",
+    "attributes": {
+      "Startup": 8,
+      "Block": -3,
+      "Hit": "+27",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3305,
+    "name": "CD",
+    "attributes": {
+      "Startup": 12,
+      "Block": "-1~+2",
+      "Hit": "+76~+92",
+      "Notes": "Splat",
+      "Damage": 75,
+      "Stun": 100,
+      "Guard": 160
+    }
+  },
+  {
+    "uid": 3306,
+    "name": "236CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": -10,
+      "Hit": "+93",
+      "Notes": "Crumple",
+      "Damage": 75,
+      "Stun": 0,
+      "Guard": 200
+    }
+  },
+  {
+    "uid": 3307,
+    "name": "jump A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3308,
+    "name": "jump B",
+    "attributes": {
+      "Startup": 6,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3309,
+    "name": "jump C",
+    "attributes": {
+      "Startup": 8,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3310,
+    "name": "jump D",
+    "attributes": {
+      "Startup": 6,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3311,
+    "name": "jump CD",
+    "attributes": {
+      "Startup": 10,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "80/90",
+      "Stun": 80,
+      "Guard": "120/140"
+    }
+  },
+  {
+    "uid": 3312,
+    "name": "C THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+27",
+      "Notes": "Forward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3313,
+    "name": "D THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+49",
+      "Notes": "Backward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3314,
+    "name": "air THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+16",
+      "Notes": "Air Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3315,
+    "name": "6B",
+    "attributes": {
+      "Startup": 22,
+      "Block": -29,
+      "Hit": -27,
+      "Notes": "",
+      "Damage": 60,
+      "Stun": 40,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3316,
+    "name": "6B cancel",
+    "attributes": {
+      "Startup": 18,
+      "Block": -29,
+      "Hit": -27,
+      "Notes": "",
+      "Damage": 60,
+      "Stun": 40,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3317,
+    "name": "air 6B",
+    "attributes": {
+      "Startup": 10,
+      "Block": "-32~-24",
+      "Hit": "-30~-22",
+      "Notes": "",
+      "Damage": 60,
+      "Stun": 40,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3318,
+    "name": "44 4B/6B",
+    "attributes": {
+      "Startup": 10,
+      "Block": -25,
+      "Hit": -23,
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 40,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3319,
+    "name": "214A",
+    "attributes": {
+      "Startup": 16,
+      "Block": "-3~+24",
+      "Hit": "-1~+26",
+      "Notes": "",
+      "Damage": 65,
+      "Stun": 40,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3320,
+    "name": "214C",
+    "attributes": {
+      "Startup": 13,
+      "Block": "-8~+26",
+      "Hit": "-8~+26",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 40,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3321,
+    "name": "214AC",
+    "attributes": {
+      "Startup": 31,
+      "Block": "+5~+22",
+      "Hit": "+6~+22",
+      "Notes": "",
+      "Damage": "30,30,30",
+      "Stun": 0,
+      "Guard": "30,30,30"
+    }
+  },
+  {
+    "uid": 3322,
+    "name": "623A",
+    "attributes": {
+      "Startup": 4,
+      "Block": -39,
+      "Hit": "+20",
+      "Notes": "KND",
+      "Damage": "50,20,20",
+      "Stun": "50,20,20",
+      "Guard": "50,30,30"
+    }
+  },
+  {
+    "uid": 3323,
+    "name": "623C",
+    "attributes": {
+      "Startup": 8,
+      "Block": -56,
+      "Hit": "+5",
+      "Notes": "KND",
+      "Damage": "65,20,20,20,20",
+      "Stun": "50,20,20,20,20",
+      "Guard": "50,30,30"
+    }
+  },
+  {
+    "uid": 3324,
+    "name": "623AC",
+    "attributes": {
+      "Startup": 6,
+      "Block": -40,
+      "Hit": "+28",
+      "Notes": "KND",
+      "Damage": "60,25,25,30,30",
+      "Stun": 0,
+      "Guard": "10,40,40"
+    }
+  },
+  {
+    "uid": 3325,
+    "name": "214B",
+    "attributes": {
+      "Startup": 10,
+      "Block": 0,
+      "Hit": "+36",
+      "Notes": "Juggle || null projectile",
+      "Damage": 60,
+      "Stun": 80,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3326,
+    "name": "214D",
+    "attributes": {
+      "Startup": 10,
+      "Block": 0,
+      "Hit": "+36",
+      "Notes": "Juggle || reflect projectile",
+      "Damage": 60,
+      "Stun": 80,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3327,
+    "name": "214BD",
+    "attributes": {
+      "Startup": 10,
+      "Block": "+4",
+      "Hit": "+39",
+      "Notes": "Juggle",
+      "Damage": 120,
+      "Stun": 0,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3328,
+    "name": "air 214B",
+    "attributes": {
+      "Startup": 8,
+      "Block": "-3~-1",
+      "Hit": "+1~+3",
+      "Notes": "",
+      "Damage": "20,...,20",
+      "Stun": "10,...,10",
+      "Guard": "10,...,10"
+    }
+  },
+  {
+    "uid": 3329,
+    "name": "air 214D",
+    "attributes": {
+      "Startup": 10,
+      "Block": -23,
+      "Hit": "+18",
+      "Notes": "KND",
+      "Damage": "20,...,20,60",
+      "Stun": "10,...,10,80",
+      "Guard": "20,...,20,80"
+    }
+  },
+  {
+    "uid": 3330,
+    "name": "air 214D*",
+    "attributes": {
+      "Startup": 17,
+      "Block": -14,
+      "Hit": "+18~+25",
+      "Notes": "*2nd hit only || KND",
+      "Damage": 60,
+      "Stun": 80,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3331,
+    "name": "air 214BD",
+    "attributes": {
+      "Startup": 9,
+      "Block": -2,
+      "Hit": "+40",
+      "Notes": "KND",
+      "Damage": "20,...,20,90",
+      "Stun": 0,
+      "Guard": "20,...,20,120"
+    }
+  },
+  {
+    "uid": 3332,
+    "name": "air 214BD*",
+    "attributes": {
+      "Startup": 14,
+      "Block": "-2~+2",
+      "Hit": "+40~+44",
+      "Notes": "*2nd hit only || KND",
+      "Damage": 90,
+      "Stun": 0,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3333,
+    "name": "6246A",
+    "attributes": {
+      "Startup": 8,
+      "Block": "-",
+      "Hit": "+62",
+      "Notes": "Throw",
+      "Damage": 118,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3334,
+    "name": "6246C",
+    "attributes": {
+      "Startup": 8,
+      "Block": "-",
+      "Hit": "+62",
+      "Notes": "Throw",
+      "Damage": 118,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3335,
+    "name": "6246AC",
+    "attributes": {
+      "Startup": 3,
+      "Block": "-",
+      "Hit": "+62",
+      "Notes": "Throw",
+      "Damage": "80,60",
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3336,
+    "name": "236B",
+    "attributes": {
+      "Startup": 33,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3337,
+    "name": "236D",
+    "attributes": {
+      "Startup": 42,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3338,
+    "name": "236BD",
+    "attributes": {
+      "Startup": 28,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3339,
+    "name": "426A",
+    "attributes": {
+      "Startup": 21,
+      "Block": "-8~+26",
+      "Hit": "+52",
+      "Notes": "Juggle (+86 fullscreen)",
+      "Damage": 65,
+      "Stun": 40,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3340,
+    "name": "426C",
+    "attributes": {
+      "Startup": 21,
+      "Block": "-10~+25",
+      "Hit": "+49",
+      "Notes": "Juggle (+86 fullscreen)",
+      "Damage": 70,
+      "Stun": 40,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3341,
+    "name": "426AC",
+    "attributes": {
+      "Startup": 15,
+      "Block": "+3~+20",
+      "Hit": "+65",
+      "Notes": "Juggle (+82 fullscreen)",
+      "Damage": "45,45",
+      "Stun": 0,
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3342,
+    "name": "624624P",
+    "attributes": {
+      "Startup": 4,
+      "Block": "-30~-26",
+      "Hit": "",
+      "Notes": "Height/hit dependent",
+      "Damage": 180,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3343,
+    "name": "air 624624P",
+    "attributes": {
+      "Startup": 8,
+      "Block": "-123~-22",
+      "Hit": "",
+      "Notes": "Height/hit dependent",
+      "Damage": 180,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3344,
+    "name": "624624AC",
+    "attributes": {
+      "Startup": 4,
+      "Block": "-79~-1",
+      "Hit": "",
+      "Notes": "Height/hit dependent",
+      "Damage": 330,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3345,
+    "name": "air 624624AC",
+    "attributes": {
+      "Startup": 4,
+      "Block": "-114~-24",
+      "Hit": "",
+      "Notes": "Height/hit dependent",
+      "Damage": 330,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3346,
+    "name": "236236P",
+    "attributes": {
+      "Startup": 9,
+      "Block": "-21~-2",
+      "Hit": "+56~+75",
+      "Notes": "",
+      "Damage": 170,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3347,
+    "name": "air 236236P",
+    "attributes": {
+      "Startup": 8,
+      "Block": "-53~-41",
+      "Hit": "+26~+37",
+      "Notes": "Height dependent",
+      "Damage": 170,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3348,
+    "name": "236236AC",
+    "attributes": {
+      "Startup": 9,
+      "Block": "-14~+4",
+      "Hit": "+65~+84",
+      "Notes": "",
+      "Damage": 330,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3349,
+    "name": "air 236236AC",
+    "attributes": {
+      "Startup": 8,
+      "Block": "-41~-33",
+      "Hit": "+38~+48",
+      "Notes": "",
+      "Damage": 330,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3350,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": 9,
+      "Block": "-45~-3",
+      "Hit": "+25",
+      "Notes": "",
+      "Damage": 421,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+
+  {
+    "uid": 3352,
+    "name": "close A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+2",
+      "Hit": "+4",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3353,
+    "name": "close AA",
+    "attributes": {
+      "Startup": "4,6",
+      "Block": -7,
+      "Hit": -5,
+      "Notes": "",
+      "Damage": "25,23",
+      "Stun": "30,0",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3354,
+    "name": "close AAA",
+    "attributes": {
+      "Startup": "4,6,6",
+      "Block": -8,
+      "Hit": -6,
+      "Notes": "",
+      "Damage": "25,23,22",
+      "Stun": "30,0,0",
+      "Guard": "60,60,60"
+    }
+  },
+  {
+    "uid": 3355,
+    "name": "close B",
+    "attributes": {
+      "Startup": 5,
+      "Block": "+2",
+      "Hit": "+4",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3356,
+    "name": "close C",
+    "attributes": {
+      "Startup": 5,
+      "Block": -5,
+      "Hit": -3,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3357,
+    "name": "close D",
+    "attributes": {
+      "Startup": 7,
+      "Block": -4,
+      "Hit": -2,
+      "Notes": "",
+      "Damage": "40,40",
+      "Stun": "35,35",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3358,
+    "name": "far A",
+    "attributes": {
+      "Startup": 6,
+      "Block": -3,
+      "Hit": -1,
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3359,
+    "name": "far B",
+    "attributes": {
+      "Startup": 6,
+      "Block": 0,
+      "Hit": "+2",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3360,
+    "name": "far C",
+    "attributes": {
+      "Startup": 9,
+      "Block": -6,
+      "Hit": -4,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3361,
+    "name": "far D",
+    "attributes": {
+      "Startup": 10,
+      "Block": 0,
+      "Hit": "+2",
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3362,
+    "name": "2A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+1",
+      "Hit": "+3",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3363,
+    "name": "2B",
+    "attributes": {
+      "Startup": 5,
+      "Block": 0,
+      "Hit": "+2",
+      "Notes": "",
+      "Damage": 15,
+      "Stun": 15,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3364,
+    "name": "2C",
+    "attributes": {
+      "Startup": 8,
+      "Block": -5,
+      "Hit": -3,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3365,
+    "name": "2D",
+    "attributes": {
+      "Startup": 7,
+      "Block": -3,
+      "Hit": "+27",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3366,
+    "name": "CD",
+    "attributes": {
+      "Startup": 12,
+      "Block": -5,
+      "Hit": "+72~+87",
+      "Notes": "Splat",
+      "Damage": 75,
+      "Stun": 100,
+      "Guard": 160
+    }
+  },
+  {
+    "uid": 3367,
+    "name": "236CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": -10,
+      "Hit": "+93",
+      "Notes": "Crumple",
+      "Damage": 75,
+      "Stun": 0,
+      "Guard": 200
+    }
+  },
+  {
+    "uid": 3368,
+    "name": "jump A",
+    "attributes": {
+      "Startup": 5,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3369,
+    "name": "jump B",
+    "attributes": {
+      "Startup": 6,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3370,
+    "name": "jump C",
+    "attributes": {
+      "Startup": 7,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "35,35",
+      "Stun": "35,35",
+      "Guard": "50,50/60,60"
+    }
+  },
+  {
+    "uid": 3371,
+    "name": "jump D",
+    "attributes": {
+      "Startup": 7,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3372,
+    "name": "jump CD",
+    "attributes": {
+      "Startup": 13,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "80/90",
+      "Stun": 80,
+      "Guard": "120/140"
+    }
+  },
+  {
+    "uid": 3373,
+    "name": "C THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+52",
+      "Notes": "Forward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3374,
+    "name": "D THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+34",
+      "Notes": "Backward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3375,
+    "name": "air C THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+29",
+      "Notes": "",
+      "Damage": "10*5,50",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3376,
+    "name": "3D",
+    "attributes": {
+      "Startup": 9,
+      "Block": "-27?",
+      "Hit": "+53",
+      "Notes": "",
+      "Damage": "60,60",
+      "Stun": "40,40",
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3377,
+    "name": "236A",
+    "attributes": {
+      "Startup": 25,
+      "Block": "+2",
+      "Hit": "+2",
+      "Notes": "",
+      "Damage": "20,20,20",
+      "Stun": "20,20,20",
+      "Guard": "20,20,20"
+    }
+  },
+  {
+    "uid": 3378,
+    "name": "236C",
+    "attributes": {
+      "Startup": 17,
+      "Block": -11,
+      "Hit": -9,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 40,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3379,
+    "name": "236AC",
+    "attributes": {
+      "Startup": 17,
+      "Block": -3,
+      "Hit": "+38",
+      "Notes": "KND",
+      "Damage": "30,30,30",
+      "Stun": 0,
+      "Guard": "20,20,20"
+    }
+  },
+  {
+    "uid": 3380,
+    "name": "OTG 236AC",
+    "attributes": {
+      "Startup": 17,
+      "Block": "-",
+      "Hit": "+42",
+      "Notes": "",
+      "Damage": "30,30,30",
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3381,
+    "name": "214A",
+    "attributes": {
+      "Startup": 11,
+      "Block": -6,
+      "Hit": "+27",
+      "Notes": "KND",
+      "Damage": 70,
+      "Stun": 60,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3382,
+    "name": "214C",
+    "attributes": {
+      "Startup": 20,
+      "Block": -2,
+      "Hit": "+73",
+      "Notes": "KND",
+      "Damage": 100,
+      "Stun": 80,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3383,
+    "name": "214AC",
+    "attributes": {
+      "Startup": 15,
+      "Block": -10,
+      "Hit": "+101",
+      "Notes": "Crumple",
+      "Damage": 80,
+      "Stun": 0,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3384,
+    "name": "214B",
+    "attributes": {
+      "Startup": 22,
+      "Block": -3,
+      "Hit": -1,
+      "Notes": "",
+      "Damage": "40,40",
+      "Stun": "40,40",
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3385,
+    "name": "214D",
+    "attributes": {
+      "Startup": 31,
+      "Block": "+2",
+      "Hit": "+48",
+      "Notes": "",
+      "Damage": "60,60",
+      "Stun": "60,60",
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3386,
+    "name": "214BD",
+    "attributes": {
+      "Startup": 18,
+      "Block": -1,
+      "Hit": "+33",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 0,
+      "Guard": 100
+    }
+  },
+  {
+    "uid": 3387,
+    "name": "air 2B",
+    "attributes": {
+      "Startup": "",
+      "Block": "+8,+5,+5,-31",
+      "Hit": "-9~+10",
+      "Notes": "",
+      "Damage": "20,20,20,80",
+      "Stun": "40,40,40,80",
+      "Guard": "40,40,40,40"
+    }
+  },
+  {
+    "uid": 3388,
+    "name": "air 2D",
+    "attributes": {
+      "Startup": "",
+      "Block": "-4,+2,0,-31",
+      "Hit": "-15~-2",
+      "Notes": "",
+      "Damage": "20,20,20,80",
+      "Stun": "40,40,40,80",
+      "Guard": "40,40,40,40"
+    }
+  },
+  {
+    "uid": 3389,
+    "name": "air 2BD",
+    "attributes": {
+      "Startup": "",
+      "Block": "0,+8,+7,-17",
+      "Hit": "-12~+2",
+      "Notes": "",
+      "Damage": "20,20,20,80",
+      "Stun": 0,
+      "Guard": "40,40,40,80"
+    }
+  },
+  {
+    "uid": 3390,
+    "name": "236B",
+    "attributes": {
+      "Startup": 8,
+      "Block": -29,
+      "Hit": "+58",
+      "Notes": "KND",
+      "Damage": "30,30,60",
+      "Stun": "40,40,40",
+      "Guard": "40,40,40"
+    }
+  },
+  {
+    "uid": 3391,
+    "name": "236D",
+    "attributes": {
+      "Startup": 25,
+      "Block": -22,
+      "Hit": "+73",
+      "Notes": "KND",
+      "Damage": "30,40,10,10,60",
+      "Stun": "40,40,40,40,40",
+      "Guard": "40,40,40,40,40"
+    }
+  },
+  {
+    "uid": 3392,
+    "name": "\u003e AB",
+    "attributes": {
+      "Startup": "",
+      "Block": -2,
+      "Hit": "+46",
+      "Notes": "Break || Juggle",
+      "Damage": "30,40",
+      "Stun": "40,40",
+      "Guard": "40,40"
+    }
+  },
+  {
+    "uid": 3393,
+    "name": "236BD",
+    "attributes": {
+      "Startup": 11,
+      "Block": -25,
+      "Hit": "+13",
+      "Notes": "KND",
+      "Damage": "20,40,40,20,20,30",
+      "Stun": 0,
+      "Guard": "20,20,20,20,20,20"
+    }
+  },
+  {
+    "uid": 3394,
+    "name": "236236P",
+    "attributes": {
+      "Startup": 8,
+      "Block": -33,
+      "Hit": "+50",
+      "Notes": "KND",
+      "Damage": 180,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3395,
+    "name": "236236AC",
+    "attributes": {
+      "Startup": 8,
+      "Block": -27,
+      "Hit": "+56",
+      "Notes": "KND",
+      "Damage": 340,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3396,
+    "name": "air 236236P",
+    "attributes": {
+      "Startup": 12,
+      "Block": "~-30",
+      "Hit": "~+52",
+      "Notes": "KND",
+      "Damage": 180,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3397,
+    "name": "air 236236AC",
+    "attributes": {
+      "Startup": 8,
+      "Block": "~-19",
+      "Hit": "~+62",
+      "Notes": "KND",
+      "Damage": 340,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3398,
+    "name": "236236K",
+    "attributes": {
+      "Startup": 5,
+      "Block": -66,
+      "Hit": "+43",
+      "Notes": "KND",
+      "Damage": 206,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3399,
+    "name": "236236BD",
+    "attributes": {
+      "Startup": 5,
+      "Block": -61,
+      "Hit": "+43",
+      "Notes": "KND",
+      "Damage": 361,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3400,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": "",
+      "Block": "-",
+      "Hit": "+67",
+      "Notes": "Parry",
+      "Damage": 440,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+
+  {
+    "uid": 3402,
+    "name": "close A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+4",
+      "Hit": "+6",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3403,
+    "name": "close AA",
+    "attributes": {
+      "Startup": "4,6",
+      "Block": -6,
+      "Hit": -4,
+      "Notes": "",
+      "Damage": "25,23",
+      "Stun": "30,0",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3404,
+    "name": "close AAA",
+    "attributes": {
+      "Startup": "4,6,11",
+      "Block": -8,
+      "Hit": -6,
+      "Notes": "",
+      "Damage": "25,23,22",
+      "Stun": "30,0,0",
+      "Guard": "60,60,60"
+    }
+  },
+  {
+    "uid": 3405,
+    "name": "close B",
+    "attributes": {
+      "Startup": 5,
+      "Block": -3,
+      "Hit": -1,
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3406,
+    "name": "close C",
+    "attributes": {
+      "Startup": 5,
+      "Block": -6,
+      "Hit": -4,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3407,
+    "name": "close D",
+    "attributes": {
+      "Startup": 4,
+      "Block": -2,
+      "Hit": 0,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3408,
+    "name": "far A",
+    "attributes": {
+      "Startup": 5,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3409,
+    "name": "far B",
+    "attributes": {
+      "Startup": 6,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3410,
+    "name": "far C",
+    "attributes": {
+      "Startup": 6,
+      "Block": -7,
+      "Hit": -5,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3411,
+    "name": "far D",
+    "attributes": {
+      "Startup": 11,
+      "Block": -5,
+      "Hit": -3,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3412,
+    "name": "2A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+4",
+      "Hit": "+6",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3413,
+    "name": "2B",
+    "attributes": {
+      "Startup": 4,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 15,
+      "Stun": 15,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3414,
+    "name": "2C",
+    "attributes": {
+      "Startup": 6,
+      "Block": -2,
+      "Hit": 0,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3415,
+    "name": "2D",
+    "attributes": {
+      "Startup": 6,
+      "Block": -5,
+      "Hit": "+25",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3416,
+    "name": "CD",
+    "attributes": {
+      "Startup": 11,
+      "Block": -4,
+      "Hit": "+73~+89",
+      "Notes": "Splat",
+      "Damage": 75,
+      "Stun": 100,
+      "Guard": 160
+    }
+  },
+  {
+    "uid": 3417,
+    "name": "236CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": -10,
+      "Hit": "+93",
+      "Notes": "Crumple",
+      "Damage": 75,
+      "Stun": 0,
+      "Guard": 200
+    }
+  },
+  {
+    "uid": 3418,
+    "name": "jump A",
+    "attributes": {
+      "Startup": 5,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3419,
+    "name": "jump B",
+    "attributes": {
+      "Startup": 5,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3420,
+    "name": "jump C",
+    "attributes": {
+      "Startup": 6,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3421,
+    "name": "jump D",
+    "attributes": {
+      "Startup": 7,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3422,
+    "name": "jump CD",
+    "attributes": {
+      "Startup": 9,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "80/90",
+      "Stun": 80,
+      "Guard": "120/140"
+    }
+  },
+  {
+    "uid": 3423,
+    "name": "C THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+43",
+      "Notes": "Forward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3424,
+    "name": "D THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+16",
+      "Notes": "Backward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3425,
+    "name": "air THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+26",
+      "Notes": "Air Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3426,
+    "name": "6B",
+    "attributes": {
+      "Startup": 21,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 40,
+      "Stun": 40,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3427,
+    "name": "air 2D",
+    "attributes": {
+      "Startup": 14,
+      "Block": "-3~+1",
+      "Hit": "-2~+3",
+      "Notes": "",
+      "Damage": "25,..,25",
+      "Stun": "40,...,40",
+      "Guard": "40,...,40"
+    }
+  },
+  {
+    "uid": 3428,
+    "name": "236B",
+    "attributes": {
+      "Startup": 5,
+      "Block": -5,
+      "Hit": -3,
+      "Notes": "",
+      "Damage": 45,
+      "Stun": 100,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3429,
+    "name": "\u003e 28K",
+    "attributes": {
+      "Startup": 6,
+      "Block": -35,
+      "Hit": "+14",
+      "Notes": "KND",
+      "Damage": "60,30",
+      "Stun": 80,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3430,
+    "name": "236D",
+    "attributes": {
+      "Startup": 5,
+      "Block": -10,
+      "Hit": -8,
+      "Notes": "",
+      "Damage": 45,
+      "Stun": 100,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3431,
+    "name": "\u003e 28K",
+    "attributes": {
+      "Startup": 6,
+      "Block": -35,
+      "Hit": "+14",
+      "Notes": "KND",
+      "Damage": "60,30",
+      "Stun": 80,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3432,
+    "name": "236BD",
+    "attributes": {
+      "Startup": 3,
+      "Block": -6,
+      "Hit": -4,
+      "Notes": "",
+      "Damage": 60,
+      "Stun": 0,
+      "Guard": 100
+    }
+  },
+  {
+    "uid": 3433,
+    "name": "\u003e 28K",
+    "attributes": {
+      "Startup": 5,
+      "Block": -31,
+      "Hit": "+27",
+      "Notes": "KND",
+      "Damage": "60,20,20,20",
+      "Stun": 0,
+      "Guard": "50,10,10,10"
+    }
+  },
+  {
+    "uid": 3434,
+    "name": "214A",
+    "attributes": {
+      "Startup": 15,
+      "Block": "-3~+1",
+      "Hit": "+33~+37",
+      "Notes": "KND",
+      "Damage": 60,
+      "Stun": 80,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3435,
+    "name": "214C",
+    "attributes": {
+      "Startup": 25,
+      "Block": "+1~+2",
+      "Hit": "+36~+38",
+      "Notes": "KND",
+      "Damage": 70,
+      "Stun": 80,
+      "Guard": 100
+    }
+  },
+  {
+    "uid": 3436,
+    "name": "214AC",
+    "attributes": {
+      "Startup": 17,
+      "Block": "-1~+20",
+      "Hit": "+34~+55",
+      "Notes": "Juggle",
+      "Damage": 90,
+      "Stun": 0,
+      "Guard": 90
+    }
+  },
+  {
+    "uid": 3437,
+    "name": "236A",
+    "attributes": {
+      "Startup": 15,
+      "Block": -2,
+      "Hit": "+39",
+      "Notes": "KND",
+      "Damage": "50,50",
+      "Stun": "20,20",
+      "Guard": "30,30"
+    }
+  },
+  {
+    "uid": 3438,
+    "name": "236C",
+    "attributes": {
+      "Startup": 19,
+      "Block": -1,
+      "Hit": "+40",
+      "Notes": "Juggle",
+      "Damage": "50,50",
+      "Stun": "20,20",
+      "Guard": "30,30"
+    }
+  },
+  {
+    "uid": 3439,
+    "name": "236AC",
+    "attributes": {
+      "Startup": 16,
+      "Block": -2,
+      "Hit": "+111",
+      "Notes": "Crumple",
+      "Damage": 100,
+      "Stun": 0,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3440,
+    "name": "air 236A",
+    "attributes": {
+      "Startup": 15,
+      "Block": "-8~+1",
+      "Hit": "-9~+1",
+      "Notes": "",
+      "Damage": "35,35",
+      "Stun": "20,20",
+      "Guard": "30,30"
+    }
+  },
+  {
+    "uid": 3441,
+    "name": "air 236C",
+    "attributes": {
+      "Startup": 14,
+      "Block": "-8~+1",
+      "Hit": "-9~+1",
+      "Notes": "",
+      "Damage": "35,35",
+      "Stun": "20,20",
+      "Guard": "30,30"
+    }
+  },
+  {
+    "uid": 3442,
+    "name": "air 236AC",
+    "attributes": {
+      "Startup": 16,
+      "Block": "+10~+20",
+      "Hit": "+10~+20",
+      "Notes": "",
+      "Damage": "30,30,30,30",
+      "Stun": 0,
+      "Guard": "25,25,25,25"
+    }
+  },
+  {
+    "uid": 3443,
+    "name": "6246P",
+    "attributes": {
+      "Startup": 5,
+      "Block": "-",
+      "Hit": "+73",
+      "Notes": "Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3444,
+    "name": "6246AC",
+    "attributes": {
+      "Startup": 5,
+      "Block": "-",
+      "Hit": "+103",
+      "Notes": "Throw",
+      "Damage": 110,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3445,
+    "name": "623B",
+    "attributes": {
+      "Startup": 5,
+      "Block": -40,
+      "Hit": "+9",
+      "Notes": "KND",
+      "Damage": 70,
+      "Stun": 80,
+      "Guard": 20
+    }
+  },
+  {
+    "uid": 3446,
+    "name": "623D",
+    "attributes": {
+      "Startup": 7,
+      "Block": -30,
+      "Hit": "+18",
+      "Notes": "KND",
+      "Damage": 120,
+      "Stun": 100,
+      "Guard": 40
+    }
+  },
+  {
+    "uid": 3447,
+    "name": "623BD",
+    "attributes": {
+      "Startup": 5,
+      "Block": -32,
+      "Hit": "+22",
+      "Notes": "KND",
+      "Damage": "70,45,45",
+      "Stun": 0,
+      "Guard": "40,20,20"
+    }
+  },
+  {
+    "uid": 3448,
+    "name": "236236A",
+    "attributes": {
+      "Startup": 13,
+      "Block": -23,
+      "Hit": "+52",
+      "Notes": "KND",
+      "Damage": 190,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3449,
+    "name": "236236C",
+    "attributes": {
+      "Startup": 15,
+      "Block": -26,
+      "Hit": "+49",
+      "Notes": "KND",
+      "Damage": 190,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3450,
+    "name": "236236AC",
+    "attributes": {
+      "Startup": 10,
+      "Block": -26,
+      "Hit": "+59",
+      "Notes": "KND",
+      "Damage": 336,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3451,
+    "name": "236236K",
+    "attributes": {
+      "Startup": 9,
+      "Block": -12,
+      "Hit": "+61",
+      "Notes": "KND",
+      "Damage": 140,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3452,
+    "name": "236236BD",
+    "attributes": {
+      "Startup": 9,
+      "Block": -28,
+      "Hit": "+61",
+      "Notes": "KND",
+      "Damage": 270,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3453,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": 10,
+      "Block": -40,
+      "Hit": "+51",
+      "Notes": "KND",
+      "Damage": 429,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3455,
+    "name": "close A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+3",
+      "Hit": "+5",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3456,
+    "name": "close AA",
+    "attributes": {
+      "Startup": "4,9",
+      "Block": -8,
+      "Hit": -6,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3457,
+    "name": "close AAA",
+    "attributes": {
+      "Startup": "4,9,6",
+      "Block": -6,
+      "Hit": "+2",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3458,
+    "name": "close B",
+    "attributes": {
+      "Startup": 5,
+      "Block": "+2",
+      "Hit": "+4",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3459,
+    "name": "close C",
+    "attributes": {
+      "Startup": 9,
+      "Block": "+5",
+      "Hit": "+7",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3460,
+    "name": "close D",
+    "attributes": {
+      "Startup": 7,
+      "Block": -2,
+      "Hit": 0,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3461,
+    "name": "far A",
+    "attributes": {
+      "Startup": 7,
+      "Block": -5,
+      "Hit": -3,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3462,
+    "name": "far B",
+    "attributes": {
+      "Startup": 6,
+      "Block": -2,
+      "Hit": 0,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3463,
+    "name": "far C",
+    "attributes": {
+      "Startup": 11,
+      "Block": -20,
+      "Hit": -5,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3464,
+    "name": "far D",
+    "attributes": {
+      "Startup": 7,
+      "Block": -7,
+      "Hit": -5,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3465,
+    "name": "2A",
+    "attributes": {
+      "Startup": 6,
+      "Block": -4,
+      "Hit": -2,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3466,
+    "name": "2B",
+    "attributes": {
+      "Startup": 5,
+      "Block": -2,
+      "Hit": 0,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3467,
+    "name": "2C",
+    "attributes": {
+      "Startup": 5,
+      "Block": -10,
+      "Hit": -8,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3468,
+    "name": "2D",
+    "attributes": {
+      "Startup": 7,
+      "Block": -2,
+      "Hit": "+20",
+      "Notes": "KND",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3469,
+    "name": "CD",
+    "attributes": {
+      "Startup": 19,
+      "Block": -10,
+      "Hit": "+67~+82",
+      "Notes": "Splat",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3470,
+    "name": "236CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": -10,
+      "Hit": "+93",
+      "Notes": "Crumple",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3471,
+    "name": "jump A",
+    "attributes": {
+      "Startup": 5,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3472,
+    "name": "jump B",
+    "attributes": {
+      "Startup": 5,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3473,
+    "name": "jump C",
+    "attributes": {
+      "Startup": 14,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3474,
+    "name": "jump D",
+    "attributes": {
+      "Startup": 9,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3475,
+    "name": "jump CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3476,
+    "name": "C THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+42",
+      "Notes": "Forward Throw",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3477,
+    "name": "D THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+22",
+      "Notes": "Backward Throw",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3478,
+    "name": "6A",
+    "attributes": {
+      "Startup": 22,
+      "Block": -2,
+      "Hit": "+2",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3479,
+    "name": "6A cancel",
+    "attributes": {
+      "Startup": 20,
+      "Block": -2,
+      "Hit": "+2",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3480,
+    "name": "6B",
+    "attributes": {
+      "Startup": 20,
+      "Block": -2,
+      "Hit": "+38",
+      "Notes": "KND",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3481,
+    "name": "6B cancel",
+    "attributes": {
+      "Startup": 20,
+      "Block": -2,
+      "Hit": "+38",
+      "Notes": "KND",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3482,
+    "name": "air 2C",
+    "attributes": {
+      "Startup": 12,
+      "Block": "+9",
+      "Hit": "+10",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3483,
+    "name": "623P",
+    "attributes": {
+      "Startup": 11,
+      "Block": "+1",
+      "Hit": "+3",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3484,
+    "name": "623AC",
+    "attributes": {
+      "Startup": 7,
+      "Block": -5,
+      "Hit": "+34",
+      "Notes": "KND",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3485,
+    "name": "426A",
+    "attributes": {
+      "Startup": 15,
+      "Block": -8,
+      "Hit": -2,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3486,
+    "name": "426C",
+    "attributes": {
+      "Startup": 26,
+      "Block": -3,
+      "Hit": -1,
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3487,
+    "name": "\u003e 236A",
+    "attributes": {
+      "Startup": 3,
+      "Block": -10,
+      "Hit": "+29",
+      "Notes": "KND",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3488,
+    "name": "\u003e 236C",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+2",
+      "Hit": "+4",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3489,
+    "name": "426AC",
+    "attributes": {
+      "Startup": 17,
+      "Block": "+2",
+      "Hit": "+4",
+      "Notes": "",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3490,
+    "name": "\u003e 236A",
+    "attributes": {
+      "Startup": 3,
+      "Block": -5,
+      "Hit": "+34",
+      "Notes": "Juggle",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3491,
+    "name": "623B",
+    "attributes": {
+      "Startup": 11,
+      "Block": -9,
+      "Hit": "+29",
+      "Notes": "KND",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3492,
+    "name": "623D",
+    "attributes": {
+      "Startup": 18,
+      "Block": -2,
+      "Hit": "+40",
+      "Notes": "Juggle",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3493,
+    "name": "623BD",
+    "attributes": {
+      "Startup": 11,
+      "Block": -2,
+      "Hit": "+40",
+      "Notes": "Juggle",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3494,
+    "name": "214A",
+    "attributes": {
+      "Startup": 9,
+      "Block": "",
+      "Hit": "~+30",
+      "Notes": "Air Only",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3495,
+    "name": "214C",
+    "attributes": {
+      "Startup": 13,
+      "Block": "",
+      "Hit": "~+34",
+      "Notes": "Air Only || Juggle",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3496,
+    "name": "\u003e 236P",
+    "attributes": {
+      "Startup": 3,
+      "Block": "",
+      "Hit": "~+30",
+      "Notes": "Air Only || Juggle",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3497,
+    "name": "214AC",
+    "attributes": {
+      "Startup": 9,
+      "Block": "",
+      "Hit": "~+48",
+      "Notes": "Air Only || Juggle",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3498,
+    "name": "\u003e 236P",
+    "attributes": {
+      "Startup": 3,
+      "Block": "",
+      "Hit": "~+46",
+      "Notes": "Air Only || Juggle",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3499,
+    "name": "214B",
+    "attributes": {
+      "Startup": 3,
+      "Block": "-",
+      "Hit": "+38",
+      "Notes": "Air Parry (Frame 3-10)",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3500,
+    "name": "214BD",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+79",
+      "Notes": "All Parry(-Lows) (Frame 1-10)",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3501,
+    "name": "214D",
+    "attributes": {
+      "Startup": 3,
+      "Block": "-",
+      "Hit": "+38",
+      "Notes": "Ground Parry (Frame 3-11)",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3502,
+    "name": "236214P",
+    "attributes": {
+      "Startup": 7,
+      "Block": -14,
+      "Hit": "+65",
+      "Notes": "KND",
+      "Damage": 200,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3503,
+    "name": "236214AC",
+    "attributes": {
+      "Startup": 7,
+      "Block": -44,
+      "Hit": "+35",
+      "Notes": "KND",
+      "Damage": 352,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3504,
+    "name": "236236K",
+    "attributes": {
+      "Startup": 11,
+      "Block": -72,
+      "Hit": "+50",
+      "Notes": "KND",
+      "Damage": 180,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3505,
+    "name": "236236BD",
+    "attributes": {
+      "Startup": 7,
+      "Block": -85,
+      "Hit": "+42",
+      "Notes": "KND",
+      "Damage": 335,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3506,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": 8,
+      "Block": -45,
+      "Hit": "+30",
+      "Notes": "KND",
+      "Damage": 440,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3508,
+    "name": "close A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "+4",
+      "Hit": "+6",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3509,
+    "name": "close AA",
+    "attributes": {
+      "Startup": "4,5",
+      "Block": -2,
+      "Hit": 0,
+      "Notes": "",
+      "Damage": "25,23",
+      "Stun": "30,0",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3510,
+    "name": "close AAA",
+    "attributes": {
+      "Startup": "4,5,10",
+      "Block": -13,
+      "Hit": -11,
+      "Notes": "",
+      "Damage": "25,23,22",
+      "Stun": "30,0,0",
+      "Guard": "60,60,60"
+    }
+  },
+  {
+    "uid": 3511,
+    "name": "close B",
+    "attributes": {
+      "Startup": 5,
+      "Block": "+1",
+      "Hit": "+3",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3512,
+    "name": "close C",
+    "attributes": {
+      "Startup": 4,
+      "Block": -3,
+      "Hit": -1,
+      "Notes": "",
+      "Damage": "35,35",
+      "Stun": "35,35",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3513,
+    "name": "close D",
+    "attributes": {
+      "Startup": 5,
+      "Block": 0,
+      "Hit": "+2",
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3514,
+    "name": "far A",
+    "attributes": {
+      "Startup": 5,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3515,
+    "name": "far B",
+    "attributes": {
+      "Startup": 6,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 30,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3516,
+    "name": "far C",
+    "attributes": {
+      "Startup": 10,
+      "Block": -4,
+      "Hit": -2,
+      "Notes": "",
+      "Damage": "35,35",
+      "Stun": "35,35",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3517,
+    "name": "far D",
+    "attributes": {
+      "Startup": 12,
+      "Block": -5,
+      "Hit": -3,
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3518,
+    "name": "2A",
+    "attributes": {
+      "Startup": 5,
+      "Block": "+3",
+      "Hit": "+5",
+      "Notes": "",
+      "Damage": 25,
+      "Stun": 30,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3519,
+    "name": "2B",
+    "attributes": {
+      "Startup": 4,
+      "Block": -1,
+      "Hit": "+1",
+      "Notes": "",
+      "Damage": 15,
+      "Stun": 15,
+      "Guard": 30
+    }
+  },
+  {
+    "uid": 3520,
+    "name": "2C",
+    "attributes": {
+      "Startup": 9,
+      "Block": -12,
+      "Hit": -10,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3521,
+    "name": "2D",
+    "attributes": {
+      "Startup": 8,
+      "Block": -10,
+      "Hit": "+20",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 70,
+      "Guard": 120
+    }
+  },
+  {
+    "uid": 3522,
+    "name": "CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": -4,
+      "Hit": "+73~+89",
+      "Notes": "Splat",
+      "Damage": 75,
+      "Stun": 100,
+      "Guard": 160
+    }
+  },
+  {
+    "uid": 3523,
+    "name": "236CD",
+    "attributes": {
+      "Startup": 15,
+      "Block": -10,
+      "Hit": "+93",
+      "Notes": "Crumple",
+      "Damage": 75,
+      "Stun": 0,
+      "Guard": 200
+    }
+  },
+  {
+    "uid": 3524,
+    "name": "jump A",
+    "attributes": {
+      "Startup": 4,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3525,
+    "name": "jump B",
+    "attributes": {
+      "Startup": 6,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "40/45",
+      "Stun": 30,
+      "Guard": "50/60"
+    }
+  },
+  {
+    "uid": 3526,
+    "name": "jump C",
+    "attributes": {
+      "Startup": 7,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3527,
+    "name": "jump D",
+    "attributes": {
+      "Startup": 8,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 70,
+      "Guard": "100/120"
+    }
+  },
+  {
+    "uid": 3528,
+    "name": "jump CD",
+    "attributes": {
+      "Startup": 17,
+      "Block": "",
+      "Hit": "",
+      "Notes": "",
+      "Damage": "80/90",
+      "Stun": 80,
+      "Guard": "120/140"
+    }
+  },
+  {
+    "uid": 3529,
+    "name": "C THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+44",
+      "Notes": "Forward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3530,
+    "name": "D THROW",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+33",
+      "Notes": "Backward Throw",
+      "Damage": 100,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3531,
+    "name": "4A/6A",
+    "attributes": {
+      "Startup": 22,
+      "Block": -4,
+      "Hit": -2,
+      "Notes": "",
+      "Damage": 70,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3532,
+    "name": "4A/6A cancel",
+    "attributes": {
+      "Startup": 15,
+      "Block": -8,
+      "Hit": -6,
+      "Notes": "",
+      "Damage": 60,
+      "Stun": 40,
+      "Guard": 60
+    }
+  },
+  {
+    "uid": 3533,
+    "name": "4B",
+    "attributes": {
+      "Startup": 14,
+      "Block": -12,
+      "Hit": -10,
+      "Notes": "",
+      "Damage": "20,30",
+      "Stun": "30,40",
+      "Guard": "40,40"
+    }
+  },
+  {
+    "uid": 3534,
+    "name": "3D",
+    "attributes": {
+      "Startup": 14,
+      "Block": -5,
+      "Hit": "+43",
+      "Notes": "Juggle",
+      "Damage": 60,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3535,
+    "name": "[4]6B",
+    "attributes": {
+      "Startup": 14,
+      "Block": "-7~+2",
+      "Hit": "+29~+38",
+      "Notes": "KND",
+      "Damage": 80,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3536,
+    "name": "[4]6D",
+    "attributes": {
+      "Startup": 18,
+      "Block": "-14~-4",
+      "Hit": "-12~-3",
+      "Notes": "",
+      "Damage": 60,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3537,
+    "name": "\u003e 236K",
+    "attributes": {
+      "Startup": "-",
+      "Block": "*",
+      "Hit": "+28",
+      "Notes": "*no cancel on block",
+      "Damage": 60,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3538,
+    "name": "[4]6BD",
+    "attributes": {
+      "Startup": 14,
+      "Block": "-20~-12",
+      "Hit": "-20~-12",
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 0,
+      "Guard": 100
+    }
+  },
+  {
+    "uid": 3539,
+    "name": "\u003e 236P",
+    "attributes": {
+      "Startup": 11,
+      "Block": -10,
+      "Hit": "+70",
+      "Notes": "Juggle",
+      "Damage": 60,
+      "Stun": 0,
+      "Guard": 50
+    }
+  },
+  {
+    "uid": 3540,
+    "name": "623B",
+    "attributes": {
+      "Startup": 6,
+      "Block": -28,
+      "Hit": "+11",
+      "Notes": "KND",
+      "Damage": "40,40",
+      "Stun": "40,40",
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3541,
+    "name": "623D",
+    "attributes": {
+      "Startup": 8,
+      "Block": -41,
+      "Hit": -2,
+      "Notes": "KND",
+      "Damage": "40,40",
+      "Stun": "40,60",
+      "Guard": "70,70"
+    }
+  },
+  {
+    "uid": 3542,
+    "name": "\u003e 623K",
+    "attributes": {
+      "Startup": "-",
+      "Block": "*",
+      "Hit": "+27",
+      "Notes": "*no cancel on block || KND",
+      "Damage": "20,40",
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3543,
+    "name": "623BD",
+    "attributes": {
+      "Startup": 4,
+      "Block": -48,
+      "Hit": "+27",
+      "Notes": "KND",
+      "Damage": "45,25,50",
+      "Stun": 0,
+      "Guard": "70,30,30"
+    }
+  },
+  {
+    "uid": 3544,
+    "name": "236A",
+    "attributes": {
+      "Startup": 25,
+      "Block": "-3~-2",
+      "Hit": "+1~+3",
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3545,
+    "name": "236C",
+    "attributes": {
+      "Startup": 24,
+      "Block": "-7~-5",
+      "Hit": "-3~-1",
+      "Notes": "",
+      "Damage": 80,
+      "Stun": 60,
+      "Guard": 80
+    }
+  },
+  {
+    "uid": 3546,
+    "name": "\u003e 236P",
+    "attributes": {
+      "Startup": "-",
+      "Block": "*",
+      "Hit": "+38",
+      "Notes": "*no cancel on block || KND",
+      "Damage": 60,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3547,
+    "name": "236AC",
+    "attributes": {
+      "Startup": 15,
+      "Block": "-9~-6",
+      "Hit": "+68",
+      "Notes": "Juggle",
+      "Damage": "60,50",
+      "Stun": 0,
+      "Guard": "60,60"
+    }
+  },
+  {
+    "uid": 3548,
+    "name": "214P",
+    "attributes": {
+      "Startup": "",
+      "Block": "",
+      "Hit": "",
+      "Notes": "Stance",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3549,
+    "name": "\u003e 236P",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+35",
+      "Notes": "",
+      "Damage": 140,
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3550,
+    "name": "214AC",
+    "attributes": {
+      "Startup": "",
+      "Block": "",
+      "Hit": "",
+      "Notes": "Stance",
+      "Damage": "",
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3551,
+    "name": "\u003e 236P",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+40",
+      "Notes": "",
+      "Damage": "80,80",
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3552,
+    "name": "623A",
+    "attributes": {
+      "Startup": 25,
+      "Block": "-",
+      "Hit": "+39",
+      "Notes": "",
+      "Damage": "40,80",
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3553,
+    "name": "623C",
+    "attributes": {
+      "Startup": 27,
+      "Block": "-",
+      "Hit": "+39",
+      "Notes": "",
+      "Damage": "40,80",
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3554,
+    "name": "623AC",
+    "attributes": {
+      "Startup": 20,
+      "Block": "-",
+      "Hit": "+39",
+      "Notes": "",
+      "Damage": "50,100",
+      "Stun": 0,
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3555,
+    "name": "624624K",
+    "attributes": {
+      "Startup": 3,
+      "Block": "-",
+      "Hit": "+20",
+      "Notes": "",
+      "Damage": 200,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3556,
+    "name": "624624BD",
+    "attributes": {
+      "Startup": 1,
+      "Block": "-",
+      "Hit": "+32",
+      "Notes": "",
+      "Damage": 340,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3557,
+    "name": "236214P",
+    "attributes": {
+      "Startup": 11,
+      "Block": -13,
+      "Hit": "+34",
+      "Notes": "",
+      "Damage": 181,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3558,
+    "name": "236214AC",
+    "attributes": {
+      "Startup": 6,
+      "Block": -18,
+      "Hit": "+45",
+      "Notes": "",
+      "Damage": 335,
+      "Stun": "",
+      "Guard": ""
+    }
+  },
+  {
+    "uid": 3559,
+    "name": "214236CD",
+    "attributes": {
+      "Startup": 6,
+      "Block": -51,
+      "Hit": "+22",
+      "Notes": "",
+      "Damage": 440,
+      "Stun": "",
+      "Guard": ""
+    }
   }
 ]

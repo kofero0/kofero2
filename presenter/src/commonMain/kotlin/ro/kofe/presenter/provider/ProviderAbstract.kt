@@ -1,5 +1,6 @@
 package ro.kofe.presenter.provider
 
+import arrow.core.Either
 import arrow.core.raise.either
 import io.ktor.client.*
 import io.ktor.client.request.*
@@ -36,6 +37,10 @@ abstract class ProviderAbstract<T>(
         } else {
             emit(send(ids))
         }
+    }
+
+    override fun delete() = either<ProviderError, Unit> {
+        diskAccessor.write(jsonFilename,"")
     }
 
     private suspend fun send(ids: List<Int>) = either {

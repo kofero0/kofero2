@@ -50,6 +50,9 @@ class HomePresenterImpl(
     }
 
     private suspend fun displayImages(objs: List<Any>) = either {
+        suspend fun getImage(iconUrl: String) =
+            imageProvider.get(iconUrl).map { image -> view?.display(iconUrl, image) }
+
         for (obj in objs) {
             when (obj) {
                 is Favorite -> obj.character?.also { getImage(it.iconUrl) } ?: run {
@@ -62,8 +65,6 @@ class HomePresenterImpl(
         }
     }
 
-    private suspend fun getImage(iconUrl: String) =
-        imageProvider.get(iconUrl).map { image -> view?.display(iconUrl, image) }
 
     override fun shutdown() {
         view = null
