@@ -3688,9 +3688,9 @@
     "uid": 3126,
     "name": "Andy",
     "attributes": {
-      "Hop":"32",
-      "Jump":"44",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "44",
+      "Backdash": "22"
     },
     "moveIds": [
       3077,
@@ -3754,11 +3754,12 @@
     "uid": 3188,
     "name": "Angel",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22 (*19)"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22 (*19)"
     },
-    "moveIds": [3127,
+    "moveIds": [
+      3127,
       3128,
       3129,
       3130,
@@ -3826,11 +3827,12 @@
     "uid": 3233,
     "name": "Antonov",
     "attributes": {
-      "Hop":"33",
-      "Jump":"40",
-      "Backdash":"19"
+      "Hop": "33",
+      "Jump": "40",
+      "Backdash": "19"
     },
-    "moveIds": [3189,
+    "moveIds": [
+      3189,
       3190,
       3191,
       3192,
@@ -3881,11 +3883,12 @@
     "uid": 3290,
     "name": "Ash",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [3234,
+    "moveIds": [
+      3234,
       3235,
       3236,
       3237,
@@ -3943,15 +3946,14 @@
       3289
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3351,
     "name": "Athena",
     "attributes": {
-      "Hop":"37",
-      "Jump":"46",
-      "Backdash":"22 (*19)"
+      "Hop": "37",
+      "Jump": "46",
+      "Backdash": "22 (*19)"
     },
     "moveIds": [
       3291,
@@ -4016,15 +4018,14 @@
       3350
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3401,
     "name": "B. Jenet",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
     "moveIds": [
       3352,
@@ -4078,15 +4079,14 @@
       3400
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3454,
     "name": "Benimaru",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
     "moveIds": [
       3402,
@@ -4143,15 +4143,14 @@
       3453
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3507,
     "name": "Billy",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "22"
     },
     "moveIds": [
       3455,
@@ -4208,15 +4207,14 @@
       3506
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3560,
     "name": "Blue Mary",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"23"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "23"
     },
     "moveIds": [
       3508,
@@ -4273,17 +4271,17 @@
       3559
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3626,
     "name": "Chizuru",
     "attributes": {
-      "Hop":"37",
-      "Jump":"46",
-      "Backdash":"23"
+      "Hop": "37",
+      "Jump": "46",
+      "Backdash": "23"
     },
-    "moveIds": [3561,
+    "moveIds": [
+      3561,
       3562,
       3563,
       3564,
@@ -4350,17 +4348,17 @@
       3625
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3678,
     "name": "Chris",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [3627,
+    "moveIds": [
+      3627,
       3628,
       3629,
       3630,
@@ -4413,17 +4411,17 @@
       3677
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3735,
     "name": "Clark",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"21"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "21"
     },
-    "moveIds": [3679,
+    "moveIds": [
+      3679,
       3680,
       3681,
       3682,
@@ -4481,17 +4479,17 @@
       3734
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3787,
     "name": "Darli Dagger",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"23"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "23"
     },
-    "moveIds": [3736,
+    "moveIds": [
+      3736,
       3737,
       3738,
       3739,
@@ -4544,17 +4542,17 @@
       3786
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3837,
     "name": "Dolores",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"23"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "23"
     },
-    "moveIds": [3788,
+    "moveIds": [
+      3788,
       3789,
       3790,
       3791,
@@ -4605,17 +4603,17 @@
       3836
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3916,
     "name": "Duo Lon",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [3838,
+    "moveIds": [
+      3838,
       3839,
       3840,
       3841,
@@ -4695,17 +4693,17 @@
       3915
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 3964,
     "name": "Elisabeth",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [3917,
+    "moveIds": [
+      3917,
       3918,
       3919,
       3920,
@@ -4754,17 +4752,17 @@
       3963
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4042,
     "name": "Gato",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [3965,
+    "moveIds": [
+      3965,
       3966,
       3967,
       3968,
@@ -4843,17 +4841,17 @@
       4041
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4105,
     "name": "Geese",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "22"
     },
-    "moveIds": [4043,
+    "moveIds": [
+      4043,
       4044,
       4045,
       4046,
@@ -4917,17 +4915,17 @@
       4104
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4169,
     "name": "Goenitz",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [4106,
+    "moveIds": [
+      4106,
       4107,
       4108,
       4109,
@@ -4992,17 +4990,17 @@
       4168
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4225,
     "name": "Haohmaru",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [4170,
+    "moveIds": [
+      4170,
       4171,
       4172,
       4173,
@@ -5059,17 +5057,17 @@
       4224
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4273,
     "name": "Heidern",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [4226,
+    "moveIds": [
+      4226,
       4227,
       4228,
       4229,
@@ -5118,17 +5116,17 @@
       4272
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4339,
     "name": "Hinako",
     "attributes": {
-      "Hop":"40",
-      "Jump":"46",
-      "Backdash":"23"
+      "Hop": "40",
+      "Jump": "46",
+      "Backdash": "23"
     },
-    "moveIds": [4274,
+    "moveIds": [
+      4274,
       4275,
       4276,
       4277,
@@ -5195,17 +5193,17 @@
       4338
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4401,
     "name": "Iori",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22 (*19)"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22 (*19)"
     },
-    "moveIds": [4340,
+    "moveIds": [
+      4340,
       4341,
       4342,
       4343,
@@ -5268,17 +5266,17 @@
       4400
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4401,
     "name": "Iori",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22 (*19)"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22 (*19)"
     },
-    "moveIds": [4340,
+    "moveIds": [
+      4340,
       4341,
       4342,
       4343,
@@ -5341,17 +5339,17 @@
       4400
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4465,
     "name": "Isla",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [4402,
+    "moveIds": [
+      4402,
       4403,
       4404,
       4405,
@@ -5416,17 +5414,17 @@
       4464
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4516,
     "name": "Joe",
     "attributes": {
-      "Hop":"33",
-      "Jump":"41",
-      "Backdash":"21"
+      "Hop": "33",
+      "Jump": "41",
+      "Backdash": "21"
     },
-    "moveIds": [4466,
+    "moveIds": [
+      4466,
       4467,
       4468,
       4469,
@@ -5478,17 +5476,17 @@
       4515
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4587,
     "name": "K'",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [4517,
+    "moveIds": [
+      4517,
       4518,
       4519,
       4520,
@@ -5560,17 +5558,17 @@
       4586
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4657,
     "name": "Kim",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [4588,
+    "moveIds": [
+      4588,
       4589,
       4590,
       4591,
@@ -5641,17 +5639,17 @@
       4656
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4703,
     "name": "King",
     "attributes": {
-      "Hop":"35",
-      "Jump":"42",
-      "Backdash":"20"
+      "Hop": "35",
+      "Jump": "42",
+      "Backdash": "20"
     },
-    "moveIds": [4658,
+    "moveIds": [
+      4658,
       4659,
       4660,
       4661,
@@ -5698,17 +5696,17 @@
       4702
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4752,
     "name": "King of Dinosaurs",
     "attributes": {
-      "Hop":"35",
-      "Jump":"40",
-      "Backdash":"28"
+      "Hop": "35",
+      "Jump": "40",
+      "Backdash": "28"
     },
-    "moveIds": [4704,
+    "moveIds": [
+      4704,
       4705,
       4706,
       4707,
@@ -5758,17 +5756,17 @@
       4751
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4795,
     "name": "Krohnen",
     "attributes": {
-      "Hop":"32",
-      "Jump":"42",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "42",
+      "Backdash": "23"
     },
-    "moveIds": [4753,
+    "moveIds": [
+      4753,
       4754,
       4755,
       4756,
@@ -5812,17 +5810,17 @@
       4794
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4847,
     "name": "Kukri",
     "attributes": {
-      "Hop":"32",
-      "Jump":"42",
-      "Backdash":"21"
+      "Hop": "32",
+      "Jump": "42",
+      "Backdash": "21"
     },
-    "moveIds": [4796,
+    "moveIds": [
+      4796,
       4797,
       4798,
       4799,
@@ -5875,17 +5873,17 @@
       4846
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4900,
     "name": "Kula",
     "attributes": {
-      "Hop":"32",
-      "Jump":"43",
-      "Backdash":"21"
+      "Hop": "32",
+      "Jump": "43",
+      "Backdash": "21"
     },
-    "moveIds": [4848,
+    "moveIds": [
+      4848,
       4849,
       4850,
       4851,
@@ -5939,17 +5937,17 @@
       4899
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 4969,
     "name": "Kyo",
     "attributes": {
-      "Hop":"32",
-      "Jump":"43",
-      "Backdash":"24 (*25~21)"
+      "Hop": "32",
+      "Jump": "43",
+      "Backdash": "24 (*25~21)"
     },
-    "moveIds": [4901,
+    "moveIds": [
+      4901,
       4902,
       4903,
       4904,
@@ -6019,17 +6017,17 @@
       4968
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5024,
     "name": "Leona",
     "attributes": {
-      "Hop":"33",
-      "Jump":"43",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "43",
+      "Backdash": "22"
     },
-    "moveIds": [4970,
+    "moveIds": [
+      4970,
       4971,
       4972,
       4973,
@@ -6085,17 +6083,17 @@
       5023
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5070,
     "name": "Luong",
     "attributes": {
-      "Hop":"35",
-      "Jump":"45",
-      "Backdash":"22"
+      "Hop": "35",
+      "Jump": "45",
+      "Backdash": "22"
     },
-    "moveIds": [5025,
+    "moveIds": [
+      5025,
       5026,
       5027,
       5028,
@@ -6142,17 +6140,17 @@
       5069
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5122,
     "name": "Mai",
     "attributes": {
-      "Hop":"33",
-      "Jump":"43",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "43",
+      "Backdash": "22"
     },
-    "moveIds": [5071,
+    "moveIds": [
+      5071,
       5072,
       5073,
       5074,
@@ -6205,17 +6203,17 @@
       5121
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5169,
     "name": "Maxima",
     "attributes": {
-      "Hop":"35",
-      "Jump":"41",
-      "Backdash":"21"
+      "Hop": "35",
+      "Jump": "41",
+      "Backdash": "21"
     },
-    "moveIds": [5123,
+    "moveIds": [
+      5123,
       5124,
       5125,
       5126,
@@ -6263,17 +6261,17 @@
       5168
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5169,
     "name": "Maxima",
     "attributes": {
-      "Hop":"35",
-      "Jump":"41",
-      "Backdash":"21"
+      "Hop": "35",
+      "Jump": "41",
+      "Backdash": "21"
     },
-    "moveIds": [5123,
+    "moveIds": [
+      5123,
       5124,
       5125,
       5126,
@@ -6321,17 +6319,17 @@
       5168
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5225,
     "name": "Meitenkun",
     "attributes": {
-      "Hop":"34",
-      "Jump":"44",
-      "Backdash":"23"
+      "Hop": "34",
+      "Jump": "44",
+      "Backdash": "23"
     },
-    "moveIds": [5170,
+    "moveIds": [
+      5170,
       5171,
       5172,
       5173,
@@ -6388,17 +6386,17 @@
       5224
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5290,
     "name": "Najd",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5226,
+    "moveIds": [
+      5226,
       5227,
       5228,
       5229,
@@ -6464,17 +6462,17 @@
       5289
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5352,
     "name": "Nakoruru",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [5291,
+    "moveIds": [
+      5291,
       5292,
       5293,
       5294,
@@ -6537,17 +6535,17 @@
       5351
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5352,
     "name": "Nakoruru",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [5291,
+    "moveIds": [
+      5291,
       5292,
       5293,
       5294,
@@ -6610,17 +6608,17 @@
       5351
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5404,
     "name": "O. Chris",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5353,
+    "moveIds": [
+      5353,
       5354,
       5355,
       5356,
@@ -6673,17 +6671,17 @@
       5403
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5456,
     "name": "O. Shermie",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5405,
+    "moveIds": [
+      5405,
       5406,
       5407,
       5408,
@@ -6736,17 +6734,17 @@
       5455
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5505,
     "name": "O. Yashiro",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5457,
+    "moveIds": [
+      5457,
       5458,
       5459,
       5460,
