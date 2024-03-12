@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "304811287864",
+    "project_id": "kofero-396718",
+    "storage_bucket": "kofero-396718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304811287864:android:c290398a3afc6c6597cdcd",
+        "android_client_info": {
+          "package_name": "ro.kofe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy_aQ0GE7LhPEWrRF2YiZVLGKap2zUGes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

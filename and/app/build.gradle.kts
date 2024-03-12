@@ -3,6 +3,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 kotlin {
@@ -71,13 +73,14 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("io.ktor:ktor-client-okhttp:2.3.7")
     implementation("io.ktor:ktor-client-core:2.3.7")
-   // implementation("com.google.android.gms:play-services-ads:22.0.0")
-
-
+    implementation("com.google.android.gms:play-services-ads:23.0.0")
     implementation("com.google.code.gson:gson:2.8.9")
     implementation(project(":model"))
     implementation(project(":presenter"))
     implementation("com.squareup.okhttp3:okhttp:4.9.1")
+    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-crashlytics")
 
     implementation("io.arrow-kt:arrow-core:1.2.0")
     implementation("io.arrow-kt:arrow-fx-coroutines:1.2.0")

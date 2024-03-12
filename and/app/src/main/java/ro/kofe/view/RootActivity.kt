@@ -1,20 +1,27 @@
 package ro.kofe.view
 
 import android.os.Bundle
+import android.util.DisplayMetrics
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import dagger.hilt.android.AndroidEntryPoint
 import ro.kofe.model.ViewTag
 import ro.kofe.ui.CharScreen
@@ -32,8 +39,28 @@ class RootActivity : ComponentActivity() {
                 KoferoApp()
             }
         }
+        MobileAds.initialize(this)
     }
 }
+
+
+
+
+@Composable
+fun AdmobBanner(modifier: Modifier = Modifier) {
+    AndroidView(
+        modifier = modifier.fillMaxWidth(),
+        factory = { context ->
+            AdView(context).apply {
+                setAdSize(AdSize.BANNER)
+                adUnitId = "ca-app-pub-3940256099942544~3347511713"
+                loadAd(AdRequest.Builder().build())
+            }
+        }
+    )
+}
+
+
 
 @Composable
 fun KoferoApp(
@@ -54,7 +81,7 @@ fun KoferoApp(
     Scaffold(topBar = {
         KoferoAppBar(appBar)
     }, bottomBar = {
-        
+        AdmobBanner()
     }) { innerPadding ->
         NavHost(
             navController = navController,

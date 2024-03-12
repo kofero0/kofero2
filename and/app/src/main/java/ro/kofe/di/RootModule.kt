@@ -59,7 +59,7 @@ object RootModule {
 
     @Provides
     @UrlPrefix
-    fun provideUrlPrefix(): String = "http://10.0.2.2:8080"
+    fun provideUrlPrefix(): String = "https://kofero.org"
 
     @Provides
     fun provideGson(): Gson = Gson()
