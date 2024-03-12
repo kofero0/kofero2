@@ -43,23 +43,6 @@
     "iconUrl": "https://img.fae.ro/41a199.png"
   },
   {
-    "uid": 1829,
-    "name": "Tekken 7",
-    "charIds": [
-      1819,
-      1820
-    ],
-    "iconUrl": "https://img.fae.ro/a9222a.png"
-  },
-  {
-    "uid": 1830,
-    "name": "KOF XIV",
-    "charIds": [
-      10
-    ],
-    "iconUrl": "https://img.fae.ro/81f2b6.png"
-  },
-  {
     "uid": 1831,
     "name": "KOF XV",
     "charIds": [
@@ -76,7 +59,6 @@
       3678,
       3735,
       3787,
-      3837,
       3916,
       3964,
       4042,

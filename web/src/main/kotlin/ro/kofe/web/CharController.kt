@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import ro.kofe.model.Character
+import ro.kofe.model.Move
 import java.io.File
+import java.io.InputStream
 
 
 @RestController
@@ -20,23 +22,21 @@ class CharController {
             addModule(kotlinModule())
         }
     }
-    private val file: File by lazy {
-        ClassPathResource("data/char.json").file
+    private val stream: InputStream by lazy {
+        ClassPathResource("data/char.json").inputStream
     }
     private val list: List<Character> by lazy {
         mapper.readValue(
-            file.readText(), mapper.typeFactory
+            stream.bufferedReader().readText(), mapper.typeFactory
                 .constructCollectionType(MutableList::class.java, Character::class.java)
         )
     }
 
     @PutMapping(CHAR_PATH)
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
-        val ret = ArrayList<Character>()
-        run breaking@{
-            list.forEach { char ->
-                if (uids.contains(char.uid)) ret.add(char)
-                if (ret.size == uids.size) return@breaking
+        val ret = ArrayList<Character>().apply{
+            uids.forEach {uid ->
+                add(list.first { uid == it.uid })
             }
         }
         return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)

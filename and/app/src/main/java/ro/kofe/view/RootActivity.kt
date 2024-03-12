@@ -53,6 +53,8 @@ fun KoferoApp(
 
     Scaffold(topBar = {
         KoferoAppBar(appBar)
+    }, bottomBar = {
+        
     }) { innerPadding ->
         NavHost(
             navController = navController,

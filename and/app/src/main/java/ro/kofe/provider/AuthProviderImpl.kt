@@ -1,6 +1,7 @@
 package ro.kofe.provider
 
 import android.content.Context
+import arrow.core.Either
 import arrow.core.raise.either
 import com.google.gson.Gson
 import kotlinx.coroutines.future.await
@@ -8,6 +9,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import ro.kofe.model.HttpError
+import ro.kofe.model.ProviderError
 import ro.kofe.model.authDelimiter
 import ro.kofe.model.authPrefix
 import ro.kofe.model.request.RegisterAuthRequest
@@ -61,6 +63,10 @@ class AuthProviderImpl(
                 }
             }
         }
+    }
+
+    override fun delete() = either<ProviderError, Unit> {
+        file.writeText("")
     }
 
     companion object {

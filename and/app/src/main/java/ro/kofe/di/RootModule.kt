@@ -11,6 +11,9 @@ import okhttp3.OkHttpClient
 import ro.kofe.AuthInterceptor
 import ro.kofe.LoggingInterceptor
 import ro.kofe.map.RequestMapper
+import ro.kofe.model.Character
+import ro.kofe.model.Game
+import ro.kofe.model.Move
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.HttpClientProvider
 import ro.kofe.presenter.ipv.root.*
@@ -20,6 +23,7 @@ import ro.kofe.presenter.provider.DiskAccessor
 import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
+import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.provider.StatusProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
@@ -101,8 +105,20 @@ object RootModule {
 
     @Provides
     fun provideRootPresenter(
-        logger: LoggingProvider, provider: StatusProvider
-    ): RootPresenter = RootPresenterImpl(provider, logger)
+        loggingProvider: LoggingProvider,
+        statusProvider: StatusProvider,
+        authProvider: AuthProvider,
+        gameProvider: Provider<Game>,
+        charProvider: Provider<Character>,
+        moveProvider: Provider<Move>
+    ): RootPresenter = RootPresenterImpl(
+        statusProvider,
+        authProvider,
+        gameProvider,
+        charProvider,
+        moveProvider,
+        loggingProvider
+        )
 
     @Provides
     fun provideRootInteractor(
