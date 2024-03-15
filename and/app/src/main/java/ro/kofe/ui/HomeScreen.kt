@@ -1,5 +1,6 @@
 package ro.kofe.ui
 
+import android.content.res.Resources
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -20,7 +21,10 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
+import ro.kofe.R
 import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.model.ViewTag
@@ -44,7 +48,7 @@ fun HomeScreen(
 
     LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 200.dp)){
         item{
-            RowItem(title = "Sort", image = null) {
+            RowItem(title = "Sort", vector = ImageVector.vectorResource(R.drawable.sort)) {
 
             }
         }
@@ -68,6 +72,16 @@ fun HomeScreen(
                     viewModel.gamePressed(games[it])
                     onNavigate(ViewTag.GAME_VIEW, games[it].uid, null)
                 }
+            }
+        }
+        item{
+            RowItem(title = "Acknowledgements", vector = ImageVector.vectorResource(R.drawable.attribution)){
+
+            }
+        }
+        item{
+            RowItem(title = "About", vector = ImageVector.vectorResource(R.drawable.info)) {
+
             }
         }
     }
