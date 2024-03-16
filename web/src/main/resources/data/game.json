@@ -2,6 +2,7 @@
   {
     "uid": 1828,
     "name": "KOF XIII",
+    "date": 0,
     "charIds": [
       1783,
       1784,
@@ -45,6 +46,7 @@
   {
     "uid": 1831,
     "name": "KOF XV",
+    "date": 0,
     "charIds": [
       3126,
       3188,
@@ -110,6 +112,7 @@
   {
     "uid": 1892,
     "name": "Street Fighter 6",
+    "date": 0,
     "charIds": [
       1893,
       1958,
@@ -134,6 +137,7 @@
   {
     "uid": 6440,
     "name": "Tekken 8",
+    "date": 0,
     "charIds": [6610,
       6735,
       6900,
