@@ -8,6 +8,7 @@
       "other": "987",
       "real name": "Mcguyver"
     },
+    "date": 0,
     "moveIds": [
       0,
       1,
@@ -64,6 +65,7 @@
     "uid": 1784,
     "name": "EX Kyo",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       48,
       1,
@@ -140,6 +142,7 @@
     "uid": 1785,
     "name": "Benimaru",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       116,
       117,
@@ -199,6 +202,7 @@
     "uid": 1786,
     "name": "Daimon",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       168,
       169,
@@ -250,6 +254,7 @@
     "uid": 1787,
     "name": "Terry",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       211,
       1,
@@ -302,6 +307,7 @@
     "uid": 1788,
     "name": "Andy",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       255,
       256,
@@ -354,6 +360,7 @@
     "uid": 1789,
     "name": "Joe",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       299,
       300,
@@ -408,6 +415,7 @@
     "uid": 1790,
     "name": "Billy",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       345,
       346,
@@ -461,6 +469,7 @@
     "uid": 1791,
     "name": "Ash",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       390,
       300,
@@ -516,6 +525,7 @@
     "uid": 1792,
     "name": "Saiki",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       438,
       439,
@@ -570,6 +580,7 @@
     "uid": 1793,
     "name": "Ryo",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       484,
       485,
@@ -623,6 +634,7 @@
     "uid": 1794,
     "name": "Robert",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       529,
       530,
@@ -684,6 +696,7 @@
     "uid": 1795,
     "name": "Takuma",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       529,
       584,
@@ -737,6 +750,7 @@
     "uid": 1796,
     "name": "Mr. Karate",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       211,
       629,
@@ -799,6 +813,7 @@
     "uid": 1797,
     "name": "Iori",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       168,
       684,
@@ -855,6 +870,7 @@
     "uid": 1798,
     "name": "EX Iori",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       168,
       732,
@@ -923,6 +939,7 @@
     "uid": 1799,
     "name": "Mature",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       791,
       792,
@@ -981,6 +998,7 @@
     "uid": 1800,
     "name": "Vice",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       211,
       842,
@@ -1034,6 +1052,7 @@
     "uid": 1801,
     "name": "Elisabeth",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       48,
       1,
@@ -1089,6 +1108,7 @@
     "uid": 1802,
     "name": "Duo Lon",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       116,
       934,
@@ -1154,6 +1174,7 @@
     "uid": 1803,
     "name": "Shen",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       990,
       991,
@@ -1207,6 +1228,7 @@
     "uid": 1804,
     "name": "Kim",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       0,
       1036,
@@ -1261,6 +1283,7 @@
     "uid": 1805,
     "name": "Hwa Jai",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       0,
       439,
@@ -1328,6 +1351,7 @@
     "uid": 1806,
     "name": "Raiden",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       791,
       1821,
@@ -1380,6 +1404,7 @@
     "uid": 1807,
     "name": "Mai",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1176,
       390,
@@ -1434,6 +1459,7 @@
     "uid": 1808,
     "name": "King",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1220,
       1221,
@@ -1485,6 +1511,7 @@
     "uid": 1809,
     "name": "Yuri",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       390,
       485,
@@ -1557,8 +1584,9 @@
   },
   {
     "uid": 1810,
-    "name": "K'",
+    "name": "K\u0027",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       48,
       530,
@@ -1627,6 +1655,7 @@
     "uid": 1811,
     "name": "Kula",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1394,
       1395,
@@ -1680,6 +1709,7 @@
     "uid": 1812,
     "name": "Maxima",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1439,
       1440,
@@ -1730,6 +1760,7 @@
     "uid": 1813,
     "name": "Athena",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1483,
       1036,
@@ -1787,6 +1818,7 @@
     "uid": 1814,
     "name": "Kensou",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       211,
       300,
@@ -1856,6 +1888,7 @@
     "uid": 1815,
     "name": "Chin",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       48,
       685,
@@ -1924,6 +1957,7 @@
     "uid": 1816,
     "name": "Ralf",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       116,
       1653,
@@ -1978,6 +2012,7 @@
     "uid": 1817,
     "name": "Clark",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       211,
       1700,
@@ -2024,6 +2059,7 @@
     "uid": 1818,
     "name": "Leona",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1737,
       1,
@@ -2077,6 +2113,7 @@
     "uid": 1819,
     "name": "Heihachi",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1737,
       1,
@@ -2130,6 +2167,7 @@
     "uid": 1820,
     "name": "Kazuya",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1737,
       1,
@@ -2183,6 +2221,7 @@
     "uid": 1893,
     "name": "A.K.I.",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1832,
       1833,
@@ -2251,6 +2290,7 @@
     "uid": 1958,
     "name": "Blanka",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1894,
       1895,
@@ -2323,6 +2363,7 @@
     "uid": 2031,
     "name": "Cammy",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       1959,
       1960,
@@ -2403,6 +2444,7 @@
     "uid": 2104,
     "name": "Chun-Li",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2032,
       2033,
@@ -2483,6 +2525,7 @@
     "uid": 2178,
     "name": "Dee-Jay",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2105,
       2106,
@@ -2564,6 +2607,7 @@
     "uid": 2179,
     "name": "Dhalsim",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2180,
       2181,
@@ -2634,6 +2678,7 @@
     "uid": 2242,
     "name": "E. Honda",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2243,
       2244,
@@ -2703,6 +2748,7 @@
     "uid": 2304,
     "name": "Guile",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2243,
       2244,
@@ -2769,6 +2815,7 @@
     "uid": 2301,
     "name": "Jamie",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2243,
       2244,
@@ -2843,9 +2890,10 @@
     "iconUrl": "https://img.fae.ro/4b612a.png"
   },
   {
-    "name": "JP",
     "uid": 2373,
+    "name": "JP",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2312,
       2313,
@@ -2912,9 +2960,10 @@
     "iconUrl": "https://img.fae.ro/bfcd26.png"
   },
   {
-    "name": "Juri",
     "uid": 2374,
+    "name": "Juri",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2375,
       2376,
@@ -2983,6 +3032,7 @@
     "uid": 2506,
     "name": "Ken",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2435,
       2436,
@@ -3062,6 +3112,7 @@
     "uid": 2586,
     "name": "Kimberly",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2507,
       2508,
@@ -3149,6 +3200,7 @@
     "uid": 2657,
     "name": "Lily",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2587,
       2588,
@@ -3227,6 +3279,7 @@
     "uid": 2658,
     "name": "Luke",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2659,
       2660,
@@ -3302,6 +3355,7 @@
     "uid": 2726,
     "name": "Manon",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2727,
       2728,
@@ -3366,6 +3420,7 @@
     "uid": 2783,
     "name": "Marisa",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2784,
       2785,
@@ -3460,6 +3515,7 @@
     "uid": 2870,
     "name": "Rashid",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2871,
       2872,
@@ -3543,6 +3599,7 @@
     "uid": 2946,
     "name": "Ryu",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       2947,
       2948,
@@ -3617,6 +3674,7 @@
     "uid": 3013,
     "name": "Zangief",
     "attributes": {},
+    "date": 0,
     "moveIds": [
       3014,
       3015,
@@ -3688,10 +3746,11 @@
     "uid": 3126,
     "name": "Andy",
     "attributes": {
-      "Hop":"32",
-      "Jump":"44",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "44",
+      "Backdash": "22"
     },
+    "date": 0,
     "moveIds": [
       3077,
       3078,
@@ -3754,11 +3813,13 @@
     "uid": 3188,
     "name": "Angel",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22 (*19)"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22 (*19)"
     },
-    "moveIds": [3127,
+    "date": 0,
+    "moveIds": [
+      3127,
       3128,
       3129,
       3130,
@@ -3826,11 +3887,13 @@
     "uid": 3233,
     "name": "Antonov",
     "attributes": {
-      "Hop":"33",
-      "Jump":"40",
-      "Backdash":"19"
+      "Hop": "33",
+      "Jump": "40",
+      "Backdash": "19"
     },
-    "moveIds": [3189,
+    "date": 0,
+    "moveIds": [
+      3189,
       3190,
       3191,
       3192,
@@ -3881,11 +3944,13 @@
     "uid": 3290,
     "name": "Ash",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [3234,
+    "date": 0,
+    "moveIds": [
+      3234,
       3235,
       3236,
       3237,
@@ -3943,16 +4008,16 @@
       3289
     ],
     "iconUrl": "https://img.fae.ro/222b39.png"
-  }
-,
+  },
   {
     "uid": 3351,
     "name": "Athena",
     "attributes": {
-      "Hop":"37",
-      "Jump":"46",
-      "Backdash":"22 (*19)"
+      "Hop": "37",
+      "Jump": "46",
+      "Backdash": "22 (*19)"
     },
+    "date": 0,
     "moveIds": [
       3291,
       3292,
@@ -4016,16 +4081,16 @@
       3350
     ],
     "iconUrl": "https://img.fae.ro/3d683d.png"
-  }
-,
+  },
   {
     "uid": 3401,
     "name": "B. Jenet",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
+    "date": 0,
     "moveIds": [
       3352,
       3353,
@@ -4078,16 +4143,16 @@
       3400
     ],
     "iconUrl": "https://img.fae.ro/a16547.png"
-  }
-,
+  },
   {
     "uid": 3454,
     "name": "Benimaru",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
+    "date": 0,
     "moveIds": [
       3402,
       3403,
@@ -4143,16 +4208,16 @@
       3453
     ],
     "iconUrl": "https://img.fae.ro/290cf4.png"
-  }
-,
+  },
   {
     "uid": 3507,
     "name": "Billy",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "22"
     },
+    "date": 0,
     "moveIds": [
       3455,
       3456,
@@ -4208,16 +4273,16 @@
       3506
     ],
     "iconUrl": "https://img.fae.ro/4db798.png"
-  }
-,
+  },
   {
     "uid": 3560,
     "name": "Blue Mary",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"23"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "23"
     },
+    "date": 0,
     "moveIds": [
       3508,
       3509,
@@ -4273,17 +4338,18 @@
       3559
     ],
     "iconUrl": "https://img.fae.ro/ec1a26.png"
-  }
-,
+  },
   {
     "uid": 3626,
     "name": "Chizuru",
     "attributes": {
-      "Hop":"37",
-      "Jump":"46",
-      "Backdash":"23"
+      "Hop": "37",
+      "Jump": "46",
+      "Backdash": "23"
     },
-    "moveIds": [3561,
+    "date": 0,
+    "moveIds": [
+      3561,
       3562,
       3563,
       3564,
@@ -4350,17 +4416,18 @@
       3625
     ],
     "iconUrl": "https://img.fae.ro/595c2f.png"
-  }
-,
+  },
   {
     "uid": 3678,
     "name": "Chris",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [3627,
+    "date": 0,
+    "moveIds": [
+      3627,
       3628,
       3629,
       3630,
@@ -4413,17 +4480,18 @@
       3677
     ],
     "iconUrl": "https://img.fae.ro/1a1a2b.png"
-  }
-,
+  },
   {
     "uid": 3735,
     "name": "Clark",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"21"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "21"
     },
-    "moveIds": [3679,
+    "date": 0,
+    "moveIds": [
+      3679,
       3680,
       3681,
       3682,
@@ -4481,17 +4549,18 @@
       3734
     ],
     "iconUrl": "https://img.fae.ro/fa2679.png"
-  }
-,
+  },
   {
     "uid": 3787,
     "name": "Darli Dagger",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"23"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "23"
     },
-    "moveIds": [3736,
+    "date": 0,
+    "moveIds": [
+      3736,
       3737,
       3738,
       3739,
@@ -4544,17 +4613,18 @@
       3786
     ],
     "iconUrl": "https://img.fae.ro/c75990.png"
-  }
-,
+  },
   {
     "uid": 3837,
     "name": "Dolores",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"23"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "23"
     },
-    "moveIds": [3788,
+    "date": 0,
+    "moveIds": [
+      3788,
       3789,
       3790,
       3791,
@@ -4605,17 +4675,18 @@
       3836
     ],
     "iconUrl": "https://img.fae.ro/1fd210.png"
-  }
-,
+  },
   {
     "uid": 3916,
     "name": "Duo Lon",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [3838,
+    "date": 0,
+    "moveIds": [
+      3838,
       3839,
       3840,
       3841,
@@ -4695,17 +4766,18 @@
       3915
     ],
     "iconUrl": "https://img.fae.ro/b11b7f.png"
-  }
-,
+  },
   {
     "uid": 3964,
     "name": "Elisabeth",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [3917,
+    "date": 0,
+    "moveIds": [
+      3917,
       3918,
       3919,
       3920,
@@ -4754,17 +4826,18 @@
       3963
     ],
     "iconUrl": "https://img.fae.ro/2a6f29.png"
-  }
-,
+  },
   {
     "uid": 4042,
     "name": "Gato",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [3965,
+    "date": 0,
+    "moveIds": [
+      3965,
       3966,
       3967,
       3968,
@@ -4843,17 +4916,18 @@
       4041
     ],
     "iconUrl": "https://img.fae.ro/3aa902.png"
-  }
-,
+  },
   {
     "uid": 4105,
     "name": "Geese",
     "attributes": {
-      "Hop":"33",
-      "Jump":"42",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "42",
+      "Backdash": "22"
     },
-    "moveIds": [4043,
+    "date": 0,
+    "moveIds": [
+      4043,
       4044,
       4045,
       4046,
@@ -4917,17 +4991,18 @@
       4104
     ],
     "iconUrl": "https://img.fae.ro/d9eddd.png"
-  }
-,
+  },
   {
     "uid": 4169,
     "name": "Goenitz",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [4106,
+    "date": 0,
+    "moveIds": [
+      4106,
       4107,
       4108,
       4109,
@@ -4992,17 +5067,18 @@
       4168
     ],
     "iconUrl": "https://img.fae.ro/e708c4.png"
-  }
-,
+  },
   {
     "uid": 4225,
     "name": "Haohmaru",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [4170,
+    "date": 0,
+    "moveIds": [
+      4170,
       4171,
       4172,
       4173,
@@ -5059,17 +5135,18 @@
       4224
     ],
     "iconUrl": "https://img.fae.ro/9b3eb5.png"
-  }
-,
+  },
   {
     "uid": 4273,
     "name": "Heidern",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [4226,
+    "date": 0,
+    "moveIds": [
+      4226,
       4227,
       4228,
       4229,
@@ -5118,17 +5195,18 @@
       4272
     ],
     "iconUrl": "https://img.fae.ro/be6aee.png"
-  }
-,
+  },
   {
     "uid": 4339,
     "name": "Hinako",
     "attributes": {
-      "Hop":"40",
-      "Jump":"46",
-      "Backdash":"23"
+      "Hop": "40",
+      "Jump": "46",
+      "Backdash": "23"
     },
-    "moveIds": [4274,
+    "date": 0,
+    "moveIds": [
+      4274,
       4275,
       4276,
       4277,
@@ -5200,11 +5278,13 @@
     "uid": 4401,
     "name": "Iori",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22 (*19)"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22 (*19)"
     },
-    "moveIds": [4340,
+    "date": 0,
+    "moveIds": [
+      4340,
       4341,
       4342,
       4343,
@@ -5267,17 +5347,18 @@
       4400
     ],
     "iconUrl": "https://img.fae.ro/73bf34.png"
-  }
-,
+  },
   {
     "uid": 4465,
     "name": "Isla",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [4402,
+    "date": 0,
+    "moveIds": [
+      4402,
       4403,
       4404,
       4405,
@@ -5342,17 +5423,18 @@
       4464
     ],
     "iconUrl": "https://img.fae.ro/7d6e54.png"
-  }
-,
+  },
   {
     "uid": 4516,
     "name": "Joe",
     "attributes": {
-      "Hop":"33",
-      "Jump":"41",
-      "Backdash":"21"
+      "Hop": "33",
+      "Jump": "41",
+      "Backdash": "21"
     },
-    "moveIds": [4466,
+    "date": 0,
+    "moveIds": [
+      4466,
       4467,
       4468,
       4469,
@@ -5404,17 +5486,18 @@
       4515
     ],
     "iconUrl": "https://img.fae.ro/8ac9e3.png"
-  }
-,
+  },
   {
     "uid": 4587,
-    "name": "K'",
+    "name": "K\u0027",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [4517,
+    "date": 0,
+    "moveIds": [
+      4517,
       4518,
       4519,
       4520,
@@ -5486,17 +5569,18 @@
       4586
     ],
     "iconUrl": "https://img.fae.ro/83a7a4.png"
-  }
-,
+  },
   {
     "uid": 4657,
     "name": "Kim",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [4588,
+    "date": 0,
+    "moveIds": [
+      4588,
       4589,
       4590,
       4591,
@@ -5567,17 +5651,18 @@
       4656
     ],
     "iconUrl": "https://img.fae.ro/1cc8f6.png"
-  }
-,
+  },
   {
     "uid": 4703,
     "name": "King",
     "attributes": {
-      "Hop":"35",
-      "Jump":"42",
-      "Backdash":"20"
+      "Hop": "35",
+      "Jump": "42",
+      "Backdash": "20"
     },
-    "moveIds": [4658,
+    "date": 0,
+    "moveIds": [
+      4658,
       4659,
       4660,
       4661,
@@ -5624,17 +5709,18 @@
       4702
     ],
     "iconUrl": "https://img.fae.ro/21e6ee.png"
-  }
-,
+  },
   {
     "uid": 4752,
     "name": "King of Dinosaurs",
     "attributes": {
-      "Hop":"35",
-      "Jump":"40",
-      "Backdash":"28"
+      "Hop": "35",
+      "Jump": "40",
+      "Backdash": "28"
     },
-    "moveIds": [4704,
+    "date": 0,
+    "moveIds": [
+      4704,
       4705,
       4706,
       4707,
@@ -5684,17 +5770,18 @@
       4751
     ],
     "iconUrl": "https://img.fae.ro/2f474b.png"
-  }
-,
+  },
   {
     "uid": 4795,
     "name": "Krohnen",
     "attributes": {
-      "Hop":"32",
-      "Jump":"42",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "42",
+      "Backdash": "23"
     },
-    "moveIds": [4753,
+    "date": 0,
+    "moveIds": [
+      4753,
       4754,
       4755,
       4756,
@@ -5738,17 +5825,18 @@
       4794
     ],
     "iconUrl": "https://img.fae.ro/ea19c2.png"
-  }
-,
+  },
   {
     "uid": 4847,
     "name": "Kukri",
     "attributes": {
-      "Hop":"32",
-      "Jump":"42",
-      "Backdash":"21"
+      "Hop": "32",
+      "Jump": "42",
+      "Backdash": "21"
     },
-    "moveIds": [4796,
+    "date": 0,
+    "moveIds": [
+      4796,
       4797,
       4798,
       4799,
@@ -5801,17 +5889,18 @@
       4846
     ],
     "iconUrl": "https://img.fae.ro/d6e899.png"
-  }
-,
+  },
   {
     "uid": 4900,
     "name": "Kula",
     "attributes": {
-      "Hop":"32",
-      "Jump":"43",
-      "Backdash":"21"
+      "Hop": "32",
+      "Jump": "43",
+      "Backdash": "21"
     },
-    "moveIds": [4848,
+    "date": 0,
+    "moveIds": [
+      4848,
       4849,
       4850,
       4851,
@@ -5865,17 +5954,18 @@
       4899
     ],
     "iconUrl": "https://img.fae.ro/56d29b.png"
-  }
-,
+  },
   {
     "uid": 4969,
     "name": "Kyo",
     "attributes": {
-      "Hop":"32",
-      "Jump":"43",
-      "Backdash":"24 (*25~21)"
+      "Hop": "32",
+      "Jump": "43",
+      "Backdash": "24 (*25~21)"
     },
-    "moveIds": [4901,
+    "date": 0,
+    "moveIds": [
+      4901,
       4902,
       4903,
       4904,
@@ -5945,17 +6035,18 @@
       4968
     ],
     "iconUrl": "https://img.fae.ro/ecab22.png"
-  }
-,
+  },
   {
     "uid": 5024,
     "name": "Leona",
     "attributes": {
-      "Hop":"33",
-      "Jump":"43",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "43",
+      "Backdash": "22"
     },
-    "moveIds": [4970,
+    "date": 0,
+    "moveIds": [
+      4970,
       4971,
       4972,
       4973,
@@ -6011,17 +6102,18 @@
       5023
     ],
     "iconUrl": "https://img.fae.ro/2c2685.png"
-  }
-,
+  },
   {
     "uid": 5070,
     "name": "Luong",
     "attributes": {
-      "Hop":"35",
-      "Jump":"45",
-      "Backdash":"22"
+      "Hop": "35",
+      "Jump": "45",
+      "Backdash": "22"
     },
-    "moveIds": [5025,
+    "date": 0,
+    "moveIds": [
+      5025,
       5026,
       5027,
       5028,
@@ -6068,17 +6160,18 @@
       5069
     ],
     "iconUrl": "https://img.fae.ro/6204c0.png"
-  }
-,
+  },
   {
     "uid": 5122,
     "name": "Mai",
     "attributes": {
-      "Hop":"33",
-      "Jump":"43",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "43",
+      "Backdash": "22"
     },
-    "moveIds": [5071,
+    "date": 0,
+    "moveIds": [
+      5071,
       5072,
       5073,
       5074,
@@ -6131,17 +6224,18 @@
       5121
     ],
     "iconUrl": "https://img.fae.ro/51dac0.png"
-  }
-,
+  },
   {
     "uid": 5169,
     "name": "Maxima",
     "attributes": {
-      "Hop":"35",
-      "Jump":"41",
-      "Backdash":"21"
+      "Hop": "35",
+      "Jump": "41",
+      "Backdash": "21"
     },
-    "moveIds": [5123,
+    "date": 0,
+    "moveIds": [
+      5123,
       5124,
       5125,
       5126,
@@ -6189,17 +6283,18 @@
       5168
     ],
     "iconUrl": "https://img.fae.ro/dabe79.png"
-  }
-,
+  },
   {
     "uid": 5225,
     "name": "Meitenkun",
     "attributes": {
-      "Hop":"34",
-      "Jump":"44",
-      "Backdash":"23"
+      "Hop": "34",
+      "Jump": "44",
+      "Backdash": "23"
     },
-    "moveIds": [5170,
+    "date": 0,
+    "moveIds": [
+      5170,
       5171,
       5172,
       5173,
@@ -6256,17 +6351,18 @@
       5224
     ],
     "iconUrl": "https://img.fae.ro/977eb0.png"
-  }
-,
+  },
   {
     "uid": 5290,
     "name": "Najd",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5226,
+    "date": 0,
+    "moveIds": [
+      5226,
       5227,
       5228,
       5229,
@@ -6332,17 +6428,18 @@
       5289
     ],
     "iconUrl": "https://img.fae.ro/52667b.png"
-  }
-,
+  },
   {
     "uid": 5352,
     "name": "Nakoruru",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [5291,
+    "date": 0,
+    "moveIds": [
+      5291,
       5292,
       5293,
       5294,
@@ -6405,17 +6502,18 @@
       5351
     ],
     "iconUrl": "https://img.fae.ro/c203ff.png"
-  }
-,
+  },
   {
     "uid": 5352,
     "name": "Nakoruru",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "22"
     },
-    "moveIds": [5291,
+    "date": 0,
+    "moveIds": [
+      5291,
       5292,
       5293,
       5294,
@@ -6478,17 +6576,18 @@
       5351
     ],
     "iconUrl": "https://img.fae.ro/caa866.png"
-  }
-,
+  },
   {
     "uid": 5404,
     "name": "O. Chris",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5353,
+    "date": 0,
+    "moveIds": [
+      5353,
       5354,
       5355,
       5356,
@@ -6541,17 +6640,18 @@
       5403
     ],
     "iconUrl": "https://img.fae.ro/478bc0.png"
-  }
-,
+  },
   {
     "uid": 5456,
     "name": "O. Shermie",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5405,
+    "date": 0,
+    "moveIds": [
+      5405,
       5406,
       5407,
       5408,
@@ -6604,17 +6704,18 @@
       5455
     ],
     "iconUrl": "https://img.fae.ro/7b76b1.png"
-  }
-,
+  },
   {
     "uid": 5505,
     "name": "O. Yashiro",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5457,
+    "date": 0,
+    "moveIds": [
+      5457,
       5458,
       5459,
       5460,
@@ -6664,17 +6765,18 @@
       5504
     ],
     "iconUrl": "https://img.fae.ro/95f97a.png"
-  }
-,
+  },
   {
     "uid": 5556,
     "name": "Ralf",
     "attributes": {
-      "Hop":"33",
-      "Jump":"41",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "41",
+      "Backdash": "22"
     },
-    "moveIds": [5506,
+    "date": 0,
+    "moveIds": [
+      5506,
       5507,
       5508,
       5509,
@@ -6726,17 +6828,18 @@
       5555
     ],
     "iconUrl": "https://img.fae.ro/6ffd93.png"
-  }
-,
+  },
   {
     "uid": 5631,
     "name": "Ramon",
     "attributes": {
-      "Hop":"33",
-      "Jump":"41",
-      "Backdash":"22"
+      "Hop": "33",
+      "Jump": "41",
+      "Backdash": "22"
     },
-    "moveIds": [5557,
+    "date": 0,
+    "moveIds": [
+      5557,
       5558,
       5559,
       5560,
@@ -6812,17 +6915,18 @@
       5630
     ],
     "iconUrl": "https://img.fae.ro/3705e1.png"
-  }
-,
+  },
   {
     "uid": 5683,
     "name": "Robert",
     "attributes": {
-      "Hop":"33",
-      "Jump":"41",
-      "Backdash":"26"
+      "Hop": "33",
+      "Jump": "41",
+      "Backdash": "26"
     },
-    "moveIds": [5632,
+    "date": 0,
+    "moveIds": [
+      5632,
       5633,
       5634,
       5635,
@@ -6875,17 +6979,18 @@
       5682
     ],
     "iconUrl": "https://img.fae.ro/02b4b7.png"
-  }
-,
+  },
   {
     "uid": 5761,
     "name": "Rock",
     "attributes": {
-      "Hop":"33",
-      "Jump":"40",
-      "Backdash":"21"
+      "Hop": "33",
+      "Jump": "40",
+      "Backdash": "21"
     },
-    "moveIds": [5684,
+    "date": 0,
+    "moveIds": [
+      5684,
       5685,
       5686,
       5687,
@@ -6964,17 +7069,18 @@
       5760
     ],
     "iconUrl": "https://img.fae.ro/c0f39b.png"
-  }
-,
+  },
   {
     "uid": 5808,
     "name": "Rugal",
     "attributes": {
-      "Hop":"32",
-      "Jump":"43",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "43",
+      "Backdash": "23"
     },
-    "moveIds": [5762,
+    "date": 0,
+    "moveIds": [
+      5762,
       5763,
       5764,
       5765,
@@ -7022,17 +7128,18 @@
       5807
     ],
     "iconUrl": "https://img.fae.ro/0403b4.png"
-  }
-,
+  },
   {
     "uid": 5856,
     "name": "Ryo",
     "attributes": {
-      "Hop":"32",
-      "Jump":"39",
-      "Backdash":"22"
+      "Hop": "32",
+      "Jump": "39",
+      "Backdash": "22"
     },
-    "moveIds": [5809,
+    "date": 0,
+    "moveIds": [
+      5809,
       5810,
       5811,
       5812,
@@ -7081,17 +7188,18 @@
       5855
     ],
     "iconUrl": "https://img.fae.ro/e01915.png"
-  }
-,
+  },
   {
     "uid": 5907,
     "name": "Shermie",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5857,
+    "date": 0,
+    "moveIds": [
+      5857,
       5858,
       5859,
       5860,
@@ -7143,17 +7251,18 @@
       5906
     ],
     "iconUrl": "https://img.fae.ro/9c7109.png"
-  }
-,
+  },
   {
     "uid": 5966,
     "name": "Shingo",
     "attributes": {
-      "Hop":"32",
-      "Jump":"43",
-      "Backdash":"24"
+      "Hop": "32",
+      "Jump": "43",
+      "Backdash": "24"
     },
-    "moveIds": [5908,
+    "date": 0,
+    "moveIds": [
+      5908,
       5909,
       5910,
       5911,
@@ -7213,17 +7322,18 @@
       5965
     ],
     "iconUrl": "https://img.fae.ro/f9a36f.png"
-  }
-,
+  },
   {
     "uid": 6031,
     "name": "Shunei",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [5967,
+    "date": 0,
+    "moveIds": [
+      5967,
       5968,
       5969,
       5970,
@@ -7289,17 +7399,18 @@
       6030
     ],
     "iconUrl": "https://img.fae.ro/6165fa.png"
-  }
-,
+  },
   {
     "uid": 6084,
     "name": "Sylvie",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [6032,
+    "date": 0,
+    "moveIds": [
+      6032,
       6033,
       6034,
       6035,
@@ -7353,17 +7464,18 @@
       6083
     ],
     "iconUrl": "https://img.fae.ro/bb0fe6.png"
-  }
-,
+  },
   {
     "uid": 6137,
     "name": "Terry",
     "attributes": {
-      "Hop":"33",
-      "Jump":"41",
-      "Backdash":"21"
+      "Hop": "33",
+      "Jump": "41",
+      "Backdash": "21"
     },
-    "moveIds": [6085,
+    "date": 0,
+    "moveIds": [
+      6085,
       6086,
       6087,
       6088,
@@ -7417,17 +7529,18 @@
       6136
     ],
     "iconUrl": "https://img.fae.ro/63806f.png"
-  }
-,
+  },
   {
     "uid": 6217,
     "name": "Vanessa",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"21"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "21"
     },
-    "moveIds": [6138,
+    "date": 0,
+    "moveIds": [
+      6138,
       6139,
       6140,
       6141,
@@ -7508,17 +7621,18 @@
       6216
     ],
     "iconUrl": "https://img.fae.ro/425a51.png"
-  }
-,
+  },
   {
     "uid": 6270,
     "name": "Whip",
     "attributes": {
-      "Hop":"35",
-      "Jump":"42",
-      "Backdash":"21"
+      "Hop": "35",
+      "Jump": "42",
+      "Backdash": "21"
     },
-    "moveIds": [6218,
+    "date": 0,
+    "moveIds": [
+      6218,
       6219,
       6220,
       6221,
@@ -7572,17 +7686,18 @@
       6269
     ],
     "iconUrl": "https://img.fae.ro/b979c5.png"
-  }
-,
+  },
   {
     "uid": 6320,
     "name": "Yamazaki",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"26"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "26"
     },
-    "moveIds": [6271,
+    "date": 0,
+    "moveIds": [
+      6271,
       6272,
       6273,
       6274,
@@ -7633,17 +7748,18 @@
       6319
     ],
     "iconUrl": "https://img.fae.ro/f84499.png"
-  }
-,
+  },
   {
     "uid": 6371,
     "name": "Yashiro",
     "attributes": {
-      "Hop":"32",
-      "Jump":"40",
-      "Backdash":"23"
+      "Hop": "32",
+      "Jump": "40",
+      "Backdash": "23"
     },
-    "moveIds": [6321,
+    "date": 0,
+    "moveIds": [
+      6321,
       6322,
       6323,
       6324,
@@ -7695,17 +7811,18 @@
       6370
     ],
     "iconUrl": "https://img.fae.ro/27f23d.png"
-  }
-,
+  },
   {
     "uid": 6439,
     "name": "Yuri",
     "attributes": {
-      "Hop":"33",
-      "Jump":"40",
-      "Backdash":"19"
+      "Hop": "33",
+      "Jump": "40",
+      "Backdash": "19"
     },
-    "moveIds": [6372,
+    "date": 0,
+    "moveIds": [
+      6372,
       6373,
       6374,
       6375,
@@ -7774,18 +7891,19 @@
       6438
     ],
     "iconUrl": "https://img.fae.ro/4cea63.png"
-  }
-  ,
+  },
   {
     "uid": 6610,
     "name": "Alisa",
     "attributes": {
       "Heat": "Increased chip damage on chainsaw attacks. Can use f+2+3 to directly enter DBT",
-      "Heat Smash":	"Mid, i20~21, +8",
+      "Heat Smash": "Mid, i20~21, +8",
       "Heat Engagers": "1+23,2f+2,1uf+2DES.f+2,1,2",
       "Stances": "SBT (Boot) – f+3+4, DBT (Dual Boot) – DES.f+3, DES (Destructive Form) – d+1+2, BKP (Backup) – db+1"
     },
-    "moveIds": [6441,
+    "date": 0,
+    "moveIds": [
+      6441,
       6442,
       6443,
       6444,
@@ -7956,18 +8074,19 @@
       6609
     ],
     "iconUrl": "https://img.fae.ro/4aa309.png"
-  }
-,
+  },
   {
     "uid": 6735,
     "name": "Asuka",
     "attributes": {
       "Heat": "Can always utilise Naniwa Gusto",
-      "Heat Smash":	"Mid, i16, +10",
+      "Heat Smash": "Mid, i16, +10",
       "Heat Engagers": "f+1+2, d+2, db+12, SS.2, f+1+32",
       "Stances": "N/A"
     },
-    "moveIds": [6611,
+    "date": 0,
+    "moveIds": [
+      6611,
       6612,
       6613,
       6614,
@@ -8093,18 +8212,19 @@
       6734
     ],
     "iconUrl": "https://img.fae.ro/bb3c17.png"
-  }
-,
+  },
   {
     "uid": 6900,
     "name": "Azucena",
     "attributes": {
       "Heat": "Libertador Revolución can be used. (f+3+4), (3,2,F)\nNuevo Libertador can be used. (b+2,F), (b+1,1,2,F), (LIB.1,2,F)\nAllows the use of the powered up version of Libertador (f+3+4)",
-      "Heat Smash":	"Mid, i15~16, +6~-7",
+      "Heat Smash": "Mid, i15~16, +6~-7",
       "Heat Engagers": "f4,4, f1+2, b+3, LIB.2, d1+3, d2+4",
       "Stances": "LIB (Libertador) – f3+4\nBT (Backturn) – b3+4"
     },
-    "moveIds": [6736,
+    "date": 0,
+    "moveIds": [
+      6736,
       6737,
       6738,
       6739,
@@ -8270,18 +8390,19 @@
       6899
     ],
     "iconUrl": "https://img.fae.ro/9f32be.png"
-  }
-,
+  },
   {
     "uid": 7055,
     "name": "Bryan",
     "attributes": {
       "Heat": "Gains access to Snake Eyes moves.",
-      "Heat Smash":	"Mid, i18, -1 on hit, +9 on block (+17 if at wall)",
+      "Heat Smash": "Mid, i18, -1 on hit, +9 on block (+17 if at wall)",
       "Heat Engagers": "124, db+1+2, f,F+2, ss21 SLS.1+2",
       "Stances": "SLS (Slither Step) – qcf\nSWA (Sway) – qcb\nSNE (Snake Eyes) – 1+3+4"
     },
-    "moveIds": [6901,
+    "date": 0,
+    "moveIds": [
+      6901,
       6902,
       6903,
       6904,
@@ -8437,18 +8558,19 @@
       7054
     ],
     "iconUrl": "https://img.fae.ro/31d7f8.png"
-  }
-,
+  },
   {
     "uid": 7148,
     "name": "Claudio",
     "attributes": {
       "Heat": "\t\nCan always use Starburst (STB) moves",
-      "Heat Smash":	"Low, i18, -14",
+      "Heat Smash": "Low, i18, -14",
       "Heat Engagers": "3,2 2,1,2 b+4,2 uf+2 wr2",
       "Stances": "N/A"
     },
-    "moveIds": [7055,
+    "date": 0,
+    "moveIds": [
+      7055,
       7056,
       7057,
       7058,
@@ -8543,18 +8665,19 @@
       7147
     ],
     "iconUrl": "https://img.fae.ro/40470a.png"
-  }
-,
+  },
   {
     "uid": 7267,
     "name": "Devil Jin",
     "attributes": {
       "Heat": "Allows Annihilation Beam followups after certain moves\nCan perform EWGF without perfect input",
-      "Heat Smash":	"H.2+3 mid - i18-28 - +11 (MCR)\nH.MCR.2+3 throw - i20",
+      "Heat Smash": "H.2+3 mid - i18-28 - +11 (MCR)\nH.MCR.2+3 throw - i20",
       "Heat Engagers": "b+2,3 b+3 uf+4 f,F+2 MCR.2,2",
       "Stances": "FLY – 3+4\nCD (Crouch Dash) – f,n,d,df\nMCR (Mourning Crow) – f+3"
     },
-    "moveIds": [7149,
+    "date": 0,
+    "moveIds": [
+      7149,
       7150,
       7151,
       7152,
@@ -8674,18 +8797,19 @@
       7266
     ],
     "iconUrl": "https://img.fae.ro/6904de.png"
-  }
-,
+  },
   {
     "uid": 7400,
     "name": "Dragunov",
     "attributes": {
-      "Heat": "Feint & Catch and Tackle become unbreakable.\nCan perform Tackle after additional moves.",
-      "Heat Smash":	"Mid, i15, +6",
+      "Heat": "Feint \u0026 Catch and Tackle become unbreakable.\nCan perform Tackle after additional moves.",
+      "Heat Smash": "Mid, i15, +6",
       "Heat Engagers": "1,2,1 f+3,1+2 b+4,3 SNK.4 d+1+3 db+3,1+2",
       "Stances": "SNK (Sneak) – qcf"
     },
-    "moveIds": [7268,
+    "date": 0,
+    "moveIds": [
+      7268,
       7269,
       7270,
       7271,
@@ -8819,18 +8943,19 @@
       7399
     ],
     "iconUrl": "https://img.fae.ro/22863f.png"
-  }
-,
+  },
   {
     "uid": 7539,
     "name": "Feng",
     "attributes": {
       "Heat": "Enhanced b+1\nEnhanced f,F+1+2\nNew move: 3+4",
-      "Heat Smash":	"i20 - Mid - +24 (STC)",
+      "Heat Smash": "i20 - Mid - +24 (STC)",
       "Heat Engagers": "f+1+2 b+1+2 f,F+2 BT.2 KNP.2",
       "Stances": "KNP (kenpo) - b+3+4\nSTC (shifting clouds) - f+3+4"
     },
-    "moveIds": [7401,
+    "date": 0,
+    "moveIds": [
+      7401,
       7402,
       7403,
       7404,
@@ -8970,18 +9095,19 @@
       7538
     ],
     "iconUrl": "https://img.fae.ro/eb05e6.png"
-  }
-,
+  },
   {
     "uid": 7720,
     "name": "Hwoarang",
     "attributes": {
       "Heat": "RFS.f+4,4 and RFS.d+4,3,4 become natural combos.",
-      "Heat Smash":	"Mid – i17~18 – +11 – Possible in LFF/RFF/LFS – Shifts to RFS",
+      "Heat Smash": "Mid – i17~18 – +11 – Possible in LFF/RFF/LFS – Shifts to RFS",
       "Heat Engagers": "df+3+4 f,F+4 RFF.df+3 LFS.f+3 RFS.b+3",
       "Stances": "LFF (Left Foot Forward)\nRFF (Right Foot Forward) – 3+4\nLFS (Left Flamingo Stance) – f+3\nRFS (Right Flamingo Stance) – f,n,4\nBT (Backturn Stance) – 1+2\nCD (Shark Step) – f,n,d,df"
     },
-    "moveIds": [7540,
+    "date": 0,
+    "moveIds": [
+      7540,
       7541,
       7542,
       7543,
@@ -9163,18 +9289,19 @@
       7719
     ],
     "iconUrl": "https://img.fae.ro/022d85.png"
-  }
-,
+  },
   {
     "uid": 7894,
     "name": "Jack-8",
     "attributes": {
       "Heat": "Gamma Charge moves are always active.",
-      "Heat Smash":	"High, i10, -9",
+      "Heat Smash": "High, i10, -9",
       "Heat Engagers": "b+2 b+1+2 GMH.4 GMH.3+4 d+2+4",
       "Stances": "GMH (Gamma Howl) – 3+4\nGMC (Gamma Charge) – 3+4 (absorb a hit)"
     },
-    "moveIds": [7721,
+    "date": 0,
+    "moveIds": [
+      7721,
       7722,
       7723,
       7724,
@@ -9349,18 +9476,19 @@
       7893
     ],
     "iconUrl": "https://img.fae.ro/13f358.png"
-  }
-,
+  },
   {
     "uid": 8024,
     "name": "Jin",
     "attributes": {
       "Heat": "Gains access to new follow-ups to his Power Stance (db+1+2)\nEWHF can be performed without just frame input.",
-      "Heat Smash":	"Mid, i15~16, +3",
+      "Heat Smash": "Mid, i15~16, +3",
       "Heat Engagers": "1+2 df+4 f,f+2 f+3,1 ZEN.2",
       "Stances": "ZEN (Zenshin) – f+4 or b3+4\nCD (Crouch Dash) – f,n,d,df or ZEN.df"
     },
-    "moveIds": [7895,
+    "date": 0,
+    "moveIds": [
+      7895,
       7896,
       7897,
       7898,
@@ -9491,18 +9619,19 @@
       8023
     ],
     "iconUrl": "https://img.fae.ro/b2e366.png"
-  }
-,
+  },
   {
     "uid": 8185,
     "name": "Jun",
     "attributes": {
       "Heat": "Kazama Powers no longer cost health.\nInner Peace (f+1+2) becomes powered up, gaining more parry frames.",
-      "Heat Smash":	"Mid, i13, -6~+37g\nLow, i20, -14",
+      "Heat Smash": "Mid, i13, -6~+37g\nLow, i20, -14",
       "Heat Engagers": "1+2 f+2,1+2 SS.4 IZU.3 MIA.2",
       "Stances": "IZU (Izumo) – u+2\nGEN (Genjitsu) – f+3+4\nMIA (Miare) – b+1+2"
     },
-    "moveIds": [8025,
+    "date": 0,
+    "moveIds": [
+      8025,
       8026,
       8027,
       8028,
@@ -9664,18 +9793,19 @@
       8184
     ],
     "iconUrl": "https://img.fae.ro/6ee20a.png"
-  }
-,
+  },
   {
     "uid": 8310,
     "name": "Kazuya",
     "attributes": {
       "Heat": "Grants Devil Transformation\nCan perform EWGF without precise input.",
-      "Heat Smash":	"Low i18 -14",
+      "Heat Smash": "Low i18 -14",
       "Heat Engagers": "f,F+2 df+1,2 db+1,2 b+4 b+1+2",
       "Stances": "CD (Crouch Dash) – f,n,d,df\nDVK (Devil Kazuya) – While in Heat"
     },
-    "moveIds": [8186,
+    "date": 0,
+    "moveIds": [
+      8186,
       8187,
       8188,
       8189,
@@ -9801,18 +9931,19 @@
       8309
     ],
     "iconUrl": "https://img.fae.ro/5dab02.png"
-  }
-,
+  },
   {
     "uid": 8519,
     "name": "King",
     "attributes": {
       "Heat": "Certain throws restore the heat timer\nJGR becomes a power crush\nJGR 1 induces T! on grounded hit",
-      "Heat Smash":	"i17 mid, shifts to JGR on block (+12)",
-      "Heat Engagers": "f+2,1 (Elbow Impact)\nf+2+3 (Shoulder Tackle)\ndb+1+2,2 (Muscle Armor > Emerald Elbow)",
+      "Heat Smash": "i17 mid, shifts to JGR on block (+12)",
+      "Heat Engagers": "f+2,1 (Elbow Impact)\nf+2+3 (Shoulder Tackle)\ndb+1+2,2 (Muscle Armor \u003e Emerald Elbow)",
       "Stances": "CD (Crouch Dash) – f,n,d,DF\nJGS (Jaguar Step) – 3+4\nJGR (Jaguar Sprint) – f+3+4"
     },
-    "moveIds": [8311,
+    "date": 0,
+    "moveIds": [
+      8311,
       8312,
       8313,
       8314,
@@ -10022,18 +10153,19 @@
       8518
     ],
     "iconUrl": "https://img.fae.ro/64f2ec.png"
-  }
-,
+  },
   {
     "uid": 8643,
     "name": "Kuma",
     "attributes": {
       "Heat": "Shortens charge time of hold attacks\nEnhances ROLL stance\nAllows use of Wind Bear Fist",
-      "Heat Smash":	"Mid, i13, +10",
+      "Heat Smash": "Mid, i13, +10",
       "Heat Engagers": "1+2 b+1 b+1+2 WR.1+2 HBS.d+1+2",
       "Stances": "CD (Crouch Dash) – f,n,d,DF\nJGS (Jaguar Step) – 3+4\nJGR (Jaguar Sprint) – f+3+4"
     },
-    "moveIds": [8520,
+    "date": 0,
+    "moveIds": [
+      8520,
       8521,
       8522,
       8523,
@@ -10158,18 +10290,19 @@
       8642
     ],
     "iconUrl": "https://img.fae.ro/aec274.png"
-  }
-,
+  },
   {
     "uid": 8752,
     "name": "Lars",
     "attributes": {
       "Heat": "",
-      "Heat Smash":	"",
+      "Heat Smash": "",
       "Heat Engagers": "",
       "Stances": ""
     },
-    "moveIds": [8644,
+    "date": 0,
+    "moveIds": [
+      8644,
       8645,
       8646,
       8647,
@@ -10279,18 +10412,19 @@
       8751
     ],
     "iconUrl": "https://img.fae.ro/777d5d.png"
-  }
-,
+  },
   {
     "uid": 8910,
     "name": "Law",
     "attributes": {
       "Heat": "Enhanced nunchuck moves\nDSS automatically parries punches",
-      "Heat Smash":	"Mid, i14, +11 (DSS)",
+      "Heat Smash": "Mid, i14, +11 (DSS)",
       "Heat Engagers": "1,1,1 b1,2,2 uf3 fF3 DSS f1 DSS f3",
       "Stances": "DSS - d+1+2"
     },
-    "moveIds": [8753,
+    "date": 0,
+    "moveIds": [
+      8753,
       8754,
       8755,
       8756,
@@ -10449,18 +10583,19 @@
       8909
     ],
     "iconUrl": "https://img.fae.ro/2451d4.png"
-  }
-,
+  },
   {
     "uid": 9056,
     "name": "Lee",
     "attributes": {
       "Heat": "- Just frame moves can be used without a just frame input in exchange for heat gauge.\n- Recovers heat gauge if the just frame input is done.",
-      "Heat Smash":	"Low, i20, -15 On Block",
+      "Heat Smash": "Low, i20, -15 On Block",
       "Heat Engagers": "4,4:4 df+4,3 b+3+4 f,F+3 HMS.u+3",
       "Stances": "HMS (Hitman Stance) – 3+4\nMS (Mist Step) – f~n\nSway – MS.b~n"
     },
-    "moveIds": [8911,
+    "date": 0,
+    "moveIds": [
+      8911,
       8912,
       8913,
       8914,
@@ -10607,18 +10742,19 @@
       9055
     ],
     "iconUrl": "https://img.fae.ro/30450e.png"
-  }
-,
+  },
   {
     "uid": 9195,
     "name": "Leo",
     "attributes": {
       "Heat": "Allows the use of moves during Lightning Glare",
-      "Heat Smash":	"Mid, i16~17, +8\nLow, i20~21, -13",
+      "Heat Smash": "Mid, i16~17, +8\nLow, i20~21, -13",
       "Heat Engagers": "db+2,4 b+2,1+2 ws4,1+2 KNK.1,2 BOK.1+2",
       "Stances": "KNK (Jin Ji Du Li) – f+4\nBOK (Fo Bu) – d+1+2\nCD (Jin Bu) – qcf"
     },
-    "moveIds": [9057,
+    "date": 0,
+    "moveIds": [
+      9057,
       9058,
       9059,
       9060,
@@ -10758,18 +10894,19 @@
       9194
     ],
     "iconUrl": "https://img.fae.ro/f237ab.png"
-  }
-,
+  },
   {
     "uid": 9321,
     "name": "Leroy",
     "attributes": {
       "Heat": "Increased chip damage on chain punches\nParries restore heat",
-      "Heat Smash":	"Mid, i15, +6",
+      "Heat Smash": "Mid, i15, +6",
       "Heat Engagers": "1+2,1+2,1 f+4,4 d+1+2 db+1+2 HRM.1+2,1",
       "Stances": "HRM (Hermit)"
     },
-    "moveIds": [9196,
+    "date": 0,
+    "moveIds": [
+      9196,
       9197,
       9198,
       9199,
@@ -10896,18 +11033,19 @@
       9320
     ],
     "iconUrl": "https://img.fae.ro/be2e23.png"
-  }
-,
+  },
   {
     "uid": 9457,
     "name": "Lili",
     "attributes": {
       "Heat": "Empowered Feisty Rabbit low\nEmpowered f,F+3+4 (and other Piercing Thorn moves)",
-      "Heat Smash":	"High, i23, +9 (stanceless)\nLow, i16, -8 (back turn)",
+      "Heat Smash": "High, i23, +9 (stanceless)\nLow, i16, -8 (back turn)",
       "Heat Engagers": "3,1 3+4 qcf+2,1 BT.1,4 b3 or B4,2",
       "Stances": "BT (Back Turn) - b+3+4\nDEW (Dew Glide) - qcf\nRAB (Feisty Rabbit) - b+3 or b+4"
     },
-    "moveIds": [9322,
+    "date": 0,
+    "moveIds": [
+      9322,
       9323,
       9324,
       9325,
@@ -11044,18 +11182,19 @@
       9456
     ],
     "iconUrl": "https://img.fae.ro/1d544e.png"
-  }
-,
+  },
   {
     "uid": 9651,
     "name": "Nina",
     "attributes": {
       "Heat": "Enhanced Handgun moves to have more pushback and frame advantage on block\nEnhanced b1+2",
-      "Heat Smash":	"Mid, i16, +5 (F into Ducking step)",
+      "Heat Smash": "Mid, i16, +5 (F into Ducking step)",
       "Heat Engagers": "f4,2 f1+2 db1+2 WR1+2 QcF2",
       "Stances": "Ducking step (qcf)\nSway (qcb)"
     },
-    "moveIds": [9458,
+    "date": 0,
+    "moveIds": [
+      9458,
       9459,
       9460,
       9461,
@@ -11250,18 +11389,19 @@
       9650
     ],
     "iconUrl": "https://img.fae.ro/d1477e.png"
-  }
-,
+  },
   {
     "uid": 9773,
     "name": "Panda",
     "attributes": {
       "Heat": "Shortens charge time of hold attacks\nEnhances ROLL stance\nAllows use of Panda Shooting Star",
-      "Heat Smash":	"Mid, i15, +7,\n+6 (ROLL), +11 (HBS)",
+      "Heat Smash": "Mid, i15, +7,\n+6 (ROLL), +11 (HBS)",
       "Heat Engagers": "\t\n1+2 b+1 b+1+2 WR.1+2 HBS.d+1+2",
       "Stances": "HBS (Hunting) – 3+4\nROLL (Bear Roll) – FC.1+2\nSIT (Bear Sit) – d+3+4"
     },
-    "moveIds": [9652,
+    "date": 0,
+    "moveIds": [
+      9652,
       9653,
       9654,
       9655,
@@ -11384,18 +11524,19 @@
       9772
     ],
     "iconUrl": "https://img.fae.ro/040125.png"
-  }
-,
+  },
   {
     "uid": 9895,
     "name": "Paul",
     "attributes": {
       "Heat": "Gains guard breaking moves.\nDeathfist launches and wallsplats.",
-      "Heat Smash":	"Low, i18, -12",
+      "Heat Smash": "Low, i18, -12",
       "Heat Engagers": "uf+2 qcf+2 f+4 qcb+2 f+2",
       "Stances": "Sway (SWA) - qcf\nBacksway (BSW) - qcb\nDeep Dive (DPD) - qcf,df"
     },
-    "moveIds": [9774,
+    "date": 0,
+    "moveIds": [
+      9774,
       9775,
       9776,
       9777,
@@ -11518,18 +11659,19 @@
       9894
     ],
     "iconUrl": "https://img.fae.ro/3d649a.png"
-  }
-,
+  },
   {
     "uid": 10093,
     "name": "Raven",
     "attributes": {
       "Heat": "Clones become -3 instead of -14\nRecovers heat gauge if clones hit the opponent\nGets a running launcher in WR3,4.",
-      "Heat Smash":	"Mid, i18~20, +14g",
+      "Heat Smash": "Mid, i18~20, +14g",
       "Heat Engagers": "1+2 f+1+2 SZN 2 BT 4 WS+3+4",
       "Stances": "LAB/BT (Labyrinth/Backturned) – b3+4\nSZN (Soulzone) – 3+4\nQCF – QCF"
     },
-    "moveIds": [9896,
+    "date": 0,
+    "moveIds": [
+      9896,
       9897,
       9898,
       9899,
@@ -11728,18 +11870,19 @@
       10092
     ],
     "iconUrl": "https://img.fae.ro/3c3aa0.png"
-  }
-,
+  },
   {
     "uid": 10239,
     "name": "Reina",
     "attributes": {
       "Heat": "Allows Lethal Fury (,4) follow up to 3,4, 3+4,4,4 and f+1+2,3\nEWGF and EWGK can be performed without just frame input.\nAuto parries mids and highs during WRA",
-      "Heat Smash":	"H.2+3 – i21 – m\nH.WRA.2+3 – i18~19 – l",
+      "Heat Smash": "H.2+3 – i21 – m\nH.WRA.2+3 – i18~19 – l",
       "Heat Engagers": "df+1,2 – i13~14i22~23 – m,m\nf,F+3 – i20~22 – m\nSEN.3 – i12~13 – h\nUNS.4 – i18~19 – m\nWRA.2 – i15~16 – m",
       "Stances": "WGS (Wind God Step) – f,n,d,df\nSEN (Sentai) – f+3\nSSH (Senshin) – f+1+2\nUNS (Unsoku) – d+3\nWRA (Heavens Wrath) – d+1+2\nWDS (Wind Step) – f,n"
     },
-    "moveIds": [10094,
+    "date": 0,
+    "moveIds": [
+      10094,
       10095,
       10096,
       10097,
@@ -11886,18 +12029,19 @@
       10238
     ],
     "iconUrl": "https://img.fae.ro/cac8af.png"
-  }
-,
+  },
   {
     "uid": 10324,
     "name": "Shaheen",
     "attributes": {
       "Heat": "Partially restores Heat time when performing certain knife-hand moves.\nAl-Ghul Master can be used.",
-      "Heat Smash":	"2+4, Mid, i16, +6 (SNK)\nSNK.2+4, Low, i20, -14",
+      "Heat Smash": "2+4, Mid, i16, +6 (SNK)\nSNK.2+4, Low, i20, -14",
       "Heat Engagers": "db+2,1 b+1 b+3+4 uf+1 SNK.1+2",
       "Stances": "SNK (Stealth Step) - df+3+4"
     },
-    "moveIds": [10240,
+    "date": 0,
+    "moveIds": [
+      10240,
       10241,
       10242,
       10243,
@@ -11983,18 +12127,19 @@
       10323
     ],
     "iconUrl": "https://img.fae.ro/76caea.png"
-  }
-,
+  },
   {
     "uid": 10478,
     "name": "Steve",
     "attributes": {
       "Heat": "Access to an instant EXT DCK with df3+4.\nAccess to an unbreakable grab after EXT DCK (followups can be broken).\nLHN will automatically parry mids.",
-      "Heat Smash":	"Mid, i16, +8 (LHN)",
+      "Heat Smash": "Mid, i16, +8 (LHN)",
       "Heat Engagers": "1+2 qcf1 ALB 2 WR2 LHN 1",
       "Stances": "FLK (Flicker) – b+3+4\nPAB (Peekaboo) – f+3+4\nDCK (Duck) – f+3 (or f+4)\nWVE (Weave) – 3 and 4\nSWY (Sway) – b+3 (or b+4)\nLNH (Lionheart) – ub3"
     },
-    "moveIds": [10325,
+    "date": 0,
+    "moveIds": [
+      10325,
       10326,
       10327,
       10328,
@@ -12149,18 +12294,19 @@
       10477
     ],
     "iconUrl": "https://img.fae.ro/fe822d.png"
-  }
-,
+  },
   {
     "uid": 10594,
     "name": "Victor",
     "attributes": {
       "Heat": "u+1+2 and IAI.d+2 get significantly better frames on block.\nGains new move: \"Monsieur Samurai\" db+1+2",
-      "Heat Smash":	"Low, i20, -15",
+      "Heat Smash": "Low, i20, -15",
       "Heat Engagers": "f+4,1 b+1+2 f+1+2 d+2 Perfumer 3",
       "Stances": "Iai - 3+4\nPerfumer - f+3"
     },
-    "moveIds": [10479,
+    "date": 0,
+    "moveIds": [
+      10479,
       10480,
       10481,
       10482,
@@ -12277,18 +12423,19 @@
       10593
     ],
     "iconUrl": "https://img.fae.ro/a9fb31.png"
-  }
-,
+  },
   {
     "uid": 10759,
     "name": "Xiaoyu",
     "attributes": {
       "Heat": "",
-      "Heat Smash":	"",
+      "Heat Smash": "",
       "Heat Engagers": "",
       "Stances": "AOP (Phoenix) – d+1+2\nHYP (Hypnotist) – db+1+2\nRDS/BT (Rain Dance/Backturn) – b+3+4"
     },
-    "moveIds": [10595,
+    "date": 0,
+    "moveIds": [
+      10595,
       10596,
       10597,
       10598,
@@ -12454,18 +12601,19 @@
       10758
     ],
     "iconUrl": "https://img.fae.ro/bb097f.png"
-  }
-,
+  },
   {
     "uid": 11081,
     "name": "Yoshimitsu",
     "attributes": {
       "Heat": "Can perform powered up NSS moves in 1SS.",
-      "Heat Smash":	"Mid, i18~19, +4~+5",
+      "Heat Smash": "Mid, i18~19, +4~+5",
       "Heat Engagers": "3,1 f+1+2 b+2,2 KIN.f+2 DGF.4",
       "Stances": "DGF (Manji Dragonfly) – 1SS.u+1+2\nFLE (Flea) – 1SS.d+1+2\nIND (Indian Stance) – d+3+4\nKIN (Kincho) – 1+2\nMED (Meditation) – 3+4\nNSS (No Sword Stance) – b+1+2"
     },
-    "moveIds": [10760,
+    "date": 0,
+    "moveIds": [
+      10760,
       10761,
       10762,
       10763,
@@ -12788,18 +12936,19 @@
       11080
     ],
     "iconUrl": "https://img.fae.ro/a0f91f.png"
-  }
-,
+  },
   {
     "uid": 11220,
     "name": "Zafina",
     "attributes": {
       "Heat": "Azazel moves cost no health\nSCR.df+1, TRT.df+1 and MNT.df+1 become Power Crushes.",
-      "Heat Smash":	"H.2+3 - High, i12, +3\nH.SCR.2+3 - Low, i19 -14",
+      "Heat Smash": "H.2+3 - High, i12, +3\nH.SCR.2+3 - Low, i19 -14",
       "Heat Engagers": "f+1+2 df+4,1 SCR.2,1 TRT.df+1 MNT.df+1",
       "Stances": "Scarecrow (3+4 SCR)\nMantis (d+3+4 MNT)\nTarantula (d+1+2 TRT)"
     },
-    "moveIds": [11082,
+    "date": 0,
+    "moveIds": [
+      11082,
       11083,
       11084,
       11085,
