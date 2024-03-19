@@ -55,12 +55,12 @@ fun HomeScreen(
         items(favs.size) {
             val fav = favs[it]
             fav.character?.also { char ->
-                RowItem(title = char.name, image = images[char.iconUrl]) {
+                RowItem(title = char.name, image = images[char.iconUrl], emptyImage = R.drawable.emptychar) {
                     viewModel.favPressed(fav)
                     onNavigate(ViewTag.CHAR_VIEW, fav.game.uid, char.uid)
                 }
             } ?: run {
-                RowItem(title = fav.game.name, image = images[fav.game.iconUrl]) {
+                RowItem(title = fav.game.name, image = images[fav.game.iconUrl], emptyImage = R.drawable.emptygame) {
                     viewModel.favPressed(fav)
                     onNavigate(ViewTag.GAME_VIEW, fav.game.uid, null)
                 }

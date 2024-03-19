@@ -1,5 +1,6 @@
 package ro.kofe.view
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -78,7 +79,7 @@ class AppBarViewModel @Inject constructor(
             favsProvider.get().fold({ error ->
                 _error.update { error }
             }) { favs ->
-                _isFavorited.update { favs.any { it.character?.uid == uid || it.game.uid == uid } }
+                _isFavorited.update { favs.any { it.character?.uid == uid || (it.game.uid == uid && it.character?.uid == null) } }
                 _canFavorite.update { true }
                 favs.find { it.game.uid == uid || it.character?.uid == uid }?.also { fav ->
                     if (fav.character == null) {

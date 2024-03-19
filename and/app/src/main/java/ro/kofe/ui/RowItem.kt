@@ -1,5 +1,6 @@
 package ro.kofe.ui
 
+import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -15,12 +16,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import ro.kofe.toBase64ImageToImageBitmap
 
 
 @Composable
-fun RowItem(title: String, image: String? = null, vector: ImageVector? = null, onClick: () -> Unit) {
+fun RowItem(title: String, image: String? = null, vector: ImageVector? = null, emptyImage: Int? = null, onClick: () -> Unit) {
     OutlinedButton(
         onClick = onClick,
         border = BorderStroke(1.dp, Color.Black),
@@ -32,16 +34,27 @@ fun RowItem(title: String, image: String? = null, vector: ImageVector? = null, o
                 Image(
                     bitmap = it.toBase64ImageToImageBitmap(),
                     contentDescription = title,
-                    modifier = Modifier.size(100.dp)
+                    modifier = Modifier
+                        .size(100.dp)
                         .align(Alignment.CenterHorizontally),
                     colorFilter = null
+                )
+            }
+            if(image == null && emptyImage != null){
+                Image(
+                    painterResource(id = emptyImage),
+                    contentDescription = title,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .align(Alignment.CenterHorizontally)
                 )
             }
             vector?.let {
                 Image(
                     imageVector = vector,
                     contentDescription = title,
-                    modifier = Modifier.size(100.dp)
+                    modifier = Modifier
+                        .size(100.dp)
                         .align(Alignment.CenterHorizontally),
                     colorFilter = null
                 )

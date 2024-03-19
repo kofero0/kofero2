@@ -12,6 +12,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import ro.kofe.R
 import ro.kofe.model.ViewTag
 import ro.kofe.view.GameViewModel
 
@@ -41,7 +42,7 @@ fun GameScreen(
         game?.let { uGame ->
             LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 200.dp)) {
                 items(chars.size) {
-                    RowItem(chars[it].name,images[chars[it].iconUrl]) {
+                    RowItem(chars[it].name, images[chars[it].iconUrl], emptyImage = R.drawable.emptychar) {
                         viewModel.charPressed(chars[it])
                         onNavigate(ViewTag.CHAR_VIEW, chars[it].uid, uGame.uid)
                     }
