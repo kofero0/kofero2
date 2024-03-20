@@ -7,6 +7,7 @@ const val GAME_PATH = "/game"
 const val CHAR_PATH = "/char"
 const val MOVE_PATH = "/move"
 const val STATUS_PATH = "/status"
+const val PRIVACY_PATH = "/privacy"
 
 fun String.getHash(salt: ByteArray?) = StringBuilder().apply {
     val bytes: ByteArray = MessageDigest.getInstance("SHA-256").apply {

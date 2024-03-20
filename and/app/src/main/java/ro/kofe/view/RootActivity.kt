@@ -1,10 +1,13 @@
 package ro.kofe.view
 
+import android.content.res.Resources
 import android.os.Bundle
 import android.util.DisplayMetrics
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -23,6 +26,7 @@ import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import dagger.hilt.android.AndroidEntryPoint
+import ro.kofe.R
 import ro.kofe.model.ViewTag
 import ro.kofe.ui.CharScreen
 import ro.kofe.ui.GameScreen
@@ -53,7 +57,7 @@ fun AdmobBanner(modifier: Modifier = Modifier) {
         factory = { context ->
             AdView(context).apply {
                 setAdSize(AdSize.BANNER)
-                adUnitId = "ca-app-pub-3940256099942544~3347511713"
+                adUnitId = context.resources.getString(R.string.adUnitId)
                 loadAd(AdRequest.Builder().build())
             }
         }
@@ -79,7 +83,10 @@ fun KoferoApp(
     }
 
     Scaffold(topBar = {
-        KoferoAppBar(appBar)
+        Column {
+            KoferoAppBar(appBar)
+            AdmobBanner()
+        }
     }, bottomBar = {
         AdmobBanner()
     }) { innerPadding ->

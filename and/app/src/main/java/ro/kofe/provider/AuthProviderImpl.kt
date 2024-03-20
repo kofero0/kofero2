@@ -1,6 +1,7 @@
 package ro.kofe.provider
 
 import android.content.Context
+import android.util.Log
 import arrow.core.Either
 import arrow.core.raise.either
 import com.google.gson.Gson
@@ -38,6 +39,7 @@ class AuthProviderImpl(
     private var isWaitingForAuth = false
 
     override fun get() = either {
+        Log.v("rwr", "AUTH PROVIDER GET")
         synchronized(lock) {
             file.readText().ifEmpty {
                 val response = client.newCall(

@@ -1,13 +1,10 @@
 package ro.kofe.di
 
-import android.content.Context
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
 import ro.kofe.map.GameMapper
 import ro.kofe.model.Character
 import ro.kofe.model.Game
@@ -23,7 +20,7 @@ import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
-import ro.kofe.provider.LoggingProviderImpl
+import ro.kofe.provider.DebugLoggingProvider
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -48,7 +45,7 @@ object GameModule {
         gameProvider: Provider<Game>,
         imageProvider: ImageProvider
     ): GamePresenter =
-        GamePresenterImpl(charProvider, gameProvider, imageProvider, LoggingProviderImpl())
+        GamePresenterImpl(charProvider, gameProvider, imageProvider, DebugLoggingProvider())
 
     @Provides
     fun provideGameMapper(gson: Gson): Mapper<List<Game>, String> = GameMapper(gson)

@@ -101,9 +101,6 @@ object RootModule {
     fun provideIdentityProvider(): IdentityProvider = IdentityProviderImpl()
 
     @Provides
-    fun provideLoggingProvider(): LoggingProvider = LoggingProviderImpl()
-
-    @Provides
     fun provideRootPresenter(
         loggingProvider: LoggingProvider,
         statusProvider: StatusProvider,
