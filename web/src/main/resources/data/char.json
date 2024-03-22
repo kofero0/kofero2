@@ -2284,7 +2284,7 @@
       1890,
       1891
     ],
-    "iconUrl": "https://img.fae.ro/4bb633.png"
+    "iconUrl": "https://img.fae.ro/e64e83.png"
   },
   {
     "uid": 1958,
@@ -2357,7 +2357,7 @@
       1956,
       1957
     ],
-    "iconUrl": "https://img.fae.ro/0dc6b1.png"
+    "iconUrl": "https://img.fae.ro/353797.png"
   },
   {
     "uid": 2031,
@@ -2438,7 +2438,7 @@
       2029,
       2030
     ],
-    "iconUrl": "https://img.fae.ro/c3b1e9.png"
+    "iconUrl": "https://img.fae.ro/169b2e.png"
   },
   {
     "uid": 2104,
@@ -2519,7 +2519,7 @@
       2102,
       2103
     ],
-    "iconUrl": "https://img.fae.ro/21c1ee.png"
+    "iconUrl": "https://img.fae.ro/2a95f7.png"
   },
   {
     "uid": 2178,
@@ -2601,7 +2601,7 @@
       2176,
       2177
     ],
-    "iconUrl": "https://img.fae.ro/6cd33e.png"
+    "iconUrl": "https://img.fae.ro/86064b.png"
   },
   {
     "uid": 2179,
@@ -2672,7 +2672,7 @@
       2240,
       2241
     ],
-    "iconUrl": "https://img.fae.ro/38acb8.png"
+    "iconUrl": "https://img.fae.ro/53ce75.png"
   },
   {
     "uid": 2242,
@@ -2742,7 +2742,7 @@
       2302,
       2303
     ],
-    "iconUrl": "https://img.fae.ro/3df143.png"
+    "iconUrl": "https://img.fae.ro/18f27d.png"
   },
   {
     "uid": 2304,
@@ -2809,7 +2809,7 @@
       2299,
       2300
     ],
-    "iconUrl": "https://img.fae.ro/670de1.png"
+    "iconUrl": "https://img.fae.ro/3477db.png"
   },
   {
     "uid": 2301,
@@ -2887,7 +2887,7 @@
       2310,
       2311
     ],
-    "iconUrl": "https://img.fae.ro/4b612a.png"
+    "iconUrl": "https://img.fae.ro/bdd56c.png"
   },
   {
     "uid": 2373,
@@ -2957,7 +2957,7 @@
       2371,
       2372
     ],
-    "iconUrl": "https://img.fae.ro/bfcd26.png"
+    "iconUrl": "https://img.fae.ro/9aede8.png"
   },
   {
     "uid": 2374,
@@ -3026,7 +3026,7 @@
       2433,
       2434
     ],
-    "iconUrl": "https://img.fae.ro/586be7.png"
+    "iconUrl": "https://img.fae.ro/c7b310.png"
   },
   {
     "uid": 2506,
@@ -3106,7 +3106,7 @@
       2504,
       2505
     ],
-    "iconUrl": "https://img.fae.ro/a2427d.png"
+    "iconUrl": "https://img.fae.ro/72e529.png"
   },
   {
     "uid": 2586,
@@ -3194,7 +3194,7 @@
       2584,
       2585
     ],
-    "iconUrl": "https://img.fae.ro/f593f4.png"
+    "iconUrl": "https://img.fae.ro/bd09f1.png"
   },
   {
     "uid": 2657,
@@ -3273,7 +3273,7 @@
       2655,
       2656
     ],
-    "iconUrl": "https://img.fae.ro/b5fed6.png"
+    "iconUrl": "https://img.fae.ro/2d9187.png"
   },
   {
     "uid": 2658,
@@ -3349,7 +3349,7 @@
       2724,
       2725
     ],
-    "iconUrl": "https://img.fae.ro/dffe5c.png"
+    "iconUrl": "https://img.fae.ro/639da0.png"
   },
   {
     "uid": 2726,
@@ -3414,7 +3414,7 @@
       2781,
       2782
     ],
-    "iconUrl": "https://img.fae.ro/0178ef.png"
+    "iconUrl": "https://img.fae.ro/bf3557.png"
   },
   {
     "uid": 2783,
@@ -3509,7 +3509,7 @@
       2868,
       2869
     ],
-    "iconUrl": "https://img.fae.ro/ac06e6.png"
+    "iconUrl": "https://img.fae.ro/650eb7.png"
   },
   {
     "uid": 2870,
@@ -3593,7 +3593,7 @@
       2944,
       2945
     ],
-    "iconUrl": "https://img.fae.ro/ca7242.png"
+    "iconUrl": "https://img.fae.ro/df5a49.png"
   },
   {
     "uid": 2946,
@@ -3668,7 +3668,7 @@
       3011,
       3012
     ],
-    "iconUrl": "https://img.fae.ro/4683ff.png"
+    "iconUrl": "https://img.fae.ro/0a7e8c.png"
   },
   {
     "uid": 3013,
@@ -3740,7 +3740,7 @@
       3075,
       3076
     ],
-    "iconUrl": "https://img.fae.ro/c203ff.png"
+    "iconUrl": "https://img.fae.ro/cda17f.png"
   },
   {
     "uid": 3126,
@@ -6428,80 +6428,6 @@
       5289
     ],
     "iconUrl": "https://img.fae.ro/52667b.png"
-  },
-  {
-    "uid": 5352,
-    "name": "Nakoruru",
-    "attributes": {
-      "Hop": "32",
-      "Jump": "40",
-      "Backdash": "22"
-    },
-    "date": 0,
-    "moveIds": [
-      5291,
-      5292,
-      5293,
-      5294,
-      5295,
-      5296,
-      5297,
-      5298,
-      5299,
-      5300,
-      5301,
-      5302,
-      5303,
-      5304,
-      5305,
-      5306,
-      5307,
-      5308,
-      5309,
-      5310,
-      5311,
-      5312,
-      5313,
-      5314,
-      5315,
-      5316,
-      5317,
-      5318,
-      5319,
-      5320,
-      5321,
-      5322,
-      5323,
-      5324,
-      5325,
-      5326,
-      5327,
-      5328,
-      5329,
-      5330,
-      5331,
-      5332,
-      5333,
-      5334,
-      5335,
-      5336,
-      5337,
-      5338,
-      5339,
-      5340,
-      5341,
-      5342,
-      5343,
-      5344,
-      5345,
-      5346,
-      5347,
-      5348,
-      5349,
-      5350,
-      5351
-    ],
-    "iconUrl": "https://img.fae.ro/c203ff.png"
   },
   {
     "uid": 5352,

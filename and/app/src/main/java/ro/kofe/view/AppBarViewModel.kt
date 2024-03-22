@@ -187,6 +187,6 @@ class AppBarViewModel @Inject constructor(
     }
 
     companion object {
-        private const val DEFAULT_TITLE = "KOFERO"
+        private const val DEFAULT_TITLE = "FRAMES"
     }
 }

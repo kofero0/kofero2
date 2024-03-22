@@ -13,7 +13,7 @@ import SwiftUI
 
 class RootComponent: BootstrapComponent {
     var urlPrefix: String {
-        return "http://localhost:8080"
+        return "https://kofero.org"
     }
     
     var homeComponent: HomeComponent {
@@ -45,7 +45,7 @@ class RootComponent: BootstrapComponent {
     }
     
     var rootPresenter: RootPresenter {
-        return RootPresenterImpl(statusProvider: statusProvider, loggingProvider: loggingProvider)
+        return RootPresenterImpl(statusProvider: statusProvider, authProvider: authProvider, gameProvider: gameProvider, charProvider: charProvider, moveProvider: moveProvider, loggingProvider: loggingProvider)
     }
     
     var imageProvider:ImageProvider {
