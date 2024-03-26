@@ -107,14 +107,12 @@ struct GameView: View {
         func display(game: ModelGame) {
             DispatchQueue.main.sync {
                 self.game = game
-                print("^^^")
-                print("\(favProvider == nil)")
                 favProvider?.get { either,error in
                     either?.map{ array in
                         if let uArray = array {
                             for ele in uArray{
                                 if let fav = ele as? ModelFavorite{
-                                    if(fav.game.uid == game.uid){
+                                    if(fav.game.uid == game.uid && fav.character == nil){
                                         DispatchQueue.main.sync {
                                             self.isFavorited = true
                                         }

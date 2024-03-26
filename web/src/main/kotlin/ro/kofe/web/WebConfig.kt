@@ -17,6 +17,7 @@ class WebConfig(
                 add(GAME_PATH)
                 add(CHAR_PATH)
                 add(MOVE_PATH)
+                add(COPY_PATH)
             })
     }
 }

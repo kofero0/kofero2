@@ -19,7 +19,7 @@ android {
         applicationId = "ro.kofe"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
+        versionCode = 2
         versionName = "$version"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

@@ -154,7 +154,7 @@ class RootComponent: BootstrapComponent {
     }
     
     var charView: CharView {
-        return CharView(interactor: charInteractor, adUnitId: bannerAdUnitId)
+        return CharView(interactor: charInteractor, favoritesProvider: favoritesProvider, gameProvider: gameProvider, adUnitId: bannerAdUnitId)
     }
     
     var noAuthHttpClient: Ktor_client_coreHttpClient{

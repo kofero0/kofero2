@@ -47,6 +47,16 @@ struct HomeView: View {
         }
     }
     
+    private func getGamesToShow(games: [ModelGame], favs : [ModelFavorite]) -> [ModelGame] {
+        var ret = games
+        for fav in favs {
+            if(fav.character == nil) {
+                ret.removeAll { element in return element.uid == fav.game.uid }
+            }
+        }
+        return ret
+    }
+    
     var body: some View {
         ScrollView {
                 LazyVGrid(columns: [
@@ -54,7 +64,27 @@ struct HomeView: View {
                     GridItem(.flexible()),
                     GridItem(.flexible())
                 ], spacing: 20) {
-                    ForEach(viewModel.games, id: \.self) { game in
+                    
+                    VStack{
+                        
+                    }
+                    
+                    ForEach(viewModel.favs, id: \.self) { fav in
+                        VStack{
+                            if(fav.character != nil){
+                                Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[fav.character!.iconUrl] ?? nil))
+                                Text(fav.character!.name)
+                            } else{
+                                Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[fav.game.iconUrl] ?? nil))
+                                Text(fav.game.name)
+                            }
+                        }.onTapGesture {
+                            favClosure(fav)
+                        }
+                    }
+                    
+                    let gamesToShow = getGamesToShow(games: viewModel.games, favs: viewModel.favs)
+                    ForEach(gamesToShow, id: \.self) { game in
                         VStack{
                             Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[game.iconUrl] ?? nil))
                             Text(game.name)

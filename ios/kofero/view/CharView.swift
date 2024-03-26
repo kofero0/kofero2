@@ -11,10 +11,14 @@ import presenter
 struct CharView: View {
     let adUnitId:String
     let interactor:CharacterInteractor
+    private let gameProvider: ProviderAbstract<ModelGame>
+    private let favProvider: FavoritesProvider
     @StateObject var viewModel = CharViewModel()
     
-    init(interactor:CharacterInteractor, adUnitId:String){
+    init(interactor:CharacterInteractor, favoritesProvider:FavoritesProvider, gameProvider: ProviderAbstract<ModelGame>, adUnitId:String){
+        self.favProvider = favoritesProvider
         self.interactor = interactor
+        self.gameProvider = gameProvider
         self.adUnitId = adUnitId
     }
     
@@ -25,9 +29,42 @@ struct CharView: View {
             }
         }.onAppear{
             interactor.setView(view: viewModel)
+            viewModel.favsProvider = favProvider
             interactor.viewResumed() }
         .onDisappear{ interactor.viewPaused() }
         .navigationTitle(viewModel.character?.name ?? "")
+        .toolbar{
+            Button(action: {
+                if let uChar = viewModel.character {
+                    favClosure(uChar)
+                }
+            }, label: {
+                if(viewModel.isFavorited){
+                    Image(systemName: "heart.fill")
+                }
+                else{
+                    Image(systemName: "heart")
+                }
+            })
+        }
+    }
+    
+    private var favClosure: ((ModelCharacter) -> Void) {
+        return { char in
+            var ints = [KotlinInt]()
+            ints.append(viewModel.gameUid!.toKotlinInt())
+            gameProvider.get(ids: ints, onEach: {either in
+                either.map{ gameArray in
+                    if(viewModel.isFavorited){
+                        viewModel.favsProvider?.delete(fav: ModelFavorite(game: gameArray![0] as! ModelGame, character: char)){_,_ in }
+                    } else{
+                        viewModel.favsProvider?.save(fav: ModelFavorite(game: gameArray![0] as! ModelGame, character: char)){_,_ in }
+                    }
+                    viewModel.isFavorited = !(viewModel.isFavorited)
+                    return gameArray
+                }
+            }) {_ in }
+        }
     }
     
     
@@ -96,6 +133,9 @@ struct CharView: View {
         @Published var character: ModelCharacter? = nil
         @Published var lastError: ModelError? = nil
         @Published var lastException: KotlinException? = nil
+        @Published var isFavorited: Bool = false
+        @Published var gameUid: Int32? = nil
+        var favsProvider: FavoritesProvider? = nil
         
         @MainActor func display(url: String, imgBase64: String) async throws {
                 urlsToImages[url] = imgBase64
@@ -158,6 +198,7 @@ struct CharView: View {
         
         func display(moves: [ModelMove], gameUid: Int32) {
             DispatchQueue.main.sync {
+                self.gameUid = gameUid
                 self.moves = moves
                 displayMoves = []
                 for move in moves {
@@ -173,6 +214,19 @@ struct CharView: View {
         func display(character: ModelCharacter) {
             DispatchQueue.main.sync {
                 self.character = character
+            }
+            favsProvider?.get{ either,error in
+                either?.map { favs in
+                    if let uFavs = favs {
+                        for fav in uFavs {
+                            let cFav = fav as! ModelFavorite
+                            if(cFav.character?.uid == character.uid){
+                                self.isFavorited = true
+                            }
+                        }
+                    }
+                    return nil
+                }
             }
         }
         

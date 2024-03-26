@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest
 const val GAME_PATH = "/game"
 const val CHAR_PATH = "/char"
 const val MOVE_PATH = "/move"
+const val COPY_PATH = "/copy"
 const val STATUS_PATH = "/status"
 const val PRIVACY_PATH = "/privacy"
 
