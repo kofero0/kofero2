@@ -66,6 +66,9 @@ struct HomeView: View {
                 ], spacing: 20) {
                     
                     VStack{
+                        Image()
+                        Text("Sort")
+                    }.onTapGesture{
                         
                     }
                     
@@ -82,15 +85,21 @@ struct HomeView: View {
                             favClosure(fav)
                         }
                     }
-                    
-                    let gamesToShow = getGamesToShow(games: viewModel.games, favs: viewModel.favs)
-                    ForEach(gamesToShow, id: \.self) { game in
+                    ForEach(getGamesToShow(games: viewModel.games, favs: viewModel.favs), id: \.self) { game in
                         VStack{
                             Image(uiImage: convertBase64StringToImage(imageBase64String: viewModel.urlsToImages[game.iconUrl] ?? nil))
                             Text(game.name)
                         }.onTapGesture {
                             gameClosure(game)
                         }
+                    }
+                    VStack{
+                        Image()
+                        Text("Acknowledgements")
+                    }
+                    VStack{
+                        Image()
+                        Text("About")
                     }
                 }
             }

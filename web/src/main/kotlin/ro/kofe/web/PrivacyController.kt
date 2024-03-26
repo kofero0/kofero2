@@ -9,12 +9,10 @@ import java.io.InputStream
 
 @RestController
 class PrivacyController {
-    private val stream: InputStream by lazy {
-        ClassPathResource("data/privacy.html").inputStream
-    }
+    private val resource = ClassPathResource("data/privacy.html")
 
     @GetMapping(PRIVACY_PATH)
     fun get(): ResponseEntity<Any> {
-        return ResponseEntity<Any>(stream.bufferedReader().readText(),HttpStatus.OK)
+        return ResponseEntity<Any>(resource.inputStream.bufferedReader().readText(),HttpStatus.OK)
     }
 }
