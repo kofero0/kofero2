@@ -24,9 +24,13 @@ class CopyController {
         ClassPathResource("data/copy.json").inputStream
     }
 
+    private val copy: String by lazy {
+        mapper.writeValueAsString(mapper.readValue<Copy>(stream.bufferedReader().readText()))
+    }
+
 
     @GetMapping(COPY_PATH)
     fun get(): ResponseEntity<Any> {
-        return ResponseEntity<Any>(mapper.writeValueAsString(mapper.readValue<Copy>(stream.bufferedReader().readText())), HttpStatus.OK)
+        return ResponseEntity<Any>(copy, HttpStatus.OK)
     }
 }

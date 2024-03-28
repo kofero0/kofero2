@@ -38,7 +38,10 @@ class CopyProviderImpl(
                 contentType(ContentType.Application.Json)
             }
                 if (response.status.value in 200..299) {
-                    mapper.mapLeft(response.bodyAsText()).also { copy = it }
+                    mapper.mapLeft(response.bodyAsText()).also {
+                        println(it)
+                        copy = it
+                    }
                 } else {
                     raise(HttpError(response.status.value, response.bodyAsText()))
                 }
