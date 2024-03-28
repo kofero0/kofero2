@@ -38,14 +38,12 @@ open class ImageProviderImpl: ImageProvider {
             try data.write(to: path, options: .atomic)
         } catch {
             loggingProvider.log(level: .debug, logTag: "ImageProvider", message: error.localizedDescription)
-            print(error.localizedDescription)
         }
     }
     
     private func getRestClosure(url:String, dataClosure: @escaping (Data?) -> Void) -> RestClosure {
         return {[self] data,response,error in
             if let uResponse = response as? HTTPURLResponse {
-                print("IMAGE STATUS: \(uResponse.statusCode)")
                 if let uData = data {
                     if(uResponse.statusCode == 200) {
                         saveToDisk(data: uData, url: url)

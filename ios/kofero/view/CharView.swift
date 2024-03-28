@@ -234,8 +234,6 @@ struct CharView: View {
         
         func displayMovesError(error: ModelError) {
             DispatchQueue.main.sync {
-                print("$$$")
-                print(error)
                 lastError = error
             }
         }

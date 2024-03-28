@@ -105,7 +105,7 @@ struct HomeView: View {
                                 .frame(width: 100, height: 100)
                         Text("Acknowledgments")
                     }.onTapGesture{showingAcknowledgmentAlert = true}
-                        .alert(viewModel.copy?.acknowledgment ?? "", isPresented: $showingAcknowledgmentAlert) {
+                        .alert(viewModel.acknowledgment, isPresented: $showingAcknowledgmentAlert) {
                             Button("OK", role: .cancel) { }
                         }
                     
@@ -135,14 +135,17 @@ struct HomeView: View {
         @Published var lastError: ModelError? = nil
         @Published var lastException: KotlinException? = nil
         @Published var copy: ModelCopy? = nil
+        @Published var acknowledgment: String = ""
         @Published var showAboutAlert = false
         
         
         func displayCopy(copy: ModelCopy) {
-            print("GOT IT$$$$$")
-            print(copy.about)
             DispatchQueue.main.sync {
                 self.copy = copy
+                acknowledgment = ""
+                for str in copy.acknowledgment.components(separatedBy: "\\n") {
+                    acknowledgment += str
+                }
             }
         }
         
@@ -171,8 +174,6 @@ struct HomeView: View {
         }
         
         @MainActor func display(url: String, imgBase64: String) async throws {
-            print("#@#@")
-            print(url)
                 urlsToImages[url] = imgBase64
         }
     }

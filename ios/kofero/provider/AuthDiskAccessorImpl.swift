@@ -27,8 +27,6 @@ class AuthDiskAccessorImpl: AuthDiskAccessor {
     func save(token:String) {
         synchronized(syncObject){
             let fileUrl = dir!.appendingPathComponent("koferoAuth.txt")
-            print("$$SAVE AUTH$$")
-            print(token)
             do{
                 try token.write(to: fileUrl, atomically: true, encoding: .utf8)
             }

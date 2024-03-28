@@ -43,7 +43,6 @@ struct RootView: View {
         @Published var lastException: KotlinException? = nil
         
         func promptUpdate() {
-            print("@@@PROMPT UPDATE@@@")
         }
         
         func error(e: KotlinException) {

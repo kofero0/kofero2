@@ -27,19 +27,22 @@ class CopyProviderImpl(
     private var copy: Copy? = null
     private val syncObject = SynchronizedObject()
 
+    private fun isEmpty(copy: Copy): Boolean {
+        return copy.about == "" && copy.acknowledgment == "" && copy.privacyPolicyUrl == ""
+    }
+
     override suspend fun get() = either<ProviderError,Copy>{
         synchronized(syncObject) {
             if (!isDiskPulled) {
                 isDiskPulled = true
                 copy = mapper.mapLeft(diskAccessor.read(jsonFilename))
             }
-            if (copy == null) {
+            if (copy == null || isEmpty(copy!!)) {
                 val response = client.get("$urlPrefix/copy") {
                 contentType(ContentType.Application.Json)
             }
                 if (response.status.value in 200..299) {
                     mapper.mapLeft(response.bodyAsText()).also {
-                        println(it)
                         copy = it
                     }
                 } else {

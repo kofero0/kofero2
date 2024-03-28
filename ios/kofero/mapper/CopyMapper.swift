@@ -12,8 +12,6 @@ import presenter
 class CopyMapperImpl: CopyMapper {
     
     public override func mapLeft(data: String) -> ModelCopy {
-        print("%%%mapping")
-        print(data)
         let json = JSON(parseJSON: data)
         return ModelCopy(about: json["about"].stringValue, acknowledgment: json["acknowledgment"].stringValue, privacyPolicyUrl: json["privacyPolicyUrl"].stringValue)
     }
