@@ -34,7 +34,7 @@ class CopyProviderImpl(
                 copy = mapper.mapLeft(diskAccessor.read(jsonFilename))
             }
             if (copy == null) {
-                val response = client.get("$urlPrefix/$jsonFilename") {
+                val response = client.get("$urlPrefix/copy") {
                 contentType(ContentType.Application.Json)
             }
                 if (response.status.value in 200..299) {

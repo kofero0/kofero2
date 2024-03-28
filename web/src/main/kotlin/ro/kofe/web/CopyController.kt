@@ -19,7 +19,7 @@ class CopyController {
     }
 
     private val stream: InputStream by lazy {
-        ClassPathResource("data/char.json").inputStream
+        ClassPathResource("data/copy.json").inputStream
     }
 
 
