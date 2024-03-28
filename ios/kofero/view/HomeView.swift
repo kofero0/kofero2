@@ -57,6 +57,10 @@ struct HomeView: View {
         return ret
     }
     
+    @State private var showingSortAlert = false
+    @State private var showingAcknowledgmentAlert = false
+    @State private var showingAboutAlert = false
+    
     var body: some View {
         ScrollView {
                 LazyVGrid(columns: [
@@ -66,12 +70,14 @@ struct HomeView: View {
                 ], spacing: 20) {
                     
                     VStack{
-                        Image()
+                        Image(systemName: "line.3.horizontal.decrease.circle")
+                            .resizable()
+                                .frame(width: 100, height: 100)
                         Text("Sort")
-                    }.onTapGesture{
-                        
+                    }.onTapGesture{showingSortAlert = true}
+                    .alert("Coming soon!", isPresented: $showingSortAlert) {
+                        Button("OK", role: .cancel) { }
                     }
-                    
                     ForEach(viewModel.favs, id: \.self) { fav in
                         VStack{
                             if(fav.character != nil){
@@ -94,13 +100,24 @@ struct HomeView: View {
                         }
                     }
                     VStack{
-                        Image()
-                        Text("Acknowledgements")
-                    }
+                        Image(systemName: "figure.wave.circle")
+                            .resizable()
+                                .frame(width: 100, height: 100)
+                        Text("Acknowledgments")
+                    }.onTapGesture{showingAcknowledgmentAlert = true}
+                        .alert(viewModel.copy?.acknowledgment ?? "", isPresented: $showingAcknowledgmentAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
+                    
                     VStack{
-                        Image()
+                        Image(systemName: "info.circle")
+                            .resizable()
+                                .frame(width: 100, height: 100)
                         Text("About")
-                    }
+                    }.onTapGesture{viewModel.showAboutAlert = true}
+                    .alert(isPresented: $viewModel.showAboutAlert, content: { () -> Alert in
+                        Alert(title: Text("About"), message: Text(viewModel.copy?.about ?? ""), dismissButton: .default(Text("Okay")))
+                    })
                 }
             }
         .onAppear{
@@ -117,7 +134,17 @@ struct HomeView: View {
         @Published var urlsToImages: [String:String] = [:]
         @Published var lastError: ModelError? = nil
         @Published var lastException: KotlinException? = nil
+        @Published var copy: ModelCopy? = nil
+        @Published var showAboutAlert = false
         
+        
+        func displayCopy(copy: ModelCopy) {
+            print("GOT IT$$$$$")
+            print(copy.about)
+            DispatchQueue.main.sync {
+                self.copy = copy
+            }
+        }
         
         func error(e: KotlinException) {
             lastException = e

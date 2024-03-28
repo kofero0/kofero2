@@ -1,20 +1,16 @@
 package ro.kofe.presenter.ipv.home
 
 import arrow.core.raise.either
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import ro.kofe.model.Character
-import ro.kofe.model.Favorite
-import ro.kofe.model.Game
-import ro.kofe.model.InvalidObject
+import ro.kofe.model.*
 import ro.kofe.model.logging.LogTag.HOME_PRESENTER
 import ro.kofe.presenter.ipv.PresenterImpl
-import ro.kofe.presenter.provider.FavoritesProvider
-import ro.kofe.presenter.provider.ImageProvider
-import ro.kofe.presenter.provider.LoggingProvider
-import ro.kofe.presenter.provider.Provider
+import ro.kofe.presenter.provider.*
 
 
 class HomePresenterImpl(
+    private var copyProvider: CopyProvider,
     private var gameProvider: Provider<Game>,
     private var imageProvider: ImageProvider,
     private var favoritesProvider: FavoritesProvider,
@@ -46,6 +42,14 @@ class HomePresenterImpl(
         }) { favs ->
             view?.displayFavs(favs)
             displayImages(favs).onLeft { emit(it) }
+        }
+    }
+
+    override suspend fun showCopy() = flow {
+        copyProvider.get().fold({ e ->
+            emit(e)
+        }) {
+            view?.displayCopy(it)
         }
     }
 

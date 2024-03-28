@@ -58,6 +58,13 @@ class HomeInteractorImpl(
                     log(Level.ALERT, "statusCode: ${it.statusCode}")
                 }
             }
+            presenter.showCopy().collect {
+                log(Level.ALERT, "provider error showing copy! $it")
+                if (it is HttpError) {
+                    log(Level.ALERT, "response: ${it.response}")
+                    log(Level.ALERT, "statusCode: ${it.statusCode}")
+                }
+            }
         }
     }
 }

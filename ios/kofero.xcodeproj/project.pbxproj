@@ -60,6 +60,7 @@
 		4BD71AA12A8EAECF00EB8752 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA02A8EAECF00EB8752 /* Extension.swift */; };
 		4BD71AA82A8F15BD00EB8752 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA72A8F15BD00EB8752 /* Typealias.swift */; };
 		4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71AA92A8F165F00EB8752 /* RootView.swift */; };
+		4BE3B0592BB395F000BA25E8 /* CopyMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE3B0582BB395F000BA25E8 /* CopyMapper.swift */; };
 		4BE92F8B2B66F598000C52A4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE92F8A2B66F598000C52A4 /* Router.swift */; };
 		4BE92F8D2B66F5C8000C52A4 /* RouterHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE92F8C2B66F5C8000C52A4 /* RouterHost.swift */; };
 		4BF5B6752B588D28003D600E /* StatusProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */; };
@@ -163,6 +164,7 @@
 		4BD71AA02A8EAECF00EB8752 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4BD71AA72A8F15BD00EB8752 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		4BD71AA92A8F165F00EB8752 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4BE3B0582BB395F000BA25E8 /* CopyMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMapper.swift; sourceTree = "<group>"; };
 		4BE92F8A2B66F598000C52A4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4BE92F8C2B66F5C8000C52A4 /* RouterHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterHost.swift; sourceTree = "<group>"; };
 		4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusProviderImpl.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				4BBAE1DF2B61E11100C50536 /* StateMapperImpl.swift */,
 				4B74094B2B6C5FB300AB723A /* AuthMapperImpl.swift */,
 				4B74097E2B7F4A7D00AB723A /* FavoritesMapper.swift */,
+				4BE3B0582BB395F000BA25E8 /* CopyMapper.swift */,
 			);
 			path = mapper;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				4B74094C2B6C5FB300AB723A /* AuthMapperImpl.swift in Sources */,
 				4B0D01EA2A93F2E0005CF444 /* NeedleGenerated.swift in Sources */,
 				4BE92F8D2B66F5C8000C52A4 /* RouterHost.swift in Sources */,
+				4BE3B0592BB395F000BA25E8 /* CopyMapper.swift in Sources */,
 				4BBAE1D22B5F9FED00C50536 /* RequestMapperImpl.swift in Sources */,
 				4BD71A5F2A85F4DC00EB8752 /* StringEncoder.swift in Sources */,
 				4BD71A6A2A85F52000EB8752 /* CharacterMapperImpl.swift in Sources */,

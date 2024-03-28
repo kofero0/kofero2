@@ -204,6 +204,9 @@ private class HomeDependencycad225e9266b3c9a56ddBaseProvider: HomeDependency {
     var charInteractor: CharacterInteractor {
         return rootComponent.charInteractor
     }
+    var copyProvider: CopyProvider {
+        return rootComponent.copyProvider
+    }
     private let rootComponent: RootComponent
     init(rootComponent: RootComponent) {
         self.rootComponent = rootComponent

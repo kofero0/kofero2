@@ -51,19 +51,21 @@ struct CharView: View {
     
     private var favClosure: ((ModelCharacter) -> Void) {
         return { char in
-            var ints = [KotlinInt]()
-            ints.append(viewModel.gameUid!.toKotlinInt())
-            gameProvider.get(ids: ints, onEach: {either in
-                either.map{ gameArray in
-                    if(viewModel.isFavorited){
-                        viewModel.favsProvider?.delete(fav: ModelFavorite(game: gameArray![0] as! ModelGame, character: char)){_,_ in }
-                    } else{
-                        viewModel.favsProvider?.save(fav: ModelFavorite(game: gameArray![0] as! ModelGame, character: char)){_,_ in }
+            if let gUid = viewModel.gameUid {
+                var ints = [KotlinInt]()
+                ints.append(gUid.toKotlinInt())
+                gameProvider.get(ids: ints, onEach: {either in
+                    either.map{ gameArray in
+                        if(viewModel.isFavorited){
+                            viewModel.favsProvider?.delete(fav: ModelFavorite(game: gameArray![0] as! ModelGame, character: char)){_,_ in }
+                        } else{
+                            viewModel.favsProvider?.save(fav: ModelFavorite(game: gameArray![0] as! ModelGame, character: char)){_,_ in }
+                        }
+                        viewModel.isFavorited = !(viewModel.isFavorited)
+                        return gameArray
                     }
-                    viewModel.isFavorited = !(viewModel.isFavorited)
-                    return gameArray
-                }
-            }) {_ in }
+                }) {_ in }
+            }
         }
     }
     

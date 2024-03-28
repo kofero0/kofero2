@@ -164,4 +164,8 @@ class RootComponent: BootstrapComponent {
     var authHttpClient: Ktor_client_coreHttpClient {
         return HttpClientProvider().provideAuth(authProvider: authProvider)
     }
+    
+    var copyProvider: CopyProvider {
+        return CopyProviderImpl(client: authHttpClient, jsonFilename: "copy", urlPrefix: urlPrefix, mapper: CopyMapperImpl(), diskAccessor: diskAccessor)
+    }
 }
