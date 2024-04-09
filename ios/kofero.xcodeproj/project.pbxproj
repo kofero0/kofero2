@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B060E1D2BADF3DC000211BD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4B060E1C2BADF3DC000211BD /* FirebaseAnalytics */; };
-		4B060E1F2BADF3DC000211BD /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B060E1E2BADF3DC000211BD /* FirebaseAnalyticsSwift */; };
-		4B060E212BADF3DC000211BD /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4B060E202BADF3DC000211BD /* FirebaseCrashlytics */; };
 		4B060E232BAE0DCD000211BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B060E222BAE0DCD000211BD /* GoogleService-Info.plist */; };
 		4B060E242BAE0DCD000211BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B060E222BAE0DCD000211BD /* GoogleService-Info.plist */; };
 		4B060E252BAE0DCD000211BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B060E222BAE0DCD000211BD /* GoogleService-Info.plist */; };
@@ -185,9 +182,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B060E1F2BADF3DC000211BD /* FirebaseAnalyticsSwift in Frameworks */,
-				4B060E212BADF3DC000211BD /* FirebaseCrashlytics in Frameworks */,
-				4B060E1D2BADF3DC000211BD /* FirebaseAnalytics in Frameworks */,
 				9E169777FF902B2091A95DCA /* Pods_kofero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,9 +415,6 @@
 			);
 			name = kofero;
 			packageProductDependencies = (
-				4B060E1C2BADF3DC000211BD /* FirebaseAnalytics */,
-				4B060E1E2BADF3DC000211BD /* FirebaseAnalyticsSwift */,
-				4B060E202BADF3DC000211BD /* FirebaseCrashlytics */,
 			);
 			productName = ios;
 			productReference = 4BD71A492A85EB9D00EB8752 /* kofero.app */;
@@ -521,7 +512,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export SOURCEKIT_LOGGING=0 && needle generate kofero/NeedleGenerated.swift kofero/\n";
+			shellScript = "#export SOURCEKIT_LOGGING=0 && needle generate kofero/NeedleGenerated.swift kofero/\n";
 		};
 		8901B00833273E65D205F8F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -983,24 +974,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4B060E1C2BADF3DC000211BD /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4B060E1B2BADF3DC000211BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		4B060E1E2BADF3DC000211BD /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4B060E1B2BADF3DC000211BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
-		};
-		4B060E202BADF3DC000211BD /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4B060E1B2BADF3DC000211BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4BD71A412A85EB9D00EB8752 /* Project object */;
 }

@@ -44,10 +44,10 @@ PODS:
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
-  - Google-Mobile-Ads-SDK (~> 8.3.0)
+  - Google-Mobile-Ads-SDK
   - NeedleFoundation
   - presenter (from `../presenter`)
-  - SwiftyJSON (~> 4.3.0)
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -71,10 +71,10 @@ SPEC CHECKSUMS:
   GoogleUtilities: 13e2c67ede716b8741c7989e26893d151b2b2084
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NeedleFoundation: 36cfaea9ae9eb527a796f5c1df19296c722666b8
-  presenter: ab1ec8cbf45d4eb1152dbd9b7c7e9ad3e8305af1
+  presenter: 61eae9394c258a496b6f5210e9c55d142ff15e47
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: b5432aa8f47939fd4592ea6e70e0b1f83bf267cf
+PODFILE CHECKSUM: 660a5408c4c6adb6489185e6e94c914efbfce9ac
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2
