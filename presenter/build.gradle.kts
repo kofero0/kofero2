@@ -62,6 +62,12 @@ kotlin {
                 baseName = frameworkName + "Base"
             }
         }
+        iosSimulatorArm64{
+            binaries.framework {
+                embedBitcode(BITCODE)
+                baseName = frameworkName + "Base"
+            }
+        }
     }
 
 
@@ -69,7 +75,7 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(project(":model"))
-                implementation("io.ktor:ktor-client-core:2.3.7")
+                implementation("io.ktor:ktor-client-core:2.3.10")
                 implementation("com.soywiz.korlibs.klock:klock:2.4.13")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
                 implementation("io.arrow-kt:arrow-core:1.2.0")
@@ -83,13 +89,19 @@ kotlin {
         val iosMain by getting {
             dependencies {
                 commonMain
-                implementation("io.ktor:ktor-client-darwin:2.3.7")
+                implementation("io.ktor:ktor-client-darwin:2.3.10")
             }
         }
         val jvmMain by getting {
             dependencies {
                 commonMain
-                implementation("io.ktor:ktor-client-okhttp:2.3.7")
+                implementation("io.ktor:ktor-client-okhttp:2.3.10")
+            }
+        }
+        val iosSimulatorArm64Main by getting {
+            dependencies{
+                commonMain
+                implementation("io.ktor:ktor-client-darwin-iossimulatorarm64:2.3.10")
             }
         }
     }

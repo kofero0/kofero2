@@ -1,6 +1,5 @@
 package ro.kofe.view
 
-import android.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -116,7 +115,7 @@ class HomeViewModel @Inject constructor(
         favorites
     }
 
-    override fun displayCopy(inCopy: Copy) = _copy.update { inCopy }
+    override fun displayCopy(copy: Copy) = _copy.update { copy }
 
     override fun displayGamesError(error: Error) = _gameError.update { error }
 

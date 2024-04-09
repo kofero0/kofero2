@@ -22,6 +22,7 @@ kotlin {
         }
     }
     ios("ios")
+    iosSimulatorArm64()
 
 
     sourceSets {
