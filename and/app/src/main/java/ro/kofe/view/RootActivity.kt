@@ -1,11 +1,7 @@
 package ro.kofe.view
 
-import android.content.res.Resources
 import android.os.Bundle
-import android.util.DisplayMetrics
-import android.util.Log
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -26,7 +22,7 @@ import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import dagger.hilt.android.AndroidEntryPoint
-import ro.kofe.R
+import ro.kofe.frames.R
 import ro.kofe.model.ViewTag
 import ro.kofe.ui.CharScreen
 import ro.kofe.ui.GameScreen
@@ -48,22 +44,19 @@ class RootActivity : ComponentActivity() {
 }
 
 
-
-
 @Composable
-fun AdmobBanner(modifier: Modifier = Modifier) {
+fun AdmobBanner(modifier: Modifier = Modifier, adId: Int) {
     AndroidView(
         modifier = modifier.fillMaxWidth(),
         factory = { context ->
             AdView(context).apply {
                 setAdSize(AdSize.BANNER)
-                adUnitId = context.resources.getString(R.string.adUnitId)
+                adUnitId = context.resources.getString(adId)
                 loadAd(AdRequest.Builder().build())
             }
         }
     )
 }
-
 
 
 @Composable
@@ -85,10 +78,10 @@ fun KoferoApp(
     Scaffold(topBar = {
         Column {
             KoferoAppBar(appBar)
-            AdmobBanner()
+            AdmobBanner(adId = R.string.topAdUnitId)
         }
     }, bottomBar = {
-        AdmobBanner()
+        AdmobBanner(adId = R.string.bottomAdUnitId)
     }) { innerPadding ->
         NavHost(
             navController = navController,
@@ -96,11 +89,11 @@ fun KoferoApp(
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(route = ViewTag.HOME_VIEW.name) {
-                HomeScreen(viewModel = home, onNavigate = { viewTag,gameUid, charUid ->
+                HomeScreen(viewModel = home, onNavigate = { viewTag, gameUid, charUid ->
                     var route = "${viewTag.name}/$gameUid"
                     charUid?.let { route += "/$charUid" }
                     navController.navigate(route)
-                    if(charUid == null){
+                    if (charUid == null) {
                         appBar.fromHome(gameUid)
                     } else {
                         appBar.fromHome(charUid)

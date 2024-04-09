@@ -10,7 +10,10 @@ import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.HttpClientProvider
-import ro.kofe.presenter.ipv.game.*
+import ro.kofe.presenter.ipv.game.GameInteractor
+import ro.kofe.presenter.ipv.game.GameInteractorImpl
+import ro.kofe.presenter.ipv.game.GamePresenter
+import ro.kofe.presenter.ipv.game.GamePresenterImpl
 import ro.kofe.presenter.map.Mapper
 import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.DiskAccessor
@@ -57,6 +60,13 @@ object GameModule {
         accessor: DiskAccessor,
         mapper: Mapper<List<Game>, String>,
         requestMapper: Mapper<List<Int>, String>,
-    ): Provider<Game> = GameProviderImpl(HttpClientProvider.provideAuth(authProvider),"game",urlPrefix,mapper,requestMapper,accessor)
+    ): Provider<Game> = GameProviderImpl(
+        HttpClientProvider.provideAuth(authProvider),
+        "game",
+        urlPrefix,
+        mapper,
+        requestMapper,
+        accessor
+    )
 
 }

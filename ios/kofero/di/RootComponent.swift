@@ -81,7 +81,7 @@ class RootComponent: BootstrapComponent {
     }
     
     var loggingProvider: LoggingProvider {
-        return LoggingProviderImpl()
+        return ReleaseLoggingProvider()
     }
     
     var stateReducer: StateReducer {

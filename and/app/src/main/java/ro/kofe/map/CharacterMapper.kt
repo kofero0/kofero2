@@ -4,7 +4,6 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import ro.kofe.model.Character
 import ro.kofe.presenter.map.Mapper
-import java.nio.charset.Charset
 
 
 class CharacterMapper(private val gson: Gson) : Mapper<List<Character>, String> {

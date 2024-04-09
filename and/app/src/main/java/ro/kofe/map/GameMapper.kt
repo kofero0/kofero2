@@ -4,7 +4,6 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import ro.kofe.model.Game
 import ro.kofe.presenter.map.Mapper
-import java.nio.charset.Charset
 
 
 class GameMapper(private val gson: Gson) : Mapper<List<Game>, String> {

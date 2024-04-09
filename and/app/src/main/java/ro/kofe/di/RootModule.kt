@@ -16,7 +16,10 @@ import ro.kofe.model.Game
 import ro.kofe.model.Move
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.HttpClientProvider
-import ro.kofe.presenter.ipv.root.*
+import ro.kofe.presenter.ipv.root.RootInteractor
+import ro.kofe.presenter.ipv.root.RootInteractorImpl
+import ro.kofe.presenter.ipv.root.RootPresenter
+import ro.kofe.presenter.ipv.root.RootPresenterImpl
 import ro.kofe.presenter.map.Mapper
 import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.DiskAccessor
@@ -27,7 +30,13 @@ import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.provider.StatusProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
-import ro.kofe.provider.*
+import ro.kofe.provider.AuthProviderImpl
+import ro.kofe.provider.DiskAccessorImpl
+import ro.kofe.provider.FavoritesProviderImpl
+import ro.kofe.provider.IdentityProvider
+import ro.kofe.provider.IdentityProviderImpl
+import ro.kofe.provider.ImageProviderImpl
+import ro.kofe.provider.StatusProviderImpl
 import javax.inject.Qualifier
 
 @Module
@@ -55,7 +64,8 @@ object RootModule {
     fun provideRequestMapper(gson: Gson): Mapper<List<Int>, String> = RequestMapper(gson)
 
     @Provides
-    fun provideDiskAccessor(@ApplicationContext context: Context): DiskAccessor = DiskAccessorImpl(context)
+    fun provideDiskAccessor(@ApplicationContext context: Context): DiskAccessor =
+        DiskAccessorImpl(context)
 
     @Provides
     @UrlPrefix
@@ -115,7 +125,7 @@ object RootModule {
         charProvider,
         moveProvider,
         loggingProvider
-        )
+    )
 
     @Provides
     fun provideRootInteractor(
@@ -136,7 +146,7 @@ object RootModule {
     fun provideFavoritesProvider(
         @ApplicationContext context: Context,
         gson: Gson
-    ): FavoritesProvider = FavoritesProviderImpl(context,gson)
+    ): FavoritesProvider = FavoritesProviderImpl(context, gson)
 
     @Provides
     fun provideDispatcherProvider() = DispatcherProvider

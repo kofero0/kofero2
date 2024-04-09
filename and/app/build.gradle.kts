@@ -12,14 +12,14 @@ kotlin {
 }
 
 android {
-    namespace = "ro.kofe"
+    namespace = "ro.kofe.frames"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "ro.kofe"
+        applicationId = "ro.kofe.frames"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
+        versionCode = 4
         versionName = "$version"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

@@ -47,7 +47,7 @@
 		4BD71A6B2A85F52000EB8752 /* GameMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A662A85F52000EB8752 /* GameMapperImpl.swift */; };
 		4BD71A722A85F59800EB8752 /* ImageProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6D2A85F59800EB8752 /* ImageProviderImpl.swift */; };
 		4BD71A742A85F59800EB8752 /* FavoritesProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A6F2A85F59800EB8752 /* FavoritesProviderImpl.swift */; };
-		4BD71A762A85F59800EB8752 /* LoggingProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A712A85F59800EB8752 /* LoggingProviderImpl.swift */; };
+		4BD71A762A85F59800EB8752 /* LoggingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A712A85F59800EB8752 /* LoggingProvider.swift */; };
 		4BD71A8C2A8B0D7300EB8752 /* GameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A872A8B0D7300EB8752 /* GameComponent.swift */; };
 		4BD71A8D2A8B0D7300EB8752 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A882A8B0D7300EB8752 /* RootComponent.swift */; };
 		4BD71A8E2A8B0D7300EB8752 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD71A892A8B0D7300EB8752 /* MoveComponent.swift */; };
@@ -150,7 +150,7 @@
 		4BD71A662A85F52000EB8752 /* GameMapperImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMapperImpl.swift; sourceTree = "<group>"; };
 		4BD71A6D2A85F59800EB8752 /* ImageProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProviderImpl.swift; sourceTree = "<group>"; };
 		4BD71A6F2A85F59800EB8752 /* FavoritesProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesProviderImpl.swift; sourceTree = "<group>"; };
-		4BD71A712A85F59800EB8752 /* LoggingProviderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingProviderImpl.swift; sourceTree = "<group>"; };
+		4BD71A712A85F59800EB8752 /* LoggingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingProvider.swift; sourceTree = "<group>"; };
 		4BD71A872A8B0D7300EB8752 /* GameComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameComponent.swift; sourceTree = "<group>"; };
 		4BD71A882A8B0D7300EB8752 /* RootComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
 		4BD71A892A8B0D7300EB8752 /* MoveComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
@@ -312,7 +312,7 @@
 			children = (
 				4BD71A6D2A85F59800EB8752 /* ImageProviderImpl.swift */,
 				4BD71A6F2A85F59800EB8752 /* FavoritesProviderImpl.swift */,
-				4BD71A712A85F59800EB8752 /* LoggingProviderImpl.swift */,
+				4BD71A712A85F59800EB8752 /* LoggingProvider.swift */,
 				4BF5B6742B588D28003D600E /* StatusProviderImpl.swift */,
 				4BBAE1D92B61D71C00C50536 /* DiskAccessorImpl.swift */,
 				4BBAE1DB2B61DE5200C50536 /* StateLoggerImpl.swift */,
@@ -582,7 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BD71A742A85F59800EB8752 /* FavoritesProviderImpl.swift in Sources */,
-				4BD71A762A85F59800EB8752 /* LoggingProviderImpl.swift in Sources */,
+				4BD71A762A85F59800EB8752 /* LoggingProvider.swift in Sources */,
 				4BD71A722A85F59800EB8752 /* ImageProviderImpl.swift in Sources */,
 				4BD71AAA2A8F165F00EB8752 /* RootView.swift in Sources */,
 				4BD71A602A85F4DC00EB8752 /* JsonStringEncoder.swift in Sources */,

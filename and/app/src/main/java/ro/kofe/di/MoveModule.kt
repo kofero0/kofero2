@@ -1,13 +1,10 @@
 package ro.kofe.di
 
-import android.content.Context
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
 import ro.kofe.map.MoveMapper
 import ro.kofe.model.Move
 import ro.kofe.presenter.HttpClientProvider
@@ -30,5 +27,12 @@ object MoveModule {
         mapper: Mapper<List<Move>, String>,
         requestMapper: Mapper<List<Int>, String>,
         diskAccessor: DiskAccessor
-    ): Provider<Move> = MoveProviderImpl(HttpClientProvider.provideAuth(authProvider),"move",urlPrefix,mapper,requestMapper,diskAccessor)
+    ): Provider<Move> = MoveProviderImpl(
+        HttpClientProvider.provideAuth(authProvider),
+        "move",
+        urlPrefix,
+        mapper,
+        requestMapper,
+        diskAccessor
+    )
 }

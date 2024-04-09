@@ -32,7 +32,6 @@ class CopyProviderImpl(
     }
 
     override suspend fun get() = either<ProviderError,Copy>{
-        synchronized(syncObject) {
             if (!isDiskPulled) {
                 isDiskPulled = true
                 copy = mapper.mapLeft(diskAccessor.read(jsonFilename))
@@ -52,7 +51,6 @@ class CopyProviderImpl(
                 copy!!
             }
         }
-    }
 
     override fun delete() = either<ProviderError, Unit> {
         diskAccessor.write(jsonFilename, "")

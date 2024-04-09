@@ -6,5 +6,10 @@
     <string name="acknowledgments_text">The King of Fighters 13, The King of Fighters 15 and related content are copyright SNK Corporation.\nStreet Fighter 6 and related content is copyright Capcom Co., Ltd.\nTekken 8 and related content is copyright Bandai Namco Entertainment Inc.\nAll rights reserved by their respective parties.\n\nThanks to Atma for compiling KOF13 data,\nMatosh Lee and Amedo310 for KOF15,\nwavu.wiki for T8 and Frame Assistant Tool for Street Fighter.</string>
     <string name="about_text">jefe@kofe.ro</string>
     <string name="sort_text">Coming soon!</string>
-    <string name="adUnitId">"ca-app-pub-3940256099942544/9214589741"</string>
+    <string name="sort_title">Sort</string>
+    <string name="acknowledgments_title">Acknowledgments</string>
+    <string name="about_title">About</string>
+    <string name="topAdUnitId">"ca-app-pub-8614671926563443/5325047866"</string>
+    <string name="bottomAdUnitId">ca-app-pub-8614671926563443/1298990756</string>
+
 </resources>

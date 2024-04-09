@@ -19,9 +19,10 @@
 		};
 		89EE285ACCA59DB13DF35EFEC8CC8C3E /* presenter */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 0CC72C27C6884F125E83E5A6B27E4C24 /* Build configuration list for PBXAggregateTarget "presenter" */;
+			buildConfigurationList = 0BFC7438527A5D9C40B9298395AD71CF /* Build configuration list for PBXAggregateTarget "presenter" */;
 			buildPhases = (
-				00C7EB3F91DE77825ED190E35C782C0F /* [CP-User] Build presenter */,
+				CD06B460BE002DD819D3F0DF24C4CE18 /* [CP-User] Build presenter */,
+				32B8E0850BCCD228A6B3BE40B3FAC5FB /* [CP] Copy dSYMs */,
 			);
 			dependencies = (
 			);
@@ -297,7 +298,6 @@
 		0C46B5274CD3B7A194786F11AF88882F /* Pods-kofero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kofero-dummy.m"; sourceTree = "<group>"; };
 		0CB06C8298817F3995A0BEC164691F86 /* PromisesObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromisesObjC-dummy.m"; sourceTree = "<group>"; };
 		0D135087A9179FEB8C2B1EB6BE0084F4 /* FBLPromise+Do.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Do.h"; path = "Sources/FBLPromises/include/FBLPromise+Do.h"; sourceTree = "<group>"; };
-		0E2D847045B796B596BA3635543662F1 /* presenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = presenter.framework; path = build/cocoapods/framework/presenter.framework; sourceTree = "<group>"; };
 		0E5E327C5DE59D89B2AAA5FD7C02BE32 /* PluginExtensionProviderRegistry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PluginExtensionProviderRegistry.swift; path = Sources/NeedleFoundation/Pluginized/Internal/PluginExtensionProviderRegistry.swift; sourceTree = "<group>"; };
 		15654E23EB8689F02F59F40D6F69F90F /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
 		163D033D49C10AAA9C42040630F85404 /* GULHeartbeatDateStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULHeartbeatDateStorage.m; path = GoogleUtilities/Environment/GULHeartbeatDateStorage.m; sourceTree = "<group>"; };
@@ -320,6 +320,7 @@
 		32BC0DE72CFE7555F2DAF4203D196EEE /* GoogleAppMeasurement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAppMeasurement.debug.xcconfig; sourceTree = "<group>"; };
 		3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromisesObjC; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		350E55F9F7946240B5EF642C6BD2573E /* PromisesObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromisesObjC.release.xcconfig; sourceTree = "<group>"; };
+		35BEF940A1E50DE8C9AC174905AF26EE /* presenter-copy-dsyms.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "presenter-copy-dsyms.sh"; sourceTree = "<group>"; };
 		35C32D4FEEF2F7B11EC64BE0FA37CB04 /* GoogleUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleUtilities-dummy.m"; sourceTree = "<group>"; };
 		3785380079673C6A5C3E32D82BB2FB34 /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		3A03F8F8FB424246186FA6B5823A96EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
@@ -374,7 +375,6 @@
 		7D8A8DFEBA83B5878568614298E2BB66 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
 		7EDC2794CF149B9ED3735A8524C1D46A /* GoogleAppMeasurement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAppMeasurement.release.xcconfig; sourceTree = "<group>"; };
 		80D3472423DB7B1F459C13C291B3E516 /* GoogleUtilities-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleUtilities-Info.plist"; sourceTree = "<group>"; };
-		80EEE6BCDDC640FC849E60CE9E11447B /* presenter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = presenter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		80F9BD3835300B33876265B479795E26 /* NSURLSession+GULPromises.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+GULPromises.h"; path = "GoogleUtilities/Environment/Public/GoogleUtilities/NSURLSession+GULPromises.h"; sourceTree = "<group>"; };
 		833321E9AA88D851DF317FE069526D70 /* GULNetworkMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkMessageCode.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkMessageCode.h; sourceTree = "<group>"; };
 		85EB17845AE2580F6A53AFB81B5B8BCA /* GULAppDelegateSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppDelegateSwizzler.m; path = GoogleUtilities/AppDelegateSwizzler/GULAppDelegateSwizzler.m; sourceTree = "<group>"; };
@@ -394,6 +394,7 @@
 		97EE3FB016802D45A5FE42163A8F15E8 /* Pods-kofero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kofero.modulemap"; sourceTree = "<group>"; };
 		99807585DBAA8B5086E2643EAA8868AC /* NSURLSession+GULPromises.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+GULPromises.m"; path = "GoogleUtilities/Environment/URLSessionPromiseWrapper/NSURLSession+GULPromises.m"; sourceTree = "<group>"; };
 		99DDDAA6E97612C6FA84C71F71C78FEA /* NeedleFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NeedleFoundation.modulemap; sourceTree = "<group>"; };
+		9B6B5085A78622DDD029D9A37D4A43BB /* presenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = presenter.debug.xcconfig; sourceTree = "<group>"; };
 		9CDD396405C3513FA57B655E19407134 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A005BFD370DE6BDE4181B1A9BD3B0DD8 /* nanopb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.release.xcconfig; sourceTree = "<group>"; };
@@ -411,16 +412,17 @@
 		BADE67041CF4B7356A63EDAF1FEAE668 /* GoogleUserMessagingPlatform-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleUserMessagingPlatform-xcframeworks.sh"; sourceTree = "<group>"; };
 		BB3FB39E63CEDB41D1793E9D2AA4ADE1 /* FBLPromise+Do.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Do.m"; path = "Sources/FBLPromises/FBLPromise+Do.m"; sourceTree = "<group>"; };
 		BE1556EA2EA272E94A72839D134E6E8E /* Component.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Component.swift; path = Sources/NeedleFoundation/Component.swift; sourceTree = "<group>"; };
+		BE5469C7978D0906C3DDBC57E496F332 /* presenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = presenter.release.xcconfig; sourceTree = "<group>"; };
 		BE758EA97565547AC6546DC27A23B39C /* NeedleFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NeedleFoundation.release.xcconfig; sourceTree = "<group>"; };
 		BF5F51DA8034B334F87AEAC9AF82486D /* nanopb-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "nanopb-Info.plist"; sourceTree = "<group>"; };
 		BF6D7E4F00BCA4C0E497D2DC134D028C /* FBLPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBLPromise.m; path = Sources/FBLPromises/FBLPromise.m; sourceTree = "<group>"; };
 		BFDDB3AD0E4BB2191D3DCFB09AD9E1B2 /* PromisesObjC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PromisesObjC.modulemap; sourceTree = "<group>"; };
 		C16208A55D85B6F55E1043D1CCA73457 /* GULReachabilityMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULReachabilityMessageCode.h; path = GoogleUtilities/Reachability/GULReachabilityMessageCode.h; sourceTree = "<group>"; };
-		C4A5ACBE7999CECE82F8DF2D8B6653D5 /* presenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = presenter.debug.xcconfig; sourceTree = "<group>"; };
 		C51ACF730CFD35EC49390F90A29C2E32 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		C53F935A8C087518299D8238972340EA /* GULNetworkInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkInfo.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULNetworkInfo.h; sourceTree = "<group>"; };
 		C8BBC767F35697A9B113532AF4E9DAC6 /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
 		CAC633EB41EB9D38826FAD5F10BAB7D9 /* Pods-kofero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kofero-Info.plist"; sourceTree = "<group>"; };
+		CCBE8AE6086F5F200FF1C32B3ED6DE69 /* presenter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = presenter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CDD5256E51972C2CE4406A8AE129BB01 /* nanopb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.debug.xcconfig; sourceTree = "<group>"; };
 		CE3AA08566591A4642D810B8487A22F6 /* Pods-kofero */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-kofero"; path = Pods_kofero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE878965B4CDDF31DB8F5704A4828DD2 /* FBLPromise+Any.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Any.h"; path = "Sources/FBLPromises/include/FBLPromise+Any.h"; sourceTree = "<group>"; };
@@ -441,8 +443,8 @@
 		E3BB2A15A59AFBB2F1391C3CB847CB97 /* GoogleUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleUtilities-umbrella.h"; sourceTree = "<group>"; };
 		E429BFB66DB45CF9AA1872F3B71F04AD /* FBLPromise+Then.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Then.m"; path = "Sources/FBLPromises/FBLPromise+Then.m"; sourceTree = "<group>"; };
 		E510FC9CF5DD90B6ACD67AE0CDF2CFFA /* GULNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkLoggerProtocol.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkLoggerProtocol.h; sourceTree = "<group>"; };
+		E7C9C7CD5451900E75F3E784DBDEE898 /* presenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = presenter.framework; path = build/cocoapods/framework/presenter.framework; sourceTree = "<group>"; };
 		E7FD2E9B37988072F1D34C0EFECDD37B /* FBLPromise+Race.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Race.h"; path = "Sources/FBLPromises/include/FBLPromise+Race.h"; sourceTree = "<group>"; };
-		E8C79D9E80152C0BA538585CCA790352 /* presenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = presenter.release.xcconfig; sourceTree = "<group>"; };
 		EAA8900C5C358D91846C294FB9243A1C /* Pods-kofero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kofero.debug.xcconfig"; sourceTree = "<group>"; };
 		EBAB7A55C53D7085F344FEEF3F8E6460 /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
 		EC3E82EF39BCB4D31A33225601EA619A /* FBLPromise+Recover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Recover.h"; path = "Sources/FBLPromises/include/FBLPromise+Recover.h"; sourceTree = "<group>"; };
@@ -551,16 +553,6 @@
 			path = "../Target Support Files/NeedleFoundation";
 			sourceTree = "<group>";
 		};
-		13742F0FA7C0A12830D729E8F8E28EC9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C4A5ACBE7999CECE82F8DF2D8B6653D5 /* presenter.debug.xcconfig */,
-				E8C79D9E80152C0BA538585CCA790352 /* presenter.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../ios/Pods/Target Support Files/presenter";
-			sourceTree = "<group>";
-		};
 		1FF99B3283B98F574008BECC19D1A4D3 /* encode */ = {
 			isa = PBXGroup;
 			children = (
@@ -598,14 +590,6 @@
 				020E51664CAFC1996A654EF6C4FEDC8C /* GULLoggerLevel.h */,
 			);
 			name = Logger;
-			sourceTree = "<group>";
-		};
-		37FF6111F781249DCA46E69E28E9DEDB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0E2D847045B796B596BA3635543662F1 /* presenter.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		482862A042E1C67ECF41F1D5649E1FC9 /* GoogleUtilities */ = {
@@ -664,17 +648,6 @@
 			path = "../Target Support Files/GoogleUserMessagingPlatform";
 			sourceTree = "<group>";
 		};
-		5DD90A7A8385B9A968CD152D447DDCA3 /* presenter */ = {
-			isa = PBXGroup;
-			children = (
-				37FF6111F781249DCA46E69E28E9DEDB /* Frameworks */,
-				8050FD5041F9159B284527AD448EBB23 /* Pod */,
-				13742F0FA7C0A12830D729E8F8E28EC9 /* Support Files */,
-			);
-			name = presenter;
-			path = ../../presenter;
-			sourceTree = "<group>";
-		};
 		5F32961388941810772455E8839E6639 /* AppDelegateSwizzler */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,10 +679,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8050FD5041F9159B284527AD448EBB23 /* Pod */ = {
+		80113E69706EAC3D73D61959692B1ABE /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				80EEE6BCDDC640FC849E60CE9E11447B /* presenter.podspec */,
+				CCBE8AE6086F5F200FF1C32B3ED6DE69 /* presenter.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -724,6 +697,17 @@
 			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
+		8493A92370B8E5CDFE34D63108AE35AB /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9A8C30E6EB89F0E93EF0BAC5559AD013 /* Frameworks */,
+				80113E69706EAC3D73D61959692B1ABE /* Pod */,
+				C0F56A5256DF373FE303F30B00E68340 /* Support Files */,
+			);
+			name = presenter;
+			path = ../../presenter;
+			sourceTree = "<group>";
+		};
 		8B479D68F61CE4A80587F2EAD789E7BA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +717,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/GoogleAppMeasurement";
+			sourceTree = "<group>";
+		};
+		9A8C30E6EB89F0E93EF0BAC5559AD013 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7C9C7CD5451900E75F3E784DBDEE898 /* presenter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A2201FE25B0336CFAA83B160F2CFD81E /* Network */ = {
@@ -812,6 +804,17 @@
 			);
 			name = "Pods-kofero";
 			path = "Target Support Files/Pods-kofero";
+			sourceTree = "<group>";
+		};
+		C0F56A5256DF373FE303F30B00E68340 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				35BEF940A1E50DE8C9AC174905AF26EE /* presenter-copy-dsyms.sh */,
+				9B6B5085A78622DDD029D9A37D4A43BB /* presenter.debug.xcconfig */,
+				BE5469C7978D0906C3DDBC57E496F332 /* presenter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../ios/Pods/Target Support Files/presenter";
 			sourceTree = "<group>";
 		};
 		C8D63340D6989D9FD8FF31996A0957E9 /* Support Files */ = {
@@ -989,7 +992,7 @@
 		EFF797663652488BB44E73CC323A70EE /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5DD90A7A8385B9A968CD152D447DDCA3 /* presenter */,
+				8493A92370B8E5CDFE34D63108AE35AB /* presenter */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -1343,16 +1346,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00C7EB3F91DE77825ED190E35C782C0F /* [CP-User] Build presenter */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "[CP-User] Build presenter";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "                if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n                  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
-		};
 		137A9910EA912507F28D8B1C3D04222E /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1387,6 +1380,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		32B8E0850BCCD228A6B3BE40B3FAC5FB /* [CP] Copy dSYMs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/presenter/presenter-copy-dsyms-input-files.xcfilelist",
+			);
+			name = "[CP] Copy dSYMs";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/presenter/presenter-copy-dsyms-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/presenter/presenter-copy-dsyms.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		944F7814DBF21873D09247C6EA0F422F /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1403,6 +1413,16 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Google-Mobile-Ads-SDK/Google-Mobile-Ads-SDK-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CD06B460BE002DD819D3F0DF24C4CE18 /* [CP-User] Build presenter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Build presenter";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "                if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n                  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1595,23 +1615,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1A1C8EB4EA33CD4FF2C93CD1A146BDD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8C79D9E80152C0BA538585CCA790352 /* presenter.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		24CB875D5B25BF16969BE395662EAFD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FF41BAA1385D10A4A8B0A8570DF7AD8 /* SwiftyJSON.release.xcconfig */;
@@ -1684,22 +1687,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		2DBA2398EBCACB1E5F6F933B4DBBCD41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4A5ACBE7999CECE82F8DF2D8B6653D5 /* presenter.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		31E2647CBD7BAEC5EA59596938E06F8E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1900,6 +1887,22 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		794D6496509A58BE0056A220DA5BA3EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B6B5085A78622DDD029D9A37D4A43BB /* presenter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2237,6 +2240,23 @@
 			};
 			name = Release;
 		};
+		EAC37EB0F56EED3CD9B293806DF9DEEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5469C7978D0906C3DDBC57E496F332 /* presenter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		FBD46192EF16E52BDC3040A10FD95862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CDD5256E51972C2CE4406A8AE129BB01 /* nanopb.debug.xcconfig */;
@@ -2283,11 +2303,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CC72C27C6884F125E83E5A6B27E4C24 /* Build configuration list for PBXAggregateTarget "presenter" */ = {
+		0BFC7438527A5D9C40B9298395AD71CF /* Build configuration list for PBXAggregateTarget "presenter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2DBA2398EBCACB1E5F6F933B4DBBCD41 /* Debug */,
-				1A1C8EB4EA33CD4FF2C93CD1A146BDD5 /* Release */,
+				794D6496509A58BE0056A220DA5BA3EF /* Debug */,
+				EAC37EB0F56EED3CD9B293806DF9DEEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

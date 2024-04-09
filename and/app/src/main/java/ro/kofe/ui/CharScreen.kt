@@ -1,18 +1,15 @@
 package ro.kofe.ui
 
 import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,13 +21,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ro.kofe.R
+import ro.kofe.frames.R
 import ro.kofe.view.CharViewModel
 
-data class MoveData(val moveName: String, val attributes: Map<String,String>)
+data class MoveData(val moveName: String, val attributes: Map<String, String>)
 
 @Composable
 fun MoveItem(text: String) {
@@ -49,9 +45,11 @@ fun MoveHeader(text: String, isExpanded: Boolean, onClick: () -> Unit) {
         .clickable { onClick() }
         .background(Color.White)
         .padding(vertical = 20.dp, horizontal = 20.dp)) {
-        val chevron = if(isExpanded){
+        val chevron = if (isExpanded) {
             R.drawable.chevron_up
-        } else { R.drawable.chevron_down }
+        } else {
+            R.drawable.chevron_down
+        }
         Icon(
             painter = painterResource(id = chevron),
             contentDescription = "Localized description",
@@ -61,7 +59,8 @@ fun MoveHeader(text: String, isExpanded: Boolean, onClick: () -> Unit) {
         Text(
             text = text,
             fontSize = 20.sp,
-            modifier = Modifier.weight(1.0f)
+            modifier = Modifier
+                .weight(1.0f)
                 .wrapContentHeight(Alignment.CenterVertically)
         )
     }
@@ -121,7 +120,7 @@ fun CharScreen(
 ) {
     charUid?.let { cUid ->
         gameUid?.let { gUid ->
-            viewModel.setCharUid(cUid.toInt(),gUid.toInt())
+            viewModel.setCharUid(cUid.toInt(), gUid.toInt())
         }
     }
     val char by viewModel.char.collectAsState()
@@ -139,13 +138,13 @@ fun CharScreen(
 
     Column {
         char?.let {
-            for(attribute in it.attributes){
+            for (attribute in it.attributes) {
                 Text("${attribute.key}: ${attribute.value}")
             }
         }
         ExpandableList(moves = ArrayList<MoveData>().apply {
-            for(move in moves){
-                add(MoveData(move.name,move.attributes))
+            for (move in moves) {
+                add(MoveData(move.name, move.attributes))
             }
         })
         //Image()

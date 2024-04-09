@@ -10,7 +10,10 @@ import ro.kofe.model.Character
 import ro.kofe.model.Move
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.HttpClientProvider
-import ro.kofe.presenter.ipv.character.*
+import ro.kofe.presenter.ipv.character.CharacterInteractor
+import ro.kofe.presenter.ipv.character.CharacterInteractorImpl
+import ro.kofe.presenter.ipv.character.CharacterPresenter
+import ro.kofe.presenter.ipv.character.CharacterPresenterImpl
 import ro.kofe.presenter.map.Mapper
 import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.CharProviderImpl
@@ -52,6 +55,11 @@ object CharModule {
         requestMapper: Mapper<List<Int>, String>,
         diskAccessor: DiskAccessor
     ): Provider<Character> = CharProviderImpl(
-        HttpClientProvider.provideAuth(authProvider),"char",urlPrefix,mapper,requestMapper,diskAccessor
+        HttpClientProvider.provideAuth(authProvider),
+        "char",
+        urlPrefix,
+        mapper,
+        requestMapper,
+        diskAccessor
     )
 }

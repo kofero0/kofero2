@@ -4,7 +4,7 @@ import arrow.core.raise.either
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import ro.kofe.BuildConfig
+import ro.kofe.frames.BuildConfig
 import ro.kofe.model.HttpError
 import ro.kofe.model.ProviderError
 import ro.kofe.model.Status

@@ -40,10 +40,11 @@ class HomeInteractorImpl(
 
 
     override fun viewResumed() = super.viewResumed().also {
-        val coroutineExceptionHandler = CoroutineExceptionHandler { _, throwable ->
-            throwable.printStackTrace()
-        }
-        CoroutineScope(context + coroutineExceptionHandler).launch {
+//        val coroutineExceptionHandler = CoroutineExceptionHandler { _, throwable ->
+//            throwable.printStackTrace()
+//        }
+//        CoroutineScope(context + coroutineExceptionHandler).launch {
+            CoroutineScope(context).launch {
             presenter.showGames().collect {
                 log(Level.ALERT, "provider error showing games! $it")
                 if (it is HttpError) {

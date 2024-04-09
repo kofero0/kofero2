@@ -25,10 +25,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct iosApp: App {
     private let rootComponent: RootComponent
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
     
     init() {
         registerProviderFactories()
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String]
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        
         self.rootComponent = RootComponent()
     }
     

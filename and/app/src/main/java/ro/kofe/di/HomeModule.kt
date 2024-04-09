@@ -1,22 +1,30 @@
 package ro.kofe.di
 
+import android.content.Context
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import ro.kofe.map.RequestMapper
-import ro.kofe.model.Character
+import io.ktor.client.HttpClient
+import ro.kofe.map.CopyMapper
 import ro.kofe.model.Game
 import ro.kofe.presenter.DispatcherProvider
-import ro.kofe.presenter.ipv.home.*
-import ro.kofe.presenter.map.Mapper
+import ro.kofe.presenter.ipv.home.HomeInteractor
+import ro.kofe.presenter.ipv.home.HomeInteractorImpl
+import ro.kofe.presenter.ipv.home.HomePresenter
+import ro.kofe.presenter.ipv.home.HomePresenterImpl
+import ro.kofe.presenter.provider.CopyProvider
+import ro.kofe.presenter.provider.CopyProviderImpl
+import ro.kofe.presenter.provider.DiskAccessor
 import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.ImageProvider
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
+import ro.kofe.provider.DiskAccessorImpl
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -26,8 +34,18 @@ object HomeModule {
         gameProvider: Provider<Game>,
         imageProvider: ImageProvider,
         favoritesProvider: FavoritesProvider,
+        copyProvider: CopyProvider,
         logger: LoggingProvider
-    ): HomePresenter = HomePresenterImpl(gameProvider, imageProvider, favoritesProvider, logger)
+    ): HomePresenter =
+        HomePresenterImpl(copyProvider, gameProvider, imageProvider, favoritesProvider, logger)
+
+    @Provides
+    fun provideCopyProvider(
+        @RootModule.AuthClient httpClient: HttpClient,
+        @RootModule.UrlPrefix prefix: String,
+        gson: Gson,
+        @ApplicationContext context: Context
+    ): CopyProvider = CopyProviderImpl(httpClient, "copy", prefix, CopyMapper(gson), DiskAccessorImpl(context,"{}"))
 
     @Provides
     fun provideHomeInteractor(

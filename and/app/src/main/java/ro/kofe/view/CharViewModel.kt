@@ -1,6 +1,5 @@
 package ro.kofe.view
 
-import android.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -60,7 +59,7 @@ class CharViewModel @Inject constructor(
 
     override fun error(e: Exception) = super.error(e)
 
-    fun setCharUid(charUid: Int, gameUid:Int) = CoroutineScope(DispatcherProvider.default).launch {
-        interactor.setUids(charUid,gameUid)
+    fun setCharUid(charUid: Int, gameUid: Int) = CoroutineScope(DispatcherProvider.default).launch {
+        interactor.setUids(charUid, gameUid)
     }
 }
