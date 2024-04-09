@@ -1,14 +1,12 @@
 package ro.kofe.presenter.ipv.game
 
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.launch
 import ro.kofe.model.Character
 import ro.kofe.model.Event
 import ro.kofe.model.Event.Value.BUTTON_PRESSED
 import ro.kofe.model.HttpError
 import ro.kofe.model.ProviderError
-import ro.kofe.model.ViewTag.CHAR_VIEW
 import ro.kofe.model.ViewTag.GAME_VIEW
 import ro.kofe.model.logging.Level
 import ro.kofe.model.logging.LogTag.GAME_INTERACTOR

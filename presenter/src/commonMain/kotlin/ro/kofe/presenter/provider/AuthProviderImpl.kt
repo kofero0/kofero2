@@ -1,6 +1,5 @@
 package ro.kofe.presenter.provider
 
-import arrow.core.Either
 import arrow.core.raise.either
 import io.ktor.client.*
 import io.ktor.client.request.*

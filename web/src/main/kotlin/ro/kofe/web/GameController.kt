@@ -9,9 +9,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
-import ro.kofe.model.Character
 import ro.kofe.model.Game
-import java.io.File
 import java.io.InputStream
 
 

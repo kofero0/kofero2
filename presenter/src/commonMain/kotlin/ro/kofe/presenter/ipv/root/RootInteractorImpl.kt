@@ -11,7 +11,6 @@ import ro.kofe.presenter.ipv.InteractorImpl
 import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
-import kotlin.coroutines.CoroutineContext
 
 @OptIn(DelicateCoroutinesApi::class)
 class RootInteractorImpl(

@@ -2,12 +2,9 @@ package ro.kofe.presenter.ipv.character
 
 import kotlinx.coroutines.flow.flow
 import ro.kofe.model.Character
-import ro.kofe.model.HttpError
 import ro.kofe.model.IncorrectCount
 import ro.kofe.model.Move
-import ro.kofe.model.logging.Level
 import ro.kofe.presenter.provider.ImageProvider
-import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 
 class CharacterPresenterImpl(
