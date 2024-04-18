@@ -27,12 +27,20 @@ struct RootView: View {
     }
     
     var body: some View {
-        RouterHost(router: router) { route in
-            switch route {
-            case .Home: homeView
-            case .Game: gameView
-            case .Char: charView
+        VStack{
+            BannerView()
+                .frame(width: 320,
+                       height: 50)
+            RouterHost(router: router) { route in
+                switch route {
+                case .Home: homeView
+                case .Game: gameView
+                case .Char: charView
+                }
             }
+            BannerView()
+                .frame(width: 320,
+                       height: 50)
         }
         .onAppear{ interactor.viewResumed() }
         .onDisappear{ interactor.viewPaused() }

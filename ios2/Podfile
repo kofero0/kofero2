@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'frames' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for frames
+  pod 'presenter', :path => '../presenter'
+  pod 'SwiftyJSON'
+  pod 'NeedleFoundation'
+  pod 'Google-Mobile-Ads-SDK'
+
+# Add the Firebase pod for Google Analytics
+pod 'FirebaseAnalytics'
+pod 'FirebaseCrashlytics'
+
+  target 'framesTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'framesUITests' do
+    # Pods for testing
+  end
+
+end

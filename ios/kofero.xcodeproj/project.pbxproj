@@ -407,6 +407,7 @@
 				4BD71A472A85EB9D00EB8752 /* Resources */,
 				B67F3E5AE99269719CBA3CA6 /* [CP] Embed Pods Frameworks */,
 				4B74097B2B731D4B00AB723A /* Embed Watch Content */,
+				3608570EB6F1AC7B8E5AF04B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -414,8 +415,6 @@
 				4B7409722B731D4B00AB723A /* PBXTargetDependency */,
 			);
 			name = kofero;
-			packageProductDependencies = (
-			);
 			productName = ios;
 			productReference = 4BD71A492A85EB9D00EB8752 /* kofero.app */;
 			productType = "com.apple.product-type.application";
@@ -450,9 +449,6 @@
 				Base,
 			);
 			mainGroup = 4BD71A402A85EB9D00EB8752;
-			packageReferences = (
-				4B060E1B2BADF3DC000211BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 4BD71A4A2A85EB9D00EB8752 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -497,6 +493,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3608570EB6F1AC7B8E5AF04B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kofero/Pods-kofero-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kofero/Pods-kofero-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kofero/Pods-kofero-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4B0D01E12A914D3E005CF444 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,7 +525,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#export SOURCEKIT_LOGGING=0 && needle generate kofero/NeedleGenerated.swift kofero/\n";
+			shellScript = "\nexport SOURCEKIT_LOGGING=0 && /opt/homebrew/Cellar/needle/0.24.0/bin/needle generate kofero/NeedleGenerated.swift kofero/\n";
 		};
 		8901B00833273E65D205F8F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -878,6 +891,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -910,6 +924,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -963,17 +978,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		4B060E1B2BADF3DC000211BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 4BD71A412A85EB9D00EB8752 /* Project object */;
 }
