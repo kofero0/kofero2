@@ -11,9 +11,5 @@
         <module name="kofero.web.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
-      <module name="kofero.main" target="17" />
-      <module name="kofero.test" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
