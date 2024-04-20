@@ -15,15 +15,13 @@ struct HomeView: View {
     private let gameInteractor: GameInteractor
     private let charInteractor: CharacterInteractor
     
-    let adUnitId: String
     @EnvironmentObject var router: Router<Route>
     @StateObject var viewModel = HomeViewModel()
     
-    init(homeInteractor: HomeInteractor, gameInteractor: GameInteractor, charInteractor:CharacterInteractor, adUnitId: String){
+    init(homeInteractor: HomeInteractor, gameInteractor: GameInteractor, charInteractor:CharacterInteractor){
         self.homeInteractor = homeInteractor
         self.gameInteractor = gameInteractor
         self.charInteractor = charInteractor
-        self.adUnitId = adUnitId
     }
     
     var gameClosure: ((ModelGame) -> Void) {
@@ -44,6 +42,13 @@ struct HomeView: View {
                 charInteractor.setUids(charUid: fav.character!.uid, gameUid: fav.game.uid){_ in}
                 router.push(.Char)
             }
+        }
+    }
+    
+    var searchClosure: (() -> Void) {
+        return {
+            //homeInteractor.searchPressed()
+            router.push(.Search)
         }
     }
     
@@ -84,6 +89,13 @@ struct HomeView: View {
                         .alert("Coming soon!", isPresented: $showingSortAlert) {
                             Button("OK", role: .cancel) { }
                         }
+                    
+                    VStack{
+                        Image(systemName: "magnifyingglass.circle")
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                        Text("Search")
+                    }.onTapGesture { searchClosure() }
                     ForEach(viewModel.favs, id: \.self) { fav in
                         VStack{
                             if(fav.character != nil){

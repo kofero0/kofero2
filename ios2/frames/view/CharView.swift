@@ -9,17 +9,15 @@ import SwiftUI
 import presenter
 
 struct CharView: View {
-    let adUnitId:String
     let interactor:CharacterInteractor
     private let gameProvider: ProviderAbstract<ModelGame>
     private let favProvider: FavoritesProvider
     @StateObject var viewModel = CharViewModel()
     
-    init(interactor:CharacterInteractor, favoritesProvider:FavoritesProvider, gameProvider: ProviderAbstract<ModelGame>, adUnitId:String){
+    init(interactor:CharacterInteractor, favoritesProvider:FavoritesProvider, gameProvider: ProviderAbstract<ModelGame>){
         self.favProvider = favoritesProvider
         self.interactor = interactor
         self.gameProvider = gameProvider
-        self.adUnitId = adUnitId
     }
     
     var body: some View {

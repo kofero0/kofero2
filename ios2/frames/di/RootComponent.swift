@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import NeedleFoundation
 import presenter
 import SwiftyJSON
 import SwiftUI
 
-class RootComponent: BootstrapComponent {
+class RootComponent {
     
     var urlPrefix: String {
         return "https://kofero.org"
@@ -24,11 +23,11 @@ class RootComponent: BootstrapComponent {
     //MARK: ROOT
     
     var rootView: RootView {
-        return RootView(interactor: rootInteractor, homeView: homeView, gameView: gameView, charView: charView)
+        return RootView(interactor: rootInteractor, homeView: homeComponent.homeView, gameView: gameComponent.gameView, charView: characterComponent.charView, searchView: searchView)
     }
     
     var rootPresenter: RootPresenter {
-        return RootPresenterImpl(statusProvider: statusProvider, authProvider: authProvider, gameProvider: gameProvider, charProvider: charProvider, moveProvider: moveProvider, loggingProvider: loggingProvider)
+        return RootPresenterImpl(statusProvider: statusProvider, authProvider: authProvider, gameProvider: gameComponent.gameProvider, charProvider: characterComponent.charProvider, moveProvider: moveProvider, loggingProvider: loggingProvider)
     }
     
     var rootInteractor: RootInteractor{
@@ -37,61 +36,35 @@ class RootComponent: BootstrapComponent {
     
     //MARK: HOME
     
-    var homePresenter: HomePresenter {
-        return HomePresenterImpl(copyProvider: copyProvider, gameProvider: gameProvider, imageProvider: imageProvider, favoritesProvider: favoritesProvider, loggingProvider: loggingProvider)
-    }
-    
-    var homeInteractor: HomeInteractor {
-        return HomeInteractorImpl(presenter: homePresenter, stateLogger: stateLogger, stateReducer: stateReducer, loggingProvider: loggingProvider, context: dispatcherProvider.default_)
-    }
-    
-    var homeView: HomeView{
-        return HomeView(homeInteractor: homeInteractor, gameInteractor: gameInteractor, charInteractor: charInteractor, adUnitId: bannerAdUnitId)
+    var homeComponent: HomeComponent{
+        return HomeComponent(copyProvider: copyProvider, gameProvider: gameComponent.gameProvider, imageProvider: imageProvider, favoritesProvider: favoritesProvider, loggingProvider: loggingProvider, stateLogger: stateLogger, stateReducer: stateReducer, dispatcherProvider: dispatcherProvider, gameInteractor: gameComponent.gameInteractor, charInteractor: characterComponent.charInteractor)
     }
     
     //MARK: GAME
     
-    var gameProvider: ProviderAbstract<ModelGame> {
-        return shared { GameProviderImpl(client: authHttpClient, jsonFilename: "game", urlPrefix: urlPrefix, mapper: gameMapper, requestMapper: requestMapper, diskAccessor: diskAccessor) }
+    var gameComponent: GameComponent {
+        return GameComponent(authHttpClient: authHttpClient, urlPrefix: urlPrefix, requestMapper: requestMapper, diskAccessor: diskAccessor, jsonEncoder: jsonEncoder, charProvider: characterComponent.charProvider, imageProvider: imageProvider, loggingProvider: loggingProvider, stateLogger: stateLogger, stateReducer: stateReducer, dispatcherProvider: dispatcherProvider, charInteractor: characterComponent.charInteractor, favoritesProvider: favoritesProvider)
     }
     
-    var gameMapper: GameMapperImpl {
-        return shared { GameMapperImpl(encoder: jsonEncoder) }
-    }
-    
-    var gamePresenter: GamePresenter {
-        return shared { GamePresenterImpl(characterProvider: charProvider, gameProvider: gameProvider, imageProvider: imageProvider, loggingProvider: loggingProvider) }
-    }
-    
-    var gameInteractor: GameInteractor {
-        return shared { GameInteractorImpl(presenter: gamePresenter, stateLogger: stateLogger, stateReducer: stateReducer, loggingProvider: loggingProvider, context: dispatcherProvider.default_)
-        }
-    }
-    
-    var gameView: GameView {
-        return shared { GameView(charInteractor: charInteractor, gameInteractor: gameInteractor, favProvider: favoritesProvider, adUnitId: bannerAdUnitId) }
-    }
     
     //MARK: CHARACTER
     
-    var charProvider: ProviderAbstract<ModelCharacter> {
-        return CharProviderImpl(client: authHttpClient, jsonFilename: "char", urlPrefix: urlPrefix, mapper: charMapper, requestMapper: requestMapper, diskAccessor: diskAccessor)
+    var characterComponent: CharacterComponent {
+        return CharacterComponent(authHttpClient: authHttpClient, urlPrefix: urlPrefix, requestMapper: requestMapper, diskAccessor: diskAccessor, jsonEncoder: jsonEncoder, imageProvider: imageProvider, stateLogger: stateLogger, stateReducer: stateReducer, loggingProvider: loggingProvider, dispatcherProvider: dispatcherProvider, favoritesProvider: favoritesProvider, gameProvider: gameComponent.gameProvider, moveProvider: )
     }
     
-    var charMapper: CharacterMapperImpl {
-        return CharacterMapperImpl(encoder: jsonEncoder)
+    //MARK: SEARCH
+    
+    var searchInteractor: SearchInteractor {
+        return SearchInteractorImpl()
     }
     
-    var charPresenter: CharacterPresenter {
-        return CharacterPresenterImpl(charProvider: charProvider, moveProvider: moveProvider, imageProvider: imageProvider)
+    var searchPresenter: SearchPresenter {
+        return SearchPresenterImpl()
     }
     
-    var charInteractor: CharacterInteractor {
-        return shared { CharacterInteractorImpl(presenter: charPresenter, stateLogger: stateLogger, stateReducer: stateReducer, loggingProvider: loggingProvider, context: dispatcherProvider.default_) }
-    }
-    
-    var charView: CharView {
-        return CharView(interactor: charInteractor, favoritesProvider: favoritesProvider, gameProvider: gameProvider, adUnitId: bannerAdUnitId)
+    var searchView: SearchView {
+        return SearchView(searchInteractor: searchInteractor, gameInteractor: gameInteractor, charInteractor: charInteractor)
     }
     
     //MARK: MOVE

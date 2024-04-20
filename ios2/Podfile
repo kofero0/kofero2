@@ -8,7 +8,6 @@ target 'frames' do
   # Pods for frames
   pod 'presenter', :path => '../presenter'
   pod 'SwiftyJSON'
-  pod 'NeedleFoundation'
   pod 'Google-Mobile-Ads-SDK'
 
 # Add the Firebase pod for Google Analytics

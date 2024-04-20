@@ -1,7 +1,9 @@
 [
   {
     "uid": 1828,
-    "name": "KOF XIII",
+    "name": "The King of Fighters XIII",
+    "searchTerms": ["kof", "13"],
+    "version": "",
     "date": 0,
     "charIds": [
       1783,
@@ -45,7 +47,9 @@
   },
   {
     "uid": 1831,
-    "name": "KOF XV",
+    "name": "The King of Fighters XV",
+    "searchTerms": ["kof", "15"],
+    "version": "",
     "date": 0,
     "charIds": [
       3126,
@@ -112,6 +116,8 @@
   {
     "uid": 1892,
     "name": "Street Fighter 6",
+    "searchTerms": ["sf", "vi"],
+    "version": "",
     "date": 0,
     "charIds": [
       1893,
@@ -137,6 +143,8 @@
   {
     "uid": 6440,
     "name": "Tekken 8",
+    "searchTerms": ["tk", "tek", "ken"],
+    "version": "",
     "date": 0,
     "charIds": [6610,
       6735,

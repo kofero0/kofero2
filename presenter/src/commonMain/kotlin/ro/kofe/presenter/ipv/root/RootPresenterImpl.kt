@@ -11,14 +11,20 @@ import ro.kofe.presenter.provider.LoggingProvider
 import ro.kofe.presenter.provider.Provider
 import ro.kofe.presenter.provider.StatusProvider
 
-class RootPresenterImpl(private val statusProvider: StatusProvider, private val authProvider: AuthProvider, private val gameProvider:Provider<Game>, private val charProvider:Provider<Character>, private val moveProvider:Provider<Move>, loggingProvider: LoggingProvider) :
-    RootPresenter, PresenterImpl<RootKView>(null, loggingProvider, ROOT_PRESENTER) {
+class RootPresenterImpl(
+    private val statusProvider: StatusProvider,
+    private val authProvider: AuthProvider,
+    private val gameProvider: Provider<Game>,
+    private val charProvider: Provider<Character>,
+    private val moveProvider: Provider<Move>,
+    loggingProvider: LoggingProvider
+) : RootPresenter, PresenterImpl<RootKView>(null, loggingProvider, ROOT_PRESENTER) {
 
     override suspend fun checkVersion() = flow {
         statusProvider.getBackendStatus().fold({ emit(it) }) { status ->
             val local = statusProvider.getLocalStatus().version.split(".")
             val backend = status.version.split(".")
-            if(local.size == backend.size) {
+            if (local.size == backend.size) {
                 for (element in backend) {
                     if (element > local[backend.indexOf(element)]) {
                         view?.promptUpdate()
@@ -28,7 +34,7 @@ class RootPresenterImpl(private val statusProvider: StatusProvider, private val 
                         moveProvider.delete()
                     }
                 }
-            } else{
+            } else {
                 view?.error(Exception("Unequal version strings"))
             }
         }

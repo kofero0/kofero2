@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import ro.kofe.model.Character
+import ro.kofe.model.Game
 import ro.kofe.model.Move
 import java.io.File
 import java.io.InputStream
@@ -41,5 +42,19 @@ class CharController {
         }
         return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
         else ResponseEntity<Any>(HttpStatus.BAD_REQUEST)
+    }
+
+    @PutMapping("$CHAR_PATH/search")
+    fun search(@RequestBody query: List<String>): ResponseEntity<Any> {
+        val ret = ArrayList<Character>().apply {
+            query.forEach { name ->
+                list.forEach { game ->
+                    if(game.name.contains(name)){
+                        add(game)
+                    }
+                }
+            }
+        }
+        return ResponseEntity<Any>(mapper.writeValueAsString(ret),HttpStatus.OK)
     }
 }

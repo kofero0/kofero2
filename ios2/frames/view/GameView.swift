@@ -9,7 +9,6 @@ import SwiftUI
 import presenter
 
 struct GameView: View {
-    private let adUnitId:String
     private let gameInteractor: GameInteractor
     private let charInteractor: CharacterInteractor
     private let favProvider: FavoritesProvider
@@ -29,7 +28,7 @@ struct GameView: View {
     ]}
     
     
-    init(charInteractor:CharacterInteractor, gameInteractor:GameInteractor, favProvider: FavoritesProvider, adUnitId:String){
+    init(charInteractor:CharacterInteractor, gameInteractor:GameInteractor, favProvider: FavoritesProvider){
         self.charInteractor = charInteractor
         self.gameInteractor = gameInteractor
         self.favProvider = favProvider

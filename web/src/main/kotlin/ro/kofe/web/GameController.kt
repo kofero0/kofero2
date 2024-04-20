@@ -45,4 +45,18 @@ class GameController {
         return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
         else ResponseEntity<Any>(HttpStatus.BAD_REQUEST)
     }
+
+    @PutMapping("$GAME_PATH/search")
+    fun search(@RequestBody query: List<String>): ResponseEntity<Any> {
+        val ret = ArrayList<Game>().apply {
+            query.forEach { name ->
+                list.forEach { game ->
+                    if(game.name.contains(name)){
+                        add(game)
+                    }
+                }
+            }
+        }
+        return ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
+    }
 }

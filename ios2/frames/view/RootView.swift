@@ -15,14 +15,16 @@ struct RootView: View {
     let homeView: HomeView
     let gameView: GameView
     let charView: CharView
+    let searchView: SearchView
     @StateObject var router: Router<Route> = Router(initial: .Home)
     @StateObject var viewModel = RootViewModel()
     
     
-    init(interactor: RootInteractor, homeView: HomeView, gameView: GameView, charView:CharView){
+    init(interactor: RootInteractor, homeView: HomeView, gameView: GameView, charView:CharView, searchView: SearchView){
         self.homeView = homeView
         self.gameView = gameView
         self.charView = charView
+        self.searchView = searchView
         self.interactor = interactor
     }
     
@@ -36,6 +38,7 @@ struct RootView: View {
                 case .Home: homeView
                 case .Game: gameView
                 case .Char: charView
+                case .Search: searchView
                 }
             }
             .onAppear{ interactor.viewResumed() }

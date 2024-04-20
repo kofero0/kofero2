@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0341E81EC644C1F28324CF37 /* Pods_frames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F798854C18746642EEC9704 /* Pods_frames.framework */; };
+		4B7151D12BD1EF2B0023B229 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7151D02BD1EF2B0023B229 /* SearchView.swift */; };
+		4B7151D32BD357710023B229 /* HomeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7151D22BD357710023B229 /* HomeComponent.swift */; };
+		4B7151D52BD35A710023B229 /* GameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7151D42BD35A710023B229 /* GameComponent.swift */; };
+		4B7151D72BD3AAED0023B229 /* CharacterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7151D62BD3AAED0023B229 /* CharacterComponent.swift */; };
+		4B7151D92BD3AC110023B229 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7151D82BD3AC110023B229 /* MoveComponent.swift */; };
 		4B921F8C2BCA118200999625 /* framesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921F8B2BCA118200999625 /* framesApp.swift */; };
 		4B921F902BCA118300999625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B921F8F2BCA118300999625 /* Assets.xcassets */; };
 		4B921F932BCA118300999625 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B921F922BCA118300999625 /* Preview Assets.xcassets */; };
@@ -21,11 +26,7 @@
 		4B921FC22BCA167100999625 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FC12BCA167100999625 /* RootView.swift */; };
 		4B921FC42BCA167E00999625 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FC32BCA167E00999625 /* Router.swift */; };
 		4B921FC62BCA169500999625 /* RouterHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FC52BCA169500999625 /* RouterHost.swift */; };
-		4B921FC92BCA16E600999625 /* GameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FC82BCA16E600999625 /* GameComponent.swift */; };
 		4B921FCB2BCA170300999625 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FCA2BCA170300999625 /* RootComponent.swift */; };
-		4B921FCD2BCA171D00999625 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FCC2BCA171D00999625 /* MoveComponent.swift */; };
-		4B921FCF2BCA172B00999625 /* CharacterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FCE2BCA172B00999625 /* CharacterComponent.swift */; };
-		4B921FD12BCA174400999625 /* HomeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FD02BCA174400999625 /* HomeComponent.swift */; };
 		4B921FD42BCA177000999625 /* ImageProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FD32BCA177000999625 /* ImageProviderImpl.swift */; };
 		4B921FD62BCA17BE00999625 /* FavoritesProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FD52BCA17BE00999625 /* FavoritesProviderImpl.swift */; };
 		4B921FD82BCA17E000999625 /* LoggingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FD72BCA17E000999625 /* LoggingProvider.swift */; };
@@ -75,6 +76,11 @@
 /* Begin PBXFileReference section */
 		167E501E53D1B8D1C51A8753 /* Pods-frames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frames.debug.xcconfig"; path = "Target Support Files/Pods-frames/Pods-frames.debug.xcconfig"; sourceTree = "<group>"; };
 		1F960CDFD06E65910DD29840 /* Pods-framesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-framesTests.debug.xcconfig"; path = "Target Support Files/Pods-framesTests/Pods-framesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B7151D02BD1EF2B0023B229 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		4B7151D22BD357710023B229 /* HomeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponent.swift; sourceTree = "<group>"; };
+		4B7151D42BD35A710023B229 /* GameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameComponent.swift; sourceTree = "<group>"; };
+		4B7151D62BD3AAED0023B229 /* CharacterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComponent.swift; sourceTree = "<group>"; };
+		4B7151D82BD3AC110023B229 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
 		4B921F882BCA118200999625 /* FRAMES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRAMES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B921F8B2BCA118200999625 /* framesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = framesApp.swift; sourceTree = "<group>"; };
 		4B921F8F2BCA118300999625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,11 +98,7 @@
 		4B921FC12BCA167100999625 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		4B921FC32BCA167E00999625 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4B921FC52BCA169500999625 /* RouterHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterHost.swift; sourceTree = "<group>"; };
-		4B921FC82BCA16E600999625 /* GameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameComponent.swift; sourceTree = "<group>"; };
 		4B921FCA2BCA170300999625 /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
-		4B921FCC2BCA171D00999625 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
-		4B921FCE2BCA172B00999625 /* CharacterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComponent.swift; sourceTree = "<group>"; };
-		4B921FD02BCA174400999625 /* HomeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponent.swift; sourceTree = "<group>"; };
 		4B921FD32BCA177000999625 /* ImageProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProviderImpl.swift; sourceTree = "<group>"; };
 		4B921FD52BCA17BE00999625 /* FavoritesProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProviderImpl.swift; sourceTree = "<group>"; };
 		4B921FD72BCA17E000999625 /* LoggingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingProvider.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				4B921FC12BCA167100999625 /* RootView.swift */,
 				4B921FC32BCA167E00999625 /* Router.swift */,
 				4B921FC52BCA169500999625 /* RouterHost.swift */,
+				4B7151D02BD1EF2B0023B229 /* SearchView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -254,11 +257,11 @@
 		4B921FC72BCA16C700999625 /* di */ = {
 			isa = PBXGroup;
 			children = (
-				4B921FC82BCA16E600999625 /* GameComponent.swift */,
 				4B921FCA2BCA170300999625 /* RootComponent.swift */,
-				4B921FCC2BCA171D00999625 /* MoveComponent.swift */,
-				4B921FCE2BCA172B00999625 /* CharacterComponent.swift */,
-				4B921FD02BCA174400999625 /* HomeComponent.swift */,
+				4B7151D22BD357710023B229 /* HomeComponent.swift */,
+				4B7151D42BD35A710023B229 /* GameComponent.swift */,
+				4B7151D62BD3AAED0023B229 /* CharacterComponent.swift */,
+				4B7151D82BD3AC110023B229 /* MoveComponent.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -326,7 +329,6 @@
 			buildPhases = (
 				6B536657BBAA5A065C19BCCB /* [CP] Check Pods Manifest.lock */,
 				4B921F842BCA118200999625 /* Sources */,
-				4B9220052BCA1ABB00999625 /* ShellScript */,
 				4B921F852BCA118200999625 /* Frameworks */,
 				4B921F862BCA118200999625 /* Resources */,
 				677B411048436E4FDC535195 /* [CP] Embed Pods Frameworks */,
@@ -491,23 +493,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-frames-framesUITests/Pods-frames-framesUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4B9220052BCA1ABB00999625 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export SOURCEKIT_LOGGING=0 && /opt/homebrew/Cellar/needle/0.24.0/bin/needle generate frames/NeedleGenerated.swift frames/\n";
-		};
 		5A19C7EDE215C23B40515C19 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -611,12 +596,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B921FD62BCA17BE00999625 /* FavoritesProviderImpl.swift in Sources */,
-				4B921FCF2BCA172B00999625 /* CharacterComponent.swift in Sources */,
+				4B7151D32BD357710023B229 /* HomeComponent.swift in Sources */,
 				4B921FE92BCA18A800999625 /* MoveMapperImpl.swift in Sources */,
 				4B921FE02BCA185B00999625 /* AuthDiskAccessorImpl.swift in Sources */,
 				4B921FC42BCA167E00999625 /* Router.swift in Sources */,
 				4B921FD82BCA17E000999625 /* LoggingProvider.swift in Sources */,
 				4B921FCB2BCA170300999625 /* RootComponent.swift in Sources */,
+				4B7151D52BD35A710023B229 /* GameComponent.swift in Sources */,
 				4B921FFB2BCA193000999625 /* CopyMapperImpl.swift in Sources */,
 				4B9220002BCA19C800999625 /* Encoder.swift in Sources */,
 				4B9220022BCA19DB00999625 /* JsonStringEncoder.swift in Sources */,
@@ -627,21 +613,21 @@
 				4B921FDC2BCA180B00999625 /* DiskAccessorImpl.swift in Sources */,
 				4B921FF12BCA18E000999625 /* Mapper.swift in Sources */,
 				4B921FDE2BCA184600999625 /* StateLoggerImpl.swift in Sources */,
+				4B7151D12BD1EF2B0023B229 /* SearchView.swift in Sources */,
 				4B921FDA2BCA17F100999625 /* StatusProviderImpl.swift in Sources */,
 				4B921FED2BCA18CA00999625 /* RequestMapperImpl.swift in Sources */,
 				4B921FBA2BCA14DD00999625 /* CharView.swift in Sources */,
 				4B921F8C2BCA118200999625 /* framesApp.swift in Sources */,
+				4B7151D72BD3AAED0023B229 /* CharacterComponent.swift in Sources */,
 				4B921FC02BCA156500999625 /* HomeView.swift in Sources */,
 				4B921FC62BCA169500999625 /* RouterHost.swift in Sources */,
-				4B921FD12BCA174400999625 /* HomeComponent.swift in Sources */,
+				4B7151D92BD3AC110023B229 /* MoveComponent.swift in Sources */,
 				4B921FEB2BCA18B500999625 /* StatusMapperImpl.swift in Sources */,
 				4B921FF32BCA18EF00999625 /* StringMapper.swift in Sources */,
 				4B921FC22BCA167100999625 /* RootView.swift in Sources */,
 				4B921FFE2BCA19B800999625 /* StringEncoder.swift in Sources */,
-				4B921FCD2BCA171D00999625 /* MoveComponent.swift in Sources */,
 				4B921FF72BCA190F00999625 /* AuthMapperImpl.swift in Sources */,
 				4B921FEF2BCA18D600999625 /* DataMapper.swift in Sources */,
-				4B921FC92BCA16E600999625 /* GameComponent.swift in Sources */,
 				4B921FF52BCA190100999625 /* StateMapperImpl.swift in Sources */,
 				4B921FBC2BCA150400999625 /* Extension.swift in Sources */,
 				4B921FBE2BCA153C00999625 /* GameView.swift in Sources */,
