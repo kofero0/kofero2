@@ -50,7 +50,7 @@ class RootComponent {
     //MARK: CHARACTER
     
     var characterComponent: CharacterComponent {
-        return CharacterComponent(authHttpClient: authHttpClient, urlPrefix: urlPrefix, requestMapper: requestMapper, diskAccessor: diskAccessor, jsonEncoder: jsonEncoder, imageProvider: imageProvider, stateLogger: stateLogger, stateReducer: stateReducer, loggingProvider: loggingProvider, dispatcherProvider: dispatcherProvider, favoritesProvider: favoritesProvider, gameProvider: gameComponent.gameProvider, moveProvider: )
+        return CharacterComponent(authHttpClient: authHttpClient, urlPrefix: urlPrefix, requestMapper: requestMapper, diskAccessor: diskAccessor, jsonEncoder: jsonEncoder, imageProvider: imageProvider, stateLogger: stateLogger, stateReducer: stateReducer, loggingProvider: loggingProvider, dispatcherProvider: dispatcherProvider, favoritesProvider: favoritesProvider, gameProvider: gameComponent.gameProvider, moveProvider: moveProvider)
     }
     
     //MARK: SEARCH
@@ -64,7 +64,7 @@ class RootComponent {
     }
     
     var searchView: SearchView {
-        return SearchView(searchInteractor: searchInteractor, gameInteractor: gameInteractor, charInteractor: charInteractor)
+        return SearchView(searchInteractor: searchInteractor, gameInteractor: gameComponent.gameInteractor, charInteractor: characterComponent.charInteractor)
     }
     
     //MARK: MOVE
@@ -100,7 +100,7 @@ class RootComponent {
     }
     
     var favoritesProvider:FavoritesProvider {
-        return FavoritesProviderImpl(loggingProvider: loggingProvider, diskAccessor: diskAccessor, mapper: FavoritesMapper(encoder: jsonEncoder, gameMapper: gameMapper, charMapper: charMapper))
+        return FavoritesProviderImpl(loggingProvider: loggingProvider, diskAccessor: diskAccessor, mapper: FavoritesMapper(encoder: jsonEncoder, gameMapper: gameComponent.gameMapper, charMapper: characterComponent.charMapper))
     }
     
     var imageProvider:ImageProvider {

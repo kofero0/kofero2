@@ -28,15 +28,15 @@ class CharController {
     }
     private val list: List<Character> by lazy {
         mapper.readValue(
-            stream.bufferedReader().readText(), mapper.typeFactory
-                .constructCollectionType(MutableList::class.java, Character::class.java)
+            stream.bufferedReader().readText(),
+            mapper.typeFactory.constructCollectionType(MutableList::class.java, Character::class.java)
         )
     }
 
     @PutMapping(CHAR_PATH)
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
-        val ret = ArrayList<Character>().apply{
-            uids.forEach {uid ->
+        val ret = ArrayList<Character>().apply {
+            uids.forEach { uid ->
                 add(list.first { uid == it.uid })
             }
         }
@@ -46,15 +46,17 @@ class CharController {
 
     @PutMapping("$CHAR_PATH/search")
     fun search(@RequestBody query: List<String>): ResponseEntity<Any> {
-        val ret = ArrayList<Character>().apply {
-            query.forEach { name ->
-                list.forEach { game ->
-                    if(game.name.contains(name)){
-                        add(game)
+        val ret = HashSet<Character>().apply {
+            query.forEach { queryString ->
+                list.forEach { char ->
+                    if (char.name.lowercase()
+                            .contains(queryString.lowercase()) || char.searchTerms.contains(queryString.lowercase())
+                    ) {
+                        add(char)
                     }
                 }
             }
         }
-        return ResponseEntity<Any>(mapper.writeValueAsString(ret),HttpStatus.OK)
+        return ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
     }
 }

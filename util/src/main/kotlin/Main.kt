@@ -1,6 +1,7 @@
 package org.example
 
 import com.google.gson.Gson
+import com.google.gson.JsonArray
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.google.gson.JsonPrimitive
@@ -108,6 +109,7 @@ fun addTimeChars(){
             add("name",name)
             add("attributes",element.get("attributes"))
             add("date",JsonPrimitive(0L))
+            add("searchTerms", JsonArray())
             add("moveIds",element.get("moveIds"))
             add("iconUrl", element.get("iconUrl"))
         })

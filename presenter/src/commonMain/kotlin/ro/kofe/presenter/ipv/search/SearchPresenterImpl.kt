@@ -18,14 +18,19 @@ class SearchPresenterImpl(
     loggingProvider: LoggingProvider
 ): SearchPresenter, PresenterImpl<SearchKView>(null, loggingProvider, SEARCH_PRESENTER) {
 
-
-
     override fun setView(view: SearchKView) {
         this.view = view
     }
 
-    override suspend fun search(query: String) = flow {
+    override suspend fun search(query: List<String>) = flow {
+        gameProvider.search(query).collect{ either ->
+            either.map {
+                
+            }
+        }
+        charProvider.search(query).collect{ either ->
 
+        }
     }
 
 }

@@ -4,11 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64d9c71b-a867-4652-b799-b3f7594c8178" name="Changes" comment="" />
+    <list default="true" id="1dd77e6c-0e59-41ec-9341-df104bc91453" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/model_jvm_0_0_018.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/presenter_jvm_0_0_018.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios2/frames.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios2/frames.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios2/frames.xcworkspace/xcuserdata/mdrew.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios2/frames.xcworkspace/xcuserdata/mdrew.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios2/frames/di/MoveComponent.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios2/frames/di/RootComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios2/frames/di/RootComponent.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/commonMain/kotlin/ro/kofe/model/Character.kt" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/commonMain/kotlin/ro/kofe/model/Character.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/commonMain/kotlin/ro/kofe/model/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/commonMain/kotlin/ro/kofe/model/Game.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchPresenterImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/Provider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/Provider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/ProviderAbstract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/ProviderAbstract.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/src/main/kotlin/new.json" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/kotlin/new.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/ro/kofe/web/CharController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/ro/kofe/web/CharController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/ro/kofe/web/GameController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/ro/kofe/web/GameController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/char.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/char.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -32,14 +58,27 @@
       </state>
     </system>
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToStringList": {
-    "kotlin-gradle-user-dirs": [
-      "/Users/mdrew/.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.WebApplicationKt.executor&quot;: &quot;Run&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fix-builds-for-mbp2024&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mdrew/workspace/kofero2/web/src/main/resources&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;/Users/mdrew/.gradle&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.MainKt" />
       <module name="kofero.util.main" />
@@ -47,9 +86,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ro.kofe.web.WebApplicationKt" />
+      <module name="kofero.web.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Kotlin.MainKt" />
+      <item itemvalue="Kotlin.WebApplicationKt" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Kotlin.WebApplicationKt" />
       </list>
     </recent_temporary>
   </component>

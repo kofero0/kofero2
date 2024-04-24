@@ -12,7 +12,6 @@
 		4B7151D32BD357710023B229 /* HomeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7151D22BD357710023B229 /* HomeComponent.swift */; };
 		4B7151D52BD35A710023B229 /* GameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7151D42BD35A710023B229 /* GameComponent.swift */; };
 		4B7151D72BD3AAED0023B229 /* CharacterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7151D62BD3AAED0023B229 /* CharacterComponent.swift */; };
-		4B7151D92BD3AC110023B229 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7151D82BD3AC110023B229 /* MoveComponent.swift */; };
 		4B921F8C2BCA118200999625 /* framesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921F8B2BCA118200999625 /* framesApp.swift */; };
 		4B921F902BCA118300999625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B921F8F2BCA118300999625 /* Assets.xcassets */; };
 		4B921F932BCA118300999625 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B921F922BCA118300999625 /* Preview Assets.xcassets */; };
@@ -80,7 +79,6 @@
 		4B7151D22BD357710023B229 /* HomeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponent.swift; sourceTree = "<group>"; };
 		4B7151D42BD35A710023B229 /* GameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameComponent.swift; sourceTree = "<group>"; };
 		4B7151D62BD3AAED0023B229 /* CharacterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComponent.swift; sourceTree = "<group>"; };
-		4B7151D82BD3AC110023B229 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
 		4B921F882BCA118200999625 /* FRAMES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRAMES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B921F8B2BCA118200999625 /* framesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = framesApp.swift; sourceTree = "<group>"; };
 		4B921F8F2BCA118300999625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 				4B7151D22BD357710023B229 /* HomeComponent.swift */,
 				4B7151D42BD35A710023B229 /* GameComponent.swift */,
 				4B7151D62BD3AAED0023B229 /* CharacterComponent.swift */,
-				4B7151D82BD3AC110023B229 /* MoveComponent.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -621,7 +618,6 @@
 				4B7151D72BD3AAED0023B229 /* CharacterComponent.swift in Sources */,
 				4B921FC02BCA156500999625 /* HomeView.swift in Sources */,
 				4B921FC62BCA169500999625 /* RouterHost.swift in Sources */,
-				4B7151D92BD3AC110023B229 /* MoveComponent.swift in Sources */,
 				4B921FEB2BCA18B500999625 /* StatusMapperImpl.swift in Sources */,
 				4B921FF32BCA18EF00999625 /* StringMapper.swift in Sources */,
 				4B921FC22BCA167100999625 /* RootView.swift in Sources */,

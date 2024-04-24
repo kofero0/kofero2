@@ -9,6 +9,7 @@
       "real name": "Mcguyver"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       0,
       1,
@@ -66,6 +67,7 @@
     "name": "EX Kyo",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       48,
       1,
@@ -143,6 +145,7 @@
     "name": "Benimaru",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       116,
       117,
@@ -203,6 +206,7 @@
     "name": "Daimon",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       168,
       169,
@@ -255,6 +259,7 @@
     "name": "Terry",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       211,
       1,
@@ -308,6 +313,7 @@
     "name": "Andy",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       255,
       256,
@@ -361,6 +367,7 @@
     "name": "Joe",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       299,
       300,
@@ -416,6 +423,7 @@
     "name": "Billy",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       345,
       346,
@@ -470,6 +478,7 @@
     "name": "Ash",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       390,
       300,
@@ -526,6 +535,7 @@
     "name": "Saiki",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       438,
       439,
@@ -581,6 +591,7 @@
     "name": "Ryo",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       484,
       485,
@@ -635,6 +646,7 @@
     "name": "Robert",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       529,
       530,
@@ -697,6 +709,7 @@
     "name": "Takuma",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       529,
       584,
@@ -751,6 +764,7 @@
     "name": "Mr. Karate",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       211,
       629,
@@ -814,6 +828,7 @@
     "name": "Iori",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       168,
       684,
@@ -871,6 +886,7 @@
     "name": "EX Iori",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       168,
       732,
@@ -940,6 +956,7 @@
     "name": "Mature",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       791,
       792,
@@ -999,6 +1016,7 @@
     "name": "Vice",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       211,
       842,
@@ -1053,6 +1071,7 @@
     "name": "Elisabeth",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       48,
       1,
@@ -1109,6 +1128,7 @@
     "name": "Duo Lon",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       116,
       934,
@@ -1175,6 +1195,7 @@
     "name": "Shen",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       990,
       991,
@@ -1229,6 +1250,7 @@
     "name": "Kim",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       0,
       1036,
@@ -1284,6 +1306,7 @@
     "name": "Hwa Jai",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       0,
       439,
@@ -1352,6 +1375,7 @@
     "name": "Raiden",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       791,
       1821,
@@ -1405,6 +1429,7 @@
     "name": "Mai",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1176,
       390,
@@ -1460,6 +1485,7 @@
     "name": "King",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1220,
       1221,
@@ -1512,6 +1538,7 @@
     "name": "Yuri",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       390,
       485,
@@ -1587,6 +1614,7 @@
     "name": "K\u0027",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       48,
       530,
@@ -1656,6 +1684,7 @@
     "name": "Kula",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1394,
       1395,
@@ -1710,6 +1739,7 @@
     "name": "Maxima",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1439,
       1440,
@@ -1761,6 +1791,7 @@
     "name": "Athena",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1483,
       1036,
@@ -1819,6 +1850,7 @@
     "name": "Kensou",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       211,
       300,
@@ -1889,6 +1921,7 @@
     "name": "Chin",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       48,
       685,
@@ -1958,6 +1991,7 @@
     "name": "Ralf",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       116,
       1653,
@@ -2013,6 +2047,7 @@
     "name": "Clark",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       211,
       1700,
@@ -2060,6 +2095,7 @@
     "name": "Leona",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1737,
       1,
@@ -2114,6 +2150,7 @@
     "name": "Heihachi",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1737,
       1,
@@ -2168,6 +2205,7 @@
     "name": "Kazuya",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1737,
       1,
@@ -2222,6 +2260,7 @@
     "name": "A.K.I.",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1832,
       1833,
@@ -2291,6 +2330,7 @@
     "name": "Blanka",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1894,
       1895,
@@ -2364,6 +2404,7 @@
     "name": "Cammy",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       1959,
       1960,
@@ -2445,6 +2486,7 @@
     "name": "Chun-Li",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2032,
       2033,
@@ -2526,6 +2568,7 @@
     "name": "Dee-Jay",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2105,
       2106,
@@ -2608,6 +2651,7 @@
     "name": "Dhalsim",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2180,
       2181,
@@ -2679,6 +2723,7 @@
     "name": "E. Honda",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2243,
       2244,
@@ -2749,6 +2794,7 @@
     "name": "Guile",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2243,
       2244,
@@ -2816,6 +2862,7 @@
     "name": "Jamie",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2243,
       2244,
@@ -2894,6 +2941,7 @@
     "name": "JP",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2312,
       2313,
@@ -2964,6 +3012,7 @@
     "name": "Juri",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2375,
       2376,
@@ -3033,6 +3082,7 @@
     "name": "Ken",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2435,
       2436,
@@ -3113,6 +3163,7 @@
     "name": "Kimberly",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2507,
       2508,
@@ -3201,6 +3252,7 @@
     "name": "Lily",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2587,
       2588,
@@ -3280,6 +3332,7 @@
     "name": "Luke",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2659,
       2660,
@@ -3356,6 +3409,7 @@
     "name": "Manon",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2727,
       2728,
@@ -3421,6 +3475,7 @@
     "name": "Marisa",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2784,
       2785,
@@ -3516,6 +3571,7 @@
     "name": "Rashid",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2871,
       2872,
@@ -3600,6 +3656,7 @@
     "name": "Ryu",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       2947,
       2948,
@@ -3675,6 +3732,7 @@
     "name": "Zangief",
     "attributes": {},
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3014,
       3015,
@@ -3751,6 +3809,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3077,
       3078,
@@ -3818,6 +3877,7 @@
       "Backdash": "22 (*19)"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3127,
       3128,
@@ -3892,6 +3952,7 @@
       "Backdash": "19"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3189,
       3190,
@@ -3949,6 +4010,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3234,
       3235,
@@ -4018,6 +4080,7 @@
       "Backdash": "22 (*19)"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3291,
       3292,
@@ -4091,6 +4154,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3352,
       3353,
@@ -4153,6 +4217,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3402,
       3403,
@@ -4218,6 +4283,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3455,
       3456,
@@ -4283,6 +4349,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3508,
       3509,
@@ -4348,6 +4415,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3561,
       3562,
@@ -4426,6 +4494,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3627,
       3628,
@@ -4490,6 +4559,7 @@
       "Backdash": "21"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3679,
       3680,
@@ -4559,6 +4629,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3736,
       3737,
@@ -4623,6 +4694,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3788,
       3789,
@@ -4685,6 +4757,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3838,
       3839,
@@ -4776,6 +4849,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3917,
       3918,
@@ -4836,6 +4910,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       3965,
       3966,
@@ -4926,6 +5001,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4043,
       4044,
@@ -5001,6 +5077,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4106,
       4107,
@@ -5077,6 +5154,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4170,
       4171,
@@ -5145,6 +5223,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4226,
       4227,
@@ -5205,6 +5284,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4274,
       4275,
@@ -5283,6 +5363,7 @@
       "Backdash": "22 (*19)"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4340,
       4341,
@@ -5357,6 +5438,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4402,
       4403,
@@ -5433,6 +5515,7 @@
       "Backdash": "21"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4466,
       4467,
@@ -5496,6 +5579,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4517,
       4518,
@@ -5579,6 +5663,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4588,
       4589,
@@ -5661,6 +5746,7 @@
       "Backdash": "20"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4658,
       4659,
@@ -5719,6 +5805,7 @@
       "Backdash": "28"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4704,
       4705,
@@ -5780,6 +5867,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4753,
       4754,
@@ -5835,6 +5923,7 @@
       "Backdash": "21"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4796,
       4797,
@@ -5899,6 +5988,7 @@
       "Backdash": "21"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4848,
       4849,
@@ -5964,6 +6054,7 @@
       "Backdash": "24 (*25~21)"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4901,
       4902,
@@ -6045,6 +6136,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       4970,
       4971,
@@ -6112,6 +6204,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5025,
       5026,
@@ -6170,6 +6263,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5071,
       5072,
@@ -6234,6 +6328,7 @@
       "Backdash": "21"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5123,
       5124,
@@ -6293,6 +6388,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5170,
       5171,
@@ -6361,6 +6457,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5226,
       5227,
@@ -6438,6 +6535,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5291,
       5292,
@@ -6512,6 +6610,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5291,
       5292,
@@ -6586,6 +6685,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5353,
       5354,
@@ -6650,6 +6750,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5405,
       5406,
@@ -6714,6 +6815,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5457,
       5458,
@@ -6775,6 +6877,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5506,
       5507,
@@ -6838,6 +6941,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5557,
       5558,
@@ -6925,6 +7029,7 @@
       "Backdash": "26"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5632,
       5633,
@@ -6989,6 +7094,7 @@
       "Backdash": "21"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5684,
       5685,
@@ -7079,6 +7185,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5762,
       5763,
@@ -7138,6 +7245,7 @@
       "Backdash": "22"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5809,
       5810,
@@ -7198,6 +7306,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5857,
       5858,
@@ -7261,6 +7370,7 @@
       "Backdash": "24"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5908,
       5909,
@@ -7332,6 +7442,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       5967,
       5968,
@@ -7409,6 +7520,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6032,
       6033,
@@ -7474,6 +7586,7 @@
       "Backdash": "21"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6085,
       6086,
@@ -7539,6 +7652,7 @@
       "Backdash": "21"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6138,
       6139,
@@ -7631,6 +7745,7 @@
       "Backdash": "21"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6218,
       6219,
@@ -7696,6 +7811,7 @@
       "Backdash": "26"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6271,
       6272,
@@ -7758,6 +7874,7 @@
       "Backdash": "23"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6321,
       6322,
@@ -7821,6 +7938,7 @@
       "Backdash": "19"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6372,
       6373,
@@ -7902,6 +8020,7 @@
       "Stances": "SBT (Boot) – f+3+4, DBT (Dual Boot) – DES.f+3, DES (Destructive Form) – d+1+2, BKP (Backup) – db+1"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6441,
       6442,
@@ -8085,6 +8204,7 @@
       "Stances": "N/A"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6611,
       6612,
@@ -8223,6 +8343,7 @@
       "Stances": "LIB (Libertador) – f3+4\nBT (Backturn) – b3+4"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6736,
       6737,
@@ -8401,6 +8522,7 @@
       "Stances": "SLS (Slither Step) – qcf\nSWA (Sway) – qcb\nSNE (Snake Eyes) – 1+3+4"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       6901,
       6902,
@@ -8569,6 +8691,7 @@
       "Stances": "N/A"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       7055,
       7056,
@@ -8676,6 +8799,7 @@
       "Stances": "FLY – 3+4\nCD (Crouch Dash) – f,n,d,df\nMCR (Mourning Crow) – f+3"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       7149,
       7150,
@@ -8808,6 +8932,7 @@
       "Stances": "SNK (Sneak) – qcf"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       7268,
       7269,
@@ -8954,6 +9079,7 @@
       "Stances": "KNP (kenpo) - b+3+4\nSTC (shifting clouds) - f+3+4"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       7401,
       7402,
@@ -9106,6 +9232,7 @@
       "Stances": "LFF (Left Foot Forward)\nRFF (Right Foot Forward) – 3+4\nLFS (Left Flamingo Stance) – f+3\nRFS (Right Flamingo Stance) – f,n,4\nBT (Backturn Stance) – 1+2\nCD (Shark Step) – f,n,d,df"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       7540,
       7541,
@@ -9300,6 +9427,7 @@
       "Stances": "GMH (Gamma Howl) – 3+4\nGMC (Gamma Charge) – 3+4 (absorb a hit)"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       7721,
       7722,
@@ -9487,6 +9615,7 @@
       "Stances": "ZEN (Zenshin) – f+4 or b3+4\nCD (Crouch Dash) – f,n,d,df or ZEN.df"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       7895,
       7896,
@@ -9630,6 +9759,7 @@
       "Stances": "IZU (Izumo) – u+2\nGEN (Genjitsu) – f+3+4\nMIA (Miare) – b+1+2"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       8025,
       8026,
@@ -9804,6 +9934,7 @@
       "Stances": "CD (Crouch Dash) – f,n,d,df\nDVK (Devil Kazuya) – While in Heat"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       8186,
       8187,
@@ -9942,6 +10073,7 @@
       "Stances": "CD (Crouch Dash) – f,n,d,DF\nJGS (Jaguar Step) – 3+4\nJGR (Jaguar Sprint) – f+3+4"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       8311,
       8312,
@@ -10164,6 +10296,7 @@
       "Stances": "CD (Crouch Dash) – f,n,d,DF\nJGS (Jaguar Step) – 3+4\nJGR (Jaguar Sprint) – f+3+4"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       8520,
       8521,
@@ -10301,6 +10434,7 @@
       "Stances": ""
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       8644,
       8645,
@@ -10423,6 +10557,7 @@
       "Stances": "DSS - d+1+2"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       8753,
       8754,
@@ -10594,6 +10729,7 @@
       "Stances": "HMS (Hitman Stance) – 3+4\nMS (Mist Step) – f~n\nSway – MS.b~n"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       8911,
       8912,
@@ -10753,6 +10889,7 @@
       "Stances": "KNK (Jin Ji Du Li) – f+4\nBOK (Fo Bu) – d+1+2\nCD (Jin Bu) – qcf"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       9057,
       9058,
@@ -10905,6 +11042,7 @@
       "Stances": "HRM (Hermit)"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       9196,
       9197,
@@ -11044,6 +11182,7 @@
       "Stances": "BT (Back Turn) - b+3+4\nDEW (Dew Glide) - qcf\nRAB (Feisty Rabbit) - b+3 or b+4"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       9322,
       9323,
@@ -11193,6 +11332,7 @@
       "Stances": "Ducking step (qcf)\nSway (qcb)"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       9458,
       9459,
@@ -11400,6 +11540,7 @@
       "Stances": "HBS (Hunting) – 3+4\nROLL (Bear Roll) – FC.1+2\nSIT (Bear Sit) – d+3+4"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       9652,
       9653,
@@ -11535,6 +11676,7 @@
       "Stances": "Sway (SWA) - qcf\nBacksway (BSW) - qcb\nDeep Dive (DPD) - qcf,df"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       9774,
       9775,
@@ -11670,6 +11812,7 @@
       "Stances": "LAB/BT (Labyrinth/Backturned) – b3+4\nSZN (Soulzone) – 3+4\nQCF – QCF"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       9896,
       9897,
@@ -11881,6 +12024,7 @@
       "Stances": "WGS (Wind God Step) – f,n,d,df\nSEN (Sentai) – f+3\nSSH (Senshin) – f+1+2\nUNS (Unsoku) – d+3\nWRA (Heavens Wrath) – d+1+2\nWDS (Wind Step) – f,n"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       10094,
       10095,
@@ -12040,6 +12184,7 @@
       "Stances": "SNK (Stealth Step) - df+3+4"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       10240,
       10241,
@@ -12138,6 +12283,7 @@
       "Stances": "FLK (Flicker) – b+3+4\nPAB (Peekaboo) – f+3+4\nDCK (Duck) – f+3 (or f+4)\nWVE (Weave) – 3 and 4\nSWY (Sway) – b+3 (or b+4)\nLNH (Lionheart) – ub3"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       10325,
       10326,
@@ -12305,6 +12451,7 @@
       "Stances": "Iai - 3+4\nPerfumer - f+3"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       10479,
       10480,
@@ -12434,6 +12581,7 @@
       "Stances": "AOP (Phoenix) – d+1+2\nHYP (Hypnotist) – db+1+2\nRDS/BT (Rain Dance/Backturn) – b+3+4"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       10595,
       10596,
@@ -12612,6 +12760,7 @@
       "Stances": "DGF (Manji Dragonfly) – 1SS.u+1+2\nFLE (Flea) – 1SS.d+1+2\nIND (Indian Stance) – d+3+4\nKIN (Kincho) – 1+2\nMED (Meditation) – 3+4\nNSS (No Sword Stance) – b+1+2"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       10760,
       10761,
@@ -12947,6 +13096,7 @@
       "Stances": "Scarecrow (3+4 SCR)\nMantis (d+3+4 MNT)\nTarantula (d+1+2 TRT)"
     },
     "date": 0,
+    "searchTerms": [],
     "moveIds": [
       11082,
       11083,
