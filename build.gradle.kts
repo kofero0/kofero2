@@ -9,7 +9,7 @@ buildscript {
 
 subprojects {
     group = "ro.kofe"
-    version = "0.0.019"
+    version = "0.0.022"
 }
 
 plugins {

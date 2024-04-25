@@ -4,4 +4,6 @@ import ro.kofe.presenter.ipv.Interactor
 import ro.kofe.presenter.ipv.root.RootKView
 
 
-interface SearchInteractor : Interactor<RootKView>
+interface SearchInteractor : Interactor<SearchKView> {
+    suspend fun search(query:List<String>)
+}

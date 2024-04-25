@@ -170,6 +170,28 @@ struct CharView: View {
             return keyToInt(key1) < keyToInt(key2)
         }
         
+        private var mk1Sorter: Sorter = {
+            key1, key2 in
+            func keyToInt(_ key: String) -> Int {
+                switch key {
+                case "Kommand": return 0
+                case "H DMG": return 1
+                case "B DMG": return 2
+                case "Block Type": return 3
+                case "STA": return 4
+                case "ACT": return 5
+                case "REC": return 6
+                case "CAN": return 7
+                case "HIT": return 8
+                case "BLO": return 9
+                case "FBL": return 10
+                case "NOTES": return 999
+                default: return 998
+                }
+            }
+            return keyToInt(key1) < keyToInt(key2)
+        }
+        
         private var defaultSorter: Sorter = {
             key1, key2 in
             func keyToInt(_ key:String) -> Int {
@@ -191,6 +213,7 @@ struct CharView: View {
         private func getSorter(gameUid:Int32) -> Sorter {
             switch gameUid{
             case 1892: return sf6Sorter
+            case 13111: return mk1Sorter
             default: return defaultSorter
             }
         }

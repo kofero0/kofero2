@@ -44,11 +44,19 @@ public class GameMapperImpl: GameMapper {
         }
     }
     
+    private func transformArray(array:[JSON]) -> [String] {
+        var ret = [String]()
+        for json in array {
+            ret.append(json.stringValue)
+        }
+        return ret
+    }
+    
     func serialize(json:JSON) -> ModelGame{
         var characterIds = [KotlinInt]()
         for charIdElement in json["charIds"].arrayValue {
             characterIds.append(KotlinInt(int: charIdElement.int32Value))
         }
-        return ModelGame(uid: json["uid"].int32Value, name: json["name"].stringValue, date: json["date"].int64Value, charIds: characterIds, iconUrl: json["iconUrl"].stringValue)
+        return ModelGame(uid: json["uid"].int32Value, name: json["name"].stringValue, searchTerms: transformArray(array: json["searchTerms"].arrayValue), version: json["version"].stringValue, date: json["date"].int64Value, charIds: characterIds, iconUrl: json["iconUrl"].stringValue)
     }
 }

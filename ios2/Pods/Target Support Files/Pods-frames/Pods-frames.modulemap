@@ -1,5 +1,5 @@
-framework module Pods_frames {
-  umbrella header "Pods-frames-umbrella.h"
+framework module Pods_FRAMES {
+  umbrella header "Pods-FRAMES-umbrella.h"
 
   export *
   module * { export * }

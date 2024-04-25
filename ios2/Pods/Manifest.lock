@@ -108,8 +108,7 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
-  - NeedleFoundation (0.17.2)
-  - presenter (0.0.018)
+  - presenter (0.0.019)
   - PromisesObjC (2.4.0)
   - PromisesSwift (2.4.0):
     - PromisesObjC (= 2.4.0)
@@ -119,7 +118,6 @@ DEPENDENCIES:
   - FirebaseAnalytics
   - FirebaseCrashlytics
   - Google-Mobile-Ads-SDK
-  - NeedleFoundation
   - presenter (from `../presenter`)
   - SwiftyJSON
 
@@ -139,7 +137,6 @@ SPEC REPOS:
     - GoogleUserMessagingPlatform
     - GoogleUtilities
     - nanopb
-    - NeedleFoundation
     - PromisesObjC
     - PromisesSwift
     - SwiftyJSON
@@ -163,12 +160,11 @@ SPEC CHECKSUMS:
   GoogleUserMessagingPlatform: b1ad7bb1ee3ce64749d4fec24f667b36e45c396c
   GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  NeedleFoundation: 36cfaea9ae9eb527a796f5c1df19296c722666b8
-  presenter: 61eae9394c258a496b6f5210e9c55d142ff15e47
+  presenter: fc32ec8e90fd5cb7667e106e691499dec0d4acb6
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
   SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
 
-PODFILE CHECKSUM: 125a41ffc19072939a3a8d66e798dea23f3d265d
+PODFILE CHECKSUM: 52768da4976091ad91dc3e2a45bce579cab795bc
 
 COCOAPODS: 1.15.2

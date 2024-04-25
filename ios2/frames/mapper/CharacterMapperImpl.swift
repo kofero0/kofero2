@@ -51,7 +51,15 @@ public class CharacterMapperImpl: CharMapper {
         for element in json["moveIds"].arrayValue {
             moveIds.append(KotlinInt(int: element.int32Value))
         }
-        return ModelCharacter(uid: json["uid"].int32Value, name: json["name"].stringValue, date: json["date"].int64Value, attributes: transformDict(dict: json["attributes"].dictionaryValue), moveIds: moveIds, iconUrl: json["iconUrl"].stringValue)
+        return ModelCharacter(uid: json["uid"].int32Value, name: json["name"].stringValue, searchTerms: transformArray(array: json["searchTerms"].arrayValue), date: json["date"].int64Value, attributes: transformDict(dict: json["attributes"].dictionaryValue), moveIds: moveIds, iconUrl: json["iconUrl"].stringValue)
+    }
+    
+    private func transformArray(array:[JSON]) -> [String] {
+        var ret = [String]()
+        for json in array {
+            ret.append(json.stringValue)
+        }
+        return ret
     }
     
     private func transformDict(dict:[String:JSON]) -> [String:String] {

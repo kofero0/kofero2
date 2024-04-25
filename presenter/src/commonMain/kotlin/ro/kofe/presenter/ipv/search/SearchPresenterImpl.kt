@@ -24,13 +24,14 @@ class SearchPresenterImpl(
 
     override suspend fun search(query: List<String>) = flow {
         gameProvider.search(query).collect{ either ->
-            either.map {
-
+            either.fold({emit(it)}) {
+                view?.showGames(it)
             }
         }
         charProvider.search(query).collect{ either ->
-
+            either.fold({emit(it)}){
+                view?.showChars(it)
+            }
         }
     }
-
 }

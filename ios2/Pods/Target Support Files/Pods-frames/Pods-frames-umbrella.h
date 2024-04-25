@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_framesVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_framesVersionString[];
+FOUNDATION_EXPORT double Pods_FRAMESVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_FRAMESVersionString[];
 

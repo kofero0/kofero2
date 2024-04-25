@@ -23,8 +23,9 @@ class GameComponent {
     private let dispatcherProvider: DispatcherProvider
     private let charInteractor: CharacterInteractor
     private let favoritesProvider: FavoritesProvider
+    private let queryMapper: QueryMapper
     
-    init(authHttpClient: Ktor_client_coreHttpClient, urlPrefix: String, requestMapper: RequestMapper, diskAccessor: DiskAccessor, jsonEncoder: StringEncoder<[JSON]>, charProvider: ProviderAbstract<ModelCharacter>, imageProvider: ImageProvider, loggingProvider: LoggingProvider, stateLogger: StateLogger, stateReducer: StateReducer, dispatcherProvider: DispatcherProvider, charInteractor: CharacterInteractor, favoritesProvider: FavoritesProvider) {
+    init(authHttpClient: Ktor_client_coreHttpClient, urlPrefix: String, requestMapper: RequestMapper, diskAccessor: DiskAccessor, jsonEncoder: StringEncoder<[JSON]>, charProvider: ProviderAbstract<ModelCharacter>, imageProvider: ImageProvider, loggingProvider: LoggingProvider, stateLogger: StateLogger, stateReducer: StateReducer, dispatcherProvider: DispatcherProvider, charInteractor: CharacterInteractor, favoritesProvider: FavoritesProvider, queryMapper: QueryMapper) {
         self.authHttpClient = authHttpClient
         self.urlPrefix = urlPrefix
         self.requestMapper = requestMapper
@@ -38,13 +39,14 @@ class GameComponent {
         self.dispatcherProvider = dispatcherProvider
         self.charInteractor = charInteractor
         self.favoritesProvider = favoritesProvider
+        self.queryMapper = queryMapper
     }
     
     private var _gameProvider: ProviderAbstract<ModelGame>? = nil
     
     var gameProvider: ProviderAbstract<ModelGame> {
         if(_gameProvider == nil){
-            _gameProvider = GameProviderImpl(client: authHttpClient, jsonFilename: "game", urlPrefix: urlPrefix, mapper: gameMapper, requestMapper: requestMapper, diskAccessor: diskAccessor)
+            _gameProvider = GameProviderImpl(client: authHttpClient, jsonFilename: "game", urlPrefix: urlPrefix, mapper: gameMapper, queryMapper: queryMapper, requestMapper: requestMapper, diskAccessor: diskAccessor)
         }
         return _gameProvider!
     }

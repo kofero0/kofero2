@@ -102,7 +102,6 @@ struct YourApp: App {
     private let rootComponent: RootComponent
 
     init() {
-        registerProviderFactories()
         self.rootComponent = RootComponent()
     }
     

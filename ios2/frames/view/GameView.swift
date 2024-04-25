@@ -32,7 +32,6 @@ struct GameView: View {
         self.charInteractor = charInteractor
         self.gameInteractor = gameInteractor
         self.favProvider = favProvider
-        self.adUnitId = adUnitId
     }
     
     

@@ -23,8 +23,9 @@ class CharacterComponent {
     private let favoritesProvider: FavoritesProvider
     private let gameProvider: ProviderAbstract<ModelGame>
     private let moveProvider: ProviderAbstract<ModelMove>
+    private let queryMapper: QueryMapper
     
-    init(authHttpClient: Ktor_client_coreHttpClient, urlPrefix:String, requestMapper: RequestMapper, diskAccessor: DiskAccessor, jsonEncoder: StringEncoder<[JSON]>, imageProvider: ImageProvider, stateLogger: StateLogger, stateReducer: StateReducer, loggingProvider: LoggingProvider, dispatcherProvider: DispatcherProvider, favoritesProvider: FavoritesProvider, gameProvider: ProviderAbstract<ModelGame>, moveProvider: ProviderAbstract<ModelMove>) {
+    init(authHttpClient: Ktor_client_coreHttpClient, urlPrefix:String, requestMapper: RequestMapper, diskAccessor: DiskAccessor, jsonEncoder: StringEncoder<[JSON]>, imageProvider: ImageProvider, stateLogger: StateLogger, stateReducer: StateReducer, loggingProvider: LoggingProvider, dispatcherProvider: DispatcherProvider, favoritesProvider: FavoritesProvider, gameProvider: ProviderAbstract<ModelGame>, moveProvider: ProviderAbstract<ModelMove>, queryMapper: QueryMapper) {
         self.urlPrefix = urlPrefix
         self.authHttpClient = authHttpClient
         self.requestMapper = requestMapper
@@ -38,30 +39,8 @@ class CharacterComponent {
         self.favoritesProvider = favoritesProvider
         self.gameProvider = gameProvider
         self.moveProvider = moveProvider
+        self.queryMapper = queryMapper
     }
     
-    var charProvider: ProviderAbstract<ModelCharacter> {
-        return CharProviderImpl(client: authHttpClient, jsonFilename: "char", urlPrefix: urlPrefix, mapper: charMapper, requestMapper: requestMapper, diskAccessor: diskAccessor)
-    }
     
-    var charMapper: CharacterMapperImpl {
-        return CharacterMapperImpl(encoder: jsonEncoder)
-    }
-    
-    var charPresenter: CharacterPresenter {
-        return CharacterPresenterImpl(charProvider: charProvider, moveProvider: moveProvider, imageProvider: imageProvider)
-    }
-    
-    private var _charInteractor: CharacterInteractor? = nil
-    
-    var charInteractor: CharacterInteractor {
-        if(_charInteractor == nil){
-            _charInteractor = CharacterInteractorImpl(presenter: charPresenter, stateLogger: stateLogger, stateReducer: stateReducer, loggingProvider: loggingProvider, context: dispatcherProvider.default_)
-        }
-        return _charInteractor!
-    }
-    
-    var charView: CharView {
-        return CharView(interactor: charInteractor, favoritesProvider: favoritesProvider, gameProvider: gameProvider)
-    }
 }
