@@ -11,7 +11,7 @@ import kotlin.collections.ArrayList
 
 fun main() {
     println("Hello World!")
-    addTimeChars()
+    formatMove()
 }
 
 
@@ -49,8 +49,8 @@ fun formatMove(){
     val gson = Gson()
     val oldType = object : TypeToken<ArrayList<JsonObject>>() {}.type
 
-    val oldFile = File("/Users/mdrew/workspace/koferoutil/src/main/kotlin/old.json")
-    val newFile = File("/Users/mdrew/workspace/koferoutil/src/main/kotlin/new.json")
+    val oldFile = File("/Users/mdrew/workspace/kofero2/util/src/main/kotlin/old.json")
+    val newFile = File("/Users/mdrew/workspace/kofero2/util/src/main/kotlin/new.json")
     val oldList = gson.fromJson<ArrayList<JsonObject>>(oldFile.bufferedReader().readText(), oldType)
     val newList = ArrayList<JsonObject>()
     for(element in oldList){

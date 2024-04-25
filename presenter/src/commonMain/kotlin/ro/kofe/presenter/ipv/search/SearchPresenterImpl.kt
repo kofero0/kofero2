@@ -25,7 +25,7 @@ class SearchPresenterImpl(
     override suspend fun search(query: List<String>) = flow {
         gameProvider.search(query).collect{ either ->
             either.map {
-                
+
             }
         }
         charProvider.search(query).collect{ either ->
