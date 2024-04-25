@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dd77e6c-0e59-41ec-9341-df104bc91453" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios2/frames.xcworkspace/xcuserdata/mdrew.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios2/frames.xcworkspace/xcuserdata/mdrew.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchPresenterImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/kotlin/new.json" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/kotlin/new.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/kotlin/old.json" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/kotlin/old.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/char.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/char.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/game.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/game.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/move.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/move.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +27,7 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="kofero" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
