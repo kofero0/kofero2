@@ -7,9 +7,6 @@ Google Play: https://play.google.com/store/apps/details?id=ro.kofe.frames
 App Store: Under review
 
 ## Architecture
-
-VIPPER(RS) is currently being utilized 
-
 ### View
 Rendering and display code that is isolated from any business logic. 
 ### Interactor
