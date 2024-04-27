@@ -20,7 +20,7 @@ Clean POJOs.
 ### Router
 Initially planned to be part of the shared code with presenter, Jetpack Compose is too tightly coupled to use with anything but Jetpack Navigation. An example of what a multiplatform Router pattern could look like is located in the ios codebase.
 ### Resolver and State
-Deprecated architecture that would allow the application to resolve the last previous screen and data from a crash given a StateMap that is constantly upkept by Interactors. 
+Deprecated architecture that would allow the application to resolve the last previous screen and data from a crash given a StateMap that is constantly upkept by Interactors. Current feature complexity does not warrant a full implementation at this time.
 
 ## Core Libraries
 
