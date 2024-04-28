@@ -28,3 +28,4 @@ presenter/build/*
 model/build/*
 local.properties
 .gradle/
+ios/.DS_Store
