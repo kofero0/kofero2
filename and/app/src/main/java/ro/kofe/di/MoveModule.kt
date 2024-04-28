@@ -26,12 +26,14 @@ object MoveModule {
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Move>, String>,
         requestMapper: Mapper<List<Int>, String>,
+        queryMapper: Mapper<List<String>, String>,
         diskAccessor: DiskAccessor
     ): Provider<Move> = MoveProviderImpl(
         HttpClientProvider.provideAuth(authProvider),
         "move",
         urlPrefix,
         mapper,
+        queryMapper,
         requestMapper,
         diskAccessor
     )

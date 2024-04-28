@@ -53,12 +53,14 @@ object CharModule {
         @RootModule.UrlPrefix urlPrefix: String,
         mapper: Mapper<List<Character>, String>,
         requestMapper: Mapper<List<Int>, String>,
+        queryMapper: Mapper<List<String>, String>,
         diskAccessor: DiskAccessor
     ): Provider<Character> = CharProviderImpl(
         HttpClientProvider.provideAuth(authProvider),
         "char",
         urlPrefix,
         mapper,
+        queryMapper,
         requestMapper,
         diskAccessor
     )
