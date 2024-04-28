@@ -9,19 +9,20 @@ repositories {
 
 kotlin {
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(JavaVersion.VERSION_11.toString()))
+        languageVersion.set(JavaLanguageVersion.of(JavaVersion.VERSION_17.toString()))
     }
 
     jvm {
         compilations.all {
-            kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
+            kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
         }
         withJava()
         testRuns["test"].executionTask.configure {
             useJUnitPlatform()
         }
     }
-    ios("ios")
+    iosX64()
+    iosArm64()
     iosSimulatorArm64()
 
 

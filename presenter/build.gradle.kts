@@ -33,19 +33,21 @@ kotlin {
     }
 
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(JavaVersion.VERSION_11.toString()))
+        languageVersion.set(JavaLanguageVersion.of(JavaVersion.VERSION_17.toString()))
     }
 
     jvm {
         compilations.all {
-            kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
+            kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
         }
         withJava()
         testRuns["test"].executionTask.configure {
             useJUnitPlatform()
         }
     }
-    ios("ios")
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
 
 
     @OptIn(DeprecatedTargetPresetApi::class, InternalKotlinGradlePluginApi::class)
@@ -86,13 +88,13 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        val iosMain by getting {
+         iosMain {
             dependencies {
                 commonMain
                 implementation("io.ktor:ktor-client-darwin:2.3.10")
             }
         }
-        val jvmMain by getting {
+        jvmMain {
             dependencies {
                 commonMain
                 implementation("io.ktor:ktor-client-okhttp:2.3.10")

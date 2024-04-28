@@ -25,14 +25,14 @@ class GameController {
     }
     private val list: List<Game> by lazy {
         mapper.readValue(
-            stream.bufferedReader().readText(), mapper.typeFactory
-                .constructCollectionType(MutableList::class.java, Game::class.java)
+            stream.bufferedReader().readText(),
+            mapper.typeFactory.constructCollectionType(MutableList::class.java, Game::class.java)
         )
     }
 
     @PutMapping(GAME_PATH)
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
-        if (uids.isEmpty()){
+        if (uids.isEmpty()) {
             return ResponseEntity<Any>(mapper.writeValueAsString(list), HttpStatus.OK)
         }
         val ret = ArrayList<Game>().apply {
@@ -42,5 +42,21 @@ class GameController {
         }
         return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
         else ResponseEntity<Any>(HttpStatus.BAD_REQUEST)
+    }
+
+    @PutMapping("$GAME_PATH/search")
+    fun search(@RequestBody query: List<String>): ResponseEntity<Any> {
+        val ret = HashSet<Game>().apply {
+            query.forEach { queryString ->
+                list.forEach { game ->
+                    if (game.name.lowercase()
+                            .contains(queryString.lowercase()) || game.searchTerms.contains(queryString.lowercase())
+                    ) {
+                        add(game)
+                    }
+                }
+            }
+        }
+        return ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
     }
 }

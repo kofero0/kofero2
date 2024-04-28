@@ -12,9 +12,11 @@ import FirebaseCore
 import presenter
 
 
-class AppDelegate: NSObject, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
   func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    GADMobileAds.sharedInstance().start(completionHandler: nil)
     FirebaseApp.configure()
 
     return true
@@ -29,11 +31,8 @@ struct iosApp: App {
     
     init() {
         registerProviderFactories()
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String]
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-        
-        
         self.rootComponent = RootComponent()
+        fatalError("DEPRECATED!!!!!!!!!!")
     }
     
     

@@ -25,19 +25,35 @@ class CharController {
     }
     private val list: List<Character> by lazy {
         mapper.readValue(
-            stream.bufferedReader().readText(), mapper.typeFactory
-                .constructCollectionType(MutableList::class.java, Character::class.java)
+            stream.bufferedReader().readText(),
+            mapper.typeFactory.constructCollectionType(MutableList::class.java, Character::class.java)
         )
     }
 
     @PutMapping(CHAR_PATH)
     fun get(@RequestBody uids: List<Int>): ResponseEntity<Any> {
-        val ret = ArrayList<Character>().apply{
-            uids.forEach {uid ->
+        val ret = ArrayList<Character>().apply {
+            uids.forEach { uid ->
                 add(list.first { uid == it.uid })
             }
         }
         return if (ret.size == uids.size) ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
         else ResponseEntity<Any>(HttpStatus.BAD_REQUEST)
+    }
+
+    @PutMapping("$CHAR_PATH/search")
+    fun search(@RequestBody query: List<String>): ResponseEntity<Any> {
+        val ret = HashSet<Character>().apply {
+            query.forEach { queryString ->
+                list.forEach { char ->
+                    if (char.name.lowercase()
+                            .contains(queryString.lowercase()) || char.searchTerms.contains(queryString.lowercase())
+                    ) {
+                        add(char)
+                    }
+                }
+            }
+        }
+        return ResponseEntity<Any>(mapper.writeValueAsString(ret), HttpStatus.OK)
     }
 }

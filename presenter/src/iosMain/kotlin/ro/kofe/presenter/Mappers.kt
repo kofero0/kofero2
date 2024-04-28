@@ -29,3 +29,8 @@ abstract class CopyMapper: Mapper<Copy, String> {
     abstract override fun mapLeft(data: String): Copy
     abstract override fun mapRight(data: Copy): String
 }
+
+abstract class QueryMapper: Mapper<List<String>, String> {
+    abstract override fun mapLeft(data: String): List<String>
+    abstract override fun mapRight(data: List<String>): String 
+}

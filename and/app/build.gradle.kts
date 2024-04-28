@@ -14,6 +14,10 @@ kotlin {
 android {
     namespace = "ro.kofe.frames"
     compileSdk = 34
+    
+    buildFeatures {
+        buildConfig = true
+    }
 
     buildFeatures {
         buildConfig = true

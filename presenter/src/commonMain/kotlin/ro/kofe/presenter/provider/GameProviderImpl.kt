@@ -9,9 +9,10 @@ class GameProviderImpl(
     jsonFilename: String,
     urlPrefix: String,
     mapper: Mapper<List<Game>, String>,
+    queryMapper: Mapper<List<String>, String>,
     requestMapper: Mapper<List<Int>,String>,
     diskAccessor: DiskAccessor
-) : ProviderAbstract<Game>(client, jsonFilename, urlPrefix, mapper, requestMapper, diskAccessor) {
+) : ProviderAbstract<Game>(client, jsonFilename, urlPrefix, mapper, requestMapper, queryMapper, diskAccessor) {
     override fun isEqual(element: Game, id: Int) = element.uid == id
 
     override fun isEqual(one: Game, two: Game) = isEqual(one, two.uid)

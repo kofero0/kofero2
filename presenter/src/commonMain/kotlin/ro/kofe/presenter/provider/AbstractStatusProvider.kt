@@ -6,24 +6,39 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 import ro.kofe.model.HttpError
+import ro.kofe.model.OtherError
+import ro.kofe.model.ProviderError
 import ro.kofe.model.Status
 import ro.kofe.presenter.map.Mapper
 
 abstract class AbstractStatusProvider(
     private val client: HttpClient,
     private val urlPrefix: String,
-    private val mapper:Mapper<Status, String>
+    private val mapper:Mapper<Status, String>,
+    private val diskAccessor: DiskAccessor
 ): StatusProvider {
+
     override suspend fun getBackendStatus() = either {
         val response = client.get("$urlPrefix/status"){
             contentType(ContentType.Application.Json)
         }
         if(response.status.value in 200..299){
-            mapper.mapLeft(response.bodyAsText())
+            val body = response.bodyAsText()
+            diskAccessor.write(FILENAME,body)
+            mapper.mapLeft(body)
         } else {
             raise(HttpError(response.status.value,response.bodyAsText()))
         }
     }
 
-    abstract override fun getLocalStatus(): Status
+    override fun getLocalStatus() =
+        if(diskAccessor.read(FILENAME).isEmpty()){
+            Status(999L,"0.0.0")
+        }else{
+            mapper.mapLeft(diskAccessor.read(FILENAME))
+        }
+
+    companion object {
+        private const val FILENAME = "status"
+    }
 }

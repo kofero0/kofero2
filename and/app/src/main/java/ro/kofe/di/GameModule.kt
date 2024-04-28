@@ -59,12 +59,14 @@ object GameModule {
         @RootModule.UrlPrefix urlPrefix: String,
         accessor: DiskAccessor,
         mapper: Mapper<List<Game>, String>,
+        queryMapper: Mapper<List<String>, String>,
         requestMapper: Mapper<List<Int>, String>,
     ): Provider<Game> = GameProviderImpl(
         HttpClientProvider.provideAuth(authProvider),
         "game",
         urlPrefix,
         mapper,
+        queryMapper,
         requestMapper,
         accessor
     )

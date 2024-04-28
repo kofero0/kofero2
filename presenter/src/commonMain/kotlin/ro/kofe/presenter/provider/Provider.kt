@@ -17,5 +17,13 @@ interface Provider<T> {
     ): Cancellable =
         get(ids).collect(onEach, onCompletion)
 
+    fun search(query: List<String>): Flow<Either<ProviderError, List<T>>>
+
+    fun search(query: List<String>,
+               onEach: (Either<ProviderError, List<T>>) -> Unit,
+               onCompletion: (Throwable?) -> Unit
+               ): Cancellable =
+        search(query).collect(onEach,onCompletion)
+
     fun delete(): Either<ProviderError,Unit>
 }

@@ -1,7 +1,9 @@
 [
   {
     "uid": 1828,
-    "name": "KOF XIII",
+    "name": "The King of Fighters XIII",
+    "searchTerms": ["kof", "13"],
+    "version": "",
     "date": 0,
     "charIds": [
       1783,
@@ -45,7 +47,9 @@
   },
   {
     "uid": 1831,
-    "name": "KOF XV",
+    "name": "The King of Fighters XV",
+    "searchTerms": ["kof", "15"],
+    "version": "",
     "date": 0,
     "charIds": [
       3126,
@@ -112,6 +116,8 @@
   {
     "uid": 1892,
     "name": "Street Fighter 6",
+    "searchTerms": ["sf", "vi"],
+    "version": "",
     "date": 0,
     "charIds": [
       1893,
@@ -137,6 +143,8 @@
   {
     "uid": 6440,
     "name": "Tekken 8",
+    "searchTerms": ["tk", "tek", "ken"],
+    "version": "",
     "date": 0,
     "charIds": [6610,
       6735,
@@ -172,5 +180,59 @@
       11220
     ],
     "iconUrl": "https://img.fae.ro/b53a50.png"
+  },
+  {
+    "uid": 13111,
+    "name": "Mortal Kombat 1",
+    "searchTerms": ["mk1"],
+    "version": "",
+    "date": 0,
+    "charIds": [13065,
+      13066,
+      13067,
+      13068,
+      13069,
+      13070,
+      13071,
+      13072,
+      13073,
+      13074,
+      13075,
+      13076,
+      13077,
+      13078,
+      13079,
+      13080,
+      13081,
+      13082,
+      13083,
+      13084,
+      13085,
+      13086,
+      13087,
+      13088,
+      13089,
+      13090,
+      13091,
+      13092,
+      13093,
+      13094,
+      13095,
+      13096,
+      13097,
+      13098,
+      13099,
+      13100,
+      13101,
+      13102,
+      13103,
+      13104,
+      13105,
+      13106,
+      13108,
+      13109,
+      13110
+    ],
+    "iconUrl": "https://img.fae.ro/22e39b.png"
   }
 ]

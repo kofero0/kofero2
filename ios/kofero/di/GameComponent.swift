@@ -37,7 +37,7 @@ class GameComponent: Component<GameDependency> {
         return shared { GameMapperImpl(encoder: dependency.jsonEncoder) }
     }
     
-    var presenter: GamePresenter {
+    var gamePresenter: GamePresenter {
         return shared { GamePresenterImpl(characterProvider: dependency.charProvider, gameProvider: gameProvider, imageProvider: dependency.imageProvider, loggingProvider: dependency.loggingProvider) }
     }
 }

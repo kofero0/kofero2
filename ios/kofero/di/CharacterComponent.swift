@@ -28,15 +28,15 @@ protocol CharacterDependency: Dependency {
 }
 
 class CharacterComponent: Component<CharacterDependency> {
-    var provider: ProviderAbstract<ModelCharacter> {
-        return CharProviderImpl(client: dependency.authHttpClient, jsonFilename: "char", urlPrefix: dependency.urlPrefix, mapper: mapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
+    var charProvider: ProviderAbstract<ModelCharacter> {
+        return CharProviderImpl(client: dependency.authHttpClient, jsonFilename: "char", urlPrefix: dependency.urlPrefix, mapper: charMapper, requestMapper: dependency.requestMapper, diskAccessor: dependency.diskAccessor)
     }
     
-    var mapper: CharacterMapperImpl {
+    var charMapper: CharacterMapperImpl {
         return CharacterMapperImpl(encoder: dependency.jsonEncoder)
     }
     
-    var presenter: CharacterPresenter {
-        return CharacterPresenterImpl(charProvider: provider, moveProvider: dependency.moveProvider, imageProvider: dependency.imageProvider)
+    var charPresenter: CharacterPresenter {
+        return CharacterPresenterImpl(charProvider: charProvider, moveProvider: dependency.moveProvider, imageProvider: dependency.imageProvider)
     }
 }

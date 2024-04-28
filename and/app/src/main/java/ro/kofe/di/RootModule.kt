@@ -7,10 +7,13 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import io.ktor.client.HttpClient
 import okhttp3.OkHttpClient
 import ro.kofe.AuthInterceptor
 import ro.kofe.LoggingInterceptor
+import ro.kofe.map.QueryMapper
 import ro.kofe.map.RequestMapper
+import ro.kofe.map.StatusMapper
 import ro.kofe.model.Character
 import ro.kofe.model.Game
 import ro.kofe.model.Move
@@ -21,6 +24,7 @@ import ro.kofe.presenter.ipv.root.RootInteractorImpl
 import ro.kofe.presenter.ipv.root.RootPresenter
 import ro.kofe.presenter.ipv.root.RootPresenterImpl
 import ro.kofe.presenter.map.Mapper
+import ro.kofe.presenter.provider.AbstractStatusProvider
 import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.DiskAccessor
 import ro.kofe.presenter.provider.FavoritesProvider
@@ -31,6 +35,7 @@ import ro.kofe.presenter.provider.StatusProvider
 import ro.kofe.presenter.state.StateLogger
 import ro.kofe.presenter.state.StateReducer
 import ro.kofe.provider.AuthProviderImpl
+import ro.kofe.provider.ConcreteStatusProvider
 import ro.kofe.provider.DiskAccessorImpl
 import ro.kofe.provider.FavoritesProviderImpl
 import ro.kofe.provider.IdentityProvider
@@ -69,7 +74,7 @@ object RootModule {
 
     @Provides
     @UrlPrefix
-    fun provideUrlPrefix(): String = "https://kofero.org"
+    fun provideUrlPrefix(): String = "http://10.0.2.2:8080"
 
     @Provides
     fun provideGson(): Gson = Gson()
@@ -94,6 +99,9 @@ object RootModule {
         urlPrefix,
         context
     )
+
+    @Provides
+    fun provideQueryMapper(): Mapper<List<String>, String> = QueryMapper()
 
     @Provides
     fun provideLoggingInterceptor(
@@ -151,8 +159,16 @@ object RootModule {
     @Provides
     fun provideDispatcherProvider() = DispatcherProvider
 
+//    @Provides
+//    fun provideStatusProvider(
+//        okHttpClient: OkHttpClient, @UrlPrefix prefix: String, gson: Gson
+//    ): StatusProvider = StatusProviderImpl(okHttpClient, prefix, gson)
+
     @Provides
     fun provideStatusProvider(
-        okHttpClient: OkHttpClient, @UrlPrefix prefix: String, gson: Gson
-    ): StatusProvider = StatusProviderImpl(okHttpClient, prefix, gson)
+        @NoAuthClient httpClient: HttpClient,
+        @UrlPrefix urlPrefix:String,
+        diskAccessor: DiskAccessor,
+        gson:Gson
+    ): StatusProvider = ConcreteStatusProvider(httpClient, urlPrefix,StatusMapper(gson),diskAccessor)
 }

@@ -1,7 +1,6 @@
 package org.example
 
 import com.google.gson.Gson
-import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.google.gson.JsonPrimitive
 import com.google.gson.reflect.TypeToken
@@ -10,7 +9,6 @@ import kotlin.collections.ArrayList
 
 fun main() {
     println("Hello World!")
-    //addTime()
 }
 
 
@@ -18,8 +16,8 @@ fun formatMoveAttributesToStrings(){
     val gson = Gson()
     val oldType = object : TypeToken<ArrayList<JsonObject>>() {}.type
 
-    val oldFile = File("/Users/mdrew/workspace/koferoutil/src/main/kotlin/old.json")
-    val newFile = File("/Users/mdrew/workspace/koferoutil/src/main/kotlin/new.json")
+    val oldFile = File("/Users/mdrew/workspace/kofero2/util/src/main/kotlin/old.json")
+    val newFile = File("/Users/mdrew/workspace/kofero2/util/src/main/kotlin/new.json")
     val oldList = gson.fromJson<ArrayList<JsonObject>>(oldFile.bufferedReader().readText(), oldType)
     val newList = ArrayList<JsonObject>()
 
@@ -50,6 +48,7 @@ fun formatMove(){
 
     val oldFile = File("/Users/mdrew/workspace/koferoutil/src/main/kotlin/old.json")
     val newFile = File("/Users/mdrew/workspace/koferoutil/src/main/kotlin/new.json")
+
     val oldList = gson.fromJson<ArrayList<JsonObject>>(oldFile.bufferedReader().readText(), oldType)
     val newList = ArrayList<JsonObject>()
     for(element in oldList){
@@ -98,6 +97,7 @@ fun addTimeChars(){
 
     val oldFile = File("/Users/mdrew/workspace/koferoutil/src/main/kotlin/old.json")
     val newFile = File("/Users/mdrew/workspace/koferoutil/src/main/kotlin/new.json")
+
     val oldList = gson.fromJson<ArrayList<JsonObject>>(oldFile.bufferedReader().readText(), oldType)
     val newList = ArrayList<JsonObject>()
     for(element in oldList){

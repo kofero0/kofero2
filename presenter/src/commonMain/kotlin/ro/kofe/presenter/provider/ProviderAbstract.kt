@@ -6,6 +6,7 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 import kotlinx.coroutines.InternalCoroutinesApi
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.internal.SynchronizedObject
 import kotlinx.coroutines.internal.synchronized
@@ -20,6 +21,7 @@ abstract class ProviderAbstract<T>(
     private val urlPrefix: String,
     private val mapper: Mapper<List<T>, String>,
     private val requestMapper: Mapper<List<Int>, String>,
+    private val searchRequestMapper: Mapper<List<String>, String>,
     private val diskAccessor: DiskAccessor
 ) : Provider<T> {
     private var isDiskPulled = false
@@ -34,18 +36,22 @@ abstract class ProviderAbstract<T>(
         if (isSatisfiable(ids)) {
             emit(retrieve(ids))
         } else {
-            emit(send(ids))
+            emit(send(requestMapper.mapRight(ids)))
         }
+    }
+
+    override fun search(query: List<String>) = flow {
+        emit(send(searchRequestMapper.mapRight(query)))
     }
 
     override fun delete() = either<ProviderError, Unit> {
         diskAccessor.write(jsonFilename,"")
     }
 
-    private suspend fun send(ids: List<Int>) = either {
+    private suspend fun send(body:String) = either {
         val response = client.put("$urlPrefix/$jsonFilename") {
             contentType(ContentType.Application.Json)
-            setBody(requestMapper.mapRight(ids))
+            setBody(body)
         }
         if (response.status.value in 200..299) {
             mapper.mapLeft(response.bodyAsText()).also { add(it) }
