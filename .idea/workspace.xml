@@ -10,24 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dd77e6c-0e59-41ec-9341-df104bc91453" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/map/QueryMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/map/StatusMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/proguard-rules.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/release/app-release.aab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/CharModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/CharModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/GameModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/GameModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/MoveModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/MoveModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/RootModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/RootModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/StatusProviderImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/StatusProviderImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios2/Pods/Pods.xcodeproj/xcuserdata/mdrew.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios2/Pods/Pods.xcodeproj/xcuserdata/mdrew.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios2/frames.xcworkspace/xcuserdata/mdrew.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios2/frames.xcworkspace/xcuserdata/mdrew.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/presenter.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/presenter.podspec" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

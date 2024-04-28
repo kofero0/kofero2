@@ -48,7 +48,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.10)
     - nanopb (< 2.30911.0, >= 2.30908.0)
     - PromisesSwift (~> 2.1)
-  - Google-Mobile-Ads-SDK (11.0.1):
+  - Google-Mobile-Ads-SDK (11.3.0):
     - GoogleUserMessagingPlatform (>= 1.1)
   - GoogleAppMeasurement (10.24.0):
     - GoogleAppMeasurement/AdIdSupport (= 10.24.0)
@@ -108,18 +108,16 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
-  - NeedleFoundation (0.17.2)
-  - presenter (0.0.018)
+  - presenter (0.0.023)
   - PromisesObjC (2.4.0)
   - PromisesSwift (2.4.0):
     - PromisesObjC (= 2.4.0)
-  - SwiftyJSON (4.3.0)
+  - SwiftyJSON (5.0.2)
 
 DEPENDENCIES:
   - FirebaseAnalytics
   - FirebaseCrashlytics
-  - Google-Mobile-Ads-SDK (~> 11.0.0)
-  - NeedleFoundation
+  - Google-Mobile-Ads-SDK
   - presenter (from `../presenter`)
   - SwiftyJSON
 
@@ -139,7 +137,6 @@ SPEC REPOS:
     - GoogleUserMessagingPlatform
     - GoogleUtilities
     - nanopb
-    - NeedleFoundation
     - PromisesObjC
     - PromisesSwift
     - SwiftyJSON
@@ -157,18 +154,17 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 8f581fca6478a50705d2bd2abd66d306e0f5736e
   FirebaseRemoteConfigInterop: 6c349a466490aeace3ce9c091c86be1730711634
   FirebaseSessions: 2651b464e241c93fd44112f995d5ab663c970487
-  Google-Mobile-Ads-SDK: 7a466427864972f5229f1f89d004b998a28ddcae
+  Google-Mobile-Ads-SDK: 301a16c461c331ba34ff4dab40a22ab7c147af61
   GoogleAppMeasurement: f3abf08495ef2cba7829f15318c373b8d9226491
   GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
   GoogleUserMessagingPlatform: b1ad7bb1ee3ce64749d4fec24f667b36e45c396c
   GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
-  NeedleFoundation: 36cfaea9ae9eb527a796f5c1df19296c722666b8
-  presenter: 61eae9394c258a496b6f5210e9c55d142ff15e47
+  presenter: b0c99f83b630feda75efdd2de188c49eedb3dfc3
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
 
-PODFILE CHECKSUM: 972fed161f059a745a584aa98c6060f3bc32dc28
+PODFILE CHECKSUM: 52768da4976091ad91dc3e2a45bce579cab795bc
 
 COCOAPODS: 1.15.2
