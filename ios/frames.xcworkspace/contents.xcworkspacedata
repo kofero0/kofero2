@@ -5,9 +5,6 @@
       location = "group:frames.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/mdrew/workspace/kofero2/ios2/frames.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
