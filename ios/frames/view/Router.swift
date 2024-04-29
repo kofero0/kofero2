@@ -13,6 +13,8 @@ enum Route: Equatable {
     case Game
     case Char
     case Search
+    case Acknowledgment
+    case About
 }
 
 class Router<Route: Equatable>: ObservableObject {

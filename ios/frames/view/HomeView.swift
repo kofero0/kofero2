@@ -45,6 +45,18 @@ struct HomeView: View {
         }
     }
     
+    var acknowledgmentClosure: (() -> Void) {
+        return {
+            router.push(.Acknowledgment)
+        }
+    }
+    
+    var aboutClosure: (() -> Void) {
+        return {
+            router.push(.About)
+        }
+    }
+    
     var searchClosure: (() -> Void) {
         return {
             //homeInteractor.searchPressed()
@@ -122,20 +134,14 @@ struct HomeView: View {
                             .resizable()
                             .frame(width: 100, height: 100)
                         Text("Acknowledgments")
-                    }.onTapGesture{showingAcknowledgmentAlert = true}
-                        .alert(viewModel.acknowledgment, isPresented: $showingAcknowledgmentAlert) {
-                            Button("OK", role: .cancel) { }
-                        }
+                    }.onTapGesture{ acknowledgmentClosure() }
                     
                     VStack{
                         Image(systemName: "info.circle")
                             .resizable()
                             .frame(width: 100, height: 100)
                         Text("About")
-                    }.onTapGesture{viewModel.showAboutAlert = true}
-                        .alert(isPresented: $viewModel.showAboutAlert, content: { () -> Alert in
-                            Alert(title: Text("About"), message: Text(viewModel.copy?.about ?? ""), dismissButton: .default(Text("Okay")))
-                        })
+                    }.onTapGesture{ aboutClosure() }
                 }
         }
         .onAppear{

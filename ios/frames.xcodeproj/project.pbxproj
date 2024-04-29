@@ -51,6 +51,8 @@
 		4B9220002BCA19C800999625 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B921FFF2BCA19C800999625 /* Encoder.swift */; };
 		4B9220022BCA19DB00999625 /* JsonStringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9220012BCA19DB00999625 /* JsonStringEncoder.swift */; };
 		4B9220072BCA1CAC00999625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9220062BCA1CAC00999625 /* GoogleService-Info.plist */; };
+		4BB735932BDEFB910069DA78 /* AcknowledgmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB735922BDEFB910069DA78 /* AcknowledgmentView.swift */; };
+		4BB735952BDEFBE30069DA78 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB735942BDEFBE30069DA78 /* AboutView.swift */; };
 		62E1722F0D55BB33205C9BA6 /* Pods_FRAMES_framesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E127DC9603FBDD682CCB805 /* Pods_FRAMES_framesUITests.framework */; };
 		9D0634122F75AD7DEF64D957 /* Pods_FRAMES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F39E80925790F29CC7AC33 /* Pods_FRAMES.framework */; };
 /* End PBXBuildFile section */
@@ -125,6 +127,8 @@
 		4B921FFF2BCA19C800999625 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
 		4B9220012BCA19DB00999625 /* JsonStringEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStringEncoder.swift; sourceTree = "<group>"; };
 		4B9220062BCA1CAC00999625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4BB735922BDEFB910069DA78 /* AcknowledgmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgmentView.swift; sourceTree = "<group>"; };
+		4BB735942BDEFBE30069DA78 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		51B0BE783F91B710C15FA109 /* Pods_framesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_framesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F0ACD977E4EAFD4421D5C7 /* Pods-FRAMES-framesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRAMES-framesUITests.debug.xcconfig"; path = "Target Support Files/Pods-FRAMES-framesUITests/Pods-FRAMES-framesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2810C6A696AF6DCEB766E8A /* Pods-FRAMES-framesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRAMES-framesUITests.release.xcconfig"; path = "Target Support Files/Pods-FRAMES-framesUITests/Pods-FRAMES-framesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 				4B921FC32BCA167E00999625 /* Router.swift */,
 				4B921FC52BCA169500999625 /* RouterHost.swift */,
 				4B7151D02BD1EF2B0023B229 /* SearchView.swift */,
+				4BB735922BDEFB910069DA78 /* AcknowledgmentView.swift */,
+				4BB735942BDEFBE30069DA78 /* AboutView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -596,6 +602,7 @@
 				4B7151D32BD357710023B229 /* HomeComponent.swift in Sources */,
 				4B921FE92BCA18A800999625 /* MoveMapperImpl.swift in Sources */,
 				4B921FE02BCA185B00999625 /* AuthDiskAccessorImpl.swift in Sources */,
+				4BB735952BDEFBE30069DA78 /* AboutView.swift in Sources */,
 				4B921FC42BCA167E00999625 /* Router.swift in Sources */,
 				4B921FD82BCA17E000999625 /* LoggingProvider.swift in Sources */,
 				4B921FCB2BCA170300999625 /* RootComponent.swift in Sources */,
@@ -619,6 +626,7 @@
 				4B921FC02BCA156500999625 /* HomeView.swift in Sources */,
 				4B921FC62BCA169500999625 /* RouterHost.swift in Sources */,
 				4B921FEB2BCA18B500999625 /* StatusMapperImpl.swift in Sources */,
+				4BB735932BDEFB910069DA78 /* AcknowledgmentView.swift in Sources */,
 				4B921FF32BCA18EF00999625 /* StringMapper.swift in Sources */,
 				4B921FC22BCA167100999625 /* RootView.swift in Sources */,
 				4B921FFE2BCA19B800999625 /* StringEncoder.swift in Sources */,

@@ -23,7 +23,7 @@ android {
         applicationId = "ro.kofe.frames"
         minSdk = 24
         targetSdk = 34
-        versionCode = 4
+        versionCode = 6
         versionName = "$version"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

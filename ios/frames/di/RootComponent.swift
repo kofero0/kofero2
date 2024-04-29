@@ -19,7 +19,15 @@ class RootComponent {
     //MARK: ROOT
     
     var rootView: RootView {
-        return RootView(interactor: rootInteractor, homeView: homeView, gameView: gameView, charView: charView, searchView: searchView)
+        return RootView(interactor: rootInteractor, homeView: homeView, gameView: gameView, charView: charView, searchView: searchView, acknowledgmentView: acknowledgmentView, aboutView: aboutView)
+    }
+    
+    var acknowledgmentView: AcknowledgmentView {
+        return AcknowledgmentView()
+    }
+    
+    var aboutView: AboutView {
+        return AboutView()
     }
     
     var rootPresenter: RootPresenter {
