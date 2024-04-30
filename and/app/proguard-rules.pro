@@ -40,6 +40,11 @@
  # A resource is loaded with a relative path so the package of this class must be preserved.
  -keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
 
+ ## Gson
+ -keep class com.google.gson.reflect.TypeToken
+ -keep class * extends com.google.gson.reflect.TypeToken
+ -keep public class * implements java.lang.reflect.Type
+
  ## Kotlinx serialization
  -keepattributes *Annotation*, InnerClasses
  -dontnote kotlinx.serialization.SerializationKt

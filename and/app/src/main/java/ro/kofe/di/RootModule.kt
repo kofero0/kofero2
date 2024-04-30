@@ -73,10 +73,6 @@ object RootModule {
         DiskAccessorImpl(context)
 
     @Provides
-    @UrlPrefix
-    fun provideUrlPrefix(): String = "https://kofero.org"
-
-    @Provides
     fun provideGson(): Gson = Gson()
 
     @Provides

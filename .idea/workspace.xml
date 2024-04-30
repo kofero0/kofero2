@@ -10,19 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dd77e6c-0e59-41ec-9341-df104bc91453" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ios/frames/view/AboutView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/frames/view/AcknowledgmentView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/and/app/src/debug/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/and/app/src/debug/java/ro/kofe/di/EndpointModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/and/app/src/release/java/ro/kofe/di/EndpointModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/frames.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/frames.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/frames.xcworkspace/xcuserdata/mdrew.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios/frames.xcworkspace/xcuserdata/mdrew.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/frames/di/RootComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/frames/di/RootComponent.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/frames/view/HomeView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/frames/view/HomeView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/frames/view/RootView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/frames/view/RootView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/frames/view/Router.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/frames/view/Router.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/frames/view/SearchView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/frames/view/SearchView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/presenter.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/presenter.podspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/release/app-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/RootModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/RootModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/ui/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/ui/HomeScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/view/ImageViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/view/ImageViewModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +79,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
@@ -134,7 +134,7 @@
       <recent name="$PROJECT_DIR$/web/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.and.app">
+  <component name="RunManager" selected="Gradle.kofero2:presenter [build]">
     <configuration name="and.app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="kofero.and.app.main" />
       <option name="DEPLOY" value="true" />
@@ -239,7 +239,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Android App.and.app" />
       <item itemvalue="Gradle.kofero2:presenter [build]" />
       <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.WebApplicationKt" />
