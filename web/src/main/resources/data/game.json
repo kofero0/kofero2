@@ -234,5 +234,34 @@
       13110
     ],
     "iconUrl": "https://img.fae.ro/22e39b.png"
+  },
+  {
+    "uid": 14160,
+    "name": "Street Figter III: Third Strike",
+    "searchTerms": ["fight for the future"],
+    "version": "",
+    "date": 0,
+    "charIds": [
+      14141,
+      14142,
+      14143,
+      14144,
+      14145,
+      14146,
+      14147,
+      14148,
+      14149,
+      14150,
+      14151,
+      14152,
+      14153,
+      14154,
+      14155,
+      14156,
+      14157,
+      14158,
+      14159
+    ],
+    "iconUrl": "https://img.fae.ro/22e39b.png"
   }
 ]

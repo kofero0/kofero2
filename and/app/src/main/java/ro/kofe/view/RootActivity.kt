@@ -121,11 +121,3 @@ fun KoferoApp(
         }
     }
 }
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    KoferoTheme {
-        KoferoApp()
-    }
-}

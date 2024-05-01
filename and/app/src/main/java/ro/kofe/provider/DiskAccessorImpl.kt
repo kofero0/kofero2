@@ -1,10 +1,16 @@
 package ro.kofe.provider
 
 import android.content.Context
+import ro.kofe.presenter.provider.AuthDiskAccessor
 import ro.kofe.presenter.provider.DiskAccessor
 import java.io.File
 
-class DiskAccessorImpl(private val context: Context, private val new:String = "[]") : DiskAccessor {
+class DiskAccessorImpl(private val context: Context, private val new:String = "[]") : DiskAccessor, AuthDiskAccessor {
+    override fun exists(url: String): Boolean {
+        val file = File(context.filesDir, url)
+        return file.exists()
+    }
+
     override fun read(fileName: String): String {
         val file = File(
             context.filesDir, "$fileName.json"
@@ -14,8 +20,6 @@ class DiskAccessorImpl(private val context: Context, private val new:String = "[
                 writeBytes(new.toByteArray())
             }
         }
-
-
         return file.readText()
     }
 
@@ -29,5 +33,24 @@ class DiskAccessorImpl(private val context: Context, private val new:String = "[
             }
         }
         return file.writeText(json)
+    }
+
+    override fun read(): String {
+        val file = File(context.filesDir, "auth").apply {
+            if(!exists()){
+                createNewFile()
+                writeText("")
+            }
+        }
+        return file.readText()
+    }
+
+    override fun save(token: String) {
+        val file = File(context.filesDir, "auth").apply {
+            if(!exists()){
+                createNewFile()
+            }
+            writeText(token)
+        }
     }
 }

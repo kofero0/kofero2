@@ -35,6 +35,8 @@ class StatusController {
 
     @GetMapping(STATUS_PATH)
     fun status(): ResponseEntity<Any> {
+
+
         return ResponseEntity(
             mapper.writeValueAsString(
                 Status(

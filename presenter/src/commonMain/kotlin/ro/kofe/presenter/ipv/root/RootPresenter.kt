@@ -9,10 +9,7 @@ import ro.kofe.model.Game
 import ro.kofe.model.Move
 import ro.kofe.model.logging.LogTag.ROOT_PRESENTER
 import ro.kofe.presenter.ipv.PresenterImpl
-import ro.kofe.presenter.provider.AuthProvider
-import ro.kofe.presenter.provider.LoggingProvider
-import ro.kofe.presenter.provider.Provider
-import ro.kofe.presenter.provider.StatusProvider
+import ro.kofe.presenter.provider.*
 
 interface RootPresenter : Presenter<RootKView> {
     suspend fun checkVersion(): Flow<ProviderError>
@@ -24,6 +21,7 @@ class RootPresenterImpl(
     private val gameProvider: Provider<Game>,
     private val charProvider: Provider<Character>,
     private val moveProvider: Provider<Move>,
+    private val copyProvider: CopyProvider,
     loggingProvider: LoggingProvider
 ) : RootPresenter, PresenterImpl<RootKView>(null, loggingProvider, ROOT_PRESENTER) {
 
@@ -32,17 +30,15 @@ class RootPresenterImpl(
         return flow {
             statusProvider.getBackendStatus().fold({ emit(it) }) { status ->
                 val backend = status.version.split(".")
-                println("@@@local: $local")
-                println("@@@backend: $backend")
                 if (local.size == backend.size) {
                     for (element in backend) {
                         if (element > local[backend.indexOf(element)]) {
-                            println("deleted")
                             view?.promptUpdate()
                             authProvider.delete()
                             gameProvider.delete()
                             charProvider.delete()
                             moveProvider.delete()
+                            copyProvider.delete()
                             gameProvider.get(ArrayList()).collect {}
                         }
                     }

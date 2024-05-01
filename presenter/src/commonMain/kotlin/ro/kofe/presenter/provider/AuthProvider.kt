@@ -30,7 +30,6 @@ interface AuthDiskAccessor {
     fun save(token: String)
 }
 
-
 interface IdentityProvider {
     fun getDeviceId(): String
 }

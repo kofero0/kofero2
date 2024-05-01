@@ -10,45 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dd77e6c-0e59-41ec-9341-df104bc91453" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/about/AboutInteractor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/about/AboutKView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/about/AboutPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/acknowledgment/AckInteractor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/acknowledgment/AckKView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/acknowledgment/AckPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/map/AuthMapperImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/commonMain/kotlin/ro/kofe/model/logging/LogTag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/commonMain/kotlin/ro/kofe/model/logging/LogTag.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/Interactor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/Interactor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/InteractorImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/Presenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/Presenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/PresenterImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/character/CharacterInteractor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/character/CharacterInteractor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/character/CharacterInteractorImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/character/CharacterPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/character/CharacterPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/character/CharacterPresenterImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/game/GameInteractor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/game/GameInteractor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/game/GameInteractorImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/game/GamePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/game/GamePresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/game/GamePresenterImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/RootModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/RootModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/AuthProviderImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/DiskAccessorImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/DiskAccessorImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/IdentityProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/IdentityProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/ImageProviderImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/ui/RowItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/ui/RowItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/view/RootActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/view/RootActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/presenter.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/presenter.podspec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomeInteractor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomeInteractor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomeInteractorImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomePresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomePresenterImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/root/RootInteractor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/root/RootInteractor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/root/RootInteractorImpl.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/root/RootPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/root/RootPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/root/RootPresenterImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchInteractor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchInteractor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchInteractorImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/search/SearchPresenterImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/AbstractStatusProvider.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/AuthDiskAccessor.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/AuthMapper.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/AuthProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/AuthProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/AuthProviderImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/IdentityProvider.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/StatusProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/StatusProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/DiskAccessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/DiskAccessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/ImageProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/ImageProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/src/main/kotlin/new.json" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/kotlin/new.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/src/main/kotlin/old.json" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/kotlin/old.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/ro/kofe/web/StatusController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/ro/kofe/web/StatusController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/char.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/char.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/game.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/game.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/move.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/move.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,39 +114,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;BundleExportedModule&quot;: &quot;kofero.and.app&quot;,
-    &quot;ExportBundle.BundlePathForkofero.and.app&quot;: &quot;/Users/mdrew/workspace/kofero2/and/app&quot;,
-    &quot;Gradle.kofero2:presenter [build].executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.WebApplicationKt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mdrew/workspace/kofero2/web/src/main/resources&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "BundleExportedModule": "kofero.and.app",
+    "ExportBundle.BundlePathForkofero.and.app": "/Users/mdrew/workspace/kofero2/and/app",
+    "Gradle.Build kofero2.executor": "Run",
+    "Gradle.kofero2:presenter [build].executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "Kotlin.WebApplicationKt.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/mdrew/workspace/kofero2/web/src/main/resources",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "show.migrate.to.gradle.popup": "false"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ExportApk.BuildVariants&quot;: [
-      &quot;release&quot;
+  "keyToStringList": {
+    "ExportApk.BuildVariants": [
+      "release"
     ],
-    &quot;kotlin-gradle-user-dirs&quot;: [
-      &quot;/Users/mdrew/.gradle&quot;
+    "kotlin-gradle-user-dirs": [
+      "/Users/mdrew/.gradle"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Unknown.and.app1003888833">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="and.app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="kofero.and.app.main" />
       <option name="DEPLOY" value="true" />
@@ -274,13 +258,16 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.kofero2:presenter [build]" />
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.kofero2:presenter [build]" />
         <item itemvalue="Kotlin.WebApplicationKt" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SwiftWorkspaceSettings">
+    <option name="detectedToolchain" value="true" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1dd77e6c-0e59-41ec-9341-df104bc91453" name="Changes" comment="" />

@@ -31,14 +31,20 @@ class HomeInteractorImpl(
     presenter, stateLogger, stateReducer, loggingProvider, HOME_INTERACTOR
 ) {
 
-    override suspend fun favPressed(fav: Favorite) =stateLogger.logState(
-            millisNow(),
-            Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = fav.game.uid })
-        )
+    override suspend fun favPressed(fav: Favorite) = stateLogger.logState(
+        millisNow(),
+        Event(
+            HOME_VIEW,
+            BUTTON_PRESSED,
+            HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = fav.game.uid })
+    )
 
     override suspend fun gamePressed(game: Game) = stateLogger.logState(
         millisNow(),
-        Event(HOME_VIEW, BUTTON_PRESSED, HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = game.uid })
+        Event(
+            HOME_VIEW,
+            BUTTON_PRESSED,
+            HashMap<String, Any>().apply { this[BUTTON_PRESSED.name] = game.uid })
     )
 
 
@@ -47,7 +53,7 @@ class HomeInteractorImpl(
 //            throwable.printStackTrace()
 //        }
 //        CoroutineScope(context + coroutineExceptionHandler).launch {
-            CoroutineScope(context).launch {
+        CoroutineScope(context).launch {
             presenter.showGames().collect {
                 log(Level.ALERT, "provider error showing games! $it")
                 if (it is HttpError) {
