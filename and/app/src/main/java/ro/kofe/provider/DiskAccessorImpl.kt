@@ -1,11 +1,15 @@
 package ro.kofe.provider
 
 import android.content.Context
+import com.google.gson.Gson
+import ro.kofe.model.Copy
 import ro.kofe.presenter.provider.AuthDiskAccessor
 import ro.kofe.presenter.provider.DiskAccessor
 import java.io.File
 
-class DiskAccessorImpl(private val context: Context, private val new:String = "[]") : DiskAccessor, AuthDiskAccessor {
+class CopyProviderDiskAccessor(context: Context, gson:Gson): DiskAccessorImpl(context, gson.toJson(Copy("","","")))
+
+open class DiskAccessorImpl(private val context: Context, private val new:String = "[]") : DiskAccessor, AuthDiskAccessor {
     override fun exists(url: String): Boolean {
         val file = File(context.filesDir, url)
         return file.exists()

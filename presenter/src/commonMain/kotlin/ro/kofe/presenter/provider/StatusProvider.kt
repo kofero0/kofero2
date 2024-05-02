@@ -28,9 +28,9 @@ abstract class AbstractStatusProvider(
             contentType(ContentType.Application.Json)
         }
         if(response.status.value in 200..299){
-            val body = response.bodyAsText()
-            diskAccessor.write(FILENAME,body)
-            mapper.mapLeft(body)
+            val status = mapper.mapLeft(response.bodyAsText())
+            diskAccessor.write(FILENAME,mapper.mapRight(status))
+            status
         } else {
             raise(HttpError(response.status.value,response.bodyAsText()))
         }

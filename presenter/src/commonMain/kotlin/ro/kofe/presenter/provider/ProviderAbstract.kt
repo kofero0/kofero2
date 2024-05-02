@@ -39,6 +39,9 @@ abstract class ProviderAbstract<T>(
         } else {
             emit(send(requestMapper.mapRight(ids)))
         }
+        if(ids.isEmpty()){
+            emit(send(requestMapper.mapRight(ids)))
+        }
     }
 
     override fun search(query: List<String>) = flow {
@@ -46,7 +49,8 @@ abstract class ProviderAbstract<T>(
     }
 
     override fun delete() = either<ProviderError, Unit> {
-        diskAccessor.write(jsonFilename,"")
+        elements = ArrayList()
+        diskAccessor.write(jsonFilename,"[]")
     }
 
     private suspend fun send(body:String) = either {

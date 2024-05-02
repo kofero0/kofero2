@@ -33,13 +33,12 @@ class RootPresenterImpl(
                 if (local.size == backend.size) {
                     for (element in backend) {
                         if (element > local[backend.indexOf(element)]) {
-                            view?.promptUpdate()
                             authProvider.delete()
                             gameProvider.delete()
                             charProvider.delete()
                             moveProvider.delete()
                             copyProvider.delete()
-                            gameProvider.get(ArrayList()).collect {}
+                            view?.promptUpdate()
                         }
                     }
                 } else {

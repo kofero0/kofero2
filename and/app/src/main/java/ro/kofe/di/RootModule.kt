@@ -12,10 +12,12 @@ import okhttp3.OkHttpClient
 import ro.kofe.AuthInterceptor
 import ro.kofe.LoggingInterceptor
 import ro.kofe.map.AuthMapperImpl
+import ro.kofe.map.CopyMapper
 import ro.kofe.map.QueryMapper
 import ro.kofe.map.RequestMapper
 import ro.kofe.map.StatusMapper
 import ro.kofe.model.Character
+import ro.kofe.model.Copy
 import ro.kofe.model.Game
 import ro.kofe.model.Move
 import ro.kofe.presenter.DispatcherProvider
@@ -30,6 +32,7 @@ import ro.kofe.presenter.provider.AuthMapper
 import ro.kofe.presenter.provider.AuthProvider
 import ro.kofe.presenter.provider.AuthProviderImpl
 import ro.kofe.presenter.provider.CopyProvider
+import ro.kofe.presenter.provider.CopyProviderImpl
 import ro.kofe.presenter.provider.DiskAccessor
 import ro.kofe.presenter.provider.FavoritesProvider
 import ro.kofe.presenter.provider.IdentityProvider
@@ -44,6 +47,7 @@ import ro.kofe.provider.ConcreteStatusProvider
 import ro.kofe.provider.DiskAccessorImpl
 import ro.kofe.provider.FavoritesProviderImpl
 import ro.kofe.provider.IdentityProviderImpl
+import ro.kofe.provider.StatusProviderDiskAccessor
 import javax.inject.Qualifier
 
 @Module
@@ -97,7 +101,8 @@ object RootModule {
         authMapper: AuthMapper,
         identityProvider: IdentityProvider,
         @UrlPrefix urlPrefix: String
-    ): AuthProvider = AuthProviderImpl(client,urlPrefix,authDiskAccessor,authMapper,identityProvider)
+    ): AuthProvider =
+        AuthProviderImpl(client, urlPrefix, authDiskAccessor, authMapper, identityProvider)
 
     @Provides
     fun provideQueryMapper(): Mapper<List<String>, String> = QueryMapper()
@@ -109,9 +114,7 @@ object RootModule {
 
     @Provides
     fun provideAuthInterceptor(
-        authProvider: AuthProvider,
-        dispatcherProvider: DispatcherProvider,
-        logger: LoggingProvider
+        authProvider: AuthProvider, dispatcherProvider: DispatcherProvider, logger: LoggingProvider
     ) = AuthInterceptor(authProvider, dispatcherProvider, logger)
 
     @Provides
@@ -149,27 +152,37 @@ object RootModule {
     @Provides
     fun provideImageProvider(
         @NoAuthClient httpClient: HttpClient, diskAccessor: DiskAccessor
-    ): ImageProvider = ImageProviderImpl(httpClient,diskAccessor)
+    ): ImageProvider = ImageProviderImpl(httpClient, diskAccessor)
 
     @Provides
     fun provideFavoritesProvider(
-        @ApplicationContext context: Context,
-        gson: Gson
+        @ApplicationContext context: Context, gson: Gson
     ): FavoritesProvider = FavoritesProviderImpl(context, gson)
 
     @Provides
     fun provideDispatcherProvider() = DispatcherProvider
 
-//    @Provides
-//    fun provideStatusProvider(
-//        okHttpClient: OkHttpClient, @UrlPrefix prefix: String, gson: Gson
-//    ): StatusProvider = StatusProviderImpl(okHttpClient, prefix, gson)
-
     @Provides
     fun provideStatusProvider(
         @NoAuthClient httpClient: HttpClient,
-        @UrlPrefix urlPrefix:String,
-        diskAccessor: DiskAccessor,
-        gson:Gson
-    ): StatusProvider = ConcreteStatusProvider(httpClient, urlPrefix,StatusMapper(gson),diskAccessor)
+        @UrlPrefix urlPrefix: String,
+        @ApplicationContext context: Context,
+        gson: Gson
+    ): StatusProvider = ConcreteStatusProvider(
+        httpClient, urlPrefix, StatusMapper(gson), StatusProviderDiskAccessor(context, gson)
+    )
+
+    @Provides
+    fun provideCopyProvider(
+        @AuthClient httpClient: HttpClient,
+        @UrlPrefix prefix: String,
+        gson: Gson,
+        @ApplicationContext context: Context
+    ): CopyProvider = CopyProviderImpl(
+        httpClient, "copy", prefix, CopyMapper(gson), DiskAccessorImpl(
+            context, gson.toJson(
+                Copy("", "", "")
+            )
+        )
+    )
 }

@@ -10,28 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dd77e6c-0e59-41ec-9341-df104bc91453" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/map/AuthMapperImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/ui/AboutScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/ui/AckScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/view/AboutViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/view/AckViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/HomeModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/HomeModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/RootModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/di/RootModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/AuthProviderImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/map/GameMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/map/GameMapper.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/DiskAccessorImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/DiskAccessorImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/IdentityProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/IdentityProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/ImageProviderImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/ui/RowItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/ui/RowItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/view/RootActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/view/RootActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/StatusProviderImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/and/app/src/main/java/ro/kofe/provider/StatusProviderImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presenter/presenter.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/presenter.podspec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomeInteractor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomeInteractor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/home/HomePresenter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/root/RootPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/ipv/root/RootPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/AuthProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/AuthProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/DiskAccessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/DiskAccessor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/ImageProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/ImageProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/kotlin/new.json" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/kotlin/new.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/src/main/kotlin/old.json" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/kotlin/old.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/kotlin/ro/kofe/web/StatusController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/kotlin/ro/kofe/web/StatusController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/ProviderAbstract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/ProviderAbstract.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/StatusProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/src/commonMain/kotlin/ro/kofe/presenter/provider/StatusProvider.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/char.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/char.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/game.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/game.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/data/move.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/data/move.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

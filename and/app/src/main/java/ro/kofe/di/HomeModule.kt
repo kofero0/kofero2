@@ -9,7 +9,9 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import io.ktor.client.HttpClient
 import ro.kofe.map.CopyMapper
+import ro.kofe.model.Copy
 import ro.kofe.model.Game
+import ro.kofe.model.Status
 import ro.kofe.presenter.DispatcherProvider
 import ro.kofe.presenter.ipv.home.HomeInteractor
 import ro.kofe.presenter.ipv.home.HomeInteractorImpl
@@ -34,18 +36,10 @@ object HomeModule {
         gameProvider: Provider<Game>,
         imageProvider: ImageProvider,
         favoritesProvider: FavoritesProvider,
-        copyProvider: CopyProvider,
         logger: LoggingProvider
     ): HomePresenter =
-        HomePresenterImpl(copyProvider, gameProvider, imageProvider, favoritesProvider, logger)
+        HomePresenterImpl(gameProvider, imageProvider, favoritesProvider, logger)
 
-    @Provides
-    fun provideCopyProvider(
-        @RootModule.AuthClient httpClient: HttpClient,
-        @RootModule.UrlPrefix prefix: String,
-        gson: Gson,
-        @ApplicationContext context: Context
-    ): CopyProvider = CopyProviderImpl(httpClient, "copy", prefix, CopyMapper(gson), DiskAccessorImpl(context,"{}"))
 
     @Provides
     fun provideHomeInteractor(

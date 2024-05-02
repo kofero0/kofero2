@@ -13,5 +13,5 @@ class GameMapper(private val gson: Gson) : Mapper<List<Game>, String> {
         gson.toJson(data)
 
     override fun mapLeft(data: String): List<Game> =
-        gson.fromJson(data, typeToken)
+         gson.fromJson(data, typeToken)
 }

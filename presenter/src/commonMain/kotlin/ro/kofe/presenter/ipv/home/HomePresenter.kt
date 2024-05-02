@@ -12,11 +12,9 @@ import ro.kofe.presenter.provider.*
 interface HomePresenter : Presenter<HomeKView> {
     suspend fun showGames(): Flow<ProviderError>
     suspend fun showFavs(): Flow<ProviderError>
-    suspend fun showCopy(): Flow<ProviderError>
 }
 
 class HomePresenterImpl(
-    private var copyProvider: CopyProvider,
     private var gameProvider: Provider<Game>,
     private var imageProvider: ImageProvider,
     private var favoritesProvider: FavoritesProvider,
@@ -48,14 +46,6 @@ class HomePresenterImpl(
         }) { favs ->
             view?.displayFavs(favs)
             displayImages(favs).onLeft { emit(it) }
-        }
-    }
-
-    override suspend fun showCopy() = flow {
-        copyProvider.get().fold({ e ->
-            emit(e)
-        }) {
-            view?.displayCopy(it)
         }
     }
 
